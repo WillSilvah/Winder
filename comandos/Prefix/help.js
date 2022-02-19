@@ -8,7 +8,8 @@ name:'help',
 $addField[1;Diversão;perguntar / adorar]
 $addField[1;Moderação;ban / unban / kick / lock / unlock / clear / sos]
 $addField[1;Utilidades;avatar / botinfo / sobremim / perfil / serstaff / checkperms / checklist /  mensagens]
-$addField[1;Ranking;rank mensagens / rank bump / rank adoros]
+$addField[1;Ranking;rank mensagens / rank bump / rank adoros / rank cataventos]
+$addField[1;Pesquisa;pw!pesquisar google/bing/duckduckgo/youtube]
 $addField[1;Comandos avançados;executar / reiniciar]
 
 `
