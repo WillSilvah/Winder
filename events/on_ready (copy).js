@@ -7,7 +7,7 @@ $description[1;
 > **Versão: \`$getVar[versão]\`**
 > **Prefixo: \`$getServerVar[prefixo]\`**
 > **Ping: \`$pingms\`**
-> **CPU: \`$cpu\`**
+> **CPU: \`$cpu%\`**
 > **AOI: \`$packageVersion\`**
 > **NODE: \`$nodeVersion\`**
 > **Membros totais: \`$membersCount[861313067291115541]\`**
