@@ -1,6 +1,6 @@
 module.exports = {
 name: "adivinharnúmero"
-aliases: ['guessnumber', 'guessthenumber']
+aliases: ['guessnumber', 'guessthenumber'],
 code: `
 $botTyping
 $reply
