@@ -3,7 +3,7 @@ bot.variables({
   //--------------------------Moderaçâo
 "prefixo": "pw!",
 
-"versão": "Estável PW66",
+"versão": "Estável PW68",
 "money": "?",
   "dep": "?",
   "xp": "0",
