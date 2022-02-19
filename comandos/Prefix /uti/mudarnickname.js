@@ -1,6 +1,6 @@
 module.exports = {
 name: "mudarnickname",
-aliases: ['nickname','apelido']
+aliases: ['nickname','apelido'],
 code: `
   $reply
 <@$authorID> | Seu apelido foi alterado para **$message**!
