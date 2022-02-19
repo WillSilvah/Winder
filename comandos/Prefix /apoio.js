@@ -9,7 +9,7 @@ Apoie essa causa, assine essa petição:
 https://a.allout.org/s/P8XA5/]
   $image[1;https://media.discordapp.net/attachments/781665851040333844/943867693377933312/IMG_20220217_105214.png]
   $onlyIf[$random[1;150]==1;]
-  $cooldown[2m;]
+  $cooldown[1m;]
   
   
 `
