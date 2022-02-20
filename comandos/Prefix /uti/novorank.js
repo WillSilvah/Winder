@@ -1,6 +1,6 @@
 module.exports = [{
 name: "novorank",
-code:`$awaitMessages[$channelId;$authorID;30s;adoros,miau,ativos,catavento,premiados;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
+code:`$awaitMessages[$channelId;$authorID;10s;adoros,ativos,catavento,premiados;miau;adoros,ativos,catavento,premiados;miau;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
 
@@ -9,6 +9,7 @@ $botTyping
 > **🌼 cataventos = Veja os membros com a maior quantidade de cataventos.**
 > **⭐ premiados = Veja os membros mais ativos de cada mês!**
 > **😺 Miau = Miau**
+*Digite no chat, a opção que deseja ver*
 
 $cooldown[10s;<@$authorID> | Aguarde **%time%** para poder executar esse comando de novo!]
 `
