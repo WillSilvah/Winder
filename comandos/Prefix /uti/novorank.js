@@ -1,6 +1,6 @@
 module.exports = ({
 name: "novorank",
-code: `$awaitMessages[$authorID;10s;adoros;ativos;catavento;premiados;deu erro]
+code: `$awaitMessages[$channelId;$authorID;10s;adoros;adoros;deu erro]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
 
