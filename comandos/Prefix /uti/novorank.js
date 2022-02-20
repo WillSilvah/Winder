@@ -13,7 +13,7 @@ $botTyping
 
 $cooldown[30s;<@$authorID> | Aguarde **%time%** para poder executar esse comando de novo!]
 `
-})
+}),
 
 module.awaitedCommand({
 name: "adoros"
@@ -35,7 +35,7 @@ $description[1;:heart: - $splitText[1]
 $textSplit[$userLeaderboard[$guildID;rep;asc;{tag} -឵឵ {value}];\n]
 $thumbnail[1;$getVar[thumbrank]]
 `
-})
+}),
 
 module.awaitedCommand({
 name: "ativos",
@@ -58,7 +58,7 @@ $footer[1;Soma de mensagens enviadas: $getServerVar[allmensagens] | Você: $getU
 $thumbnail[1;$getVar[thumbrank]]
  $botTyping
 `
-})
+}),
 
 module.awaitedCommand({
 name: "cataventos",
@@ -79,7 +79,7 @@ $description[1;**TOP 1** - $splitText[1]
 $textSplit[$userLeaderboard[$guildID;cataventos;asc;{tag} -឵឵ {value}];\n]
 $thumbnail[1;$getVar[thumbrank]]
 `
-})
+}),
 
 module.awaitedCommand({
 name: "premiados",
@@ -93,7 +93,7 @@ $addField[1;Fevereiro de 2022;Fulano#0000]
 $thumbnail[1;$getVar[thumbrank]]
 $footer[1;Quer aparecer aqui? Tente ser os 3 top membros ativos!]
 `
-})
+}),
 
 module.awaitedCommand({
 name: "miau",
