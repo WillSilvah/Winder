@@ -1,7 +1,7 @@
 module.exports = ({
 name: "novorank",
 aliases: ['novo ranking'],
-code: `$awaitMessages[$authorID;10s;adoros;ativos;cataventos;premiados;miau;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
+code: `$awaitMessages[$authorID;10s;adoros;ativos;cataventos;premiados;]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
 
