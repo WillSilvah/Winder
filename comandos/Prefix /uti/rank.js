@@ -1,5 +1,5 @@
 module.exports = ({
-name: "rank",
+name: "testerank",
 aliases: ['ranking'],
 code: `$awaitMessages[$authorID;10s;adoros;ativos;cataventos;premiados;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
 $botTyping
