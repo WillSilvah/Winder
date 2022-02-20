@@ -1,13 +1,13 @@
 module.exports = ({
 name: "novorank",
 aliases: ['novo ranking'],
-code: `$awaitMessages[$authorID;10s;adoros;ativos;cataventos;premiados;]
+code: `$awaitMessages[$authorID;10s;adoros;ativos;catavento;premiados;]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
 
 > **❤️ adoros = Ranking dos membros mais adorados do servidor**
 > **💬 ativos = Veja os membros mais ativos!**
-> **🌼 cataventos = Veja os membros com a maior quantidade de cataventos.**
+> **🌼 catavento = Veja os membros com a maior quantidade de cataventos.**
 > **⭐ premiados = Veja os membros mais ativos de cada mês!**
 > **😺 Miau = Miau**
 
@@ -61,7 +61,7 @@ $thumbnail[1;$getVar[thumbrank]]
 })
 
 module.awaitedCommand = ({
-name: "cataventos",
+name: "catavento",
 code: `$botTyping
 <@$authorID>
 $author[1;Membros com mais cataventos:]
