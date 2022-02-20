@@ -16,7 +16,7 @@ $cooldown[30s;<@$authorID> | Aguarde **%time%** para poder executar esse comando
 })
 
 module.awaitedCommand({
-name: "adoros"
+name: "adoros",
 code: `$reply
 $botTyping
 <@$authorID>
