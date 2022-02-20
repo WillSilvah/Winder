@@ -1,7 +1,6 @@
 module.exports = ({
 name: "novorank",
-aliases: ['novo ranking'],
-code: `$awaitMessages[$authorID;10s;adoros;ativos;catavento;premiados;]
+code: `$awaitMessages[$authorID;10s;adoros;ativos;catavento;premiados;deu erro]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
 
@@ -13,9 +12,9 @@ $botTyping
 
 $cooldown[30s;<@$authorID> | Aguarde **%time%** para poder executar esse comando de novo!]
 `
-})
+}),
 
-module.awaitedCommand({
+module.awaitedCommand = ({
 name: "adoros",
 code: `$reply
 $botTyping
@@ -35,9 +34,9 @@ $description[1;:heart: - $splitText[1]
 $textSplit[$userLeaderboard[$guildID;rep;asc;{tag} -឵឵ {value}];\n]
 $thumbnail[1;$getVar[thumbrank]]
 `
-})
+}),
 
-module.awaitedCommand({
+module.awaitedCommand = ({
 name: "ativos",
 code: `$reply
 <@$authorID>
@@ -58,9 +57,9 @@ $footer[1;Soma de mensagens enviadas: $getServerVar[allmensagens] | Você: $getU
 $thumbnail[1;$getVar[thumbrank]]
  $botTyping
 `
-})
+}),
 
-module.awaitedCommand({
+module.awaitedCommand = ({
 name: "catavento",
 code: `$botTyping
 <@$authorID>
@@ -79,9 +78,9 @@ $description[1;**TOP 1** - $splitText[1]
 $textSplit[$userLeaderboard[$guildID;cataventos;asc;{tag} -឵឵ {value}];\n]
 $thumbnail[1;$getVar[thumbrank]]
 `
-})
+}),
 
-module.awaitedCommand({
+module.awaitedCommand = ({
 name: "premiados",
 code: `$reply
 <@$authorID> | ⭐
@@ -93,9 +92,9 @@ $addField[1;Fevereiro de 2022;Fulano#0000]
 $thumbnail[1;$getVar[thumbrank]]
 $footer[1;Quer aparecer aqui? Tente ser os 3 top membros ativos!]
 `
-})
+}),
 
-module.awaitedCommand({
+module.awaitedCommand = ({
 name: "miau",
 code: `$reply
 <@$authorID> | Miau! 😸
