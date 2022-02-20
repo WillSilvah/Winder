@@ -1,6 +1,6 @@
 module.exports = ({
-name: "1rank",
-aliases: ['1ranking'],
+name: "rank",
+aliases: ['ranking'],
 code: `$awaitMessages[$authorID;10s;adoros;ativos;cataventos;premiados;miau;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
