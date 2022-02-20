@@ -15,7 +15,7 @@ $cooldown[30s;<@$authorID> | Aguarde **%time%** para poder executar esse comando
 `
 })
 
-module.awaitedCommand({
+bot.awaitedCommand({
 name: "adoros",
 code: `$reply
 $botTyping
@@ -37,7 +37,7 @@ $botTyping
 `
 })
 
-module.awaitedCommand({
+bot.awaitedCommand({
 name: "ativos",
 code: `$reply
 <@$authorID>
@@ -60,10 +60,9 @@ $thumbnail[1;$getVar[thumbrank]]
 `
 })
 
-module.awaitedCommand({
+bot.awaitedCommand({
 name: "cataventos",
-code: `
-$botTyping
+code: `$botTyping
 <@$authorID>
   $author[1;Membros com mais cataventos:]
   $color[1;RANDOM]
@@ -82,7 +81,7 @@ $thumbnail[1;$getVar[thumbrank]]
 `
 })
 
-module.awaitedCommand({
+bot.awaitedCommand({
 name: "premiados",
 code: `$reply
 <@$authorID> | ⭐
@@ -96,7 +95,7 @@ $footer[1;Quer aparecer aqui? Tente ser os 3 top membros ativos!]
 `
 })
 
-module.awaitedCommand({
+bot.awaitedCommand({
 name: "miau",
 code: `$reply
 <@$authorID> | Miau! 😸
