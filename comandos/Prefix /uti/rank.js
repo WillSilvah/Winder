@@ -1,6 +1,5 @@
 module.exports = ({
 name: "testerank",
-aliases: ['ranking'],
 code: `$awaitMessages[$authorID;10s;adoros;ativos;cataventos;premiados;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
@@ -15,7 +14,7 @@ $cooldown[30s;<@$authorID> | Aguarde **%time%** para poder executar esse comando
 `
 })
 
-bot.awaitedCommand({
+modules.awaitedCommand({
 name: "adoros",
 code: `$reply
 $botTyping
@@ -37,7 +36,7 @@ $botTyping
 `
 })
 
-bot.awaitedCommand({
+modules.awaitedCommand({
 name: "ativos",
 code: `$reply
 <@$authorID>
@@ -60,7 +59,7 @@ $thumbnail[1;$getVar[thumbrank]]
 `
 })
 
-bot.awaitedCommand({
+modules.awaitedCommand({
 name: "cataventos",
 code: `$botTyping
 <@$authorID>
@@ -81,7 +80,7 @@ $thumbnail[1;$getVar[thumbrank]]
 `
 })
 
-bot.awaitedCommand({
+modules.awaitedCommand({
 name: "premiados",
 code: `$reply
 <@$authorID> | ⭐
@@ -95,7 +94,7 @@ $footer[1;Quer aparecer aqui? Tente ser os 3 top membros ativos!]
 `
 })
 
-bot.awaitedCommand({
+modules.awaitedCommand({
 name: "miau",
 code: `$reply
 <@$authorID> | Miau! 😸
