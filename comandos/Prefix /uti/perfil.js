@@ -4,7 +4,7 @@ module.exports = {
   code: `
 $botTyping
 $reply
-$title[1;Perfil de $username[$mentioned[1;yes]]]
+$title[1;Perfil de $username[$mentioned[1;yes]] ($getUserVar[nickname;$mentioned[1];yes])]
 $description[1;
 $getUserVar[sobremim;$mentioned[1]]
 $addField[1;Última mensagem enviada;**$getUserVar[mensagens1;$mentioned[1;yes]]** | Horário: $getUserVar[mensagens2;$mentioned[1;yes]] | último Canal: $getUserVar[mensagens3;$mentioned[1;yes]]]
