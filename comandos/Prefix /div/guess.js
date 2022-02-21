@@ -17,6 +17,6 @@ $changeNickname[$authorID;[Burro] - $username]
 
 $endelseIf
 $endif
-$cooldown[5m;<@$authorID> | Espere **%time%** para adivinhar novamente!]
+$cooldown[1m;<@$authorID> | Espere **%time%** para adivinhar novamente!]
 `
 }
