@@ -8,7 +8,8 @@ Versão do BOT: **$getVar[versão]**
 
 > **Informação de Hardware**
 
-ping: **$pingms**
+Ping: **$pingms**
+Database ping: **$dbPingms**
 CPU: **$CPU%**
 RAM: **$ram**
 Uptime: **$uptime**
