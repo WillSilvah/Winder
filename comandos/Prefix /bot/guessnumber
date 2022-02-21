@@ -4,5 +4,5 @@ Olá teste
 `,
 channel: "861337787192836117",
 executeOnStartup: true,
-every: 300000
+every: 60000
 })
