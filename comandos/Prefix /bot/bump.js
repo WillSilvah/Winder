@@ -6,7 +6,6 @@ nonPrefixed: true,
  $globalCooldown[2h;]
 `
 } ,{
-module.exports = [{
 name: "!d bump",
 nonPrefixed: true,
 code: `$useChannel[861422411915722774]
