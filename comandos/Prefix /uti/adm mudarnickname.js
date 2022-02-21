@@ -1,6 +1,6 @@
 module.exports = {
-name: "usuário mudar apelido",
-aliases: ['user change nickname'],
+name: "usuáriomudarapelido",
+aliases: ['userchangenickname'],
 code: `
   $reply
 <@$authorID> | Apelido de <@$mentioned[1] foi alterado para **$noMentionMessage**!
