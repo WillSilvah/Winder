@@ -5,7 +5,7 @@ nonPrefixed: true,
  $onlyForChannels[861422411915722774;]
  $globalCooldown[2h;]
 `
-} .{
+} ,{
 module.exports = [{
 name: "!d bump",
 nonPrefixed: true,
