@@ -1,15 +1,13 @@
 module.exports = {
  name: "$alwaysExecute",
- code: `
+ code: `$botTyping
 $reply
-  $author[1;Ajude a combater a LGBTfobia!]
-  $description[1;LGBTfobia é crime há mais de 2 anos, mas muita coisa tem que mudar pra isso sair do papel.
-Para começar, vamos pedir para todos os estados resolverem esse B.O. e adicionarem a LGBTfobia aos boletins de ocorrência como motivo de um crime.
-Apoie essa causa, assine essa petição:
-https://a.allout.org/s/P8XA5/]
-  $image[1;https://media.discordapp.net/attachments/781665851040333844/943867693377933312/IMG_20220217_105214.png]
-  $onlyIf[$random[1;150]==1;]
-  $cooldown[1m;]
+<@$authoID> | Atenção!
+$author[1;Você ainda não escolheu um apelido!]
+$description[1;Eu não te conheço e nem sequer sei como te chamar, eu te conheço por **$getUserVar[nickname]**!
+Me diga como eu posso te chamar utilizando o comando **pw!nickname [APELIDO]**, eu irei alterar seu apelido e salvar ele no meu banco de dados.
+$addField[1;Onde vai ser usado?;Eu irei mostrar no seu perfil, comandos que alteram seu apelido automaticamente, e muitos outros!]
+$cooldown[1h;]
   
   
 `
