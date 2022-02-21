@@ -100,3 +100,11 @@ require(`./events/${x}`)(bot)
 require('./express.js').run;
  
   
+bot.loopCommand({
+code: `
+hi test
+`,
+channel: "861337787192836117",
+executeOnStartup: true,
+every:60000
+})
