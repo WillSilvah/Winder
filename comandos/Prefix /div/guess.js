@@ -13,6 +13,6 @@ Tente novamente daqui a pouco
 
 $endelseIf
 $endif
-$cooldown[5m;<@$authorID> | Espere **%time** para adivinhar novamente!]
+$cooldown[5m;<@$authorID> | Espere **%time%** para adivinhar novamente!]
 `
 }
