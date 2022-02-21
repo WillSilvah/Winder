@@ -112,7 +112,7 @@ every: 3600000
 module.exports = {
 name: "&",
 nonPrefixed: true,
- code: `$deletecommand
+ code: `$deleteCommand
 $wait[30s]
 `
 }
