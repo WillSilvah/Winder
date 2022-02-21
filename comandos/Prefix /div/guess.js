@@ -6,6 +6,7 @@ code: `$botTyping
 $if[$getServerVar[guess]==$message[1]]
 <@$authorID> | Parabéns! Você adivinhou o número que estava pensando!
 $setServerVar[guess;$random[1;20]]
+$setUserVar[cataventos;$sum[$getUserVar[cataventos];1]]
 
 $elseIf[$getServerVar[guess]!=$message[1]]
 <@$authorID> | Parabéns! Você errou :joy:
