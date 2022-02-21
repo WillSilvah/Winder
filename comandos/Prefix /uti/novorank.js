@@ -1,6 +1,6 @@
 module.exports = [{
 name: "rank",
-code:`$awaitMessages[$channelID;$authorID;30s;adoros,ativos,catavento,premiados,bump;adoros,ativos,catavento,premiados,bump;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
+code:`$awaitMessages[$channelID;$authorID;30s;adoros,ativos,cataventos,premiados,bump;adoros,ativos,cataventos,premiados,bump;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
 
@@ -57,7 +57,7 @@ $thumbnail[1;$getVar[thumbrank]]
  $botTyping
 `
 },{
-name: "catavento",
+name: "cataventos",
 type:"awaited",
 code: `$botTyping
 <@$authorID>
