@@ -102,8 +102,7 @@ require('./express.js').run;
   
 bot.loopCommand({
 code: `
-pinwBot ping: $pingms
-pinwBot Database ping: $dbPing
+$setServerVar[guess;$random[1;20]]
 `,
 channel: "861337787192836117",
 executeOnStartup: true,
