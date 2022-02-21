@@ -1,4 +1,4 @@
-modules.loopCommand = ({
+bot.loopCommand({
 code: `
 Olá teste
 `,
