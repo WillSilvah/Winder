@@ -36,6 +36,7 @@ bot.variables({
 
   //devs
   "donos": "494795833351602176;882913524291088384",
+  "nickname": "fulano",
 
   //RATING
   "cataventos": "0",
