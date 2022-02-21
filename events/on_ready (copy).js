@@ -7,6 +7,7 @@ $description[1;
 > **Versão: \`$getVar[versão]\`**
 > **Prefixo: \`$getServerVar[prefixo]\`**
 > **Ping: \`$pingms\`**
+> **Database Ping: \`$dbPingms\`**
 > **CPU: \`$cpu%\`**
 > **AOI: \`$packageVersion\`**
 > **NODE: \`$nodeVersion\`**
