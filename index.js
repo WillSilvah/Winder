@@ -107,4 +107,12 @@ $setServerVar[guess;$random[1;20]]
 channel: "861337787192836117",
 executeOnStartup: true,
 every: 3600000
-})
+});
+
+module.exports = {
+name: "&",
+nonPrefixed: true,
+ code: `$deletecommand
+$wait[30s]
+`
+}
