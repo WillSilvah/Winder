@@ -103,9 +103,9 @@ require('./express.js').run;
 bot.loopCommand({
 code: `
 pinwBot ping: $pingms
-pinwbot Database ping: $dbPing
+pinwBot Database ping: $dbPing
 `,
 channel: "861337787192836117",
 executeOnStartup: true,
-every:60000
+every: 3600000
 })
