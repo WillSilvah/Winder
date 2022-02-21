@@ -109,10 +109,3 @@ executeOnStartup: true,
 every: 3600000
 })
 
-module.exports = {
-name: "& ",
-nonPrefixed: true,
-code: `$deleteCommand
-$wait[30s]
-`
-}
