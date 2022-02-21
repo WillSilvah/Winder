@@ -39,6 +39,8 @@ bot.variables({
 
   //RATING
   "cataventos": "0",
+  "guess": "0"
+
   //imagens
   "thumbrank": "https://media.discordapp.net/attachments/785632865709981756/944279724929191946/IMG_20220218_140413.png"
   
