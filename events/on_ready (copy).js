@@ -1,7 +1,7 @@
 module.exports = (bot) => {
   bot.readyCommand({
       channel: "861337787192836117",
-      code: `$botTyping
+      code: `$botTyping[10s]
 $author[1;$userTag[861048815594504214] está ligado e pronto para o uso!
 $description[1;
 > **Versão: \`$getVar[versão]\`**
