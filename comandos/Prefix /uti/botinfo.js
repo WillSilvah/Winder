@@ -1,6 +1,6 @@
 module.exports = {
 name: "botinfo",
-code: `
+code: `$botTyping
   $reply
 $author[1;Informações avançadas do pinwBot]
 $description[1;
