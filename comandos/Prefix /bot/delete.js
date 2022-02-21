@@ -1,7 +1,7 @@
 module.exports = {
-name: "&",
-nonPrefixed: true,
-code: `$deleteCommand
+name: "$alwaysExecute",
+code: `$checkContains[$message;&]
+$deleteCommand
 $wait[30s]
 `
 }
