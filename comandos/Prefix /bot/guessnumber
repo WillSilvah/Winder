@@ -1,8 +1,8 @@
 bot.loopCommand({
 code: `
-Olá teste
+hi test
 `,
 channel: "861337787192836117",
 executeOnStartup: true,
-every: 60000
+every:60000
 })
