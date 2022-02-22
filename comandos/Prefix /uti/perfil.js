@@ -13,7 +13,7 @@ $addField[1;Jornada de $username[$mentioned[1;yes]] na pinwheel;**$getUserVar[me
 
 $addField[1;ID do usuário;$mentioned[1]]
 
-$addField[1;Status do usuário;$activity]
+$addField[1;Status do usuário;$activity | Plataforma: $platform[$mentioned[1]
 
 ]
 $color[1;RANDOM]
