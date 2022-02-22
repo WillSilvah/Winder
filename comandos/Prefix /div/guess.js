@@ -1,8 +1,9 @@
 module.exports = {
 name: "adivinharnúmero",
-aliases: ['guessnumber', 'guessthenumber','adivinharnumero'],
+aliases: ['guessnumber', 'guessthenumber','adivinharnumero', 'gtn'],
 $if: "v4",
 code: `$botTyping
+$argsCheck[1;<@$authorID> | É pra você adivinhar o número que eu estou pensando, não eu adivinhar o que você está pensando. **$getUserVar[prefixo]$randomText[adivinharnúmero;guessnumber;guessthenumber;adivinharnumero;gtn]]
 $if[$getServerVar[guess]==$message[1]]
 $reply $botTyping
 <@$authorID> | Parabéns! Você adivinhou o número que estava pensando!
