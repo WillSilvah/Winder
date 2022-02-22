@@ -2,7 +2,7 @@ module.exports = {
 name: "botinfo",
 code: `$botTyping
   $reply
-$author[1;Informações avançadas do pinwBot]
+$author[1;Informações avançadas do $userTag[861048815594504214]]
 $description[1;
 Versão do BOT: **$getVar[versão]**
 
