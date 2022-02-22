@@ -6,13 +6,13 @@ bot.status({
 })
 
 bot.status({
-  text: "$randomText[Five Nights at Pinwheel's;Five Nights at Freddy's;Five Nights at Freddy's 2;Five Nights at Freddy's 3;Five Nights at Freddy's: The Final Chapter;Five Nights at Freddy's: Sister Location;Five Nights at Freddy's: Pizzeria Simulator;Five Nights at Freddy's: Ultimate Custom Night;Five Nights at Freddy's: Security Breach]",
+  text: "Five Night at Pinwheel's",
   type: "PLAYING",
   time: 30
 })
 
 bot.status({
-  text: "FNAF com o $randomText[Anderson;Ycro;Volt] <3",
+  text: "pedra na casa do vizinho",
   type: "PLAYING",
   time: 15
 })
