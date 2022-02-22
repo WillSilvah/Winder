@@ -103,9 +103,20 @@ require('./express.js').run;
 bot.loopCommand({
 code: `
 $setServerVar[guess;$random[1;20]]
+$author[1;Variável atualizada!]
+$description[1;Váriavel do comando **guessthenumber** foi atualizada.]
 `,
-channel: "861337787192836117",
+channel: "923998719765004299",
+executeOnStartup: true,
+every: 3600000
+});
+
+bot.loopCommand({
+code: `
+$author[1;Cache Members]
+$description[1;Eu conheço **$cacheMembers[861313067291115541;yes]** membros!]
+`,
+channel: "923998719765004299",
 executeOnStartup: true,
 every: 3600000
 })
-
