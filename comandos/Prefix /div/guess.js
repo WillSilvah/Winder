@@ -2,8 +2,10 @@ module.exports = {
 name: "guessnumber",
 $if: "v4",
 code: `$botTyping
-$argsCheck[none;<@$authorID> | É pra você adivinhar o número que eu estou pensando, não eu adivinhar o que você está pensando. **$getUserVar[prefixo]guessnumber**]
-$if[$getServerVar[guess]==$message[1]]
+$if[$message==]
+<@$authorID> | É pra você adivinhar o número que eu estou pensando, não eu adivinhar o que você está pensando. **$getUserVar[prefixo]guessnumber**
+
+$elseIf[$getServerVar[guess]==$message[1]]
 $reply $botTyping
 <@$authorID> | Parabéns! Você adivinhou o número que estava pensando!
 Você ganhou um catavento!
