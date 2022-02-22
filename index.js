@@ -6,7 +6,7 @@ const fs = require('fs');
 //╭───────────────── ✦ 🤖 Bot Config
 
 const bot = new Bot({
-	token: 'ODYxMDQ4ODE1NTk0NTA0MjE0.YOEIMw.fhM5W3Vtx6CTy8_FauJ1M0MyRCc', 
+	token: 'ODYxMDQ4ODE1NTk0NTA0MjE0.YOEIMw.rT51BAIoA2hc7-cNUKyzuv5QBPg', 
 	prefix: 'pw!',
 	intents: 'all', 
 	autoUpdates: true,
