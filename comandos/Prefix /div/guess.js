@@ -2,7 +2,7 @@ module.exports = {
 name: "guessnumber",
 $if: "v4",
 code: `$botTyping
-$argsCheck[;<@$authorID> | É pra você adivinhar o número que eu estou pensando, não eu adivinhar o que você está pensando. **$getUserVar[prefixo]guessnumber**]
+$argsCheck[0;<@$authorID> | É pra você adivinhar o número que eu estou pensando, não eu adivinhar o que você está pensando. **$getUserVar[prefixo]guessnumber**]
 $if[$getServerVar[guess]==$message[1]]
 $reply $botTyping
 <@$authorID> | Parabéns! Você adivinhou o número que estava pensando!
