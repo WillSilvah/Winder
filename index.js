@@ -114,7 +114,7 @@ every: 3600000
 bot.loopCommand({
 code: `
 $author[1;Cache Members]
-$description[1;Eu conheço **$cacheMembers[861313067291115541;yes]** membros!]
+$description[1;Eu conheço **$membersCount[861313067291115541;all;no]** membros!]
 `,
 channel: "923998719765004299",
 executeOnStartup: true,
