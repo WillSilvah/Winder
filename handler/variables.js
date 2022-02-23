@@ -21,6 +21,7 @@ bot.variables({
   "emblema10": "",
 
   //Mensagens 
+  "totalmensagens: "0",
   "mensagens": "0",
   "mensagens1": "Não sei qual foi a última mensagem deste usuário",
   "mensagens2": "Não sei o horário.",
