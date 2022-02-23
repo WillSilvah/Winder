@@ -3,7 +3,6 @@ name: "mudarnickname",
 aliases: ['nickname','apelido','mudarapelido'],
 code: `$botTyping
 $reply
-$changeNickname[$authorID;$message]
 <@$authorID> | Seu apelido foi alterado para **$message**!
 $setUserVar[nickname;$message;$authorID]
 $onlyIf[$message!=;<@$authorID> | Qual apelido você quer que eu chame você? **pw!$randomText[nickname;mudarapelido;apelido] <novo apelido>**]
