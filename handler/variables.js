@@ -20,6 +20,13 @@ bot.variables({
   "emblema9": "",
   "emblema10": "",
 
+  //Perfil
+
+  "idade": "100",
+  "genero": "Helicóptero de guerra",
+  "nickname": "fulano",
+  "idade": "900",
+
   //Mensagens 
   "totalmensagens": "0",
   "mensagens": "0",
@@ -37,7 +44,6 @@ bot.variables({
 
   //devs
   "donos": "494795833351602176;882913524291088384",
-  "nickname": "fulano",
 
   //RATING
   "cataventos": "0",
