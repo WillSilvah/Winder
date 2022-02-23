@@ -1,7 +1,11 @@
 
 module.exports = {
-  name: "pergunta",
-  code: `$reply
- **__$randomText[Sim!;Não!;Tá louco?;Pare de me marcar!;Não concordo;Não sei;Apaga isso agora!;Provavelmente;Lógico!;Claro;Sério?;Concordo;Prefiro não responder;Não sei e não quero saber!]__**
+name: "perguntar",
+aliases: ['ask'],
+code: `$reply
+$botTyping
+$onlyIf[$message!=;<@$authorID> | Faça alguma pergunta e eu tentarei responder ela da forma mais padronizada possível. **$getServerVar[prefixo]$randomText[perguntar;ask] <pergunta>**]
+<@$authorID>$randomText[Hmm, eu não sei nada sobre isso.;Claro!;Com certeza.;Absoluta;Óbvio;Não,Nunca;Pergunta no posto Ipiranga!;O google provavelmente sabe]
+$cooldown[10s;<@$authorID> | Espere **%time** para executar este comando novamente]
 `
 } 
