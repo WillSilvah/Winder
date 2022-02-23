@@ -2,6 +2,8 @@ module.exports = {
  name: "$alwaysExecute",
  code: `
  $setUserVar[mensagens;$sum[$getUserVar[mensagens];1]]
+ $setUserVar[totalmensagens;$sum[$getUserVar[totalmensagens];1]]
+
  $setUserVar[mensagens2;$hour:$minute:$second - $day/$month/$year]
  $setUserVar[mensagens1;$message]
  $setUserVar[mensagens3;<#$channelID>]
