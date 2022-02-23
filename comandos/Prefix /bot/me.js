@@ -41,7 +41,7 @@ $elseIf[$getUserVar[mensagens]==9000]
 $elseIf[$getUserVar[mensagens]==10000]
 **$username** | enviou 10,000 mensagens
 
-$endElseIf
+$endelseIf
 $endIf
 `
 } 
