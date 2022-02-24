@@ -1,9 +1,10 @@
 module.exports = [{
 name: "!d bump",
+nonPrefixied: true,
 code: `
 $setTimeout[bump;$get[sc]s;{
 "cid":"861337787192836117",
-"prize":"2h"
+"prize":"10s"
 }]
 Codigo de quando usar !d bump`
 },{
