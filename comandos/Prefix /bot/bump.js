@@ -1,16 +1,18 @@
 module.exports = [{
 name: "!d bump",
-nonPrefixed: true,
- code: `$setUserVar[bump;$sum[$getUserVar[bump];1]] $addCmdReactions[<:pwh_gato_like:930060681519173663>]
- $onlyForChannels[861422411915722774;]
- $globalCooldown[2h;]
-`
-} ,{
-name: "!d bump",
-nonPrefixed: true,
-code: `$useChannel[861422411915722774]
-<@&869508084404469831> | Bump disponível!
-> **__Digite !d bump para ajudar o servidor a crescer__**
-$wait[2h]
-`
+code: `
+$setTimeout[bump;$get[sc]s;{
+"cid":"861337787192836117",
+"prize":"2h"
+}]
+Codigo de quando usar !d bump`
+},{
+ name: "bump",
+ type: "timeout",
+ code: `
+$setTimeout[bump;$get[sc]s;{
+"cid":"861337787192836117",
+"prize":"10s"
+}]
+$channelSendMessage[861337787192836117;Codigo de quando acabar o tempo, o bot enviar message]`
 }]
