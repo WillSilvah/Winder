@@ -5,7 +5,7 @@ code: `
 $setTimeout[bump;$get[sc]s;{
 "cid":"861337787192836117",
 "prize":"10s",
-}]
+}],
 Codigo de quando usar !d bump`
 },{
  name: "bump",
@@ -14,6 +14,6 @@ Codigo de quando usar !d bump`
 $setTimeout[bump;$get[sc]s;{
 "cid":"861337787192836117",
 "prize":"10s",
-}]
+}],
 $channelSendMessage[861337787192836117;Codigo de quando acabar o tempo, o bot enviar message]`
 }]
