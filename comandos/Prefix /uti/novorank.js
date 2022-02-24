@@ -1,12 +1,12 @@
 module.exports = [{
 name: "rank",
-code:`$awaitMessages[$channelID;$authorID;30s;adoros,ativos,cataventos,premiados,bump,total ativos;total ativos,adoros,ativos,cataventos,premiados,bump;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
+code:`$awaitMessages[$channelID;$authorID;30s;adoros,total ativos,ativos,cataventos,premiados,bump;adoros,total ativos,ativos,cataventos,premiados,bump;<@$authorID> | Eu não gostei dessa sua resposta, portanto irei dormir, boa noite.]
 $botTyping
 <@$authorID> | Qual ranking você quer ver?
 
 > **❤️ adoros = Ranking dos membros mais adorados do servidor**
 > **💬 ativos = Veja os membros mais ativos!**
-> **💬 tota ativos = Veja os membros mais ativos em todos os períodos**
+> **💬 total ativos = Veja os membros mais ativos em todos os períodos**
 > **🌼 cataventos = Veja os membros com a maior quantidade de cataventos.**
 > **⭐ premiados = Veja os membros mais ativos de cada mês!**
 > **😺 Bump = Veja os membros que mais bumparam a pinwheel!**
