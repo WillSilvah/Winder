@@ -24,7 +24,7 @@ $elseIf[$getServerVar[guess]!=$message[1]]
 $reply $botTyping
 <@$authorID> | Eu não pensei no número **$message[1]**, tente novamente daqui a 30 segundos!
 
-$endelseIf
+$endelseif
 $endif
 $cooldown[30s;<@$authorID> | Espere **%time%** para adivinhar novamente!]
 `
