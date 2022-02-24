@@ -3,7 +3,7 @@ name: "guessnumber",
 aliases: ['adivinharnumero','guessthenumber','gtn',],
 $if: "v4",
 code: `$botTyping
-$if[$message[1]!=]
+$if[$message!=]
 <@$authorID> | Adivinhe qual número estou pensando!
 $author[1;Como funciona?]
 $description[1;
@@ -24,7 +24,7 @@ $elseIf[$getServerVar[guess]!=$message[1]]
 $reply $botTyping
 <@$authorID> | Eu não pensei no número **$message[1]**, tente novamente daqui a 30 segundos!
 
-$endelseif
+$endElseIf
 $endif
 $cooldown[30s;<@$authorID> | Espere **%time%** para adivinhar novamente!]
 `
