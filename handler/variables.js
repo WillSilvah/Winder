@@ -38,6 +38,7 @@ bot.variables({
 
   //the bumps
   "bump": "0",
+  "prize": "",
   
  //amores
   "rep": "0",
