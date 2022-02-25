@@ -30,7 +30,7 @@ bot.status({
 })
 
 bot.status({
-  text: "ping: $pingms | DB ping: $dpPingms",
+  text: "ping: $pingms | DB ping: $dbPingms",
   type: "PLAYING", 
 //PLAYING
 //WATCHING
