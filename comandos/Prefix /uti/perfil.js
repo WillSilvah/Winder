@@ -7,6 +7,9 @@ $reply
 $title[1;Perfil de $username[$mentioned[1;yes]] ($getUserVar[nickname;$mentioned[1]])]
 $description[1;
 $getUserVar[sobremim;$mentioned[1]]
+
+$addField[1;Identidade do usuário;Idade: $getUserVar[idade;$mentioned[1;yes]] | Gênero: $getUserVar[genero;$mentioned[1;yes]] | Números adivinhados: $getUserVar[1guess;$mentioned[1;yes]]]
+
 $addField[1;Última mensagem enviada;**$getUserVar[mensagens1;$mentioned[1;yes]]** | Horário: $getUserVar[mensagens2;$mentioned[1;yes]] | último Canal: $getUserVar[mensagens3;$mentioned[1;yes]]]
 
 $addField[1;Jornada de $username[$mentioned[1;yes]] na pinwheel;**$getUserVar[mensagens;$mentioned[1;yes]]** mensagens enviadas | **$getUserVar[rep;$mentioned[1;yes]]** adoros! | **$getUserVar[cataventos;$mentioned[1]]** cataventos]
