@@ -22,7 +22,6 @@ bot.variables({
 
   //Perfil
 
-  "idade": "100",
   "genero": "Helicóptero de guerra",
   "nickname": "fulano",
   "idade": "900",
