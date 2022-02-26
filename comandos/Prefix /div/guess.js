@@ -5,7 +5,7 @@ $if: "v4",
 code: `$botTyping
 $onlyIf[$message!=;<@$authorID> | Adivinhe qual número estou pensando!]
 
-$elseIf[$getServerVar[guess]==$message[1]]
+$if[$getServerVar[guess]==$message[1]]
 $reply $botTyping
 <@$authorID> | Parabéns! Foi o número **$message[1]** que eu estava pensando mesmo! Você ganhou um catavento
 $addCmdReactions[<:pinw_branco:945614522385825862>]
