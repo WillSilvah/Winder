@@ -5,6 +5,7 @@ code: `$reply
 $if[$randomText[no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;no;yes]==yes]
 $setUserVar[cataventos;$sum[$getUserVar[cataventos];1]]
 $addCmdReactions[<:pinw_branco:945614522385825862>]
+$cooldown[5s;]
 $endIf
 `
 }
