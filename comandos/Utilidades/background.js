@@ -28,6 +28,7 @@ $description[Você mudou o background do seu perfil com sucesso!]
 $image[1;$message]
 $color[1;#0307fc]
 $setGlobalUserVar[background;$message;$authorID]
+$onlyIf[$isValidImageLink[$message]==true;<@$authorID> | Insira um link de imagem válido!]
 $argsCheck[>0;<@$authorID> | Eu não preciso explicar como usar esse comando né? É só colocar o link da imagem e ele vai aparecer no perfil!]
 `
 <<<<<<< HEAD
