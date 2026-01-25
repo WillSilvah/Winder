@@ -1,0 +1,22 @@
+module.exports = [{
+name: "joinCommand",
+type: "join",
+channel: "861337787192836117",
+code: `
+<@$authorID> <@&1192166134145884200>
+$author[1;Novo membro!;https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
+$title[$username seja bem-vindo(a)!;https://www.bing.com/search?q=Como+ser+bem+recebido+em+um+lugar&setmkt=pt-BR&PC=EMMX01&form=LWS002&scope=web&darkschemeovr=1]
+$description[
+$ifAwaited[$isBot[$authorID]==false;Espero que goste da Patinhas e que você se divirta mais do que eu com uma bola de lã. 🐱 Se liga nas nossas diretrizes e aproveite tudo! 😉;Um novo aplicativo foi adicionado na Patinhas *ruídos de robô pode ser ouvido* Epa! Ele disse alguma coisa? 🤔
+] 
+$footer[1;ID: $authorID]
+$thumbnail[1;$userAvatar]
+$color[1;#020afc]
+
+$addButton[1; Conheça a Patinhas!;link;https://discord.com/channels/1462224054676099094/1462590504188383304;false;👋]
+
+$onlyIf[$guildID==1462224054676099094;]
+$cacheMembers[$guildID;false]
+
+`
+}]
