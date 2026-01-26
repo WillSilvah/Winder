@@ -4,7 +4,7 @@ type: "join",
 channel: "1462224055884189781",
 code: `
 $channelSendMessage[1463226796974543114;<@&1462915937433948351>
-> Vão dar boas vindas ao <@$authorID> ($authorID)
+> Vão dar boas vindas ao <@$authorID> ($authorID)]
 
 <@$authorID> 
 $author[1;$username[$authorID];https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
