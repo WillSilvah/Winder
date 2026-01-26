@@ -5,7 +5,7 @@ channel: "1462224055884189781",
 code: `
 
 $log[---------------
-OwO $username[$clientID] está ligado! >w<
+$username[$clientID] está ligado! >w<
 ---------------
 ]
 $setStatus[;;online]
