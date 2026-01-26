@@ -2,8 +2,10 @@
 .env
 *.env
 
-# Dependências (Nunca suba a node_modules, é pesada demais)
 node_modules/
+logs/
+*.log
+database.sqlite
 
 # Logs e arquivos do sistema
 npm-debug.log*
