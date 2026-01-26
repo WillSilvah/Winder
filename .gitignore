@@ -1,1 +1,12 @@
+# Segredos e chaves (O MAIS IMPORTANTE)
 .env
+*.env
+
+# Dependências (Nunca suba a node_modules, é pesada demais)
+node_modules/
+
+# Logs e arquivos do sistema
+npm-debug.log*
+.DS_Store
+dist/
+build/
