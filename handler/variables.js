@@ -1,7 +1,8 @@
 module.exports = (client) => {
 client.variables({
 
-  "versão": "Winder (old gen) 01",
+  "versão": "Winder 02",
+  "consoleChat": "1465218335389257802",
   "prefixo": "w!",
   "msgPerMinute": "0",
   "lastMessage": "",

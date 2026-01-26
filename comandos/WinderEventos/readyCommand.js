@@ -1,7 +1,7 @@
 module.exports = [{
 name: "readyEvent",
 type: "clientReady",
-channel: "1465218335389257802",
+channel: "$getVar[consoleChat]",
 code: `
 $author[1;$username[$clientID] está ligado!]
 $description[

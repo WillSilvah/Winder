@@ -3,7 +3,7 @@
 module.exports = [{
 name: "loopCommand",
 type: "loop",
-channel: "923998719765004299",
+channel: "$getVar[consoleChat]",
 executeOnStartup: "true",
 every: 999,
 code: `
@@ -20,7 +20,7 @@ $timezone[America/Recife]
 name: "novodia",
 type: "awaited",
 code: `
-$channelSendMessage[861337787192836117;{newEmbed:
+$channelSendMessage[1462224055884189781;{newEmbed:
 {author:Um novo dia começou...}
 {description:
 Que $day seja um dia incrível para você.
@@ -34,7 +34,7 @@ $timezone[America/Recife]
 name: "chat-bomdia",
 type: "awaited",
 code: `
-$channelSendMessage[861337787192836117;
+$channelSendMessage[1462224055884189781;
 # 🌞 BOM DIA PINWHEEL!
 **Vamos levantar e tomar um café ☕?**
 ]
@@ -43,7 +43,7 @@ $channelSendMessage[861337787192836117;
 name: "chat-boatarde",
 type: "awaited",
 code: `
-$channelSendMessage[861337787192836117;
+$channelSendMessage[1462224055884189781;
 # 🍱 JÁ PODE ALMOÇAR!
 **Liberei o almoço, vão almoçar enquanto dá tempo!**
 ]
@@ -52,7 +52,7 @@ $channelSendMessage[861337787192836117;
 name: "chat-boatardefim",
 type: "awaited",
 code: `
-$channelSendMessage[861337787192836117;
+$channelSendMessage[1462224055884189781;
 # 🍱 FIM DO ALMOÇO
 **Permissão para almoçar foi cancelada.**
 ]
@@ -61,7 +61,7 @@ $channelSendMessage[861337787192836117;
 name: "chat-boanoite",
 type: "awaited",
 code: `
-$channelSendMessage[861337787192836117;
+$channelSendMessage[1462224055884189781;
 # 🌃 BOA NOITE
 **Vamos finalizar a noite conversando com os amigos?**
 ]
