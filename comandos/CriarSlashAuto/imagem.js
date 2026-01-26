@@ -1,14 +1,20 @@
 module.exports = [{
-name: "readyEvent",
+name: "imagem",
 type: "ready",
 channel: "1465218335389257802",
 code: `
-$createApplicationCommand[global;imagem;Envie uma imagem do banco de dados do Winder!;false;all;guild,dm;slash;[
+$createApplicationCommand[global;imagem;Envie uma imagem aleatória de uma categoria;false;all;guild,botdm,dm;slash;[
   {
-    "type": 2,
+    "type": 3,
     "name": "gato",
-    "description": "Envie uma foto de um gato",
-    "options": []
+    "description": "Envia uma imagem de um gato",
+    "autocomplete": true,
+    "choices": [
+      {
+        "name": "gato",
+        "value": "gato"
+      }
+    ]
   }
 ]]
 `
