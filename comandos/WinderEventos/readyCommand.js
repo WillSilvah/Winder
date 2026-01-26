@@ -12,7 +12,6 @@ OwO $username[$clientID] está ligado! >w<
 ---------------
 ]
 $setStatus[;;online]
-$setUserNickname[$clientID;;]
 
 `
 }]
