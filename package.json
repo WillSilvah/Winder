@@ -9,7 +9,7 @@
   "description": "Winder em AOI old gen",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js &",
     "stop": "pkill -f index.js"
   },
   "repository": {
