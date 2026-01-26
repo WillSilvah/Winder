@@ -1,7 +1,7 @@
 module.exports = [{
 name: "$alwaysExecute",
 code: `
-$setGuildVar[msgPerMinute;$sum[$getGuildVar[msgs;1462224054676099094];1];1462224054676099094]
+$setGuildVar[msgPerMinute;$sum[$getGuildVar[msgPerMinute;1462224054676099094];1];1462224054676099094]
 
 $onlyIf[$channelID==1462224055884189781;]
 
