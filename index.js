@@ -1,5 +1,9 @@
 const { AoiClient } = require("aoi.js");
 
+require('dotenv').config();
+
+const TOKEN = process.env.TOKEN;
+
 const fs = require('fs');
 
 const { AoiVoice, PlayerEvents, PluginName, Cacher, Filter } = require("@aoijs/aoi.music");
