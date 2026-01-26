@@ -5,10 +5,10 @@ $setGuildVar[msgPerMinute;$sum[$getGuildVar[msgs;1462224054676099094];1];1462224
 
 $onlyIf[$channelID==1462224055884189781;]
 
-$setGlobalUserVar[messageMonth;$sum[$getGlobalUserVar[mensagens;$authorID];1];$authorID]
-$setGlobalUserVar[messageTotal;$sum[$getUserVar[totalmensagens;$authorID];1];$authorID]
+$setGlobalUserVar[messageMonth;$sum[$getGlobalUserVar[messageMonth;$authorID];1];$authorID]
+$setGlobalUserVar[messageTotal;$sum[$getUserVar[messageTotal;$authorID];1];$authorID]
 
-$setGuildVar[lastUserSend;$authorID;1462224054676099094]
+$setGuildVar[lastUserSendMessage;$authorID;1462224054676099094]
 
 $setGlobalUserVar[lastMessage;$message;$authorID]
 $setGlobalUserVar[lastMessageTime;$hour:$minute:$second - $date/$formatDate[$dateStamp;MM]/$year;$authorID]

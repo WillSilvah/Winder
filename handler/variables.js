@@ -9,7 +9,8 @@ client.variables({
   "messageMonth": "0",
   "messageTotal": "0",
   "guildMonthMessages": "0",
-  "guildTotalMesssages": "0"
+  "guildTotalMesssages": "0",
+  "lastUserSendMessage": ""
   
 })
 }
