@@ -1,5 +1,5 @@
 module.exports = [{
-name: "imagem",
+name: "gato",
 type: "ready",
 channel: "1465218335389257802",
 code: `
