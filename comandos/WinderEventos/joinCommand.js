@@ -1,9 +1,9 @@
 module.exports = [{
 name: "joinCommand",
 type: "join",
-channel: "861337787192836117",
+channel: "1462224055884189781",
 code: `
-<@$authorID> <@&1192166134145884200>
+<@$authorID> 
 $author[1;Novo membro!;https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
 $title[$username seja bem-vindo(a)!;https://www.bing.com/search?q=Como+ser+bem+recebido+em+um+lugar&setmkt=pt-BR&PC=EMMX01&form=LWS002&scope=web&darkschemeovr=1]
 $description[
