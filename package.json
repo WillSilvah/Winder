@@ -10,7 +10,9 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "@aoijs/aoi.db": "^0.0.0",
+    "@aoijs/aoi.music": "^1.3.2",
+    "aoi.js": "^6.11.1",
     "discord.js": "^14.25.1",
     "dotenv": "^17.2.3"
   }
-}

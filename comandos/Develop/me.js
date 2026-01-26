@@ -11,11 +11,11 @@ $setGlobalUserVar[messageTotal;$sum[$getUserVar[totalmensagens;$authorID];1];$au
 $setGuildVar[lastUserSend;$authorID;1462224054676099094]
 
 $setGlobalUserVar[lastMessage;$message;$authorID]
-$setGlobalUserVar[lastMessageTime;$hour:$minute:$second - $date/$formatDate[$dateStamp;MM]/$year;$authorID;1462224054676099094]
+$setGlobalUserVar[lastMessageTime;$hour:$minute:$second - $date/$formatDate[$dateStamp;MM]/$year;$authorID]
 $setGlobalUserVar[lastMessageChannel;$channelID;$authorID]
 
 $timezone[America/Recife]
-$setGuildVar[allmensagens;$sum[$getGuildVar[allmensagens;1462224054676099094];1];1462224054676099094]
+$setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages;1462224054676099094];1];1462224054676099094]
 
 $onlyForGuilds[1462224054676099094;]
 $onlyIf[$isBot==false;]
