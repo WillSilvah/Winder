@@ -7,7 +7,7 @@ $channelSendMessage[1463226796974543114;<@&1462915937433948351>
 > Vão dar boas vindas ao <@$authorID> ($authorID)
 
 <@$authorID> 
-$author[1;Novo membro!;https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
+$author[1;$username[$authorID];https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
 $title[$username seja bem-vindo(a)!;https://www.bing.com/search?q=Como+ser+bem+recebido+em+um+lugar&setmkt=pt-BR&PC=EMMX01&form=LWS002&scope=web&darkschemeovr=1]
 $description[
 $ifAwaited[$isBot[$authorID]==false;Espero que goste da Patinhas e que você se divirta mais do que eu com uma bola de lã. 🐱 Se liga nas nossas diretrizes e aproveite tudo! 😉;Um novo aplicativo foi adicionado na Patinhas *ruídos de robô pode ser ouvido* Epa! Ele disse alguma coisa? 🤔
