@@ -4,7 +4,7 @@ type: "clientReady",
 channel: "1465218335389257802",
 code: `
 $channelSendMessage[1465218335389257802;{newEmbed:
-{author:$username[$clientID] está ligado!]}
+{author:$username[$clientID] está ligado!}
 {description:
 {field:AOi.JS:$packageVersion:true}
 {field:Node.JS:$nodeVersion:true}
