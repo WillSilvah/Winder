@@ -1,6 +1,6 @@
 module.exports = [{
 name: "readyEvent",
-type: "ready",
+type: "clientReady",
 channel: "1462224055884189781",
 code: `
 $deleteIn[1m]
