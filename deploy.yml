@@ -1,0 +1,35 @@
+name: Deploy Winder via SSH
+
+on:
+  push:
+    branches:
+      - main  # Se a sua branch for 'master', troque aqui
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install sshpass
+      run: sudo apt-get install -y sshpass
+
+    - name: SSH into server and deploy application
+      run: |
+        sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+          cd /home/frufru/services/winder
+
+          # Configura as credenciais usando o seu USER_TOKEN personalizado
+          git config --global credential.helper store
+          echo "https://x-access-token:${{ secrets.USER_TOKEN }}@github.com/${{ github.repository }}" > ~/.git-credentials
+
+          # Pull e Reset para evitar erros de commit
+          git fetch --all
+          git reset --hard origin/main
+
+          # Instala dependências e reinicia o bot
+          npm install
+          pm2 restart winder-bot || pm2 start index.js --name "winder-bot"
+        EOF
