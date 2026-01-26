@@ -10,7 +10,6 @@ $createObject[api1;$getObjectProperty[api;images[0]]]
 
 $createObject[api;$exec[curl -X GET -H 'user-agent: nsei -v ' https://v2.yiff.rest/furry/fursuit]
 $reply
-$clientTyping
 $interactionDefer[false]
   `
 }]

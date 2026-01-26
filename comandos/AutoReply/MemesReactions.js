@@ -4,6 +4,6 @@ code: `
 $addCmdReactions[❤️]
 
 $onlyIf[$messageAttachment!=;]
-$onlyIf[$channelID==1462224055884189782;]
+$onlyIf[$channelID==1462804345103061052;]
 `
 } 
