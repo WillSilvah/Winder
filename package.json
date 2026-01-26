@@ -3,6 +3,7 @@
     "@akarui/aoi.db": "^2.3.3",
     "aoi.js": "^6.11.1",
     "dotenv": "17.2.3",
+    "pm2": "^6.0.14",
     "discord.js": "^14.25.1"
   },
   "name": "winder-oldgen",
