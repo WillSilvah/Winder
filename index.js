@@ -37,9 +37,6 @@ const client = new AoiClient({
 
 const { LoadCommands } = require("aoi.js");
 
-
-voice.bindExecutor(client.functionManager.interpreter); // needed for events
-
 require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
 
