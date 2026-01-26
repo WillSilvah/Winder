@@ -1,6 +1,5 @@
 module.exports = [{
-name: "imagem",
-sub_command: "gato",
+name: "gato",
 type: "interaction",
 prototype: "slash",
 code: `
