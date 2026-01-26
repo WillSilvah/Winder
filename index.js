@@ -6,8 +6,6 @@ const TOKEN = process.env.TOKEN;
 
 const fs = require('fs');
 
-const { AoiVoice, PlayerEvents, PluginName, Cacher, Filter } = require("@aoijs/aoi.music");
-
 const client = new AoiClient({
 	token: process.env.TOKEN,
 	prefix: "w!",
@@ -36,34 +34,9 @@ const client = new AoiClient({
     errorMessage: ["", ""]
     });
 
-const voice = new AoiVoice(client, {
-  searchOptions: {
-    //soundcloudClientId: "Soundcloud ID", // optional
-    youtubegl: "US",
-  },
-  requestOptions: {
-    offsetTimeout: 0,
-    soundcloudLikeTrackLimit: 200,
-  },
-});
-
-// optional (cacher / filter)
-voice.addPlugin(PluginName.Cacher, new Cacher("memory" /* or "disk" */));
-voice.addPlugin(
-  PluginName.Filter,
-  new Filter({
-    filterFromStart: false,
-  }),
-);
 
 const { LoadCommands } = require("aoi.js");
 
-
-const loader = new LoadCommands(client);
-loader.load(voice.cmds, "./eventsmusic/");
-
-voice.addEvent(PlayerEvents.QueueEnd);
-voice.addEvent(PlayerEvents.TrackStart);
 
 voice.bindExecutor(client.functionManager.interpreter); // needed for events
 
@@ -92,49 +65,6 @@ client.functionManager.createFunction({
             code: d.util.setCode(data)
         };
     }
-});
-
-client.functionManager.createFunction({
-  name: "$search",
-  type: "djs",
-  code: async (d) => {
-    const data = d.util.aoiFunc(d);
-    const [query, type = "youtube", format = "{title} by {artist} ({duration})", list = 5, separator = "\n"] = data.inside.splits;
-
-    const searchType = type.toLowerCase() === "youtube" ? 3 : 0;
-
-    let results;
-    if (searchType === 3) {
-      results = await d.client.voiceManager.search(3, query, list);
-    } else if (searchType === 0) {
-      results = await d.client.voiceManager.search(0, query, list);
-    }
-
-    const formattedResults = results.map((result) => {
-      let fr = format;
-
-      const placeholders = {
-        "{title}": result.title,
-        "{artist}": searchType === 3 ? result.author.name : result.publisher_metadata?.artist || "Unknown Artist",
-        "{duration}": searchType === 3 ? result.duration.seconds * 1000: result.duration,
-        "{formattedDuration}": searchType === 3 ? result.duration.text : new Date(result.duration).toISOString().substr(14, 5),
-        "{id}": result.id,
-        "{url}": searchType === 3 ? "https://www.youtube.com/watch?v=" + result.id : result.permalink_url
-      };
-
-      for (const placeholder in placeholders) {
-        fr= fr.replace(new RegExp(placeholder, "g"), placeholders[placeholder]);
-      }
-
-      return fr;
-    });
-
-    data.result = formattedResults.join(separator);
-
-    return {
-      code: d.util.setCode(data)
-    };
-  }
 });
 
 client.functionManager.createFunction({
