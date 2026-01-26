@@ -42,27 +42,6 @@ require("./handler/status.js")(client);
 
 client.loadCommands("./comandos/", false);
 
-client.functionManager.createFunction({
-    name: "$translate",
-    type: "djs",
-    code: async (d) => {
-        const data = d.util.aoiFunc(d);
-        const [from = "auto", to = "en", text = "Text"] = data.inside.splits;
-
-        async function translate() {
-            let request = await fetch(`https://ild.vercel.app/api/translate?from=${from}&to=${to}&text=${text}`);
-
-            let result = await request.json()
-            return result.output;
-        }
-
-        data.result = await translate();
-
-        return {
-            code: d.util.setCode(data)
-        };
-    }
-});
 
 client.functionManager.createFunction({
   name: "$dyColor",
@@ -87,21 +66,4 @@ client.functionManager.createFunction({
       return d.aoiError.consoleError(error);
     }
   },
-});
-
-client.functionManager.createFunction({
-    name: "$isCaps",
-    type: "djs",
-    code: async (d) => {
-        const data = d.util.aoiFunc(d);
-        const [percentage, message] = data.inside.splits;
-
-        const capsPercentage = (message.replace(/[^A-Z]/g, "").length / message.length) * 100;
-        const isCaps = capsPercentage >= parseFloat(percentage);
-
-        data.result = isCaps;
-        return {
-            code: d.util.setCode(data)
-        };
-    }
 });
