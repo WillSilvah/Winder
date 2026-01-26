@@ -1,18 +1,25 @@
 {
-  "name": "winder",
-  "version": "1.0.0",
-  "description": "winder em aoi",
-  "license": "ISC",
-  "author": "willsilvah",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
   "dependencies": {
-    "@aoijs/aoi.db": "^0.0.0",
-    "@aoijs/aoi.music": "^1.3.2",
+    "@akarui/aoi.db": "^2.3.3",
     "aoi.js": "^6.11.1",
-    "discord.js": "^14.25.1",
-    "dotenv": "^17.2.3"
-  }
+    "discord.js": "^14.25.1"
+  },
+  "name": "winder-oldgen",
+  "version": "1.0.0",
+  "description": "Winder em AOI old gen",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillSilvah/winder-oldgen.git"
+  },
+  "author": "willsilvah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillSilvah/winder-oldgen/issues"
+  },
+  "homepage": "https://github.com/WillSilvah/winder-oldgen#readme"
+}
