@@ -6,12 +6,14 @@ code: `
 $channelSendMessage[1465218335389257802;{newEmbed:
 {author:$username[$clientID] está ligado!}
 {description:
-{field:AOi.JS:$packageVersion:true}
-{field:Node.JS:$nodeVersion:true}
-{field:Versão do $username[$clientID]:$getVar[versão]:true}
+#### AOi.JS
+$packageVersion
+### Node.JS
+$nodeVersion
+### Versão do $username[$clientID]
+> $getVar[versão]
 {color:Blue}
-}
-}
+}}
 ]
 
 $log[---------------
