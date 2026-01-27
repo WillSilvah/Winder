@@ -11,7 +11,7 @@ $djsEval[message.guild.channels.cache.get("1465535257297027214").setName(" | $m
 
 $djsEval[message.guild.channels.cache.get("1465534760620392722").setName(" | $getGuildVar[guildMonthMessages;$getVar[guildID]] mensagens")]
 
-$cacheMembers[$getVar[guildID];no]
+$cacheMembers[$getVar[guildID];False]
 `
 }]
 // Teste
