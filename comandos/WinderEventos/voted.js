@@ -30,7 +30,7 @@ Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getGl
 $sendMessage[<@$authorID> {newEmbed:
 {author:Obrigado @$username por ter votado na Patinhas!:https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048}
 {description:
-<@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e ganhou um multiplicador de PDA de x0.1 e também ganhou **$get[xp] PDA**!
+<@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e agora tem **Bônus de Pontos de Atividade** e ganhou **$get[xp] PDA**!
 Vote você também!
 }
 {footer:@$username já votou $getGlobalUserVar[votesMonth;$authorID] vezes neste mês, $getGlobalUserVar[votesTotal;$authorID] vezes ao todo!}

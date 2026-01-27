@@ -17,9 +17,9 @@ Link: https://discord.com/channels/$guildID/$channelID/$messageID
 {color:Blue}
 }]
 
-$let[pda;$if[$hasRoles[$getVar[guildID];$authorID;$getVar[memberBoosterRole]]==true;$math[$get[bonusVotePDA]+1]]]
+$let[pda;$if[$hasRoles[$getVar[guildID];$authorID;$getVar[memberBoosterRole]]==true;$math[$get[bonusVotePDA]+1];0]]
 
-$let[bonusVotePDA;$if[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVotedRole]]==true;$math[$get[basicPDA]+4]]]
+$let[bonusVotePDA;$if[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVotedRole]]==true;$math[$get[basicPDA]+4];0]]
 
 $let[basicPDA;$if[$get[textDivisorPDA]>=30;30;$get[textDivisorPDA]]]
 
