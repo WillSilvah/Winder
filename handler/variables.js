@@ -39,7 +39,9 @@ client.variables({
   "msgXP": "0",
   "msgXPtotal": "0",
   "metaXPtotal": "1000",
-  "metaXP": "1000"
+  "metaXP": "1000",
+  
+  "reminderStatus": "true"
   
   
   
