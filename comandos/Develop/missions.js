@@ -10,9 +10,6 @@ $ifAwaited[$getGlobalUserVar[messageTotal;$authorID]>=200;
 $ifAwaited[$getGlobalUserVar[messageTotal;$authorID]==1300;
 {execute:missionMeta-3}
 ]
-$ifAwaited[$getGlobalUserVar[msgXPtotal;$authorID]>=$getGlobalUserVar[metaXPtotal;$authorID];
-{execute:missionMeta-4}
-]
 
 $reply
 $onlyIf[$checkContains[$channelID;1066689771109363732;1066689827250110555]==false;]
