@@ -3,6 +3,8 @@ client.variables({
 
   "versão": "Winder 3.1",
   "consoleChat": "1465218335389257802",
+  "staffChat": "1462554187719114752",
+  "allStaffRole": "1462546916821696612",
   "batePapo": "1462224055884189781",
   "guildID": "1462224054676099094",
   "prefixo": "w!",

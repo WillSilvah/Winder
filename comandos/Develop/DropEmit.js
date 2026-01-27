@@ -10,7 +10,7 @@ $setUserVar[pickCount;$sum[$getUserVar[pickCount;$clientID;$getVar[guildID]];1];
 $setGuildVar[pickXPmin;0;$getVar[guildID]]
 $setGuildVar[pickXPmax;0;$getVar[guildID]]
 $slowmode[0s;1462224055884189781]
-$sendMessage[###  EVENTO DE CHAT FOI CANCELADO!]
+$channelSendMessage[$getVar[batePapo];###  EVENTO DE CHAT FOI CANCELADO!]
 
 $setGuildVar[pickStatus;false;$getVar[guildID]]
 $setGuildVar[pickLastUser;$clientID;$getVar[guildID]]
