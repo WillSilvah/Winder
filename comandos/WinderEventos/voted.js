@@ -43,7 +43,7 @@ $awaitExecute[countSystem]
 
 $let[xp;$random[5;10]]
 
-$onlyIf[$newMember[addedRoles]==$roleName[$getVar[memberVerifiedRole]];]
+$onlyIf[$newMember[addedRoles]==$roleName[$getVar[memberVotedRole]];]
 `
 },{
 name: "countSystem",
@@ -76,7 +76,7 @@ https://discords.com/servers/$guildID/upvote
 
 $onlyIf[$getGlobalUserVar[reminderStatus;$authorID]==true;]
 
-$onlyIf[$oldMember[removedRoles]==$roleName[$getVar[memberVerifiedRole]];]
+$onlyIf[$oldMember[removedRoles]==$roleName[$getVar[memberVotedRole]];]
 `
 },{
 name: "firstVote",
