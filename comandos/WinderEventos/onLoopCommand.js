@@ -9,12 +9,34 @@ every: 999,
 code: `
 $ifAwaited[$hour:$minute:$second==00:00:00;{execute:novodia}]
 
+$ifAwaited[$date-$hour:$minute:$second==01-00:00:00;{execute:auto-reset}]
+
 $ifAwaited[$hour:$minute:$second==19:00:00;{execute:chat-boanoite}]
 $ifAwaited[$hour:$minute:$second==13:10:00;{execute:chat-boatardefim}]
 $ifAwaited[$hour:$minute:$second==12:10:00;{execute:chat-boatarde}]
 $ifAwaited[$hour:$minute:$second==07:00:00;{execute:chat-bomdia}]
 
 $timezone[America/Recife]
+`
+},{
+name: "auto-reset",
+type: "awaited",
+code: `
+$resetUserVar[messageMonth]
+
+$resetUserVar[votesMonth]
+
+$resetUserVar[msgXP]
+
+$setGuildVar[guildMonthMessages;0;$getVar[guildID]]
+
+$writeFile[Recursos/session.json;
+{
+    "name": "Temporada 1: Patas no ar",
+    "nameShort": "T1: Patas no Ar",
+    "banner": ""
+};utf8]
+
 `
 },{
 name: "novodia",

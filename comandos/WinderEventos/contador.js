@@ -5,7 +5,7 @@ channel: "$getVar[consoleChat",
 executeOnStartup: "true",
 every: 600000,
 code: `
-$editChannel[1463122813736063016;🏆│falta $sub[$getGuildVar[meta;$getVar[guildID]];$membersCount[$guildID;all;no]] peludos]
+$editChannel[1463122813736063016;🏆│falta $sub[$getGuildVar[membersMeta;$getVar[guildID]];$membersCount[$guildID;all;no]] peludos]
 
 $editChannel[1465535257297027214;🐾│$membersCount[$guildID;all;no] peludos]
 

@@ -3,13 +3,13 @@ name: "votedDiscords",
 type: "memberUpdate",
 channel: "$getVar[batePapo]",
 code: `
-$ifAwaited[$getGlobalUserVar[votes;$authorID]==100;
+$ifAwaited[$getGlobalUserVar[votesMonth;$authorID]==100;
 {execute:100votes}
 ]
-$ifAwaited[$getGlobalUserVar[votes;$authorID]==60;
+$ifAwaited[$getGlobalUserVar[votesMonth;$authorID]==60;
 {execute:60votes}
 ]
-$ifAwaited[$getGlobalUserVar[votes;$authorID]==30;
+$ifAwaited[$getGlobalUserVar[votesMonth;$authorID]==30;
 {execute:30votes}
 ]
 $ifAwaited[$getGlobalUserVar[votesTotal;$authorID]==1;
@@ -20,7 +20,7 @@ $sendDm[{newEmbed:
 {title:Muito obrigado por ter votado!}
 {description:
 Seu voto no top.gg ajuda bastante! Obrigado por isso, todos nós agradecemos isto! 
-Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getGlobalUserVar[votes;$authorID]** vezes!
+Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getGlobalUserVar[votesMonth;$authorID]** vezes!
 }
 {footer:Quer ser lembrado de votar? use w!lembrarvoto}
 {color:Green}
@@ -33,7 +33,7 @@ $sendMessage[<@$authorID> {newEmbed:
 <@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e ganhou um multiplicador de PDA de x0.1 e também ganhou **$get[xp] PDA**!
 Vote você também!
 }
-{footer:@$username já votou $getGlobalUserVar[votes;$authorID] vezes em $month, $getGlobalUserVar[votesTotal;$authorID] vezes ao todo!}
+{footer:@$username já votou $getGlobalUserVar[votesMonth;$authorID] vezes neste mês, $getGlobalUserVar[votesTotal;$authorID] vezes ao todo!}
 {thumbnail:$userAvatar}
 {color:Green}
 }
@@ -49,7 +49,7 @@ $onlyIf[$newMember[addedRoles]==$roleName[874385283100053564];]
 name: "countSystem",
 type: "awaited",
 code: `
-$setGlobalUserVar[votes;$sum[$getGlobalUserVar[votes;$authorID];1];$authorID]
+$setGlobalUserVar[votesMonth;$sum[$getGlobalUserVar[votesMonth;$authorID];1];$authorID]
 $setGlobalUserVar[votesTotal;$sum[$getGlobalUserVar[votesTotal;$authorID];1];$authorID]
 
 $setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[xp]];$authorID]

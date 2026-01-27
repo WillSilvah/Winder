@@ -8,6 +8,7 @@ client.variables({
   "batePapo": "1462224055884189781",
   "guildID": "1462224054676099094",
   "prefixo": "w!",
+  "membersMeta": "0",
   "msgPerMinute": "0",
   "lastMessage": "",
   "lastMessageChannel": "",
