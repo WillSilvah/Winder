@@ -1,31 +1,31 @@
 module.exports = [{
 name: "$alwaysExecute",
 code: `
-$setGuildVar[pickEmit;false;861313067291115541]
+$setGuildVar[pickEmit;false;$getVar[guildID]]
 $awaitExecute[give-role-event]
 
-$setUserVar[pickCount;$sum[$getUserVar[pickCount;$authorID;861313067291115541];1];$authorID;861313067291115541]
+$setUserVar[pickCount;$sum[$getUserVar[pickCount;$authorID;$getVar[guildID]];1];$authorID;$getVar[guildID]]
 $slowmode[0s;861337787192836117]
 $sendMessage[<@$authorID> | Parabéns, você ganhou ✨**+$get[xpDrop] PDA**!]
 $addCmdReactions[⭐]
 
-$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID;861313067291115541];$get[xpDrop]];$authorID;861313067291115541]
-$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID;861313067291115541];$get[xpDrop]];$authorID;861313067291115541]
-$let[xpDrop;$ifAwaited[$hasRoles[861313067291115541;$authorID;1065319142271496212]==true;$random[$getGuildVar[pickXPmin;861313067291115541];$getGuildVar[pickXPmax;861313067291115541]];0]]
-$useChannel[861337787192836117]$setGuildVar[pickStatus;false;861313067291115541]
-$setGuildVar[pickWord;kkk;861313067291115541]
-$onlyIf[$toLowerCase[$message]==$toLowerCase[$getGuildVar[pickWord;861313067291115541]];]
-$onlyIf[$getGuildVar[pickStatus;861313067291115541]==true;]
+$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID;$getVar[guildID]];$get[xpDrop]];$authorID;$getVar[guildID]]
+$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID;$getVar[guildID]];$get[xpDrop]];$authorID;$getVar[guildID]]
+$let[xpDrop;$ifAwaited[$hasRoles[$getVar[guildID];$authorID;1065319142271496212]==true;$random[$getGuildVar[pickXPmin;$getVar[guildID]];$getGuildVar[pickXPmax;$getVar[guildID]]];0]]
+$useChannel[861337787192836117]$setGuildVar[pickStatus;false;$getVar[guildID]]
+$setGuildVar[pickWord;kkk;$getVar[guildID]]
+$onlyIf[$toLowerCase[$message]==$toLowerCase[$getGuildVar[pickWord;$getVar[guildID]]];]
+$onlyIf[$getGuildVar[pickStatus;$getVar[guildID]]==true;]
 
 `
 },{
 name: "give-role-event",
 type: "awaited",
 code: `
-$setGuildVar[pickLastUser;$authorID;861313067291115541]
+$setGuildVar[pickLastUser;$authorID;$getVar[guildID]]
 $wait[5s]
-$removeRole[861313067291115541;$getGuildVar[pickLastUser;861313067291115541];1179733370754846750;Não é mais último vencedor do evento de chat]
+$removeRole[$getVar[guildID];$getGuildVar[pickLastUser;$getVar[guildID]];11463342375370887209;Não é mais último vencedor do evento de chat]
 $wait[5s]
-$giveRole[861313067291115541;$authorID;1179733370754846750;Se tornou o último vencedor do evento de chat]
+$giveRole[$getVar[guildID];$authorID;1463342375370887209;Se tornou o último vencedor do evento de chat]
 `
 }]

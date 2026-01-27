@@ -17,7 +17,9 @@ Link: https://discord.com/channels/$guildID/$channelID/$messageID
 {color:Blue}
 }]
 
-$let[pda;$truncate[$math[$charCount[$message]/6]]]
+$let[pda;$if[$get[calcPDA=>30;30;$calcPDA]]
+
+$let[calcPDA;$truncate[$math[$charCount[$message]/6]]]
 
 $onlyIf[$charCount[$message]>=8;]
 $onlyIf[$checkContains[$message;lorem;gboard]==false;]
