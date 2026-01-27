@@ -14,7 +14,7 @@ PDA ganho: $get[pda]
 Link: https://discord.com/channels/$guildID/$channelID/$messageID
 }
 {footer:msgType0}
-{color:$dyColor[blue;light]}
+{color:Blue}
 }]
 
 $let[pda;$truncate[$math[$charCount[$message]/6]]]
