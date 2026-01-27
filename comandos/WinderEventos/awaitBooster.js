@@ -10,9 +10,9 @@ Você ganhou uns presentinhos, você merece! ^w^ 👏
 $wait[20s]
 $clientTyping
 
-$sendMessage[<@$authorID> • <@&1463138976494915646>
+$sendMessage[<@$authorID>
 {newEmbed:
-{author:$userTag[$authorID] impulsionou a Patinhas!:https://cdn.discordapp.com/emojis/1463244909195821107.png?size=2048}
+{author:@$userTag[$authorID] impulsionou a Patinhas!:https://cdn.discordapp.com/emojis/1463244909195821107.png?size=2048}
 {description:
 Vamos agradecer por esta ação generosa?
 }

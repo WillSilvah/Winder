@@ -15,7 +15,7 @@ $ifAwaited[$commandInfo[$message;usage]!=;**$getGuildVar[prefixo]$commandInfo[$m
 - **⭐ Alternativas**
 $ifAwaited[$commandInfo[$message;aliases]!=;**$replaceText[$commandInfo[$message;aliases];,;/]**;**Não tem alternativas**]
 ]
-$color[1;$dyColor[blue;light]]
+$color[1;Blue]
 $onlyIf[$commandInfo[$message;usage]!=;<@$authorID> Esse comando não existe ou não é usável]
 $onlyIf[$argsCount>0;]
 $ifAwaited[$argsCount==0;{execute:cmdinfo-await}]
@@ -36,6 +36,6 @@ $ifAwaited[$commandInfo[$get[cmdName];usage]!=;**$getGuildVar[prefixo]$commandIn
 - **⭐ Alternativas**
 $ifAwaited[$commandInfo[$get[cmdName];aliases]!=;**$replaceText[$commandInfo[$get[cmdName];aliases];,;/]**;**Não tem alternativas**]
 ]
-$color[1;$dyColor[blue;light]]
+$color[1;Blue]
 `
 }]
