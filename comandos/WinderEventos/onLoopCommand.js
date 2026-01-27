@@ -22,6 +22,8 @@ $timezone[America/Recife]
 name: "auto-reset",
 type: "awaited",
 code: `
+$resetGlobalUserVar[metaXPtotal]
+
 $resetUserVar[messageMonth]
 
 $resetUserVar[votesMonth]
