@@ -35,9 +35,9 @@ $reply
 $author[1;Fofoqueiros da temporada | Página $ifAwaited[$argsCount>=1;$message[1];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $title[1;$getObjectProperty[session;name];https://pt.wikihow.com/Ser-o-Melhor]
 $description[1;
-$globalUserLeaderBoard[mensagens;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
+$globalUserLeaderBoard[messageMonth;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
 ]
-$footer[1;Soma de mensagens enviadas: $getGuildVar[allmensagens] | Você: $getGlobalUserVar[mensagens;$authorID] ]
+$footer[1;Soma de mensagens enviadas: $getGuildVar[guildMonthMessages] | Você: $getGlobalUserVar[messageMonth;$authorID] ]
 $image[1;$getObjectProperty[session;banner]]
 $color[1;Green]
 $clientTyping
@@ -51,9 +51,9 @@ code: `
 $reply
 $author[1;Conversadores históricos | Página $ifAwaited[$argsCount>=1;$message[1];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $description[1;
-$globalUserLeaderBoard[totalmensagens;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
+$globalUserLeaderBoard[messageTotal;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
 ]
-$footer[1;Você enviou $getGlobalUserVar[totalmensagens;$authorID] mensagens]
+$footer[1;Você enviou $getGlobalUserVar[messageTotal;$authorID] mensagens]
 $color[1;Green]
 $clientTyping
 $cooldown[30s;<@$authorID> | Espere **%time%** para poder executar este comando novamente!]
@@ -62,7 +62,7 @@ $cooldown[30s;<@$authorID> | Espere **%time%** para poder executar este comando 
 name: "rank pda total",
 code: `
 $reply
-$author[1;TOP MEMBROS (total) | Página $ifAwaited[$argsCount>=1;$message[1];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
+$author[1;ATIVOS HISTÓRICOS (total) | Página $ifAwaited[$argsCount>=1;$message[1];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $description[1;
 $globalUserLeaderBoard[msgXPtotal;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
 ]
@@ -75,7 +75,7 @@ $cooldown[30s;<@$authorID> | Espere **%time%** para poder executar este comando 
 name: "rank pda temporada",
 code: `
 $reply
-$author[1;TOP MEMBROS (temporada) | Página $ifAwaited[$argsCount>=1;$message[1];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
+$author[1;ATIVOS DO MÊS (temporada) | Página $ifAwaited[$argsCount>=1;$message[1];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $title[1;$getObjectProperty[session;name];https://pt.wikihow.com/Ser-o-Melhor]
 $description[1;
 $globalUserLeaderBoard[msgXP;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
