@@ -63,5 +63,6 @@ Você está no **nível $truncate[$numberSeparator[$getGlobalUserVar[msgXPtotal;
 
 $reply
 $setGlobalUserVar[metaXPtotal;$sum[$getGlobalUserVar[metaXPtotal;$authorID];1000];$authorID]
+$onlyIf[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVerifiedRole]]==true;]
 `
 }]
