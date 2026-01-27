@@ -69,7 +69,7 @@ Vamos ter esta sensação novamente? <:pats_foxThinking:1463245311563661477> Eu 
 Vamos lá
 https://discords.com/servers/$guildID/upvote
 }
-{footer:Não quer ser lembrado de votar? use **w!lembrarvoto**}
+{footer:Não quer ser lembrado de votar? use w!lembrarvoto}
 {color:Green}
 
 };$authorID]
