@@ -12,7 +12,7 @@ type: "awaited",
 code: `
 $deleteCommand $editMessage[$get[ID];{newEmbed:
 {author:$userTag mensagem deletada.:$userAvatar}
-{color:$dyColor[orange;light]}
+{color:Orange}
 }
 ]
 
