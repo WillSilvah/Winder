@@ -5,38 +5,23 @@ aliases: ["dropemit", "dropstart"],
 category: "Desenvolvedor",
 usage: "drop emit",
 code: `
-$setGuildVar[pickEmit;false;861313067291115541]
-$setUserVar[pickCount;$sum[$getUserVar[pickCount;$clientID;861313067291115541];1];$clientID;861313067291115541]
+$setUserVar[pickCount;$sum[$getUserVar[pickCount;$clientID;$getVar[guildID]];1];$clientID;$getVar[guildID]]
 
-$setGuildVar[pickXPmin;0;861313067291115541]
-$setGuildVar[pickXPmax;0;861313067291115541]
-$slowmode[0s;861337787192836117]
-$sendMessage[### 🚫 EVENTO DE CHAT FOI CANCELADO!]
+$setGuildVar[pickXPmin;0;$getVar[guildID]]
+$setGuildVar[pickXPmax;0;$getVar[guildID]]
+$slowmode[0s;1462224055884189781]
+$sendMessage[###  EVENTO DE CHAT FOI CANCELADO!]
 
-$setGuildVar[pickStatus;false;861313067291115541]
-$setGuildVar[pickLastUser;$clientID;861313067291115541]
-$setGuildVar[pickWord;canotipo;861313067291115541]
+$setGuildVar[pickStatus;false;$getVar[guildID]]
+$setGuildVar[pickLastUser;$clientID;$getVar[guildID]]
+$setGuildVar[pickWord;canotipo;$getVar[guildID]]
+
 $clientTyping
-$onlyIf[$getGuildVar[pickStatus;861313067291115541]==true;]
-$wait[1m]
-$setGuildVar[pickXPmin;0;861313067291115541]
-$setGuildVar[pickXPmax;10;861313067291115541]
-$onlyIf[$getGuildVar[pickStatus;861313067291115541]==true;]
+$onlyIf[$getGuildVar[pickStatus;$getVar[guildID]]==true;]
 
 $wait[1m]
-$setGuildVar[pickXPmin;10;861313067291115541]
-$setGuildVar[pickXPmax;20;861313067291115541]
-$onlyIf[$getGuildVar[pickStatus;861313067291115541]==true;]
-
-$wait[1m]
-$setGuildVar[pickXPmin;20;861313067291115541]
-$setGuildVar[pickXPmax;30;861313067291115541]
-
-$wait[1s]
-$setGuildVar[pickXPmin;40;861313067291115541]
-$setGuildVar[pickXPmax;50;861313067291115541]
-
-$onlyIf[$getGuildVar[pickStatus;861313067291115541]==true;]
+$setGuildVar[pickXPmin;20;$getVar[guildID]]
+$setGuildVar[pickXPmax;30;$getVar[guildID]]
 
 $ifAwaited[1==1;{execute:drop-$ifAwaited[$message[1]==;$random[1;4];$message[1]]}
 
