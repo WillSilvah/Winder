@@ -14,3 +14,4 @@ $djsEval[message.guild.channels.cache.get("1465534760620392722").setName(" | $g
 $cacheMembers[$getVar[guildID];no]
 `
 }]
+// Teste
