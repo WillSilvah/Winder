@@ -19,7 +19,6 @@ Link: https://discord.com/channels/$guildID/$channelID/$messageID
 
 $let[pda;$truncate[$math[$charCount[$message]/6]]]
 
-$onlyIf[$if[$argsCount<=10;true;false]|$if[$isCaps[80%;$message]==true;true;false]==false|false;]
 $onlyIf[$charCount[$message]>=8;]
 $onlyIf[$checkContains[$message;lorem;gboard]==false;]
 $onlyIf[$hasRoles[1462224054676099094;$authorID;1462797987041513574]==true;]
