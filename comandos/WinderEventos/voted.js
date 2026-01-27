@@ -43,7 +43,7 @@ $awaitExecute[countSystem]
 
 $let[xp;$random[5;10]]
 
-$onlyIf[$newMember[addedRoles]==$roleName[874385283100053564];]
+$onlyIf[$newMember[addedRoles]==$roleName[1463342375370887209];]
 `
 },{
 name: "countSystem",
