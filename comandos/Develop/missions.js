@@ -59,10 +59,10 @@ $reply
 name: "missionMeta-4",
 type: "awaited",
 code: `
-$sendMessage[Você está no **nível $truncate[$numberSeparator[$getGlobalUserVar[msgXPtotal;$authorID];.]]** de pontos de atividades neste mês! Continue conversando :3]
+$reply Você tem **$getGlobalUserVar[msgXPtotal;$authorID]** de pontos de atividades neste mês! Continue conversando :3
 $setGlobalUserVar[metaXPtotal;$sum[$getGlobalUserVar[metaXPtotal;$authorID];1000];$authorID]
 
-$onlyIf[$getGlobalUserVar[msgXPtotal;$authorID]<=1000
+$onlyIf[$getGlobalUserVar[msgXPtotal;$authorID]<=1000;]
 $onlyIf[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVerifiedRole]]==true;]
 `
 }]
