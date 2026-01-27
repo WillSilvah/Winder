@@ -47,7 +47,7 @@ $channelSendMessage[1462224055884189781;{newEmbed:
 {description:
 Que $day seja um dia incrível para você.
 }
-{color:$dyColor[blue;light]}
+{color:Blue}
 }]
         
 $timezone[America/Recife]
@@ -57,8 +57,8 @@ name: "chat-bomdia",
 type: "awaited",
 code: `
 $channelSendMessage[1462224055884189781;
-# 🌞 BOM DIA PINWHEEL!
-**Vamos levantar e tomar um café ☕?**
+# 🌞 BOM DIA PELUDOS!
+**Vamos levantar e tomar uma xícara de café?**
 ]
 `
 },{
