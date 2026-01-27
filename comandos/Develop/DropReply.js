@@ -11,9 +11,10 @@ $addCmdReactions[⭐]
 
 $setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID;$getVar[guildID]];$get[xpDrop]];$authorID;$getVar[guildID]]
 $setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID;$getVar[guildID]];$get[xpDrop]];$authorID;$getVar[guildID]]
-$let[xpDrop;$ifAwaited[$hasRoles[$getVar[guildID];$authorID;1065319142271496212]==true;$random[$getGuildVar[pickXPmin;$getVar[guildID]];$getGuildVar[pickXPmax;$getVar[guildID]]];0]]
-$useChannel[861337787192836117]$setGuildVar[pickStatus;false;$getVar[guildID]]
-$setGuildVar[pickWord;kkk;$getVar[guildID]]
+$let[xpDrop;$ifAwaited[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVerifiedRole]]==true;$random[$getGuildVar[pickXPmin;$getVar[guildID]];$getGuildVar[pickXPmax;$getVar[guildID]]];0]]
+$useChannel[861337787192836117]
+$setGuildVar[pickStatus;false;$getVar[guildID]]
+$setGuildVar[pickWord;kkkkkkk;$getVar[guildID]]
 $onlyIf[$toLowerCase[$message]==$toLowerCase[$getGuildVar[pickWord;$getVar[guildID]]];]
 $onlyIf[$getGuildVar[pickStatus;$getVar[guildID]]==true;]
 
@@ -24,8 +25,8 @@ type: "awaited",
 code: `
 $setGuildVar[pickLastUser;$authorID;$getVar[guildID]]
 $wait[5s]
-$removeRole[$getVar[guildID];$getGuildVar[pickLastUser;$getVar[guildID]];11463342375370887209;Não é mais último vencedor do evento de chat]
+$removeRole[$getVar[guildID];$getGuildVar[pickLastUser;$getVar[guildID]];$getVar[lastWinMemberRole];Não é mais último vencedor do evento de chat]
 $wait[5s]
-$giveRole[$getVar[guildID];$authorID;1463342375370887209;Se tornou o último vencedor do evento de chat]
+$giveRole[$getVar[guildID];$authorID;$getVar[lastWinMemberRole];Se tornou o último vencedor do evento de chat]
 `
 }]

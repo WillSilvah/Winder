@@ -17,15 +17,19 @@ Link: https://discord.com/channels/$guildID/$channelID/$messageID
 {color:Blue}
 }]
 
-$let[pda;$if[$get[calcPDA]>=30;30;$get[calcPDA]]]
+$let[pda;$if[$hasRoles[$getVar[guildID];$authorID;$getVar[memberBoosterRole]]==true;$math[$get[bonusVotePDA]+1]]]
 
-$let[calcPDA;$truncate[$math[$charCount[$message]/3]]]
+$let[bonusVotePDA;$if[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVotedRole]]==true;$math[$get[basicPDA]+4]]]
+
+$let[basicPDA;$if[$get[textDivisorPDA]>=30;30;$get[textDivisorPDA]]]
+
+$let[textDivisorPDA;$truncate[$math[$charCount[$message]/3]]]
 
 $onlyIf[$charCount[$message]>=8;]
 $onlyIf[$checkContains[$message;lorem;gboard]==false;]
-$onlyIf[$hasRoles[1462224054676099094;$authorID;1462797987041513574]==true;]
-$onlyIf[$getGuildVar[pickStatus;1462224054676099094]==false;]
-$onlyIf[$guildID==1462224054676099094;]
+$onlyIf[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVerifiedRole]]==true;]
+$onlyIf[$getGuildVar[pickStatus;$getVar[guildID]]==false;]
+$onlyIf[$guildID==$getVar[guildID];]
 
 $cooldown[5s;]
 `
@@ -38,11 +42,11 @@ $addCmdReactions[🎁]
 
 $setGlobalUserVar[item;$sum[$getGlobalUserVar[item;$authorID;$get[item]];$authorID]
 
-$setGuildVar[itemTotal;$sum[$getGuildVar[itemTotal;1462224054676099094];$get[item]];1462224054676099094]
+$setGuildVar[itemTotal;$sum[$getGuildVar[itemTotal;$getVar[guildID]];$get[item]];$getVar[guildID]]
 
 $let[item;$random[1;3]]
 
 $cooldown[1m;]
-$onlyIf[$getGuildVar[eventItemStatus;1462224054676099094]==true;]
+$onlyIf[$getGuildVar[eventItemStatus;$getVar[guildID]]==true;]
 `
 }]

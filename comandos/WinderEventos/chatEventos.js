@@ -100,7 +100,7 @@ $description[1;
 ### $replaceText[$toUpperCase[$getObjectProperty[word;palavra]]; ; ]
 
 ]
-$footer[1;Responda primeiro, rÃ¡pido!]
+$footer[1;Responda primeiro, rápido!]
 $color[1;Green]
 
 $setGuildVar[pickWord;$toUpperCase[$getObjectProperty[word;palavra]];$getVar[guildID]]
