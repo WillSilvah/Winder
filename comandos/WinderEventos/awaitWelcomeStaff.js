@@ -8,7 +8,7 @@ $channelSendMessage[$getVar[batePapo];{newEmbed:
 {color:Orange}
 }]
 
-$sendMessage[<@&894592054175342602>
+$sendMessage[<@&$getVar[allStaffRole]>
 ## DIGAM BOAS VINDAS PARA <@$authorID> NA EQUIPE PATINHAS!
 ]
 
