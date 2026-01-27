@@ -7,6 +7,10 @@ client.variables({
   "allStaffRole": "1462546916821696612",
   "batePapo": "1462224055884189781",
   "guildID": "1462224054676099094",
+  "memberVerifiedRole": "1462797987041513574",
+  "memberVotedRole": "1463342375370887209",
+  "memberBoosterRole": "1463625995473911853",
+  "lastWinMemberRole": "1465399687535398932",
   "prefixo": "w!",
   "membersMeta": "0",
   "msgPerMinute": "0",
@@ -18,7 +22,6 @@ client.variables({
   "guildMonthMessages": "0",
   "guildTotalMesssages": "0",
   "lastUserSendMessage": "",
-  
   "votesTotal": "",
   "votesMonth": "",
   
