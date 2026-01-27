@@ -17,7 +17,7 @@ Link: https://discord.com/channels/$guildID/$channelID/$messageID
 {color:Blue}
 }]
 
-$let[pda;$if[$get[calcPDA=>30;30;$calcPDA]]
+$let[pda;$if[$get[calcPDA]=>30;30;$get[calcPDA]]]
 
 $let[calcPDA;$truncate[$math[$charCount[$message]/6]]]
 
