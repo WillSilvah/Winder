@@ -59,7 +59,7 @@ $reply
 name: "missionMeta-4",
 type: "awaited",
 code: `
-Você tem **$truncate[$numberSeparator[$getGlobalUserVar[msgXPtotal;$authorID];.]]** pontos de atividades neste mês! Continue conversando :3
+Você está no **nível $truncate[$numberSeparator[$getGlobalUserVar[msgXPtotal;$authorID];.]]** de pontos de atividades neste mês! Continue conversando :3
 
 $reply
 $setGlobalUserVar[metaXPtotal;$sum[$getGlobalUserVar[metaXPtotal;$authorID];1000];$authorID]

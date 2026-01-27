@@ -19,6 +19,7 @@ client.variables({
   "lastMessageTime": "",
   "messageMonth": "0",
   "messageTotal": "0",
+  "messageMeta": "1000",
   "guildMonthMessages": "0",
   "guildTotalMesssages": "0",
   "lastUserSendMessage": "",
