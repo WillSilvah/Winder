@@ -21,4 +21,13 @@ $onlyForGuilds[1462224054676099094;]
 $onlyIf[$isBot==false;]
 $cooldown[1s;]
 `
+},{
+name: "$alwaysExecute",
+code: `
+$giveRoles[$guildID;$authorID;Cargos automáticos;1462544909390319960]
+
+$onlyIf[$getGlobalUserVar[messageTotal;$authorID]<=6;]
+
+
+`
 }]

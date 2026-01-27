@@ -132,7 +132,7 @@ code: `
 <@$authorID>
 ## VOTOU CEM VEZES!
 **Vote na Patinhas 100 vezes neste mês!**
-Que empenho $username[$authorID]! você conseguiu (quase) bater o máximo de votos que pode se conseguir no mês no Discords.com, toda a <@ lhe agradece com isso. 
+Que empenho $username[$authorID]! você conseguiu (quase) bater o máximo de votos que pode se conseguir no mês no Discords.com, toda a <@$getVar[allStaffRole]> lhe agradece com isso. 
 > **Ganhou +$get[xp] pontos!**
 
 $setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[xp]];$authorID]
