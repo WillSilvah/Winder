@@ -76,7 +76,7 @@ https://discords.com/servers/$guildID/upvote
 
 $onlyIf[$getGlobalUserVar[reminderStatus;$authorID]==true;]
 
-$onlyIf[$oldMember[removedRoles]==$roleName[$getVar[memberVotedRole]];]
+$onlyIf[$newMember[removedRoles]==$roleName[$getVar[memberVotedRole]];]
 `
 },{
 name: "firstVote",

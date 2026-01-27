@@ -3,6 +3,6 @@ name: "votedDijwhsscords",
 type: "memberUpdate",
 channel: "$getVar[consoleChat]",
 code: `
-$oldMember[removedRoles]
+$newMember[removedRoles]
 `
 }]
