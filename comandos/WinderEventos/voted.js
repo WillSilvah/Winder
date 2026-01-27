@@ -19,8 +19,8 @@ $ifAwaited[$getGlobalUserVar[votesTotal;$authorID]==1;
 $sendDm[{newEmbed:
 {title:Muito obrigado por ter votado!}
 {description:
-Seu voto no top.gg ajuda bastante! Obrigado por isso, todos nós agradecemos isto! 
-Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getGlobalUserVar[votesMonth;$authorID]** vezes!
+Seu voto no top.gg ajuda bastante! Obrigado por isso, todos nÃ³s agradecemos isto! 
+VocÃª ganhou **$get[xp]** pontos de atividades e neste mÃªs vocÃª jÃ¡ votou **$getGlobalUserVar[votesMonth;$authorID]** vezes!
 }
 {footer:Quer ser lembrado de votar? use w!lembrarvoto}
 {color:Green}
@@ -30,10 +30,10 @@ Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getGl
 $sendMessage[<@$authorID> {newEmbed:
 {author:Obrigado @$username por ter votado na Patinhas!:https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048}
 {description:
-<@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e agora tem **Bônus de Pontos de Atividade** e ganhou **$get[xp] PDA**!
-Vote você também!
+<@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e agora tem **BÃ´nus de Pontos de Atividade** e ganhou **$get[xp] PDA**!
+Vote vocÃª tambÃªm!
 }
-{footer:@$username já votou $getGlobalUserVar[votesMonth;$authorID] vezes neste mês, $getGlobalUserVar[votesTotal;$authorID] vezes ao todo!}
+{footer:@$username jÃ¡ votou $getGlobalUserVar[votesMonth;$authorID] vezes neste mÃªs, $getGlobalUserVar[votesTotal;$authorID] vezes ao todo!}
 {thumbnail:$userAvatar}
 {color:Green}
 }
@@ -61,15 +61,15 @@ type: "memberUpdate",
 code: `
 $sendDm[{newEmbed:
 {author:$username[$clientID] lembretes:https://abs.twimg.com/emoji/v2/72x72/1f514.png}
-{title:Ei! Tá na hora de votar!}
+{title:Ei! TÃ¡ na hora de votar!}
 {description:
-Lembra quando você votou 6 horas atrás na Patinhas? Foi incrivel eu estava lá comemorando junto com você <:pats_foxThumbsUp:1463245277304459345>
+Lembra quando vocÃª votou 6 horas atrÃ¡s na Patinhas? Foi incrivel eu estava lÃ¡ comemorando junto com vocÃª <:pats_foxThumbsUp:1463245277304459345>
 
-Vamos ter esta sensação novamente? <:pats_foxThinking:1463245311563661477> Eu te dou pontos de experiência, um multiplicador e você recebe fama e glória por ser um membro incrvel! 
-Vamos lá
+Vamos ter esta sensaÃ§Ã£o novamente? <:pats_foxThinking:1463245311563661477> Eu te dou pontos de experiÃªncia, um multiplicador e vocÃª recebe fama e glÃ³ria por ser um membro incrvel! 
+Vamos lÃ¡
 https://discords.com/servers/$guildID/upvote
 }
-{footer:Não quer ser lembrado de votar? use **w!lembrarvoto**}
+{footer:NÃ£o quer ser lembrado de votar? use **w!lembrarvoto**}
 {color:Green}
 
 };$authorID]
@@ -85,7 +85,7 @@ code: `
 <@$authorID>
 ## PRIMEIRO VOTO
 **Vote na Patinhas pela primeira vez!**
-Muito obrigado por ajudar a Patinhas a crescer votando nela! Agradeço bastante por isso, continue votando nela para ganhar prêmios e conquistas! 
+Muito obrigado por ajudar a Patinhas a crescer votando nela! AgradeÃ§o bastante por isso, continue votando nela para ganhar prÃªmios e conquistas! 
 
 $wait[2s]
 $clientTyping
@@ -96,8 +96,8 @@ type: "awaited",
 code: `
 <@$authorID>
 ## 30 VOTOS!
-**Vote na Patinhas 30 vezes neste mês!**
-Fico muito feliz em saber que você está empenhado no objetivo de ajudar a patinhas em ser mais conhecida nesse mundo! 
+**Vote na Patinhas 30 vezes neste mÃªs!**
+Fico muito feliz em saber que vocÃª estÃ¡ empenhado no objetivo de ajudar a patinhas em ser mais conhecida nesse mundo! 
 > **Ganhou +$get[xp] pontos!**
 
 $setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[xp]];$authorID]
@@ -113,8 +113,8 @@ type: "awaited",
 code: `
 <@$authorID>
 ## VOTOU SESSENTA VEZES!
-**Vote na Patinhas 60 vezes neste mês!**
-Ai que alegria **$username**, você votou 60 vezes na Patinhas, isso é tão incrível<3
+**Vote na Patinhas 60 vezes neste mÃªs!**
+Ai que alegria **$username**, vocÃª votou 60 vezes na Patinhas, isso Ã© tÃ£o incrÃ­vel<3
 Obrigado demais pela sua ajuda, vamos criar uma comunidade melhor juntos?
 > **Ganhou +$get[xp] pontos!**
 
@@ -131,8 +131,8 @@ type: "awaited",
 code: `
 <@$authorID>
 ## VOTOU CEM VEZES!
-**Vote na Patinhas 100 vezes neste mês!**
-Que empenho $username[$authorID]! Você conseguiu (quase) bater o máximo de votos que pode se conseguir no mês no Discords.com, toda a <@ lhe agradece com isso. 
+**Vote na Patinhas 100 vezes neste mÃªs!**
+Que empenho $username[$authorID]! vocÃª conseguiu (quase) bater o mÃ¡ximo de votos que pode se conseguir no mÃªs no Discords.com, toda a <@ lhe agradece com isso. 
 > **Ganhou +$get[xp] pontos!**
 
 $setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[xp]];$authorID]
