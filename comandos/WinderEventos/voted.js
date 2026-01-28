@@ -3,16 +3,16 @@ name: "votedDiscords",
 type: "memberUpdate",
 channel: "$getVar[batePapo]",
 code: `
-$ifAwaited[$getGlobalUserVar[votesMonth;$authorID]==100;
+$ifAwaited[$getUserVar[votesMonth;$authorID]==100;
 {execute:100votes}
 ]
-$ifAwaited[$getGlobalUserVar[votesMonth;$authorID]==60;
+$ifAwaited[$getUserVar[votesMonth;$authorID]==60;
 {execute:60votes}
 ]
-$ifAwaited[$getGlobalUserVar[votesMonth;$authorID]==30;
+$ifAwaited[$getUserVar[votesMonth;$authorID]==30;
 {execute:30votes}
 ]
-$ifAwaited[$getGlobalUserVar[votesTotal;$authorID]==1;
+$ifAwaited[$getUserVar[votesTotal;$authorID]==1;
 {execute:firstVote}
 ]
 
@@ -20,7 +20,7 @@ $sendDm[{newEmbed:
 {title:Muito obrigado por ter votado!}
 {description:
 Seu voto no top.gg ajuda bastante! Obrigado por isso, todos nós agradecemos isto! 
-Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getGlobalUserVar[votesMonth;$authorID]** vezes!
+Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getUserVar[votesMonth;$authorID]** vezes!
 }
 {footer:Quer ser lembrado de votar? use w!lembrarvoto}
 {color:Green}
@@ -33,7 +33,7 @@ $sendMessage[{newEmbed:
 <@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e agora tem **Bônus de Pontos de Atividade** e ganhou **$get[xp] PDA**!
 Vote você tambêm!
 }
-{footer:@$username já votou $getGlobalUserVar[votesMonth;$authorID] vezes neste mês, $getGlobalUserVar[votesTotal;$authorID] vezes ao todo!}
+{footer:@$username já votou $getUserVar[votesMonth;$authorID] vezes neste mês, $getUserVar[votesTotal;$authorID] vezes ao todo!}
 {thumbnail:$userAvatar}
 {color:Green}
 }
@@ -49,11 +49,11 @@ $onlyIf[$newMember[addedRoles]==$roleName[$getVar[memberVotedRole]];]
 name: "countSystem",
 type: "awaited",
 code: `
-$setGlobalUserVar[votesMonth;$sum[$getGlobalUserVar[votesMonth;$authorID];1];$authorID]
-$setGlobalUserVar[votesTotal;$sum[$getGlobalUserVar[votesTotal;$authorID];1];$authorID]
+$setUserVar[votesMonth;$sum[$getUserVar[votesMonth;$authorID];1];$authorID]
+$setUserVar[votesTotal;$sum[$getUserVar[votesTotal;$authorID];1];$authorID]
 
-$setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setGlobalUserVar[msgXPtotal;$sum[$getGlobalUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
 `
 },{
 name: "remindVote",
@@ -74,7 +74,7 @@ https://discords.com/servers/$guildID/upvote
 
 };$authorID]
 
-$onlyIf[$getGlobalUserVar[reminderStatus;$authorID]==true;]
+$onlyIf[$getUserVar[reminderStatus;$authorID]==true;]
 
 $onlyIf[$newMember[removedRoles]==$roleName[$getVar[memberVotedRole]];]
 `
@@ -100,8 +100,8 @@ code: `
 Fico muito feliz em saber que você está empenhado no objetivo de ajudar a patinhas em ser mais conhecida nesse mundo! 
 > **Ganhou +$get[xp] pontos!**
 
-$setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setGlobalUserVar[msgXPtotal;$sum[$getGlobalUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
 
 $let[xp;150]
 $wait[2s]
@@ -118,8 +118,8 @@ Ai que alegria **$username**, você votou 60 vezes na Patinhas, isso é tão inc
 Obrigado demais pela sua ajuda, vamos criar uma comunidade melhor juntos?
 > **Ganhou +$get[xp] pontos!**
 
-$setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setGlobalUserVar[msgXPtotal;$sum[$getGlobalUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
 
 $let[xp;250]
 $wait[2s]
@@ -135,8 +135,8 @@ code: `
 Que empenho $username[$authorID]! você conseguiu (quase) bater o máximo de votos que pode se conseguir no mês no Discords.com, toda a <@$getVar[allStaffRole]> lhe agradece com isso. 
 > **Ganhou +$get[xp] pontos!**
 
-$setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setGlobalUserVar[msgXPtotal;$sum[$getGlobalUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
 
 $let[xp;350]
 $wait[2s]
