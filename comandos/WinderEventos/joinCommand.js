@@ -37,7 +37,7 @@ Iai? Vamos tentar bater a meta de $math[$getGuildVar[membersMeta]+100]? Vamos ju
 
 Em breve virá novidades, fiquem de olho!
 ]
-$wait[3s]
+$wait[5s]
 $clientTyping
 `
 }]
