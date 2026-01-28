@@ -21,7 +21,7 @@ $timezone[America/Recife]
 name: "light_logo",
 type: "awaited",
 code: `
-$setGuildIcon[$get[logo];861313067291115541]
+$setGuildIcon[$get[logo];$guildID]
 
 $channelSendMessage[$getGuildVar[consoleChat];{newEmbed:
 {author:Patinhas Brand Update (light_logo)}
@@ -41,7 +41,7 @@ $onlyIf[$getGuildVar[guildIconDefault;$guildID]==true;]
 name: "dark_logo",
 type: "awaited",
 code: `
-$setGuildIcon[$get[logo];861313067291115541]
+$setGuildIcon[$get[logo];$guildID]
 
 $channelSendMessage[$getGuildVar[consoleChat];{newEmbed:
 {author:Patinhas Brand Update (dark_logo)}
