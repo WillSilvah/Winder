@@ -105,7 +105,7 @@ desc: "Seleciona uma logo",
 category: "servidor",
 usage: "servidor set icon <anexo>",
 code: `
-<@$authorID> | Pronto!
+$sendMessage[<@$authorID> | Pronto!]
 
 $setGuildVar[guildIconDefault;false;$guildID]
 $setGuildIcon[$messageAttachment;$guildID]
@@ -118,7 +118,7 @@ desc: "Seleciona um nome",
 category: "servidor",
 usage: "servidor set name <nome>",
 code: `
-<@$authorID> | Pronto!
+$sendMessage[<@$authorID> | Pronto!]
 $setGuildName[$message;$guildID]
 $onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
@@ -130,7 +130,7 @@ desc: "Volta para a logo padrão",
 category: "servidor",
 usage: "servidor set icon default",
 code: `
-<@$authorID> | Pronto!
+$sendMessage[<@$authorID> | Pronto!]
 
 $setGuildVar[guildIconDefault;true;$guildID]
 $ifAwaited[$checkContains[$hour;06;07;08;09;10;11;12;13;14;15;16;17]==true;{execute:light_logo}]
@@ -148,7 +148,7 @@ desc: "Seleciona uma meta",
 category: "servidor",
 usage: "servidor set meta <número>",
 code: `
-<@$authorID> | Pronto!
+$sendMessage[<@$authorID> | Pronto!]
 $setGuildVar[membersMeta;$message;$guildID]
 $onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
