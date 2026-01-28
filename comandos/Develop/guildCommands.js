@@ -30,7 +30,7 @@ code: `
 <@$authorID> | O Usuário **$userTag[$mentioned[1]]** ganhou o cargo de artistas! :D
 
 $giveRole[$guildID;$mentioned[1];$getGuildVar[memberArtistRole]]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
 `
 },{
@@ -43,7 +43,7 @@ code: `
 <@$authorID> | O Usuário **$userTag[$mentioned[1]]** não é mais artista da comunidade! ;w;
 
 $removeRole[$guildID;$mentioned[1];$getGuildVar[memberArtistRole]]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 `
 },{
 name: "servidor add verificado",
@@ -55,7 +55,7 @@ code: `
 <@$authorID> | O Usuário **$userTag[$mentioned[1]]** ficou verificado! >w<
 
 $giveRole[$guildID;$mentioned[1];$getGuildVar[memberVerifiedRole]]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
 `
 },{
@@ -69,7 +69,7 @@ code: `
 <@$authorID> | O Usuário **$userTag[$mentioned[1]]** não é mais verificado! :(
 
 $removeRole[$guildID;$mentioned[1];$getGuildVar[memberVerifiedRole]]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 `
 },{
 name: "servidor add artista oficial",
@@ -81,7 +81,7 @@ code: `
 <@$authorID> | O Usuário **$userTag[$mentioned[1]]** virou o artista oficial da comunidade! >w<
 
 $giveRole[$guildID;$mentioned[1];$getGuildVar[memberOfficialArtistRole]]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
 `
 },{
@@ -95,7 +95,7 @@ code: `
 <@$authorID> | O Usuário **$userTag[$mentioned[1]]** deixou de ser artista oficial da comunidade ;w;
 
 $removeRole[$guildID;$mentioned[1];962855650239610961]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
 `
 },{
@@ -109,7 +109,7 @@ code: `
 
 $setGuildVar[guildIconDefault;false;$guildID]
 $setGuildIcon[$messageAttachment;$guildID]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 `
 },{
 name: "servidor set name",
@@ -120,7 +120,7 @@ usage: "servidor set name <nome>",
 code: `
 <@$authorID> | Pronto!
 $setGuildName[$message;$guildID]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
 `
 },{
@@ -138,7 +138,7 @@ $ifAwaited[$checkContains[$hour;06;07;08;09;10;11;12;13;14;15;16;17]==true;{exec
 $ifAwaited[$checkContains[$hour;18;19;20;21;22;23;00;01;02;03;04;05]==true;{execute:dark_logo}]
 
 $timezone[America/Recife]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
 `
 },{
@@ -150,7 +150,7 @@ usage: "servidor set meta <número>",
 code: `
 <@$authorID> | Pronto!
 $setGuildVar[membersMeta;$message;$guildID]
-$onlyPerms[manageGuild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
 
 `
 }]
