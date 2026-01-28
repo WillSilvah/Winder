@@ -97,15 +97,16 @@ $setGuildVar[pickType;1;$getVar[guildID]]
 $setGuildVar[pickStatus;true;$getVar[guildID]]
 $author[1;Evento de chat: Repetir frase ou palavra;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
-### $replaceText[$toUpperCase[$getObjectProperty[word;palavra]]; ; ]
+### $replaceText[$getObjectProperty[word;palavra]; ; ]
 
 ]
 $footer[1;Responda primeiro, rápido!]
 $color[1;Green]
 
-$setGuildVar[pickWord;$toUpperCase[$getObjectProperty[word;palavra]];$getVar[guildID]]
+$setGuildVar[pickWord;$
+$getObjectProperty[word;palavra];$getVar[guildID]]
 $createObject[word;{
-"palavra": "$randomText[O essencial é invisível aos olhos.;Seja você a mudança que deseja ver no mundo.;Não se pode escolher se você vai se ferir neste mundo.;Tudo é ousado para quem a nada se atreve.;As pessoas boas devem amar seus inimigos.;Digo o mesmo, mas com a diferença de que eu não disse nada.;Nas sombras da floresta, todo segredo tem uma cauda.;Eu sou um lobo, mas meu coração insiste em ser humano.;Eu não sou um monstro, só estou tentando sobreviver aos meus sentimentos.;Nesse mundo, ou você é o predador, ou você é a presa.;O amor não vê espécies, apenas almas que se pertencem.;O medo sempre foi a ferramenta mais eficaz para dividir as pessoas.;A vida de um animal de estimação é muito mais complexa do que os humanos pensam.;A verdadeira nudez não é tirar a roupa, mas deixar que vejam quem você é por dentro.;A liberdade começa quando paramos de pedir desculpas pelo que sentimos.;O amor entre espécies diferentes é a maior rebeldia contra o sistema.;Eu prometo, pelas estrelas acima de nós, que eu nunca vou te deixar.;O universo é vasto e frio, mas aqui, com você, eu me sinto aquecido.]"
+"palavra": "$randomText[O essencial é invisível aos olhos.;Seja você a mudança que deseja ver no mundo.;Não se pode escolher se você vai se ferir neste mundo.;Tudo é ousado para quem a nada se atreve.;As pessoas boas devem amar seus inimigos.;Digo o mesmo, mas com a diferença de que eu não disse nada.;Nas sombras da floresta, todo segredo tem uma cauda.;Eu sou um lobo, mas meu coração insiste em ser humano.;Eu não sou um monstro, só estou tentando sobreviver aos meus sentimentos.;Nesse mundo, ou você é o predador, ou você é a presa.;O amor não vê espécies, apenas almas que se pertencem.;O medo sempre foi a ferramenta mais eficaz para dividir as pessoas.;A vida de um animal de estimação é muito mais complexa do que os humanos pensam.;A verdadeira nudez não é tirar a roupa, mas deixar que vejam quem você é por dentro.;A liberdade começa quando paramos de pedir desculpas pelo que sentimos.;O amor entre espécies diferentes é a maior rebeldia contra o sistema.;Eu prometo, pelas estrelas acima de nós, que eu nunca vou te deixar.;O universo é vasto e frio, mas aqui, com você, eu me sinto aquecido.;O amor próprio é o único relacionamento que dura a vida inteira.]"
 }]
 
 $useChannel[1462224055884189781]
