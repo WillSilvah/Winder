@@ -5,7 +5,7 @@ channel: "$getVar[consoleChat]",
 executeOnStartup: "true",
 every: 65000,
 code: `
-$setGuildVar[msgPerMinute;0;$getVar[guildID]]
+$setGuildVar[msgPerMinute;0;$guildID]
 
 `
 }]

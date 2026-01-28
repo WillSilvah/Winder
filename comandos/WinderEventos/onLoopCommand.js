@@ -22,7 +22,7 @@ $timezone[America/Recife]
 name: "auto-reset",
 type: "awaited",
 code: `
-$resetGlobalUserVar[metaXPtotal]
+$resetUserVar[metaXPtotal]
 
 $resetUserVar[messageMonth]
 
@@ -30,7 +30,7 @@ $resetUserVar[votesMonth]
 
 $resetUserVar[msgXP]
 
-$setGuildVar[guildMonthMessages;0;$getVar[guildID]]
+$resetGuildVar[guildMonthMessages]
 
 $writeFile[Recursos/session.json;
 {
@@ -47,7 +47,7 @@ code: `
 $channelSendMessage[1462224055884189781;{newEmbed:
 {author:Um novo dia começou...}
 {description:
-Que $day seja um dia incrível para você.
+Que este seja um dia incrível para você.
 }
 {color:Blue}
 }]

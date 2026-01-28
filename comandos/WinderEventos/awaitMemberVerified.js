@@ -1,7 +1,7 @@
 module.exports = [{
 name: "memberVerified",
 type: "memberUpdate",
-channel: "$getVar[batePapo]",
+channel: "$getGuildVar[batePapo]",
 code: `
 $sendDm[{newEmbed:
 {title:<:pats_foxWoW:1463244909195821107> Parabéns, você virou furro verificado na Patinhas!}
@@ -23,6 +23,6 @@ Veja mais o que você pode fazer:
 {thumbnail:https://cdn.discordapp.com/emojis/1463245277304459345.png?size=2048}
 };$authorID]
 
-$onlyIf[$newMember[addedRoles]==$roleName[$getVar[memberVerifiedRole]];]
+$onlyIf[$newMember[addedRoles]==$roleName[$getGuildVar[memberVerifiedRole]];]
 `
 }]

@@ -1,11 +1,7 @@
 module.exports = [{
 name: "$alwaysExecute",
 code: `
-
-$setGlobalUserVar[msgXP;$sum[$getGlobalUserVar[msgXP;$authorID];$get[pda]];$authorID]
-$setGlobalUserVar[msgXPtotal;$sum[$getGlobalUserVar[msgXPtotal;$authorID];$get[pda]];$authorID]
-
-$channelSendMessage[1465378100505219072;{newEmbed:
+$channelSendMessage[$getVar[pdaLoggerChannel];{newEmbed:
 {author:$userTag ($authorID):$userAvatar}
 {description:
 Contagem de caracteres: $charCount[$message]
@@ -16,6 +12,11 @@ Link: https://discord.com/channels/$guildID/$channelID/$messageID
 {footer:msgType0}
 {color:Blue}
 }]
+
+$onlyIf[$guildID==$getVar[guildID;]
+
+$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[pda]];$authorID]
+$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[pda]];$authorID]
 
 $let[pda;$if[$hasRoles[$getVar[guildID];$authorID;$getVar[memberBoosterRole]]==true;$math[$get[bonusVotePDA]+1];0]]
 
@@ -43,7 +44,7 @@ type: "awaited",
 code: `
 $addCmdReactions[🎁]
 
-$setGlobalUserVar[item;$sum[$getGlobalUserVar[item;$authorID;$get[item]];$authorID]
+$setUserVar[item;$sum[$getUserVar[item;$authorID;$get[item]];$authorID]
 
 $setGuildVar[itemTotal;$sum[$getGuildVar[itemTotal;$getVar[guildID]];$get[item]];$getVar[guildID]]
 

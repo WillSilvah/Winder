@@ -1,17 +1,17 @@
 module.exports = [{
 name: "awaitWelcomeStaff",
 type: "memberUpdate",
-channel: "$getVar[staffChat]",
+channel: "$getGuildVar[staffChat]",
 code: `
-$channelSendMessage[$getVar[batePapo];{newEmbed:
+$channelSendMessage[$getGuildVar[batePapo];{newEmbed:
 {author:@$userTag entrou na Equipe Patinhas!:https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048}
 {color:Orange}
 }]
 
-$sendMessage[<@&$getVar[allStaffRole]>
+$sendMessage[<@&$getGuildVar[allStaffRole]>
 ## DIGAM BOAS VINDAS PARA <@$authorID> NA EQUIPE PATINHAS!
 ]
 
-$onlyIf[$checkContains[$newMember[addedRoles];$roleName[$getVar[allStaffRole];$getVar[guildID]]]==true;]
+$onlyIf[$checkContains[$newMember[addedRoles];$roleName[$getGuildVar[allStaffRole];$guildID]]==true;]
 `
 }]

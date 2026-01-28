@@ -12,6 +12,7 @@ client.variables({
   "memberBoosterRole": "1463625995473911853",
   "lastWinMemberRole": "1465399687535398932",
   "prefixo": "w!",
+  "pdaLoggerChannel": "1462224054676099094",
   "membersMeta": "0",
   "msgPerMinute": "0",
   "lastMessage": "",
