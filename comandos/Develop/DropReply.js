@@ -15,7 +15,7 @@ $let[xpDrop;$ifAwaited[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVerifi
 $useChannel[861337787192836117]
 $setGuildVar[pickStatus;false;$getVar[guildID]]
 $setGuildVar[pickWord;kkkkkkk;$getVar[guildID]]
-$onlyIf[$toLowerCase[$message]==$toLowerCase[$getGuildVar[pickWord;$getVar[guildID]]];]
+$onlyIf[$message==$getGuildVar[pickWord;$getVar[guildID]];]
 $onlyIf[$getGuildVar[pickStatus;$getVar[guildID]]==true;]
 
 `
