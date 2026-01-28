@@ -6,6 +6,7 @@ client.variables({
   "staffChat": "1462554187719114752",
   "allStaffRole": "1462546916821696612",
   "batePapo": "1462224055884189781",
+  "anunciosChat": "1462224055884189779",
   "guildID": "1462224054676099094",
   "memberVerifiedRole": "1462797987041513574",
   "memberVotedRole": "1463342375370887209",

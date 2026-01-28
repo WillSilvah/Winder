@@ -27,7 +27,7 @@ Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$g
 };$authorID]
 
 
-$sendMessage[<@$authorID> {newEmbed:
+$sendMessage[{newEmbed:
 {author:Obrigado @$username por ter votado na Patinhas!:https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048}
 {description:
 <@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e agora tem **Bônus de Pontos de Atividade** e ganhou **$get[xp] PDA**!

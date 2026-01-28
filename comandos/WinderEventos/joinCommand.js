@@ -3,6 +3,8 @@ name: "joinCommand",
 type: "join",
 channel: "1462224055884189781",
 code: `
+$if[$membersCount[$guildID;all;false]==$getGuildVar[membersMeta];{execute:metaAdvances}]
+
 $channelSendMessage[1463226796974543114;<@&1462915937433948351>
 > Vão dar boas vindas ao <@$authorID> ($authorID) no <#1462224055884189781>!]
 
@@ -21,5 +23,21 @@ $addButton[1; Conheça a Patinhas!;link;https://discord.com/channels/14622240546
 $onlyIf[$guildID==1462224054676099094;]
 $cacheMembers[$guildID;false]
 
+`
+},{
+name: "metaAdvances",
+type: "awaited",
+code: `
+$setGuildVar[membersMeta;$math[$getGuildVar[membersMeta]+100];$guildID]
+
+$channelSendMessage[$getGuildVar[batePapo];## FINALMENTE BATEMOS $getGuildVar[membersMeta] PELUDOS NA PATINHAS! <:pats_vickyWow:1465088587338088631>
+
+Eu, o Alexsander, a Fruta e toda a <@&$getGuildVar[allStaffRole]> agradecem a todos os peludinhos que ajudaram a bater essa meta incrivelmente significante para nós.
+Iai? Vamos tentar bater a meta de $math[$getGuildVar[membersMeta]+100]? Vamos juntos transformar esse lugar incrível! 🤩
+
+Em breve virá novidades, fiquem de olho!
+]
+$wait[3s]
+$clientTyping
 `
 }]
