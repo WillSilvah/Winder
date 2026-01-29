@@ -21,7 +21,7 @@ $timezone[America/Recife]
 name: "light_logo",
 type: "awaited",
 code: `
-$setGuildIcon[$get[logo];$guildID]
+$setGuildIcon[$get[logo];1462224054676099094]
 
 $channelSendMessage[$getGuildVar[consoleChat];{newEmbed:
 {author:Patinhas Brand Update (light_logo)}
@@ -35,13 +35,13 @@ Link usado: $get[logo]
 
 $let[logo;https://cdn.discordapp.com/attachments/785632865709981756/1466111624036483164/IMG_20260128_134209.png?ex=697b8e5a&is=697a3cda&hm=6d6b00fe5f184005ce940fbc599cd07c61d42aa56f7ce5a77aaa54890c3ed93c&]
 
-$onlyIf[$getGuildVar[guildIconDefault;$guildID]==true;]
+$onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 `
 },{
 name: "dark_logo",
 type: "awaited",
 code: `
-$setGuildIcon[$get[logo];$guildID]
+$setGuildIcon[$get[logo];1462224054676099094]
 
 $channelSendMessage[$getGuildVar[consoleChat];{newEmbed:
 {author:Patinhas Brand Update (dark_logo)}
@@ -56,7 +56,7 @@ Link usado: $get[logo]
 
 $let[logo;https://cdn.discordapp.com/attachments/785632865709981756/1466111624451592344/IMG_20260128_134105.png?ex=697b8e5a&is=697a3cda&hm=aa9c906c009055b14f06250320716af6039a71651409e454ca0f0a46c372fcdb&]
 
-$onlyIf[$getGuildVar[guildIconDefault;$guildID]==true;]
+$onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 `
 }]
 
