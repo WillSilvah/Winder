@@ -4,9 +4,6 @@ type: "join",
 channel: "1462224055884189781",
 code: `
 
-$channelSendMessage[1463226796974543114;<@&1462915937433948351>
-> Vão dar boas vindas ao <@$authorID> ($authorID) no <#1462224055884189781>!]
-
 <@$authorID> 
 $author[1;@$username[$authorID];https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
 $title[$username seja bem-vindo(a)!;https://www.bing.com/search?q=Como+ser+bem+recebido+em+um+lugar&setmkt=pt-BR&PC=EMMX01&form=LWS002&scope=web&darkschemeovr=1]
@@ -43,3 +40,6 @@ $clientTyping
 $onlyIf[$membersCount[$guildID;all;false]==$getGuildVar[membersMeta];]
 `
 }]
+
+//$channelSendMessage[1463226796974543114;<@&1462915937433948351>
+//> Vão dar boas vindas ao <@$authorID> ($authorID) no <#1462224055884189781>!]
