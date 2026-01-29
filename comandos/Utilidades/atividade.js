@@ -8,11 +8,11 @@ code: `
 $title[1;$customEmoji[pats_logo] $getObjectProperty[session;name];$getObjectProperty[session;banner]]
 $description[1;
 > **TEMPORADA**
-## $getLeaderboardInfo[msgXP;$mentioned[1];guild;top]° $getUserVar[msgXP;$mentioned[1];$guildID] PDAs
+## $getUserVar[msgXP;$mentioned[1];$guildID] PDAs
 **💬 $getUserVar[messageMonth;$mentioned[1];$guildID] | Nível $ifAwaited[$getUserVar[msgXP;$mentioned[1];$guildID]<1000;0;$truncate[$filterMessage[$abbreviate[$getUserVar[msgXP;$mentioned[1];$guildID];2];k;K;T;t]]]**
 
 > **EM TODA HISTÓRIA**
-## $getLeaderboardInfo[msgXPtotal;$mentioned[1];guild;top]° $getUserVar[msgXP;$mentioned[1];$guildID] PDAs
+## $getUserVar[msgXP;$mentioned[1];$guildID] PDAs
 **💬 $getUserVar[messageTotal;$mentioned[1];$guildID] | Nível $ifAwaited[$getUserVar[msgXPtotal;$mentioned[1];$guildID]<1000;0;$truncate[$filterMessage[$abbreviate[$getUserVar[msgXPtotal;$mentioned[1];$guildID];2];k;K;T;t]]]**
 ]
 $image[1;$getObjectProperty[session;banner]]

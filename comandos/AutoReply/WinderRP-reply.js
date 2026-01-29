@@ -16,10 +16,24 @@ $ifAwaited[$checkContains[*$message*;cafuné;pat;pet;carinho]==true;
 $ifAwaited[$checkContains[*$message*;morde;mordida;bite]==true;
 {execute:rp-reply-morde}
 ]
+$ifAwaited[$checkContains[*$message*;boop]==true;
+{execute:rp-reply-boop}
+]
 
 
 $onlyIf[$mentioned[1]==$clientID;]
 $onlyIf[$checkContains[$channelID;1066689771109363732;1066689827250110555]==false;]
+`
+},{
+name: "rp-reply-boop",
+type: "awaited",
+code: `
+*boop*! >w<
+
+$reply
+$wait[2s]
+$clientTyping
+$cooldown[1m;]
 `
 },{
 name: "rp-reply-hug",
