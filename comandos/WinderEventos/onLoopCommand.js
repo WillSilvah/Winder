@@ -34,8 +34,8 @@ $resetGuildVar[guildMonthMessages]
 
 $writeFile[Recursos/session.json;
 {
-    "name": "Temporada 1: Patas no ar",
-    "nameShort": "T1: Patas no Ar",
+    "name": "Pré Temporada: O começo",
+    "nameShort": "PRÉ: O começo",
     "banner": ""
 };utf8]
 

@@ -76,7 +76,7 @@ code: `
 $setGuildVar[pickType;1;$guildID]
 $setGuildVar[pickStatus;true;$guildID]
 
-$author[1;Evento de chat: AdivinhaÃ§Ã£o;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
+$author[1;Evento de chat: Adivinhação;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
 ### QUAL NÚMERO ESTOU PENSANDO?
 De **1 a 20**

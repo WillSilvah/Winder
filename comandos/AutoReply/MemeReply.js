@@ -14,7 +14,7 @@ $ifAwaited[$charCount>=100;
 ]
 
 $onlyIf[$mentioned[1]==$authorID;]
-$onlyIf[$checkContains[$channelID;1066689771109363732;1066689827250110555]==false;]
+
 `
 },{
 name: "replyCreeper",
@@ -43,6 +43,6 @@ https://media.discordapp.net/attachments/710336101944000563/1065439319118069813/
 
 $reply
 $clientTyping
-$guildCooldown[4h;]
+$guildCooldown[2h;]
 `
 }]
