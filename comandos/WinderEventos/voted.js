@@ -41,7 +41,7 @@ Vote você tambêm!
 
 $awaitExecute[countSystem]
 
-$let[xp;$random[5;10]]
+$let[xp;$random[1;5]]
 
 $onlyIf[$newMember[addedRoles]==$roleName[$getVar[memberVotedRole]];]
 `
