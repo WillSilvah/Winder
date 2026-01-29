@@ -3,7 +3,6 @@ name: "joinCommand",
 type: "join",
 channel: "1462224055884189781",
 code: `
-$ifAwaited[$membersCount[$guildID;all;false]==$getGuildVar[membersMeta];{execute:metaAdvances}]
 
 $channelSendMessage[1463226796974543114;<@&1462915937433948351>
 > Vão dar boas vindas ao <@$authorID> ($authorID) no <#1462224055884189781>!]
@@ -26,7 +25,8 @@ $cacheMembers[$guildID;false]
 `
 },{
 name: "metaAdvances",
-type: "awaited",
+type: "join",
+channel: "1462224055884189781",
 code: `
 $setGuildVar[membersMeta;$math[$getGuildVar[membersMeta]+100];$guildID]
 
@@ -39,5 +39,7 @@ Em breve virá novidades, fiquem de olho!
 ]
 $wait[5s]
 $clientTyping
+
+$onlyIf[$membersCount[$guildID;all;false]==$getGuildVar[membersMeta];]
 `
 }]
