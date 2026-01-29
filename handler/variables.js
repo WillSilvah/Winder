@@ -28,8 +28,8 @@ client.variables({
   "guildMonthMessages": "0",
   "guildTotalMesssages": "0",
   "lastUserSendMessage": "",
-  "votesTotal": "",
-  "votesMonth": "",
+  "votesTotal": "0",
+  "votesMonth": "0",
   
   "pickStatus": "false",
   "pickWord": "",
