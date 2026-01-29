@@ -54,7 +54,7 @@ Link usado: $get[logo]
 }
 ]
 
-$let[logo;https://cdn.discordapp.com/attachments/785632865709981756/1466111624451592344/IMG_20260128_134105.png?ex=697b8e5a&is=697a3cda&hm=aa9c906c009055b14f06250320716af6039a71651409e454ca0f0a46c372fcdb&]]
+$let[logo;https://cdn.discordapp.com/attachments/785632865709981756/1466111624451592344/IMG_20260128_134105.png?ex=697b8e5a&is=697a3cda&hm=aa9c906c009055b14f06250320716af6039a71651409e454ca0f0a46c372fcdb&]
 
 $onlyIf[$getGuildVar[guildIconDefault;$guildID]==true;]
 `
