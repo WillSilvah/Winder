@@ -15,7 +15,19 @@ $addField[1;🐦 Nosso twitter;[@winder_pwhl](https://twitter.com/winder_pwhl)]
 ]
 $color[1;Red]
 
-$title[2;]
+$title[2;$customEmoji[pats_logo] Explicando os cargos]
+$description[2;
+Os cargos podem tanto ser decorativos, beneficiários ou de gerência, saiba o que é cada um.
+
+$addField[2;<@&1462546916821696612>;Um grupo de furros que observam, recepcionam e administram a comunidade para melhor organização e segurança, eles são legais :3;false]
+
+$addField[2;<@&1462797987041513574>;Membros que enviaram mensagens suficientes para serem verificados automaticamente pelo Winder.;false]
+
+$addField[2;<@&1462544909390319960>;O cargo de todos os membros;false]
+
+$addField[2;<@&1462545172159270963>;Membros que entraram na comunidade antes dos 100 membros e durante a construção da comunidade, vinheram desde quando tudo era mato.;false]
+]
+$color[2;Orange]
 
 $title[3;$customEmoji[pats_lobo_alegre] Explicando canais]
 $description[3;
@@ -26,6 +38,8 @@ $addField[3;<#1463315740403830936>;Os aniversário dos membros são anunciados a
 $addField[3;<#1462224055884189782>;Canal para os artistas postarem suas artes!;false]
 
 $addField[3;<#1464643551810818052>;Use comandos de economia do Unbelievaboat aqui!;false]
+
+$addField[3;<#1463277652562411787>;Precisa de ajuda? Não hesite em chamar o suporte!;false]
 ]
 $color[3;Blue]
 
