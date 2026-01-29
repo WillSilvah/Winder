@@ -3,7 +3,7 @@ name: "joinCommand",
 type: "join",
 channel: "1462224055884189781",
 code: `
-$if[$membersCount[$guildID;all;false]==$getGuildVar[membersMeta];{execute:metaAdvances}]
+$ifAwaited[$membersCount[$guildID;all;false]==$getGuildVar[membersMeta];{execute:metaAdvances}]
 
 $channelSendMessage[1463226796974543114;<@&1462915937433948351>
 > Vão dar boas vindas ao <@$authorID> ($authorID) no <#1462224055884189781>!]
