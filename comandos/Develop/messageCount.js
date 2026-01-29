@@ -3,7 +3,7 @@ name: "$alwaysExecute",
 code: `
 $setGuildVar[msgPerMinute;$sum[$getGuildVar[msgPerMinute];1]]
 
-$onlyIf[$channelID==$getGuildVar[batePapo;]
+$onlyIf[$channelID==$getGuildVar[batePapo];]
 
 $setUserVar[messageMonth;$sum[$getUserVar[messageMonth;$authorID];1];$authorID]
 $setUserVar[messageTotal;$sum[$getUserVar[messageTotal;$authorID];1];$authorID]
