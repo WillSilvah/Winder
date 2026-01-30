@@ -16,7 +16,7 @@ $useChannel[861337787192836117]
 $setGuildVar[pickStatus;false;$guildID]
 $setGuildVar[pickWord;kkkkkkk;$guildID]
 
-$onlyIf[$message==$getGuildVar[pickWord;$guildID];]
+$onlyIf[$message==$getGuildVar[pickWord;$guildID];**DEBUG MODE:** Frase incorreta.]
 $onlyIf[$getGuildVar[pickStatus;$guildID]==true;]
 
 `
