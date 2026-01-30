@@ -18,7 +18,7 @@ $let[cmdName;$commandName]
 
 $let[staffID;$authorID]
 $let[userID;$findUser[$message[1]]]
-$let[reason;$if[$messageSlice[2]==;Sei lá qual foi o motivo, só sei que recebeu!;$messageSlice[1l2]]]
+$let[reason;$if[$messageSlice[2]==;Sei lá qual foi o motivo, só sei que recebeu!;$messageSlice[2]]]
 $let[time;$message[2]]
 $let[puniType;silenciado]
 
