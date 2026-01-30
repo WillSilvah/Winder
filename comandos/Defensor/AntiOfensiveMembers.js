@@ -1,9 +1,12 @@
 module.exports = [{
 name: "$alwaysExecute",
 code: `
-$ifAwaited[$checkContains[$toLowercase[$username | $userTag];ᛋ;ϟ;ᛋᛋ;clatebit;🇮🇱;trading;platform;Zeta; ζ ;phi;φ;$USD;cavetodex]==true;
+$ifAwaited[$checkContains[$toLowercase[$username | $userTag | $getObjectProperty[tag;tag]];ᛋ;ϟ;ᛋᛋ;clatebit;🇮🇱;trading;platform;Zeta; ζ ;phi;φ;$USD;cavetodex;MBL]==true;
 {execute:ofensive-banir}
 ]
+
+$createObject[tag;$nonEscape[$fetch[user;$authorID;primaryGuild]]]
+
 
 $onlyIf[$checkContains[$channelID;1066689771109363732;1066689827250110555]==false;]
 `
