@@ -99,6 +99,16 @@ $onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar
 
 `
 },{
+name: "servidor add votes ",
+code: `
+
+$setUserVar[votesMonth;$message[1];$mentioned[1]]
+$setUserVar[votesTotal;$message[1];$mentioned[1]]
+
+$onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar servidor** para poder executar esse comando.]
+
+`
+},{
 name: "servidor set icon",
 aliases: ['sv set icon'],
 desc: "Seleciona uma logo",
