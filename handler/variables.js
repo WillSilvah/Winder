@@ -12,6 +12,7 @@ client.variables({
   "guildID": "1462224054676099094",
   "memberVerifiedRole": "1462797987041513574",
   "memberVotedRole": "1463342375370887209",
+  "allMemberRole": "1462544909390319960",
   "memberBoosterRole": "1463625995473911853",
   "lastWinMemberRole": "1465399687535398932",
   "memberArtistRole": "1463566238310596682",
