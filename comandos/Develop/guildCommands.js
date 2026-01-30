@@ -99,7 +99,7 @@ $onlyPerms[manageguild;<@$authorID> | Você precisa ter a permissão **gerenciar
 
 `
 },{
-name: "servidor add votes ",
+name: "servidor add votes",
 code: `
 
 $setUserVar[votesMonth;$message[1];$mentioned[1]]
