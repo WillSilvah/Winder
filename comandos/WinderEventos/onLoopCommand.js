@@ -33,12 +33,12 @@ $userLeaderBoard[$guildID;msgXP;desc;{top}° **<@{id}>** -> ✨️{value};10;1]
 $userLeaderBoard[$guildID;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value};10;1]
 }
 {footer:Atualizado sempre às 22h | w!rank}
-{color:Green
+{color:Green}
 }]
 
 $createObject[session;$readFile[Recursos/session.json]]
 
-$clear[$getGuildVar[rankedChat;$guildID];1]
+$clear[$getGuildVar[rankedChat;$guildID];6]
 `
 },{
 name: "auto-reset",
