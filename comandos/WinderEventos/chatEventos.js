@@ -24,9 +24,6 @@ $wait[1m]
 $setGuildVar[pickXPmin;5;$guildID]
 $setGuildVar[pickXPmax;15;$guildID]
 
-$wait[1s]
-$onlyIf[$getGuildVar[pickStatus;$guildID]==false;]
-
 $ifAwaited[$getGuildVar[msgPerMinute;$guildID]>=6;
 {execute:drop-$random[1;4]}]
 
