@@ -39,7 +39,13 @@ Vote você tambêm!
 }
 ]
 
-$awaitExecute[countSystem]
+$setUserVar[votesMonth;$sum[$getUserVar[votesMonth;$authorID];1];$authorID]
+
+$setUserVar[votesTotal;$sum[$getUserVar[votesTotal;$authorID];1];$authorID]
+
+$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
+$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
+
 
 $let[xp;$random[1;5]]
 
@@ -49,11 +55,6 @@ $onlyIf[$newMember[addedRoles]==$roleName[$getVar[memberVotedRole]];]
 name: "countSystem",
 type: "awaited",
 code: `
-$setUserVar[votesMonth;$sum[$getUserVar[votesMonth;$authorID];1];$authorID]
-$setUserVar[votesTotal;$sum[$getUserVar[votesTotal;$authorID];1];$authorID]
-
-$setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[xp]];$authorID]
-$setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[xp]];$authorID]
 `
 },{
 name: "remindVote",
