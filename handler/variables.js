@@ -1,7 +1,7 @@
 module.exports = (client) => {
 client.variables({
 
-  "versão": "Winder 3.6",
+  "versão": "Winder 3.7",
   "consoleChat": "1465218335389257802",
   "staffChat": "1462554187719114752",
   "allStaffRole": "1462546916821696612",
@@ -55,3 +55,4 @@ client.variables({
   
 })
 }
+
