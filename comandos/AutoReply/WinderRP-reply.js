@@ -1,22 +1,22 @@
 module.exports = [{
 name: "$alwaysExecute",
 code: `
-$ifAwaited[$checkContains[*$message*;abraço;abraça;hug]==true;
+$ifAwaited[$checkContains[*$toLowerCase[$message]*;abraço;abraça;hug]==true;
 {execute:rp-reply-hug}
 ]
-$ifAwaited[$checkContains[$message;miau;meow;meeooww;meeow;meoow;meoww;miiau;miaau;miauu;meeeooowww]==true;
+$ifAwaited[$checkContains[$toLowerCase[$message];miau;meow;meeooww;meeow;meoow;meoww;miiau;miaau;miauu;meeeooowww]==true;
 {execute:rp-reply-meow}
 ]
-$ifAwaited[$checkContains[*$message*;ronrona]==true;
+$ifAwaited[$checkContains[*$toLowerCase[$message]*;ronrona]==true;
 {execute:rp-reply-ronrona}
 ]
-$ifAwaited[$checkContains[*$message*;cafuné;pat;pet;carinho]==true;
+$ifAwaited[$checkContains[*$message$toLowerCase[$message]*;cafuné;pat;pet;carinho]==true;
 {execute:rp-reply-pat}
 ]
-$ifAwaited[$checkContains[*$message*;morde;mordida;bite]==true;
+$ifAwaited[$checkContains[*$toLowerCase[$message]*;morde;mordida;bite]==true;
 {execute:rp-reply-morde}
 ]
-$ifAwaited[$checkContains[*$message*;boop]==true;
+$ifAwaited[$checkContains[*$toLowerCase[$message]*;boop]==true;
 {execute:rp-reply-boop}
 ]
 
