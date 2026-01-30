@@ -9,6 +9,8 @@ every: 999,
 code: `
 $ifAwaited[$hour:$minute:$second==00:00:00;{execute:novodia}]
 
+$ifAwaited[$date-$hour:$minute:$second==22:00:00;{execute:auto-rank-daily}]
+
 $ifAwaited[$date-$hour:$minute:$second==01-00:00:00;{execute:auto-reset}]
 
 $ifAwaited[$hour:$minute:$second==19:00:00;{execute:chat-boanoite}]
@@ -17,6 +19,23 @@ $ifAwaited[$hour:$minute:$second==12:10:00;{execute:chat-boatarde}]
 $ifAwaited[$hour:$minute:$second==07:00:00;{execute:chat-bomdia}]
 
 $timezone[America/Recife]
+`
+},{
+name: "auto-rank-daily",
+type: "awaited",
+code: `
+$author[1;$getObjectProperty[session;name];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
+$title[1;Top fofoqueiros ativos]
+$description[1;
+$userLeaderBoard[$guildID;msgXP;desc;{top}° **<@{id}>** -> ✨️{value};10;1]
+
+$userLeaderBoard[$guildID;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value};10;1]
+]
+$footer[1;Atualizado sempre às 22h | w!rank
+$color[1;Green]
+
+$createObject[session;$readFile[Recursos/session.json]]
+$useChannel[$getGuildVar[rankedChat]]
 `
 },{
 name: "auto-reset",

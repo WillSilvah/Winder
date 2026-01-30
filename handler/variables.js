@@ -8,6 +8,7 @@ client.variables({
   "batePapo": "1462224055884189781",
   "anunciosChat": "1462224055884189779",
   "punishmentLog": "1462561551679623329",
+  "rankedChat": "1466734269572579399",
   "guildID": "1462224054676099094",
   "memberVerifiedRole": "1462797987041513574",
   "memberVotedRole": "1463342375370887209",
