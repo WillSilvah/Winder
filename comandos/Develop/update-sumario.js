@@ -19,13 +19,17 @@ $title[2;$customEmoji[pats_logo] Explicando os cargos]
 $description[2;
 Os cargos podem tanto ser decorativos, beneficiários ou de gerência, saiba o que é cada um.
 
-$addField[2;<@&1462546916821696612>;Um grupo de furros que observam, recepcionam e administram a comunidade para melhor organização e segurança, eles são legais :3;false]
+> $<@&1462546916821696612>
+Um grupo de furros que observam, recepcionam e administram a comunidade para melhor organização e segurança, eles são legais :3
 
-$addField[2;<@&1462797987041513574>;Membros que enviaram mensagens suficientes para serem verificados automaticamente pelo Winder.;false]
+> <@&1462797987041513574>
+Membros que enviaram mensagens suficientes para serem verificados automaticamente pelo Winder.
 
-$addField[2;<@&1462544909390319960>;O cargo de todos os membros;false]
+> <@&1462544909390319960>
+O cargo de todos os membros
 
-$addField[2;<@&1462545172159270963>;Membros que entraram na comunidade antes dos 100 membros e durante a construção da comunidade, vinheram desde quando tudo era mato.;false]
+> <@&1462545172159270963>
+Membros que entraram na comunidade antes dos 100 membros e durante a construção da comunidade, vinheram desde quando tudo era mato.
 ]
 $color[2;Orange]
 
