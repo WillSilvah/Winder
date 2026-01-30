@@ -17,7 +17,7 @@ $sendMessage[True, contem ofensividades]
 
 $onlyIf[$checkContains[$toLowercase[$newMember[name] | $newMember[nick]];ᛋ;ϟ;ᛋᛋ;clatebit;trading;platform;Zeta; ζ ;phi;φ;$USD;cavetodex]==true;]
 
-$sendMessage[$toLowercase[$newMember[name] | $newMember[nickname]]]
+$sendMessage[$toLowercase[$newMember[name] | $newMember[nick]]]
 
 `
 },{
