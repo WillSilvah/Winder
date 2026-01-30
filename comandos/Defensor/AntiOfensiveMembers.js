@@ -13,6 +13,7 @@ type: "memberUpdate",
 channel: "$getGuildVar[consoleChat]",
 code: `
 True, contem ofensividades
+$toLowercase[$newMember[name] | $newMember[nick]]
 
 $onlyIf[$checkContains[$toLowercase[$newMember[name] | $newMember[nick]];ᛋ;ϟ;ᛋᛋ;clatebit;trading;platform;Zeta; ζ ;phi;φ;$USD;cavetodex]==true;]
 
