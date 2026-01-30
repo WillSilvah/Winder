@@ -21,8 +21,8 @@ $clientTyping
 $onlyIf[$getGuildVar[pickStatus;$guildID]==true;]
 
 $wait[1m]
-$setGuildVar[pickXPmin;20;$guildID]
-$setGuildVar[pickXPmax;30;$guildID]
+$setGuildVar[pickXPmin;5;$guildID]
+$setGuildVar[pickXPmax;15;$guildID]
 
 $wait[1s]
 $onlyIf[$getGuildVar[pickStatus;$guildID]==false;]

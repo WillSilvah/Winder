@@ -22,7 +22,7 @@ $let[pda;$if[$hasRoles[$guildID;$authorID;$getVar[memberBoosterRole]]==true;$mat
 
 $let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getVar[memberVotedRole]]==true;$math[$get[basicPDA]+4];0]]
 
-$let[basicPDA;$if[$get[textDivisorPDA]>=20;20;$get[textDivisorPDA]]]
+$let[basicPDA;$if[$get[textDivisorPDA]>=15;15;$get[textDivisorPDA]]]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/3]]]
 

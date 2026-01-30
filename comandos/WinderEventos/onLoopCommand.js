@@ -28,9 +28,9 @@ $channelSendMessage[$getGuildVar[rankedChat];{newEmbed:
 {author:$getObjectProperty[session;name]:https://abs.twimg.com/emoji/v2/72x72/1f4ac.png}
 {title:Top fofoqueiros ativos}
 {description:
-$userLeaderBoard[$guildID;msgXP;desc;{top}° **<@{id}>** -> ✨️{value};10;1]
+$userLeaderBoard[$guildID;msgXP;desc;{top}° **<@{id}>** -> ✨️{value};11;1]
 
-$userLeaderBoard[$guildID;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value};10;1]
+$userLeaderBoard[$guildID;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value};11;1]
 }
 {footer:Atualizado sempre às 22h | w!rank}
 {color:Green}
