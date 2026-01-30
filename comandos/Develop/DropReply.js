@@ -5,14 +5,14 @@ $setGuildVar[pickEmit;false;$guildID]
 $awaitExecute[give-role-event]
 
 $setUserVar[pickCount;$sum[$getUserVar[pickCount;$authorID;$guildID];1];$authorID;$guildID]
-$slowmode[0s;861337787192836117]
+$slowmode[0s;$getGuildVar[batePapo]]
 $sendMessage[<@$authorID> | Parabéns, você ganhou ✨**+$get[xpDrop] PDA**!]
 $addCmdReactions[⭐]
 
 $setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID;$guildID];$get[xpDrop]];$authorID;$guildID]
 $setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID;$guildID];$get[xpDrop]];$authorID;$guildID]
 $let[xpDrop;$ifAwaited[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;$random[$getGuildVar[pickXPmin;$guildID];$getGuildVar[pickXPmax;$guildID]];0]]
-$useChannel[861337787192836117]
+$useChannel[$getGuildVar[batePapo]]
 $setGuildVar[pickStatus;false;$guildID]
 $setGuildVar[pickWord;kkkkkkk;$guildID]
 
