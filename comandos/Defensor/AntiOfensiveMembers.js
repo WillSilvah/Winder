@@ -8,6 +8,16 @@ $ifAwaited[$checkContains[$toLowercase[$username | $userTag];ᛋ;ϟ;ᛋᛋ;clate
 $onlyIf[$checkContains[$channelID;1066689771109363732;1066689827250110555]==false;]
 `
 },{
+name: "antiOfensiveMembers",
+type: "memberUpdate",
+channel: "$getGuildVar[consoleChat]",
+code: `
+True, contem ofensividades
+
+$onlyIf[$checkContains[$toLowercase[$newMember[name] | $newMember[nick]];ᛋ;ϟ;ᛋᛋ;clatebit;trading;platform;Zeta; ζ ;phi;φ;$USD;cavetodex]==true;]
+
+`
+},{
 name: "ofensive-banir",
 type: "awaited",
 code: `
