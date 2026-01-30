@@ -35,6 +35,8 @@ $footer[1;Atualizado sempre às 22h | w!rank
 $color[1;Green]
 
 $createObject[session;$readFile[Recursos/session.json]]
+
+$clear[$getGuildVar[rankedChat;$guildID];1]
 $useChannel[$getGuildVar[rankedChat]]
 `
 },{
