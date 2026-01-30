@@ -2,7 +2,7 @@ module.exports = [{
 name: "$alwaysExecute",
 code: `
 $ifAwaited[$checkContains[$toLowercase[$username | $userTag];
-卐;卍;࿕;࿖;࿗;࿘;ꖦ;ᛋ;ϟ;ᛋᛋ;clatebit;🇮🇱;trading;platform;Zeta; ζ ;phi;φ;$USD;cavetodex]==true;
+卐;卍;࿕;࿖;࿗;࿘;ꖦ;ᛋ;ϟ;ᛋᛋ;clatebit;🇮🇱;trading;platform;Zeta;ζ;phi;φ;$USD;cavetodex]==true;
 {execute:ofensive-banir}
 ]
 
