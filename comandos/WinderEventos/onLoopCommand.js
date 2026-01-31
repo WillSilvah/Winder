@@ -39,8 +39,6 @@ $userLeaderBoard[1462224054676099094;messageMonth;desc;{top}Â° **<@{id}>** -> ðŸ
 
 $createObject[session;$readFile[Recursos/session.json]]
 
-$clear[$getGuildVar[rankedChat;1462224054676099094];6]
-
 `
 },{
 name: "auto-reset",
