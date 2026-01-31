@@ -8,7 +8,7 @@ Ficamos felizes em saber que você queira ser staff na Patinhas, antes de você 
 Boa sorte! ❤️
 ]
 $color[1;Orange]
-$addButton[1;Link para o formulário;link;https://dyno.gg/form/8e826f68;false;⚒️]
+$addButton[1;Link para o formulário;link;https://dyno.gg/form/24b03b0f;false;⚒️]
 
 $deleteCommand
 $onlyIf[$authorID==494795833351602176;]
