@@ -41,7 +41,6 @@ $createObject[session;$readFile[Recursos/session.json]]
 
 $clear[1466734269572579399;6]
 
-$useChannel[1466734269572579399]
 `
 },{
 name: "auto-reset",
