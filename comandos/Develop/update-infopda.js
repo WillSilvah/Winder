@@ -1,6 +1,6 @@
 module.exports = [{
-name: "update-infopda",
-code: `
+	name: "update-infopda",
+	code: `
 $title[1;$customEmoji[pats_logo] O que é pontos de atividade?]
 $description[1;
 Os pontos de atividade (PDA) são tipos pontos de experiência mas criado de uma forma mais especial para a Patinhas. Os PDA são contabilizados na base da atividade e interação que o membro tem com o servidor.
@@ -18,8 +18,7 @@ Lista de comandos:
 
 $addField[1;w!pda/atividade @user?;Mostra as suas estatisticas ou de outras pessoas como quantidade de mensagens e PDAs de temporadas e totais.]
 
-$addField[1;w!rank página?; 
-
+$addField[1;w!rank msgs/pda total/temporada página?;Exibe os top membros de cada categoria e tipo]
 
 ]
 $color[1;Orange]
