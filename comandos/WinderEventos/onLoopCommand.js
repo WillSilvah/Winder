@@ -9,8 +9,6 @@ every: 999,
 code: `
 $ifAwaited[$hour:$minute:$second==00:00:00;{execute:novodia}]
 
-$ifAwaited[$hour:$minute:$second==22:00:00;{execute:auto-rank-daily}]
-
 $ifAwaited[$date-$hour:$minute:$second==01-00:00:00;{execute:auto-reset}]
 
 $ifAwaited[$hour:$minute:$second==19:00:00;{execute:chat-boanoite}]
@@ -38,6 +36,8 @@ $userLeaderBoard[1462224054676099094;messageMonth;desc;{top}Â° **<@{id}>** -> ðŸ
 {color:Green}]
 
 $createObject[session;$readFile[Recursos/session.json]]
+
+$clear[$getGuildVar[rankedChat;1462224054676099094];6]
 
 `
 },{

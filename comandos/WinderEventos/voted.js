@@ -12,9 +12,6 @@ $ifAwaited[$getUserVar[votesMonth;$authorID]==60;
 $ifAwaited[$getUserVar[votesMonth;$authorID]==30;
 {execute:30votes}
 ]
-$ifAwaited[$getUserVar[votesTotal;$authorID]==1;
-{execute:firstVote}
-]
 
 $sendDm[{newEmbed:
 {title:Muito obrigado por ter votado!}
