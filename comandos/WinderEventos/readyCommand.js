@@ -16,7 +16,6 @@ $log[---------------
 $username[$clientID] está ligado! >w<
 ---------------
 ]
-$setStatus[;;online]
 
 `
 }]
