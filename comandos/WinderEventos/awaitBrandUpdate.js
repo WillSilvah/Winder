@@ -33,7 +33,7 @@ Link usado: $get[logo]
 }
 ]
 
-$let[logo;https://ibb.co/vx5gt7zP]
+$let[logo;https://i.ibb.co/RpnZ5xH0/pats-light.png]
 
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 `
@@ -54,7 +54,7 @@ Link usado: $get[logo]
 }
 ]
 
-$let[logo;https://ibb.co/LhkJfCGJ]
+$let[logo;https://i.ibb.co/Pzm985S9/pats-dark.png]
 
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 `
