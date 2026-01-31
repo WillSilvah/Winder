@@ -19,7 +19,7 @@ $title[2;$customEmoji[pats_logo] Explicando os cargos]
 $description[2;
 Os cargos podem tanto ser decorativos, beneficiários ou de gerência, saiba o que é cada um.
 
-> $<@&1462546916821696612>
+> <@&1462546916821696612>
 Um grupo de furros que observam, recepcionam e administram a comunidade para melhor organização e segurança, eles são legais :3
 
 > <@&1462797987041513574>

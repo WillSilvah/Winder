@@ -33,7 +33,7 @@ Link usado: $get[logo]
 }
 ]
 
-$let[logo;https://i.ibb.co/RpnZ5xH0/pats-light.png]
+$let[logo;$randomText[https://i.ibb.co/Jj1VwWsF/pats-pink-light.png;https://i.ibb.co/F47676pR/pats-orange-light.png;https://i.ibb.co/RpnZ5xH0/pats-red-light.png]]
 
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 `
@@ -54,7 +54,7 @@ Link usado: $get[logo]
 }
 ]
 
-$let[logo;https://i.ibb.co/Pzm985S9/pats-dark.png]
+$let[logo;$randomText[https://i.ibb.co/cK7H7ry2/pats-pink-dark.png;https://i.ibb.co/sJKW9fGZ/pats-orange-dark.png;https://i.ibb.co/Pzm985S9/pats-red-dark.png]]
 
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 `
