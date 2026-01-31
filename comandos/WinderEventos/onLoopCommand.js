@@ -36,6 +36,7 @@ $userLeaderBoard[$guildID;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value
 }
 {footer:Atualizado sempre às 22h | w!rank}
 {color:Green}
+]
 
 $createObject[session;$readFile[Recursos/session.json]]
 
