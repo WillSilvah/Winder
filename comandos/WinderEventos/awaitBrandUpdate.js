@@ -33,7 +33,7 @@ Link usado: $get[logo]
 }
 ]
 
-$let[logo;https://cdn.discordapp.com/attachments/785632865709981756/1466111624036483164/IMG_20260128_134209.png?ex=697cdfda&is=697b8e5a&hm=ae707c072307d6ea770d77cc8dda0edbdc548a7314ed08175e9398e21e6bda44&]
+$let[logo;https://ibb.co/vx5gt7zP]
 
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 `
@@ -54,7 +54,7 @@ Link usado: $get[logo]
 }
 ]
 
-$let[logo;https://cdn.discordapp.com/attachments/785632865709981756/1466111624451592344/IMG_20260128_134105.png?ex=697cdfda&is=697b8e5a&hm=78a23b9e4c1c10136613551653e4cc885f2df01d30479f60bc2372a2312b908b&]
+$let[logo;https://ibb.co/LhkJfCGJ]
 
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 `
