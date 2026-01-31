@@ -24,9 +24,8 @@ $timezone[America/Recife]
 name: "auto-rank-daily",
 type: "awaited",
 code: `
-$channelSendMessage[$getGuildVar[batePapo];Acabei de postar uma atualização lá no <#$getGuildVar[rankedChat]>, você está no rank?]
 
-$getObjectProperty[session;name];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
+$author[1;$getObjectProperty[session;name];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $title[1;Top fofoqueiros ativos]
 $description[1;
 $userLeaderBoard[$guildID;msgXP;desc;{top}° **<@{id}>** -> ✨️{value};11;1]
