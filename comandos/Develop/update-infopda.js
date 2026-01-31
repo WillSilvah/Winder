@@ -10,6 +10,15 @@ Os pontos de atividade (PDA) são tipos pontos de experiência mas criado de uma
 Praticamente interagindo com a comunidade, conversando em canais de texto, [Votando no Discords.com](https://discords.com/servers/1462224054676099094/upvote), sendo impulsionador e afins.
 
 > **Para quê serve o PDA?**
+Serve para ver os membros mais ativos na temporada do servidor visto que contabiliza não só apenas mensagens como também outras interações que os membros podem ter.
+
+- Com o passar do tempo você ganha cargos especiais.
+
+Lista de comandos:
+
+$addField[1;w!pda/atividade @user?;Mostra as suas estatisticas ou de outras pessoas como quantidade de mensagens e PDAs de temporadas e totais.]
+
+$addField[1;w!rank página?; 
 
 
 ]

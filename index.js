@@ -41,29 +41,3 @@ require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
 
 client.loadCommands("./comandos/", false);
-
-
-client.functionManager.createFunction({
-  name: "$dyColor",
-  type: "djs",
-  code: async (d) => {
-    const fs = require("fs");
-    const data = d.util.aoiFunc(d);
-    const [type, color] = data.inside.splits;
-
-    try {
-      const colors = JSON.parse(fs.readFileSync("Recursos/design/colors.json", "utf8"));
-      console.log(colors)
-      console.log(colors[type][color])
-      if (colors[type] && colors[type][color]) {
-        data.result = colors[type][color];
-        return { code: d.util.setCode(data) };
-      } else {
-        data.result = "Infelizmente não encontrei esta cor.";
-        return { code: d.util.setCode(data) };
-      }
-    } catch (error) {
-      return d.aoiError.consoleError(error);
-    }
-  },
-});

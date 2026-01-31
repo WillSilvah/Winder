@@ -17,7 +17,7 @@ $sendDm[{newEmbed:
 {title:Muito obrigado por ter votado!}
 {description:
 Seu voto no top.gg ajuda bastante! Obrigado por isso, todos nós agradecemos isto! 
-Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getUserVar[votesMonth;$authorID]** vezes!
+Você ganhou **$get[xp]** pontos de atividades e neste mês você já votou **$getUserVar[votesMonth;$authorID;$guildID]** vezes!
 }
 {footer:Quer ser lembrado de votar? use w!lembrarvoto}
 {color:Green}
@@ -30,7 +30,7 @@ $sendMessage[{newEmbed:
 <@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e agora tem **Bônus de Pontos de Atividade** e ganhou **$get[xp] PDA**!
 Vote você tambêm!
 }
-{footer:@$username já votou $getUserVar[votesMonth;$authorID] vezes neste mês, $getUserVar[votesTotal;$authorID] vezes ao todo!}
+{footer:@$username já votou $getUserVar[votesMonth;$authorID;$guildID] vezes neste mês, $getUserVar[votesTotal;$authorID] vezes ao todo!}
 {thumbnail:$userAvatar}
 {color:Green}
 }
