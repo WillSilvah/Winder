@@ -13,9 +13,9 @@ $timezone[America/Recife]
 name: "autoRankDaily",
 type: "awaited" 
 code: `
-$channelSendMessage[$getGuildVar[batePapo];Acabei de postar uma atualização lá no <#1466734269572579399>, você está no rank?]
+$channelSendMessage[$getGuildVar[batePapo;1462224054676099094];Acabei de postar uma atualização lá no <#1466734269572579399>, você está no rank?]
 
-$channelSendMessage[$getGuildVar[rankedChat];{newEmbed:
+$channelSendMessage[$getGuildVar[rankedChat;1462224054676099094];{newEmbed:
 {author:$getObjectProperty[session;name]:https://abs.twimg.com/emoji/v2/72x72/1f4ac.png}
 {title:Top fofoqueiros ativos}
 {description:
