@@ -12,8 +12,8 @@ $ifAwaited[$hour:$minute:$second==15:00:00;{execute:light_logo}]
 
 $ifAwaited[$hour:$minute:$second==18:00:00;{execute:dark_logo}]
 $ifAwaited[$hour:$minute:$second==21:00:00;{execute:dark_logo}]
-$ifAwaited[$hour:$minute:$second==00:00:00;{execute:dark_logo}]
-$ifAwaited[$hour:$minute:$second==03:00:00;{execute:dark_logo}]
+$ifAwaited[$hour:$minute:$second==00:00:00;{execute:black_dark_logo}]
+$ifAwaited[$hour:$minute:$second==03:00:00;{execute:black_dark_logo}]
 
 $timezone[America/Recife]
 	`
@@ -163,6 +163,28 @@ $let[logo;https://i.ibb.co/Pzm985S9/pats-red-dark.png]
 
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]	
 	
+	
+`
+},{
+	name: "black_dark_logo",
+	type: "awaited",
+	code: `
+$setGuildIcon[$get[logo];1462224054676099094]
+
+$channelSendMessage[$getGuildVar[consoleChat];{newEmbed:
+{author:Patinhas Brand Update (dark_logo)}
+{description:
+Link usado: $get[logo]
+
+}
+{thumbnail:$get[logo]}
+{color:Blue}
+}
+]
+
+$let[logo;https://i.ibb.co/pB8bJcBn/black-dark-logo.png]
+
+$onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]	
 	
 `
 }]
