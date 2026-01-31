@@ -1,7 +1,7 @@
 module.exports = [{
 name: "votedDiscords",
 type: "memberUpdate",
-channel: "$getVar[batePapo]",
+channel: "$getGuildVar[batePapo]",
 code: `
 $ifAwaited[$getUserVar[votesMonth;$authorID]==100;
 {execute:100votes}

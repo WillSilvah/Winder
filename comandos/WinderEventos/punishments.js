@@ -12,7 +12,7 @@ $thumbnail[1;$userAvatar[$get[staffID]]]
 $color[1;Orange]
 $footer[1;Equipe Patinhas: Nossa toca, tem regras.]
 
-$addButton[1;Apelo de desbanimento;link;https://dyno.gg/form/bbc30fb3;false;<:pats_foxBan:1466597066892640456>]
+$addButton[1;Apelo de desbanimento;link;https://dyno.gg/form/8e826f68https://dyno.gg/form/8e826f68;<:pats_foxBan:1466597066892640456>]
 
 $dm[$get[userID]]
 `

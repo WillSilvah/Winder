@@ -25,14 +25,14 @@ $setGuildVar[pickXPmin;5;$guildID]
 $setGuildVar[pickXPmax;15;$guildID]
 
 $ifAwaited[$getGuildVar[msgPerMinute;$guildID]>=6;
-{execute:drop-$random[1;4]}]
+{execute:drop-$random[2;4]}]
 
 $onlyIf[$getGuildVar[pickEmit;$guildID]==false;]
 
 `
 },{
 //$random[1000000;9999999]
-name: "drop-1",
+//name: "drop-1", desativado
 type: "awaited",
 code: `
 $setGuildVar[pickType;1;$guildID]
@@ -54,7 +54,7 @@ type: "awaited",
 code: `
 $setGuildVar[pickType;1;$guildID]
 $setGuildVar[pickStatus;true;$guildID]
-$author[1;Evento de chat: Cálculo;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
+$author[1;MATEMÁTICO;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
 ### $get[math]=?
 ]
@@ -73,7 +73,7 @@ code: `
 $setGuildVar[pickType;1;$guildID]
 $setGuildVar[pickStatus;true;$guildID]
 
-$author[1;Evento de chat: Adivinhação;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
+$author[1;ADIVINHADOR;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
 ### QUAL NÚMERO ESTOU PENSANDO?
 De **1 a 20**
@@ -92,7 +92,7 @@ type: "awaited",
 code: `
 $setGuildVar[pickType;1;$guildID]
 $setGuildVar[pickStatus;true;$guildID]
-$author[1;Evento de chat: Repetir frase ou palavra;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
+$author[1;QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
 ### $replaceText[$getObjectProperty[word;palavra]; ; ]
 

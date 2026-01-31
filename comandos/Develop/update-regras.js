@@ -39,7 +39,7 @@ $addField[7;Importunação;- Não importune os membros do servidor e da equipe, 
 $color[7;Green]
 
 $description[8;
-$addField[8;Desbanimento;- Por fim, temos a chance de você se redimir sobre seus erros, caso tenha conhecimento sobre os seus atos, acesse: [Formulário de Desbanimento](https://dyno.gg/form/bbc30fb3 'Formulário de Desbanimento').]
+$addField[8;Desbanimento;- Por fim, temos a chance de você se redimir sobre seus erros, caso tenha conhecimento sobre os seus atos, acesse: [Formulário de Desbanimento](https://dyno.gg/form/8e826f68).]
 ]
 $footer[8;Por vias das dúvidas, tenha o bom senso.]
 $color[8;Orange]
