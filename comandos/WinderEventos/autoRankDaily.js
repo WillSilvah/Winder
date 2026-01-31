@@ -22,7 +22,6 @@ $createObject[session;$readFile[Recursos/session.json]]
 
 $clear[$getGuildVar[rankedChat;1462224054676099094];6]
 
-$onlyIf[$hour:$minute:$second==22:00:00;]
-$timezone[America/Recife]
+
 `
 }]
