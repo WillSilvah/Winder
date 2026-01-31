@@ -26,21 +26,21 @@ type: "awaited",
 code: `
 $channelSendMessage[$getGuildVar[batePapo];Acabei de postar uma atualização lá no <#$getGuildVar[rankedChat]>, você está no rank?]
 
-$channelSendMessage[$getGuildVar[rankedChat];{newEmbed:
-{author:$getObjectProperty[session;name]:https://abs.twimg.com/emoji/v2/72x72/1f4ac.png}
-{title:Top fofoqueiros ativos}
-{description:
+$getObjectProperty[session;name];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
+$title[1;Top fofoqueiros ativos]
+$description[1;
 $userLeaderBoard[$guildID;msgXP;desc;{top}° **<@{id}>** -> ✨️{value};11;1]
 
 $userLeaderBoard[$guildID;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value};11;1]
-}
-{footer:Atualizado sempre às 22h | w!rank}
-{color:Green}
-}]
+]
+$footer[1;Atualizado sempre às 22h | w!rank]
+$color[1;Green]
 
 $createObject[session;$readFile[Recursos/session.json]]
 
 $clear[$getGuildVar[rankedChat;$guildID];6]
+
+$useChannel[$getGuildVar[rankedChat]]
 `
 },{
 name: "auto-reset",
