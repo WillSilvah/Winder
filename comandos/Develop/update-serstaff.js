@@ -1,5 +1,5 @@
 module.exports = [{
-name: "update-infoecononia",
+name: "update-serstaff",
 code: `
 $title[1;$customEmoji[pats_logo] Candidatura para a Equipe Patinhas!]
 $description[1;
