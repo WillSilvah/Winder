@@ -5,6 +5,14 @@ channel: "$getVar[consoleChat]",
 executeOnStartup: "true",
 every: 999,
 code: `
+
+$ifAwaited[$hour:$minute:$second==22:00:00;{execute:autoRankDaily}]
+$timezone[America/Recife]
+`
+},{
+name: "autoRankDaily",
+type: "awaited" 
+code: `
 $channelSendMessage[$getGuildVar[batePapo];Acabei de postar uma atualização lá no <#1466734269572579399>, você está no rank?]
 
 $channelSendMessage[$getGuildVar[rankedChat];{newEmbed:
@@ -23,7 +31,7 @@ $createObject[session;$readFile[Recursos/session.json]]
 
 $clear[$getGuildVar[rankedChat;1462224054676099094];6]
 
-$onlyIf[$hour:$minute:$second==22:00:00;]
-$timezone[America/Recife]
 `
+
+
 }]
