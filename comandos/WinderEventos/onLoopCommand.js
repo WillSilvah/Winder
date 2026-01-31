@@ -35,7 +35,7 @@ $userLeaderBoard[1462224054676099094;msgXP;desc;{top}° **<@{id}>** -> ✨️{va
 $userLeaderBoard[1462224054676099094;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value};11;1]
 }
 {footer:Atualizado sempre às 22h | w!rank}
-{color:Green}
+{color:Green}]
 
 $createObject[session;$readFile[Recursos/session.json]]
 
