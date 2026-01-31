@@ -5,17 +5,9 @@ channel: "$getVar[consoleChat]",
 executeOnStartup: "true",
 every: 999,
 code: `
+$channelSendMessage[$getGuildVar[batePapo];Acabei de postar uma atualização lá no <#1466734269572579399>, você está no rank?]
 
-$ifAwaited[$hour:$minute:$second==22:00:00;{execute:autoRankDaily}]
-$timezone[America/Recife]
-`
-},{
-name: "autoRankDaily",
-type: "awaited" 
-code: `
-$channelSendMessage[$getGuildVar[batePapo;1462224054676099094];Acabei de postar uma atualização lá no <#1466734269572579399>, você está no rank?]
-
-$channelSendMessage[$getGuildVar[rankedChat;1462224054676099094];{newEmbed:
+$channelSendMessage[$getGuildVar[rankedChat];{newEmbed:
 {author:$getObjectProperty[session;name]:https://abs.twimg.com/emoji/v2/72x72/1f4ac.png}
 {title:Top fofoqueiros ativos}
 {description:
@@ -31,7 +23,7 @@ $createObject[session;$readFile[Recursos/session.json]]
 
 $clear[$getGuildVar[rankedChat;1462224054676099094];6]
 
+$onlyIf[$hour:$minute:$second==22:00:00;]
+$timezone[America/Recife]
 `
-
-
 }]
