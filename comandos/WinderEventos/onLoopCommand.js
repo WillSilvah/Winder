@@ -9,7 +9,7 @@ every: 999,
 code: `
 $ifAwaited[$hour:$minute:$second==00:00:00;{execute:novodia}]
 
-$ifAwaited[$date-$hour:$minute:$second==22:00:00;{execute:auto-rank-daily}]
+$ifAwaited[$hour:$minute:$second==22:00:00;{execute:auto-rank-daily}]
 
 $ifAwaited[$date-$hour:$minute:$second==01-00:00:00;{execute:auto-reset}]
 
