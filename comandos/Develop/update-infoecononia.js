@@ -16,6 +16,7 @@ Os <@&1463625995473911853> ganham num cooldown de 24h, 2,200 Paws enquanto os <@
 [Vote na Patinhas](https://discords.com/servers/1462224054676099094/upvote)
 
 ]
+$footer[1;A economia ainda está em desenvolvimento e está aberto a sugestões]
 $color[1;Green]
 
 $deleteCommand
