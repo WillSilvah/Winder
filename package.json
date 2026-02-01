@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "aoi.db": "github:aoijs/aoi.db#v2",
+    "aoi.js": "github:aoijs/aoi.js#v6",
+    "dotenv": "17.2.3",
+    "pm2": "^6.0.14",
+    "discord.js": "^14.25.1"
+  },
+  "name": "winder-oldgen",
+  "version": "1.0.0",
+  "description": "Winder em AOI old gen",
+  "main": "index.js",
+  "scripts": {
+  "start": "pm2 start index.js --name winder-bot",
+  "stop": "pm2 stop winder-bot",
+  "logs": "pm2 logs winder-bot",
+  "restart": "pm2 restart winder-bot"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillSilvah/winder-oldgen.git"
+  },
+  "author": "willsilvah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillSilvah/winder-oldgen/issues"
+  },
+  "homepage": "https://github.com/WillSilvah/winder-oldgen#readme"
+}
