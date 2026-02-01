@@ -18,6 +18,8 @@ client.variables({
   "memberArtistRole": "1463566238310596682",
   "guildIconDefault": "true",
   "memberOfficialArtistRole": "1466120026590417056",
+  "memberActiveRole": "1467315513070977168",
+  "logMemberActiveChat": "1467318550925410485",
   "prefixo": "w!",
   "pdaLoggerChannel": "1465378100505219072",
   "membersMeta": "0",

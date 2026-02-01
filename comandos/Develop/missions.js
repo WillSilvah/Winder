@@ -64,4 +64,36 @@ $setUserVar[metaXPtotal;$sum[$getUserVar[metaXPtotal;$authorID];1000];$authorID]
 $onlyIf[$getUserVar[msgXPtotal;$authorID]<=1000;]
 $onlyIf[$hasRoles[$getVar[guildID];$authorID;$getVar[memberVerifiedRole]]==true;]
 `
+},{
+	name: "MemberisActive",
+	type: "awaited",
+	code: `
+$channelSendMessage[$getGuildVar[logMemberChat;$guildID];{newEmbed:
+{author:@$username é um membro ativo;$userAvatar[$authorID]}
+{description:
+ID: $authorID
+Mensagens enviadas: $getUserVar[messageTotal;$authorID;$guildID] (total) | $getUserVar[messageMonth;$authorID;$guildID] (mensal)
+Pontos de atividades adquiridos: $getUserVar[mgsXPtotal;$authorID;$guildID] (total) | $getUserVar[msgXP;$authorID;$guildID] (mensal)
+}
+{color:Green}
+}]
+	
+$giveRole[$guildID;$authorID;$getGuildVar[memberActiveRole;O membro teve 1,000 PDAs.]
+`
+},{
+	name: "memberIsNotActive",
+	type: "awaited",
+	code: `
+$channelSendMessage[$getGuildVar[logMemberChat;$guildID];{newEmbed:
+{author:@$username não é um membro ativo;$userAvatar[$authorID]}
+{description:
+ID: $authorID
+Mensagens enviadas: $getUserVar[messageTotal;$authorID;$guildID] (total) | $getUserVar[messageMonth;$authorID;$guildID] (mensal)
+Pontos de atividades adquiridos: $getUserVar[mgsXPtotal;$authorID;$guildID] (total) | $getUserVar[msgXP;$authorID;$guildID] (mensal)
+}
+{color:Green}
+}]
+	
+$giveRole[$guildID;$authorID;$getGuildVar[memberActiveRole;O membro não tem 1,000 PDAs.]
+`
 }]
