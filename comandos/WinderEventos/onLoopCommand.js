@@ -44,7 +44,7 @@ $clear[$getGuildVar[rankedChat;1462224054676099094];6]
 name: "auto-reset",
 type: "awaited",
 code: `
-$resetUserVar[metaXPtotal]
+$resetUserVar[metaXP]
 
 $resetUserVar[messageMonth]
 
@@ -58,7 +58,7 @@ $writeFile[Recursos/session.json;
 {
     "name": "Pré Temporada: O começo",
     "nameShort": "PRÉ: O começo",
-    "banner": ""
+    "banner": "https://i.ibb.co/7NXHgpxQ/banner-pr-temporada.png"
 };utf8]
 
 `

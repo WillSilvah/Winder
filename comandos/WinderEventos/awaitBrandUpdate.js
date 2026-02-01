@@ -53,6 +53,7 @@ Link usado: $get[logo]
 
 $let[logo;https://i.ibb.co/F47676pR/pats-orange-light.png]
 
+
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 	`
 },{
