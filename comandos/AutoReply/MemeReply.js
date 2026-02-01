@@ -9,7 +9,7 @@ $ifAwaited[$checkContains[$toLowerCase[$message];olavo;funera;sepult;mort;morr;e
 {execute:replySkull}
 ]
 
-$ifAwaited[$charCount[$message]>=100;
+$ifAwaited[$charCount[$message]>=200;
 {execute:replyBoyKisser}
 ]
 
