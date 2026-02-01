@@ -6,7 +6,7 @@ usage: "modmail @user/userID mensagem",
 type: "interaction",
 prototype: "slash",
 code: `
-$channelSendMessage[861337787192836117;<@$findUser[$slashOption[user_id]]> | $ifAwaited[$isUserDMEnabled[$findUser[$slashOption[user_id]]]==true;A Equipe Patinhas enviou um modmail para você, vai lá ver na minha DM!;Tentei lhe enviar uma DM mas infelizmente não consegui...]]
+$channelSendMessage[$getGuildVar[batePapo;$guildID];<@$findUser[$slashOption[user_id]]> | $ifAwaited[$isUserDMEnabled[$findUser[$slashOption[user_id]]]==true;A Equipe Patinhas enviou um modmail para você, vai lá ver na minha DM!;Tentei lhe enviar uma DM mas infelizmente não consegui...]]
 $ifAwaited[$isUserDMEnabled[$findUser[$slashOption[user_id]]]==true;
 {execute:dm-modmailSend}]
 
