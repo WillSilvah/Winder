@@ -30,7 +30,7 @@ $sendMessage[{newEmbed:
 <@$authorID> votou na Patinhas no [**Discords**](https://discords.com/servers/$guildID/upvote) e agora tem **Bônus de Pontos de Atividade** e ganhou **$get[xp] PDA**!
 Vote você tambêm!
 }
-{footer:@$username já votou $getUserVar[votesMonth;$authorID;$guildID] vezes neste mês, $getUserVar[votesTotal;$authorID] vezes ao todo!}
+{footer:@$username já votou $getUserVar[votesMonth;$authorID;$guildID] vezes neste mês, $getUserVar[votesTotal;$authorID;$guildID] vezes ao todo!}
 {thumbnail:$userAvatar}
 {color:Green}
 }

@@ -37,7 +37,7 @@ $title[1;$getObjectProperty[session;name];https://pt.wikihow.com/Ser-o-Melhor]
 $description[1;
 $userLeaderBoard[$guildID;messageMonth;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
 ]
-$footer[1;Soma de mensagens enviadas: $getGuildVar[guildMonthMessages] | Você: $getGlobalUserVar[messageMonth;$authorID] ]
+$footer[1;Soma de mensagens enviadas: $getGuildVar[guildMonthMessages] | Você: $getUserVar[messageMonth;$authorID] ]
 $image[1;$getObjectProperty[session;banner]]
 $color[1;Green]
 $clientTyping
@@ -53,7 +53,7 @@ $author[1;Conversadores históricos | Página $ifAwaited[$argsCount>=1;$message[
 $description[1;
 $userLeaderBoard[$guildID;messageTotal;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
 ]
-$footer[1;Você enviou $getGlobalUserVar[messageTotal;$authorID] mensagens]
+$footer[1;Você enviou $getUserVar[messageTotal;$authorID] mensagens]
 $color[1;Green]
 $clientTyping
 $cooldown[30s;<@$authorID> | Espere **%time%** para poder executar este comando novamente!]
@@ -66,7 +66,7 @@ $author[1;ATIVOS HISTÓRICOS (total) | Página $ifAwaited[$argsCount>=1;$message
 $description[1;
 $userLeaderBoard[$guildID;msgXPtotal;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
 ]
-$footer[1;Você tem $getGlobalUserVar[msgXPtotal;$authorID] pontos de atividade]
+$footer[1;Você tem $getUserVar[msgXPtotal;$authorID] pontos de atividade]
 $color[1;Green]
 $clientTyping
 $cooldown[30s;<@$authorID> | Espere **%time%** para poder executar este comando novamente!]
@@ -80,7 +80,7 @@ $title[1;$getObjectProperty[session;name];https://pt.wikihow.com/Ser-o-Melhor]
 $description[1;
 $userLeaderBoard[$guildID;msgXP;desc;{top}° **{tag}** -> {value};10;$ifAwaited[$argsCount>=1;$message[1];1]]
 ]
-$footer[1;Você tem $getGlobalUserVar[msgXP;$authorID] pontos de experiência]
+$footer[1;Você tem $getUserVar[msgXP;$authorID] pontos de experiência]
 $image[1;$getObjectProperty[session;banner]]
 $color[1;Green]
 $clientTyping
