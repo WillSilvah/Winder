@@ -7,7 +7,7 @@ $channelSendMessage[$getVar[pdaLoggerChannel];{newEmbed:
 Contagem de caracteres: $charCount[$message]
 Argumentos: $argsCount
 PDA ganho: $get[pda]
-> <@&$getGuildVar[memberVotedRole]> +$get[bonusVotePDA] | <@&$getGuildVar[memberBoosterRole]> +$get[bonusBoosterPDA]
+> ✨️ $get[textDivisorPDA] | <@&$getGuildVar[memberVotedRole]> +$get[bonusVotePDA] | <@&$getGuildVar[memberBoosterRole]> +$get[bonusBoosterPDA]
 Link: https://discord.com/channels/$guildID/$channelID/$messageID
 }
 {footer:msgType0}
