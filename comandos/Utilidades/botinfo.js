@@ -15,7 +15,7 @@ $addField[1;🕊️ Versão do AOi.js;**$packageVersion**]
 
 $addField[1;🛜 $username[$clientID] ping;**$pingms**]
 
-$addField[1;⭐ Versão do $username[$clientID];**$getVar[versão]**]
+$addField[1;⭐ Versão do $username[$clientID];**$getVersion**]
 
 ]
 $color[1;Blue]

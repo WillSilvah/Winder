@@ -41,3 +41,20 @@ require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
 
 client.loadCommands("./comandos/", false);
+
+bot.functionManager.createFunction({
+    name: "$updateVersion",
+    params: [ "newVersion"], 
+    type: "aoi.js",
+    code: "
+$writeFile[Recursos/version.json;$username[$clientID] $date.$formatDate[$dateStamp;MM;utf8]
+"
+});
+
+bot.functionManager.createFunction({
+    name: "$getVersion", 
+    type: "aoi.js",
+    code: "
+$readFile[Recursos/version.json]
+"
+});
