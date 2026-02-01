@@ -4,7 +4,7 @@ code: `
 $ifAwaited[$getUserVar[messageTotal;$authorID]==$getUserVar[messageMeta;$authorID];
 {execute:missionMeta-1}
 ]
-$ifAwaited[$getUserVar[messageTotal;$authorID]>=200;
+$ifAwaited[$getUserVar[messageTotal;$authorID]>=150;
 {execute:missionMeta-2}
 ]
 $ifAwaited[$getUserVar[messageTotal;$authorID]==1300;
