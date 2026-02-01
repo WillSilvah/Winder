@@ -19,7 +19,6 @@ $setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages];1]]
 
 $onlyForGuilds[1462224054676099094;]
 $onlyIf[$isBot==false;]
-$cooldown[1s;]
 `
 },{
 name: "$alwaysExecute",

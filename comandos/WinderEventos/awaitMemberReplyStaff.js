@@ -13,10 +13,7 @@ Espero que você tenha respondido direitinho o formulário ok? Após a Equipe Pa
 }
 {footer:Possivelmente, não vamos demorar mais que 24 horas para responder o seu formulário.}
 {color:Orange}
-
-
-
-}]
+};$authorID]
 
 $onlyIf[$newMember[addedRoles]==$roleName[1321962965003407503];]
 `
