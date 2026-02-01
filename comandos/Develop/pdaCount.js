@@ -18,9 +18,9 @@ $onlyIf[$guildID==1462224054676099094;]
 $setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[pda]];$authorID]
 $setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID];$get[pda]];$authorID]
 
-$let[pda;$if[$hasRoles[$guildID;$authorID;$getVar[memberBoosterRole]]==true;$math[$get[bonusVotePDA]+1];0]]
+$let[pda;$if[$hasRoles[$guildID;$authorID;$getVar[memberBoosterRole]]==true;$math[$get[bonusVotePDA]+1];$get[bonusVotePDA]]]
 
-$let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getVar[memberVotedRole]]==true;$math[$get[basicPDA]+4];0]]
+$let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getVar[memberVotedRole]]==true;$math[$get[basicPDA]+4];$get[basicPDA]]]
 
 $let[basicPDA;$if[$get[textDivisorPDA]>=15;15;$get[textDivisorPDA]]]
 
