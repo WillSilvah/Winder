@@ -78,7 +78,7 @@ Pontos de atividades adquiridos: $getUserVar[mgsXPtotal;$authorID;$guildID] (tot
 {color:Green}
 }]
 	
-$giveRole[$guildID;$authorID;$getGuildVar[memberActiveRole;O membro teve 1,000 PDAs.]
+$giveRole[$guildID;$authorID;$getGuildVar[memberActiveRole];O membro teve 1,000 PDAs.]
 `
 },{
 	name: "memberIsNotActive",
@@ -94,6 +94,6 @@ Pontos de atividades adquiridos: $getUserVar[mgsXPtotal;$authorID;$guildID] (tot
 {color:Green}
 }]
 	
-$giveRole[$guildID;$authorID;$getGuildVar[memberActiveRole;O membro não tem 1,000 PDAs.]
+$removeRole[$guildID;$authorID;$getGuildVar[memberActiveRole];O membro não tem 1,000 PDAs.]
 `
 }]
