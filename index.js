@@ -45,15 +45,11 @@ client.loadCommands("./comandos/", false);
 client.functionManager.createFunction({
     name: "$updateVersion",
     type: "aoi.js",
-    code: `
-$writeFile[Recursos/version.json;$username[$clientID] $date.$formatDate[$dateStamp;MM;utf8]
-`
+    code: `$writeFile[Recursos/version.json;$username[$clientID] $date.$formatDate[$dateStamp;MM;utf8]`
 });
 
 client.functionManager.createFunction({
     name: "$getVersion", 
     type: "aoi.js",
-    code: `
-$readFile[Recursos/version.json]
-`
+    code: `$readFile[Recursos/version.json]`
 });
