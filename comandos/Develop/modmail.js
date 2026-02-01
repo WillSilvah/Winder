@@ -12,7 +12,7 @@ $ifAwaited[$isUserDMEnabled[$findUser[$slashOption[user_id]]]==true;
 
 $interactionReply[<@$authorID> | Mensagem enviada!;everyone;false]
 
-$onlyPerms[admin;]
+$onlyPerms[administrator;]
 `
 },{
 name: "dm-modmailSend",
