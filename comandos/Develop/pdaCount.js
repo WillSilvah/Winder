@@ -1,7 +1,7 @@
 module.exports = [{
 name: "$alwaysExecute",
 code: `
-$channelSendMessage[$getVar[pdaLoggerChannel];{newEmbed:
+$sendWebhookMessage[$getObjectProperty[tokens;Webhook_ID];$getObjectProperty[tokens;Webhook_Token];{newEmbed:
 {author:$userTag ($authorID):$userAvatar}
 {description:
 Contagem de caracteres: $charCount[$message]
@@ -14,6 +14,7 @@ Link: https://discord.com/channels/$guildID/$channelID/$messageID
 {color:Blue}
 }]
 
+$createObject[tokens;$readFile[Recursos/tokens.json]]
 $onlyIf[$guildID==1462224054676099094;]
 
 $setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID];$get[pda]];$authorID]
@@ -35,7 +36,7 @@ $onlyIf[$getGuildVar[pickStatus;$guildID]==false;]
 $onlyIf[$checkContains[$channelID;1462546608758718515]==false;]
 $onlyIf[$checkContains[$channelCategoryID[$channelID];1462224055884189780;1463544077554552892]==true;]
 $onlyIf[$stringStartsWith[$message;+;=;w!+w+;/;m!]==false;]
-$onlyIf[$guildID==$guildID;]
+$onlyIf[1462224054676099094==$guildID;]
 $onlyIf[$hasRoles[$guildID;$authorID;$getVar[memberVerifiedRole]]==true;]
 
 $cooldown[10s;]
