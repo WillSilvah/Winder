@@ -9,7 +9,7 @@ $ifAwaited[$checkContains[$toLowerCase[$message];olavo;funera;sepult;mort;morr;e
 {execute:replySkull}
 ]
 
-$ifAwaited[$charCount>=100;
+$ifAwaited[$charCount[$message]>=100;
 {execute:replyBoyKisser}
 ]
 
@@ -43,6 +43,6 @@ https://media.discordapp.net/attachments/710336101944000563/1065439319118069813/
 
 $reply
 $clientTyping
-$guildCooldown[2h;]
+$guildCooldown[4h;]
 `
 }]
