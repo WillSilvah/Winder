@@ -3,11 +3,11 @@ name: "memberReplyStaff",
 type: "memberUpdate",
 channel: "$getGuildVar[consoleChat]",
 code: `
-$removeRole[1462224054676099094;$authorID;1321962965003407503]
+$removeRole[1462224054676099094;$authorID;1467496885664092201]
 $wait[10s]
 
 $sendDM[{newEmbed:
-{author:Recebemos seu formulário!}
+{author:$customEmoji[Recebemos seu formulário!}
 {description:
 Espero que você tenha respondido direitinho o formulário ok? Após a Equipe Patinhas analisar seu formulário, eu irei enviar uma mensagem para você informando sua aprovação ou reprovação.
 }
@@ -15,6 +15,6 @@ Espero que você tenha respondido direitinho o formulário ok? Após a Equipe Pa
 {color:Orange}
 };$authorID]
 
-$onlyIf[$newMember[addedRoles]==$roleName[1321962965003407503];]
+$onlyIf[$newMember[addedRoles]==$roleName[1467496885664092201];]
 `
 }]
