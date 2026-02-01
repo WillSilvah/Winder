@@ -46,15 +46,15 @@ client.functionManager.createFunction({
     name: "$updateVersion",
     params: [ "newVersion"], 
     type: "aoi.js",
-    code: "
+    code: `
 $writeFile[Recursos/version.json;$username[$clientID] $date.$formatDate[$dateStamp;MM;utf8]
-"
+`
 });
 
 client.functionManager.createFunction({
     name: "$getVersion", 
     type: "aoi.js",
-    code: "
+    code: `
 $readFile[Recursos/version.json]
-"
+`
 });
