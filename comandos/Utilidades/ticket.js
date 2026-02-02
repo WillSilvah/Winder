@@ -56,10 +56,10 @@ Data: $hour:$minute:$second - $date/$formatDate[$dateStamp;MM]/$year
 ;utf8]
 
 $let[id;$newTicket[⭐│ticket-$userTag;<@$authorID> <@&$getGuildVar[AllStaffRole;$guildID]> {newEmbed:
-{title:$customEmoji[pinw_orange] $userTag criou um ticket!}
+{title:$customEmoji[pats_logo] $userTag criou um ticket!}
 {url:https://www.bing.com/images/search?q=ginger+cat&qs=ds&form=QBIR&first=1}
 {description:
-Aqui é o seu novo ticket <@$authorID>! $customEmoji[pwh_lobo_alegre]
+Aqui é o seu novo ticket <@$authorID>! $customEmoji[pats_lobo_alegre]
 Aproveite para conversar sobre um pedido de ajuda, uma denuncia, uma sugestão, uma proposta ou fazer uma reunião com a Equipe!
 Logo abaixo, irei mostrar comandos úteis para você!
 
@@ -73,7 +73,7 @@ Fecha este ticket.
 {footer:Estaremos sempre aqui para ajudar você!}
 {thumbnail:$userAvatar}
 {color:Orange}
-};1188923651857330227;true;]]
+};1463237935636939020;true;]]
 
 $timezone[America/Recife]
 
