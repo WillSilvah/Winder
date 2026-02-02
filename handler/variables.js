@@ -45,14 +45,21 @@ client.variables({
   "pickEmit": "false",
   "pickType": "",
   
-  "msgLast": "",
+  "msgLast": "1467701266519035904",
   "msgBoost": "1",
   "msgXP": "0",
   "msgXPtotal": "0",
   "metaXPtotal": "0",
   "metaXP": "1000",
   
-  "reminderStatus": "true"
+  "reminderStatus": "true",
+  
+  "musicLog": "",
+  "nightMusic": "false",
+  "eventMusicStatus": "false",
+  "eventMusicName": "Patas Músical",
+  "musicBan": "false",
+  "musicBanReason": ""
   
   
   
