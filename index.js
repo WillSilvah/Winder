@@ -40,7 +40,6 @@ const voice = new AoiVoice(client, {
   searchOptions: {
     //soundcloudClientId: "Soundcloud ID", // optional
     youtubegl: "BR",
-    youtubeClient: "WEB"
   },
   requestOptions: {
     offsetTimeout: 0,
