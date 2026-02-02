@@ -16,13 +16,6 @@ const client = new AoiClient({
     events: ["onInteractionCreate", "onMessageDelete","onMessage", "onChannelCreate", "onThreadCreate", "onJoin", "onLeave", "onMemberUpdate", "onBanAdd"],
 	//onInteractionCreate
 	disableFunctions : ["$clientToken"],
-	database: {
-    type: "aoi.db",
-    db: require("aoi.db"),
-    dbType: "KeyValue",
-    tables: ["main"],
-    securityKey: "a-32-characters-long-string-here",
-    },
     autoUpdates: false,
     mobilePlatform: false,
     guildOnly: true,

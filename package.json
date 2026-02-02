@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "aoi.db": "github:aoijs/aoi.db#v2",
     "aoi.js": "github:aoijs/aoi.js#v6",
     "dotenv": "17.2.3",
     "pm2": "^6.0.14",
