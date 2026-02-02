@@ -35,8 +35,7 @@ const client = new AoiClient({
     errorMessage: ["", ""]
     });
 
-
-const manager = new Manager({
+const voice = new AoiVoice({
    devOptions: {
       debug: false, // Set to true for debugging purposes
    },
