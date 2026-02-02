@@ -6,15 +6,15 @@
     "pm2": "^6.0.14",
     "discord.js": "^14.25.1"
   },
-  "name": "winder-oldgen",
+  "name": "winder-controller",
   "version": "1.0.0",
-  "description": "Winder em AOI old gen",
+  "description": "Winder Controller",
   "main": "index.js",
   "scripts": {
-  "start": "pm2 start index.js --name winder-bot",
-  "stop": "pm2 stop winder-bot",
-  "logs": "pm2 logs winder-bot",
-  "restart": "pm2 restart winder-bot"
+  "start": "pm2 start index.js --name winder-controller",
+  "stop": "pm2 stop winder-controller",
+  "logs": "pm2 logs winder-controller",
+  "restart": "pm2 restart winder-controller"
 },
   "repository": {
     "type": "git",

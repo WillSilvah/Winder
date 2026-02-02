@@ -20,6 +20,5 @@ $username[$clientID] está ligado! >w<
 
 $updateVersion
 $setStatus[;;online]
-$setUserNickname[$clientID;;]
 `
 }]
