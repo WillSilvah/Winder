@@ -53,9 +53,8 @@ name: "reply-modmail-1",
 type: "interaction",
 prototype: "modal", 
 code: `
-
 <@&$getGuildVar[AllStaffRole;$guildID]>
-$author[1;$userTag respondeu o modmail.;https://cdn.discordapp.com/emojis/1181219955417567343.png?size=2048]
+$title[1;@$userTag respondeu o modmail.]
 $description[1;
 $textInputValue[replyModmail]
 ]

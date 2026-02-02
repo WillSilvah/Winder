@@ -33,7 +33,7 @@ Remove um usuário ao seu ticket.
 Fecha este ticket.
 ]
 $footer[1;Algum problema? Chame um suporte.]
-$color[1;$dyColor[orange;light]]
+$color[1;Orange]
 
 $addButton[1;Fechar ticket;danger;fecharticket;false;🗑️]
 `
@@ -55,15 +55,7 @@ ID do canal: $get[id]
 Data: $hour:$minute:$second - $date/$formatDate[$dateStamp;MM]/$year
 ;utf8]
 
-$let[id;$newTicket[⭐│ticket-$userTag;$ifAwaited[$channelID==1179767783232393287;
-<@$authorID>
-{newEmbed:
-{title:Diga "O que é a Pinwheel?"}
-{description:
-Se quiser fechar este ticket, use **$getGuildVar[prefixo]ticket**
-}
-{color:$dyColor[cyan;light]}
-} ;<@$authorID> <@&894592054175342602> {newEmbed:
+$let[id;$newTicket[⭐│ticket-$userTag;<@$authorID> <@&$getGuildVar[AllStaffRole;$guildID]> {newEmbed:
 {title:$customEmoji[pinw_orange] $userTag criou um ticket!}
 {url:https://www.bing.com/images/search?q=ginger+cat&qs=ds&form=QBIR&first=1}
 {description:
@@ -80,8 +72,8 @@ Fecha este ticket.
 }
 {footer:Estaremos sempre aqui para ajudar você!}
 {thumbnail:$userAvatar}
-{color:$dyColor[orange;light]}
-}];1188923651857330227;true;]]
+{color:Orange}
+};1188923651857330227;true;]]
 
 $timezone[America/Recife]
 
@@ -166,7 +158,7 @@ $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
 ;utf8]
 
 $timeZone[America/Recife]
-$useChannel[1042174148987846656]
+$useChannel[1465218335389257802]
 
 $interactionReply[<@$authorID> | deletando...;everyone;false]
 
