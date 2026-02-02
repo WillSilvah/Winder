@@ -59,7 +59,11 @@ client.variables({
   "eventMusicStatus": "false",
   "eventMusicName": "Patas Músical",
   "musicBan": "false",
-  "musicBanReason": ""
+  "musicBanReason": "",
+  "musicCount": "0",
+  "musicTimeCount": "0",
+  "totalMusicCount": "0",
+  "totalMusicTimeCount": "0"
   
   
   
