@@ -25,7 +25,7 @@ $channelSendMessage[$getGuildVar[musicLog;$guildID];{newEmbed:
 {title:$songInfo[title]}
 {url:$songInfo[url]}
 {footer:Pedido por $userTag[$findUser[$songInfo[requester]]]}
-{color:$dyColor[blue;light]}
+{color:Blue}
 {thumbnail:$userAvatar[$findUser[$songInfo[requester]]]}
 }]
 
