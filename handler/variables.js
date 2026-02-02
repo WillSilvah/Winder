@@ -1,7 +1,7 @@
 module.exports = (client) => {
 client.variables({
 
-  "versão": "Winder 3.7",
+  "versão": "",
   "consoleChat": "1465218335389257802",
   "staffChat": "1462554187719114752",
   "allStaffRole": "1462546916821696612",
@@ -20,7 +20,7 @@ client.variables({
   "memberOfficialArtistRole": "1466120026590417056",
   "memberActiveRole": "1467315513070977168",
   "logMemberActiveChat": "1467318550925410485",
-  "prefixo": "w!",
+  "prefixo": "w-",
   "pdaLoggerChannel": "1465378100505219072",
   "membersMeta": "0",
   "msgPerMinute": "0",

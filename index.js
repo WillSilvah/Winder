@@ -8,7 +8,7 @@ const fs = require('fs');
 
 const client = new AoiClient({
 	token: process.env.TOKEN,
-	prefix: "w!",
+	prefix: "w-",
     respondToBots: false,
 	aoiLogs: "true",
 	aoiWarning: "true",
