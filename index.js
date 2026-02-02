@@ -1,4 +1,5 @@
 const { AoiClient } = require("aoi.js");
+const { Manager } = require("aoi.music");
 
 require('dotenv').config();
 
@@ -34,7 +35,6 @@ const client = new AoiClient({
     errorMessage: ["", ""]
     });
 
-const { Manager } = require("@aoijs/aoi.music");
 
 const manager = new Manager({
    devOptions: {
