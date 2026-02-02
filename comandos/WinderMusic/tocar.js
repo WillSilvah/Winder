@@ -135,6 +135,6 @@ $volume[100]
 
 $onlyIf[$volume[get]<100;]
 
-$joinVC[$voiceID[$authorID]]
+$joinVC
 `
 }]
