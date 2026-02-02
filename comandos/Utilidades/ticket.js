@@ -55,7 +55,7 @@ ID do canal: $get[id]
 Data: $hour:$minute:$second - $date/$formatDate[$dateStamp;MM]/$year
 ;utf8]
 
-$let[id;$newTicket[⭐│ticket-$userTag;<@$authorID> <@&$getGuildVar[AllStaffRole;$guildID]> {newEmbed:
+$let[id;$newTicket[⭐│ticket-$userTag;<@$authorID> <@&$getGuildVar[allStaffRole;$guildID]> {newEmbed:
 {title:$customEmoji[pats_logo] $userTag criou um ticket!}
 {url:https://www.bing.com/images/search?q=ginger+cat&qs=ds&form=QBIR&first=1}
 {description:
