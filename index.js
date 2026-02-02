@@ -1,5 +1,6 @@
 const { AoiClient } = require("aoi.js");
 const { AoiVoice, Manager, PlayerEvents, PluginName, Cacher, Filter } = require("aoi.music");
+const { LoadCommands } = require("aoi.js");
 
 require('dotenv').config();
 
@@ -58,8 +59,6 @@ voice.addPlugin(PluginName.Filter, new Filter({
 })),
 
 voice.bindExecutor(client.functionManager.interpreter);
-
-const { LoadCommands } = require("aoi.js");
 
 require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
