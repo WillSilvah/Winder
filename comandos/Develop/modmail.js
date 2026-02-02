@@ -24,7 +24,7 @@ $description[1;
 $slashOption[mensagem]
 ]
 $footer[1;Você pode responder clicando no botão "responder" ou falar diretamente com a equipe clicando em "Criar Ticket"]
-$color[1;$dyColor[orange;light]]
+$color[1;Orange]
 
 
 $addbutton[1;Criar um ticket;primary;ticket;$ifAwaited[$slashOption[ticket]==true;true;false];📧]
@@ -61,7 +61,7 @@ $textInputValue[replyModmail]
 ]
 $footer[1;ID do usuário: $authorID]
 $thumbnail[1;$userAvatar]
-$color[1;$dyColor[orange;light]]
+$color[1;Orange]
 
 $useChannel[1185351021791289374]
 
