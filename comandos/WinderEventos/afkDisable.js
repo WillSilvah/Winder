@@ -4,8 +4,8 @@ code: `
 $deleteIn[10s]
 <@$authorID> | Olá, que bom que você voltou! ❤️
 
-$log[$scWriteFile[Recursos/afkSystem/$authorID/status.txt;false]]
-$log[$scWriteFile[Recursos/afkSystem/$authorID/reason.txt;]
+$writeFile[Recursos/afkSystem/$authorID/status.txt;false;utf8]
+$writeFile[Recursos/afkSystem/$authorID/reason.txt;;utf8]
 
 $onlyIf[$readFile[Recursos/afkSystem/$authorID/status.txt]==true;]
 

@@ -4,7 +4,7 @@ code: `
 $deleteIn[60s]
 **$userTag[$mentioned[1]]** está afk!
 $author[1;$readFile[Recursos/afkSystem/$mentioned[1]/reason.txt]]
-$color[1;$dyColor[red;light]]
+$color[1;Red]
 $reply
 
 $onlyIf[$readFile[Recursos/afkSystem/$mentioned[1]/status.txt]==true;]
