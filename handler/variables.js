@@ -54,7 +54,7 @@ client.variables({
   
   "reminderStatus": "true",
   
-  "musicLog": "",
+  "musicLog": "1467701266519035904",
   "nightMusic": "false",
   "eventMusicStatus": "false",
   "eventMusicName": "Patas Músical",
