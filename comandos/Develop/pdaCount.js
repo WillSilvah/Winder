@@ -29,7 +29,7 @@ $let[basicPDA;$if[$get[textDivisorPDA]>=15;15;$get[textDivisorPDA]]]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/3]]]
 
-$onlyIf[$charCount[$message]>=8;]
+$onlyIf[$argsCheck[$message]>=3;]
 $onlyIf[$checkContains[$message;lorem;gboard]==false;]
 $onlyIf[$getGuildVar[pickStatus;$guildID]==false;]
 $onlyIf[$checkContains[$channelID;1462546608758718515]==false;]
@@ -38,7 +38,7 @@ $onlyIf[$stringStartsWith[$message;+;=;w!+w+;/;m!]==false;]
 $onlyIf[1462224054676099094==$guildID;]
 $onlyIf[$hasRoles[$guildID;$authorID;$getVar[memberVerifiedRole]]==true;]
 
-$cooldown[10s;]
+$cooldown[60s;]
 `
 },{
 //ESPECIAL
