@@ -53,7 +53,7 @@ $setGuildVar[itemTotal;$sum[$getGuildVar[itemTotal;$guildID];$get[item]];$guildI
 
 $let[item;$random[1;3]]
 
-$cooldown[1m;]
+$cooldown[30s;]
 $onlyIf[$getGuildVar[eventItemStatus;$guildID]==true;]
 `
 }]
