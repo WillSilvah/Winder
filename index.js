@@ -1,5 +1,5 @@
 const { AoiClient } = require("aoi.js");
-const { AoiVoice, Manager, PlayerEvents, PluginName, Cacher, Filter } = require("aoi.music");
+const { AoiVoice, Manager, PlayerEvents, PluginName, Cacher, Filter } = require("@aoijs/aoi.music");
 
 require('dotenv').config();
 
@@ -53,6 +53,13 @@ const manager = new Manager({
       spotifyPlaylistLimit: 30, // Limit the number of tracks in a Spotify playlist, default: -1
    },
 });
+
+voice.addPlugin(PluginName.Cacher, new Cacher("memory" /* or "disk" */));
+voice.addPlugin(PluginName.Filter, new Filter({
+    filterFromStart: false
+})),
+
+voice.bindExecutor(client.functionManager.interpreter);
 
 const { LoadCommands } = require("aoi.js");
 
