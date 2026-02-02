@@ -1,5 +1,5 @@
 const { AoiClient } = require("aoi.js");
-const { AoiVoice, Manager, PlayerEvents, PluginName, Cacher, Filter } = require("@aoijs/aoi.music");
+const { AoiVoice, Manager, PlayerEvents, PluginName, Cacher, Filter } = require("aoi.music");
 
 require('dotenv').config();
 
@@ -43,7 +43,7 @@ const manager = new Manager({
    searchOptions: {
       soundcloudClientId: "",
       youtubeAuth: false, // Options: TRUE or FALSE, default: TRUE
-      youtubegl: "BR", // default: US
+      youtubegl: "US", // default: US
       youtubeClient: "WEB", // Options: "WEB" | "ANDROID" | "YTMUSIC_ANDROID" | "YTMUSIC" | "YTSTUDIO_ANDROID" | "TV_EMBEDDED", default: WEB
    },
    requestOptions: {
