@@ -34,6 +34,25 @@ const client = new AoiClient({
     errorMessage: ["", ""]
     });
 
+const { Manager } = require("@aoijs/aoi.music");
+
+const manager = new Manager({
+   devOptions: {
+      debug: false, // Set to true for debugging purposes
+   },
+   searchOptions: {
+      soundcloudClientId: "",
+      youtubeAuth: false, // Options: TRUE or FALSE, default: TRUE
+      youtubegl: "BR", // default: US
+      youtubeClient: "WEB", // Options: "WEB" | "ANDROID" | "YTMUSIC_ANDROID" | "YTMUSIC" | "YTSTUDIO_ANDROID" | "TV_EMBEDDED", default: WEB
+   },
+   requestOptions: {
+      offsetTimeout: 1500, // Timeout in milliseconds for searching and skipping, default: 500
+      soundcloudLikeTrackLimit: 10, // Limit the number of liked tracks from SoundCloud, default: -1
+      youtubePlaylistLimit: 20, // Limit the number of tracks in a YouTube playlist, default: -1
+      spotifyPlaylistLimit: 30, // Limit the number of tracks in a Spotify playlist, default: -1
+   },
+});
 
 const { LoadCommands } = require("aoi.js");
 
