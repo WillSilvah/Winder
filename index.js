@@ -39,7 +39,7 @@ const client = new AoiClient({
 const voice = new AoiVoice(client, {
   searchOptions: {
     //soundcloudClientId: "Soundcloud ID", // optional
-    youtubegl: "US;",
+    youtubegl: "US",
   },
   requestOptions: {
     offsetTimeout: 0,
