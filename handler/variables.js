@@ -11,7 +11,7 @@ client.variables({
   "rankedChat": "1467581850032541868",
   "guildID": "1462224054676099094",
   "memberVerifiedRole": "1462797987041513574",
-  "memberVotedRole": "1463342375370887209",
+  "memberVotedRole": "1468387787949609082",
   "allMemberRole": "1462544909390319960",
   "memberBoosterRole": "1463625995473911853",
   "lastWinMemberRole": "1468306234007486504",
