@@ -32,7 +32,7 @@ $onlyIf[$getGuildVar[pickEmit;$guildID]==false;]
 `
 },{
 //$random[1000000;9999999]
-//name: "drop-1", desativado
+name: "drop-1",
 type: "awaited",
 code: `
 $setGuildVar[pickType;1;$guildID]
