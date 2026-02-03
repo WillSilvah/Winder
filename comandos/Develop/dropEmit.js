@@ -27,7 +27,7 @@ $ifAwaited[1==1;{execute:drop-$ifAwaited[$message[1]==;$random[1;4];$message[1]]
 
 $deleteCommand
 $suppressErrors
-$onlyPerms[adminstrator;<@$authorID> Você precisa ter a permissão de administrador para usar este comando.]
+$onlyPerms[administrator;<@$authorID> Você precisa ter a permissão de administrador para usar este comando.]
 
 $useChannel[$getGuildVar[batePapo]]
 
