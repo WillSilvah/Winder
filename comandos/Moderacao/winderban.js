@@ -22,7 +22,7 @@ $onlyIf[$argsCount>0;]
 $ifAwaited[$argsCount==0;{execute:cmdinfo-await}]
 $let[cmdName;$commandName]
 $let[staffID;$authorID]
-$let[userID;$findUser[$message[1]]]
+$let[userID;$message[1]]
 $let[reason;$if[$messageSlice[1]==;Sei lá qual foi o motivo, só sei que recebeu!;$messageSlice[1]]]
 $let[puniType;Banido Automáticamente]
 $clientTyping
