@@ -4,7 +4,7 @@ name: "joinbanteste",
 channel: "",
 code: `
 Banido KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
-Motivo: $getObjectProperty[info;reason]
+Motivo: $getObjectProperty[infoBan;reason]
 
 
 $createObject[infoBan;$readFile[Recursos/autoBanimentos/$authorID.json]]
