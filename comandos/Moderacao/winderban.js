@@ -14,7 +14,6 @@ $writeFile[Recursos/autoBanimentos/$get[userID].json;
     "userID": "$get[userID]"
 };utf8]
 
-$onlyIf[$checkContains[$;
 $onlyIf[$message[1]!=$authorID;<@$authorID> | Você está colocando seu próprio ID.]
 
 $let[staffID;$authorID]
