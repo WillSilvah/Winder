@@ -19,7 +19,7 @@ $timezone[America/Recife]
 	name: "createFileMPM",
 	type: "awaited",
 	code: `
-$writeFile[$dateRecursos/msgPerMinuteDays/$date/$formatDate[$dateStamp;MM]/$date.json;Mensagens por minuto registradas por $username[$clientID] no dia $date/$formatDate[$dateStamp;MM]/$year
+$writeFile[$dateRecursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json;Mensagens por minuto registradas por $username[$clientID] no dia $date/$formatDate[$dateStamp;MM]/$year
 ;utf8]
 
 $timezone[America/Recife]
@@ -29,7 +29,7 @@ $timezone[America/Recife]
 	type: "awaited",
 	code: `
 	
-	$writeFile[Recursos/msgPerMinuteDays/$date.txt;$readFile[$dateRecursos/msgPerMinuteDays/$date/$formatDate[$dateStamp;MM]/$date.json]
+	$writeFile[Recursos/msgPerMinuteDays/$date.txt;$readFile[$dateRecursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json]
 $hour:$minute: $getGuildVar[msgPerMinute]
 ]
 
@@ -40,7 +40,7 @@ $timezone[America/Recife]
 	type: "awaited",
 	code: `
 
-$createFile[$readFile[Recursos/msgPerMinuteDays/$date.txt;$readFile[$dateRecursos/msgPerMinuteDays/$date/$formatDate[$dateStamp;MM]/$date.json;$date-msgPerMinute.txt]
+$createFile[$readFile[Recursos/msgPerMinuteDays/$date.txt;$readFile[$dateRecursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json;$date-msgPerMinute.txt]
 
 $timezone[America/Recife]
 `
