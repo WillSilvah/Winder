@@ -11,12 +11,12 @@ $wait[1s]
 
 $ifAwaited[$hour:$minute:$second==00:00:00;{execute:sendFileMPM}]
 
-$ifAwaited[$fileExists[Recursos/msgPerMinuteDays/$date/$formatDate[$dateStamp;MM]/$date.json]==true;{execute:writeFileMPM};{execute:createFileMPM}]
+$ifAwaited[$fileExists[Recursos/msgPerMinuteDays/$date/$formatDate[$dateStamp;MM]/$date.json]==true;{execute:createFileMPM};{execute:writeFileMPM}]
 
 $timezone[America/Recife]
 `
 },{
-	name: "createFileMPM",
+	name: "writeFileMPM",
 	type: "awaited",
 	code: `
 $writeFile[Recursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json;Mensagens por minuto registradas por $username[$clientID] no dia $date/$formatDate[$dateStamp;MM]/$year
@@ -25,13 +25,12 @@ $writeFile[Recursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json;Mensa
 $timezone[America/Recife]
 `
 },{
-	name: "writeFileMPM",
+	name: "createFileMPM",
 	type: "awaited",
 	code: `
-	
-	$writeFile[Recursos/msgPerMinuteDays/$date.txt;$readFile[$dateRecursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json]
-$hour:$minute: $getGuildVar[msgPerMinute]
-]
+$awaitExecute[writeFileMPM]
+
+$exec[echo "$hour:$minute: $getGuildVar[msgPerMinute" > Recursos/msgPerMinuteDays/$date.txt;$readFile[$dateRecursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json]
 
 $timezone[America/Recife]
 `
