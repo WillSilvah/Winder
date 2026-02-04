@@ -29,7 +29,7 @@ $timezone[America/Recife]
 	code: `
 $awaitExecute[writeFileMPM]
 
-$exec[echo "$hour:$minute: $getGuildVar[msgPerMinute" > Recursos/msgPerMinuteDays/$date.txt;$readFile[$dateRecursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json]
+$exec[echo "$hour:$minute: $getGuildVar[msgPerMinute]" > Recursos/msgPerMinuteDays/$date.txt;$readFile[$dateRecursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json]
 
 $timezone[America/Recife]
 `
