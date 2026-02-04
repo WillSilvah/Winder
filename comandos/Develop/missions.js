@@ -1,4 +1,4 @@
-module.exports = [{
+//module.exports = [{
 name: "$alwaysExecute",
 code: `
 $ifAwaited[$getUserVar[messageTotal;$authorID]==$getUserVar[messageMeta;$authorID];
