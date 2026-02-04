@@ -11,7 +11,7 @@ $wait[1s]
 
 $ifAwaited[$hour:$minute:$second==00:00:00;{execute:sendFileMPM}]
 
-$ifAwaited[$fileExists[Recursos/msgPerMinuteDays/$date/$formatDate[$dateStamp;MM]/$date.json]==true;{execute:createFileMPM};{execute:writeFileMPM}]
+$ifAwaited[$fileExists[Recursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json]==true;{execute:createFileMPM};{execute:writeFileMPM}]
 
 $timezone[America/Recife]
 `
