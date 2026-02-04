@@ -4,7 +4,10 @@ name: "joinbanteste",
 channel: "",
 code: `
 Banido KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+Motivo: $getObjectProperty[info;reason]
 
+
+$createObject[infoBan;$readFile[Recursos/autoBanimentos/$authorID.json]]
 $onlyIf[$fileExists[Recursos/autoBanimentos/$authorID.json]==true;Nãota banidoKKKKKKK]
 `
 }]
