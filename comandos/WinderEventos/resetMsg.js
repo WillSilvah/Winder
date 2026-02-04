@@ -19,7 +19,7 @@ $timezone[America/Recife]
 	name: "writeFileMPM",
 	type: "awaited",
 	code: `
-$exec[echo "$hour:$minute: $getGuildVar[msgPerMinute" > Recursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json;Mensagens por minuto registradas por $username[$clientID] no dia $date/$formatDate[$dateStamp;MM]/$year
+$exec[echo "$hour:$minute: $getGuildVar[msgPerMinute]" > Recursos/msgPerMinuteDays/$formatDate[$dateStamp;MM]/$date.json;Mensagens por minuto registradas por $username[$clientID] no dia $date/$formatDate[$dateStamp;MM]/$year
 
 $timezone[America/Recife]
 `
