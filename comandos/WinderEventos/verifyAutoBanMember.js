@@ -5,7 +5,7 @@ channel: "",
 code: `
 Banido KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
 
-$onlyIf[$fileExists[Recursos/autoBanimentos/$authorID.json]==true;]
+$onlyIf[$fileExists[Recursos/autoBanimentos/$authorID.json]==true;Nãota banidoKKKKKKK]
 `
 }]
 //$channelSendMessage[1463226796974543114;<@&1462915937433948351>
