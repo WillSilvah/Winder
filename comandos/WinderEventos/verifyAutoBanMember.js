@@ -3,13 +3,25 @@ name: "joinbanteste",
 //type: "",
 channel: "",
 code: `
-Banido KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
-Motivo: $getObjectProperty[infoBan;motivo]
+$awaitExecute[autoBan]
 
-
+$let[user_id;$getObjectProperty[infoBan;userID]]
+$let[motivo;$getObjectProperty[infoBan;motivo]]
 $createObject[infoBan;$readFile[Recursos/autoBanimentos/$authorID.json]]
 $onlyIf[$fileExists[Recursos/autoBanimentos/$authorID.json]==true;Nãota banidoKKKKKKK]
 `
+},{
+	name: "autoBan",
+	type: "awaited",
+	code: `
+$sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
+
+$ifAwaited[1==1;{execute:punishment-log}]
+$ifAwaited[$isUserDMEnabled[$get[userID]]==true;{execute:puni-dm}]
+
+$let[staffID;$clientID]
+$let[userID;$get[user_id]]
+$let[reason;$get[motivo]]
+$let[puniType;Banido Automaticamente]]
+`
 }]
-//$channelSendMessage[1463226796974543114;<@&1462915937433948351>
-//> Vão dar boas vindas ao <@$authorID> ($authorID) no <#1462224055884189781>!]

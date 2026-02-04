@@ -19,7 +19,7 @@ $onlyIf[$message[1]!=$authorID;<@$authorID> | Você está colocando seu próprio
 $let[staffID;$authorID]
 $let[userID;$message[1]]
 $let[reason;$if[$messageSlice[1]==;Sei lá qual foi o motivo, só sei que recebeu!;$messageSlice[1]]]
-$let[puniType;Banido Automaticamente]
+$let[puniType;adicionado na lista de membros ofensivos]
 $clientTyping
 
 $onlyIf[$hasRoles[1462224054676099094;$authorID;1462547405466636384]==true;<@$authorID> | Você precisa ser **$username[$clientID]** Developer para poder executar esse comando.]
