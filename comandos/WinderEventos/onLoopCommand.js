@@ -9,7 +9,6 @@ every: 999,
 code: `
 $ifAwaited[$date-$hour:$minute:$second==01-00:00:00;{execute:auto-reset}]
 
-
 $timezone[America/Recife]
 `
 },{
