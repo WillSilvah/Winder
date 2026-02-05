@@ -5,7 +5,7 @@ client.variables({
   "consoleChat": "1465218335389257802",
   "staffChat": "1462554187719114752",
   "allStaffRole": "1462546916821696612",
-  "batePapo": "1462224055884189781",
+  "batePapo": "781665851040333844",
   "anunciosChat": "1462224055884189779",
   "punishmentLog": "1462561551679623329",
   "rankedChat": "1467581850032541868",
