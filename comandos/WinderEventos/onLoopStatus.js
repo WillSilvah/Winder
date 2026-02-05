@@ -1,5 +1,5 @@
 module.exports = [{
-name: "loopCommand",
+name: "loopStatus",
 type: "loop",
 channel: "$getVar[consoleChat]",
 executeOnStartup: "false",
