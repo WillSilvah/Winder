@@ -46,3 +46,9 @@ client.functionManager.createFunction({
     type: "aoi.js",
     code: `$readFile[Recursos/version.json]`
 });
+
+client.functionManager.createFunction({
+    name: "$linuxRam", 
+    type: "aoi.js",
+    code: `$exec[ps -o rss= -p $(pgrep -f "winder-controller") | awk '{sum+=$1} END {print int(sum/1024)}']`
+});
