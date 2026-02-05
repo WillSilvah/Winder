@@ -5,6 +5,6 @@ channel: "$getVar[consoleChat]",
 executeOnStartup: "false",
 every: 15000,
 code: `
-$setStatus[$LinuxRam MB | $cpu% | $uptime[humanize] | $pingms;custom;idle]
+$setStatus[$linuxRam MB | $cpu% | $uptime[humanize] | $pingms;custom;idle]
 `
 }]
