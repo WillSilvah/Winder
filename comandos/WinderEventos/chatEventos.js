@@ -4,7 +4,7 @@ name: "loopEvent",
 type: "loop",
 channel: "$getGuildVar[batePapo]",
 executeOnStartup: false,
-every: 900000,
+every: 1800000,
 code: `
 $setUserVar[pickCount;$sum[$getUserVar[pickCount;$clientID;$guildID];1];$clientID;$guildID]
 
@@ -24,7 +24,7 @@ $wait[1m]
 $setGuildVar[pickXPmin;5;$guildID]
 $setGuildVar[pickXPmax;15;$guildID]
 
-$ifAwaited[$getGuildVar[msgPerMinute;$guildID]>=6;
+$ifAwaited[$getGuildVar[msgPerMinute;$guildID]>=4;
 {execute:drop-$random[2;4]}]
 
 $onlyIf[$getGuildVar[pickEmit;$guildID]==false;]
