@@ -29,6 +29,7 @@ $ifAwaited[$getGuildVar[msgPerMinute;$guildID]>=6;
 
 $onlyIf[$getGuildVar[pickEmit;$guildID]==false;]
 
+$onlyIf[222==2222444;]
 `
 },{
 //$random[1000000;9999999]
