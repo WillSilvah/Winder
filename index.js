@@ -1,5 +1,4 @@
 const { AoiClient } = require("aoi.js");
-const { AoiVoice, Manager, PlayerEvents, PluginName, Cacher, Filter } = require("aoi.music");
 const { LoadCommands } = require("aoi.js");
 
 require('dotenv').config();
@@ -36,30 +35,6 @@ const client = new AoiClient({
     suppressAllErrors: false,
     errorMessage: ["", ""]
     });
-
-const voice = new AoiVoice(client, {
-  searchOptions: {
-    //soundcloudClientId: "Soundcloud ID", // optional
-    youtubegl: "US",
-  },
-  requestOptions: {
-    offsetTimeout: 0,
-    soundcloudLikeTrackLimit: 200,
-  },
-});
-
-const loader = new LoadCommands(client);
-loader.load(voice.cmds, "./eventsmusic/");
-
-voice.addEvent(PlayerEvents.QueueEnd);
-voice.addEvent(PlayerEvents.TrackStart);
-
-voice.addPlugin(PluginName.Cacher, new Cacher("memory" /* or "disk" */));
-voice.addPlugin(PluginName.Filter, new Filter({
-    filterFromStart: false
-})),
-
-voice.bindExecutor(client.functionManager.interpreter);
 
 require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
