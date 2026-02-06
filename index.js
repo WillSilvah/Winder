@@ -23,6 +23,7 @@ const client = new AoiClient({
     db: require("aoi.db"),
     dbType: "KeyValue",
     tables: ["main"],
+    debug: "true",
     securityKey: "a-32-characters-long-string-here",
     },
     autoUpdates: false,
@@ -63,7 +64,7 @@ voice.bindExecutor(client.functionManager.interpreter);
 require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
 
-client.loadCommands("./comandos/", false);
+client.loadCommands("./comandos/", true);
 
 client.functionManager.createFunction({
     name: "$updateVersion",
