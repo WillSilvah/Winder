@@ -1,5 +1,6 @@
 const { AoiClient } = require("aoi.js");
 const { LoadCommands } = require("aoi.js");
+const { Database } = require("aoi.sqlite");
 
 require('dotenv').config();
 
@@ -17,14 +18,7 @@ const client = new AoiClient({
     events: ["onInteractionCreate", "onMessageDelete","onMessage", "onChannelCreate", "onThreadCreate", "onJoin", "onLeave", "onMemberUpdate", "onBanAdd"],
 	//onInteractionCreate
 	disableFunctions : ["$clientToken"],
-	database: {
-    type: "aoi.db",
-    db: require("aoi.db"),
-    dbType: "KeyValue",
-    tables: ["main"],
-    debug: "true",
-    securityKey: "a-32-characters-long-string-here",
-    },
+	disableAoiDB: true,
     autoUpdates: false,
     mobilePlatform: false,
     guildOnly: true,
@@ -35,6 +29,13 @@ const client = new AoiClient({
     suppressAllErrors: false,
     errorMessage: ["", ""]
     });
+    
+new Database(client, {
+  location: "./database.db", // your SQLite file location
+  tables: ["main"],
+  logging: true, // default is true
+  debug: true, // default is false
+});
 
 require("./handler/variables.js")(client);
 require("./handler/status.js")(client);
