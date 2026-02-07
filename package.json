@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "aoi.js": "github:aoijs/aoi.js#v6",
     "aoi.sqlite": "github:faf4a/aoi.sqlite",
     "aoijs": "github:aoijs/aoi.js",
     "discord.js": "^14.25.1",
