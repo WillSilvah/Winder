@@ -31,10 +31,10 @@ const client = new AoiClient({
     });
     
 new Database(client, {
-  location: "./database.db", // your SQLite file location
+  location: "./database/database.db",
   tables: ["main"],
-  logging: true, // default is true
-  debug: true, // default is false
+  logging: true,
+  debug: true,
 });
 
 require("./handler/variables.js")(client);
