@@ -31,7 +31,7 @@ const client = new AoiClient({
     });
     
 new Database(client, {
-  location: "./database/database.db",
+  location: "database/database.db",
   tables: ["main"],
   logging: true,
   debug: true,
