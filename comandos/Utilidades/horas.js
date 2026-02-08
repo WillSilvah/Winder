@@ -31,7 +31,7 @@ $reply
 
 `
 },{
-name: "home-dita",
+name: "hora-dita",
 type: "awaited",
 code: `
 A hora em **$message[1]** é **$hour:$minute:$second**
