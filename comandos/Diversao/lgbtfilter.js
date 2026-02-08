@@ -6,7 +6,7 @@ category: "Edição de Imagens",
 usage: "lgbtfilter @user?",
 code: `
 <@$authorID>
-$attachment[https://some-random-api.com/canvas/overlay/gay?avatar=$replaceText[$userAvatar[$mentioned[1]];webp;png];$username-gay.png;URL]
+$attachment[https://api.some-random-api.com/canvas/overlay/gay?avatar=$replaceText[$userAvatar[$mentioned[1]];webp;png];$username-gay.png;URL]
 
 $clientTyping
 $cooldown[10s;Aguarde **%time%** para usar novamente]

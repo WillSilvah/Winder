@@ -6,7 +6,7 @@ category: "Edição de Imagens",
 usage: "wasted @user?",
 code: `
 <@$authorID>
-$attachment[https://some-random-api.com/canvas/overlay/wasted?avatar=$replaceText[$userAvatar[$mentioned[1]];webp;png];$username-gay.png]
+$attachment[https://api.some-random-api.com/canvas/overlay/wasted?avatar=$replaceText[$userAvatar[$mentioned[1]];webp;png];$username-gay.png]
 
 $clientTyping
 $cooldown[10s;Aguarde **%time%** para usar novamente]

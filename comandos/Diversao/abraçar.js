@@ -9,7 +9,7 @@ $author[1;🫂$username abraçou $ifAwaited[$mentioned[1]==$authorID;ele mesmo, 
 $image[1;$getObjectProperty[hug;link]]
 $color[1;Blue]
 
-$createObject[hug;$jsonRequest[https://some-random-api.com/animu/hug]]
+$createObject[hug;$jsonRequest[https://api.some-random-api.com/animu/hug]]
 $cooldown[5s;<@$authorID> | Aguarde **%time%** para poder executar esse comando novamnente!]
 
 $onlyIf[$argsCount>0;]
