@@ -41,6 +41,5 @@ $reply
 $clientTyping
 
 $suppressErrors[<@$authorID> Algo deu errado.]
-$onlyIf[1==2;]
 `
 }]
