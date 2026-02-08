@@ -36,6 +36,7 @@ client.variables({
   "lastUserSendMessage": "",
   "votesTotal": "0",
   "votesMonth": "0",
+  "remindDM": "true",
   
   "pickStatus": "false",
   "pickWord": "",

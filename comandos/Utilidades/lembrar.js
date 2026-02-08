@@ -26,7 +26,7 @@ name: "dmTrue",
 type: "interaction",
 prototype: "button",
 code: `
-$setUserVar[remindDM;true;$authorID;861313067291115541]
+$setUserVar[remindDM;true;$authorID;$guildID]
 
 $interactionReply[🔔 | Certo! Irei enviar lembretes na sua mensagem direta também. Lembre-se de ver se pelo menos neste servidor, eu consiga enviar DMs para você!
 > **Nos próximos lembretes, eu irei enviar também na sua DM caso não responda a pergunta!**
@@ -43,7 +43,7 @@ name: "dmFalse",
 type: "interaction",
 prototype: "button",
 code: `
-$setUserVar[remindDM;false;$authorID;861313067291115541]
+$setUserVar[remindDM;false;$authorID;$guildID]
 
 $interactionReply[
 🔔 | Certo! Não irei enviar lembretes na sua mensagem direta.
@@ -68,7 +68,7 @@ $timeoutData[message]
 
 };$timeoutData[userID];]
 
-$onlyIf[$getUserVar[remindDM;$timeoutData[userID];861313067291115541]==true;]
+$onlyIf[$getUserVar[remindDM;$timeoutData[userID];$guildID]==true;]
 
 $channelSendMessage[$timeoutData[channelID];🔔 | <@$timeoutData[userID]> Vim te lembrar de \`\`$timeoutData[message]\`\`!;false]
 `
