@@ -25,7 +25,7 @@ $addField[1;🇧🇷 BRASIL: $hour:$minute:$second $date/$formatDate[$dateStamp;
 $timezone[America/Recife]
 
 ]
-$color[1;$dyColor[blue;light]]
+$color[1;Blue]
 
 $reply
 
