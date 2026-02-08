@@ -14,6 +14,8 @@ $setUserVar[lastMessage;$message;$authorID]
 $setUserVar[lastMessageTime;$hour:$minute:$second - $formatDate[$dateStamp;DD/MM/YYYY];$authorID]
 $setUserVar[lastMessageChannel;$channelID;$authorID]
 
+$setGuildVar[guildTotalMessages;$sum[$getGuildVar[guildTotalMessages];1]]
+
 $timezone[America/Recife]
 $setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages];1]]
 
