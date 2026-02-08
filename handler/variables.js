@@ -65,7 +65,10 @@ client.variables({
   "musicCount": "0",
   "musicTimeCount": "0",
   "totalMusicCount": "0",
-  "totalMusicTimeCount": "0"
+  "totalMusicTimeCount": "0",
+  
+  "warnsTotal": "0",
+  "lastWarn": ""
   
   
   
