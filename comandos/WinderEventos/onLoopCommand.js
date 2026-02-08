@@ -15,16 +15,12 @@ $timezone[America/Recife]
 name: "auto-reset",
 type: "awaited",
 code: `
+$resetGuildVar[membersJoinedMonth]
 $resetUserVar[metaXP]
-
 $resetUserVar[messageMonth]
-
 $resetUserVar[votesMonth]
-
 $resetUserVar[msgXP]
-
 $resetGuildVar[guildMonthMessages]
-
 $writeFile[Recursos/session.json;
 {
     "name": "Pré Temporada: O começo",

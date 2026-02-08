@@ -17,7 +17,7 @@ $ifAwaited[$argsCount==0;{execute:cmdinfo-await}]
 $let[cmdName;$commandName]
 
 $let[staffID;$authorID]
-$let[userID;$findUser[$message[1]]]
+$let[userID;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]
 $let[reason;$if[$messageSlice[2]==;Sei lá qual foi o motivo, só sei que recebeu!;$messageSlice[2]]]
 $let[time;$message[2]]
 $let[puniType;silenciado]
