@@ -1,5 +1,5 @@
 module.exports = [{
-name: "drop emit",
+name: "minigame emit",
 desc: "Force a inicialização de um drop de catavento",
 aliases: ["dropemit", "dropstart"],
 category: "Desenvolvedor",

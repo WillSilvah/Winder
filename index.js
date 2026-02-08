@@ -59,3 +59,21 @@ client.functionManager.createFunction({
     type: "aoi.js",
     code: `$exec[pm2 jlist | jq '.[] | select(.name=="winder-canary") | .monit.memory / 1024 / 1024 | floor' | tr -d '\\n']`
 });
+
+client.functionManager.createFunction({
+    name: "$isCaps",
+    type: "djs",
+    code: `async (d) => {
+        const data = d.util.aoiFunc(d);
+        const [percentage, message] = data.inside.splits;
+
+        const capsPercentage = (message.replace(/[^A-Z]/g, "").length / message.length) * 100;
+        const isCaps = capsPercentage >= parseFloat(percentage);
+
+        data.result = isCaps;
+        return {
+            code: d.util.setCode(data)
+        };
+    }
+    `
+});
