@@ -3,7 +3,6 @@ name: "readyEvent",
 type: "clientReady",
 channel: "$getVar[consoleChat]",
 code: `
-
 $author[1;$username[$clientID] está ligado!]
 $description[
 $addField[1;Versão do AOi.JS;$packageVersion;true]
