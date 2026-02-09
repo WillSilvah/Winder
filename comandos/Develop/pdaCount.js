@@ -31,7 +31,7 @@ $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
 $onlyIf[$argsCount[$message]>=3;]
 $onlyIf[$checkContains[$message;lorem;gboard]==false;]
-$onlyIf[$getGuildVar[pickStatus;$guildID]==false;]
+$onlyIf[$getGuildVar[minigameStatus;$guildID]==false;]
 $onlyIf[$checkContains[$channelID;1462546608758718515]==false;]
 $onlyIf[$checkContains[$channelCategoryID[$channelID];1462224055884189780;1463544077554552892]==true;]
 $onlyIf[$stringStartsWith[$message;+;=;w!+w+;/;m!]==false;]

@@ -6,28 +6,28 @@ channel: "$getGuildVar[batePapo]",
 executeOnStartup: false,
 every: 1800000,
 code: `
-$setUserVar[pickCount;$sum[$getUserVar[pickCount;$clientID;$guildID];1];$clientID;$guildID]
+$setUserVar[minigameCount;$sum[$getUserVar[minigameCount;$clientID;$guildID];1];$clientID;$guildID]
 
-$setGuildVar[pickXPmin;0;$guildID]
-$setGuildVar[pickXPmax;0;$guildID]
+$setGuildVar[minigameXPmin;0;$guildID]
+$setGuildVar[minigameXPmax;0;$guildID]
 $slowmode[0s;$getGuildVar[batePapo]]
 $sendMessage[### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
 
-$setGuildVar[pickStatus;false;$guildID]
-$setGuildVar[pickLastUser;$clientID;$guildID]
-$setGuildVar[pickWord;canotipo;$guildID]
+$setGuildVar[minigameStatus;false;$guildID]
+$setGuildVar[minigameLastUser;$clientID;$guildID]
+$setGuildVar[minigameWord;canotipo;$guildID]
 
 $clientTyping
-$onlyIf[$getGuildVar[pickStatus;$guildID]==true;]
+$onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
 
 $wait[1m]
-$setGuildVar[pickXPmin;5;$guildID]
-$setGuildVar[pickXPmax;15;$guildID]
+$setGuildVar[minigameXPmin;5;$guildID]
+$setGuildVar[minigameXPmax;15;$guildID]
 
 $ifAwaited[$getGuildVar[msgPerMinute;$guildID]>=4;
 {execute:drop-$random[2;4]}]
 
-$onlyIf[$getGuildVar[pickEmit;$guildID]==false;]
+$onlyIf[$getGuildVar[minigameEmit;$guildID]==false;]
 
 $onlyIf[222==2222444;]
 `
@@ -36,8 +36,8 @@ $onlyIf[222==2222444;]
 name: "drop-1",
 type: "awaited",
 code: `
-$setGuildVar[pickType;1;$guildID]
-$setGuildVar[pickStatus;true;$guildID]
+$setGuildVar[minigameType;1;$guildID]
+$setGuildVar[minigameStatus;true;$guildID]
 $author[1;Evento de chat: Código;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
 ### $get[number]
@@ -45,7 +45,7 @@ $description[1;
 $footer[1;Responda primeiro, rápido!]
 $color[1;Green]
 
-$setGuildVar[pickWord;$get[number];$guildID]
+$setGuildVar[minigameWord;$get[number];$guildID]
 $let[number;$random[1000000;9999999]]
 $useChannel[$getGuildVar[batePapo]]
 `
@@ -53,8 +53,8 @@ $useChannel[$getGuildVar[batePapo]]
 name: "drop-2",
 type: "awaited",
 code: `
-$setGuildVar[pickType;1;$guildID]
-$setGuildVar[pickStatus;true;$guildID]
+$setGuildVar[minigameType;1;$guildID]
+$setGuildVar[minigameStatus;true;$guildID]
 $author[1;MATEMÁTICO;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
 ### $get[math]=?
@@ -62,7 +62,7 @@ $description[1;
 $footer[1;Responda primeiro, rápido!]
 $color[1;Green]
 
-$setGuildVar[pickWord;$truncate[$math[$get[math]]];$guildID]
+$setGuildVar[minigameWord;$truncate[$math[$get[math]]];$guildID]
 $useChannel[$getGuildVar[batePapo]]
 
 $let[math;$random[0;100;false;true]$randomText[+;-]$random[0;100;false;true]]
@@ -71,8 +71,8 @@ $let[math;$random[0;100;false;true]$randomText[+;-]$random[0;100;false;true]]
 name: "drop-3",
 type: "awaited",
 code: `
-$setGuildVar[pickType;1;$guildID]
-$setGuildVar[pickStatus;true;$guildID]
+$setGuildVar[minigameType;1;$guildID]
+$setGuildVar[minigameStatus;true;$guildID]
 
 $author[1;ADIVINHADOR;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
@@ -83,7 +83,7 @@ De **1 a 20**
 $footer[1;Responda primeiro, rápido!]
 $color[1;Green]
 
-$setGuildVar[pickWord;$random[1;20];$guildID]
+$setGuildVar[minigameWord;$random[1;20];$guildID]
 $useChannel[$getGuildVar[batePapo]]
 $slowmode[2s;$getGuildVar[batePapo]]
 `
@@ -91,8 +91,8 @@ $slowmode[2s;$getGuildVar[batePapo]]
 name: "drop-4",
 type: "awaited",
 code: `
-$setGuildVar[pickType;1;$guildID]
-$setGuildVar[pickStatus;true;$guildID]
+$setGuildVar[minigameType;1;$guildID]
+$setGuildVar[minigameStatus;true;$guildID]
 $author[1;QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
 ### $replaceText[$getObjectProperty[frase;texto]; ; ]
@@ -101,7 +101,7 @@ $description[1;
 $footer[1;$getObjectProperty[frase;autor]]
 $color[1;Green]
 
-$setGuildVar[pickWord;$getObjectProperty[frase;texto];$guildID]
+$setGuildVar[minigameWord;$getObjectProperty[frase;texto];$guildID]
 
 $createObject[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
 
@@ -114,8 +114,8 @@ $useChannel[$getGuildVar[batePapo]]
 name: "drop-5",
 type: "awaited",
 code: `
-$setGuildVar[pickType;1;$guildID]
-$setGuildVar[pickStatus;true;$guildID]
+$setGuildVar[minigameType;1;$guildID]
+$setGuildVar[minigameStatus;true;$guildID]
 
 $author[1;Evento de chat: Perguntas;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[1;
@@ -130,7 +130,7 @@ $footer[1;Responda apenas com a letra da resposta! | ID: $get[id]]
 $image[1;$if[$getObjectProperty[ask;image]==;https://cdn.discordapp.com/attachments/785632865709981756/1465469785813942272/IMG_20260126_191316.png?ex=69793898&is=6977e718&hm=559e450ba67a6a132a64f475bb1781cce2aa4ebe4f046a39c5fc3dd303382591&;$getObjectProperty[ask;image]]]
 $color[1;Green]
 
-$setGuildVar[pickWord;$getObjectProperty[ask;correct];$guildID]
+$setGuildVar[minigameWord;$getObjectProperty[ask;correct];$guildID]
 $useChannel[$getGuildVar[batePapo]]
 
 $createObject[alt;$getObjectProperty[ask;alts]]
