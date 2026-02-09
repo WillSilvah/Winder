@@ -34,7 +34,7 @@ new Database(client, {
   location: "./database.db",
   tables: ["main"],
   logging: true,
-  debug: false,
+  debug: true,
 });
 
 require("./handler/variables.js")(client);
