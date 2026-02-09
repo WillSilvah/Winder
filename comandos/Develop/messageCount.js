@@ -9,10 +9,9 @@ $setUserVar[messageMonth;$sum[$getUserVar[messageMonth;$authorID];1];$authorID]
 $setUserVar[messageTotal;$sum[$getUserVar[messageTotal;$authorID];1];$authorID]
 
 $setGuildVar[lastUserSendMessage;$authorID]
-
-$setUserVar[lastMessage;$message;$authorID]
-$setUserVar[lastMessageTime;$hour:$minute:$second - $formatDate[$dateStamp;DD/MM/YYYY];$authorID]
-$setUserVar[lastMessageChannel;$channelID;$authorID]
+$setUserVar[lastMessage;$message;$authorID;$guildID]
+$setUserVar[lastMessageTime;$hour:$minute:$second - $formatDate[$dateStamp;DD/MM/YYYY];$authorID;$guildID]
+$setUserVar[lastMessageChannel;$channelID;$authorID;$guildID]
 
 $setGuildVar[guildTotalMessages;$sum[$getGuildVar[guildTotalMessages];1]]
 
