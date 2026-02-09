@@ -8,9 +8,6 @@ module.exports = [{
 
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
-$ifAwaited[1==1;{execute:punishment-log}]
-$ifAwaited[$isUserDMEnabled[$get[userID]]==true;{execute:puni-dm}]
-
 $setUserVar[lastWarn;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};$get[userID];$guildID]
 	
 $setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$get[userID];$guildID];1];$get[userID];$guildID]
