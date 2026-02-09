@@ -1,6 +1,6 @@
 module.exports = [{
 name: "awaitMemberUpdate",
-type: "memberUpdate",
+type: "presenceUpdate",
 channel: "$getVar[consoleChat]",
 code: `
 $getGlobalUserVar[lastMemberUpdateTime]
