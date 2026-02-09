@@ -35,6 +35,7 @@ client.variables({
   "messageMeta": "1000",
   "guildMonthMessages": "0",
   "guildTotalMessages": "0",
+  "guildMonthMessagesMeta": "10000",
   "membersJoinedMonth": "0",
   "lastUserSendMessage": "",
   "votesTotal": "0",
