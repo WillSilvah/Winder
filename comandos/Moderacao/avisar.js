@@ -7,6 +7,8 @@ module.exports = [{
 	code: `
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
+$ifAwaited[$fileExists[Recursos/avisos/$get[userID]/aviso_$getUserVar[lastWarn;$get[userID];$guildID].txt]==false;{execute:createWarnFiles};{execute:writeWarnFiles}]
+
 $setUserVar[lastWarn;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};$get[userID];$guildID]
 	
 $setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$get[userID];$guildID];1];$get[userID];$guildID]
