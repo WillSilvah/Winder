@@ -2,7 +2,7 @@ module.exports = [{
 name: "autoRankDaily",
 type: "loop",
 channel: "$getVar[consoleChat]",
-executeOnStartup: "false",
+executeOnStartup: "true",
 every: 36000000,
 code: `
 $channelSendMessage[$getGuildVar[rankedChat];{newEmbed:
