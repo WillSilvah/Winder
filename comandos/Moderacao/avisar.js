@@ -8,15 +8,11 @@ module.exports = [{
 $sendMessage[**[DEBUG]**
 $getUserVar[lastWarn;$get[userID]]
 
--------------
-$exec[cd Recursos/avisos && ls]
-
+$getUserVar[warnsTotal;$get[userID]]
 ]
 $wait[3s]
 $clientTyping
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
-
-$ifAwaited[$fileExists[Recursos/avisos/$get[userID]]==false;{execute:createWarnFiles};{execute:writeWarnFiles}]
 
 $setUserVar[lastWarn;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};$get[userID];$guildID]
 	
@@ -34,20 +30,5 @@ $let[reason;$if[$messageSlice[1]==;Sei lá qual foi o motivo, só sei que recebe
 $let[puniType;advertido]
 
 $clientTyping	
-`
-},{
-	name: "createWarnFiles",
-	type: "awaited",
-	code: `
-
-$awaitExecute[writeWarnFiles]
-$exec[mkdir Recursos/avisos/$get[userID]]
-`
-},{
-	name: "writeWarnFiles",
-	type: "awaited",
-	code: `
-	
-$writeFile[Recursos/avisos/$get[userID]/aviso_$getUserVar[lastWarn;$get[userID];$guildID].txt;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};utf8]
 `
 }]
