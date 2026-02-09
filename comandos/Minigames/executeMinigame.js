@@ -105,7 +105,7 @@ $setGuildVar[pickWord;$getObjectProperty[frase;texto];$guildID]
 
 $createObject[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
 
-$let[frase_id;$random[1;$readFile[Recursos/WinderMinigames/FraseRepeat/quantity.txt]]]
+$let[frase_id;$random[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]
 
 $useChannel[$getGuildVar[batePapo]]
 
