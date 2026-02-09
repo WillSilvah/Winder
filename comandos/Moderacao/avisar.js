@@ -5,14 +5,11 @@ module.exports = [{
 	category: "Moderação",
 	usage: "avisar @user/userID motivo?",
 	code: `
-$sendMessage[**[DEBUG]**
-$getUserVar[lastWarn;$get[userID]]
 
-$getUserVar[warnsTotal;$get[userID]]
-]
-$wait[3s]
-$clientTyping
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
+
+$ifAwaited[1==1;{execute:punishment-log}]
+$ifAwaited[$isUserDMEnabled[$get[userID]]==true;{execute:puni-dm}]
 
 $setUserVar[lastWarn;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};$get[userID];$guildID]
 	
