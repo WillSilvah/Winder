@@ -5,6 +5,15 @@ module.exports = [{
 	category: "Moderação",
 	usage: "avisar @user/userID motivo?",
 	code: `
+$sendMessage[**[DEBUG]**
+$getUserVar[lastWarn;$get[userID]]
+
+-------------
+$exec[cd Recursos/avisos && ls]
+
+]
+$wait[3s]
+$clientTyping
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
 $ifAwaited[$fileExists[Recursos/avisos/$get[userID]/aviso_$getUserVar[lastWarn;$get[userID];$guildID].txt]==false;{execute:createWarnFiles};{execute:writeWarnFiles}]
