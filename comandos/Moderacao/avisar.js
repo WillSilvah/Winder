@@ -7,8 +7,9 @@ module.exports = [{
 	code: `
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
-$ifAwaited[$fileExists[Recursos/avisos/$get[userID]/aviso_$getUserVar[lastWarn;$get[userID];$guildID].txt]==false;{execute:createWarnFiles};{execute:writeWarnFiles}]
+$ifAwaited[$fileExists[Recursos/avisos/$get[userID]/aviso_$getUserVar[warnsTotal;$get[userID];$guildID].txt]==false;{execute:createWarnFiles};{execute:writeWarnFiles}]
 
+$setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$get[userID];$guildID];1];$get[userID];$guildID]
 $onlyPerms[kickmembers;<@$authorID> {newEmbed: {author:Você não tem as permissões necessárias} {description:Por segurança, você precisa ter as permissões de **expulsar membros**.}  {footer:Que tal você entrar para a staff? $getGuildVar[prefixo]serstaff} {color:#6F03FC}}]
 $onlyIf[$get[userID]!=$authorID;<@$authorID> | Você está se automencionando, por favor, **@mencione/ID** o usuário]
 $onlyIf[$argsCount>0;]
@@ -35,6 +36,6 @@ $exec[mkdir -p Recursos/avisos/$get[userID]]
 	type: "awaited",
 	code: `
 	
-$writeFile[Recursos/avisos/$get[userID]/aviso_$getUserVar[lastWarn;$get[userID];$guildID].txt;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};utf8]
+$writeFile[Recursos/avisos/$get[userID]/aviso_$getUserVar[warnsTotal;$get[userID];$guildID].txt;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};utf8]
 `
 }]
