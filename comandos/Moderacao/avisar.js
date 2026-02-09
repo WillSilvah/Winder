@@ -16,7 +16,7 @@ $wait[3s]
 $clientTyping
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
-$ifAwaited[$fileExists[Recursos/avisos/$get[userID]/aviso_$getUserVar[lastWarn;$get[userID];$guildID].txt]==false;{execute:createWarnFiles};{execute:writeWarnFiles}]
+$ifAwaited[$fileExists[Recursos/avisos/$get[userID]]==false;{execute:createWarnFiles};{execute:writeWarnFiles}]
 
 $setUserVar[lastWarn;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};$get[userID];$guildID]
 	
