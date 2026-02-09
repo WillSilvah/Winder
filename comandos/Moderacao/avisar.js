@@ -8,7 +8,8 @@ module.exports = [{
 
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
-$setUserVar[lastWarn;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};$get[userID];$guildID]
+$setUserVar[lastWarnStaffID;$get[staffID];$get[userID];$guildID]
+$setUserVar[lastWarnReason;$get[reason];$get[userID];$guildID]
 	
 $setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$get[userID];$guildID];1];$get[userID];$guildID]
 
