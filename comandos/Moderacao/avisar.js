@@ -7,7 +7,7 @@ module.exports = [{
 	code: `
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
-$ifAwaited[$fileExists[Recursos/avisos/$get[userID]/aviso_$getUserVar[warnsTotal;$get[userID];$guildID].txt]==false;{execute:createWarnFiles};{execute:writeWarnFiles}]
+$exec[mkdir -p "Recursos/avisos/$get[userID]/" && echo '{"staffID": "$get[staffID]", "motivo": "$get[reason]"}' > "Recursos/avisos/$get[userID]/aviso_$getUserVar[warnsTotal;$get[userID];$guildID].txt"]
 
 $setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$get[userID];$guildID];1];$get[userID];$guildID]
 $onlyPerms[kickmembers;<@$authorID> {newEmbed: {author:Você não tem as permissões necessárias} {description:Por segurança, você precisa ter as permissões de **expulsar membros**.}  {footer:Que tal você entrar para a staff? $getGuildVar[prefixo]serstaff} {color:#6F03FC}}]
@@ -22,20 +22,5 @@ $let[reason;$if[$messageSlice[1]==;Sei lá qual foi o motivo, só sei que recebe
 $let[puniType;advertido]
 
 $clientTyping	
-`
-},{
-	name: "createWarnFiles",
-	type: "awaited",
-	code: `
-
-$awaitExecute[writeWarnFiles]
-$exec[mkdir -p Recursos/avisos/$get[userID]]
-`
-},{
-	name: "writeWarnFiles",
-	type: "awaited",
-	code: `
-	
-$writeFile[Recursos/avisos/$get[userID]/aviso_$getUserVar[warnsTotal;$get[userID];$guildID].txt;{"staffID": "$get[staffID]", "motivo": "$get[reason]"};utf8]
 `
 }]
