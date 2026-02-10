@@ -13,13 +13,11 @@ $userLeaderBoard[1462224054676099094;msgXP;desc;{top}° **<@{id}>** -> ✨️{va
 
 $userLeaderBoard[1462224054676099094;messageMonth;desc;{top}° **<@{id}>** -> 💬️{value};11;1]
 }
-{footer:Atualizado sempre a cada 3 horas | $getGuildVar[prefixo]rank}
 {color:Green}
 }]
 
 $createObject[session;$readFile[Recursos/session.json]]
 
 $clear[$getGuildVar[rankedChat;1462224054676099094];6]
-$timezone[America/Recife]
 `
 }]

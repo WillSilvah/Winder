@@ -20,6 +20,7 @@ $dm[$get[userID]]
 name: "punishment-log",
 type: "awaited",
 code: `
+
 $author[1;Equipe Patinhas: Nossa toca, tem regras.;https://cdn.discordapp.com/emojis/1466597066892640456.png?size=2048]
 $title[1;$userTag[$get[userID]] | $get[puniType]]
 $description[1;
