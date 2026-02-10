@@ -6,6 +6,7 @@ module.exports = [{
 	usage: "avisar @user/userID motivo?",
 	code: `
 $awaitExecute[warn-actions]
+$wait[1s]
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
 $setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$get[userID];$guildID];1];$get[userID];$guildID]

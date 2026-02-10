@@ -3,8 +3,6 @@ module.exports = [{
 	type: "awaited",
 	code: `
 
-
-
 $ifAwaited[$getUserVar[warnsTotal;$get[userID];$guildID]==1;{execute:pdapunish-1warn}]
 
 $let[userID1;$get[userID]]
