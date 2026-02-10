@@ -15,12 +15,20 @@ $timezone[America/Recife]
 name: "auto-reset",
 type: "awaited",
 code: `
+
+
 $resetGuildVar[membersJoinedMonth]
 $resetUserVar[metaXP]
 $resetUserVar[messageMonth]
 $resetUserVar[votesMonth]
 $resetUserVar[msgXP]
 $resetGuildVar[guildMonthMessages]
+
+$setGuildVar[guildPDAmedia;$get[media];$guildID]
+$let[media;$truncate[$math[$get[soma]/$membersCount[$guildID;all;false]]]]
+$let[soma;$math[$replaceText[$replaceText[$userLeaderBoard[$guildID;msgXP;desc;{value},;$membersCount[$guildID;all;false];1;main];,;+];+
+;+]0]]
+
 $writeFile[Recursos/session.json;
 {
     "name": "Pré Temporada: O começo",
@@ -28,55 +36,5 @@ $writeFile[Recursos/session.json;
     "banner": "https://i.ibb.co/7NXHgpxQ/banner-pr-temporada.png"
 };utf8]
 
-`
-},{
-name: "novodia",
-type: "awaited",
-code: `
-$channelSendMessage[1462224055884189781;{newEmbed:
-{author:Um novo dia começou...}
-{description:
-Que este seja um dia incrível para você.
-}
-{color:Blue}
-}]
-        
-$timezone[America/Recife]
-`
-},{
-name: "chat-bomdia",
-type: "awaited",
-code: `
-$channelSendMessage[1462224055884189781;
-# 🌞 BOM DIA PELUDOS!
-**Vamos levantar e tomar uma xícara de café?**
-]
-`
-},{
-name: "chat-boatarde",
-type: "awaited",
-code: `
-$channelSendMessage[1462224055884189781;
-# 🍱 JÁ PODE ALMOÇAR!
-**Liberei o almoço, vão almoçar enquanto dá tempo!**
-]
-`
-},{
-name: "chat-boatardefim",
-type: "awaited",
-code: `
-$channelSendMessage[1462224055884189781;
-# 🍱 FIM DO ALMOÇO
-**Permissão para almoçar foi cancelada.**
-]
-`
-},{
-name: "chat-boanoite",
-type: "awaited",
-code: `
-$channelSendMessage[1462224055884189781;
-# 🌃 BOA NOITE
-**Vamos finalizar a noite conversando com os amigos?**
-]
 `
 }]

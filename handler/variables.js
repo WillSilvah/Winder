@@ -56,6 +56,7 @@ client.variables({
   "msgBoost": "1",
   "msgXP": "0",
   "msgXPtotal": "0",
+  "guildPDAmedia": "0",
   "metaXPtotal": "0",
   "metaXP": "1000",
   
