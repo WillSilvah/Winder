@@ -22,3 +22,4 @@ $setUserVar[msgXPtotal;$sub[$getUserVar[msgXPtotal;$get[userID1];$guildID];$get[
 
 $let[removepda;$math[$getUserVar[msgXPtotal;$get[userID1];$guildID]/6]]
 `
+}]
