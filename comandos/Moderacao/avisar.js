@@ -8,7 +8,7 @@ module.exports = [{
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
 $onlyPerms[kickmembers;<@$authorID> {newEmbed: {author:Você não tem as permissões necessárias} {description:Por segurança, você precisa ter as permissões de **expulsar membros**.}  {footer:Que tal você entrar para a staff? $getGuildVar[prefixo]serstaff} {color:#6F03FC}}]
-$onlyIf[$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]!=$authorID;<@$authorID> | Você está se automencionando, por favor, **@mencione/ID** o usuário]
+$onlyIf[$get[userID]!=$authorID;<@$authorID> | Você está se automencionando, por favor, **@mencione/ID** o usuário]
 $onlyIf[$argsCount>0;]
 $ifAwaited[$argsCount==0;{execute:cmdinfo-await}]
 $let[cmdName;$commandName]
