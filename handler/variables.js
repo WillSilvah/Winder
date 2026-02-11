@@ -76,7 +76,8 @@ client.variables({
   
   "warnsTotal": "0",
   "lastWarnStaffID": "",
-  "lastWarnReason": ""
+  "lastWarnReason": "",
+  "lastWarn": ""
   
   
   

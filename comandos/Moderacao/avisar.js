@@ -5,9 +5,9 @@ module.exports = [{
 	category: "Moderação",
 	usage: "avisar @user/userID motivo?",
 	code: `
-$awaitExecute[warn-actions]
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
+$setUserVar[lastWarn;{"staffID": "$findUser[$get[staffID]]","reason": "$get[reason]"};$findUser[$get[userID]];$guildID]
 $setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID];1];$findUser[$get[userID]];$guildID]
 
 $onlyPerms[kickmembers;<@$authorID> {newEmbed: {author:Você não tem as permissões necessárias} {description:Por segurança, você precisa ter as permissões de **expulsar membros**.}  {footer:Que tal você entrar para a staff? $getGuildVar[prefixo]serstaff} {color:#6F03FC}}]
