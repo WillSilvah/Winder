@@ -17,7 +17,7 @@ $onlyIf[$hasRoles[861313067291115541;$authorID;1061811818533769266]==true;<@$aut
 	usage: "winder update",
 	code: `
 
-$log[$exec[pm2 restart winder-bot]]
+$log[$exec[pm2 restart winder-canary]]
 $sendMessage[<@$authorID> Reiniciando em **3 segundos**...
 $clientTyping
 $sendMessage[<@$authorID> Atualizando para **$getVersion**...]
