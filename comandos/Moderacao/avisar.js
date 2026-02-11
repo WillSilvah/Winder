@@ -6,7 +6,7 @@ module.exports = [{
 	usage: "avisar @user/userID motivo?",
 	code: `
 	
-$exec[mkdir -p "Recursos/avisos/$findUser[$get[userID]]/" && echo '{"staffID": "$get[staffID]", "motivo": "$get[reason]"}' > "Recursos/avisos/$findUser[$get[userID]]/aviso_$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID].txt"]
+$exec[mkdir -p "Recursos/avisos/$guildID/$findUser[$get[userID]]/" && echo '{"staffID": "$get[staffID]", "motivo": "$get[reason]"}' > "Recursos/avisos/$guildID/$findUser[$get[userID]]/aviso_$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID].txt"]
 
 
 $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]

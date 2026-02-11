@@ -10,7 +10,7 @@ $sendMessage[<@$authorID> **$username[$findUser[$get[userID]]]** foi **$get[puni
 $ifAwaited[1==1;{execute:punishment-log}]
 $ifAwaited[$isUserDMEnabled[$findUser[$get[userID]]]==true;{execute:puni-dm}]
 
-$exec[rm "Recursos/avisos/$findUser[$get[userID]]/aviso_$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID].txt"]
+$exec[rm "Recursos/avisos/$guildID/$findUser[$get[userID]]/aviso_$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID].txt"]
 	
 $setUserVar[warnsTotal;$sub[$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID];1];$findUser[$get[userID]];$guildID]
 

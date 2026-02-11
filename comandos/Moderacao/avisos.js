@@ -5,25 +5,26 @@ module.exports = [{
 	category: "Moderação",
 	usage: "avisos @user",
 	code: `
-$title[Prontuário de $username[$get[userID]]]
-$description[$exec[
-if [ -d "Recursos/avisos/$get[userID]/" ]; then
-  cd Recursos/avisos/$get[userID]/ && for f in aviso_*.txt; do
+$title[1;Advertências de $username[$get[userID]]]
+$description[1;$exec[
+if [ -d "Recursos/avisos/$guildID/$get[userID]/" ]; then
+  cd Recursos/avisos/$guildID/$get[userID]/ && for f in aviso_*.txt; do
+    NUM=\$(echo \$f | sed 's/aviso_//;s/.txt//')
     STAFF=\$(cat \$f | sed 's/.*staffID": "//;s/".*//')
     MOTIVO=\$(cat \$f | sed 's/.*motivo": "//;s/".*//')
-    echo "**\${f%.txt}**"
+    
+    echo "**\$NUM° aviso**"
     echo "🛡️ **Staff:** <@\$STAFF>"
     echo "📝 **Motivo:** \$MOTIVO"
-    echo "────────────────"
+    echo "-----------------------"
   done
 else
   echo "Este usuário ainda não possui avisos no sistema."
 fi
 ]]
-$color[#6F03FC]
+$color[1;Orange]
 $footer[Total de avisos: $getUserVar[warnsTotal;$get[userID];$guildID]]
 
-$onlyIf[$findUser[$message[1];false]!=;Mencione um usuário válido ou forneça o ID.]
-$let[userID;$findUser[$message[1];false]]
+$let[userID;$findUser[$message[1];true]]
 `
 }]
