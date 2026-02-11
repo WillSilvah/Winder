@@ -9,6 +9,8 @@ $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
 $ifAwaited[1==1;{execute:punishment-log}]
 $ifAwaited[$isUserDMEnabled[$get[userID]]==true;{execute:puni-dm}]
+
+$exec[rm "Recursos/avisos/$get[userID]/aviso_$getUserVar[warnsTotal;$get[userID];$guildID].txt"]
 	
 $setUserVar[warnsTotal;$sub[$getUserVar[warnsTotal;$get[userID];$guildID];1];$get[userID];$guildID]
 
