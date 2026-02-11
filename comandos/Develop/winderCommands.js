@@ -8,7 +8,7 @@ module.exports = [{
  
 $updateCommands
 $clientTyping
-$onlyIf[$hasRoles[861313067291115541;$authorID;1061811818533769266]==true;<@$authorID> | Você precisa ser **$username[$clientID]** Developer para poder executar esse comando.]
+$onlyIf[$hasRoles[1462224054676099094;$authorID;1462547405466636384]==true;<@$authorID> | Você precisa ser **$username[$clientID]** Developer para poder executar esse comando.]
 `
 },{
 	name: "winder update",
@@ -39,6 +39,6 @@ $clientTyping
 $sendMessage[<@$authorID> Atualizando **$username[$clientID]**...]
 $clientTyping
 
-$onlyIf[$hasRoles[861313067291115541;$authorID;1061811818533769266]==true;<@$authorID> | Você precisa ser **$username[$clientID]** Developer para poder executar esse comando.]
+$onlyIf[$hasRoles[1462224054676099094;$authorID;1462547405466636384]==true;<@$authorID> | Você precisa ser **$username[$clientID]** Developer para poder executar esse comando.]
 `
 }]
