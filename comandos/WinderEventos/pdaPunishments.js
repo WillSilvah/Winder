@@ -7,6 +7,6 @@ $setUserVar[msgXP;$sub[$getUserVar[msgXP;$mentioned[1];$guildID];$get[removepda]
 $setUserVar[msgXPtotal;$sub[$getUserVar[msgXPtotal;$mentioned[1];$guildID];$get[removepda]];$mentioned[1];$guildID]
 
 
-$let[removepda;$divide[$getUserVar[msgXPtotal;$mentioned[1];$guildID];6]]
+$let[removepda;62]
 `
 }]
