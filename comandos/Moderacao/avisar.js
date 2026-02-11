@@ -5,7 +5,6 @@ module.exports = [{
 	category: "Moderação",
 	usage: "avisar @user/userID motivo?",
 	code: `
-$awaitExecute[warn-actions]
 $sendMessage[<@$authorID> **$username[$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]** foi **$get[puniType]**!]
 
 $setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]];$guildID];1];$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]];$guildID]
