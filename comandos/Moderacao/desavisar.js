@@ -5,18 +5,18 @@ module.exports = [{
 	category: "Moderação",
 	usage: "desavisar @user/userID motivo?",
 	code: `
-$sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
+$sendMessage[<@$authorID> **$username[$findUser[$get[userID]]]** foi **$get[puniType]**!]
 
 $ifAwaited[1==1;{execute:punishment-log}]
-$ifAwaited[$isUserDMEnabled[$get[userID]]==true;{execute:puni-dm}]
+$ifAwaited[$isUserDMEnabled[$findUser[$get[userID]]]==true;{execute:puni-dm}]
 
-$exec[rm "Recursos/avisos/$get[userID]/aviso_$getUserVar[warnsTotal;$get[userID];$guildID].txt"]
+$exec[rm "Recursos/avisos/$findUser[$get[userID]]/aviso_$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID].txt"]
 	
-$setUserVar[warnsTotal;$sub[$getUserVar[warnsTotal;$get[userID];$guildID];1];$get[userID];$guildID]
+$setUserVar[warnsTotal;$sub[$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID];1];$findUser[$get[userID]];$guildID]
 
-$onlyIf[$getUserVar[warnsTotal;$get[userID];$guildID]<=0;<@$authorID> O usuário não tem nenhuma advertência.]
+$onlyIf[$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID]<=0;<@$authorID> O usuário não tem nenhuma advertência.]
 $onlyPerms[kickmembers;<@$authorID> {newEmbed: {author:Você não tem as permissões necessárias} {description:Por segurança, você precisa ter as permissões de **expulsar membros**.}  {footer:Que tal você entrar para a staff? $getGuildVar[prefixo]serstaff} {color:#6F03FC}}]
-$onlyIf[$get[userID]!=$authorID;<@$authorID> | Você está se automencionando, por favor, **@mencione/ID** o usuário]
+$onlyIf[$findUser[$get[userID]]!=$authorID;<@$authorID> | Você está se automencionando, por favor, **@mencione/ID** o usuário]
 $onlyIf[$argsCount>0;]
 $ifAwaited[$argsCount==0;{execute:cmdinfo-await}]
 $let[cmdName;$commandName]
