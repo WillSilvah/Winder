@@ -75,8 +75,6 @@ client.variables({
   "totalMusicTimeCount": "0",
   
   "warnsTotal": "0",
-  "lastWarnStaffID": "",
-  "lastWarnReason": "",
   "lastWarn": ""
   
   
