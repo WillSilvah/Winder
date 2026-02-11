@@ -5,7 +5,7 @@ module.exports = [{
 	category: "Moderação",
 	usage: "avisar @user/userID motivo?",
 	code: `
-$ifAwaited[1==1;{execute:warn-actions}]
+$awaitExecute[warn-actions]
 $sendMessage[<@$authorID> **$username[$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]** foi **$get[puniType]**!]
 
 $setUserVar[warnsTotal;$sum[$getUserVar[warnsTotal;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]];$guildID];1];$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]];$guildID]
@@ -17,7 +17,7 @@ $ifAwaited[$argsCount==0;{execute:cmdinfo-await}]
 $let[cmdName;$commandName]
 
 $let[staffID;$authorID]
-$let[userID;]
+$let[userID;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]
 $let[reason;$if[$messageSlice[1]==;Sei lá qual foi o motivo, só sei que recebeu!;$messageSlice[1]]]
 $let[puniType;advertido]
 
