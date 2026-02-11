@@ -14,7 +14,7 @@ $exec[rm "Recursos/avisos/$findUser[$get[userID]]/aviso_$getUserVar[warnsTotal;$
 	
 $setUserVar[warnsTotal;$sub[$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID];1];$findUser[$get[userID]];$guildID]
 
-$onlyIf[$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID]<=0;<@$authorID> O usuário não tem nenhuma advertência.]
+$onlyIf[$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID]>0;<@$authorID> O usuário não tem nenhuma advertência.]
 $onlyPerms[kickmembers;<@$authorID> {newEmbed: {author:Você não tem as permissões necessárias} {description:Por segurança, você precisa ter as permissões de **expulsar membros**.}  {footer:Que tal você entrar para a staff? $getGuildVar[prefixo]serstaff} {color:#6F03FC}}]
 $onlyIf[$findUser[$get[userID]]!=$authorID;<@$authorID> | Você está se automencionando, por favor, **@mencione/ID** o usuário]
 $onlyIf[$argsCount>0;]
