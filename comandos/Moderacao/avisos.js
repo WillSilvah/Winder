@@ -26,5 +26,9 @@ $color[1;Orange]
 $footer[Total de avisos: $getUserVar[warnsTotal;$get[userID];$guildID]]
 
 $let[userID;$findUser[$message[1];true]]
+
+$onlyIf[$argsCount>0;]
+$ifAwaited[$argsCount==0;{execute:cmdinfo-await}]
+$let[cmdName;$commandName]
 `
 }]
