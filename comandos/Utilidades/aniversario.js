@@ -23,7 +23,7 @@ $let[cmdName;$commandName]
     aliases: ["proximos-niver", "niverlista"],
     code: `
 $title[🗓️ Lista de Aniversários]
-$description[$replaceText[$checkCondition[$getUserVar[temp_lista]==];true;❌ Nenhum registro.]$getUserVar[temp_lista]]
+$description[$if[$getUserVar[temp_lista]==;❌ Nenhum aniversário registrado.;$getUserVar[temp_lista]]]
 $color[#FFC0CB]
 $footer[Sistema de Aniversários do Winder]
 
