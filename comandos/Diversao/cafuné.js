@@ -5,7 +5,7 @@ desc: "Faça um carinho, espalhe amor!",
 category: "roleplay/social",
 usage: "cafuné @user",
 code: `
-$author[1;❤️$username fez um cafuné em $ifAwaited[$mentioned[1]==$authorID;si mesmo, pois amor próprio é essencial;$username[$mentioned[1]]]
+$title[1;❤️ $username fez um cafuné em $ifAwaited[$mentioned[1]==$authorID;si mesmo, pois amor próprio é essencial;$username[$mentioned[1]]]
 $image[1;$getObjectProperty[pat;link]]
 $color[1;Blue]
 
