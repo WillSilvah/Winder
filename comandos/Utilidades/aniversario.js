@@ -26,8 +26,12 @@ $let[cmdName;$commandName]
     usage: "aniversarios",
     code: `
 $footer[🔍 Vasculhando registros... Aguarde.]
-$forEachUser[1;{"niver": ""};returnAniversarios;listaFinal]
+$forEachUser[1;{};returnAniversarios;listaFinal]
+$createObject[lista;{"niver": ""}]
 
+$onlyIf[$argsCount==0;]
+$ifAwaited[$argsCount!=0;{execute:cmdinfo-await}]
+$let[cmdName;$commandName]
 `
 },{
     name: "returnAniversarios",
@@ -36,7 +40,6 @@ $forEachUser[1;{"niver": ""};returnAniversarios;listaFinal]
 $setObjectProperty[lista;niver;$getObjectProperty[lista;niver]\n🎂 **$getUserVar[birthday;$authorID]** - <@$authorID>]
 $onlyIf[$getUserVar[birthday;$authorID]!=;]
 $onlyIf[$isBot[$authorID]==false;]
-$createObject[lista;{"niver": ""}]
 `
 },{
     name: "listaFinal",
