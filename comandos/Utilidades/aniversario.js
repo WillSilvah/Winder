@@ -2,13 +2,14 @@ module.exports = ({
     name: "aniversario",
     aliases: ["set-niver", "setniver"],
     desc: "Não deixe que seu aniversário seja esquecido!",
-    category: "Interativo",
-    usage: "aniversario 17/01",
+	category: "Interativo",
+	usage: "aniversario 17/01",
     code: `
 <@$authorID> | Sucesso! Lembrarei o seu aniversário para o dia **$message[1]**.
 $setUserVar[birthday;$message[1];$authorID;$guildID]
 
-$onlyIf[$isValidDate[$splitText[2]/$splitText[1]/2026]==true;<@$authorID> | Data inválida! Use o formato \`DD/MM\` (Ex: 21/03).]
+$onlyIf[$isNumber[$splitText[1]]|$isNumber[$splitText[2]]==true|true;<@$authorID> | Data inválida! Use apenas números no formato \`DD/MM\`.]
+$onlyIf[$charCount[$message[1]]==5;<@$authorID> | Formato incorreto! Use \`DD/MM\` (Ex: 04/09).]
 $textSplit[$message[1];/]
 
 $onlyIf[$argsCount>0;]
