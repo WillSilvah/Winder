@@ -15,10 +15,9 @@ $timezone[America/Recife]
     type: "awaited",
     code: `
 $channelSendMessage[$getGuildVar[birthdayChannel];🎂 **PARABÉNS!** <@$authorID>, hoje é seu dia! Muitas felicidades! 🎉]
-$onlyIf[$getUserVar[birthday;$authorID;$guildID]==$day/$month;]
+$onlyIf[$getUserVar[birthday;$authorID;$guildID]==$formatDate[$dateStamp;DD/MM];]
 $onlyIf[$isBot==false;]
 $timezone[America/Recife]
 
-$sendMessage[teste]
 `
 }]

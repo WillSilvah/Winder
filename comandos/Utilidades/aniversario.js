@@ -8,7 +8,7 @@ module.exports = [{
 $sendMessage[<@$authorID> | Sucesso! Lembrarei o seu aniversário para o dia **$message[1]**.]
 $clientTyping
 
-$setUserVar[birthday;$message[1];$authorID;$guildID]
+$setUserVar[birthday;$formatDate[$message[1];DD/MM;$authorID;$guildID]
 $clientTyping
 $onlyIf[$isNumber[$splitText[1]]|$isNumber[$splitText[2]]==true|true;<@$authorID> | Data inválida! Use apenas números no formato \`DD/MM\`.]
 $onlyIf[$charCount[$message[1]]==5;<@$authorID> | Formato incorreto! Use \`DD/MM\` (Ex: 04/09).]
