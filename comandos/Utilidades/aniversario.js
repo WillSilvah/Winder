@@ -22,9 +22,10 @@ $let[cmdName;$commandName]
     name: "aniversarios",
     aliases: ["proximos-niver", "niverlista"],
     code: `
-$setUserVar[temp_lista;]
-$forEachUser[1;{};returnAniversarios;listaFinal]
 $sendMessage[🔍 Vasculhando registros... Aguarde.]
+$setUserVar[temp_lista;]
+$wait[1s]
+$forEachUser[1;{};returnAniversarios;listaFinal]
 `
 },{
     name: "returnAniversarios",
@@ -42,5 +43,6 @@ $title[🗓️ Lista de Aniversários]
 $description[$if[$getUserVar[temp_lista]==;❌ Nenhum aniversário registrado.;$getUserVar[temp_lista]]]
 $color[#FFC0CB]
 $footer[Sistema de Aniversários do Winder]
+$setUserVar[temp_lista;]
 `
 }]
