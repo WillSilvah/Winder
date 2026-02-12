@@ -22,13 +22,9 @@ $let[cmdName;$commandName]
     name: "aniversarios",
     aliases: ["proximos-niver", "niverlista"],
     code: `
-$title[🗓️ Lista de Aniversários]
-$description[$if[$getUserVar[temp_lista]==;❌ Nenhum aniversário registrado.;$getUserVar[temp_lista]]]
-$color[#FFC0CB]
-$footer[Sistema de Aniversários do Winder]
-
-$forEachUser[1;{};returnAniversarios;limparLista]
 $setUserVar[temp_lista;]
+$forEachUser[1;{};returnAniversarios;listaFinal]
+$sendMessage[🔍 Vasculhando registros... Aguarde.]
 `
 },{
     name: "returnAniversarios",
@@ -39,9 +35,12 @@ $onlyIf[$getUserVar[birthday;$authorID]!=;]
 $onlyIf[$isBot[$authorID]==false;]
 `
 },{
-    name: "limparLista",
+    name: "listaFinal",
     type: "awaited",
     code: `
-$log[Lista de aniversários processada com sucesso.]
+$title[🗓️ Lista de Aniversários]
+$description[$if[$getUserVar[temp_lista]==;❌ Nenhum aniversário registrado.;$getUserVar[temp_lista]]]
+$color[#FFC0CB]
+$footer[Sistema de Aniversários do Winder]
 `
 }]
