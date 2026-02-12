@@ -75,8 +75,10 @@ client.variables({
   "totalMusicTimeCount": "0",
   
   "warnsTotal": "0",
-  "lastWarn": ""
+  "lastWarn": "",
   
+	"birthday": "",
+	"birthdayChannel": "1463315740403830936"
   
   
 })
