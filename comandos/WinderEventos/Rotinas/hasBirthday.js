@@ -2,7 +2,7 @@ module.exports = [{
     name: "niver-loop",
     type: "loop",
     every: "999",
-    executeOnStartup: true,
+    executeOnStartup: "true",
     code: `
 $forEachUser[5;{};verificar_aniversariantes;]
 
