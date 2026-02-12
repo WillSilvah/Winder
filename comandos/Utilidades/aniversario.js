@@ -26,11 +26,8 @@ $let[cmdName;$commandName]
     usage: "aniversarios",
     code: `
 $footer[🔍 Vasculhando registros... Aguarde.]
-$forEachUser[1;{};returnAniversarios;listaFinal]
+$forEachUser[1;{"niver": ""};returnAniversarios;listaFinal]
 
-$onlyIf[$argsCount==0;]
-$ifAwaited[$argsCount!=0;{execute:cmdinfo-await}]
-$let[cmdName;$commandName]
 `
 },{
     name: "returnAniversarios",
