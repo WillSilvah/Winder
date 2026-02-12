@@ -23,7 +23,7 @@ $let[cmdName;$commandName]
     aliases: ["proximos-niver", "niverlista"],
     code: `
 $title[🗓️ Lista de Aniversários]
-$description[$if[$getUserVar[temp_lista]==;❌ Nenhum aniversário registrado.;$getUserVar[temp_lista]]]
+$description[$replaceText[$checkCondition[$getUserVar[temp_lista]==];true;❌ Nenhum registro.]$getUserVar[temp_lista]]
 $color[#FFC0CB]
 $footer[Sistema de Aniversários do Winder]
 
@@ -34,8 +34,8 @@ $setUserVar[temp_lista;]
     name: "returnAniversarios",
     type: "awaited",
     code: `
-$setUserVar[temp_lista;$getUserVar[temp_lista]\n🎂 **$getUserVar[birthday;$authorID;$guildID]** - <@$authorID>]
-$onlyIf[$getUserVar[birthday;$authorID;$guildID]!=;]
+$setUserVar[temp_lista;$getUserVar[temp_lista]🎂 **$getUserVar[birthday;$authorID]** - <@$authorID>\n]
+$onlyIf[$getUserVar[birthday;$authorID]!=;]
 $onlyIf[$isBot[$authorID]==false;]
 `
 },{
