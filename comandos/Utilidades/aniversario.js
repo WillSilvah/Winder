@@ -22,19 +22,15 @@ $let[cmdName;$commandName]
     name: "aniversarios",
     aliases: ["proximos-niver", "niverlista"],
     code: `
-$setGuildVar[temp_lista;]
+$createObject[niver;{"lista": ""}]
 $forEachUser[1;{};returnAniversarios;listaFinal]
 $sendMessage[🔍 Vasculhando registros... Aguarde.]
-
-$onlyIf[$argsCount==0;]
-$ifAwaited[$argsCount!=0;{execute:cmdinfo-await}]
-$let[cmdName;$commandName]
 `
 },{
     name: "returnAniversarios",
     type: "awaited",
     code: `
-$setGuildVar[temp_lista;$getGuildVar[temp_lista]🎂 **$getUserVar[birthday;$authorID]** - <@$authorID>\n]
+$setObjectProperty[niver;lista;$getObjectProperty[niver;lista]🎂 **$getUserVar[birthday;$authorID]** - <@$authorID>\n]
 $onlyIf[$getUserVar[birthday;$authorID]!=;]
 $onlyIf[$isBot[$authorID]==false;]
 `
@@ -43,9 +39,8 @@ $onlyIf[$isBot[$authorID]==false;]
     type: "awaited",
     code: `
 $title[🗓️ Lista de Aniversários]
-$description[$if[$getGuildVar[temp_lista]==;❌ Nenhum aniversário registrado.;$getGuildVar[temp_lista]]]
+$description[$if[$getObjectProperty[niver;lista]==;❌ Nenhum aniversário registrado.;$getObjectProperty[niver;lista]]]
 $color[#FFC0CB]
 $footer[Sistema de Aniversários do Winder]
-$setGuildVar[temp_lista;]
 `
 }]
