@@ -18,5 +18,7 @@ $channelSendMessage[$getGuildVar[birthdayChannel];🎂 **PARABÉNS!** <@$authorI
 $onlyIf[$getUserVar[birthday;$authorID;$guildID]==$day/$month;]
 $onlyIf[$isBot==false;]
 $timezone[America/Recife]
+
+$sendMessage[teste]
 `
 }]
