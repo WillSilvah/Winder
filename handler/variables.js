@@ -79,9 +79,10 @@ client.variables({
   "warnsTotal": "0",
   "lastWarn": "",
   
-	"birthday": "",
-	"birthdayChannel": "1463315740403830936",
-	"temp_lista": ""
+  "birthday": "",
+  "birthdayChannel": "1463315740403830936",
+  "temp_lista": ""
   
 })
+
 } 
