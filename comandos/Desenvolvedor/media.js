@@ -1,6 +1,5 @@
 module.exports = [{
-name: "pda media",
-aliases: ['media pda'],
+name: "media pda",
 desc: "Veja a média de PDA!",
 category: "Desenvolvedor",
 usage: "eval",
