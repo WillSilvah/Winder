@@ -7,11 +7,13 @@ module.exports = [{
 	code: `
 $title[1;📃 Perfil de $username[$get[userID]]]
 $description[1;
-$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberSupporterRole]]==true;🤝 **É um apoiador**;$customEmoji[pats_foxCry] **Não é um apoiador**] | $if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;$customEmoji[pats_foxThumbsUp] **É Verificado!**;$customEmoji[pats_foxCry] **Não é verificado**]
-	
-	
-	
+$get[badges]
 
+
+]
+
+$let[badges;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberSupporterRole]]==true;:handshake: **Apoiador** ;]$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;$customEmoji[pats_foxThumbsUp] **Verificado** ;]$if[$hasRoles[$guildID;$authorID;$getGuildVar[allStaffRole]]==true;:shield: **Staff** ;]]
 $let[userid;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]
 `
+
 }]
