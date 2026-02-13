@@ -13,7 +13,7 @@ client.variables({
   "lastMemberUpdateStatus": "",
   "lastMemberUpdateTime": "",
   "memberVerifiedRole": "1462797987041513574",
-  
+  "memberSupporterRole": "1463632725981532234",
   "memberVotedRole": "1468387787949609082",
   "allMemberRole": "1462544909390319960",
   "memberBoosterRole": "1463625995473911853",
