@@ -1,5 +1,5 @@
 module.exports = [{
-name: "media pda",
+name: "media atividade",
 desc: "Veja a média de PDA!",
 category: "Desenvolvedor",
 usage: "eval",
