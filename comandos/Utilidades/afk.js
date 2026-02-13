@@ -23,7 +23,7 @@ $sendMessage[**$userTag[$mentioned[1]]** está afk!
 
 $onlyIf[$readFile[Recursos/afkSystem/$mentioned[1]/status.txt]==true;]
 
-$onlyIf[$getGlobalUserVar[afkStatus;$mentioned[1]==true;]
+$onlyIf[$getGlobalUserVar[afkStatus;$mentioned[1]]==true;]
 $onlyIf[$mentioned[1]!=$authorID;]
 `
 },{
