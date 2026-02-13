@@ -52,7 +52,7 @@ $onlyIf[$isBot[$authorID]==false;]
     type: "awaited",
     code: `
 $editMessage[$awaitData[msgId];<@$awaitData[author]> {newEmbed:
-{title:🗓️ Aniversariantes do Mês
+{title:🗓️ Aniversariantes do Mês}
 {description:$if[$getVar[temp_lista]==;❌ Nenhum aniversário registrado este mês.;$getVar[temp_lista]]}
 {color:Red}
 {footer:Utilize $getGuildVar[prefixo]aniversário DD/MM para participar!}}]
