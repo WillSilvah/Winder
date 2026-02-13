@@ -63,14 +63,14 @@ client.functionManager.createFunction({
 client.functionManager.createFunction({
     name: "$mediaPDA", 
     type: "aoi.js",
-    code: `$get[temppda] $let[temppda;$truncate[$math[$get[temppdasoma]/$membersCount[$guildID;all;false]]]] $let[temppdasoma;$math[$replaceText[$replaceText[$userLeaderBoard[$guildID;msgXP;desc;{value},;$membersCount[$guildID;all;false];1;main];,;+];+
+    code: `$get[temppda]$let[temppda;$truncate[$math[$get[temppdasoma]/$membersCount[$guildID;all;false]]]]$let[temppdasoma;$math[$replaceText[$replaceText[$userLeaderBoard[$guildID;msgXP;desc;{value},;$membersCount[$guildID;all;false];1;main];,;+];+
 ;+]0]]`
 });
 
 client.functionManager.createFunction({
     name: "$mediaMsgs", 
     type: "aoi.js",
-    code: `$get[tempmsgs] $let[tempmsgs;$truncate[$math[$get[tempmsgssoma]/$membersCount[$guildID;all;false]]]] $let[tempmsgssoma;$math[$replaceText[$replaceText[$userLeaderBoard[$guildID;messageMonth;desc;{value},;$membersCount[$guildID;all;false];1;main];,;+];+
+    code: `$get[tempmsgs]$let[tempmsgs;$truncate[$math[$get[tempmsgssoma]/$membersCount[$guildID;all;false]]]]$let[tempmsgssoma;$math[$replaceText[$replaceText[$userLeaderBoard[$guildID;messageMonth;desc;{value},;$membersCount[$guildID;all;false];1;main];,;+];+
 ;+]0]]`
 });
 
