@@ -11,7 +11,7 @@ $setUserVar[minigameTotalWins;$sum[$getUserVar[minigameTotalWins;$authorID;$guil
 
 $slowmode[0s;$getGuildVar[batePapo]]
 $sendMessage[<@$authorID> | Parabéns, você ganhou ✨**+$get[xpDrop] PDA**!]
-$addCmdReactions[⭐]
+$addCmdReactions[🏆]
 
 $setUserVar[msgXP;$sum[$getUserVar[msgXP;$authorID;$guildID];$get[xpDrop]];$authorID;$guildID]
 $setUserVar[msgXPtotal;$sum[$getUserVar[msgXPtotal;$authorID;$guildID];$get[xpDrop]];$authorID;$guildID]

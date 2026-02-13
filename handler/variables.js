@@ -13,11 +13,13 @@ client.variables({
   "lastMemberUpdateStatus": "",
   "lastMemberUpdateTime": "",
   "memberVerifiedRole": "1462797987041513574",
+  
   "memberVotedRole": "1468387787949609082",
   "allMemberRole": "1462544909390319960",
   "memberBoosterRole": "1463625995473911853",
   "lastWinMemberRole": "1468306234007486504",
   "memberArtistRole": "1463566238310596682",
+  "memberRestrictedRole": "1471695919098630244",
   "guildIconDefault": "true",
   "memberOfficialArtistRole": "1466120026590417056",
   "memberActiveRole": "1467315513070977168",
@@ -82,5 +84,4 @@ client.variables({
 	"temp_lista": ""
   
 })
-}
-
+} 
