@@ -17,7 +17,7 @@ $addField[1;Atividade do membro (histórico);✨ $getUserVar[msgXPtotal;$findUse
 $addField[1;Atividade do membro (temporada);✨ $getUserVar[msgXP;$findUser[$get[userID]]] | 💬 $getUserVar[messageMonth;$findUser[$get[userID]]]
 
 ]
-$footer[1;$if[$get[badges]==;;$get[badges]\n\n]]
+$footer[1;$replaceText[$get[badges]END; | END;;1]]
 $thumbnail[1;$userAvatar[$findUser[$get[userID]]]]
 $color[1;Random]
 
