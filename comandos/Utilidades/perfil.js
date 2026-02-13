@@ -12,8 +12,9 @@ $get[badges]
 
 ]
 
-$let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;:handshake: **Apoiador** ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;$customEmoji[pats_foxThumbsUp] **Verificado** ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;:shield: **Staff** ;]]
+$let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;:handshake: **Apoiador** ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;$customEmoji[pats_foxThumbsUp] **Verificado** ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;:shield: **Equipe Patinhas** ;]]
 $let[userID;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]
 `
 
 }]
+
