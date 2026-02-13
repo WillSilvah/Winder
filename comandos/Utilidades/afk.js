@@ -14,7 +14,7 @@ $sendMessage[<@$authorID> AFK ativado!]
 },{
 	name: "$alwaysExecute",
 	code: `
-$sendMessage[**$userTag[$mentioned[1]]** está afk!
+$sendMessage[<@$authorID> **$userTag[$mentioned[1]]** está afk!
 {newEmbed:
 {author:$getGlobalUserVar[afkReason;$mentioned[1]]}
 {color:Red}
