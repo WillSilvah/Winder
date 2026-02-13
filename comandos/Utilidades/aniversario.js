@@ -5,15 +5,15 @@ module.exports = [{
     category: "Interativo",
     usage: "aniversario 17/01",
     code: `
-$sendMessage[<@$authorID> | Sucesso! Lembrarei o seu aniversário para o dia **$formatDate[$message[1];DD/MM]**.]
+$sendMessage[<@$authorID> | Sucesso! Lembrarei o seu aniversário para o dia **$splitText[1]/$splitText[2]**.]
 $clientTyping
 
-$setUserVar[birthday;$formatDate[$message[1];DD/MM];$authorID;$guildID]
-
+$setUserVar[birthday;$splitText[1]/$splitText[2];$authorID;$guildID]
 
 $onlyIf[$isNumber[$splitText[1]]$isNumber[$splitText[2]]==truetrue;<@$authorID> | Data inválida! Use apenas números no formato \`DD/MM\`.]
 $onlyIf[$charCount[$message[1]]==5;<@$authorID> | Formato incorreto! Use \`DD/MM\` (Ex: 17/01).]
 $textSplit[$message[1];/]
+
 
 $timezone[America/Recife]
 
