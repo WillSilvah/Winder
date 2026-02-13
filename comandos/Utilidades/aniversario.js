@@ -27,9 +27,10 @@ $let[cmdName;$commandName]
     usage: "aniversarios",
     code: `
 $setVar[temp_lista;]
-$let[msgId;$sendMessage[<@$authorID> 🔍 Procurando aniversariantes do mês... Aguarde.;true]]
 
 $forEachUser[1;{"msgId": "$get[msgId]", "author": "$authorID"};returnAniversarios;endAniversarios]
+
+$let[msgId;$sendMessage[<@$authorID> 🔍 Procurando aniversariantes do mês... Aguarde.;true]]
 
 $clientTyping
 $onlyIf[$argsCount==0;]
