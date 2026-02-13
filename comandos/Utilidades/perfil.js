@@ -7,7 +7,6 @@ module.exports = [{
 	code: `
 $title[1;📃 Perfil de $username[$get[userID]]]
 $description[1;
-$get[badges]
 
 $addField[1;🎮 Minigames ganhos;$getUserVar[minigameMonthWins;$get[userID]] (Mês) | $getUserVar[minigameTotalWins;$get[userID]] (total)]
 
@@ -18,10 +17,12 @@ $addField[1;Atividade do membro (histórico);✨ $getUserVar[msgXPtotal;$get[use
 $addField[1;Atividade do membro (temporada);✨ $getUserVar[msgXP;$get[userID]] | 💬 $getUserVar[messageMonth;$get[userID]]
 
 ]
+$footer[1;$get[badges]]
 $thumbnail[1;$userAvatar[$get[userID]]]
 $color[1;Random]
 
-$let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;🤝 **Apoiador** ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;$customEmoji[pats_foxThumbsUp] **Verificado** ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;🛡 **Equipe Patinhas** ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberActiveRole]]==true;💬 **Membro ativo** ;]]
+$let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;Apoiador | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;Verificado | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;Equipe Patinhas | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberActiveRole]]==true;Membro Ativo;]]
+
 $let[userID;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]
 `
 
