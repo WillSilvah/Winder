@@ -1,14 +1,39 @@
 module.exports = [{
-name: "afk",
-desc: "Vai ficar fora do Discord? Use esse comando e permita-me avisar a outras pessoas que você não pode responder no momento!",
-category: "Utilidades",
-usage: "afk motivo?",
-code: `
-$WriteFile[Recursos/afkSystem/$authorID/status.txt;true;utf8]
+	name: "afk",
+	desc: "Vai ficar fora do Discord? Use esse comando e permita-me avisar a outras pessoas que você não pode responder no momento!",
+	category: "Utilidades",
+	usage: "afk motivo?",
+	code: `
 
-$WriteFile[Recursos/afkSystem/$authorID/reason.txt;$if[$message!=;$message;Acredita que eu também queria saber?];utf8]
+$setGlobalUserVar[afkReason;$if[$message!=;$message;Acredita que eu também queria saber?];$authorID]
+$setGlobalUserVar[afkStatus;true;$authorID]
 
 $sendMessage[<@$authorID> AFK ativado!]
 
+`
+},{
+	name: "$alwaysExecute",
+	code: `
+$sendMessage[**$userTag[$mentioned[1]]** está afk!
+{newEmbed:
+{author:$getGlobalUserVar[afkReason;$mentioned[1];$authorID]}
+{color:Red}
+}
+]
+
+$onlyIf[$readFile[Recursos/afkSystem/$mentioned[1]/status.txt]==true;]
+
+$onlyIf[$getGlobalUserVar[afkStatus;$mentioned[1]==true;]
+$onlyIf[$mentioned[1]!=$authorID;]
+`
+},{
+	name: "$alwaysExecute",
+	code: `
+$sendMessage[<@$authorID> | Olá, que bom que você voltou! ❤️]
+
+$setGlobalUserVar[afkStatus;false;$authorID]
+$setGlobalUserVar[afkReason;;$authorID]
+
+$onlyIf[$getGlobalUserVar[afkStatus;$authorID]==true;]
 `
 }]

@@ -79,6 +79,9 @@ client.variables({
   "warnsTotal": "0",
   "lastWarn": "",
   
+  "afkStatus": "false",
+  "afkReason": "",
+  
   "birthday": "",
   "birthdayChannel": "1463315740403830936",
   "temp_lista": ""
