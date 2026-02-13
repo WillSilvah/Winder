@@ -9,7 +9,7 @@ $title[1;📃 Perfil de $username[$get[userID]]]
 $description[1;
 $get[badges]
 
-$addField[1;Atividade do membro;]
+$addField[1;Atividade do membro (temporada);✨]
 
 
 ]
@@ -19,5 +19,6 @@ $let[userID;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1
 `
 
 }]
+
 
 
