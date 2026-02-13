@@ -5,20 +5,20 @@ module.exports = [{
 	category: "Utilidades",
 	usage: "perfil @user?",
 	code: `
-$title[1;📃 Perfil de $username[$findUser[$get[userID]]]]
+$title[1;📃 Perfil de $username[$findUser[$get[userID];true]]]
 $description[1;
 
-$addField[1;🎮 Minigames ganhos;$getUserVar[minigameMonthWins;$findUser[$get[userID]]] (Mês) | $getUserVar[minigameTotalWins;$findUser[$get[userID]]] (total)]
+$addField[1;🎮 Minigames ganhos;$getUserVar[minigameMonthWins;$findUser[$get[userID];true]] (Mês) | $getUserVar[minigameTotalWins;$findUser[$get[userID];true]] (total)]
 
-$addField[1;Votos dados pelo Discords.com;$getUserVar[votesTotal;$findUser[$get[userID]]] (Mês) | $getUserVar[votesMonth;$findUser[$get[userID]]] (Total)]
+$addField[1;Votos dados pelo Discords.com;$getUserVar[votesTotal;$findUser[$get[userID];true]] (Mês) | $getUserVar[votesMonth;$findUser[$get[userID];true]] (Total)]
 
-$addField[1;Atividade do membro (histórico);✨ $getUserVar[msgXPtotal;$findUser[$get[userID]]] | 💬 $getUserVar[messageTotal;$findUser[$get[userID]]]
+$addField[1;Atividade do membro (histórico);✨ $getUserVar[msgXPtotal;$findUser[$get[userID];true]] | 💬 $getUserVar[messageTotal;$findUser[$get[userID];true]]
 
-$addField[1;Atividade do membro (temporada);✨ $getUserVar[msgXP;$findUser[$get[userID]]] | 💬 $getUserVar[messageMonth;$findUser[$get[userID]]]
+$addField[1;Atividade do membro (temporada);✨ $getUserVar[msgXP;$findUser[$get[userID];true]] | 💬 $getUserVar[messageMonth;$findUser[$get[userID];true]]
 
 ]
 $footer[1;$replaceText[$get[badges]END; | END;;1]]
-$thumbnail[1;$userAvatar[$findUser[$get[userID]]]]
+$thumbnail[1;$userAvatar[$findUser[$get[userID];true]]]
 $color[1;Random]
 
 $let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;🤝 Apoiador | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;✅ Verificado | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;🛡️ Equipe Patinhas | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberActiveRole]]==true;💬 Membro Ativo | ;]]
