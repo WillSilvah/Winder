@@ -16,12 +16,10 @@ $sendMessage[<@$authorID> AFK ativado!]
 	code: `
 $sendMessage[**$userTag[$mentioned[1]]** está afk!
 {newEmbed:
-{author:$getGlobalUserVar[afkReason;$mentioned[1];$authorID]}
+{author:$getGlobalUserVar[afkReason;$mentioned[1]]}
 {color:Red}
 }
 ]
-
-$onlyIf[$readFile[Recursos/afkSystem/$mentioned[1]/status.txt]==true;]
 
 $onlyIf[$getGlobalUserVar[afkStatus;$mentioned[1]]==true;]
 $onlyIf[$mentioned[1]!=$authorID;]
