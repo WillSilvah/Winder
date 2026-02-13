@@ -30,5 +30,7 @@ $let[cmdName;$commandName]
     type: "awaited",
     code: `
 $modifyChannelPerms[$channelID;1471695919098630244;-viewchannel]
+
+$onlyIf[$channelID=!1463277652562411787;]
 `
 }]
