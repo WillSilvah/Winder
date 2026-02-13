@@ -27,10 +27,6 @@ $wait[2s]
 $forEachUser[1;{};returnAniversarios;]
 $setVar[temp_lista;]
 $let[msgId;$sendMessage[🔍 Vasculhando registros... Aguarde.;true]]
-
-$onlyIf[$argsCount==0;]
-$ifAwaited[$argsCount!=0;{execute:cmdinfo-await}]
-$let[cmdName;$commandName]
 `
 },{
     name: "returnAniversarios",
