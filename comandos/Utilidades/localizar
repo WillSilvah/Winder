@@ -1,0 +1,9 @@
+module.exports = [{
+name: "localizar",
+desc: "Quantos furries tem em cada estado? E quais são eles?",
+category: "Utilidades",
+usage: "localizar sigladoestado?",
+code: `
+$clientTyping
+`
+}]
