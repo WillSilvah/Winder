@@ -49,6 +49,8 @@ $let[cmdName;$commandName]
     type: "awaited",
     code: `
 $setVar[temp_lista;$getVar[temp_lista]🎂 **$getUserVar[birthday;$authorID]** - <@$authorID>\n]
+$onlyIf[$splitText[2]==$formatDate[$dateStamp;M];]
+$textSplit[$getUserVar[birthday;$authorID];/]
 $onlyIf[$getUserVar[birthday;$authorID]!=;]
 $onlyIf[$isBot[$authorID]==false;]
 `
