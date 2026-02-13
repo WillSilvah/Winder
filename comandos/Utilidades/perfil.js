@@ -21,7 +21,8 @@ $footer[1;$if[$get[badges]==;;$get[badges]\n\n]]
 $thumbnail[1;$userAvatar[$findUser[$get[userID]]]]
 $color[1;Random]
 
-$let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;🤝 Apoiador;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;$if[$get[badges]!=; | ;]✅ Verificado;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;$if[$get[badges]!=; | ;]🛡️ Equipe Patinhas;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberActiveRole]]==true;$if[$get[badges]!=; | ;]💬 Membro Ativo;]]
+$let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;🤝 Apoiador | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;✅ Verificado | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;🛡️ Equipe Patinhas | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberActiveRole]]==true;💬 Membro Ativo | ;]]
+$let[userID;$findUser[$message[1];true]]
 
 $let[userID;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]
 `
