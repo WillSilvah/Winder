@@ -14,9 +14,7 @@ $onlyIf[$isNumber[$splitText[1]]$isNumber[$splitText[2]]==truetrue;<@$authorID> 
 $onlyIf[$charCount[$message[1]]==5;<@$authorID> | Formato incorreto! Use \`DD/MM\` (Ex: 17/01).]
 $textSplit[$message[1];/]
 
-
 $timezone[America/Recife]
-
 $onlyIf[$argsCount>0;]
 $ifAwaited[$argsCount==0;{execute:cmdinfo-await}]
 $let[cmdName;$commandName]
@@ -28,18 +26,12 @@ $let[cmdName;$commandName]
     category: "Interativo",
     usage: "aniversarios",
     code: `
-$editMessage[$get[msgId];<@$authorID> {newEmbed:
-{title:🗓️ Lista de Aniversários}
-{description:$if[$getVar[temp_lista]==;❌ Nenhum aniversário registrado.;$getVar[temp_lista]]}
-{color:Red}
-{footer:Utilize $getGuildVar[prefixo]aniversário DD/MM para adicionar o seu aniversário!}}]
-$wait[2s]
-$forEachUser[1;{};returnAniversarios;]
 $setVar[temp_lista;]
-$let[msgId;$sendMessage[<@$authorID> 🔍 Procurando aniversários... Aguarde.;true]]
+$let[msgId;$sendMessage[<@$authorID> 🔍 Procurando aniversariantes do mês... Aguarde.;true]]
+
+$forEachUser[1;{"msgId": "$get[msgId]", "author": "$authorID"};returnAniversarios;endAniversarios]
 
 $clientTyping
-
 $onlyIf[$argsCount==0;]
 $ifAwaited[$argsCount!=0;{execute:cmdinfo-await}]
 $let[cmdName;$commandName]
@@ -53,5 +45,15 @@ $onlyIf[$splitText[2]==$formatDate[$dateStamp;M];]
 $textSplit[$getUserVar[birthday;$authorID];/]
 $onlyIf[$getUserVar[birthday;$authorID]!=;]
 $onlyIf[$isBot[$authorID]==false;]
+`
+},{
+    name: "endAniversarios",
+    type: "awaited",
+    code: `
+$editMessage[$awaitData[msgId];<@$awaitData[author]> {newEmbed:
+{title:🗓️ Aniversariantes do Mês ($monthName)}
+{description:$if[$getVar[temp_lista]==;❌ Nenhum aniversário registrado este mês.;$getVar[temp_lista]]}
+{color:Red}
+{footer:Utilize $getGuildVar[prefixo]aniversário DD/MM para participar!}}]
 `
 }]
