@@ -18,7 +18,7 @@ $timezone[America/Recife]
 	type: "awaited",
 	code: `
 $forEachUser[1;{};setMemberStatus;]
-$let[guildID;$guildID]
+$let[guildID;1462224054676099094]
 	
 `
 },{
