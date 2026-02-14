@@ -25,11 +25,8 @@ $color[1;Random]
 $let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;🤝 Apoiador | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;✅ Verificado | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;🛡️ Equipe Patinhas | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberActiveRole]]==true;💬 Membro Ativo | ;]]
 $let[userID;$findUser[$message[1];true]]
 
-$let[userID;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]
+$let[userID;$ifAwaited[$findUser[$message[1];true]==;$message[1];$findUser[$message[1];true]]
 $timezone[America/Recife]
 `
 
 }]
-
-
-
