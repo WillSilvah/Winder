@@ -30,10 +30,20 @@ Hoje é o aniversário do <@$authorID>! Vamos dar parabéns a ele?
 }]]
 
 
-$onlyIf[$formatDate[$getUserVar[birthday;$authorID;$guildID];DD/MM]==$formatDate[$dateStamp;DD/MM];]
-$onlyIf[$isBot==false;]
+$onlyIf[$getUserVar[birthday;$authorID;$guildID]==$formatDate[$dateStamp;DD]/$if[$formatDate[$dateStamp;M]<10;0$formatDate[$dateStamp;M];$formatDate[$dateStamp;M]];]
+$onlyIf[$authorID!=$clientID;]
+
+$ifAwaited[$authorID==$clientID;{execute:winder-birthday}
 $timezone[America/Recife]
 
+`
+},{
+	name: "winder-birthday",
+	type: "awaitded",
+	code: `
+	
+
+$onlyIf[$getUserVar[birthday;$clientID;$guildID]==$formatDate[$dateStamp;DD]/$if[$formatDate[$dateStamp;M]<10;0$formatDate[$dateStamp;M];$formatDate[$dateStamp;M]];]
 `
 },{
 	name: "onDeleteBirthday",
