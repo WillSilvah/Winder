@@ -7,6 +7,7 @@ module.exports = [{
 	code: `
 $title[1;📃 Perfil de $username[$findUser[$get[userID];true]]]
 $description[1;
+$if[$getUserVar[birthday;$findUser[$get[userID];true];$guildID]!=;🎂 **$getUserVar[birthday;$findUser[$get[userID];true];$guildID]/$year**;🎂 Utilize **$getGuildVar[prefixo]aniversário** para registrar uma data!]
 
 $addField[1;🎮 Minigames ganhos;$getUserVar[minigameMonthWins;$findUser[$get[userID];true]] (Mês) | $getUserVar[minigameTotalWins;$findUser[$get[userID];true]] (total)]
 
@@ -25,9 +26,7 @@ $let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole
 $let[userID;$findUser[$message[1];true]]
 
 $let[userID;$ifAwaited[$findUser[$message[1]]==;$message[1];$findUser[$message[1]]]
+$timezone[America/Recife]
 `
 
 }]
-
-
-
