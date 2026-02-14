@@ -1,6 +1,6 @@
 module.exports = [{
 	name: "perfil",
-	aliases: ["userinfo"],
+	aliases: ["pda", "atividade"],
 	desc: "Veja informações de um usuário",
 	category: "Utilidades",
 	usage: "perfil @user?",
@@ -30,3 +30,6 @@ $timezone[America/Recife]
 `
 
 }]
+
+
+
