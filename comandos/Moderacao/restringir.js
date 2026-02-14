@@ -9,7 +9,7 @@ $sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
 
 $removeRoles[$guildID;$get[userID];O membro foi restringido.;1462797987041513574;1463566238310596682]
 $giveRole[$guildID;$get[userID];1471695919098630244]
-$forEachChannel[1;{};restringirCanais;]
+$forEachChannel[10;{};restringirCanais;]
 
 $onlyIf[$get[userID]!=$authorID;<@$authorID> | Você não pode restringir a si mesmo!]
 $onlyIf[$findUser[$message[1];false]!=;❌ Usuário não encontrado!]
@@ -31,6 +31,6 @@ $let[cmdName;$commandName]
     code: `
 $modifyChannelPerms[$channelID;1471695919098630244;-viewchannel]
 
-$onlyIf[$channelID=!1463277652562411787;]
+$onlyIf[$channelID!=1463277652562411787;]
 `
 }]
