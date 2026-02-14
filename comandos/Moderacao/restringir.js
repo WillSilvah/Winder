@@ -5,13 +5,13 @@ module.exports = [{
 	category: "Moderação",
 	usage: "restringir @user/userID",
 	code: `
-$sendMessage[<@$authorID> **$username[$get[userID]]** foi **$get[puniType]**!]
+$sendMessage[<@$authorID> **$username[$findUser[$get[userID]]]** foi **$get[puniType]**!]
 
-$removeRoles[$guildID;$get[userID];O membro foi restringido.;1462797987041513574;1463566238310596682]
-$giveRole[$guildID;$get[userID];1471695919098630244]
-$forEachChannel[10;{};restringirCanais;]
+$removeRoles[$guildID;$findUser[$get[userID]];O membro foi restringido.;1462797987041513574;1463566238310596682]
+$giveRole[$guildID;$findUser[$get[userID]];1471695919098630244]
+$forEachChannel[1;{};restringirCanais;]
 
-$onlyIf[$get[userID]!=$authorID;<@$authorID> | Você não pode restringir a si mesmo!]
+$onlyIf[$findUser[$get[userID]]!=$authorID;<@$authorID> | Você não pode restringir a si mesmo!]
 $onlyIf[$findUser[$message[1];false]!=;❌ Usuário não encontrado!]
 
 $let[staffID;$authorID]
@@ -29,8 +29,9 @@ $let[cmdName;$commandName]
     name: "restringirCanais",
     type: "awaited",
     code: `
+$modifyChannelPerms[1463277652562411787;1471695919098630244;+viewchannel]
+
 $modifyChannelPerms[$channelID;1471695919098630244;-viewchannel]
 
-$onlyIf[$channelID!=1463277652562411787;]
 `
 }]
