@@ -1,6 +1,7 @@
 module.exports = [{
-name: "winder backup",
-aliases: ['backup'],
+name: "w!winder backup",
+aliases: ["w!backup", "w-winder backup", "w-backup"],
+nonPrefixed: "true",
 desc: "Crie um backup",
 category: "Desenvolvedor",
 usage: "winder backup",
