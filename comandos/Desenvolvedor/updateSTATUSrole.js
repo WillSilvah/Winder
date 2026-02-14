@@ -16,82 +16,81 @@ $suppressErrors[Eu tentei executar o comando \`$commandName\` e eu juro que eu f
 	name: "setMemberStatus",
 	type: "awaited",
 	code: `
-$ifAwaited[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]==true;
+$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole;1462224054676099094]]==true;
 {execute:memberIsVerified};
 {execute:memberIsNotVerified}
 ]
 	
-$ifAwaited[$hasRoles[$guildID;$authorID;$getGuildVar[memberOfficialArtistRole;$guildID]]==true;
+$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberOfficialArtistRole;1462224054676099094]]==true;
 {execute:memberIsOfficialArtist};
 {execute:memberIsNotOfficialArtist}
 ]
 	
-$ifAwaited[$hasRoles[$guildID;$authorID;$getGuildVar[memberArtistRole;$guildID]]==true;
+$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberArtistRole;1462224054676099094]]==true;
 {execute:memberIsArtist};
 {execute:memberIsNotArtist}
 ]
 
-$ifAwaited[$hasRoles[$guildID;$authorID;$getGuildVar[allStaffRole;$guildID]]==true;
+$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[allStaffRole;1462224054676099094]]==true;
 {execute:memberIsStaff};
 {execute:memberIsNotStaff}
 ]
 
-$onlyIf[$get[guildID]==$guildID;]
 `
 },{
 	name: "memberIsStaff",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsStaff;true;$authorID;$guildID]
+$setUserVar[memberIsStaff;true;$authorID;1462224054676099094]
 	
 `
 },{
 	name: "memberIsNotStaff",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsStaff;false;$authorID;$guildID]
+$setUserVar[memberIsStaff;false;$authorID;1462224054676099094]
 	
 `
 },{
 	name: "memberIsArtist",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsArtist;true;$authorID;$guildID]
+$setUserVar[memberIsArtist;true;$authorID;1462224054676099094]
 	
 `
 },{
 	name: "memberIsNotArtist",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsArtist;false;$authorID;$guildID]
+$setUserVar[memberIsArtist;false;$authorID;1462224054676099094]
 	
 `
 },{
 	name: "memberIsOfficialArtist",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsOfficialArtist;true;$authorID;$guildID]
+$setUserVar[memberIsOfficialArtist;true;$authorID;1462224054676099094]
 	
 `
 },{
 	name: "memberIsNotOfficialArtist",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsOfficialArtist;false;$authorID;$guildID]
+$setUserVar[memberIsOfficialArtist;false;$authorID;1462224054676099094]
 	
 `
 },{
 	name: "memberIsVerified",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsVerified;true;$authorID;$guildID]
+$setUserVar[memberIsVerified;true;$authorID;1462224054676099094]
 	
 `
 },{
 	name: "memberIsNotVerified",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsVerified;false;$authorID;$guildID]
+$setUserVar[memberIsVerified;false;$authorID;1462224054676099094]
 	
 `
 }]
