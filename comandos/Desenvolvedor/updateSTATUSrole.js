@@ -64,17 +64,17 @@ $setUserVar[memberIsArtist;false;$authorID;$guildID]
 	
 `
 },{
-	name: "memberIsArtist",
+	name: "memberIsOfficialArtist",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsArtist;true;$authorID;$guildID]
+$setUserVar[memberIsOfficialArtist;true;$authorID;$guildID]
 	
 `
 },{
-	name: "memberIsNotArtist",
+	name: "memberIsNotOfficialArtist",
 	type: "awaited",
 	code: `
-$setUserVar[memberIsArtist;false;$authorID;$guildID]
+$setUserVar[memberIsOfficialArtist;false;$authorID;$guildID]
 	
 `
 },{
