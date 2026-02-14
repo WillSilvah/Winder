@@ -44,6 +44,14 @@ client.variables({
   "votesTotal": "0",
   "votesMonth": "0",
   "remindDM": "true",
+  "memberIsolated": "false",
+  "memberIsolatedRole": "14716959190986302",
+  
+  "memberIsArtist": "false",
+  "memberIsOfficialArtist": "false",
+  "memberIsVerified": "false",
+  "memberIsStaff": "false",
+  
   
   "minigameStatus": "false",
   "minigameWord": "",
@@ -84,8 +92,7 @@ client.variables({
   
   "birthday": "",
   "birthdayChannel": "1463315740403830936",
-  "temp_lista": ""
-  
+  "temp_lista": "" 
 })
 
 } 
