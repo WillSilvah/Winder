@@ -17,7 +17,7 @@ $timezone[America/Recife]
 	name: "verifyMemberStatus",
 	type: "awaited",
 	code: `
-$forEachUser[5;{};setMemberStatus;completeMemberStatus]
+$forEachUser[1;{};setMemberStatus;completeMemberStatus]
 	
 `
 },{
