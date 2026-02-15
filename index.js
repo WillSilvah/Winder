@@ -1,6 +1,6 @@
 const { AoiClient } = require("aoi.js");
 const { LoadCommands } = require("aoi.js");
-const { Database } = require("aoi.sqlite");
+const { Database } = require("aoijs.mysql");
 
 require('dotenv').config();
 
