@@ -31,7 +31,7 @@ const client = new AoiClient({
     });
     
 new Database(client, {
-    url: process.env.DATABASE_URL,
+    url: 'process.env.DATABASE_URL',
     tables: ['main'],
     debug: "true",
     keepAoiDB: "true"
