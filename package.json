@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "aoi.mysql": "github:tyowk/aoijs.mysql"
+    "aoi.mysql": "github:tyowk/aoijs.mysql",
     "aoi.js": "github:aoijs/aoi.js",
     "discord.js": "^14.25.1",
     "dotenv": "17.2.3",
