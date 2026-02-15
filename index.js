@@ -17,9 +17,9 @@ const client = new AoiClient({
 	aoiWarning: "true",
     intents: ["Guilds", "GuildMembers", "GuildBans", "DirectMessages", "MessageContent", "GuildMessages","GuildVoiceStates"],
     events: ["onInteractionCreate", "onMessageDelete","onMessage", "onChannelCreate", "onThreadCreate", "onJoin", "onLeave", "onMemberUpdate", "onBanAdd"],
-	//onInteractionCreate
-	disableFunctions : ["$clientToken"],
+	disableFunctions: ["$clientToken"],
     autoUpdates: false,
+    keepAoiDB: false,
     mobilePlatform: false,
     guildOnly: true,
     respondOnEdit: {
@@ -33,7 +33,8 @@ const client = new AoiClient({
 new Database(client, {
     url: process.env.DATABASE_URL,
     tables: ['main'],
-    debug: "true"
+    debug: "true",
+    keepAoiDB: "true"
 });
 
 
