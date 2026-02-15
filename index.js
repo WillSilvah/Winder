@@ -19,7 +19,6 @@ const client = new AoiClient({
     events: ["onInteractionCreate", "onMessageDelete","onMessage", "onChannelCreate", "onThreadCreate", "onJoin", "onLeave", "onMemberUpdate", "onBanAdd"],
 	//onInteractionCreate
 	disableFunctions : ["$clientToken"],
-	disableAoiDB: true,
     autoUpdates: false,
     mobilePlatform: false,
     guildOnly: true,
@@ -34,7 +33,6 @@ const client = new AoiClient({
 new Database(client, {
     url: process.env.DATABASE_URL,
     tables: ['main'],
-    keepAoiDB: "false",
     debug: "true"
 });
 
