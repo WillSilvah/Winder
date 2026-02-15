@@ -24,14 +24,9 @@ $forEachUser[5;{};setMemberStatus;completeMemberStatus]
 name: "auto-reset",
 type: "awaited",
 code: `
-
-
 $resetGuildVar[membersJoinedMonth]
-$resetUserVar[metaXP]
-$resetUserVar[messageMonth]
-$resetUserVar[votesMonth]
-$resetUserVar[msgXP]
 $resetGuildVar[guildMonthMessages]
+$forEachUser[5;{};resetUserMonthVars;resetUserMonthVarsComplete]
 
 $setGuildVar[guildPDAmedia;$get[media];$guildID]
 $let[media;$truncate[$math[$get[soma]/$membersCount[$guildID;all;false]]]]
@@ -45,5 +40,31 @@ $writeFile[Recursos/session.json;
     "banner": "https://i.ibb.co/7NXHgpxQ/banner-pr-temporada.png"
 };utf8]
 
+`
+},{
+	name: "resetUserMonthVars",
+	type: "awaited",
+	code: `
+$resetUserVar[metaXP]
+$resetUserVar[messageMonth]
+$resetUserVar[votesMonth]
+$resetUserVar[msgXP]
+
+$deleteVar[metaXP;$authorID]
+$deleteVar[messageMonth;$authorID]
+$deleteVar[votesMonth;$authorID]
+$deleteVar[msgXP;$authorID]
+
+	
+`
+},{
+	name: "resetUserMonthVarsComplete",
+	type: "awaited",
+	code: `
+$channelSendMessage[$getVar[consoleChat];{newEmbed:
+{title:Variáveis de temporada resetadas.}
+{color:Green}
+}]
+	
 `
 }]
