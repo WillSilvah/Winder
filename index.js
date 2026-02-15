@@ -31,11 +31,13 @@ const client = new AoiClient({
     });
     
 new Database(client, {
-  location: "./database.db",
-  tables: ["main"],
-  logging: true,
-  debug: true,
+    url: process.env.DATABASE_URL,
+    tables: ['main'],
+    keepAoiDB: "false",
+    debug: "true"
 });
+
+
 
 require("./handler/variables.js")(client);
 require("./handler/status.js")(client);

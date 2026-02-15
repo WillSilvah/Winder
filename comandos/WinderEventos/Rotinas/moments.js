@@ -26,7 +26,7 @@ type: "awaited",
 code: `
 $resetGuildVar[membersJoinedMonth]
 $resetGuildVar[guildMonthMessages]
-$forEachUser[5;{};resetUserMonthVars;resetUserMonthVarsComplete]
+$forEachUser[1;{};resetUserMonthVars;resetUserMonthVarsComplete]
 
 $setGuildVar[guildPDAmedia;$get[media];$guildID]
 $let[media;$truncate[$math[$get[soma]/$membersCount[$guildID;all;false]]]]
