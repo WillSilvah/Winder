@@ -5,6 +5,7 @@ const { Database } = require("aoijs.mysql");
 require('dotenv').config();
 
 const TOKEN = process.env.TOKEN;
+const DATABASE_URL = process.env.DATABASE_URL;
 
 const fs = require('fs');
 
