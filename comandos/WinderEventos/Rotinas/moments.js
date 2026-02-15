@@ -9,7 +9,7 @@ every: 999,
 code: `
 $ifAwaited[$date-$hour:$minute:$second==01-00:00:00;{execute:auto-reset}]
 
-$ifAwaited[$hour:$minute:$second==02:00:00;{execute:verifyMembersStatus}]
+$ifAwaited[$hour:$minute:$second==02:00:00;{execute:verifyMemberStatus}]
 
 $timezone[America/Recife]
 `
@@ -17,8 +17,7 @@ $timezone[America/Recife]
 	name: "verifyMemberStatus",
 	type: "awaited",
 	code: `
-$forEachUser[1;{};setMemberStatus;]
-$let[guildID;1462224054676099094]
+$forEachUser[5;{};setMemberStatus;completeMemberStatus]
 	
 `
 },{
