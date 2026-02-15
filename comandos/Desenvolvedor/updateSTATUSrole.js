@@ -16,25 +16,13 @@ $suppressErrors[Eu tentei executar o comando \`$commandName\` e eu juro que eu f
 	name: "setMemberStatus",
 	type: "awaited",
 	code: `
-$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole;1462224054676099094]]==true;
-{execute:memberIsVerified};
-{execute:memberIsNotVerified}
-]
+$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole;1462224054676099094]]==true;{execute:memberIsVerified};{execute:memberIsNotVerified}]
 	
-$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberOfficialArtistRole;1462224054676099094]]==true;
-{execute:memberIsOfficialArtist};
-{execute:memberIsNotOfficialArtist}
-]
+$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberOfficialArtistRole;1462224054676099094]]==true;{execute:memberIsOfficialArtist};{execute:memberIsNotOfficialArtist}]
 	
-$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberArtistRole;1462224054676099094]]==true;
-{execute:memberIsArtist};
-{execute:memberIsNotArtist}
-]
+$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberArtistRole;1462224054676099094]]==true;{execute:memberIsArtist};{execute:memberIsNotArtist}]
 
-$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[allStaffRole;1462224054676099094]]==true;
-{execute:memberIsStaff};
-{execute:memberIsNotStaff}
-]
+$ifAwaited[$hasRoles[1462224054676099094;$authorID;$getGuildVar[allStaffRole;1462224054676099094]]==true;{execute:memberIsStaff};{execute:memberIsNotStaff}]
 
 `
 },{
