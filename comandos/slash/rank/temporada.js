@@ -6,11 +6,11 @@ $author[$env[session;name];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $title[Top fofoqueiros ativos | $if[$option[pagina]!=;$option[pagina];1]° Página]
 $description[
 $memberLeaderboard[pdaMonth;$guildID;desc;10;1;\n;data;pos;
-  $return[$inlineCode[$env[pos]° $username[$env[data;id]] -> $env[data;value]]]
+  $return[$env[pos]° $bold[$username[$env[data;id]]] -> $env[data;value]]
 ]
 
 $memberLeaderboard[messageMonth;$guildID;desc;10;1;\n;data;pos;
-  $return[$inlineCode[$env[pos]° $username[$env[data;id]] -> $env[data;value]]]
+  $return[$env[pos]° $bold[$username[$env[data;id]]] -> $env[data;value]]
 ]
 ]
 $footer[Você: 💬$getMemberVar[messageMonth;$authorID] ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]]
