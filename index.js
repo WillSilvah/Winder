@@ -1,4 +1,5 @@
-const { ForgeClient } = require("@tryforge/forgescript")
+const { ForgeClient } = require("@tryforge/forgescript");
+const { ForgeDB } = require("@tryforge/forge.db");,
 require('dotenv').config();
 
 const TOKEN = process.env.TOKEN;
@@ -19,6 +20,11 @@ const client = new ForgeClient({
         "GuildMessageTyping",
         "MessageContent"
     ],
+    extensions: [
+        new ForgeDB({
+            type: "sqlite" 
+	 })
+	],
     events: ["clientReady", "interactionCreate", "messageCreate"],
     prefixes: [
         "w+"
