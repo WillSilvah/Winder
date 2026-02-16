@@ -7,9 +7,9 @@ $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
 $let[basicPDA;$if[$get[textDivisorPDA]>=30;30;$get[textDivisorPDA]]]
 
-$let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getVar[memberVotedRole]]==true;5;0]]
+$let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVotedRole]]==true;5;0]]
 
-$let[bonusBoosterPDA;$if[$hasRoles[$guildID;$authorID;$getVar[memberBoosterRole]]==true;1;0]]
+$let[bonusBoosterPDA;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberBoosterRole]]==true;1;0]]
 
 $let[pda;$math[$get[bonusBoosterPDA]+$get[bonusVotePDA]+$get[basicPDA]]]
 
