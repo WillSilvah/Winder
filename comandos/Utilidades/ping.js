@@ -6,7 +6,7 @@ category: "Informação",
 usage: "ping",
     code: `
  $reply[$channelID;$get[msgID];false]
-$sendMessage[<@$authorID> | $username[$clientID] Ping: **$pingms**]
+$let[msgID;$sendMessage[<@$authorID> | $username[$clientID] Ping: **$pingms**;true]
 
 `
 }]
