@@ -5,11 +5,15 @@ $jsonLoad[session;$readFile[Recursos/session.json]]
 $author[$env[session;name];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $title[Top fofoqueiros ativos | $if[$option[pagina]!=;$option[pagina];1]° Página]
 $description[
-$memberLeaderboard[pdaMonth;$guildID;desc;10;$if[$option[pagina]!=;$option[pagina];1];;;;$getMemberLeaderboardValue[pdaMonth;desc;$env[;id];$guildID]° **$username[$env[;id]]** -> ✨️$getMemberLeaderboardValue[pdaMonth;desc;$env[;id];$guildID]]
-
-$memberLeaderboard[messageMonth;$guildID;desc;10;$if[$option[pagina]!=;$option[pagina];1];;;;$getMemberLeaderboardValue[messageMonth;desc;$env[;id];$guildID]° **$username[$env[;id]]** -> 💬$getMemberLeaderboardValue[messageMonth;desc;$env[;id];$guildID]]
+$memberLeaderboard[pdaMonth;$guildID;desc;10;1;\n;data;pos;
+  $return[$env[pos]° $username[$env[data;id]] -> ✨️$env[data;value]]
 ]
-$footer[Você: 💬$getMemberVar[messageMonth;$authorID] | ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]]
+
+$memberLeaderboard[messageMonth;$guildID;desc;10;1;\n;data;pos;
+  $return[$env[pos]° $username[$env[data;id]] -> 💬$env[data;value]]
+]
+]
+$footer[Você: 💬$getMemberVar[messageMonth;$authorID] ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]]
 $color[Blue]
 
   `,
