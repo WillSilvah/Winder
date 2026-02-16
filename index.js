@@ -18,7 +18,7 @@ const client = new ForgeClient({
     ]
 });
 
-client.commands.load("./comandos/basic");
-client.applicationCommands.load("./comandos/slash");
+client.commands.load("./comandos/basic/");
+client.applicationCommands.load("./comandos/slash/");
 
 client.login(process.env.TOKEN)
