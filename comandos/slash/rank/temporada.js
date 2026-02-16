@@ -9,7 +9,7 @@ $memberLeaderboard[pdaMonth;$guildID;desc;10;$if[$option[pagina]!=;$option[pagin
 
 $memberLeaderboard[messageMonth;$guildID;desc;10;$if[$option[pagina]!=;$option[pagina];1];;;;$getMemberLeaderboardValue[messageMonth;desc;$env[;id];$guildID]° **$username[$env[;id]]** -> 💬$getMemberLeaderboardValue[messageMonth;desc;$env[;id];$guildID]]
 ]
-$footer[Você: 💬$getMemberVar[messageMonth;$authorID] | ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]
+$footer[Você: 💬$getMemberVar[messageMonth;$authorID] | ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]]
 $color[Blue]
 
   `,
