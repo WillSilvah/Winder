@@ -42,7 +42,7 @@ data: {
   "name_localizations": {
     "en-GB": "historical",
     "en-US": "historical",
-    "pt-BR": "temporada"
+    "pt-BR": "historico"
   },
   "description_localizations": {
     "en-GB": "See the ranking of members in a category",
