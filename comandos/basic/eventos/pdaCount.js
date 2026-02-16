@@ -2,6 +2,11 @@ module.exports = {
     type: "messageCreate",
     code: `
 $cooldown[60s;]
+$onlyIf[$argsCount[$message]>=3;]
+$onlyIf[$checkContains[$message;lorem;gboard]==false;]
+$onlyIf[$getGuildVar[minigameStatus]==false;]
+$onlyIf[$startsWith[$message;+;=;w!+w+;/;m!]==false;]
+$onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
