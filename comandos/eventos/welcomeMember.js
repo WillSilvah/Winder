@@ -1,5 +1,6 @@
 module.exports = {
-    type: "guildMemberAdd",
+	name: "teste",
+    type: "messageCreate",
     code: `
 $sendMessage[$getGuildVar[batePapo];<@$authorID> 
 $author[1;@$username[$authorID];https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
@@ -13,6 +14,7 @@ $color[#020afc]
 
 $addActionRow
 $addButton[https://discord.com/channels/1462224054676099094/1462590504188383304;Conheça a Patinhas!;Link;;false]
+]
 ]
 
 
