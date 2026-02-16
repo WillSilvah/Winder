@@ -1,8 +1,7 @@
 module.exports = {
-	name: "teste",
-    type: "messageCreate",
+    type: "guildMemberAdd",
     code: `
-$sendMessage[1472742861526142996;<@$authorID> 
+$sendMessage[$getGuildVar[batePapo];
 $author[@$username[$authorID];https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
 $title[$username seja bem-vindo(a)!;https://www.bing.com/search?q=Como+ser+bem+recebido+em+um+lugar&setmkt=pt-BR&PC=EMMX01&form=LWS002&scope=web&darkschemeovr=1]
 $description[
