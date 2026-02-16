@@ -16,6 +16,8 @@ const client = new ForgeClient({
     prefixes: [
         "w+"
     ]
-})
+});
+
+client.commands.load("./comandos");
 
 client.login(process.env.TOKEN)
