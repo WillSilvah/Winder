@@ -99,11 +99,11 @@ ForgeDB.variables({
   
   "msgLast": "",
   "msgBoost": "1",
-  "msgXP": "0",
-  "msgXPtotal": "0",
+  "pdaMonth": "0",
+  "pdaTotal": "0",
   "guildPDAmedia": "0",
-  "metaXPtotal": "0",
-  "metaXP": "1000",
+  "metaPDATotal": "0",
+  "metaPDA": "1000",
   
   "reminderStatus": "true",
   

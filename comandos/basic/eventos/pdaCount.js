@@ -2,6 +2,11 @@ module.exports = {
     type: "messageCreate",
     code: `
 $cooldown[60s;]
+$onlyIf[$argsCount[$message]>=3;]
+$onlyIf$checkContains[$message;lorem;gboard]==false;]
+$onlyIf[$getGuildVar[minigameStatus]==false;]
+$onlyIf[$startsWith[$message;+;=;w!+w+;/;m!]==false;]
+$onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
@@ -13,8 +18,8 @@ $let[bonusBoosterPDA;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberBooster
 
 $let[pda;$math[$get[bonusBoosterPDA]+$get[bonusVotePDA]+$get[basicPDA]]]
 
-$setMemberVar[msgXP;$sum[$getMemberVar[msgXP];$get[pda]]]
-$setMemberVar[msgXPtotal;$sum[$getMemberVar[msgXPtotal];$get[pda]]]
+$setMemberVar[pda;$sum[$getMemberVar[pda];$get[pda]]]
+$setMemberVar[pdatotal;$sum[$getMemberVar[pdatotal];$get[pda]]]
 
 `,
 nonprefixed: true
