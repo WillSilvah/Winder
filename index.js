@@ -120,7 +120,7 @@ const client = new ForgeClient({
 });
 
 ForgeDB.variables({
-  "versão": "Winder 3.7",
+  "versão": "",
   "consoleChat": "1465218335389257802",
   "staffChat": "1462554187719114752",
   "allStaffRole": "1462546916821696612",
