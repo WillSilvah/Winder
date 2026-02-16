@@ -1,6 +1,8 @@
 module.exports = {
   code: `
-$author[Author]
+$jsonLoad[session;$readFile[Recursos/session.json]]
+
+$author[$env[session;name] | $if[$option[pagina]!=;$option[pagina];1]]
 $title[$option[tipo]]
 $description[
 berro
@@ -36,6 +38,22 @@ data: {
         "en-GB": "What type of rank?",
         "en-US": "What type of rank?",
         "pt-BR": "Qual tipo de rank?"
+      }
+    },
+    {
+      "type": 4,
+      "name": "pagina",
+      "description": "Insira um número",
+      "min_value": 1,
+      "description_localizations": {
+        "en-GB": "Enter a number",
+        "en-US": "Enter a number",
+        "pt-BR": "Insira um número"
+      },
+      "name_localizations": {
+        "en-GB": "page",
+        "en-US": "page",
+        "pt-BR": "pagina"
       }
     }
   ],
