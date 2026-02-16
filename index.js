@@ -19,6 +19,7 @@ const client = new ForgeClient({
         "GuildMessageTyping",
         "MessageContent"
     ],
+    events: ["clientReady", "interactionCreate", "messageCreate"],
     prefixes: [
         "w+"
     ],
