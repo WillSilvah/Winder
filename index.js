@@ -5,17 +5,29 @@ const TOKEN = process.env.TOKEN;
 
 const client = new ForgeClient({
     intents: [
-        "GuildMessages",
         "Guilds",
+        "GuildMembers",
+        "GuildModeration",
+        "GuildEmojisAndStickers",
+        "GuildIntegrations",
+        "GuildWebhooks",
+        "GuildInvites",
+        "GuildVoiceStates",
+        "GuildPresences",
+        "GuildMessages",
+        "GuildMessageReactions",
+        "GuildMessageTyping",
         "MessageContent"
-    ],
-    events: [
-        "messageCreate",
-        "clientReady"
     ],
     prefixes: [
         "w+"
-    ]
+    ],
+    prefixCaseInsensitive: true,
+    respondOnEdit: 60000,
+    trackers: {
+        invites: true,
+        voice: true
+    }
 });
 
 client.commands.load("./comandos/basic/");

@@ -8,6 +8,9 @@ module.exports = {
     "description": "Quanto tempo o Winder responde?",
     "integration_types": [
     0
-  ]
+    ],
+    "contexts": [
+    0
+    ]
   },
 }
