@@ -14,7 +14,7 @@ $memberLeaderboard[messageMonth;$guildID;desc;10;1;\n;data;pos;
 ]
 ]
 $footer[Você: 💬$getMemberVar[messageMonth;$authorID] ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]]
-$image[$env[session;name]]
+$image[$env[session;banner]]
 $color[Blue]
 
   `,
