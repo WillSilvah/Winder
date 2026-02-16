@@ -11,13 +11,10 @@ $addField[Versão do $username[$clientID];$getGlobalVar[version]
 ]
 $thumbnail[$userAvatar[$clientID]]
 $color[Blue]
-
-
 ]
 $log[---------------
 $username[$clientID] está ligado! >w<
 ---------------
-
 ]
 `,
 }
