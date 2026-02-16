@@ -1,6 +1,12 @@
 module.exports = {
   code: `
-$option[tipo]
+$author[Author]
+$title[$option[tipo]]
+$description[
+berro
+]
+$footer[footer]
+$color[Blue]
   `,
 data: {
   "type": 1,
