@@ -9,8 +9,7 @@ $memberLeaderboard[pdaMonth;$guildID;desc;10;1;\n;data;pos;
   $return[$env[pos]° $username[$env[data;id]] -> ✨️$env[data;value]]
 ]
 
-$memberLeaderboard[messageMonth;$guildID;desc;10;1;\n;data;pos;
-  $return[$env[pos]° $username[$env[data;id]] -> 💬$env[data;value]]
+$memberLeaderboard[messageMonth;$guildID;desc;10;1;\n;data;pos;\`$return[$env[pos]°\` \`**$username[$env[data;id]]**\` -> \`💬$env[data;value]\`]
 ]
 ]
 $footer[Você: 💬$getMemberVar[messageMonth;$authorID] ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]]
