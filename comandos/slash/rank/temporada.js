@@ -3,7 +3,6 @@ module.exports = {
 $option[tipo]
   `,
 data: {
-  {
   "type": 1,
   "description": "Veja o ranking de membros em uma categoria",
   "options": [
