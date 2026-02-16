@@ -2,13 +2,27 @@ module.exports = {
   code: `
 $jsonLoad[session;$readFile[Recursos/session.json]]
 
-$author[$env[session;name] | $if[$option[pagina]!=;$option[pagina];1]]
-$title[$option[tipo]]
+$ifx[
+$if[$option[tipo]==temporada;
+$author[$env[session;name] | $if[$option[pagina]!=;$option[pagina];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
+$title[Top fofoqueiros ativos | Temporada]
 $description[
-berro
+
 ]
 $footer[footer]
 $color[Blue]
+]
+$elseIf[$option[tipo]==histórico;
+$author[$env[session;name] | $if[$option[pagina]!=;$option[pagina];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
+$title[Top fofoqueiros ativos | Histórico]
+$description[
+
+]
+$footer[footer]
+$color[Blue]
+
+]
+]
   `,
 data: {
   "type": 1,
