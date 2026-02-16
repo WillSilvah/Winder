@@ -2,13 +2,6 @@ module.exports = {
     type: "messageCreate",
     code: `
 $cooldown[60s;]
-$onlyIf[$argsCount[$message]>=3;]
-$onlyIf[$checkContains[$message;lorem;gboard]==false;]
-$onlyIf[$getGuildVar[minigameStatus]==false;]
-$onlyIf[$checkContains[$channelID;1462546608758718515]==false;]
-$onlyIf[$checkContains[$channelCategoryID[$channelID];1462224055884189780]==true;]
-$onlyIf[$stringStartsWith[$message;+;=;w!+w+;/;m!]==false;] 
-$onlyIf[$hasRoles[$guildID;$authorID;$getVar[memberVerifiedRole]]==true;]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
