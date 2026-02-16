@@ -2,7 +2,6 @@ module.exports = {
   code: `
 $jsonLoad[session;$readFile[Recursos/session.json]]
 
-$ifx[
 $if[$option[tipo]==msgs;
 $author[$env[session;name] | $if[$option[pagina]!=;$option[pagina];1];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $title[Top fofoqueiros ativos | Pontos d]
