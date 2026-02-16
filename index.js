@@ -1,5 +1,5 @@
 const { ForgeClient } = require("@tryforge/forgescript");
-const { ForgeDB } = require("@tryforge/forge.db");,
+const { ForgeDB } = require("@tryforge/forge.db");
 require('dotenv').config();
 
 const TOKEN = process.env.TOKEN;
