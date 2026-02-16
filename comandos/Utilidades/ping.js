@@ -6,4 +6,4 @@ module.exports = {
     name: "ping",
     description: "Quanto tempo o Winder responde?",
   },
-};
+}
