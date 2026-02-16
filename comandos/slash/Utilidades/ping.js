@@ -9,5 +9,5 @@ module.exports = {
     "integration_types": [
     0
   ]
-  }
+  },
 }
