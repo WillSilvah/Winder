@@ -1,12 +1,9 @@
-module.exports = [{
+module.exports = {
+  code: `
+    Ping: \`$pingMS\` | Uptime: <t:$round[$math[$math[$getTimestamp-$uptime]/1000];0]:R>
+  `,
+  data: {
     name: "ping",
-    type: "messageCreate",
-    desc: "Quanto tempo o bot responde?",
-category: "Informação",
-usage: "ping",
-    code: `
- $reply[$channelID;$get[msgID];false]
-$let[msgID;$sendMessage[<@$authorID> | $username[$clientID] Ping: **$pingms**;true]
-
-`
-}]
+    description: "Quanto tempo o Winder responde?",
+  },
+};

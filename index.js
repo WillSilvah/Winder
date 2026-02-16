@@ -18,6 +18,6 @@ const client = new ForgeClient({
     ]
 });
 
-client.commands.load("./comandos");
+client.commands.load("./comandos/");
 
 client.login(process.env.TOKEN)
