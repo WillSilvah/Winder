@@ -6,7 +6,7 @@ module.exports = [{
   required: true
 },
 {
-  name: 'staffid',
+  name: 'staffID',
   required: true
 },
 {
@@ -20,7 +20,7 @@ module.exports = [{
 ],
 code: `
 $author[Equipe Patinhas: Nossa toca, tem regras.;https://cdn.discordapp.com/emojis/1466597066892640456.png?size=2048]
-$title[$userTag[$env[userID]] | $env[puniType]]
+$title[$userTag[$env[userID]] | $env[type]]
 $description[1;
 $addField[💀 Motivo;$env[reason]]
 
@@ -30,7 +30,5 @@ $footer[ID do usuário: $env[userID]]
 $color[Orange]
 $thumbnail[$userAvatar[$env[userID]]]
 $addButton[Ver perfil;link;discord://-/users/$env[userID];false;👀]
-
-$return[$env[staffid]]
 `
 }]
