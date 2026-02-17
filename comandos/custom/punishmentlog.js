@@ -21,7 +21,7 @@ module.exports = [{
 code: `
 $author[Equipe Patinhas: Nossa toca, tem regras.;https://cdn.discordapp.com/emojis/1466597066892640456.png?size=2048]
 $title[$userTag[$env[userID]] | $env[type]]
-$description[1;
+$description[
 $addField[💀 Motivo;$env[reason]]
 
 $addField[🛡️ Punido por;<@$env[staffID]>]
