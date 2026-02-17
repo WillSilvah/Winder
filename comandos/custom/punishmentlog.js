@@ -32,3 +32,4 @@ $thumbnail[$userAvatar[$env[userID]]]
 $addButton[Ver perfil;link;discord://-/users/$env[userID];false;👀]
 `
 }]
+// algo mudou
