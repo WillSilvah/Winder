@@ -7,7 +7,7 @@ $author[$username[$clientID] está ligado!]
 $description[
 $addField[Versão do ForgeScript;$version;true]
 $addField[Versão do NodeJS;$nodeVersion;true]
-$addField[Versão do $username[$clientID];$getGlobalVar[version]
+$addField[Versão do $username[$clientID];$getGlobalVar[version]]
 ]
 $thumbnail[$userAvatar[$clientID]]
 $color[Blue]
