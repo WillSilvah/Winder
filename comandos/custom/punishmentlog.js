@@ -29,7 +29,8 @@ $addField[🛡️ Punido por;<@$env[staffID]>]
 $footer[ID do usuário: $env[userID]]
 $color[Orange]
 $thumbnail[$userAvatar[$env[userID]]]
-$addButton[Ver perfil;link;discord://-/users/$env[userID];false;👀]
+$addActionRow
+$addButton[discord://-/users/$get[userID];Ver perfil;Link;👀;false]
 `
 }]
 // algo mudou
