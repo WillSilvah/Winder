@@ -26,7 +26,7 @@ $addField[💀 Motivo;$env[reason]]
 
 $addField[🛡️ Punido por;$userTag[$env[staffID]]]
 ]
-$thumbnail[1;$userAvatar[$env[staffID]]]
+$thumbnail[$userAvatar[$env[staffID]]]
 $color[Orange]
 $footer[Equipe Patinhas: Nossa toca, tem regras.]
 
