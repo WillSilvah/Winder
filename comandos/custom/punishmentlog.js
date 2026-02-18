@@ -33,4 +33,3 @@ $addActionRow
 $addButton[discord://-/users/$get[userID];Ver perfil;Link;👀;false]
 `
 }]
-// algo mudou
