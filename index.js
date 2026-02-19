@@ -1,207 +1,55 @@
-const { ForgeClient } = require("@tryforge/forgescript");
-const { ForgeDB } = require("@tryforge/forge.db");
-const { ForgeCron } = require("forgecron");
+const { AoiClient } = require("aoi.js");
 
 require('dotenv').config();
 
 const TOKEN = process.env.TOKEN;
 
-const client = new ForgeClient({
-    intents: [
-        "Guilds",
-        "GuildMembers",
-        "GuildModeration",
-        "GuildEmojisAndStickers",
-        "GuildIntegrations",
-        "GuildWebhooks",
-        "GuildInvites",
-        "GuildVoiceStates",
-        "GuildPresences",
-        "GuildMessages",
-        "GuildMessageReactions",
-        "GuildMessageTyping",
-        "MessageContent"
-    ],
-    extensions: [
-        new ForgeDB({
-            type: "sqlite" 
-	 }),
-		new ForgeCron()
-	],
-    events: [
-        "autoModerationActionExecution",
-        "autoModerationRuleCreate",
-        "autoModerationRuleDelete",
-        "autoModerationRuleUpdate",
-        "channelCreate",
-        "channelDelete",
-        "channelPinsUpdate",
-        "channelUpdate",
-        "clientReady",
-        "debug",
-        "emojiCreate",
-        "emojiDelete",
-        "emojiUpdate",
-        "entitlementCreate",
-        "entitlementDelete",
-        "entitlementUpdate",
-        "error",
-        "guildAuditLogEntryCreate",
-        "guildAvailable",
-        "guildBanAdd",
-        "guildBanRemove",
-        "guildCreate",
-        "guildDelete",
-        "guildIntegrationsUpdate",
-        "guildMemberAdd",
-        "guildMemberAvailable",
-        "guildMemberRemove",
-        "guildMemberUpdate",
-        "guildScheduledEventCreate",
-        "guildScheduledEventDelete",
-        "guildScheduledEventUpdate",
-        "guildScheduledEventUserAdd",
-        "guildScheduledEventUserRemove",
-        "guildSoundboardSoundCreate",
-        "guildSoundboardSoundDelete",
-        "guildSoundboardSoundUpdate",
-        "guildUnavailable",
-        "guildUpdate",
-        "interactionCreate",
-        "inviteCreate",
-        "inviteDelete",
-        "messageCreate",
-        "messageDelete",
-        "messageDeleteBulk",
-        "messagePollVoteAdd",
-        "messagePollVoteRemove",
-        "messageReactionAdd",
-        "messageReactionRemove",
-        "messageReactionRemoveAll",
-        "messageReactionRemoveEmoji",
-        "messageUpdate",
-        "presenceUpdate",
-        "roleCreate",
-        "roleDelete",
-        "roleUpdate",
-        "shardDisconnect",
-        "shardError",
-        "shardReady",
-        "shardReconnecting",
-        "shardResume",
-        "stageInstanceCreate",
-        "stageInstanceDelete",
-        "stageInstanceUpdate",
-        "stickerCreate",
-        "stickerDelete",
-        "stickerUpdate",
-        "subscriptionCreate",
-        "subscriptionDelete",
-        "subscriptionUpdate",
-        "threadCreate",
-        "threadDelete",
-        "threadMemberUpdate",
-        "threadUpdate",
-        "typingStart",
-        "userUpdate",
-        "voiceChannelEffectSend",
-        "voiceStateUpdate",
-        "webhooksUpdate"
-    ],
-    prefixes: [
-        "w!"
-    ],
-    prefixCaseInsensitive: true,
-    respondOnEdit: 60000,
-    trackers: {
-        invites: true,
-        voice: true
-    }
+const fs = require('fs');
+
+const client = new AoiClient({
+	token: process.env.TOKEN,
+	prefix: "w+",
+    respondToBots: false,
+	aoiLogs: "true",
+	aoiWarning: "true",
+    intents: ["Guilds", "GuildMembers", "GuildBans", "DirectMessages", "MessageContent", "GuildMessages","GuildVoiceStates"],
+    events: ["onInteractionCreate", "onMessageDelete","onMessage", "onChannelCreate", "onThreadCreate", "onJoin", "onLeave", "onMemberUpdate", "onBanAdd"],
+	//onInteractionCreate
+	disableFunctions : ["$clientToken"],
+	database: {
+    type: "aoi.db",
+    db: require("aoi.db"),
+    dbType: "KeyValue",
+    tables: ["main"],
+    securityKey: "a-32-characters-long-string-here",
+    },
+    autoUpdates: false,
+    mobilePlatform: false,
+    guildOnly: true,
+    respondOnEdit: {
+    commands: true,
+    time: 600000
+},
+    suppressAllErrors: false,
+    errorMessage: ["", ""]
+    });
+
+
+const { LoadCommands } = require("aoi.js");
+
+require("./handler/variables.js")(client);
+require("./handler/status.js")(client);
+
+client.loadCommands("./comandos/", false);
+
+client.functionManager.createFunction({
+    name: "$updateVersion",
+    type: "aoi.js",
+    code: `$writeFile[Recursos/version.json;$username[$clientID] $date.$formatDate[$dateStamp;MM;utf8]`
 });
 
-ForgeDB.variables({
-  "versão": "",
-  "consoleChat": "1465218335389257802",
-  "staffChat": "1462554187719114752",
-  "allStaffRole": "1462546916821696612",
-  "batePapo": "1462224055884189781",
-  "anunciosChat": "1462224055884189779",
-  "punishmentLog": "1462561551679623329",
-  "rankedChat": "1466734269572579399",
-  "guildID": "1462224054676099094",
-  "lastMemberUpdateStatus": "",
-  "lastMemberUpdateTime": "",
-  "memberVerifiedRole": "1462797987041513574",
-  "memberSupporterRole": "1463632725981532234",
-  "memberVotedRole": "1463342375370887209",
-  "allMemberRole": "1462544909390319960",
-  "memberBoosterRole": "1463625995473911853",
-  "lastWinMemberRole": "1465399687535398932",
-  "memberArtistRole": "1463566238310596682",
-  "guildIconDefault": "true",
-  "memberOfficialArtistRole": "1466120026590417056",
-  "memberActiveRole": "1467315513070977168",
-  "logMemberActiveChat": "1467318550925410485",
-  "prefixo": "w!",
-  "pdaLoggerChannel": "1465378100505219072",
-  "lastMemberGuild": "",
-  "membersMeta": "0",
-  "msgPerMinute": "0",
-  "lastMessage": "",
-  "lastMessageChannel": "",
-  "lastMessageTime": "",
-  "messageMonth": "0",
-  "messageTotal": "0",
-  "messageMeta": "1000",
-  "guildMonthMessages": "0",
-  "guildTotalMessages": "0",
-  "guildMonthMessagesMeta": "0",
-  "membersJoinedMonth": "0",
-  "lastUserSendMessage": "",
-  "votesTotal": "0",
-  "votesMonth": "0",
-  "remindDM": "true",
-  "memberIsolated": "false",
-  "memberIsolatedRole": "14716959190986302",
-  
-  "memberIsArtist": "false",
-  "memberIsOfficialArtist": "false",
-  "memberIsVerified": "false",
-  "memberIsStaff": "false",
-  
-  "minigameStatus": "false",
-  "minigameWord": "",
-  "minigameLastUser": "",
-  "minigameXPmax": "0",
-  "minigameXPmin": "0",
-  "minigameEmit": "false",
-  "minigameType": "",
-  "minigameTotalWins": "0",
-  "minigameMonthWins": "0",
-  
-  "msgLast": "",
-  "msgBoost": "1",
-  "pdaMonth": "0",
-  "pdaTotal": "0",
-  "guildPDAmedia": "0",
-  "metaPDATotal": "0",
-  "metaPDA": "1000",
-  
-  "reminderStatus": "true",
-  
-  "warnsTotal": "0",
-  "lastWarn": "",
-  "afkStatus": "false",
-  "afkReason": "",
-  
-  "birthday": "",
-  "birthdayChannel": "1463315740403830936",
-  "temp_lista": ""
-})
-
-client.commands.load("./comandos/basic/");
-client.commands.load("./comandos/eventos/");
-client.applicationCommands.load("./comandos/slash/");
-client.functions.load('./comandos/custom/');
-
-client.login(process.env.TOKEN)
+client.functionManager.createFunction({
+    name: "$getVersion", 
+    type: "aoi.js",
+    code: `$readFile[Recursos/version.json]`
+});
