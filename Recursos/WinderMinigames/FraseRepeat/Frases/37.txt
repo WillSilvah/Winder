@@ -1,0 +1,4 @@
+{
+	"texto": "A história de todas as sociedades até hoje existentes é a história das lutas de classes.",
+	"autor": "Karl Marx"
+}

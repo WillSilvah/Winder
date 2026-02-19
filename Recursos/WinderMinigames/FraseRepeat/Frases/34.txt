@@ -1,0 +1,4 @@
+{
+	"texto": "Billie Jean is not my lover, she's just a girl who claims that I am the one, but the kid is not my son.",
+	"autor": "Billie Jean - Michael Jackson"
+}

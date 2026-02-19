@@ -1,0 +1,4 @@
+{
+	"texto": "I'm beautiful in my way 'cause God makes no mistakes, I'm on the right track, baby, I was born this way.",
+	"autor": "Born This Way - Lady Gaga"
+}

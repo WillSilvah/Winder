@@ -1,0 +1,4 @@
+{
+	"texto": "Não importa o que aconteça, eu nunca vou desistir dos meus amigos.",
+	"autor": "Tails - Sonic the Hedgehog"
+}

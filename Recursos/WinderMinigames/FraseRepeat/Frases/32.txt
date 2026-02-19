@@ -1,0 +1,4 @@
+{
+	"texto": "A história vai se lembrar de nós.",
+	"autor": "Prince Henry - Vermelho, Branco e Sangue Azul"
+}
