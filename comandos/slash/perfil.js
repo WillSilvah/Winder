@@ -1,4 +1,4 @@
-module.exports = [{
+module.exports = {
   code: `
   $let[userID;$findUser[$option[member];true]]
 $let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;🤝 Apoiador | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;✅ Verificado | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;🛡️ Equipe Patinhas | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberActiveRole]]==true;💬 Membro Ativo | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allMemberRole]]==true;🐾 Peludo | ;]]
@@ -83,4 +83,4 @@ data: {
     "pt-BR": "Ver perfil"
   }
 },
-}]
+}
