@@ -73,14 +73,14 @@ $color[Random]
 data: {
   "type": 3,
   "name": "Ver perfil",
-  "contexts": [
-    0,
-    1
-  ],
   "name_localizations": {
     "en-GB": "View profile",
     "en-US": "View profile",
     "pt-BR": "Ver perfil"
-  }
+  },
+  "integration_types": [
+    0,
+    1
+  ]
 },
 }
