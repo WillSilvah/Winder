@@ -83,4 +83,4 @@ data: {
     "pt-BR": "Ver perfil"
   }
 },
-}
+}]
