@@ -11,14 +11,13 @@ Vamos agradecer por esta ação generosa?
 $color[Pink]
 ]
 
-$clientTyping[$channelID]
+$startTyping[$channelID]
 $wait[20s]
 $sendMessage[$getGuildVar[batePapo];
 <@$authorID> Obrigado ❤️, é gratificante pensar que você gastou mais de $bold[R$24,99] só para fazer a gente feliz. 😻
 Eu já gostava muito de você e receber uma ação desse tipo me fez gostar ainda mais!
 Você ganhou uns presentinhos, você merece! ^w^ 👏
 ]
-
 
 `
 }
