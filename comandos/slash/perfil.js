@@ -77,12 +77,6 @@ data: {
     "en-GB": "View profile",
     "en-US": "View profile",
     "pt-BR": "Ver perfil"
-  },
-  "integration_types": [
-    0
-  ],
-  "contexts": [
-    0
-  ]
+  }
 },
 }
