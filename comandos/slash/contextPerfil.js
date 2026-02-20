@@ -1,6 +1,7 @@
 module.exports = {
-  code: `
-  $let[userID;$findUser[$option[member];true]]
+code: `
+$ephemeral
+$let[userID;$authorID]
 $let[badges;$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberSupporterRole]]==true;🤝 Apoiador | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;✅ Verificado | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allStaffRole]]==true;🛡️ Equipe Patinhas | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberActiveRole]]==true;💬 Membro Ativo | ;]$if[$hasRoles[$guildID;$get[userID];$getGuildVar[allMemberRole]]==true;🐾 Peludo | ;]]
 
 
@@ -20,30 +21,14 @@ $addField[Atividade do membro (temporada);✨ $getMemberVar[pdaMonth;$get[userID
 $footer[$replaceText[$get[badges]END; | END;;1]]
 $thumbnail[$userAvatar[$get[userID]]]
 $color[Random]
-
   `,
 data: {
-  "type": 1,
-  "name": "perfil",
-  "description": "Veja informações sobre a atividade de um membro",
+  "type": 3,
+  "name": "Ver perfil",
   "name_localizations": {
-    "en-GB": "profile",
-    "en-US": "profile",
-    "pt-BR": "perfil"
-  },
-  "options": [
-    {
-      "type": 3,
-      "description": "Menção, ID ou @username.",
-      "name": "membro",
-      "name_localizations": {
-        "en-GB": "member",
-        "en-US": "member",
-        "pt-BR": "membro"
-      },
-      "required": false,
-      "autocomplete": false
-    }
-  ]
+    "en-GB": "View profile",
+    "en-US": "View profile",
+    "pt-BR": "Ver perfil"
+  }
 },
 };
