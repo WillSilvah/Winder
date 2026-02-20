@@ -23,7 +23,7 @@ $thumbnail[$userAvatar[$get[userID]]]
 $color[Random]
   `,
 data: {
-  "type": 3,
+  "type": 2,
   "name": "Ver perfil",
   "name_localizations": {
     "en-GB": "View profile",
