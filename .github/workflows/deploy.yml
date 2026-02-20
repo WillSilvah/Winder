@@ -20,7 +20,7 @@ jobs:
       - name: Deploy Main
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: |
-          cd /home/will/services/winder
+          cd /home/will/winder
           git fetch origin main
           git reset --hard origin/main
           npm install
@@ -30,7 +30,7 @@ jobs:
       - name: Deploy Canary
         if: github.ref == 'refs/heads/canary' || github.event_name == 'schedule'
         run: |
-          cd /home/will/services/winder-canary
+          cd /home/will/winder-canary
           git fetch origin canary
           git reset --hard origin/canary
           npm install
@@ -40,7 +40,7 @@ jobs:
       - name: Deploy Controller
         if: github.ref == 'refs/heads/controller' && github.event_name == 'push'
         run: |
-          cd /home/will/services/winder-controller
+          cd /home/will/winder-controller
           git fetch origin controller
           git reset --hard origin/controller
           npm install
