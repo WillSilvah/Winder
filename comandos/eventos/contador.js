@@ -8,7 +8,7 @@ $!setChannelName[1463122813736063016;⭐️ | falta $sub[$getGuildVar[membersM
 
 $!setChannelName[1465534760620392722;💬 | $getGuildVar[guildMonthMessages;1462224054676099094] mensagens]
 
-;30m;contador]
+;10m;contador]
 
 `
 }
