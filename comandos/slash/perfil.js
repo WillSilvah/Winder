@@ -79,13 +79,10 @@ data: {
     "pt-BR": "Ver perfil"
   },
   "integration_types": [
-    0,
-    1
+    0
   ],
   "contexts": [
-    0,
-    1,
-    2
+    0
   ]
 },
 }
