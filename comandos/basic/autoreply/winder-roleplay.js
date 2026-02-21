@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = [{
     type: "messageCreate",
     code: `
 $cooldown[$guildID;10m]
@@ -9,8 +9,7 @@ $randomText[$randomText[Miau;Meow;Meooww;Miaauu]! :3;*lambe você* >w<;*abraça 
 
 `,
 nonprefixed: true
-},
-{
+},{
     type: "messageCreate",
     code: `
 $onlyIf[$mentioned[0]==$clientID;]
@@ -70,4 +69,4 @@ $sendMessage[$channelID;Boop! >w<]
 ]
 `,
 nonprefixed: true
-},
+}]
