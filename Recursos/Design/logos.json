@@ -1,9 +1,15 @@
 {
-  "pats-orange-light": "https://i.ibb.co/F47676pR/pats-orange-light.png",
-  "pats-orange-dark": "https://i.ibb.co/sJKW9fGZ/pats-orange-dark.png",
-  "pats-red-light": "https://i.ibb.co/RpnZ5xH0/pats-red-light.png",
-  "pats-red-dark": "https://i.ibb.co/Pzm985S9/pats-red-dark.png",
-  "pats-pink-light": "https://i.ibb.co/Jj1VwWsF/pats-pink-light.png",
-  "pats-pink-dark": "https://i.ibb.co/cK7H7ry2/pats-pink-dark.png",
-  "pats-sleep-logo": "https://i.ibb.co/N6q4DP0P/pats-sleep-logo.png"
+  "light": {
+    "orange": "https://i.ibb.co/F47676pR/pats-orange-light.png",
+    "red": "https://i.ibb.co/RpnZ5xH0/pats-red-light.png",
+    "pink": "https://i.ibb.co/Jj1VwWsF/pats-pink-light.png"
+  },
+  "dark": {
+    "orange": "https://i.ibb.co/sJKW9fGZ/pats-orange-dark.png",
+    "red": "https://i.ibb.co/Pzm985S9/pats-red-dark.png",
+    "pink": "https://i.ibb.co/cK7H7ry2/pats-pink-dark.png"
+  },
+  "others": {
+    "sleep": "https://i.ibb.co/N6q4DP0P/pats-sleep-logo.png"
+  }
 }
