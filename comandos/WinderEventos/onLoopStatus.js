@@ -5,6 +5,6 @@ channel: "$getVar[consoleChat]",
 executeOnStartup: "false",
 every: 15000,
 code: `
-$setStatus[$linuxRam MB | $cpu% | $uptime[humanize] | $pingms | $getVersion;playing;dnd]
+$setStatus[$ram MB | $cpu% | $uptime[humanize] | $pingms | $getVersion;playing;dnd]
 `
 }]
