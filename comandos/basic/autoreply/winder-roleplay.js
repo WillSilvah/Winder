@@ -2,14 +2,15 @@ module.exports = {
     type: "messageCreate",
     code: `
 $cooldown[$guildID;10m]
-$onlyIf[$random[1;10]==5;]
+$onlyIf[$randomNumber[1;10]==5;]
 $reply
 $randomText[$randomText[Miau;Meow;Meooww;Miaauu]! :3;*lambe você* >w<;*abraça você* >w<;*sniff sniff* 👃 $randomText[Vai tomar banho!!; Está de banho tomado, parabéns!;Que cheiro é esse?];*se esfregando em suas pernas e ronrona* UwU;*boop! OwO*;*morde você* >:3;*pat pat* OwO;*cafuné* OwO;*morde você* UwU;*boop* $emoji[$emojiID[pats_foxShy]]]
 
 
 `,
 nonprefixed: true
-},{
+},
+{
     type: "messageCreate",
     code: `
 $onlyIf[$mentioned[0]==$clientID;]
@@ -69,4 +70,4 @@ $sendMessage[$channelID;Boop! >w<]
 ]
 `,
 nonprefixed: true
-}
+},
