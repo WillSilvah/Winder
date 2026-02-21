@@ -11,7 +11,7 @@ $if[$checkContains[*$toLowerCase[$message]*;abraço;abraça;hug]==true;
 $startTyping[$channelID]
 $wait[2s]
 $reply
-$sendMessage[$channelID;$randomText[*Fica com raiva* >:(;*Morde de volta* :3;*Corre* :(]]
+$sendMessage[$channelID;$randomText[*Abraço você* >w<;*Abraço de volta* >w<;*Abraça e ronrona* UwU]
 
 ]
 $elseif[$checkContains[$toLowerCase[$message];miau;meow;meeooww;meeow;meoow;meoww;miiau;miaau;miauu;meeeooowww]==true;
