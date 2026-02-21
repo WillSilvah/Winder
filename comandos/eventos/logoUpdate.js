@@ -1,4 +1,4 @@
-module.exports = {
+# module.exports = {
  type: 'clientReady',
  code: `
 $cron[$!setGuildIcon[1462224054676099094;$logo[light;orange];Domingo de manhã]
