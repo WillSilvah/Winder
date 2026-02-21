@@ -1,6 +1,6 @@
 module.exports = {
   code: `
-  $onlyIf[$math!=;Eu juro para você que a expressão $inlineCode[$option[calc]] não existe, eu estudei anos sobre matemática para isso.]
+  $onlyIf[$math[$option[calc]]!=;Eu juro para você que a expressão $inlineCode[$option[calc]] não existe, eu estudei anos sobre matemática para isso.]
 O resultado é: **$math[$option[calc]]**.
 
   `,
