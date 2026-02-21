@@ -9,4 +9,4 @@ $randomText[$randomText[Miau;Meow;Meooww;Miaauu]! :3;*lambe você* >w<;*abraça 
 
 `,
 nonprefixed: true
-},
+}
