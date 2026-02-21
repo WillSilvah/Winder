@@ -26,7 +26,7 @@ $description[
 Ativei um $bold[bônus de pontos de atividades] para ganhar mais pontos enquanto conversa e interage na patinhas!
 Neste mês você já votou **$getUserVar[votesMonth;$authorID]** vezes!
 ]
-$footer[Quer ser lembrado de votar? use $getGuildVar[prefixo]lembrarvoto]
+$footer[Quer ser lembrado de votar? use /lembrete voto]
 $color[Red]
 ]
 ]
