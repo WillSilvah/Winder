@@ -6,6 +6,7 @@ $description[
 $addField[Horário;$hour:minute:second]
 $addField[Data;$day/$month/$year]
 $footer[Faltando fuso horário? Sugira!]
+]
 $color[Random]
   `,
 data: {
