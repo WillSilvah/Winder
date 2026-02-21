@@ -14,7 +14,7 @@ nonprefixed: true
     code: `
 $onlyIf[$mentioned[0]==$clientID;]
 
-$ifx
+$ifx[
 $if[$checkContains[*$toLowerCase[$message]*;abraço;abraça;hug]==true;
 
 $cooldown[$authorID;1m]
