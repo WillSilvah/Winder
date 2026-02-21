@@ -1,4 +1,4 @@
-module.exports = [{
+module.exports = {
     type: "messageCreate",
     code: `
 $cooldown[$guildID;10m]
@@ -69,4 +69,4 @@ $sendMessage[$channelID;Boop! >w<]
 ]
 `,
 nonprefixed: true
-}]
+}
