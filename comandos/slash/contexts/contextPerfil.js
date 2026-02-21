@@ -30,6 +30,10 @@ data: {
     "en-GB": "View profile",
     "en-US": "View profile",
     "pt-BR": "Ver perfil"
-  }
+  },
+  "integration_types": [
+    1,
+    0
+  ]
 },
 };
