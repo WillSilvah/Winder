@@ -7,6 +7,7 @@ $onlyIf[$channelID==1462796515578876079;]
 $onlyIf[$checkContains[$getEmbeds[1462796515578876079;$messageID;0;description];Bump done!]]
 
 $sendMessage[1462796515578876079;Obrigado por ajudar!]
+
 $advancedTimeout[$esc[
 $sendMessage[1462796515578876079;<@&1462953076091785370>
 $title[🎉 Hora de dar /bump!]
@@ -17,7 +18,7 @@ Usa o comando </bump:947088344167366698>
 $color[Green]
 ]
 ]
-;2h;BumpReminder;]
+;2h;BumpReminder]
 
 `
 }

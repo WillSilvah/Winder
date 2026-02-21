@@ -18,11 +18,24 @@ $deleteGuildVar[guildMonthMessages]
     type: "clientReady",
     code: `
 $cron[$sendMessage[$getGuildVar[$batePapo];
-
-
-
-];0 6 * * *;America/Recife]    
-    
-    
+# 🌞 BOM DIA PELUDOS!
+**Vamos levantar e tomar uma xícara de café?**
+];0 6 * * *;America/Recife]
+$cron[$sendMessage[$getGuildVar[$batePapo];
+# 🍱 JÁ PODE ALMOÇAR!
+**Liberei o almoço, vão almoçar enquanto dá tempo!**
+];38 11 * * *;America/Recife]
+$cron[
+# 🍱 FIM DO ALMOÇO
+**Permissão para almoçar foi cancelada.**
+;34 13 * * *;America/Recife]
+$cron[
+# 🌃 BOA NOITE
+**Bora finalizar o dia com muitos cafunés e conversa boa! Quem vem? ✨
+;0 18 * * *;America/Recife]
+$cron[
+# 😴 VAMOS DORMIR?
+**Vamos tirar um cochilo?**
+;0 22 * * *;America/Recife]
 `
 }]
