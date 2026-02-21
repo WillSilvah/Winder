@@ -4,11 +4,11 @@ module.exports = {
   $timezone[$option[zone]]
   $title[🕑 Rélogio]
 $description[
-## $hour:minute:second
+## $hour:$minute:$second
 **$day/$month/$year**
 ]
 $footer[Faltando fuso horário? Sugira!]
-$thumbanail[https://abs.twimg.com/emoji/v2/72x72/1f559.png]
+$thumbnail[https://abs.twimg.com/emoji/v2/72x72/1f559.png]
 $color[Random]
   `,
 data: {
