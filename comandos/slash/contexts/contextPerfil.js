@@ -25,15 +25,10 @@ $thumbnail[$userAvatar[$get[userID]]]
 $color[Random]
   `,
 data: {
-  "type": 1,
+  "type": 2,
   "name": "ver-perfil",
   "integration_types": [
-    1
-  ],
-  "contexts": [
-    0,
-    1,
-    2
+    0
   ]
 },
 };
