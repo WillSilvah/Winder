@@ -27,5 +27,12 @@ $color[Random]
 data: {
   "type": 2,
   "name": "ver-perfil",
+  "integration_types": [
+    0
+  ],
+  "contexts": [
+    0,
+    1
+  ]
 },
 };
