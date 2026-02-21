@@ -27,7 +27,7 @@ data: {
   "options": [
     {
       "type": 3,
-      "name": "ativar",
+      "name": "status",
       "description": "Ative ou desative o lembrete de votos.",
       "required": true,
       "choices": [
