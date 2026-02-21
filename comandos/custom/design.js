@@ -5,7 +5,7 @@ module.exports == [{
       name: 'tema',
       description: "Tema da logo: light/dark",
       required: true
-    }
+    },
     {
       name: 'cor',
       description: "A cor",
