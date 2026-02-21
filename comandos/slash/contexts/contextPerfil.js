@@ -1,7 +1,8 @@
 module.exports = {
 code: `
 $ephemeral
-$let[userID;$targetMember[id]]
+$let[userID;$targetMessage[authorID]]
+$onlyIf[$memberExists[1462224054676099094;$get[userID]]==true;<@$authorID> | Este membro não está na Patinhas!]
 
 $let[badges;$if[$hasRoles[1462224054676099094;$get[userID];$getGuildVar[memberSupporterRole]]==true;🤝 Apoiador | ;]$if[$hasRoles[1462224054676099094;$get[userID];$getGuildVar[memberVerifiedRole]]==true;✅ Verificado | ;]$if[$hasRoles[1462224054676099094;$get[userID];$getGuildVar[allStaffRole]]==true;🛡️ Equipe Patinhas | ;]$if[$hasRoles[1462224054676099094;$get[userID];$getGuildVar[memberActiveRole]]==true;💬 Membro Ativo | ;]$if[$hasRoles[1462224054676099094;$get[userID];$getGuildVar[allMemberRole]]==true;🐾 Peludo | ;]]
 
@@ -24,16 +25,12 @@ $thumbnail[$userAvatar[$get[userID]]]
 $color[Random]
   `,
 data: {
-  "type": 2,
+  "type": 3,
   "name": "Ver perfil",
   "name_localizations": {
     "en-GB": "View profile",
     "en-US": "View profile",
     "pt-BR": "Ver perfil"
-  },
-  "integration_types": [
-    1,
-    0
-  ]
+  }
 },
 };
