@@ -13,7 +13,7 @@ module.exports = [{
     }
    ],
    code: `
-$jsonLoad[design;$readFile[Recursos/Design/logos.json]]
-$env[design;$env[tema];$env[cor]]
+$return[$jsonLoad[design;$readFile[Recursos/Design/logos.json]]
+$env[design;$env[tema];$env[cor]]]
 `
 }]
