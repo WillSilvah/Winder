@@ -1,8 +1,9 @@
 module.exports = {
     type: "messageCreate",
     code: `
-$cooldown[$authorID;1m]
 $onlyIf[$mentioned[0]==$clientID;]
+
+$cooldown[$authorID;1m]
 
 $ifx[
 $if[$checkContains[*$toLowerCase[$message]*;abraço;abraça;hug]==true;
