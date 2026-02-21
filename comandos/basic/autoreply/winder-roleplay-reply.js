@@ -56,6 +56,5 @@ $sendMessage[$channelID;Boop! >w<]
 
 ]
 ]
-`,
-nonprefixed: true
+`
 }
