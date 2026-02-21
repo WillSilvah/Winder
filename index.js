@@ -199,9 +199,9 @@ ForgeDB.variables({
   "temp_lista": ""
 })
 
+client.functions.load('./comandos/custom/');
 client.commands.load("./comandos/basic/");
 client.commands.load("./comandos/eventos/");
 client.applicationCommands.load("./comandos/slash/");
-client.functions.load('./comandos/custom/');
 
 client.login(process.env.TOKEN)
