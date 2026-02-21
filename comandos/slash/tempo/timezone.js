@@ -1,8 +1,20 @@
 module.exports = {
   code: `
   $defer
-  $timezone[$option[zone]]
-  $title[🕑 Rélogio]
+$jsonLoad[local;{
+  "America/Recife": "🟦Pernambuco: Recife",
+  "America/Sao_Paulo": "🇧🇷Brasil: Sul/Sudeste/Nordeste",
+  "America/Manaus": "🇧🇷Brasil: Norte",
+  "America/Cuiaba": "🇧🇷Brasil: Mato Grosso",
+  "America/Rio_Branco": "🇧🇷Brasil: Acre",
+  "Europe/Lisbon": "🇵🇹Portugal: Lisboa",
+  "America/New_York": "🇺🇸Estados Unidos: Novo Iorque",
+  "Asia/Shanghai": "🇨🇳 China: Xangai",
+  "America/Argentina/Buenos_Aires": "🇦🇷Argentina: Bueno Aires"
+}]
+
+$timezone[$option[zone]]
+$title[🕑 Rélogio: $env[local;$option[zone]]]
 $description[
 ## $hour:$minute:$second
 **$day/$month/$year**
