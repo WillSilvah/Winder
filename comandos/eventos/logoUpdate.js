@@ -17,7 +17,7 @@ $cron[$!setGuildIcon[1462224054676099094;$logo[light;red];Dia normal de manhã]
 ;0 6 * * 4-6;America/Recife]
 $cron[$!setGuildIcon[1462224054676099094;$logo[dark;red];Dia normal a noite]
 ;0 18 * * 4-6;America/Recife]
-$cron[$!setGuildIcon[1462224054676099094;$logo[others;sleep];Hora de dormir]
+$cron[$!setGuildIcon[1462224054676099094;$logo[dark;sleep];Hora de dormir]
 ;0 22 * * *;America/Recife]
 `
 }
