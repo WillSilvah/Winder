@@ -5,8 +5,7 @@
 node_modules/
 logs/
 *.log
-database.sqlite
-readme.md
+database.sqlite)
 
 # Logs e arquivos do sistema
 npm-debug.log*
