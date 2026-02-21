@@ -2,11 +2,13 @@ module.exports = {
   code: `
   $defer
   $timezone[$option[zone]]
+  $title[🕑 Rélogio]
 $description[
-$addField[Horário;$hour:minute:second]
-$addField[Data;$day/$month/$year]
-$footer[Faltando fuso horário? Sugira!]
+## $hour:minute:second
+**$day/$month/$year**
 ]
+$footer[Faltando fuso horário? Sugira!]
+$thumbanail[https://abs.twimg.com/emoji/v2/72x72/1f559.png]
 $color[Random]
   `,
 data: {
