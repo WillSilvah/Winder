@@ -1,7 +1,7 @@
 module.exports = {
   code: `
   $defer
-  $timezone[$option[timezone]]
+  $timezone[$option[zone]]
 $description[
 $addField[Horário;$hour:minute:second]
 $addField[Data;$day/$month/$year]
@@ -34,7 +34,7 @@ data: {
         "en-US": "timezone",
         "pt-BR": "timezone"
       },
-      "name": "timezone",
+      "name": "zone",
       "choices": [
         {
           "value": "America/Recife",
@@ -77,6 +77,6 @@ data: {
       "description": "Veja o horário e data de um lugar pré estabelecido."
     }
   ],
-  "name": "zona"
+  "name": "timezone"
 },
 };
