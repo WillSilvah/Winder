@@ -1,6 +1,8 @@
 module.exports = {
   code: `
 $let[user;$if[$option[user]==;$authorID;$option[user]]]
+
+🖼️ $bold[Avatar de @$username[$get[user]]]
 $attachment[$userAvatar[$get[user];2048];$username[$get[user]]-avatar.$if[$includes[$userAvatar[$get[user]];gif]==true;gif;png];;false]
   `,
 data: {
