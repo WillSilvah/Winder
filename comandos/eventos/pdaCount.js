@@ -1,6 +1,7 @@
 module.exports = {
     type: "messageCreate",
     code: `
+$onlyIf[$guildID==1462224054676099094;]
 $cooldown[60s;]
 $onlyIf[$argsCount[$message]>=3;]
 $onlyIf[$checkContains[$message;lorem;gboard]==false;]
