@@ -8,7 +8,7 @@ $let[type;desilenciado]
 $sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type]]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type]]
 
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]]
+$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
   `,
 data: {
   "type": 1,
