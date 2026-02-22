@@ -17,11 +17,11 @@ $deleteGuildVar[guildMonthMessages]
     name: "saudações",
     type: "clientReady",
     code: `
-$cron[$sendMessage[$getGuildVar[$batePapo];
+$cron[$sendMessage[$getGuildVar[$batePapo;1462224054676099094];
 # 🌞 BOM DIA PELUDOS!
 **Vamos levantar e tomar uma xícara de café?**
 ];0 6 * * *;America/Recife]
-$cron[$sendMessage[$getGuildVar[$batePapo];
+$cron[$sendMessage[$getGuildVar[$batePapo;1462224054676099094];
 # 🍱 JÁ PODE ALMOÇAR!
 **Liberei o almoço, vão almoçar enquanto dá tempo!**
 ];38 11 * * *;America/Recife]
