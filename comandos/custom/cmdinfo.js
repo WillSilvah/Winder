@@ -9,7 +9,7 @@ module.exports = [{
    ],
    code: `
 $reply
-$title[Como usar o comando "$commandInfo[messageCreate;$env[name];name]"]
+$title[📙 Como usar o comando "$commandInfo[messageCreate;$env[name];name]"?]
 $description[**$commandInfo[messageCreate;$env[name];category]** $commandInfo[messageCreate;$env[name];desc]
 
 - **⁉️ Como usa?**
