@@ -18,7 +18,7 @@ Usa o comando </bump:947088344167366698>
 $color[Green]
 ]
 ]
-;2h;$randomNumber[1000;9999;false]_BumpReminder;1462796515578876079]
+;2h;BumpReminder;1462796515578876079]
 
 `
 }
