@@ -19,6 +19,5 @@ $if[$channelID==1462224055884189781;
 $setGuildVar[msgPerMinute;$sum[$getGuildVar[msgPerMinute];1]]
 ]
 
-`,
-nonprefixed: true
+`
 }
