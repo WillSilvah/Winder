@@ -14,9 +14,14 @@ $sendDM[$mentioned[0];
 $title[@$username[$authorID] mencionou você enquanto AFK!]
 $description[
 $message
+
+$if[$messageAttachments[$channelID;$messageID;, ]!=;> **Anexos:**
+$messageAttachments[$channelID;$messageID;, ]
+]
 ]
 $footer[Servidor: $guildName[$guildID] | Canal: $channelName[$channelID]]
 $color[Red]
+$thumbnail[$userAvatar[$authorID]]
 
 $addActionRow
 $addButton[$messageLink[$channelID;$messageID];Ir para a mensagem;Link;💬;false]
