@@ -9,7 +9,7 @@ $let[time;$option[tempo]]
 $sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];$replace[$option[tempo]; ;]]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];$replace[$option[tempo]; ;]]
 
-$!timeout[$guildID;$get[userID];$get[tempo];$get[reason]]
+$timeout[$guildID;$get[userID];$get[tempo];$get[reason]]
 
 $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
   `,
