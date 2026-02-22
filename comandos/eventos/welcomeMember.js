@@ -10,7 +10,7 @@ $description[
 $if[$isBot[$authorID]==false;Espero que goste da Patinhas e que você se divirta mais do que eu com uma bola de lã. 🐱 Se liga nas nossas diretrizes e aproveite tudo! 😉;Um novo aplicativo foi adicionado na Patinhas *ruídos de robô pode ser ouvido* Epa! Ele disse alguma coisa? 🤔
 ]
 ]
-$footer[ID: $authorID]
+$footer[Veio pelo: @$username[$inviterID[$guildID;$authorID]] | ID: $authorID]
 $thumbnail[$userAvatar]
 $color[#020afc]
 ]
