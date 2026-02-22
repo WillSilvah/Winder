@@ -6,6 +6,7 @@ module.exports = {
     usage: "ban @user/userid motivo?",    
     type: "messageCreate",
     code: `
+    $onlyIf[$argsCount>0;$cmdinfo[$commandName]]
 $onlyIf[$hasPerms[$guildID;$authorID;BanMembers]==true;<@$authorID> Você não tem permissão para $bold[banir membros] aqui! $emoji[$emojiID[pats_foxBan]]]
 
 $let[userID;$findUser[$message[0]]]
