@@ -4,9 +4,12 @@ $let[userID;$findUser[$option[user]]]
 $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
 $let[staffID;$authorID]
 $let[type;silenciado]
+$let[time;$replace[$option[tempo]; ;]]
 
-$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type]]
-$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type]]
+$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];$get[time]]
+$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];$get[time]]
+
+$!timeout[$guildID;$get[userID];$get[tempo];$get[reason]]
 
 $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
   `,

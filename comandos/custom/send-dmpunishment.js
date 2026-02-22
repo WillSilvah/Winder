@@ -16,6 +16,10 @@ module.exports = [{
  {
   name: 'type',
   required: true
+ },
+ {
+  name: 'time',
+  required: false
  }
 ],
 code: `
@@ -24,7 +28,7 @@ $sendDM[$env[userID];
 $title[$emoji[$emojiID[pats_foxBan]] Você foi $env[type];https://www.bing.com/search?q=O%20que%20s%C3%A3o%20regras%3F&pc=MOZB&form=MOZMBA]
 $description[
 $addField[💀 Motivo;$env[reason]]
-
+$if[$env[time]!=;$addField[⌛ Tempo;$parseDigital[$parseString[$env[time]]]]]
 $addField[🛡️ Punido por;$userTag[$env[staffID]]]
 ]
 $thumbnail[$userAvatar[$env[staffID]]]
