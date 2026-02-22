@@ -17,6 +17,7 @@ $if[$commandInfo[messageCreate;$env[name];usage]!=;**$getGuildVar[prefixo]$comma
 
 - **⭐ Alternativas**
 $if[$commandInfo[messageCreate;$env[name];aliases]!=;**$replaceText[$commandInfo[messageCreate;$env[name];aliases];,;/]**;**Não tem alternativas**]
+$footer[$if[$commandInfo[messageCreate;$env[name];slash]!=;Use também como /$commandInfo[messageCreate;$env[name];slash];Este comando infelizmente não tem versão em comando de barra]]
 ]
 $color[Blue]
 `
