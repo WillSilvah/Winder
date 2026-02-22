@@ -4,12 +4,12 @@ $let[user;$if[$option[user]==;$authorID;$option[user]]]
 $attachment[$userAvatar[$get[user];2048];$username[$get[user]]-avatar.$if[$includes[$userAvatar[$get[user]];gif]==true;gif;png];;false]
   `,
 data: {
-  "name": "icone",
-  "description": "Veja o ícone de um usuário",
+  "name": "avatar",
+  "description": "Veja o avatar de um usuário",
   "description_localizations": {
-    "en-US": "View a user's icon",
-    "es-419": "Ver el icono de un usuario",
-    "pt-BR": "Veja o ícone de um usuário"
+    "en-US": "View a user's avatar",
+    "es-419": "Ver el avatar de un usuario",
+    "pt-BR": "Veja o avatar de um usuário"
   },
   "options": [
     {
