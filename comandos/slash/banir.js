@@ -31,5 +31,3 @@ data: {
   ]
 },
 }
-
-//$ban[$guildID;user ID;reason?;delete message seconds?]
