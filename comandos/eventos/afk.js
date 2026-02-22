@@ -4,7 +4,7 @@ module.exports = [{
 $onlyIf[$mentioned[0]!=$authorID;]
 $onlyIf[$getUserVar[afkStatus;$mentioned[0]]==true;]
 
-$sendMessage[$channelID;<@$authorID> **$userTag[$mentioned[1]]** está afk!
+$sendMessage[$channelID;<@$authorID> **$userTag[$mentioned[0]]** está afk!
 $author[$getUserVar[afkReason;$mentioned[0]]]
 $color[Red]
 ]
