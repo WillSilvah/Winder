@@ -35,7 +35,7 @@ $addButton[$messageLink[$channelID;$messageID];Ir para a mensagem;Link;💬;fals
     code: `
 $onlyIf[$getUserVar[afkStatus;$authorID]==true;]
 
-$sendMessage[$channelID;<@$authorID> | Olá, que bom que você voltou! ❤️]
+$sendMessage[$channelID;<@$authorID> Olá, que bom que você voltou! ❤️]
 
 $setUserVar[afkStatus;false;$authorID]
 $setUserVar[afkReason;;$authorID]

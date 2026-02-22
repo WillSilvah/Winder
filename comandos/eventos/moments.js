@@ -1,5 +1,4 @@
 module.exports = [{
-    name: "resetTemporada",
     type: 'clientReady',
     code: `
 $cron[
@@ -14,8 +13,7 @@ $deleteGuildVar[guildMonthMessages]
  
  `
 },{
-    name: "saudações",
-    type: "clientReady",
+    type: 'clientReady',
     code: `
 $cron[$sendMessage[$getGuildVar[$batePapo;1462224054676099094];
 # 🌞 BOM DIA PELUDOS!
