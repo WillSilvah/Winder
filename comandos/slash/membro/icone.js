@@ -1,6 +1,6 @@
 module.exports = {
   code: `
-$let[user;$if[$option[user]==;$guildID;$option[user]]]
+$let[user;$if[$option[user]==;$authorID;$option[user]]]
 $attachment[$userAvatar[$get[user]];;;false]
   `,
 data: {
