@@ -1,7 +1,7 @@
 module.exports = {
   code: `
 $let[user;$if[$option[user]==;$guildID;$option[user]]]
-$attachment[$guildIcon[$userAvatar[$get[user]];;;false]]
+$attachment[$userAvatar[$get[user]];;;false]
   `,
 data: {
   "name": "icone",
