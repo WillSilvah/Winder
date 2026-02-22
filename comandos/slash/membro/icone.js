@@ -1,7 +1,7 @@
 module.exports = {
   code: `
 $let[user;$if[$option[user]==;$authorID;$option[user]]]
-$attachment[$userAvatar[$get[user]];;;false]
+$attachment[$userAvatar[$get[user];2048];$username[$get[user]]-avatar.$if[$includes[$userAvatar[$get[user]];gif]==gif;png];;false]
   `,
 data: {
   "name": "icone",
