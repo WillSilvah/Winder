@@ -13,8 +13,6 @@ $if[$isBot[$authorID]==false;Espero que goste da Patinhas e que você se divirta
 $footer[Veio pelo: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fantasma] | ID: $authorID]
 $thumbnail[$userAvatar]
 $color[#020afc]
-]
-
 $addActionRow
 $addButton[https://discord.com/channels/1462224054676099094/1462590504188383304;Conheça a Patinhas!;Link;👋;false]
 ]
