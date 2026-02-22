@@ -4,10 +4,10 @@ $let[userID;$findUser[$option[user]]]
 $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
 $let[staffID;$authorID]
 $let[type;silenciado]
-$let[time;$replace[$option[tempo]; ;]]
+$let[time;$option[tempo]]
 
-$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];$get[time]]
-$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];$get[time]]
+$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];$replace[$option[tempo]; ;]]
+$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];$replace[$option[tempo]; ;]]
 
 $!timeout[$guildID;$get[userID];$get[tempo];$get[reason]]
 
