@@ -19,9 +19,19 @@ data: {
       "name": "motivo"
     },
     {
-      "type": 5,
+      "type": 3,
       "description": "Deseja que o Winder envie menções recebidas na DM?",
-      "name": "notificardm"
+      "name": "notificardm",
+      "choices": [
+        {
+          "value": "true",
+          "name": "Avisar menções na DM"
+        },
+        {
+          "name": "Não avisar menções na DM",
+          "value": "false"
+        }
+      ]
     }
   ]
 },
