@@ -22,14 +22,14 @@ data: {
     },
     {
       "type": 3,
-      "description": "Motivo do usuário a ser punido",
-      "name": "motivo"
-    },
-    {
-      "type": 3,
       "description": "Tempo de silêncio. Exemplo: 6h, 12h, 6d",
       "name": "tempo",
       "required": true
+    },
+    {
+      "type": 3,
+      "description": "Motivo do usuário a ser punido",
+      "name": "motivo"
     }
   ],
   "description": "Silencie um membro.",
