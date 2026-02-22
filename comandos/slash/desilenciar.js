@@ -1,6 +1,5 @@
 module.exports = {
   code: `
-$defer
 $let[userID;$findUser[$option[user]]]
 $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
 $let[staffID;$authorID]
