@@ -12,7 +12,7 @@ $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type]]
 $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]]
   `,
 data: {
-  "default_member_permissions": "6",
+  "default_member_permissions": "2",
   "options": [
     {
       "type": 3,

@@ -15,7 +15,7 @@ $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]]
 data: {
   "name": "banir",
   "description": "Bana um membro permanentemente.",
-  "default_member_permissions": "6",
+  "default_member_permissions": "4",
   "options": [
     {
       "type": 3,
