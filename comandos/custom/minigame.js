@@ -8,6 +8,8 @@ module.exports = [{
     }
     ],
     code: `
+$setGuildVar[minigameXPmin;5;$guildID]
+$setGuildVar[minigameXPmax;15;$guildID]
 $if[$env[tipo]==fraseRepeat;
 $let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]
 

@@ -6,9 +6,6 @@ $onlyIf[$getGuildVar[msgPerMinute;$guildID]>=6;]
 
 $minigame[fraseRepeat]
 
-$setGuildVar[minigameXPmin;5;$guildID]
-$setGuildVar[minigameXPmax;15;$guildID]
-
 $wait[1m]
 $onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
 
