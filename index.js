@@ -112,7 +112,6 @@ const client = new ForgeClient({
         "w!"
     ],
     prefixCaseInsensitive: true,
-    respondOnEdit: 60000,
     trackers: {
         invites: true,
         voice: true
