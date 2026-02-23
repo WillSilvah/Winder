@@ -1,26 +1,26 @@
 module.exports = {
-	name: "expulsar",
-    aliases: ["kick", "chutar", "k"],
-    desc: "Expulse um membro",
+	name: "silenciar",
+    aliases: ["mute", "calar", "m"],
+    desc: "Silencie um membro",
     category: "Moderação",
-    usage: "kick @user/userid motivo?",
-    slash: "expulsar",  
+    usage: "ban @user/userid tempo motivo?",
+    slash: "silenciar",
     type: "messageCreate",
     code: `
     $onlyIf[$argsCount>0;$cmdinfo[$commandName]]
-$onlyIf[$hasPerms[$guildID;$authorID;KickMembers]==true;<@$authorID> Você não tem permissão para $bold[expulsar membros] aqui! $emoji[$emojiID[pats_foxBan]]]
+$onlyIf[$hasPerms[$guildID;$authorID;MuteMembers]==true;<@$authorID> Você não tem permissão para $bold[banir membros] aqui! $emoji[$emojiID[pats_foxBan]]]
 
 $let[userID;$findUser[$message[0]]]
 $let[reason;$if[$messageSlice[1]==;Sei lá qual foi o motivo, só sei que recebeu!;$messageSlice[1]]]
 $let[staffID;$authorID]
-$let[type;expulso]
+$let[type;desilenciado]
 
 $onlyIf[$get[userID]!=$authorID;<@$authorID> Você está se automencionando ou este usuário não existe.]
 
 $sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-$!kickMember[$guildID;$get[userID];$get[reason]]
+$!timeout[$guildID;$get[userID];0;$get[reason]]
 
 $sendMessage[$channelID;<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
 `
