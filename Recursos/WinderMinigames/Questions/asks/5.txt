@@ -1,0 +1,13 @@
+{
+"pergunta": "Qual é o termo utilizado para descrever a representação de um animal com características humanas (corpo, fala, inteligência)?",
+"correct": "a",
+"difficulty": "Fácil",
+"image": "",
+"alts": {
+         "a": "Antropomorfismo",
+         "b": "Taxidermia",
+         "c": "Zoologia",
+         "d": "Mimetismo",
+         "e": "Hibridismo"
+        }
+}

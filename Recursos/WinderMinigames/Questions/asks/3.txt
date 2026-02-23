@@ -1,0 +1,13 @@
+{
+"pergunta": "Quem pintou o quadro 'Mona Lisa', uma das obras mais famosas do mundo?",
+"correct": "d",
+"difficulty": "Fácil",
+"image": "",
+"alts": {
+         "a": "Vincent van Gogh",
+         "b": "Pablo Picasso",
+         "c": "Michelangelo",
+         "d": "Leonardo da Vinci",
+         "e": "Claude Monet"
+        }
+}

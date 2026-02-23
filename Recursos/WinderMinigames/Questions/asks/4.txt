@@ -1,0 +1,13 @@
+{
+"pergunta": "Qual é o maior oceano do planeta Terra?",
+"correct": "a",
+"difficulty": "Fácil",
+"image": "",
+"alts": {
+         "a": "Oceano Pacífico",
+         "b": "Oceano Atlântico",
+         "c": "Oceano Índico",
+         "d": "Oceano Ártico",
+         "e": "Oceano Antártico"
+        }
+}

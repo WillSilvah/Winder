@@ -1,0 +1,13 @@
+{
+"pergunta": "Qual é o nome do reino fictício onde se passa a maior parte da história de 'Pantera Negra'?",
+"correct": "c",
+"difficulty": "Fácil",
+"image": "",
+"alts": {
+         "a": "Asgard",
+         "b": "Gotham",
+         "c": "Wakanda",
+         "d": "Genosha",
+         "e": "Atlantis"
+        }
+}
