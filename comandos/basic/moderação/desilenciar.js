@@ -1,6 +1,6 @@
 module.exports = {
 	name: "desilenciar",
-    aliases: ["unmute", "descalar", "m"],
+    aliases: ["unmute", "descalar", "um"],
     desc: "Desilencie um membro",
     category: "Moderação",
     usage: "desilenciar @user/userid motivo?",
