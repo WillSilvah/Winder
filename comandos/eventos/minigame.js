@@ -3,7 +3,7 @@ module.exports = [{
     code: `
 `
 },{
-    type: `messageCreate`,
+    type: 'messageCreate',
     code: `
     
     
