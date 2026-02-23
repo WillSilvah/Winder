@@ -28,10 +28,9 @@ data: {
     },
     {
       "type": 3,
-      "descricao": "Descrição do tema do Sabart da semana",
-      "name": "description",
-      "required": true,
-      "description": "Descrição do tema"
+      "description": "Descrição do tema do Sabart da semana",
+      "name": "descricao",
+      "required": true
     }
   ]
 },
