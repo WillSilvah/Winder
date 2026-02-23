@@ -24,7 +24,7 @@ $sendMessage[### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
     code: `
 $onlyIf[$channelID==$getGuildVar[batePapo];]
 $onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
-$onlyIf[$message==$getGuildVar[minigameWord;$guildID];]
+$onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$getGuildVar[minigameWord;$guildID];]
 $startTyping[$channelID]
 $setGuildVar[minigameStatus;false;$guildID]
 $setGuildVar[minigameWord;;$guildID]
