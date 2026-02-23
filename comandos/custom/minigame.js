@@ -15,7 +15,7 @@ $jsonLoad[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase
 
 $author[QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[
-### $replaceText[$env[frase;texto]; ;‌‌‌‌‌]
+### $replaceText[$env[frase;texto]; ; ]
 ‌
 ]
 $footer[$env[frase;autor]]
