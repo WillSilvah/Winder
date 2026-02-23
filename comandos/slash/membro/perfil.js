@@ -33,7 +33,7 @@ data: {
   },
   "options": [
     {
-      "type": 3,
+      "type": 6,
       "description": "Menção, ID ou @username.",
       "name": "membro",
       "name_localizations": {
