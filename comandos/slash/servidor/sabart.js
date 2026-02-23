@@ -9,7 +9,7 @@ $interactionReply[
 <@$authorID> O tema do **sabart** essa semana será...
 $description[
 # $getGuildVar[sabartTheme]
-**$getGuildVar[sabartDescription]
+**$getGuildVar[sabartDescription]**
 ]
 $color[Yellow]
 ]
@@ -30,7 +30,8 @@ data: {
       "type": 3,
       "descricao": "Descrição do tema do Sabart da semana",
       "name": "description",
-      "required": true
+      "required": true,
+      "description": "Descrição do tema"
     }
   ]
 },
