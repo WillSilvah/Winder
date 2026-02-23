@@ -18,7 +18,7 @@ data: {
   "default_member_permissions": "2",
   "options": [
     {
-      "type": 3,
+      "type": 6,
       "description": "ID, menção ou nome de usuário",
       "name": "user",
       "required": true
