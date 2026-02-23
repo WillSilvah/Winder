@@ -13,6 +13,8 @@ $let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/F
 
 $jsonLoad[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
 
+$setGuildVar[minigameWord;$env[frase;texto];$guildID]
+
 $author[QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[
 ### $replaceText[$env[frase;texto]; ; ]
@@ -21,7 +23,8 @@ $description[
 $footer[$env[frase;autor]]
 $color[Green]
 
-$setGuildVar[minigameWord;$env[frase;texto];$guildID]
+$setGuildVar[minigameType;fraseRepeat;$guildID]
+$setGuildVar[minigameStatus;true;$guildID]
 
 ]
 `}]
