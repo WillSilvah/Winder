@@ -3,7 +3,7 @@ module.exports = {
     aliases: ["mute", "calar", "m"],
     desc: "Silencie um membro",
     category: "Moderação",
-    usage: "ban @user/userid tempo motivo?",
+    usage: "silenciar @user/userid tempo motivo?",
     slash: "silenciar",
     type: "messageCreate",
     code: `
