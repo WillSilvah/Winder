@@ -3,7 +3,7 @@ module.exports = {
     code: `
 $setGuildVar[membersJoinedMonth;$sum[$getGuildVar[membersJoinedMonth];1]]
 $sendMessage[$getGuildVar[batePapo];
-
+<@$authorID>
 $author[@$username[$authorID];https://cdn.discordapp.com/emojis/1464435933729263657.png?size=2048]
 $title[$username seja bem-vindo(a)!;https://www.bing.com/search?q=Como+ser+bem+recebido+em+um+lugar&setmkt=pt-BR&PC=EMMX01&form=LWS002&scope=web&darkschemeovr=1]
 $description[
