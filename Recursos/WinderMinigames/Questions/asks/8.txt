@@ -1,0 +1,13 @@
+{
+"pergunta": "Em qual organela celular ocorre o Ciclo de Krebs durante a respiração aeróbica?",
+"correct": "e",
+"difficulty": "Médio",
+"image": "",
+"alts": {
+         "a": "Ribossomos",
+         "b": "Complexo de Golgi",
+         "c": "Lisossomos",
+         "d": "Cloroplastos",
+         "e": "Mitocôndrias"
+        }
+}

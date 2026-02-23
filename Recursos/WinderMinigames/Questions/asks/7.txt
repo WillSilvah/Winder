@@ -1,0 +1,13 @@
+{
+"pergunta": "Qual é o nome da inteligência artificial que auxilia o Homem de Ferro em seus primeiros filmes?",
+"correct": "b",
+"difficulty": "Fácil",
+"image": "",
+"alts": {
+         "a": "HAL 9000",
+         "b": "J.A.R.V.I.S.",
+         "c": "SIRI",
+         "d": "CORTANA",
+         "e": "F.R.I.D.A.Y."
+        }
+}

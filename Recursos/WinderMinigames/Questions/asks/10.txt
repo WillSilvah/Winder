@@ -1,0 +1,13 @@
+{
+"pergunta": "Qual é o metal cujo símbolo químico é Au e é conhecido por sua alta maleabilidade e valor comercial?",
+"correct": "c",
+"difficulty": "Fácil",
+"image": "",
+"alts": {
+         "a": "Prata",
+         "b": "Cobre",
+         "c": "Ouro",
+         "d": "Alumínio",
+         "e": "Platina"
+        }
+}

@@ -1,0 +1,13 @@
+{
+"pergunta": "Quem e o Winder?",
+"correct": "d",
+"difficulty": "Fácil",
+"image": "",
+"alts": {
+         "a": "Um gato simples laranja",
+         "b": "Um gato cinza",
+         "c": "Um gato autista",
+         "d": "Um gato incrível, laranja, autista e mascote da Patinhas",
+         "e": "Um mascote da patinhas"
+        }
+}
