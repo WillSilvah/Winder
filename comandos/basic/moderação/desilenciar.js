@@ -1,10 +1,10 @@
 module.exports = {
-	name: "silenciar",
-    aliases: ["mute", "calar", "m"],
-    desc: "Silencie um membro",
+	name: "desilenciar",
+    aliases: ["unmute", "descalar", "m"],
+    desc: "Desilencie um membro",
     category: "Moderação",
-    usage: "ban @user/userid tempo motivo?",
-    slash: "silenciar",
+    usage: "desilenciar @user/userid motivo?",
+    slash: "desilenciar",
     type: "messageCreate",
     code: `
     $onlyIf[$argsCount>0;$cmdinfo[$commandName]]
