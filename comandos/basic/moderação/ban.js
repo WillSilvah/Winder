@@ -10,6 +10,8 @@ module.exports = {
     $onlyIf[$argsCount>0;$cmdinfo[$commandName]]
 $onlyIf[$hasPerms[$guildID;$authorID;BanMembers]==true;<@$authorID> Você não tem permissão para $bold[banir membros] aqui! $emoji[$emojiID[pats_foxBan]]]
 
+$startTyping[$channelID]
+
 $let[userID;$findUser[$message[0]]]
 $let[reason;$if[$messageSlice[1]==;Sei lá qual foi o motivo, só sei que recebeu!;$messageSlice[1]]]
 $let[staffID;$authorID]
