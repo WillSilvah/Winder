@@ -16,6 +16,10 @@ module.exports = [{
  {
   name: 'type',
   required: true
+ },
+ {
+  name: 'time',
+  required: false
  }
 ],
 code: `$sendMessage[$getGuildVar[punishmentLog];
@@ -23,7 +27,7 @@ $author[Equipe Patinhas: Nossa toca, tem regras.;https://cdn.discordapp.com/emoj
 $title[$userTag[$env[userID]] | $env[type]]
 $description[
 $addField[💀 Motivo;$env[reason]]
-
+$if[$env[time]!=;$addField[⌛ Tempo;$parseDigital[$parseString[$env[time]]]]]
 $addField[🛡️ Punido por;<@$env[staffID]>]
 ]
 $footer[ID do usuário: $env[userID]]
