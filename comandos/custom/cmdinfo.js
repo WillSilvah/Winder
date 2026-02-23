@@ -8,6 +8,8 @@ module.exports = [{
     }
    ],
    code: `
+$jsonLoad[aliases;$commandInfo[messageCreate;$env[name];aliases]]
+
 $reply
 $title[📙 Como usar o comando "$commandInfo[messageCreate;$env[name];name]"?]
 $description[**$commandInfo[messageCreate;$env[name];category]** $commandInfo[messageCreate;$env[name];desc]
@@ -16,7 +18,7 @@ $description[**$commandInfo[messageCreate;$env[name];category]** $commandInfo[me
 $if[$commandInfo[messageCreate;$env[name];usage]!=;**$getGuildVar[prefixo]$commandInfo[messageCreate;$env[name];usage]**]
 
 - **⭐ Alternativas**
-$if[$commandInfo[messageCreate;$env[name];aliases]!=;**$replaceText[$commandInfo[messageCreate;$env[name];aliases];,;/]**;**Não tem alternativas**]
+$if[$jsonValues[aliases]!=;**$jsonValues[aliases]**;**Não tem alternativas**]
 $footer[$if[$commandInfo[messageCreate;$env[name];slash]!=;Use também como /$commandInfo[messageCreate;$env[name];slash];Este comando infelizmente não tem versão em comando de barra]]
 ]
 $color[Blue]
