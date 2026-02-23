@@ -1,6 +1,7 @@
 module.exports = [{
     type: 'clientReady',
     code: `
+$onlyIf[2==7;]
 $setInterval[
 $onlyIf[$getGuildVar[msgPerMinute;$guildID]>=6;]
 
