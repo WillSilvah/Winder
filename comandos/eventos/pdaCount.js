@@ -11,7 +11,7 @@ $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
-$let[basicPDA;$if[$get[textDivisorPDA]>=30;30;$get[textDivisorPDA]]]
+$let[basicPDA;$if[$get[textDivisorPDA]>=15;15;$get[textDivisorPDA]]]
 
 $let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVotedRole]]==true;5;0]]
 

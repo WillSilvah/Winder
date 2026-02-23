@@ -20,7 +20,7 @@ data: {
   "default_member_permissions": "4",
   "options": [
     {
-      "type": 3,
+      "type": 6,
       "description": "ID, menção ou nome de usuário ",
       "name": "user",
       "required": true
