@@ -29,7 +29,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;1462224054676099094];
 ];34 13 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;1462224054676099094];
 # 🌃 BOA NOITE
-**Bora finalizar o dia com muitos cafunés e conversa boa! Quem vem? ✨
+**Bora finalizar o dia com muitos cafunés e conversa boa! Quem vem? ✨**
 ];0 18 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;1462224054676099094];
 # 😴 VAMOS DORMIR?
