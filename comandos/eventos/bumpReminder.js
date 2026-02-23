@@ -4,9 +4,12 @@ allowBots: true,
 code: `
 $onlyIf[$authorID==302050872383242240;]
 $onlyIf[$channelID==1462796515578876079;]
-$onlyIf[$checkContains[$getEmbeds[1462796515578876079;$messageID;0;description];Bump done!]]
 
-$sendMessage[1462796515578876079;Obrigado por ajudar! <@$mentioned[0]>]
+$jsonLoad[data;$messageRawData[$channelID;$messageID]]
+
+$onlyIf[$checkContains[$env[data;embeds;0;description];Bump done!]]
+
+$sendMessage[1462796515578876079;<@$env[data;interaction;user]> Obrigado por ajudar!]
 
 $advancedTimeout[$esc[
 $sendMessage[1462796515578876079;<@&1462953076091785370>
