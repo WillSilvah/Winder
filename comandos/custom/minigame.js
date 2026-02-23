@@ -1,53 +1,61 @@
 module.exports = [{
-    type: 'clientReady',
+    name: "minigame",
+    params: [
+    {
+      name: 'tipo',
+      description: "Tipo do minigame a ser executado",
+      required: true
+    }
+    ],
     code: `
-$setInterval[
-$onlyIf[$getGuildVar[msgPerMinute;$guildID]>=6;]
+$setGuildVar[minigameXPmin;5;$guildID]
+$setGuildVar[minigameXPmax;15;$guildID]
+$if[$env[tipo]==fraseRepeat;
+$let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]
 
-$minigame[fraseRepeat]
+$jsonLoad[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
 
-$wait[1m]
-$onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
+$setGuildVar[minigameWord;$env[frase;texto];$guildID]
 
-$setGuildVar[minigameStatus;false;$guildID]
-$setGuildVar[minigameWord;;$guildID]
+$author[QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
+$description[
+### $replaceText[$env[frase;texto]; ; ]
+‌
+]
+$footer[$env[frase;autor]]
+$color[Green]
 
-$setGuildVar[minigameXPmin;0;$guildID]
-$setGuildVar[minigameXPmax;0;$guildID]
-$setChannelSlowmode[$getGuildVar[batePapo];0]
-$sendMessage[### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
+$setGuildVar[minigameType;$env[tipo];$guildID]
+$setGuildVar[minigameStatus;true;$guildID]
 
-;15m;WinderMinigame]
-`
-},{
-    type: 'messageCreate',
-    code: `
-$onlyIf[$channelID==$getGuildVar[batePapo];]
-$onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
-$onlyIf[$message==$getGuildVar[minigameWord;$guildID];]
-$startTyping[$channelID]
-$setGuildVar[minigameStatus;false;$guildID]
-$setGuildVar[minigameWord;;$guildID]
-
-$let[xpDrop;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;$randomNumber[$getGuildVar[minigameXPmin;$guildID];$getGuildVar[minigameXPmax;$guildID]];0]]
-
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$authorID];$get[xpDrop]];$authorID]
-$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$authorID];$get[xpDrop]];$authorID]
-
-$!addMessageReactions[$channelID;$messageID;🏆]
-
-$setMemberVar[minigameMonthWins;$sum[$getMemberVar[minigameMonthWins;$authorID];1];$authorID]
-$setMemberVar[minigameTotalWins;$sum[$getMemberVar[minigameTotalWins;$authorID];1];$authorID]
-
-$sendMessage[$channelID;<@$authorID> | Parabéns, você ganhou ✨**+$get[xpDrop] Pontos de atividade!**!
-> **Ganhou 🏆$getMemberVar[minigameMonthWins;$authorID] vezes neste mês!**
 ]
 
-$!memberRemoveRoles[$guildID;$getGuildVar[minigameLastUser;$guildID];$getGuildVar[lastWinMemberRole]]
-$wait[1s]
-$!memberAddRoles[$guildID;$authorID;$getGuildVar[lastWinMemberRole]]
-$setGuildVar[minigameLastUser;$authorID;$guildID]
+$if[$env[tipo]==questions;
 
-$setGuildVar[minigameEmit;false;$guildID]
-`
-}]
+$let[id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/Questions/asks/ | wc -l]]]
+
+
+$jsonLoad[ask;$readFile[Recursos/WinderMinigames/Questions/asks/$get[id].txt]]
+$jsonLoad[alt;$env[ask;alts]]
+
+
+$author[Evento de chat: Perguntas;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
+$description[
+### $toUpperCase[$env[ask;pergunta] ($env[ask;difficulty])]
+$if[$env[alt;a]!=undefined;A: $env[alt;a]]
+$if[$env[alt;b]!=undefined;B: $env[alt;b]]
+$if[$env[alt;c]!=undefined;C: $env[alt;c]]
+$if[$env[alt;d]!=undefined;D: $env[alt;d]]
+$if[$env[alt;e]!=undefined;E: $env[alt;e]]
+]
+$footer[Responda apenas com a letra da resposta! | ID: $get[id]]
+$image[$if[$env[ask;image]==;https://cdn.discordapp.com/attachments/785632865709981756/1465469785813942272/IMG_20260126_191316.png?ex=69793898&is=6977e718&hm=559e450ba67a6a132a64f475bb1781cce2aa4ebe4f046a39c5fc3dd303382591&;$env[ask;image]]]
+$color[Green]
+
+$setGuildVar[minigameWord;$env[ask;correct];$guildID]
+
+$setGuildVar[minigameType;$env[tipo];$guildID]
+$setGuildVar[minigameStatus;true;$guildID]
+]
+
+`}]
