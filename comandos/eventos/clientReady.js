@@ -16,5 +16,12 @@ $log[---------------
 $username[$clientID] está ligado! >w<
 ---------------
 ]
+
+$setStatus[Idle;Playing;$username[$clientID] esta ligado! >w<]
+
+$setInterval[
+$setStatus[Idle;Playing;$parseInt[$ram] MB | $cpu% | $parseDigital[$uptime] | $pingms | $getGlobalVar[version]]
+
+;15s;ClientStatus]
 `,
 }
