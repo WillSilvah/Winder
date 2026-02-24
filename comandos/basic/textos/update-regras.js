@@ -7,7 +7,7 @@ $onlyIf[$hasPerms[$guildID;$authorID;ManageGuild]==true;]
 $sendMessage[$channelID;
 $addSection[
 $addTextDisplay[# COMUNIDADE PATINHAS
-**Diretrizes de como manter uma comunidade organziada.**]
+**Diretrizes de como manter uma comunidade organizada.**]
 $addThumbnail[$guildIcon[1462224054676099094]]
 ]
 $addSeparator[Large;true]
