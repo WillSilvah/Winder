@@ -3,7 +3,7 @@ module.exports = [{
     type: 'messageCreate',
     code: `
 $onlyIf[$hasPerms[$guildID;$authorID;ManageGuild]==true;]
-
+$deleteCommand
 $sendMessage[$channelID;
 $addSection[
 $addTextDisplay[# COMUNIDADE PATINHAS
