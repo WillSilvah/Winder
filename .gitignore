@@ -1,4 +1,4 @@
-# Segredos e chaves (O MAIS IMPORTANTE)
+
 .env
 *.env
 
@@ -6,7 +6,7 @@ node_modules/
 logs/
 *.log
 
-# Logs e arquivos do sistema
+Recursos/sabart.json
 npm-debug.log*
 .DS_Store
 dist/

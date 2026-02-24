@@ -1,7 +1,7 @@
 module.exports = {
   code: `
+$ephemeral
 $onlyIf[$hasAnyRole[$guildID;$authorID;$getGuildVar[memberOfficialArtistRole];$getGuildVar[allStaffRole]]==true;<@$authorID> Você não tem permissão para isso.]
-
 $setGuildVar[sabartTheme;$option[tema]]
 $setGuildVar[sabartDescription;$option[descricao]]
 
