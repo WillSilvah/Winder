@@ -162,6 +162,10 @@ ForgeDB.variables({
   "remindDM": "true",
   "memberIsolated": "false",
   "memberIsolatedRole": "14716959190986302",
+    
+  "sabartAdvChat": "1472363631021920376",
+  "sabartTheme": "",
+  "sabartDescription": "",
   
   "memberIsArtist": "false",
   "memberIsOfficialArtist": "false",
