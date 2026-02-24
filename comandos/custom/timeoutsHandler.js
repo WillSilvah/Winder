@@ -9,12 +9,12 @@ module.exports = {
       $let[endTime;$env[timeouts;$get[id];endTime]]
 
       $setTimeout[
-        $try[$eval[$get[code];false]]
         $jsonLoad[timeouts;$getGlobalVar[timeouts;{}]]
         $if[$env[timeouts;$get[id]]!=;
           $!jsonDelete[timeouts;$get[id]]
           $setGlobalVar[timeouts;$env[timeouts]]
         ]
+		$try[$eval[$get[code];false]]
       ;$max[500;$math[$get[endTime] - $getTimestamp]];$get[id]]
     ;i;true]
   `
