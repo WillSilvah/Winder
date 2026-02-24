@@ -68,12 +68,12 @@ module.exports = {
     $setGlobalVar[timeouts;$env[timeouts]]
     
     $setTimeout[
-      $eval[$get[code];false]
       $jsonLoad[timeouts;$getGlobalVar[timeouts;{}]]
       $if[$env[timeouts;$env[id]]!=;
         $!jsonDelete[timeouts;$env[id]]
         $setGlobalVar[timeouts;$env[timeouts]]
       ]
+      $try[$eval[$get[code];false]]
     ;$env[time];$env[id]]
   `
 }
