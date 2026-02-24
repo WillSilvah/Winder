@@ -12,7 +12,7 @@ $let[pda;$if[$isMuted[$guildID;$env[id]]==true;0;$randomNumber[1;5]]]
 $setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id]];$get[pda]];$env[id]]
 $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]]
 
-
+$log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
 ];5m;PDA_musica]
 
@@ -27,6 +27,8 @@ $let[pda;$if[$isMuted[$guildID;$env[id]]==true;0;$randomNumber[1;5]]]
 $setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id]];$get[pda]];$env[id]]
 $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]]
 
+$log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
+
 ];5m;PDA_jogos]
 
 $setInterval[
@@ -40,6 +42,7 @@ $let[pda;$if[$isMuted[$guildID;$env[id]]==true;0;$randomNumber[1;5]]]
 $setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id]];$get[pda]];$env[id]]
 $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]]
 
+$log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
 ];5m;PDA_batePapo]
     
