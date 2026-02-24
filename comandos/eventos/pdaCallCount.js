@@ -14,7 +14,7 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];5m;PDA_musica]
+];30s;PDA_musica]
 
 $setInterval[
 $arrayLoad[teste;, ;$channelVoiceMemberIDs[1462615093153108001]]
@@ -29,7 +29,7 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];5m;PDA_jogos]
+];30s;PDA_jogos]
 
 $setInterval[
 $arrayLoad[teste;, ;$channelVoiceMemberIDs[1462224055884189785]]
@@ -44,7 +44,7 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];5m;PDA_batePapo]
+];30s;PDA_batePapo]
     
     
 `
