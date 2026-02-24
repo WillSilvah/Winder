@@ -1,7 +1,7 @@
 module.exports = {
  type: 'guildMemberUpdate',
  code: `
-$onlyIf[$oldMember[addedRoles]==$getGuildVar[allStaffRole;$guildID];]
+$onlyIf[$checkContains[$oldMember[addedRoles];$getGuildVar[allStaffRole;$guildID]]==true;]
 
 $sendMessage[$getGuildVar[staffChat];
 $addSection[
