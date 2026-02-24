@@ -12,7 +12,7 @@ $addThumbnail[$userAvatar[$authorID]]
 ]
 ]
 $addSeparator[Large;true]
-$addTextDisplay[<@$getGuildVar[allStaffRole]>]
+$addTextDisplay[<@&$getGuildVar[allStaffRole]>]
 ]
 
 $sendMessage[$getGuildVar[batePapo];
