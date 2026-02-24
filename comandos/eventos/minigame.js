@@ -4,7 +4,7 @@ module.exports = [{
 $setInterval[
 $onlyIf[$getGuildVar[msgPerMinute;$guildID]>=6;]
 
-$minigame[fraseRepeat]
+$minigame[$randomText[fraseRepeat;questions]]
 
 $wait[1m]
 $onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
