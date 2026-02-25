@@ -3,7 +3,7 @@ module.exports = {
     code: `
     $log[PDAPORCALL EXECUTADO]
     
-$setInterval[$arrayLoad[teste;, ;$channelVoiceMemberIDs[1462603953077358791]]
+$cron[$arrayLoad[teste;, ;$channelVoiceMemberIDs[1462603953077358791]]
 $arrayForEach[teste;id;
 $onlyIf[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole]]==true;$log[$username[$env[id]] não tem verificado]]
 $onlyIf[$channelVoiceMemberCount[$voiceID[$guildID;$env[id]]]>1;]
@@ -15,9 +15,9 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];30s]
+];* * * * *]
 
-$setInterval[$arrayLoad[teste;, ;$channelVoiceMemberIDs[1462615093153108001]]
+$cron[$arrayLoad[teste;, ;$channelVoiceMemberIDs[1462615093153108001]]
 $arrayForEach[teste;id;
 $onlyIf[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole]]==true;$log[$username[$env[id]] não tem verificado]]
 $onlyIf[$channelVoiceMemberCount[$voiceID[$guildID;$env[id]]]>1;]
@@ -29,9 +29,9 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];30s]
+];* * * * *]
 
-$setInterval[$arrayLoad[teste;, ;$channelVoiceMemberIDs[1462224055884189785]]
+$cron[$arrayLoad[teste;, ;$channelVoiceMemberIDs[1462224055884189785]]
 $arrayForEach[teste;id;
 $onlyIf[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole]]==true;$log[$username[$env[id]] não tem verificado]]
 $onlyIf[$channelVoiceMemberCount[$voiceID[$guildID;$env[id]]]>1;]
@@ -43,7 +43,7 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];30s]
+];* * * * *]
     
     
 `
