@@ -10,11 +10,11 @@ module.exports = {
         $let[id;$arrayAt[members;$math[$env[i] - 1]]]
 
         $if[$hasRoles[$get[guildId];$get[id];$getGuildVar[memberVerifiedRole;$get[guildId]]]==false;
-          $log[$username[$get[id]] não tem verificado]
+          $log[@$username[$get[id]] não tem verificado]
           $break
         ]
         $if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]<=1;
-          $log[Canal não tem mais que 1 membro]
+          $log[Canal "$channelName[$voiceID[$get[guildId];$get[id]]]" que o @$username[$get[id]] está não tem mais que 1 membro]
           $break
         ]
 
@@ -22,7 +22,7 @@ module.exports = {
           $if[$isMuted[$get[guildId];$get[id]];
             $return[0]
           ]
-          $return[$randomNumber[1;5]]
+          $return[$randomNumber[1;3]]
         ]]
 
         $let[pdaMonth;$getMemberVar[pdaMonth;$get[id];$get[guildId]]]
