@@ -8,7 +8,7 @@ $onlyIf[$channelVoiceMemberCount[$voiceID[1462224054676099094;$env[id]]]>1;]
 
 $let[pda;$if[$isMuted[1462224054676099094;$env[id]]==true;0;$randomNumber[1;5]]]
 
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id]];$get[pda];1462224054676099094];$env[id];1462224054676099094]
+$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
 $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[1462224054676099094;$env[id]]]]
@@ -22,7 +22,7 @@ $onlyIf[$channelVoiceMemberCount[$voiceID[1462224054676099094;$env[id]]]>1;]
 
 $let[pda;$if[$isMuted[1462224054676099094;$env[id]]==true;0;$randomNumber[1;5]]]
 
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id]];$get[pda];1462224054676099094];$env[id];1462224054676099094]
+$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
 $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[1462224054676099094;$env[id]]]]
@@ -36,7 +36,7 @@ $onlyIf[$channelVoiceMemberCount[$voiceID[1462224054676099094;$env[id]]]>1;]
 
 $let[pda;$if[$isMuted[1462224054676099094;$env[id]]==true;0;$randomNumber[1;5]]]
 
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id]];$get[pda];1462224054676099094];$env[id];1462224054676099094]
+$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
 $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[1462224054676099094;$env[id]]]]
