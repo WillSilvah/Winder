@@ -9,7 +9,7 @@ module.exports = {
       $loop[$arrayLength[members];
         $let[id;$arrayAt[members;$math[$env[i] - 1]]]
 
-        $if[$hasRoles[$get[guildId];$get[id];$getGuildVar[memberVerifiedRole;$get[guildId]]];
+        $if[$hasRoles[$get[guildId];$get[id];$getGuildVar[memberVerifiedRole;$get[guildId]]]==true;
           $log[$username[$get[id]] não tem verificado]
           $break
         ]
