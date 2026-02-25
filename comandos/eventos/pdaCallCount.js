@@ -1,6 +1,8 @@
 module.exports = {
     type: "clientReady",
     code: `
+    $log[PDAPORCALL EXECUTADO]
+    
 $setInterval[$arrayLoad[teste;, ;$channelVoiceMemberIDs[1462603953077358791]]
 $arrayForEach[teste;id;
 $onlyIf[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole]]==true;$log[$username[$env[id]] não tem verificado]]
