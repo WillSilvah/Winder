@@ -1,8 +1,6 @@
 module.exports = {
     type: "clientReady",
     code: `
-    $log[PDAPORCALL EXECUTADO]
-
 $setInterval[$arrayLoad[musica;, ;$channelVoiceMemberIDs[1462603953077358791]]
 $arrayForEach[musica;id;
 $onlyIf[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole]]==true;$log[$username[$env[id]] não tem verificado]]
@@ -44,7 +42,5 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
 ];1s]
-    
-$log[PDA EXECUTADO DE NOVO]
 `
 }
