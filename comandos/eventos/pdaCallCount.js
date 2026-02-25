@@ -1,46 +1,44 @@
 module.exports = {
-    type: "clientReady",
-    code: `
-$setInterval[$arrayLoad[musica;, ;$channelVoiceMemberIDs[1462603953077358791]]
-$arrayForEach[musica;id;
-$onlyIf[$hasRoles[1462224054676099094;$env[id];$getGuildVar[memberVerifiedRole;1462224054676099094]]==true;$log[$username[$env[id]] não tem verificado]]
-$onlyIf[$channelVoiceMemberCount[$voiceID[1462224054676099094;$env[id]]]>1;$log[Canal não tem mais que 1 membro]]
+  type: "clientReady",
+  code: `
+    $let[guildId;1462224054676099094]
 
-$let[pda;$if[$isMuted[1462224054676099094;$env[id]]==true;0;$randomNumber[1;5]]]
+    $fn[monitor;
+      $arrayLoad[members;,;$channelVoiceMemberIDs[$env[voiceId];,]]
 
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
-$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
+      $loop[$arrayLength[members];
+        $let[id;$arrayAt[members;$math[$env[i] - 1]]]
 
-$log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[1462224054676099094;$env[id]]]]
+        $if[$hasRoles[$get[guildId];$get[id];$getGuildVar[memberVerifiedRole;$get[guildId]]];
+          $log[$username[$get[id]] não tem verificado]
+          $break
+        ]
+        $if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]>1;
+          $log[Canal não tem mais que 1 membro]
+          $break
+        ]
 
-];1m]
+        $let[pda;$function[
+          $if[$isMuted[$get[guildId];$get[id]];
+            $return[0]
+          ]
+          $return[$randomNumber[1;5]]
+        ]]
 
-$setInterval[$arrayLoad[jogos;, ;$channelVoiceMemberIDs[1462615093153108001]]
-$arrayForEach[jogos;id;
-$onlyIf[$hasRoles[1462224054676099094;$env[id];$getGuildVar[memberVerifiedRole;1462224054676099094]]==true;$log[$username[$env[id]] não tem verificado]]
-$onlyIf[$channelVoiceMemberCount[$voiceID[1462224054676099094;$env[id]]]>1;$log[Canal não tem mais que 1 membro]]
+        $let[pdaMonth;$getMemberVar[pdaMonth;$get[id];$get[guildId]]]
+        $letSum[pdaMonth;$get[pda]]
+        $setMemberVar[pdaMonth;$get[pdaMonth];$get[id];$get[guildId]]
+        
+        $let[pdaTotal;$getMemberVar[pdaTotal;$get[id];$get[guildId]]]
+        $letSum[pdaTotal;$get[pda]]
+        $setMemberVar[pdaTotal;$get[pdaTotal];$get[id];$get[guildId]]
 
-$let[pda;$if[$isMuted[1462224054676099094;$env[id]]==true;0;$randomNumber[1;5]]]
+        $log[$username[$get[id]]: Ganhou $get[pda] no $channelName[$voiceID[$get[guildId];$get[id]]]]
+      ;i;true]
+    ;voiceId]
 
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
-$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
-
-$log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[1462224054676099094;$env[id]]]]
-
-];1m]
-
-$setInterval[$arrayLoad[batepapo;, ;$channelVoiceMemberIDs[1462224055884189785]]
-$arrayForEach[batepapo;id;
-$onlyIf[$hasRoles[1462224054676099094;$env[id];$getGuildVar[memberVerifiedRole;1462224054676099094]]==true;$log[$username[$env[id]] não tem verificado]]
-$onlyIf[$channelVoiceMemberCount[$voiceID[1462224054676099094;$env[id]]]>1;$log[Canal não tem mais que 1 membro]]
-
-$let[pda;$if[$isMuted[1462224054676099094;$env[id]]==true;0;$randomNumber[1;5]]]
-
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
-$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id];1462224054676099094];$get[pda]];$env[id];1462224054676099094]
-
-$log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[1462224054676099094;$env[id]]]]
-
-];1m]
-`
+    $setInterval[$callFn[monitor;1462603953077358791];1m]
+    $setInterval[$callFn[monitor;1462615093153108001];1m]
+    $setInterval[$callFn[monitor;1462224055884189785];1m]
+  `
 }
