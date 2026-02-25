@@ -6,7 +6,7 @@ $arrayLoad[musica;, ;$channelVoiceMemberIDs[1462603953077358791]]
 $arrayLoad[jogos;, ;$channelVoiceMemberIDs[1462615093153108001]]
 $arrayLoad[batepapo;, ;$channelVoiceMemberIDs[1462224055884189785]]
 
-$cron[
+$setInterval[
 $arrayForEach[musica;id;
 $onlyIf[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole]]==true;$log[$username[$env[id]] não tem verificado]]
 $onlyIf[$channelVoiceMemberCount[$voiceID[$guildID;$env[id]]]>1;]
@@ -18,9 +18,9 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];* * * * *]
+];1s]
 
-$cron[
+$setInterval[
 $arrayForEach[jogos;id;
 $onlyIf[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole]]==true;$log[$username[$env[id]] não tem verificado]]
 $onlyIf[$channelVoiceMemberCount[$voiceID[$guildID;$env[id]]]>1;]
@@ -32,9 +32,9 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];* * * * *]
+];1s]
 
-$cron[
+$setInterval[
 $arrayForEach[batepapo;id;
 $onlyIf[$hasRoles[1462224054676099094;$authorID;$getGuildVar[memberVerifiedRole]]==true;$log[$username[$env[id]] não tem verificado]]
 $onlyIf[$channelVoiceMemberCount[$voiceID[$guildID;$env[id]]]>1;]
@@ -46,7 +46,7 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$env[id]];$get[pda]];$env[id]
 
 $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$env[id]]]]
 
-];* * * * *]
+];1s]
     
 $log[PDA EXECUTADO DE NOVO]
 `
