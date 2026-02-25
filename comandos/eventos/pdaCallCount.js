@@ -45,6 +45,6 @@ $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$en
 
 ];* * * * *]
     
-    
+$log[PDA EXECUTADO DE NOVO]
 `
 }
