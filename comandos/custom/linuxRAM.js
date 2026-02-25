@@ -1,4 +1,4 @@
 module.exports = [{
     name: "linuxRam",
-   code: `$exec[$esc[pm2 jlist | jq '.[] | select(.name == "winder-canary") | .monit.memory / 1024 / 1024 | floor']]`
+   code: `$exec[pm2 jlist | jq '.[] | select(.name == "winder-canary") | .monit.memory / 1024 / 1024 | floor']`
 }]
