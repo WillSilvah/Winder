@@ -9,11 +9,11 @@ module.exports = {
       $loop[$arrayLength[members];
         $let[id;$arrayAt[members;$math[$env[i] - 1]]]
 
-        $if[$hasRoles[$get[guildId];$get[id];$getGuildVar[memberVerifiedRole;$get[guildId]]]==true;
+        $if[$hasRoles[$get[guildId];$get[id];$getGuildVar[memberVerifiedRole;$get[guildId]]]==false;
           $log[$username[$get[id]] não tem verificado]
           $break
         ]
-        $if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]>1;
+        $if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]<=1;
           $log[Canal não tem mais que 1 membro]
           $break
         ]
