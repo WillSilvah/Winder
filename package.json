@@ -8,15 +8,15 @@
     "pm2": "^6.0.14",
     "sqlite3": "^5.1.7"
   },
-  "name": "winder-canary",
+  "name": "winder-bot",
   "version": "1.0.0",
   "description": "Winder Canary",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --name winder-canary",
-    "stop": "pm2 stop winder-canary",
-    "logs": "pm2 logs winder-canary",
-    "restart": "pm2 restart winder-canary"
+    "start": "pm2 start index.js --name winder-bot",
+    "stop": "pm2 stop winder-bot",
+    "logs": "pm2 logs winder-bot",
+    "restart": "pm2 restart winder-bot"
   },
   "repository": {
     "type": "git",
