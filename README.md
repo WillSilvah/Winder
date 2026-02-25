@@ -20,14 +20,14 @@ Eu não garanto o funcionamento perfeito em outros servidores, mas atente-se a e
 ### 💻 FUNÇÕES CUSTOMIZADAS
 **Localizadas em:** `comandos/custom/`
 
-#### `$punishmentlog`
+#### `$punishmentlog[userID;staffID;reason;type]`
 Envia uma mensagem no canal de log de punições.
 - **userID:** Usuário punido.
 - **staffID:** Moderador que aplicou a punição.
 - **reason:** Motivo da punição.
 - **type:** Tipo da punição (Ex: Banido, Silenciado, Avisado, Expulso).
 
-#### `$sendDMPunishment`
+#### `$sendDMPunishment[userID;staffID;reason;type]`
 Envia o motivo da punição diretamente na DM do membro.
 - **userID:** Usuário punido.
 - **staffID:** Moderador que aplicou a punição.
