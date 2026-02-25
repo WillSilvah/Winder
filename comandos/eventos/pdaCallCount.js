@@ -1,5 +1,5 @@
-module.exports = [{
-    type: 'clientReady',
+module.exports = {
+    type: "clientReady",
     code: `
 $setInterval[
 $arrayLoad[teste;, ;$channelVoiceMemberIDs[1462603953077358791]]
@@ -48,4 +48,4 @@ $log[$username[$env[id]]: Ganhou $get[pda] no $channelName[$voiceID[$guildID;$en
     
     
 `
-}]
+}
