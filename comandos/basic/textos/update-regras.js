@@ -8,7 +8,7 @@ $sendMessage[$channelID;
 $addSection[
 $addTextDisplay[# COMUNIDADE PATINHAS
 **Diretrizes de como manter uma comunidade organizada.**]
-$addThumbnail[$guildIcon[1462224054676099094]]
+$addThumbnail[https://cdn.discordapp.com/attachments/1466566860190388265/1469061743945842729/148_Sem_Titulo3_20260205170543.png?ex=69a0a7dd&is=699f565d&hm=a0eb04255ade82e0b59f9af17f84d452cfc3de5229ea6695ac3231e6ad6da39a&]
 ]
 $addSeparator[Large;true]
 
