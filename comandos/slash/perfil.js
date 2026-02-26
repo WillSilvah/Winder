@@ -11,9 +11,9 @@ $if[$getMemberVar[birthday;$get[userID];$guildID]!=;🎂 **$getMemberVar[birthda
 
 $addField[🎮 Minigames ganhos;$getMemberVar[minigameMonthWins;$get[userID]] (Mês) | $getMemberVar[minigameTotalWins;$get[userID]] (total)]
 
-$addField[Votos dados pelo Discords.com;$getMemberVar[votesTotal;$get[userID]] (Mês) | $getMemberVar[votesMonth;$get[userID]] (Total)]
+$addField[⭐ Votos dados pelo Discords.com;$getMemberVar[votesTotal;$get[userID]] (Mês) | $getMemberVar[votesMonth;$get[userID]] (Total)]
 
-$addField[Atividade do membro;✨ $getMemberVar[pdaMonth;$get[userID]]
+$addField[📃 Atividade do membro;✨ $getMemberVar[pdaMonth;$get[userID]]
 💬 $getMemberVar[messageMonth;$get[userID]] (Mês)
 💬 $getMemberVar[messageWeekly;$get[userID]] (Semana)
 💬 $getMemberVar[messageToday;$get[userID]] (Hoje)
