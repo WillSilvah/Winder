@@ -13,7 +13,7 @@ $log[@$username[$get[id]] não tem verificado]
 $break
 ]
 
-$if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]<=1;
+$if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]==1;
 $log[Canal "$channelName[$voiceID[$get[guildId];$get[id]]]" que o @$username[$get[id]] está não tem mais que 1 membro]
 $break
 ]
