@@ -9,6 +9,7 @@ $addContainer[
 $addSection[
 $addTextDisplay[# $env[session;name]
 ]
+]
 
 ;Green]
 ];30m;autoRankDaily]
