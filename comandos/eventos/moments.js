@@ -22,4 +22,4 @@ $deleteMemberVar[messageToday]
 ;0 0 * * *]
  
  `
- }
+}

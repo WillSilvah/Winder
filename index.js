@@ -171,6 +171,9 @@ ForgeDB.variables({
   "sabartTheme": "",
   "sabartDescription": "",
   
+  "sessionName": "",
+  "sessionNumber": "",
+  
   "memberIsArtist": "false",
   "memberIsOfficialArtist": "false",
   "memberIsVerified": "false",
