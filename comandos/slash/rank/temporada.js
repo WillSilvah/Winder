@@ -9,8 +9,7 @@ $memberLeaderboard[messageMonth;$guildID;desc;10;$if[$option[pagina]!=;$option[p
 💬$env[data;value] / ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] / ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID]]]]
 ]
 $footer[Você: 💬$getMemberVar[messageMonth;$authorID] ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]]
-$image[$env[session;banner]]
-$color[Blue]
+$color[Green]
 
   `,
 data: {

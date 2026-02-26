@@ -9,7 +9,7 @@ $memberLeaderboard[messageTotal;$guildID;desc;10;$if[$option[pagina]!=;$option[p
 💬$env[data;value] / ✨️ $getMemberVar[pdaTotal;$env[data;id];$get[guildID]] / ⬆️ $getMemberVar[votesTotal;$env[data;id];$get[guildID]]]]
 ]
 $footer[Você: 💬$getMemberVar[messageTotal;$authorID] ✨️$getMemberVar[pdaTotal;$authorID] | Servidor: 💬$getGuildVar[guildTotalMessages;$guildID]]
-$color[Blue]
+$color[Green]
 
   `,
 data: {
