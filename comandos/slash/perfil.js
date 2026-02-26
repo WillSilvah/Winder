@@ -13,9 +13,12 @@ $addField[🎮 Minigames ganhos;$getMemberVar[minigameMonthWins;$get[userID]] (M
 
 $addField[Votos dados pelo Discords.com;$getMemberVar[votesTotal;$get[userID]] (Mês) | $getMemberVar[votesMonth;$get[userID]] (Total)]
 
-$addField[Atividade do membro (histórico);✨ $getMemberVar[pdaTotal;$get[userID]] | 💬 $getMemberVar[messageTotal;$get[userID]]]
+$addField[Atividade do membro;✨ $getMemberVar[pdaTotal;$get[userID]] | 💬 $getMemberVar[messageTotal;$get[userID]]
+💬 $getMemberVar[messageWeekly;$get[userID]] (Semana)
+💬 $getMemberVar[messageToday;$get[userID]] (Hoje)
+]
 
-$addField[Atividade do membro (temporada);✨ $getMemberVar[pdaMonth;$get[userID]] | 💬 $getMemberVar[messageMonth;$get[userID]]/M | 💬 $getMemberVar[messageWeekly;$get[userID]]/Semana | 💬 $getMemberVar[messageToday;$get[userID]]/Hoje]
+$addField[Temporada;✨ $getMemberVar[pdaMonth;$get[userID]] | 💬 $getMemberVar[messageMonth;$get[userID]]]
 
 ]
 $footer[$replaceText[$get[badges]END; | END;;1]]
