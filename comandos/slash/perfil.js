@@ -15,7 +15,7 @@ $addField[Votos dados pelo Discords.com;$getMemberVar[votesTotal;$get[userID]] (
 
 $addField[Atividade do membro (histórico);✨ $getMemberVar[pdaTotal;$get[userID]] | 💬 $getMemberVar[messageTotal;$get[userID]]]
 
-$addField[Atividade do membro (temporada);✨ $getMemberVar[pdaMonth;$get[userID]] | 💬 $getMemberVar[messageMonth;$get[userID]]]
+$addField[Atividade do membro (temporada);✨ $getMemberVar[pdaMonth;$get[userID]] | 💬 $getMemberVar[messageMonth;$get[userID]]/M | 💬 $getMemberVar[messageWeekly;$get[userID]]/Semana | 💬 $getMemberVar[messageToday;$get[userID]]/Hoje]
 
 ]
 $footer[$replaceText[$get[badges]END; | END;;1]]
