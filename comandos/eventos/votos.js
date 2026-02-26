@@ -2,29 +2,29 @@ module.exports = {
  type: 'guildMemberUpdate',
  code: `
 $if[$oldMember[addedRoles]==$getGuildVar[memberVotedRole;$guildID];
-$setUserVar[votesMonth;$math[$getUserVar[votesMonth]+1]]
+$setMemberVar[votesMonth;$math[$getMemberVar[votesMonth]+1]]
 
-$setUserVar[votesTotal;$math[$getUserVar[votesTotal]+1]]
+$setMemberVar[votesTotal;$math[$getMemberVar[votesTotal]+1]]
 
 
 $sendMessage[$getGuildVar[batePapo];
-$title[@$username votou!]
+$title[@$Membername votou!]
 $description[
 Vamos votar você também?
 ]
-$footer[$getUserVar[votesMonth;$authorID] Votos neste mês | $getUserVar[votesTotal;$authorID] no total.]
-$thumbnail[$userAvatar]
+$footer[$getMemberVar[votesMonth;$authorID] Votos neste mês | $getMemberVar[votesTotal;$authorID] no total.]
+$thumbnail[$MemberAvatar]
 $color[Green]
 
 $addActionRow
 $addButton[https://discords.com/servers/$guildID/upvote;Vote na patinhas! (discords.com);Link;✅;false]
 ]
 
-$if[$isUserDMEnabled==true;
+$if[$isMemberDMEnabled==true;
 $sendDM[$authorID;$title[🥰 Muito obrigado por ter votado!]
 $description[
 Ativei um $bold[bônus de pontos de atividades] para ganhar mais pontos enquanto conversa e interage na patinhas!
-Neste mês você já votou **$getUserVar[votesMonth;$authorID]** vezes!
+Neste mês você já votou **$getMemberVar[votesMonth;$authorID]** vezes!
 ]
 $footer[Quer ser lembrado de votar? use /lembrete voto]
 $color[Red]
