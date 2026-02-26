@@ -8,7 +8,7 @@ $setGuildVar[sabartDescription;$option[descricao]]
 $interactionReply[
 <@$authorID> O tema do **sabarte** essa semana será...
 $description[
-# #toUppercase[$getGuildVar[sabartTheme]]
+# $toUppercase[$getGuildVar[sabartTheme]]
 **$getGuildVar[sabartDescription]**
 ]
 $color[Yellow]
