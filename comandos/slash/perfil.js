@@ -5,7 +5,7 @@ module.exports = {
 $let[badges;$if[$getMemberVar[memberIsVerified;$get[userID]]==true;✅ Verificado | ;]$if[$getMemberVar[memberIsStaff;$get[userID]]==true;🛡️ Equipe Patinhas | ;]$if[$memberExists[$guildID;$get[userID]]==true;🐾 Peludo | ;]]
 
 
-$title[📃 Perfil de $username[$get[userID]]]
+$title[📃 Perfil de @$username[$get[userID]]]
 $description[
 $if[$getMemberVar[birthday;$get[userID];$guildID]!=;🎂 **$getMemberVar[birthday;$get[userID];$guildID]/$year**;🎂 Utilize **/aniversario adicionar** para registrar uma data!]
 
