@@ -4,14 +4,17 @@ module.exports = {
 $onlyIf[$oldMember[addedRoles]==$getGuildVar[memberBoosterRole;$guildID];]
 
 $sendMessage[$getGuildVar[batePapo];
-$title[$emoji[$emojiID[pats_foxWoW]] @$userTag[$authorID] impulsionou a Patinhas!]
-$description[
-Vamos agradecer por esta ação generosa?
+$addContainer[
+$addSection[
+$addTextDisplay[## $emoji[$emojiID[pats_foxWoW]] <@$authorID> impulsionou a Patinhas!
+**Vamos agradecer por esta ação generosa?**]
+$addThumbnail[$userAvatar[$authorID]]
 ]
-$color[Pink]
+$addSeparator[Large;true]
+;#d505ff]
 ]
 
-$startTyping[$channelID]
+$startTyping[$getGuildVar[batePapo]]
 $wait[20s]
 $sendMessage[$getGuildVar[batePapo];
 <@$authorID> Obrigado ❤️, é gratificante pensar que você gastou mais de $bold[R$24,99] só para fazer a gente feliz. 😻
