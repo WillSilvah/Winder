@@ -16,7 +16,8 @@ $writeFile[Recursos/avisos/$guildID/$findUser[$get[userID]]/aviso_$getMemberVar[
 "motivo": "$get[reason]"
 };utf8]
 
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
+$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+> $bold[$get[reason]]]
 
   `,
 data: {
