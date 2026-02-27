@@ -8,12 +8,12 @@ $setMemberVar[votesTotal;$math[$getMemberVar[votesTotal]+1]]
 
 
 $sendMessage[$getGuildVar[batePapo];
-$title[@$Membername votou!]
+$title[@$username votou!]
 $description[
 Vamos votar você também?
 ]
 $footer[$getMemberVar[votesMonth;$authorID] Votos neste mês | $getMemberVar[votesTotal;$authorID] no total.]
-$thumbnail[$MemberAvatar]
+$thumbnail[$userAvatar]
 $color[Green]
 
 $addActionRow
