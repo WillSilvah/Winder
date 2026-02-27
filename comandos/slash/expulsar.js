@@ -10,7 +10,8 @@ $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
 $!kickMember[$guildID;$get[userID];$get[reason]]
 
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
+$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+> $bold[$get[reason]]]
   `,
 data: {
   "type": 1,
