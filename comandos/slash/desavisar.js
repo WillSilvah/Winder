@@ -5,7 +5,7 @@ $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu
 $let[staffID;$authorID]
 $let[type;desavisado]
 
-$onlyIf[$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID;0]>0;<@$authorID> O usuário não tem nenhuma advertência.]
+$onlyIf[$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0]>0;<@$authorID> O usuário não tem nenhuma advertência.]
 
 $deleteFile[Recursos/avisos/$guildID/$findUser[$get[userID]]/aviso_$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0].txt]
 
