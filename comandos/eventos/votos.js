@@ -12,7 +12,7 @@ $title[@$username votou!]
 $description[
 Vamos votar você também?
 ]
-$footer[$getMemberVar[votesMonth;$authorID] Votos neste mês | $getMemberVar[votesTotal;$authorID] no total.]
+$footer[$getMemberVar[votesMonth;$authorID] Votos neste mês | $getMemberVar[votesTotal;$authorID] votos no total.]
 $thumbnail[$userAvatar]
 $color[Green]
 
