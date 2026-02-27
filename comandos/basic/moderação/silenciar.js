@@ -25,6 +25,7 @@ $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
 $!timeout[$guildID;$get[userID];$get[time];$get[reason]]
 
-$sendMessage[$channelID;<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
+$sendMessage[$channelID;<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+> $bold[$get[reason]]]
 `
 }
