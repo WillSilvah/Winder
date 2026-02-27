@@ -11,7 +11,7 @@ $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 $setMemberVar[lastWarn;{"staffID": "$findUser[$get[staffID]]","reason": "$get[reason]"};$findUser[$get[userID]]]
 $setMemberVar[warnsTotal;$sum[$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0];1];$findUser[$get[userID]]]
 
-$writeFile[Recursos/avisos/$guildID/$findUser[$get[userID]]/aviso_$getUserVar[warnsTotal;$findUser[$get[userID]];$guildID;0].txt;{
+$writeFile[Recursos/avisos/$guildID/$findUser[$get[userID]]/aviso_$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0].txt;{
 "staffID": "$get[staffID]", 
 "motivo": "$get[reason]"
 };utf8]
