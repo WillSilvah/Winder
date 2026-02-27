@@ -1,19 +1,20 @@
 module.exports = [{
     type: 'clientReady',
     code: `
+    $let[guildID;$getGlobalVar[guildID]]
 $setInterval[
-$onlyIf[$getGuildVar[msgPerMinute;$guildID]>=6;]
+$onlyIf[$getGuildVar[msgPerMinute;$get[guildID]]]>=6;]
 
 $minigame[$randomText[fraseRepeat;questions]]
 
 $wait[1m]
-$onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
+$onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
 
-$setGuildVar[minigameStatus;false;$guildID]
-$setGuildVar[minigameWord;;$guildID]
+$setGuildVar[minigameStatus;false;$get[guildID]]
+$setGuildVar[minigameWord;;$get[guildID]]
 
-$setGuildVar[minigameXPmin;0;$guildID]
-$setGuildVar[minigameXPmax;0;$guildID]
+$setGuildVar[minigameXPmin;0;$get[guildID]]
+$setGuildVar[minigameXPmax;0;$get[guildID]]
 $setChannelSlowmode[$getGuildVar[batePapo];0]
 $sendMessage[### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
 
@@ -23,13 +24,13 @@ $sendMessage[### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
     type: 'messageCreate',
     code: `
 $onlyIf[$channelID==$getGuildVar[batePapo];]
-$onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
-$onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$getGuildVar[minigameWord;$guildID];$toLowerCase[$getGuildVar[minigameWord;$guildID]]];]
+$onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
+$onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$getGuildVar[minigameWord;$get[guildID]];$toLowerCase[$getGuildVar[minigameWord;$get[guildID]]]];]
 $startTyping[$channelID]
-$setGuildVar[minigameStatus;false;$guildID]
-$setGuildVar[minigameWord;;$guildID]
+$setGuildVar[minigameStatus;false;$get[guildID]]
+$setGuildVar[minigameWord;;$get[guildID]]
 
-$let[xpDrop;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;$randomNumber[$getGuildVar[minigameXPmin;$guildID];$getGuildVar[minigameXPmax;$guildID]];0]]
+$let[xpDrop;$if[$hasRoles[$get[guildID];$authorID;$getGuildVar[memberVerifiedRole]]==true;$randomNumber[$getGuildVar[minigameXPmin;$get[guildID]];$getGuildVar[minigameXPmax;$get[guildID]]];0]]
 
 $setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$authorID];$get[xpDrop]];$authorID]
 $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$authorID];$get[xpDrop]];$authorID]
@@ -43,11 +44,11 @@ $sendMessage[$channelID;<@$authorID> | Parabéns, você ganhou ✨**+$get[xpDrop
 > **Ganhou 🏆$getMemberVar[minigameMonthWins;$authorID] vezes neste mês!**
 ]
 
-$!memberRemoveRoles[$guildID;$getGuildVar[minigameLastUser;$guildID];$getGuildVar[lastWinMemberRole]]
+$!memberRemoveRoles[$get[guildID];$getGuildVar[minigameLastUser;$get[guildID]];$getGuildVar[lastWinMemberRole]]
 $wait[1s]
-$!memberAddRoles[$guildID;$authorID;$getGuildVar[lastWinMemberRole]]
-$setGuildVar[minigameLastUser;$authorID;$guildID]
+$!memberAddRoles[$get[guildID];$authorID;$getGuildVar[lastWinMemberRole]]
+$setGuildVar[minigameLastUser;$authorID;$get[guildID]]
 
-$setGuildVar[minigameEmit;false;$guildID]
+$setGuildVar[minigameEmit;false;$get[guildID]]
 `
 }]
