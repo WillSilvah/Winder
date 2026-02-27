@@ -10,7 +10,8 @@ $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
 $!timeout[$guildID;$get[userID];0;$get[reason]]
 
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
+$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+> $bold[$get[reason]]]
   `,
 data: {
   "type": 1,
