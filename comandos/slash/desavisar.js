@@ -14,7 +14,8 @@ $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
 $setMemberVar[warnsTotal;$sub[$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0];1];$findUser[$get[userID]];$guildID]
 
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
+$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+> $bold[$get[reason]]]
 
   `,
 data: {
