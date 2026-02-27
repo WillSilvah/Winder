@@ -24,6 +24,7 @@ $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
 $!ban[$guildID;$get[userID];$get[reason];0]
 
-$sendMessage[$channelID;<@$authorID> **$username[$get[userID]]** foi **$get[type]**!]
+$sendMessage[$channelID;<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+> $bold[$get[reason]]]
 `
 }
