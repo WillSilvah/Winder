@@ -10,7 +10,7 @@ $setMemberVar[votesTotal;$math[$getMemberVar[votesTotal]+1]]
 $sendMessage[$getGuildVar[batePapo];
 $addSection[
 $addTextDisplay[## ⬆️ <@$authorID> votou!
-**$getMemberVar[votesMonth;$authorID] votou neste mês!**]
+**Votou $getMemberVar[votesMonth;$authorID] neste mês!**]
 $addThumbnail[$userAvatar]
 ]
 $addSeparator[Large;true]
