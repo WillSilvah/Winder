@@ -3,6 +3,8 @@ module.exports = {
 $onlyIf[$isTicket[$channelID]==true;<@$authorID> | Você precisa estar em um ticket para utilizar esse comando.]
 $timezone[America/Recife]
 
+$interactionReply[Ticket fechado!]
+
 $!modifyChannelPerms[$channelID;$guildID;-SendMessages]
 
 $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
@@ -18,7 +20,6 @@ $color[Orange]
 $deleteChannels[$channelID]
 $deleteFile[Recursos/ticket-logs/$channelName[$channelID].txt]
 
-$interactionReply[Ticket fechado!]
   `,
 data: {
   "type": 1,
