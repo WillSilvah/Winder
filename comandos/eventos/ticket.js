@@ -27,7 +27,7 @@ Fecha este ticket.
 
 $writeFile[Recursos/ticket-logs/⭐│ticket-$userTag.txt;[$hour:$minute:$second] $userTag[$clientID]: $userTag[$authorID] criou um ticket!
 ID do canal: $get[id]
-Data: $hour:$minute:$second - $date/$month/$year
+Data: $hour:$minute:$second - $day/$month/$year
 ;utf8]
     
 `
