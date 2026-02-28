@@ -25,6 +25,8 @@ module.exports = [{
    code: `
 $let[channelID;$createChannel[$guildID;$env[name];GuildText;Ticket_$authorID;$env[categoryID]]]
 
+$!modifyChannelPerms[$get[channelID];$authorID;+ViewChannel;+SendMessages]
+
 $setChannelVar[isTicketChannel;true;$get[channelID]]
 
 $sendMessage[$get[channelID];$env[message]]
