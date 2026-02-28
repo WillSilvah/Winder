@@ -25,8 +25,8 @@ Fecha este ticket.
 ;Orange]
 ;$getGuildVar[ticketCategory];true]]
 
-$mkdir[Recursos/ticket-logs]
-$writeFile[Recursos/ticket-logs/💁│ticket-$userTag.txt;[$hour:$minute:$second] $userTag[$clientID]: $userTag[$authorID] criou um ticket!
+$!mkdir[Recursos/ticket-logs]
+$!writeFile[Recursos/ticket-logs/💁│ticket-$userTag.txt;[$hour:$minute:$second] $userTag[$clientID]: $userTag[$authorID] criou um ticket!
 ID do canal: $get[id]
 Data: $hour:$minute:$second - $day/$month/$year;utf8]
     
