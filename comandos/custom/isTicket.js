@@ -8,6 +8,6 @@ module.exports = [{
     }
    ],
    code: `
-$env[channelID]
+Teste: $env[channelID]
 `
 }]
