@@ -8,7 +8,6 @@ module.exports = [{
     }
     ],
     code: `
-
 $setGuildVar[minigameXPmin;5;$guildID]
 $setGuildVar[minigameXPmax;15;$guildID]
 $if[$env[tipo]==fraseRepeat;

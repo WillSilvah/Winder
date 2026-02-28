@@ -3,7 +3,7 @@ module.exports = {
     code: `
 $onlyIf[$guildID==1462224054676099094;]
 
-$if[$getMemberVar[messageTotal;$authorID]>=150;
+$if[$getMemberVar[messageTotal;$authorID]>=200;
 $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]==false;]
 
 $sendMessage[$channelID;<@$authorID> | Você agora é um **Peludo Verificado**! $emoji[$emojiID[pats_foxClapping]] Você está gostando da Patinhas? 👀;false]

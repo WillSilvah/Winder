@@ -141,6 +141,7 @@ ForgeDB.variables({
   "memberOfficialArtistRole": "1466120026590417056",
   "memberActiveRole": "1467315513070977168",
   "logMemberActiveChat": "1467318550925410485",
+  "ticketLogs": "1467920266041757922",
   "prefixo": "w!",
   "pdaLoggerChannel": "1465378100505219072",
   "lastMemberGuild": "",
