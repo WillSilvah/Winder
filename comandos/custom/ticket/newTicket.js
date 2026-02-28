@@ -22,7 +22,7 @@ module.exports = [{
       required: false
     }
    ],
-    code: `
+   code: `
 $let[channelID;$createChannel[$guildID;$env[name];GuildText;Ticket_$authorID;$env[categoryID]]]
 
 $setChannelVar[isTicketChannel;true;$get[channelID]]
