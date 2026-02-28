@@ -8,6 +8,6 @@ module.exports = [{
     }
    ],
    code: `
-Teste: $env[channelID]
+$getChannelVar[isTicketChannel;$if[$env[channelID]==;$channelID;$env[channelID]];false]
 `
 }]
