@@ -26,10 +26,10 @@ $addTextDisplay[
 ;Yellow]]
 
 $sendMessage[$getGuildVar[batePapo;1462224054676099094];
-$author[Sabart;https://abs.twimg.com/emoji/v2/72x72/1f3a8.png]
+$author[Sabarte;https://abs.twimg.com/emoji/v2/72x72/1f3a8.png]
 $title[$toUpperCase[$env[sabart;theme]]]
 $description[
-$env[sabart;theme]
+$env[sabart;description]
 ]
 $footer[Bons desenhos aos artistas!]
 $color[Yellow]
