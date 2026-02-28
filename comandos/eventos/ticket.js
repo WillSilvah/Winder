@@ -3,7 +3,7 @@ module.exports = [{
     type: "interactionCreate",
     code: `$ephemeral
 $timezone[America/Recife]
-$onlyIf[$channelExists[$guildID;💁│ticket-$userTag]==false;Já existe um ticket criado por você! <#$findChannel[💁│ticket-$userTag]>]
+$onlyIf[$channelExists[$findChannel[💁│ticket-$userTag]]==false;Já existe um ticket criado por você! <#$findChannel[💁│ticket-$userTag]>]
 
 $let[id;$newTicket[💁│ticket-$userTag;$addContainer[
 $addSection[
