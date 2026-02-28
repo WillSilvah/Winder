@@ -23,12 +23,12 @@ Fecha este ticket.
 
 ]
 ;Orange]
-;781665473589805076;false]]
+;$getGuildVar[ticketCategory];true]]
 
-$writeFile[Recursos/ticket-logs/⭐│ticket-$userTag.txt;[$hour:$minute:$second] $userTag[$clientID]: $userTag[$authorID] criou um ticket!
+$mkdir[Recursos/ticket-logs]
+$writeFile[Recursos/ticket-logs/💁│ticket-$userTag.txt;[$hour:$minute:$second] $userTag[$clientID]: $userTag[$authorID] criou um ticket!
 ID do canal: $get[id]
-Data: $hour:$minute:$second - $day/$month/$year
-;utf8]
+Data: $hour:$minute:$second - $day/$month/$year;utf8]
     
 `
 },{
