@@ -18,13 +18,9 @@ $let[time;1]
 
 $let[voiceTimeMonth;$getMemberVar[voiceTimeMonth;$get[id];$get[guildId];0]]
 
-$letSum[voiceTimeMonth;$get[pda]]
-$setMemberVar[voiceTimeMonth;$get[voiceTimeMonth];$get[id];$get[guildId]]
+$setMemberVar[timecallMonth;$math[$getMemberVar[timecallMonth;$get[id];0]+$get[time]];$get[id]]
 
-$let[voiceTimeTotal;$getMemberVar[voiceTimeTotal;$get[id];$get[guildId];0]]
-
-$letSum[voiceTimeTotal;$get[pda]]
-$setMemberVar[voiceTimeTotal;$get[voiceTimeTotal];$get[id];$get[guildId]]
+$setMemberVar[timecallTotal;$math[$getMemberVar[timecallTotal;$get[id];0]+$get[time]];$get[id]]
 
 $log[$username[$get[id]]: $get[time]  minuto no $channelName[$voiceID[$get[guildId];$get[id]]]]
 
