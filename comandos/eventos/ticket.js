@@ -3,7 +3,7 @@ module.exports = [{
     type: "interactionCreate",
     code: `$ephemeral
 $timezone[America/Recife]
-$onlyIf[$channelExists[$findChannel[ticket-$userTag]]==false;Já existe um ticket criado por você! <#$findChannel[💁│ticket-$userTag]>]
+$onlyIf[$channelExists[$findChannel[ticket-$userTag]]==false;Já existe um ticket criado por você! <#$findChannel[ticket-$userTag]>]
 
 $let[id;$newTicket[ticket-$userTag;$addContainer[
 $addSection[
@@ -40,10 +40,9 @@ $onlyIf[$isTicket[$channelID]==true;]
 $onlyIf[$fileExists[Recursos/ticket-logs/$channelName[$channelID].txt]==true;]
 $timezone[America/Recife]
 
-$appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
-[$hour:$minute:$second] $userTag ($authorID): $message
-
-MSGID: $messageID]
+$appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;$hour:$minute:$second $userTag ($authorID): $message
+MSGID: $messageID
+---------------------------------------]
 
 
    
