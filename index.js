@@ -191,7 +191,6 @@ ForgeDB.variables({
   "msgBoost": "1",
   "pdaMonth": "0",
   "pdaTotal": "0",
-  "guildPDAmedia": "0",
   "metaPDATotal": "0",
   "metaPDA": "1000",
   

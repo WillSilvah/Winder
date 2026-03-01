@@ -7,7 +7,6 @@ module.exports = {
     slash: "perfil",
     type: "messageCreate",
     code: `
-$onlyIf[$argsCount>0;$cmdinfo[$commandName]]
 
 $let[userID;$findUser[$message[0];true]]
   
