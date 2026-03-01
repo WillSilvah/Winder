@@ -5,7 +5,7 @@ $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu
 $let[staffID;$authorID]
 $let[type;banido]
 
-$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
+$if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
 $!ban[$guildID;$get[userID];$get[reason];0]
