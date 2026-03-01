@@ -26,7 +26,8 @@ Fecha este ticket.
 ;$getGuildVar[ticketCategory];true]]
 
 $ephemeral
-$interactionReply[Canal criado! <#$get[id]>]
+$interactionReply[## TICKET CRIADO!
+<#$get[id]>]
 
 $mkdir[Recursos/ticket-logs/$guildID]
 $writeFile[Recursos/ticket-logs/$guildID/ticket-$userTag.txt;$hour:$minute:$second $userTag[$clientID]: $userTag[$authorID] criou um ticket!
