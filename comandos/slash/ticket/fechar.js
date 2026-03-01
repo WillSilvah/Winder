@@ -16,8 +16,9 @@ $author[$channelName[$channelID].txt]
 $color[Orange]
 ]
 
-$deleteChannels[$channelID]
 $deleteFile[Recursos/ticket-logs/$guildID/$channelName[$channelID].txt]
+$wait[2s]
+$deleteChannels[$channelID]
 
   `,
 data: {
