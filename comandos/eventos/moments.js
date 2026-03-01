@@ -22,7 +22,7 @@ $startTyping[$getGuildVar[batePapo;$get[guildID]]]
 $wait[5s]
 $sendMessage[$getGuildVar[batePapo;$get[guildID]];
 $addTextDisplay[# TOP 5 MEMBROS
-$memberLeaderboard[messageMonth;$guildID;desc;5;1;
+$memberLeaderboard[messageMonth;$get[guildID];desc;5;1;
 ;data;pos;$return[$env[pos]° $bold[$username[$env[data;id]]]
 💬$env[data;value] / ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] / ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID]]
 ]
@@ -44,12 +44,10 @@ $writeFile[Recursos/session.json;{
     "number": "$getGuildVar[sessionNumber;1462224054676099094]"
 };utf8]
 
-$jsonLoad[session;$readFile[Recursos/session.json]]
-
 $startTyping[$getGuildVar[batePapo;$get[guildID]]]
 $wait[5s]
 
-$sendMessage[$getGuildVar[batePapo;$get[guildID]];
+$sendMessage[$getGuildVar[batePapo;$get[guildID]];$jsonLoad[session;$readFile[Recursos/session.json]]
 $addSection[
 $addTextDisplay[
 AGORA COMEÇA...
