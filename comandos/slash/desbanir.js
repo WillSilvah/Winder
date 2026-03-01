@@ -15,7 +15,7 @@ $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
   `,
 data: {
   "type": 1,
-  "name": "ban",
+  "name": "unban",
   "description": "Desbana um membro.",
   "default_member_permissions": "4",
   "options": [
