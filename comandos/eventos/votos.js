@@ -9,7 +9,7 @@ $setMemberVar[votesTotal;$math[$getMemberVar[votesTotal]+1]]
 
 $sendMessage[$getGuildVar[batePapo];
 $addSection[
-$addTextDisplay[## ⬆️ <@$authorID> votou!
+$addTextDisplay[### ⬆️ <@$authorID> votou!
 **Votou $getMemberVar[votesMonth;$authorID] neste mês!**]
 $addThumbnail[$userAvatar]
 ]
@@ -17,6 +17,7 @@ $addSeparator[Large;true]
 
 $addActionRow
 $addButton[https://discords.com/servers/$guildID/upvote;Vote na patinhas! (discords.com);Link;⬆️;false]
+$deleteIn[5m]
 ]
 
 $if[$isMemberDMEnabled==true;
