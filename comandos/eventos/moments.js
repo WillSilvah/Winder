@@ -5,7 +5,7 @@ $cron[
 $deleteRecords[metaXP]
 $deleteRecords[messageMonth]
 $deleteRecords[votesMonth]
-$deleteRecords[msgXP]
+$deleteRecords[pdaMonth]
 
 $deleteRecords[membersJoinedMonth]
 $deleteRecords[guildMonthMessages]
