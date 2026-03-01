@@ -7,7 +7,7 @@ $let[type;desbanido]
 
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-$unban[$guildID;$get[userID];$get[reason]]
+$!unban[$guildID;$get[userID];$get[reason]]
 
 $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
 > $bold[$get[reason]]]
