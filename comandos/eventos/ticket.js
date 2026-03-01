@@ -25,22 +25,22 @@ Fecha este ticket.
 ;Orange]
 ;$getGuildVar[ticketCategory];true]]
 
+$interactionReply[Canal criado! <#$get[id]>]
+
 $mkdir[Recursos/ticket-logs]
-$writeFile[Recursos/ticket-logs/ticket-$userTag.txt;$hour:$minute:$second: $userTag[$clientID]: $userTag[$authorID] criou um ticket!
+$writeFile[Recursos/ticket-logs/ticket-$userTag.txt;$hour:$minute:$second $userTag[$clientID]: $userTag[$authorID] criou um ticket!
 ID do canal: $get[id]
 Data: $hour:$minute:$second - $day/$month/$year]
-
-$interactionReply[Canal criado! <#$get[id]>]
     
 `
 },{
     type: "messageCreate",
     code: `
 $onlyIf[$isTicket[$channelID]==true;]
-$onlyIf[$fileExists[Recursos/ticket-logs/$channelName[$channelID].txt]==true;]
 $timezone[America/Recife]
 
-$appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;$hour:$minute:$second $userTag ($authorID): $message
+$appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
+$hour:$minute:$second $userTag ($authorID): $message
 MSGID: $messageID
 ---------------------------------------]
 

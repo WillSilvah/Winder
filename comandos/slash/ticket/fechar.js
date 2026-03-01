@@ -8,7 +8,8 @@ $interactionReply[Ticket fechado!]
 $!modifyChannelPerms[$channelID;$guildID;-SendMessages]
 
 $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
-[$hour:$minute:$second] $userTag ($authorID) fechou o ticket.]
+$hour:$minute:$second $userTag ($authorID) fechou o ticket.]
+
 $sendMessage[$getGuildVar[ticketLogs];
 $attachment[Recursos/ticket-logs/$channelName[$channelID].txt;/$channelName[$channelID].txt;false;utf8;]
 $author[$channelName[$channelID].txt]
