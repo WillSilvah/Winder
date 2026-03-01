@@ -2,13 +2,12 @@ module.exports = [{
     type: 'clientReady',
     code: `
     $let[guildID;$getGlobalVar[guildID]]
-$cron[
+$setInterval[
 $log[Tentativa de executar um minigame
 -----------------------------------
 MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID]]
 
 ]
-
 $onlyIf[$getGuildVar[msgPerMinute;$get[guildID]]]>=6;]
 
 $minigame[$randomText[fraseRepeat;questions]]
@@ -24,7 +23,7 @@ $setGuildVar[minigameXPmax;0;$get[guildID]]
 $setChannelSlowmode[$getGuildVar[batePapo];0]
 $sendMessage[### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
 
-;*/15 * * * *]
+;15m;WinderMinigames]
 `
 },{
     type: 'messageCreate',
