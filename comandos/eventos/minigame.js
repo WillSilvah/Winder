@@ -3,6 +3,12 @@ module.exports = [{
     code: `
     $let[guildID;$getGlobalVar[guildID]]
 $setInterval[
+$log[Tentativa de executar um minigame
+-----------------------------------
+MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID]]
+
+]
+
 $onlyIf[$getGuildVar[msgPerMinute;$get[guildID]]]>=6;]
 
 $minigame[$randomText[fraseRepeat;questions]]
