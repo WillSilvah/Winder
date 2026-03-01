@@ -36,7 +36,7 @@ Data: $hour:$minute:$second - $day/$month/$year]
 },{
     type: "messageCreate",
     code: `
-$onlyIf[$isTicket[$channelID]==true;]
+$onlyIf[$isTicket==true;]
 $timezone[America/Recife]
 
 $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
