@@ -26,7 +26,7 @@ Fecha este ticket.
 ;$getGuildVar[ticketCategory];true]]
 
 $!mkdir[Recursos/ticket-logs]
-$!writeFile[Recursos/ticket-logs/💁│ticket-$userTag[$authorID].txt;[$hour:$minute:$second] $userTag[$clientID]: $userTag[$authorID] criou um ticket!
+$!writeFile[Recursos/ticket-logs/ticket-$userTag[$authorID].txt;[$hour:$minute:$second] $userTag[$clientID]: $userTag[$authorID] criou um ticket!
 ID do canal: $get[id]
 Data: $hour:$minute:$second - $day/$month/$year]
 
@@ -37,7 +37,7 @@ $interactionReply[Canal criado! <#$get[id]>]
     type: "messageCreate",
     code: `
 $onlyIf[$isTicket[$channelID]==true;]
-$onlyIf[$fileExists[Recursos/ticket-logs/$channelName[$channelID].txt]==true;]
+$onlyIf[$fileExists[Recursos/ticket-logs/ticket-$userTag[$authorID].txt]==true;]
 $timezone[America/Recife]
 
 $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;

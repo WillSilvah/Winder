@@ -2,8 +2,14 @@ module.exports = [{
     type: 'clientReady',
     code: `
 $onlyIf[2==7;]
+$let[guildID;1462224054676099094]
 $setInterval[
-$onlyIf[$getGuildVar[msgPerMinute;$guildID]>=6;]
+$log[Tentativa de executar um minigame
+-----------------------------------
+MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID]]
+
+]
+$onlyIf[$getGuildVar[msgPerMinute;$get[guildID]]>=6;]
 
 $minigame[fraseRepeat]
 
