@@ -8,13 +8,12 @@ $arrayLoad[members;,;$channelVoiceMemberIDs[$env[voiceId];,]]
 $loop[$arrayLength[members];
 $let[id;$arrayAt[members;$math[$env[i] - 1]]]
 
-
-$let[time;$function[
-$if[$isMuted[$get[guildId];$get[id]];
-$return[0]
+$if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]==1;
+$log[Canal "$channelName[$voiceID[$get[guildId];$get[id]]]" que o @$username[$get[id]] está não tem mais que 1 membro]
+$break
 ]
-$return[1]
-]]
+
+$let[time;1]
 
 $let[voiceTimeMonth;$getMemberVar[voiceTimeMonth;$get[id];$get[guildId];0]]
 
