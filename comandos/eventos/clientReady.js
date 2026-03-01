@@ -1,7 +1,7 @@
 module.exports = {
     type: "clientReady",
     code: `
-$setGlobalVar[version;$username[$clientID] $day.$month]
+$setGlobalVar[version;$username[$clientID] $day[TwoDigit].$month[TwoDigit]]
 $sendMessage[$getGlobalVar[consoleChat];
 $author[$username[$clientID] está ligado!]
 $description[
