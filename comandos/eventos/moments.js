@@ -31,13 +31,13 @@ $memberLeaderboard[messageMonth;$get[guildID];desc;5;1;
 $addSeparator[Large;true]
 ]
 
-$deleteMemberVar[metaXP]
-$deleteMemberVar[messageMonth]
-$deleteMemberVar[votesMonth]
-$deleteMemberVar[msgXP]
+$deleteRecords[metaXP]
+$deleteRecords[messageMonth]
+$deleteRecords[votesMonth]
+$deleteRecords[msgXP]
 
-$deleteGuildVar[membersJoinedMonth]
-$deleteGuildVar[guildMonthMessages]
+$deleteRecords[membersJoinedMonth]
+$deleteRecords[guildMonthMessages]
 
 $writeFile[Recursos/session.json;{
     "name": "$getGuildVar[sessionName;1462224054676099094]",
@@ -60,13 +60,13 @@ $addSeparator[Large;true]
 ;0 0 1 * *;America/Recife]
 
 $cron[
-$deleteGuildVar[guildWeeklyMessage]
-$deleteMemberVar[messageWeekly]
+$deleteRecords[guildWeeklyMessage]
+$deleteRecords[messageWeekly]
 ;0 0 * * 0]
 
 $cron[
-$deleteGuildVar[guildTodayMessage]
-$deleteMemberVar[messageToday]
+$deleteRecords[guildTodayMessage]
+$deleteRecords[messageToday]
 ;0 0 * * *]
 `
 },{
