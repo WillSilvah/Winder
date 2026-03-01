@@ -23,7 +23,7 @@ $setGuildVar[minigameXPmax;0;$get[guildID]]
 $setChannelSlowmode[$getGuildVar[batePapo];0]
 $sendMessage[### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
 
-;15m;WinderMinigames]
+;900000;WinderMinigames]
 `
 },{
     type: 'messageCreate',
