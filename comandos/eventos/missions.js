@@ -19,13 +19,6 @@ $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
 $if[$getGuildVar[guildMonthMessages;$guildID]==$getGuildVar[guildMonthMessagesMeta;$guildID];
 
 $setGuildVar[guildMonthMessagesMeta;$math[$getGuildVar[guildMonthMessagesMeta;$guildID]+10000];$guildID]
-$startTyping[]
-$wait[5s]
-
-$sendMessage[$getGuildVar[batePapo;$guildID];
-$title[Vocês enviaram $getGuildVar[guildMonthMessagesMeta;$guildID] mensagens neste mês!]
-$color[Green]
-]
 ]
 
 $if[$getUserVar[messageTotal;$authorID]<=6;
