@@ -1,7 +1,13 @@
 module.exports = {
     type: 'clientReady',
     code: `
+$let[guildID;1462224054676099094]
 $cron[
+
+$setGuildVar[guildPDAmedia;media[messageMonth;11];$get[guildID]]
+
+$wait[5s]
+
 $deleteRecords[metaXP]
 $deleteRecords[messageMonth]
 $deleteRecords[votesMonth]
