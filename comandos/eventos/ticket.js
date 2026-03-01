@@ -3,9 +3,9 @@ module.exports = [{
     type: "interactionCreate",
     code: `$ephemeral
 $timezone[America/Recife]
-$onlyIf[$channelExists[$findChannel[💁│ticket-$userTag]]==false;Já existe um ticket criado por você! <#$findChannel[💁│ticket-$userTag]>]
+$onlyIf[$channelExists[$findChannel[ticket-$userTag]]==false;Já existe um ticket criado por você! <#$findChannel[💁│ticket-$userTag]>]
 
-$let[id;$newTicket[💁│ticket-$userTag;$addContainer[
+$let[id;$newTicket[ticket-$userTag;$addContainer[
 $addSection[
 $addTextDisplay[## BEM VINDO AO SUPORTE <@$authorID>!]
 $addTextDisplay[Chamei os <@&$getGuildVar[allStaffRole;$guildID]> para lhe ajudar!]
@@ -26,8 +26,7 @@ Fecha este ticket.
 ;$getGuildVar[ticketCategory];true]]
 
 $mkdir[Recursos/ticket-logs]
-$writeFile[Recursos/ticket-logs/ticket-$userTag[$authorID].txt;
-\`[\`$hour:$minute:$second\`]\` $userTag[$clientID]: $userTag[$authorID] criou um ticket!
+$writeFile[Recursos/ticket-logs/ticket-$userTag.txt;$hour:$minute:$second: $userTag[$clientID]: $userTag[$authorID] criou um ticket!
 ID do canal: $get[id]
 Data: $hour:$minute:$second - $day/$month/$year]
 
@@ -38,7 +37,7 @@ $interactionReply[Canal criado! <#$get[id]>]
     type: "messageCreate",
     code: `
 $onlyIf[$isTicket[$channelID]==true;]
-$onlyIf[$fileExists[Recursos/ticket-logs/ticket-$userTag[$authorID].txt]==true;]
+$onlyIf[$fileExists[Recursos/ticket-logs/$channelName[$channelID].txt]==true;]
 $timezone[America/Recife]
 
 $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
