@@ -8,34 +8,25 @@ $arrayLoad[members;,;$channelVoiceMemberIDs[$env[voiceId];,]]
 $loop[$arrayLength[members];
 $let[id;$arrayAt[members;$math[$env[i] - 1]]]
 
-$if[$hasRoles[$get[guildId];$get[id];$getGuildVar[memberVerifiedRole;$get[guildId]]]==false;
-$log[@$username[$get[id]] não tem verificado]
-$break
-]
 
-$if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]==1;
-$log[Canal "$channelName[$voiceID[$get[guildId];$get[id]]]" que o @$username[$get[id]] está não tem mais que 1 membro]
-$break
-]
-
-$let[pda;$function[
+$let[time;$function[
 $if[$isMuted[$get[guildId];$get[id]];
 $return[0]
 ]
-$return[$randomNumber[1;3]]
+$return[1]
 ]]
 
-$let[pdaMonth;$getMemberVar[pdaMonth;$get[id];$get[guildId]]]
+$let[voiceTimeMonth;$getMemberVar[voiceTimeMonth;$get[id];$get[guildId];0]]
 
-$letSum[pdaMonth;$get[pda]]
-$setMemberVar[pdaMonth;$get[pdaMonth];$get[id];$get[guildId]]
+$letSum[voiceTimeMonth;$get[pda]]
+$setMemberVar[voiceTimeMonth;$get[voiceTimeMonth];$get[id];$get[guildId]]
 
-$let[pdaTotal;$getMemberVar[pdaTotal;$get[id];$get[guildId]]]
+$let[voiceTimeTotal;$getMemberVar[voiceTimeTotal;$get[id];$get[guildId];0]]
 
-$letSum[pdaTotal;$get[pda]]
-$setMemberVar[pdaTotal;$get[pdaTotal];$get[id];$get[guildId]]
+$letSum[voiceTimeTotal;$get[pda]]
+$setMemberVar[voiceTimeTotal;$get[voiceTimeTotal];$get[id];$get[guildId]]
 
-$log[$username[$get[id]]: Ganhou $get[pda] no $channelName[$voiceID[$get[guildId];$get[id]]]]
+$log[$username[$get[id]]: $get[time]  minuto no $channelName[$voiceID[$get[guildId];$get[id]]]]
 
 ;i;true]
 
