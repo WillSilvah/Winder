@@ -20,7 +20,7 @@ $let[type;silenciado]
 
 $onlyIf[$get[userID]!=$authorID;<@$authorID> Você está se automencionando ou este usuário não existe.]
 
-$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
+$if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
 $!timeout[$guildID;$get[userID];$get[time];$get[reason]]

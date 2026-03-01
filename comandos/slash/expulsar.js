@@ -5,7 +5,7 @@ $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu
 $let[staffID;$authorID]
 $let[type;expulso]
 
-$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
+$if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
 $!kickMember[$guildID;$get[userID];$get[reason]]

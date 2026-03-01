@@ -6,7 +6,7 @@ $let[staffID;$authorID]
 $let[type;silenciado]
 $let[time;$option[tempo]]
 
-$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];$replace[$option[tempo]; ;]]
+$if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];$replace[$option[tempo]; ;]]]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];$replace[$option[tempo]; ;]]
 
 $!timeout[$guildID;$get[userID];$get[time];$get[reason]]
