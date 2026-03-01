@@ -5,6 +5,7 @@ module.exports = [{
 $timezone[America/Recife]
 $onlyIf[$channelExists[$findChannel[ticket-$userTag]]==false;Já existe um ticket criado por você! <#$findChannel[ticket-$userTag]>]
 
+$ephemeral
 $let[id;$newTicket[ticket-$userTag;$addContainer[
 $addSection[
 $addTextDisplay[## BEM VINDO AO SUPORTE <@$authorID>!]
