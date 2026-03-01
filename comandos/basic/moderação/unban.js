@@ -21,7 +21,7 @@ $onlyIf[$get[userID]!=$authorID;<@$authorID> Você está se automencionando ou e
 
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-$!unban[$guildID;$get[userID];$get[reason];0]
+$!unban[$guildID;$get[userID];$get[reason]]
 
 $sendMessage[$channelID;<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
 > $bold[$get[reason]]]
