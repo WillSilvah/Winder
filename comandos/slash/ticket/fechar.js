@@ -1,6 +1,6 @@
 module.exports = {
   code: `
-$onlyIf[$isTicket[$channelID]==true;<@$authorID> | Você precisa estar em um ticket para utilizar esse comando.]
+$onlyIf[$isTicket==true;<@$authorID> | Você precisa estar em um ticket para utilizar esse comando.]
 $timezone[America/Recife]
 
 $interactionReply[Ticket fechado!]
