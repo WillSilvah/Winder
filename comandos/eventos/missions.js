@@ -11,9 +11,9 @@ $sendMessage[$channelID;<@$authorID> | Você agora é um **Peludo Verificado**! 
 $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]
 ]
 
-$if[$getGuildVar[guildActivityMedia]>=$getMemberVar[messageMonth;$authorID];
-
-$!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
+$if[$getMemberVar[messageMonth;$authorID]>=$getGuildVar[guildActivityMedia];
+$!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]];
+$!memberRemoveRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
 ]
 
 $if[$getGuildVar[guildMonthMessages;$guildID]==$getGuildVar[guildMonthMessagesMeta;$guildID];
