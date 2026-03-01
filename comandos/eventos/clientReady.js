@@ -1,7 +1,7 @@
 module.exports = {
     type: "clientReady",
     code: `
-$setGlobalVar[version;$username[$clientID] $day.$month]
+$setGlobalVar[version;$day.$month]
 $sendMessage[$getGlobalVar[consoleChat];
 $author[$username[$clientID] está ligado!]
 $description[
@@ -20,7 +20,7 @@ $username[$clientID] está ligado! >w<
 $setStatus[Online;Playing;$username[$clientID] está ligado! >w<]
 
 $setInterval[
-$setStatus[Idle;Playing;$parseInt[$ram] MB | $parseInt[$cpu]% | $parseDigital[$uptime] | $pingms | $getGlobalVar[version]]
+$setStatus[Idle;Playing;$parseInt[$ram] MB | $parseInt[$cpu]% | $parseDigital[$uptime] | $pingms | CANARY $getGlobalVar[version]]
 
 ;12s;ClientStatus]
 `,
