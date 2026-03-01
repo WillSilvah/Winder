@@ -41,8 +41,10 @@ $timezone[America/Recife]
 
 $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
 $hour:$minute:$second $userTag ($authorID): $message
+
+Attachments: $messageAttachments[$channelID;$messageID; / ]
 MSGID: $messageID
----------------------------------------]
+]
 
 
    
