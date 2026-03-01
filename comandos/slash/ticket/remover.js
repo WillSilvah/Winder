@@ -7,9 +7,9 @@ $let[userID;$option[user]]
 
 $!modifyChannelPerms[$channelID;$get[userID];-ViewChannel;-SendMessages]
 
-$appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
+$appendFile[Recursos/ticket-logs/$guildID/$channelName[$channelID].txt;
 $hour:$minute:$second $userTag[$clientID]: $userTag[$get[userID]] foi removido por $userTag[$authorID]!
-]
+;utf8]
 
 $interactionReply[<@$authorID> | **$username[$get[userID]]** removido!]
   `,

@@ -28,9 +28,9 @@ Fecha este ticket.
 $ephemeral
 $interactionReply[Canal criado! <#$get[id]>]
 
-$writeFile[Recursos/ticket-logs/ticket-$userTag.txt;$hour:$minute:$second $userTag[$clientID]: $userTag[$authorID] criou um ticket!
+$writeFile[Recursos/ticket-logs/$guildID/ticket-$userTag.txt;$hour:$minute:$second $userTag[$clientID]: $userTag[$authorID] criou um ticket!
 ID do canal: $get[id]
-Data: $hour:$minute:$second - $day/$month/$year]
+Data: $hour:$minute:$second - $day/$month/$year;utf8]
     
 `
 },{
@@ -39,13 +39,13 @@ Data: $hour:$minute:$second - $day/$month/$year]
 $onlyIf[$isTicket==true;]
 $timezone[America/Recife]
 
-$appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
+$appendFile[Recursos/ticket-logs/$guildID/$channelName[$channelID].txt;
 $hour:$minute:$second $userTag ($authorID): $message
 
 Attachments: $messageAttachments[$channelID;$messageID;
 ]
 MSGID: $messageID
-]
+;utf8]
 
 
    
