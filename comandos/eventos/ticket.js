@@ -39,7 +39,7 @@ $interactionReply[Canal criado! <#$get[id]>]
 $onlyIf[$isTicket[$channelID]==true;]
 $onlyIf[$fileExists[Recursos/ticket-logs/$channelName[$channelID].txt]==true;]
 $timezone[America/Recife]
-    
+
 $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
 [$hour:$minute:$second] $userTag ($authorID): $message
 
