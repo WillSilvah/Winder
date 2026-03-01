@@ -3,9 +3,8 @@ module.exports = [{
     type: "interactionCreate",
     code: `$ephemeral
 $timezone[America/Recife]
-$onlyIf[$channelExists[$findChannel[ticket-$userTag]]==false;Já existe um ticket criado por você! <#$findChannel[ticket-$userTag]>]
+$onlyIf[$channelExists[$findChannel[ticket-$userTag]]==false;$interactionReply[Já existe um ticket criado por você! <#$findChannel[ticket-$userTag]>]]
 
-$ephemeral
 $let[id;$newTicket[ticket-$userTag;$addContainer[
 $addSection[
 $addTextDisplay[## BEM VINDO AO SUPORTE <@$authorID>!]
@@ -26,6 +25,7 @@ Fecha este ticket.
 ;Orange]
 ;$getGuildVar[ticketCategory];true]]
 
+$ephemeral
 $interactionReply[Canal criado! <#$get[id]>]
 
 $writeFile[Recursos/ticket-logs/ticket-$userTag.txt;$hour:$minute:$second $userTag[$clientID]: $userTag[$authorID] criou um ticket!
@@ -42,7 +42,8 @@ $timezone[America/Recife]
 $appendFile[Recursos/ticket-logs/$channelName[$channelID].txt;
 $hour:$minute:$second $userTag ($authorID): $message
 
-Attachments: $messageAttachments[$channelID;$messageID; / ]
+Attachments: $messageAttachments[$channelID;$messageID;
+]
 MSGID: $messageID
 ]
 
