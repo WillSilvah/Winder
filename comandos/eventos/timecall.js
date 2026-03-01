@@ -9,11 +9,6 @@ $loop[$arrayLength[members];
 $let[id;$arrayAt[members;$math[$env[i] - 1]]]
 $onlyIf[$isBot[$get[id]]==false;]
 
-$if[$channelVoiceMemberCount[$voiceID[$get[guildId];$get[id]]]==1;
-$log[Canal "$channelName[$voiceID[$get[guildId];$get[id]]]" que o @$username[$get[id]] está não tem mais que 1 membro]
-$break
-]
-
 $let[time;1]
 
 $setMemberVar[timecallMonth;$math[$getMemberVar[timecallMonth;$get[id];$get[guildId];0]+$get[time]];$get[id]]
