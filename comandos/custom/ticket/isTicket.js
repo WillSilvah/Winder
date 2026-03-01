@@ -7,7 +7,5 @@ module.exports = [{
       required: false
     }
    ,
-   code: `
-$getChannelVar[isTicketChannel;$if[$env[channelID]==;$channelID;$env[channelID]];false]
-`
+   code: `$getChannelVar[isTicketChannel;$if[$env[channelID]==;$channelID;$env[channelID]];false]`
 }]
