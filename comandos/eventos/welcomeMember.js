@@ -2,6 +2,7 @@ module.exports = {
     type: "guildMemberAdd",
     code: `
 $setGuildVar[membersJoinedMonth;$sum[$getGuildVar[membersJoinedMonth];1]]
+
 $sendMessage[$getGuildVar[batePapo];
 $if[$isBot[$authorID]==false;
 $addContainer[
@@ -30,5 +31,5 @@ $addSeparator[Large;true]
 ]
 ]
 
-`,
+`
 }

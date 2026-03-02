@@ -36,6 +36,7 @@ $deleteRecords[metaXP]
 $deleteRecords[messageMonth]
 $deleteRecords[votesMonth]
 $deleteRecords[pdaMonth]
+$deleteRecords[invitesMonth]
 
 $deleteRecords[membersJoinedMonth]
 $deleteRecords[guildMonthMessages]
