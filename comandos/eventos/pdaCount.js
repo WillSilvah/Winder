@@ -19,8 +19,8 @@ $let[bonusBoosterPDA;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberBooster
 
 $let[pda;$math[$get[bonusBoosterPDA]+$get[bonusVotePDA]+$get[basicPDA]]]
 
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth];$get[pda]]]
-$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal];$get[pda]]]
+$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$authorID;$guildID;0];$get[pda]]]
+$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$authorID;$guildID;0];$get[pda]]]
 
 `,
 nonprefixed: true
