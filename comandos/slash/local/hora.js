@@ -16,8 +16,8 @@ $jsonLoad[local;{
 $timezone[$option[zone]]
 $title[🕑 $env[local;$option[zone]]]
 $description[
-## $hour:$minute:$second
-**$day/$month/$year**
+## $hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit]
+**$day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit]**
 ]
 $footer[Faltando fuso horário? Sugira!]
 $thumbnail[https://abs.twimg.com/emoji/v2/72x72/1f559.png]
