@@ -7,7 +7,7 @@ module.exports = {
     code: `
 $onlyIf[$hasRoles[1462224054676099094;$authorID;1462547405466636384]==true;<@$authorID> | Você precisa ser **$username[$clientID]** Developer para poder executar esse comando.]
 
-$let[userID;$findUser[$message[1]]]
+$let[userID;$findUser[$message[0]]]
 
 $mkdir[Recursos/database]
 $writeFile[Recursos/database/WinderDB_$username[$get[userID]].json;
