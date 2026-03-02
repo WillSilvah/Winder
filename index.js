@@ -28,8 +28,7 @@ const client = new ForgeClient({
         new ForgeDB({
             type: "sqlite" 
 	 }),
-		new ForgeCron(),
-        new music
+		new ForgeCron()
 	],
     events: [
         "autoModerationActionExecution",
