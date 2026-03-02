@@ -2,11 +2,40 @@ const { ForgeClient } = require("@tryforge/forgescript");
 const { ForgeDB } = require("@tryforge/forge.db");
 const { ForgeCron } = require("forgecron");
 const { ForgeMusic } = require("@tryforge/forge.music");
-const { DefaultExtractors } = require("@tryforge/forge.music");
 
 require('dotenv').config();
 
 const TOKEN = process.env.TOKEN;
+
+const music = new ForgeMusic({
+    events: [
+            "audioFiltersUpdate",
+            "audioTrackAdd",
+            "audioTrackRemove",
+            "audioTracksAdd",
+            "biquadFiltersUpdate",
+            "channelPopulate",
+            "connection",
+            "connectionDestroyed",
+            "debug",
+            "disconnect",
+            "dspUpdate",
+            "emptyChannel",
+            "emptyQueue",
+            "equalizerUpdate",
+            "error",
+            "playerError",
+            "playerFinish",
+            "playerPause",
+            "playerResume",
+            "playerSkip",
+            "playerStart",
+            "playerTrigger",
+            "queueCreate",
+            "queueDelete",
+            "volumeChange"
+        ]
+});
 
 const client = new ForgeClient({
     intents: [
@@ -119,36 +148,6 @@ const client = new ForgeClient({
         invites: true,
         voice: true
     }
-});
-
-const music = new ForgeMusic({
-    events: [
-            "audioFiltersUpdate",
-            "audioTrackAdd",
-            "audioTrackRemove",
-            "audioTracksAdd",
-            "biquadFiltersUpdate",
-            "channelPopulate",
-            "connection",
-            "connectionDestroyed",
-            "debug",
-            "disconnect",
-            "dspUpdate",
-            "emptyChannel",
-            "emptyQueue",
-            "equalizerUpdate",
-            "error",
-            "playerError",
-            "playerFinish",
-            "playerPause",
-            "playerResume",
-            "playerSkip",
-            "playerStart",
-            "playerTrigger",
-            "queueCreate",
-            "queueDelete",
-            "volumeChange"
-        ]
 });
 
 music.player.extractors.register(YoutubeiExtractor, {});
