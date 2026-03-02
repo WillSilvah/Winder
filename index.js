@@ -121,10 +121,10 @@ const client = new ForgeClient({
 
 const music = new ForgeMusic({
     events: [
-        PlayerFinish,
-        PlayerStart,
-        PlayerError,
-        Error
+        GuildQueueEvent.PlayerFinish,
+        GuildQueueEvent.PlayerStart,
+        GuildQueueEvent.PlayerError,
+        GuildQueueEvent.Error
     ],
     includeExtractors: DefaultExtractors
 });
