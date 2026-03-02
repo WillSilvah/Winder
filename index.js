@@ -179,13 +179,8 @@ ForgeDB.variables({
   "metaPDATotal": "0",
   "metaPDA": "1000",
   
-  "reminderStatus": "true",
-  
   "warnsTotal": "0",
   "lastWarn": "",
-  "afkStatus": "false",
-  "afkReason": "",
-  "afkNotify": "false",
   
   "birthday": "",
   "birthdayChannel": "1463315740403830936",
