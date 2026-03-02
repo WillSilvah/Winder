@@ -1,5 +1,5 @@
 module.exports = {
-    name: "database baixar",
+    name: "baixar",
     desc: "Pegue todos os dados catalogados pelo Winder de um usuário",
     category: "Desenvolvedor",
 	usage: "database baixar userID",
