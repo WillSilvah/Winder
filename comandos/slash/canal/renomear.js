@@ -9,9 +9,6 @@ $interactionReply[<@$authorID> | Canal renomeado!]
   `,
 data: {
   "type": 1,
-  "name_localizations": {
-    "pt-BR": "trabalhar"
-  },
   "name": "renomear",
   "description": "Renomeie o nome de um canal",
   "default_member_permissions": "16",
