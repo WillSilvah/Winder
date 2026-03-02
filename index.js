@@ -28,7 +28,8 @@ const client = new ForgeClient({
         new ForgeDB({
             type: "sqlite" 
 	 }),
-		new ForgeCron()
+		new ForgeCron(),
+        music
 	],
     events: [
         "autoModerationActionExecution",
@@ -248,9 +249,9 @@ ForgeDB.variables({
 })
 
 client.functions.load('./comandos/custom/');
-music.commands.load("./comandos/");
 client.commands.load("./comandos/basic/");
 client.commands.load("./comandos/eventos/");
+music.commands.load("./comandos/");
 client.applicationCommands.load("./comandos/slash/");
 
 client.login(process.env.TOKEN)
