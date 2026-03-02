@@ -1,6 +1,7 @@
 const { ForgeClient } = require("@tryforge/forgescript");
 const { ForgeDB } = require("@tryforge/forge.db");
 const { ForgeCron } = require("forgecron");
+const { ForgeMusic } = require("@tryforge/forge.music");
 
 require('dotenv').config();
 
@@ -118,6 +119,19 @@ const client = new ForgeClient({
     }
 });
 
+const music = new ForgeMusic({
+    events: [
+        GuildQueueEvent.PlayerFinish,
+        GuildQueueEvent.PlayerStart,
+        GuildQueueEvent.PlayerError,
+        GuildQueueEvent.Error
+    ],
+    includeExtractors: DefaultExtractors
+});
+
+music.player.extractors.register(YoutubeiExtractor, {});
+
+
 ForgeDB.variables({
   "versão": "",
   "consoleChat": "1465218335389257802",
@@ -213,6 +227,7 @@ ForgeDB.variables({
 })
 
 client.functions.load('./comandos/custom/');
+music.commands.load("./comandos/");
 client.commands.load("./comandos/basic/");
 client.commands.load("./comandos/eventos/");
 client.applicationCommands.load("./comandos/slash/");

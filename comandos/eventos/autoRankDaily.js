@@ -4,6 +4,7 @@ module.exports = {
 $jsonLoad[session;$readFile[Recursos/session.json]]
 
 $setInterval[
+$clearMessages[$getGuildVar[rankedChat;1462224054676099094];6]
 $sendMessage[$getGuildVar[rankedChat;1462224054676099094];
 $disableAllMentions
 $addContainer[
