@@ -2,6 +2,7 @@ const { ForgeClient } = require("@tryforge/forgescript");
 const { ForgeDB } = require("@tryforge/forge.db");
 const { ForgeCron } = require("forgecron");
 const { ForgeMusic } = require("@tryforge/forge.music");
+const { YoutubeiExtractor } = require("discord-player-youtubei");
 
 require('dotenv').config();
 
