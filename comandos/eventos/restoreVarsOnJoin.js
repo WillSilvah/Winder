@@ -1,6 +1,7 @@
 module.exports = {
     type: "guildMemberAdd",
     code: `
+    $onlyIf[$getMemberVar[tempMessageTotal;$authorID;$guildID;0]>0;]
 $setMemberVar[messageMonth;$getMemberVar[tempMessageMonth];$authorID;$guildID]
 $setMemberVar[messageTotal;$getMemberVar[tempMessageTotal];$authorID;$guildID]
 $setMemberVar[messageWeekly;$getMemberVar[tempMessageWeekly];$authorID;$guildID]
