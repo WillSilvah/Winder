@@ -9,7 +9,7 @@ $addSection[
 $addTextDisplay[### 👋 <@$authorID> BEM VINDO!
 **Sinta-se em casa, aproveite bem a nossa comunidade! **
 ]
-$addTextDisplay[-# Veio pelo: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fantasma] | ID: $authorID]
+$addTextDisplay[-# Veio pelo: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano] | ID: $authorID]
 $addThumbnail[$userAvatar]
 ]
 $addSeparator[Large;true]
