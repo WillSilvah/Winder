@@ -245,7 +245,7 @@ ForgeDB.variables({
   
   "birthday": "",
   "birthdayChannel": "1463315740403830936",
-  "temp_lista": ""
+  "atemp_lista": ""
 })
 
 client.functions.load('./comandos/custom/');
