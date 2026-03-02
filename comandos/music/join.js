@@ -1,5 +1,5 @@
 module.exports = {
-    type: "PlayerStart",
+    type: "playerStart",
     code: `
 $channelID[$getGlobalVar[consoleChat];
 $env[queue]
