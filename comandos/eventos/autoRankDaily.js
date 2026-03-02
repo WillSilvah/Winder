@@ -5,8 +5,18 @@ $jsonLoad[session;$readFile[Recursos/session.json]]
 
 $setInterval[
 $sendMessage[$getGuildVar[rankedChat;1462224054676099094];
+$disableAllMentions
 $addContainer[
+$addSection[
+$addTextDisplay[## $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]]
+$addThumbnail[$guildIcon[$guildID]]
+]
+$addSeparator[Large;True]
+$addTextDisplay[
+$memberLeaderboard[messageMonth;$guildID;desc;11;1;\n;data;pos;$return[$env[pos]° <@$env[data;id]>
+💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$guildID]]]
 
+]
 ;Green]
 ];30m;autoRankDaily]
  

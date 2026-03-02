@@ -5,7 +5,7 @@ $jsonLoad[session;$readFile[Recursos/session.json]]
 $author[$env[session;name];https://abs.twimg.com/emoji/v2/72x72/1f4ac.png]
 $title[Top fofoqueiros ativos | $if[$option[pagina]!=;$option[pagina];1]° Página]
 $description[
-$memberLeaderboard[messageMonth;$guildID;desc;10;$if[$option[pagina]!=;$option[pagina];1];\n;data;pos;$return[$env[pos]° $bold[$username[$env[data;id]]]
+$memberLeaderboard[messageMonth;$guildID;desc;11;$if[$option[pagina]!=;$option[pagina];1];\n;data;pos;$return[$env[pos]° $bold[$username[$env[data;id]]]
 💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$guildID]]]
 ]
 $footer[Você: 💬$getMemberVar[messageMonth;$authorID] ✨️$getMemberVar[pdaMonth;$authorID] | Servidor: 💬$getGuildVar[guildMonthMessages;$guildID]]

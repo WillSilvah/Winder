@@ -16,6 +16,18 @@ $deleteRecords[invitesMonth]
 
 $deleteRecords[membersJoinedMonth]
 $deleteRecords[guildMonthMessages]
+
+$deleteRecords[tempMessageMonth]
+$deleteRecords[tempMessageTotal]
+$deleteRecords[tempMessageWeekly]
+$deleteRecords[tempMessageToday]
+$deleteRecords[tempPdaMonth]
+$deleteRecords[tempPdaTotal]
+$deleteRecords[tempVotesMonth]
+$deleteRecords[tempVotesTotal]
+$deleteRecords[tempInvitesMonth]
+$deleteRecords[tempInvitesTotal]
+
 ;0 0 1 * *;America/Recife]
 
 $cron[
