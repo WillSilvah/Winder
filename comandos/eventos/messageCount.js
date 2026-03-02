@@ -14,10 +14,10 @@ $setMemberVar[lastMessage;$message;$authorID]
 $setMemberVar[lastMessageTime;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit]]
 $setMemberVar[lastMessageChannel;$channelID]
 
-$setMemberVar[messageMonth;$sum[$getMemberVar[messageMonth;$authorID;0];1]]
-$setMemberVar[messageWeekly;$sum[$getMemberVar[messageWeekly;$authorID;0];1]]
-$setMemberVar[messageToday;$sum[$getMemberVar[messageToday;$authorID;0];1]]
-$setMemberVar[messageTotal;$sum[$getMemberVar[messageTotal;$authorID;0];1]]
+$setMemberVar[messageMonth;$sum[$getMemberVar[messageMonth;$authorID;$guildID;0];1]]
+$setMemberVar[messageWeekly;$sum[$getMemberVar[messageWeekly;$authorID;$guildID;0];1]]
+$setMemberVar[messageToday;$sum[$getMemberVar[messageToday;$authorID;$guildID;0];1]]
+$setMemberVar[messageTotal;$sum[$getMemberVar[messageTotal;$authorID;$guildID;0];1]]
 
 $if[$channelID==1462224055884189781;
 $setGuildVar[msgPerMinute;$sum[$getGuildVar[msgPerMinute;$guildID;0];1]]
