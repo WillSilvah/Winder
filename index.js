@@ -188,8 +188,6 @@ ForgeDB.variables({
   "guildMonthMessagesMeta": "0",
   "membersJoinedMonth": "0",
   "lastUserSendMessage": "",
-  "votesTotal": "0",
-  "votesMonth": "0",
   "remindDM": "true",
   "memberIsolated": "false",
   "memberIsolatedRole": "14716959190986302",
