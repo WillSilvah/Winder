@@ -1,8 +1,8 @@
 const { ForgeClient } = require("@tryforge/forgescript");
 const { ForgeDB } = require("@tryforge/forge.db");
 const { ForgeCron } = require("forgecron");
-const { ForgeMusic } = require("@tryforge/forge.music");
 const { YoutubeiExtractor } = require("discord-player-youtubei");
+const { DefaultExtractors, ForgeMusic } = require("@tryforge/forge.music");
 
 require('dotenv').config();
 
@@ -251,7 +251,7 @@ ForgeDB.variables({
 client.functions.load('./comandos/custom/');
 client.commands.load("./comandos/basic/");
 client.commands.load("./comandos/eventos/");
-music.commands.load("./comandos/");
+music.commands.load("./comandos/music");
 client.applicationCommands.load("./comandos/slash/");
 
 client.login(process.env.TOKEN)
