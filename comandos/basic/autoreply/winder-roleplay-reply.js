@@ -54,7 +54,7 @@ $elseif[$checkContains[*$toLowerCase[$message]*;boop]==true;
 $startTyping[$channelID]
 $wait[2s]
 $reply
-$sendMessage[$channelID;Boop! >w<]
+$sendMessage[$channelID;$randomText[Boop! >w<;Eep! >w<]]
 
 ]
 ]
