@@ -12,6 +12,7 @@ $writeFile[Recursos/database/WinderDB_$username[$findUser[$message[0]]].json;
 $searchDB[;$findUser[$message[0]];;;]
 ;utf8]
 
+Aqui está os dados:
 $attachment[Recursos/database/WinderDB_$username[$findUser[$message[0]]].json;WinderDB_$username[$findUser[$message[0]]].json;false;utf8;]
 `
 }
