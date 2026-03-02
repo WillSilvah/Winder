@@ -107,4 +107,27 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 **Vamos tirar um cochilo?**
 ];0 22 * * *;America/Recife]
 `
-}]
+},{
+    type: "clientReady",
+    code: `
+$cron[
+$sendMessage[$getGuildVar[staffChat;$getGlobalVar[guildID]];
+### 🚫 MENÇÕES A CARGOS DE PING DESATIVADAS!
+]
+
+$!editRole[$getGlobalVar[guildID];1463138976494915646;;;;;false;]
+$!editRole[$getGlobalVar[guildID];1463139649806663782;;;;;false;]
+];0 22 * * *;America/Recife]
+
+$cron[
+$sendMessage[$getGuildVar[staffChat;$getGlobalVar[guildID]];
+### ✅ MENÇÕES A CARGOS DE PING ATIVADAS!
+]
+
+$!editRole[$getGlobalVar[guildID];1463138976494915646;;;;;true;]
+$!editRole[$getGlobalVar[guildID];1463139649806663782;;;;;true;]
+];0 6 * * *;America/Recife]   
+    
+`
+}
+]
