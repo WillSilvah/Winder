@@ -3,7 +3,7 @@ module.exports = {
 $let[channelID;$option[canal]]
 $let[name;$option[nome]]
   
-$setChannelName[$get[channelID];$replaceText[$get[nome];|;│]]
+$!setChannelName[$get[channelID];$replaceText[$get[name];|;│]]
 
 $interactionReply[<@$authorID> | Canal renomeado!]
   `,
