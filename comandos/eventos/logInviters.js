@@ -10,6 +10,29 @@ $setMemberVar[invitesTotal;$math[$getMemberVar[invitesTotal;$get[inviterID];$gui
 
 ]
 
+$sendMessage[$getGuildVar[invitesLogChannel];
+$if[$get[inviterID]!=;
+$addContainer[
+$addSection[
+$addTextDisplay[### $userTag($authorID)
+**Convidado por: $userTag[$get[inviterID]] ($get[inviterID])**
+$addThumbnail[$userAvatar]
+]
+]
+$addSeparator[Large;true]
+;Red];
+$addContainer[
+$addSection[
+$addTextDisplay[### $userTag($authorID)
+**Convidado por: @Fulano**
+$addThumbnail[$userAvatar]
+]
+]
+$addSeparator[Large;true]
+;Red]
+]
+]
+
 
 `
 }
