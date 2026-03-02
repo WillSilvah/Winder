@@ -223,9 +223,6 @@ ForgeDB.variables({
   
   "warnsTotal": "0",
   "lastWarn": "",
-  "afkStatus": "false",
-  "afkReason": "",
-  "afkNotify": "false",
   
   "birthday": "",
   "birthdayChannel": "1463315740403830936",
