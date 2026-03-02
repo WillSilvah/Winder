@@ -145,6 +145,7 @@ ForgeDB.variables({
   "ticketLogs": "1467920266041757922",
   "prefixo": "w+",
   "pdaLoggerChannel": "1465378100505219072",
+  "invitesLogChannel": "1462598553116475584",
   "lastMemberGuild": "",
   "membersMeta": "0",
   "msgPerMinute": "0",
