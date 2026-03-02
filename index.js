@@ -35,7 +35,8 @@ const music = new ForgeMusic({
             "queueCreate",
             "queueDelete",
             "volumeChange"
-        ]
+        ],
+      includeExtractors: DefaultExtractors
 });
 
 const client = new ForgeClient({
