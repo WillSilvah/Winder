@@ -25,11 +25,11 @@ const client = new ForgeClient({
         "MessageContent"
     ],
     extensions: [
-    music,
         new ForgeDB({
             type: "sqlite" 
 	 }),
-		new ForgeCron()
+		new ForgeCron(),
+        new music
 	],
     events: [
         "autoModerationActionExecution",
