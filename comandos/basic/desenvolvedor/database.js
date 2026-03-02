@@ -1,5 +1,5 @@
 module.exports = {
-    name: "baixar",
+    name: "winder database baixar",
     desc: "Pegue todos os dados catalogados pelo Winder de um usuário",
     category: "Desenvolvedor",
 	usage: "database baixar userID",
@@ -7,13 +7,15 @@ module.exports = {
     code: `
 $onlyIf[$hasRoles[1462224054676099094;$authorID;1462547405466636384]==true;<@$authorID> | Você precisa ser **$username[$clientID]** Developer para poder executar esse comando.]
 
-$writeFile[Recursos/database/WinderDB_$username[$findUser[$message[0]]].json;
-$searchDB[;$findUser[$message[0]];;;]
+$let[userID;$findUser[$message[0]]]
+
+$writeFile[Recursos/database/WinderDB_$username[$get[userID]].json;
+$searchDB[;$get[userID];;;]
 ;utf8]
 
 $sendMessage[$channelID;
 Aqui está os dados:
-$attachment[Recursos/database/WinderDB_$username[$findUser[$message[0]]].json;WinderDB_$username[$findUser[$message[0]]].json;false;utf8;]
+$attachment[Recursos/database/WinderDB_$username[$get[userID]].json;WinderDB_$username[$get[userID]].json;false;utf8;]
 ]
 `
 }
