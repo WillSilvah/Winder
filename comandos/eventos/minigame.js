@@ -14,15 +14,15 @@ $onlyIf[$getGuildVar[msgPerMinute;$get[guildID]]>=6;]
 $minigame[fraseRepeat]
 
 $wait[1m]
-$onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
+$onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
 
-$setGuildVar[minigameStatus;false;$guildID]
-$setGuildVar[minigameWord;;$guildID]
+$setGuildVar[minigameStatus;false;$get[guildID]]
+$setGuildVar[minigameWord;;$get[guildID]]
 
-$setGuildVar[minigameXPmin;0;$guildID]
-$setGuildVar[minigameXPmax;0;$guildID]
-$setChannelSlowmode[$getGuildVar[batePapo];0]
-$sendMessage[### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
+$setGuildVar[minigameXPmin;0;$get[guildID]]
+$setGuildVar[minigameXPmax;0;$get[guildID]]
+$setChannelSlowmode[$getGuildVar[batePapo;$get[guildID]];0]
+$sendMessage[$getGuildVar[batePapo;$get[guildID]];### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
 
 ;15m;WinderMinigame]
 `
@@ -38,13 +38,13 @@ $setGuildVar[minigameWord;;$guildID]
 
 $let[xpDrop;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;$randomNumber[$getGuildVar[minigameXPmin;$guildID];$getGuildVar[minigameXPmax;$guildID]];0]]
 
-$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$authorID];$get[xpDrop]];$authorID]
-$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$authorID];$get[xpDrop]];$authorID]
+$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$authorID;$guildID;0];$get[xpDrop]];$authorID]
+$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$authorID;$guildID;0];$get[xpDrop]];$authorID]
 
 $!addMessageReactions[$channelID;$messageID;🏆]
 
-$setMemberVar[minigameMonthWins;$sum[$getMemberVar[minigameMonthWins;$authorID];1];$authorID]
-$setMemberVar[minigameTotalWins;$sum[$getMemberVar[minigameTotalWins;$authorID];1];$authorID]
+$setMemberVar[minigameMonthWins;$sum[$getMemberVar[minigameMonthWins;$authorID;$guildID;0];1];$authorID]
+$setMemberVar[minigameTotalWins;$sum[$getMemberVar[minigameTotalWins;$authorID;$guildID;0];1];$authorID]
 
 $sendMessage[$channelID;<@$authorID> | Parabéns, você ganhou ✨**+$get[xpDrop] Pontos de atividade!**!
 > **Ganhou 🏆$getMemberVar[minigameMonthWins;$authorID] vezes neste mês!**

@@ -220,8 +220,6 @@ ForgeDB.variables({
   "metaPDA": "1000",
   
   "reminderStatus": "true",
-  
-  "warnsTotal": "0",
   "lastWarn": "",
   
   "birthday": "",
