@@ -2,6 +2,7 @@ const { ForgeClient } = require("@tryforge/forgescript");
 const { ForgeDB } = require("@tryforge/forge.db");
 const { ForgeCron } = require("forgecron");
 const { ForgeMusic } = require("@tryforge/forge.music");
+const { DefaultExtractors } = require("@tryforge/forge.music");
 
 require('dotenv').config();
 
@@ -24,6 +25,7 @@ const client = new ForgeClient({
         "MessageContent"
     ],
     extensions: [
+    music,
         new ForgeDB({
             type: "sqlite" 
 	 }),
@@ -121,12 +123,32 @@ const client = new ForgeClient({
 
 const music = new ForgeMusic({
     events: [
-        GuildQueueEvent.PlayerFinish,
-        GuildQueueEvent.PlayerStart,
-        GuildQueueEvent.PlayerError,
-        GuildQueueEvent.Error
-    ],
-    includeExtractors: DefaultExtractors
+            "audioFiltersUpdate",
+            "audioTrackAdd",
+            "audioTrackRemove",
+            "audioTracksAdd",
+            "biquadFiltersUpdate",
+            "channelPopulate",
+            "connection",
+            "connectionDestroyed",
+            "debug",
+            "disconnect",
+            "dspUpdate",
+            "emptyChannel",
+            "emptyQueue",
+            "equalizerUpdate",
+            "error",
+            "playerError",
+            "playerFinish",
+            "playerPause",
+            "playerResume",
+            "playerSkip",
+            "playerStart",
+            "playerTrigger",
+            "queueCreate",
+            "queueDelete",
+            "volumeChange"
+        ]
 });
 
 music.player.extractors.register(YoutubeiExtractor, {});
