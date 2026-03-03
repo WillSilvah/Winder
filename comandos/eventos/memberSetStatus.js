@@ -23,6 +23,11 @@ $setMemberVar[memberIsOfficialArtist;true;$authorID];
 $setMemberVar[memberIsOfficialArtist;false;$authorID]
 ]
 
+$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberSupporterRole]]==true;
+$setMemberVar[memberIsSupporter;true;$authorID];
+$setMemberVar[memberIsSupporter;false;$authorID]
+]
+
 ]
 `
 }]
