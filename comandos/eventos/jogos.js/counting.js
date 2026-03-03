@@ -3,9 +3,9 @@ module.exports = {
     code: `
 $onlyIf[$channelID==1478505120525324541;]
 $onlyIf[$isInteger[$message]==true;$deleteCommand]
-$onlyIf[$message==$getGuildVar[coutingGame;$guildID;0];$deleteCommand]
+$onlyIf[$message==$getGuildVar[countingGame;$guildID;0];$deleteCommand]
 
-$setGuildVar[coutingGame;$math[$getGuildVar[countingGame;$guildID;0]+1];$guildID]
+$setGuildVar[countingGame;$math[$getGuildVar[countingGame;$guildID;0]+1];$guildID]
     
 `
 }
