@@ -11,7 +11,7 @@ $disableAllMentions
 $addContainer[
 $addSection[
 $addTextDisplay[## $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]]
-$addThumbnail[$guildIcon[$guildID]]
+$addThumbnail[$guildIcon[$get[guildID]]]
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
