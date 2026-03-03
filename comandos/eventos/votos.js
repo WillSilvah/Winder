@@ -11,12 +11,9 @@ $sendMessage[$getGuildVar[batePapo];
 $addSection[
 $addTextDisplay[### ⬆️ <@$authorID> votou!
 -# **$getMemberVar[votesMonth;$authorID;$guildID;0] votos neste mês!**]
-$addThumbnail[$userAvatar]
+$addButton[https://discords.com/servers/$guildID/upvote;Vote na patinhas! (discords.com);Link;⬆️;false]
 ]
 $addSeparator[Large;true]
-
-$addActionRow
-$addButton[https://discords.com/servers/$guildID/upvote;Vote na patinhas! (discords.com);Link;⬆️;false]
 $deleteIn[5m]
 ]
 
