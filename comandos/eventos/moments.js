@@ -33,12 +33,12 @@ $deleteRecords[tempInvitesTotal]
 $cron[
 $deleteRecords[guildWeeklyMessage]
 $deleteRecords[messageWeekly]
-;0 0 * * 0]
+;0 0 * * 0;America/Recife]
 
 $cron[
 $deleteRecords[guildTodayMessage]
 $deleteRecords[messageToday]
-;0 0 * * *]
+;0 0 * * *;America/Recife]
  
  `
 }
