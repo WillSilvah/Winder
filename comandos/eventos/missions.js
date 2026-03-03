@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = [{
     type: "messageCreate",
     code: `
 $onlyIf[$guildID==1462224054676099094;]
@@ -11,18 +11,54 @@ $sendMessage[$channelID;<@$authorID> | Você agora é um **Peludo Verificado**! 
 $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]
 ]
 
-$if[$getMemberVar[messageMonth;$authorID]>=$getGuildVar[guildActivityMedia];
-$!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]];
-$!memberRemoveRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
-]
-
 $if[$getGuildVar[guildMonthMessages;$guildID]==$getGuildVar[guildMonthMessagesMeta;$guildID];
 
 $setGuildVar[guildMonthMessagesMeta;$math[$getGuildVar[guildMonthMessagesMeta;$guildID]+10000];$guildID]
 ]
 
-$if[$getUserVar[messageTotal;$authorID]<=6;
+$if[$getUserVar[messageTotal;$authorID]>=6;
 $!memberAddRoles[$guildID;$authorID;$getGuildVar[allMemberRole;$guildID]]
 ]
 `
-}
+},{
+    type: "messageCreate",
+    code: `
+$if[$getMemberVar[messageMonth;$authorID]>=$getGuildVar[guildActivityMedia];
+$onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==false;]
+$!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
+
+$sendMessage[1467318550925410485;
+$title[O membro @$userTag é um membro ativo!]
+$description[
+Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
+Cálculo atual: **$media[messageMonth;11]**
+
+Mensagens enviadas pelo $usertag neste mês: **$getMemberVar[messageMonth]**
+Mensagens enviadas pelo $usertag nesta semana: **$getMemberVar[messageWeekly]**
+Mensagens enviadas pelo $usertag hoje: **$getMemberVar[messageToday]**
+Mensagens enviadas pelo $usertag antes: **$getMemberVar[messageTotal]**
+]
+$thumbnail[$userAvatar]
+$footer[$authorID]
+$color[Green]
+]
+;
+$onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==true;]
+$!memberRemoveRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
+$sendMessage[1467318550925410485;
+$title[O membro @$userTag não é um membro ativo.]
+$description[
+Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
+Cálculo atual: **$media[messageMonth;11]**
+
+Mensagens enviadas pelo $usertag neste mês: **$getMemberVar[messageMonth]**
+Mensagens enviadas pelo $usertag nesta semana: **$getMemberVar[messageWeekly]**
+Mensagens enviadas pelo $usertag hoje: **$getMemberVar[messageToday]**
+Mensagens enviadas pelo $usertag antes: **$getMemberVar[messageTotal]**
+]
+$thumbnail[$userAvatar]
+$footer[$authorID]
+$color[Red]
+]]
+`
+}]
