@@ -117,7 +117,7 @@ $sendMessage[$getGuildVar[staffChat;$getGlobalVar[guildID]];
 
 $!editRole[$getGlobalVar[guildID];1463138976494915646;;;;;false;]
 $!editRole[$getGlobalVar[guildID];1463139649806663782;;;;;false;]
-];0 22 * * *;America/Recife]
+;0 22 * * *;America/Recife]
 
 $cron[
 $sendMessage[$getGuildVar[staffChat;$getGlobalVar[guildID]];
@@ -126,7 +126,7 @@ $sendMessage[$getGuildVar[staffChat;$getGlobalVar[guildID]];
 
 $!editRole[$getGlobalVar[guildID];1463138976494915646;;;;;true;]
 $!editRole[$getGlobalVar[guildID];1463139649806663782;;;;;true;]
-];0 6 * * *;America/Recife]   
+;0 6 * * *;America/Recife]   
     
 `
 }
