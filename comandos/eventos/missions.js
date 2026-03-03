@@ -33,10 +33,10 @@ $description[
 Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
 Cálculo atual: **$media[messageMonth;11]**
 
-Mensagens enviadas pelo $usertag neste mês: **$getMemberVar[messageMonth]**
-Mensagens enviadas pelo $usertag nesta semana: **$getMemberVar[messageWeekly]**
-Mensagens enviadas pelo $usertag hoje: **$getMemberVar[messageToday]**
-Mensagens enviadas pelo $usertag antes: **$getMemberVar[messageTotal]**
+Mensagens enviadas neste mês: **$getMemberVar[messageMonth]**
+Mensagens enviadas nesta semana: **$getMemberVar[messageWeekly]**
+Mensagens enviadas hoje: **$getMemberVar[messageToday]**
+Mensagens enviadas antes: **$getMemberVar[messageTotal]**
 ]
 $thumbnail[$userAvatar]
 $footer[$authorID]
@@ -51,10 +51,10 @@ $description[
 Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
 Cálculo atual: **$media[messageMonth;11]**
 
-Mensagens enviadas pelo $usertag neste mês: **$getMemberVar[messageMonth]**
-Mensagens enviadas pelo $usertag nesta semana: **$getMemberVar[messageWeekly]**
-Mensagens enviadas pelo $usertag hoje: **$getMemberVar[messageToday]**
-Mensagens enviadas pelo $usertag antes: **$getMemberVar[messageTotal]**
+Mensagens enviadas neste mês: **$getMemberVar[messageMonth]**
+Mensagens enviadas $usertag nesta semana: **$getMemberVar[messageWeekly]**
+Mensagens enviadas $usertag hoje: **$getMemberVar[messageToday]**
+Mensagens enviadas $usertag antes: **$getMemberVar[messageTotal]**
 ]
 $thumbnail[$userAvatar]
 $footer[$authorID]
