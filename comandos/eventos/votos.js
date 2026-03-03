@@ -43,6 +43,15 @@ $color[Red]
 ]
 ]
 
+$if[$getMemberVar[votesTotal;$authorID;$guildID;0]==60;
+$!memberAddRoles[$guildID;$authorID;$getGuildVar[memberSupporterRole;$guildID]]
+
+$sendMessage[$getGuildVar[batePapo];
+<@$authorID> Obrigado por ter votado 60 vezes na Patinhas! ❤️
+]
+
+]
+
 
 `
 }
