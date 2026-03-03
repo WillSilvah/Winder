@@ -2,10 +2,11 @@ module.exports = {
     type: 'clientReady',
     code: `
 $jsonLoad[session;$readFile[Recursos/session.json]]
+$let[guildID;$getGlobalVar[guildID]]
 
 $setInterval[
-$clearMessages[$getGuildVar[rankedChat;1462224054676099094];6]
-$sendMessage[$getGuildVar[rankedChat;1462224054676099094];
+$clearMessages[$getGuildVar[rankedChat;$get[guildID]];6]
+$sendMessage[$getGuildVar[rankedChat;$get[guildID]];
 $disableAllMentions
 $addContainer[
 $addSection[
@@ -14,7 +15,7 @@ $addThumbnail[$guildIcon[$guildID]]
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
-$memberLeaderboard[messageMonth;1462224054676099094;desc;11;1;\n;data;pos;$return[$env[pos]° <@$env[data;id]>
+$memberLeaderboard[messageMonth;$get[guildID];desc;11;1;\n;data;pos;$return[$env[pos]° <@$env[data;id]>
 💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$guildID]]]
 ]
 ;Green]
