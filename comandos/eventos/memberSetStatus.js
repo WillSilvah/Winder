@@ -28,6 +28,11 @@ $setMemberVar[memberIsSupporter;true;$authorID];
 $setMemberVar[memberIsSupporter;false;$authorID]
 ]
 
+$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole]]==true;
+$setMemberVar[memberIsActive;true;$authorID];
+$setMemberVar[memberIsActive;false;$authorID]
+]
+
 ]
 `
 }]

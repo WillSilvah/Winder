@@ -6,7 +6,7 @@ $let[guildID;1462224054676099094]
 $setInterval[
 $log[Tentativa de executar um minigame
 -----------------------------------
-MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID]]
+MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
 
 ]
 $onlyIf[$getGuildVar[msgPerMinute;$get[guildID]]>=6;]
