@@ -1,7 +1,6 @@
 module.exports = [{
     type: 'clientReady',
     code: `
-$onlyIf[2==7;]
 $let[guildID;1462224054676099094]
 $setInterval[
 $log[Tentativa de executar um minigame
