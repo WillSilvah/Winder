@@ -14,7 +14,7 @@ $addTextDisplay[### $toUpperCase[TEMPORADA $env[session;number]: $env[session;na
 $addThumbnail[$guildIcon[$get[guildID]]]
 $addTextDisplay[
 $memberLeaderboard[messageMonth;$get[guildID];desc;11;1;\n;data;pos;$return[$env[pos]° <@$env[data;id]>
-💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID]]]]
+💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID];0] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID];0]]]
 ]
 ]
 ;Green]
