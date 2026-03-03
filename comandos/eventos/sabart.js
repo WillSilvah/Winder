@@ -2,6 +2,7 @@ module.exports = [{
     type: 'clientReady',
     code: `
 $cron[
+$onlyIf[$getGuildVar[sabartStatus;1462224054676099094;true]==true;]
 $writeFile[Recursos/sabart.json;{
 "theme": "$getGuildVar[sabartTheme;1462224054676099094]",
 "description": "$getGuildVar[sabartDescription;1462224054676099094]"
