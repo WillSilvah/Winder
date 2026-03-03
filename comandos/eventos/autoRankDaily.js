@@ -10,13 +10,12 @@ $sendMessage[$getGuildVar[rankedChat;$get[guildID]];
 $disableAllMentions
 $addContainer[
 $addSection[
-$addTextDisplay[## $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]]
+$addTextDisplay[### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]]
 $addThumbnail[$guildIcon[$get[guildID]]]
-]
-$addSeparator[Large;true]
 $addTextDisplay[
 $memberLeaderboard[messageMonth;$get[guildID];desc;11;1;\n;data;pos;$return[$env[pos]° <@$env[data;id]>
 💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID]]]]
+]
 ]
 ;Green]
 ];30m;autoRankDaily]
