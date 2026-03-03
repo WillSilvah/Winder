@@ -17,7 +17,7 @@ $addSeparator[Large;true]
 $deleteIn[5m]
 ]
 
-$if[$isMemberDMEnabled==true;
+$if[$isUserDMEnabled==true;
 $sendDM[$authorID;$title[🥰 Muito obrigado por ter votado!]
 $description[
 Ativei um $bold[bônus de pontos de atividades] para ganhar mais pontos enquanto conversa e interage na patinhas!
@@ -28,6 +28,7 @@ $color[Red]
 ]
 ]
 ]
+
 $if[$oldMember[removedRoles]==$getGuildVar[memberVotedRole;$guildID];
 $if[$getMemberVar[reminderStatus;$authorID;$guildID;true]==true;
 $sendDM[$authorID;
