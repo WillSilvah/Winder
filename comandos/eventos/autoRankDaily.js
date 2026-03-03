@@ -16,7 +16,7 @@ $addThumbnail[$guildIcon[$guildID]]
 $addSeparator[Large;true]
 $addTextDisplay[
 $memberLeaderboard[messageMonth;$get[guildID];desc;11;1;\n;data;pos;$return[$env[pos]° <@$env[data;id]>
-💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$guildID]]]
+💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID]]]]
 ]
 ;Green]
 ];1m;autoRankDaily]
