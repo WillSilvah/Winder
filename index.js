@@ -189,7 +189,6 @@ ForgeDB.variables({
   "membersJoinedMonth": "0",
   "lastUserSendMessage": "",
   "remindDM": "true",
-  "memberIsolated": "false",
   "memberIsolatedRole": "14716959190986302",
   
   "sabartAdvChat": "1472742861526142996",
@@ -198,11 +197,6 @@ ForgeDB.variables({
   
   "sessionName": "",
   "sessionNumber": "",
-  
-  "memberIsArtist": "false",
-  "memberIsOfficialArtist": "false",
-  "memberIsVerified": "false",
-  "memberIsStaff": "false",
   
   "minigameStatus": "false",
   "minigameWord": "",
