@@ -19,7 +19,7 @@ $memberLeaderboard[messageMonth;$get[guildID];desc;11;1;\n;data;pos;$return[$env
 💬$env[data;value] | ✨️ $getMemberVar[pdaMonth;$env[data;id];$get[guildID]] | ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID]]]]
 ]
 ;Green]
-];1m;autoRankDaily]
+];30m;autoRankDaily]
  
 `
 }
