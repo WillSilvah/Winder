@@ -7,6 +7,7 @@ $let[badges;$if[$getMemberVar[memberIsVerified;$get[userID]]==true;✅ Verificad
 
 $title[📃 Perfil de @$username[$get[userID]]]
 $description[
+$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]]]
 $if[$getMemberVar[birthday;$get[userID];$guildID]!=;🎂 **$getMemberVar[birthday;$get[userID];$guildID]/$year**;🎂 Utilize **/aniversario adicionar** para registrar uma data!]
 
 **Convidado por: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano]**
