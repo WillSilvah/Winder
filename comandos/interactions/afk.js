@@ -4,6 +4,8 @@ $setUserVar[afkReason;$if[$option[motivo]==;Eu não sei o motivo, mas ele não e
 $setUserVar[afkStatus;true]
 $setUserVar[afkNotify;$if[$option[notificardm]==;false;$option[notificardm]]]
 
+$!memberSetNickname[$guildID;$authorID;(AFK) $nickname[$guildID;$authorID]]
+
 $interactionReply[<@$authorID> Modo AFK ativado!
 > $bold[$if[$option[notificardm]==;Não irei avisar as menções na DM.;Irei avisar as menções nas DM!]]
 ]

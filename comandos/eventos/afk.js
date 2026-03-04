@@ -37,6 +37,8 @@ $onlyIf[$getUserVar[afkStatus;$authorID;false]==true;]
 
 $sendMessage[$channelID;<@$authorID> Olá, que bom que você voltou! ❤️]
 
+$!memberSetNickname[$guildID;$authorID;$replaceText[$nickname[$guildID;$authorID];()AFK) ;]]
+
 $setUserVar[afkStatus;false;$authorID]
 $setUserVar[afkReason;;$authorID]
 
