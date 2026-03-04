@@ -9,13 +9,14 @@ $let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] ;]
 $addContainer[
 $addSection[
 $addTextDisplay[### @$userTag[$get[userID]]
-**$get[badges]**
+$get[badges]
 ]
 $addThumbnail[$userAvatar[$get[userID]]]
 ]
-$addSeparator[Large;true]
+$if[$memberExists[$guildID;$get[userID]]==true;$addSeparator[Large;true]
 $addTextDisplay[
 👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
+]
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
@@ -33,7 +34,7 @@ $addTextDisplay[### ANTERIORMENTE
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
 ]
-;$memberDisplayColor[$guildID;$get[userID]]]
+;$if[$memberExists[$guildID;$get[userID]]==true;$memberDisplayColor[$guildID;$get[userID]];Red]]
 
   `,
 data: {
