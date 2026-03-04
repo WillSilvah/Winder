@@ -225,6 +225,6 @@ client.functions.load('./comandos/custom/');
 client.commands.load("./comandos/basic/");
 client.commands.load("./comandos/eventos/");
 music.commands.load("./comandos/music");
-client.applicationCommands.load("./comandos/slash/");
+client.applicationCommands.load("./comandos/interactions/");
 
 client.login(process.env.TOKEN)
