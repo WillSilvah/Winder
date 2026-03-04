@@ -19,7 +19,7 @@ $addTextDisplay[
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
-### $toUpperCase[$env[session;name]]
+### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
 💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
