@@ -33,7 +33,7 @@ $addTextDisplay[### ANTERIORMENTE
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
 ]
-;Red]
+;$memberDisplayColor[$guildID;$get[userID]]]
 
   `,
 data: {
