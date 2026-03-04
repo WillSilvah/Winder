@@ -15,7 +15,7 @@ $addThumbnail[$userAvatar[$get[userID]]]
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
-👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID];RelativeTime]] em $memberJoinPosition[$guildID;$get[userID]]°
+👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime]] em $memberJoinPosition[$guildID;$get[userID]]°
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
