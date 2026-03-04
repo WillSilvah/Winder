@@ -23,6 +23,7 @@ $!memberAddRoles[$guildID;$authorID;$getGuildVar[allMemberRole;$guildID]]
 },{
     type: "messageCreate",
     code: `
+    $onlyIf[$guildID==1462224054676099094;]
 $if[$getMemberVar[messageMonth;$authorID]>=$getGuildVar[guildActivityMedia];
 $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==false;]
 $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
