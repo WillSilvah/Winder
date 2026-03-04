@@ -2,6 +2,7 @@ module.exports = {
     type: "messageCreate",
     code: `
 $onlyIf[$isBot==false;]
+$onlyIf[$includes[$channelID;1478505120525324541]==false;]
 
 $timezone[America/Recife]
 $setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages;$guildID;0];1]]

@@ -8,6 +8,7 @@ $onlyIf[$checkContains[$message;lorem;gboard]==false;]
 $onlyIf[$getGuildVar[minigameStatus]==false;]
 $onlyIf[$startsWith[$message;+;=;w!+w+;/;m!]==false;]
 $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;]
+$onlyIf[$includes[$channelID;1478505120525324541]==false;]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
