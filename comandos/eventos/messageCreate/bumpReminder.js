@@ -20,7 +20,7 @@ $title[🎉 Hora de dar /bump!]
 $description[{0}]
 $color[Green]
 ]
-];2h;;$get[text]]
+];2h;BumpReminder;$get[text]]
 
 `
 }
