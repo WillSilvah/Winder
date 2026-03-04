@@ -4,7 +4,7 @@ module.exports = {
   
 $jsonLoad[session;$readFile[Recursos/session.json]]
   
-$let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] PATS ;]$if[$getMemberVar[memberIsVerified;$get[userID]]==true;✅ Verificado ;]$if[$getMemberVar[memberIsStaff;$get[userID]]==true;🛡️ Equipe Patinhas ;]$if[$memberExists[$guildID;$get[userID]]==true;🐾 Peludo ;]$if[$getMemberVar[memberIsActive;$get[userID]]==true;💬 Membro ativo;]]
+$let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] ;]$if[$getMemberVar[memberIsVerified;$get[userID]]==true;✅ ;]$if[$getMemberVar[memberIsStaff;$get[userID]]==true;🛡️ ;]$if[$memberExists[$guildID;$get[userID]]==true;🐾 ;]$if[$getMemberVar[memberIsActive;$get[userID]]==true;💬;]]
 
 $addContainer[
 $addSection[
