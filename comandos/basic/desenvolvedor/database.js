@@ -14,6 +14,5 @@ $let[userID;$findUser[$message[1]]]
 $attachment[$searchDB[;$get[userID]];WinderDB_$username[$get[userID]].json;true]
 
 ]
-]
 `
 }
