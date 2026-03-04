@@ -9,6 +9,8 @@ $title[📃 Perfil de $if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats
 $description[
 $if[$getMemberVar[birthday;$get[userID];$guildID]!=;🎂 **$getMemberVar[birthday;$get[userID];$guildID]/$year**;🎂 Utilize **/aniversario adicionar** para registrar uma data!]
 
+$addField[$memberJoinPosition[$guildID;$get[userID]]° membro a entrar;$discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime]]
+
 $addField[🎮 Minigames ganhos;$getMemberVar[minigameMonthWins;$get[userID];$guildID;0] (Mês) | $getMemberVar[minigameTotalWins;$get[userID];$guildID;0] (total)]
 
 $addField[⭐ Votos dados pelo Discords.com;$getMemberVar[votesTotal;$get[userID];$guildID;0] (Mês) | $getMemberVar[votesMonth;$get[userID];$guildID;0] (Total)]
