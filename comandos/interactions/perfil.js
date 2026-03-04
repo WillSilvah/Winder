@@ -15,7 +15,7 @@ $addThumbnail[$userAvatar[$get[userID]]]
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
-👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]°
+👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID];RelativeTime]] em $memberJoinPosition[$guildID;$get[userID]]°
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
@@ -25,8 +25,9 @@ $addTextDisplay[
 💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
-🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos
-### ANTERIORMENTE
+🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
+$addSeparator[Large;true]
+$addTextDisplay[### ANTERIORMENTE
 💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas
 ✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
