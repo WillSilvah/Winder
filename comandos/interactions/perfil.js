@@ -9,7 +9,7 @@ $let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] ;]
 $addContainer[
 $addSection[
 $addTextDisplay[### @$userTag[$get[userID]]
-**$get[badges]**
+$get[badges]
 ]
 $addThumbnail[$userAvatar[$get[userID]]]
 ]
