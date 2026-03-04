@@ -13,9 +13,10 @@ $addTextDisplay[### @$userTag[$get[userID]]
 ]
 $addThumbnail[$userAvatar[$get[userID]]]
 ]
-$addSeparator[Large;true]
+$if[$memberExists[$guildID;$get[userID]];$addSeparator[Large;true]
 $addTextDisplay[
 👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
+]
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
