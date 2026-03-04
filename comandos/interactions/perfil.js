@@ -4,7 +4,7 @@ module.exports = {
   
 $jsonLoad[session;$readFile[Recursos/session.json]]
   
-$let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] PATS | ;]$if[$getMemberVar[memberIsVerified;$get[userID]]==true;✅ Verificado | ;]$if[$getMemberVar[memberIsStaff;$get[userID]]==true;🛡️ Equipe Patinhas | ;]$if[$memberExists[$guildID;$get[userID]]==true;🐾 Peludo | ;]$if[$getMemberVar[memberIsActive;$get[userID]]==true;💬 Membro ativo;]]
+$let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] PATS ;]$if[$getMemberVar[memberIsVerified;$get[userID]]==true;✅ Verificado ;]$if[$getMemberVar[memberIsStaff;$get[userID]]==true;🛡️ Equipe Patinhas ;]$if[$memberExists[$guildID;$get[userID]]==true;🐾 Peludo ;]$if[$getMemberVar[memberIsActive;$get[userID]]==true;💬 Membro ativo;]]
 
 $addContainer[
 $addSection[
@@ -15,7 +15,7 @@ $addThumbnail[$userAvatar[$get[userID]]]
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
-👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]°
+👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
