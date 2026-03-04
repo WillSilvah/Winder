@@ -184,6 +184,6 @@ ForgeDB.variables({
 client.functions.load('./comandos/custom/');
 client.commands.load("./comandos/basic/");
 client.commands.load("./comandos/eventos/");
-client.applicationCommands.load("./comandos/slash/");
+client.applicationCommands.load("./comandos/interactions/");
 
 client.login(process.env.TOKEN)
