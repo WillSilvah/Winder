@@ -25,7 +25,7 @@ $addTextDisplay[
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
 💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
-⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
+⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
 $addSeparator[Large;true]
 $addTextDisplay[### ANTERIORMENTE
