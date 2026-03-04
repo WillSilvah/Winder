@@ -2,31 +2,38 @@ module.exports = {
   code: `
   $let[userID;$findUser[$option[membro];true]]
   
-$let[badges;$if[$getMemberVar[memberIsVerified;$get[userID]]==true;✅ Verificado | ;]$if[$getMemberVar[memberIsStaff;$get[userID]]==true;🛡️ Equipe Patinhas | ;]$if[$memberExists[$guildID;$get[userID]]==true;🐾 Peludo | ;]]
+$jsonLoad[session;$readFile[Recursos/session.json]]
+  
+$let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] ;]$if[$getMemberVar[memberIsVerified;$get[userID]]==true;✅ ;]$if[$getMemberVar[memberIsStaff;$get[userID]]==true;🛡️ ;]$if[$memberExists[$guildID;$get[userID]]==true;🐾 ;]$if[$getMemberVar[memberIsActive;$get[userID]]==true;💬;]]
 
-
-$title[📃 Perfil de $if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]]] @$username[$get[userID]]]
-$description[
-$if[$getMemberVar[birthday;$get[userID];$guildID]!=;🎂 **$getMemberVar[birthday;$get[userID];$guildID]/$year**;🎂 Utilize **/aniversario adicionar** para registrar uma data!]
-
-$addField[🎮 Minigames ganhos;$getMemberVar[minigameMonthWins;$get[userID];$guildID;0] (Mês) | $getMemberVar[minigameTotalWins;$get[userID];$guildID;0] (total)]
-
-$addField[⭐ Votos dados pelo Discords.com;$getMemberVar[votesTotal;$get[userID];$guildID;0] (Mês) | $getMemberVar[votesMonth;$get[userID];$guildID;0] (Total)]
-
-$addField[📃 Atividade do membro;✨ $getMemberVar[pdaMonth;$get[userID];$guildID;0]
-💬 $getMemberVar[messageMonth;$get[userID];$guildID;0] (Mês)
-💬 $getMemberVar[messageWeekly;$get[userID];$guildID;0] (Semana)
-💬 $getMemberVar[messageToday;$get[userID];$guildID;0] (Hoje)
+$addContainer[
+$addSection[
+$addTextDisplay[### @$userTag[$get[userID]]
+**$get[badges]**
 ]
-
-$addField[Historicamente;
-✨ $getMemberVar[pdaTotal;$get[userID];$guildID;0] (Total) | 💬 $getMemberVar[messageTotal;$get[userID];$guildID;0] (Total)
+$addThumbnail[$userAvatar[$get[userID]]]
 ]
-
+$addSeparator[Large;true]
+$addTextDisplay[
+👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
 ]
-$footer[$replaceText[$get[badges]END; | END;;1]]
-$thumbnail[$userAvatar[$get[userID]]]
-$color[Random]
+$addSeparator[Large;true]
+$addTextDisplay[
+### $toUpperCase[$env[session;name]]
+💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
+💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
+💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
+✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
+⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
+🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
+$addSeparator[Large;true]
+$addTextDisplay[### ANTERIORMENTE
+💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas
+✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
+⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
+🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
+]
+;$memberDisplayColor[$guildID;$get[userID]]]
 
   `,
 data: {
