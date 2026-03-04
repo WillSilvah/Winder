@@ -13,7 +13,7 @@ $addTextDisplay[### @$userTag[$get[userID]]
 ]
 $addThumbnail[$userAvatar[$get[userID]]]
 ]
-$if[$memberExists[$guildID;$get[userID]];$addSeparator[Large;true]
+$if[$memberExists[$guildID;$get[userID]]==true;$addSeparator[Large;true]
 $addTextDisplay[
 👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
 ]
@@ -34,7 +34,7 @@ $addTextDisplay[### ANTERIORMENTE
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
 ]
-;$memberDisplayColor[$guildID;$get[userID]]]
+;$if[$memberExists[$guildID;$get[userID]]==true;$memberDisplayColor[$guildID;$get[userID]];Red]]
 
   `,
 data: {
