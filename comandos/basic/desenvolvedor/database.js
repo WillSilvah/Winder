@@ -11,7 +11,7 @@ $if[$message[0]==baixar;
 
 $let[userID;$findUser[$message[1]]]
 
-$attachment[$searchDB[;$get[userID];Roles.txt;true]
+$attachment[$searchDB[;$get[userID]];Roles.txt;true]
 
 ]
 ]
