@@ -10,19 +10,18 @@ $description[
 $if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]]]
 $if[$getMemberVar[birthday;$get[userID];$guildID]!=;🎂 **$getMemberVar[birthday;$get[userID];$guildID]/$year**;🎂 Utilize **/aniversario adicionar** para registrar uma data!]
 
-**Convidado por: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano]**
-$addField[🎮 Minigames ganhos;$getMemberVar[minigameMonthWins;$get[userID]] (Mês) | $getMemberVar[minigameTotalWins;$get[userID]] (total)]
+$addField[🎮 Minigames ganhos;$getMemberVar[minigameMonthWins;$get[userID];$guildID;0] (Mês) | $getMemberVar[minigameTotalWins;$get[userID];$guildID;0] (total)]
 
-$addField[⭐ Votos dados pelo Discords.com;$getMemberVar[votesTotal;$get[userID]] (Mês) | $getMemberVar[votesMonth;$get[userID]] (Total)]
+$addField[⭐ Votos dados pelo Discords.com;$getMemberVar[votesTotal;$get[userID];$guildID;0] (Mês) | $getMemberVar[votesMonth;$get[userID];$guildID;0] (Total)]
 
-$addField[📃 Atividade do membro;✨ $getMemberVar[pdaMonth;$get[userID]]
-💬 $getMemberVar[messageMonth;$get[userID]] (Mês)
-💬 $getMemberVar[messageWeekly;$get[userID]] (Semana)
-💬 $getMemberVar[messageToday;$get[userID]] (Hoje)
+$addField[📃 Atividade do membro;✨ $getMemberVar[pdaMonth;$get[userID];$guildID;0]
+💬 $getMemberVar[messageMonth;$get[userID];$guildID;0] (Mês)
+💬 $getMemberVar[messageWeekly;$get[userID];$guildID;0] (Semana)
+💬 $getMemberVar[messageToday;$get[userID];$guildID;0] (Hoje)
 ]
 
 $addField[Historicamente;
-✨ $getMemberVar[pdaTotal;$get[userID]] (Total) | 💬 $getMemberVar[messageTotal;$get[userID]] (Total)
+✨ $getMemberVar[pdaTotal;$get[userID];$guildID;0] (Total) | 💬 $getMemberVar[messageTotal;$get[userID];$guildID;0] (Total)
 ]
 
 ]
