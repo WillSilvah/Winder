@@ -89,7 +89,7 @@ $deleteRecords[messageToday]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🌞 BOM DIA PELUDOS!
 **Vamos levantar e tomar uma xícara de café?**
-];0 6 * * *;America/Recife]
+];34 6 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🍱 JÁ PODE ALMOÇAR!
 **Liberei o almoço, vão almoçar enquanto dá tempo!**
@@ -101,7 +101,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🌃 BOA NOITE
 **Bora finalizar o dia com muitos cafunés e conversa boa! Quem vem? ✨**
-];0 18 * * *;America/Recife]
+];46 18 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 😴 VAMOS DORMIR?
 **Vamos tirar um cochilo?**
