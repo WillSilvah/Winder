@@ -27,7 +27,7 @@ $addSeparator[Large]
 $arrayForEach[birthdayDB;data;
 $arrayLoad[birthdayInfo;/;$env[data;value]]
 $if[$get[month]==$arrayAt[birthdayInfo;1];
-$addTextDisplay[<@$env[data;id]> - $env[data;value]]
+$addTextDisplay[<@$env[data;id]> - 🗓 $env[data;value] ($math[$year-$getMemberVar[birthdayYear;$env[data;id]]] anos)]
 ]
 ]
 ;Green]
