@@ -6,6 +6,10 @@ $setMemberVar[votesMonth;$math[$getMemberVar[votesMonth;$authorID;$guildID;0]+1]
 
 $setMemberVar[votesTotal;$math[$getMemberVar[votesTotal;$authorID;$guildID;0]+1]]
 
+$let[pda;5]
+
+$setMemberVar[pdaMonth;$sum[$getMemberVar[pdaMonth;$authorID;$guildID;$get[pda]];$get[pda]]]
+$setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$authorID;$guildID;$get[pda]];$get[pda]]]
 
 $sendMessage[$getGuildVar[batePapo];
 $addSection[
