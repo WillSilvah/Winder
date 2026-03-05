@@ -18,6 +18,7 @@ $addTextDisplay[
 👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
 ]
 ]
+$addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
 $addSeparator[Large;true]
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
