@@ -25,8 +25,6 @@ data: {
       "type": 4,
       "description": "Mês do seu aniversário",
       "name": "mes",
-      "min_value": 1,
-      "max_value": 12,
       "required": true,
       "choices": [
         {

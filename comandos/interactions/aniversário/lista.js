@@ -25,8 +25,6 @@ data: {
       "type": 4,
       "description": "Mês",
       "name": "mes",
-      "min_value": 1,
-      "max_value": 12,
       "choices": [
         {
           "name": "1️⃣ Janeiro",
