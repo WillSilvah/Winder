@@ -1,6 +1,9 @@
 module.exports = {
   code: `
+$setMemberVar[birthday;$option[dia]/$option[mes]]
+$setMemberVar[birthdayYear;$option[ano]]
 
+$interactionReply[<@$authorID> Pronto!Lembrarei o seu aniversário para todos no dia **$option[dia]/$option[mes]**! 🎂]
   `,
 data: {
   "type": 1,
@@ -72,8 +75,15 @@ data: {
           "value": "12"
         }
       ]
+    },
+    {
+      "type": 4,
+      "description": "Ano em que você nasceu",
+      "name": "ano",
+      "min_value": 1817,
+      "max_value": 2050,
+      "required": true
     }
   ]
-}
-,
+},
 }
