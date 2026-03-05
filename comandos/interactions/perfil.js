@@ -10,7 +10,7 @@ $addContainer[
 $addSection[
 $addTextDisplay[### @$userTag[$get[userID]]
 $get[badges]
-$if[$getMemberVar[birthday;$get[userID]]!=;🎂 $getMemberVar[birthday;$get[userID]] ($math[$year-$getMemberVar[birthdaYear;$get[userID]]]);Use "/aniversário adicionar" para seu aniversário aparecer aqui!]
+**$if[$getMemberVar[birthday;$get[userID]]!=;🎂 $getMemberVar[birthday;$get[userID]] ($math[$year-$getMemberVar[birthdaYear;$get[userID]]]);Use "/aniversário adicionar" para seu aniversário aparecer aqui!]**
 ]
 $addThumbnail[$userAvatar[$get[userID]]]
 ]
