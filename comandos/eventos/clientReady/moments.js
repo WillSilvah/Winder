@@ -4,7 +4,7 @@ module.exports = {
 $let[guildID;1462224054676099094]
 $cron[
 
-$setGuildVar[guildActivityMedia;$media[messageMonth;11];$get[guildID]]
+$setGuildVar[guildActivityMedia;$media[messageMonth;$guildMemberCount[1462224054676099094;;false]];$get[guildID]]
 
 $wait[5s]
 
