@@ -14,7 +14,7 @@ $setMemberVar[pdaTotal;$sum[$getMemberVar[pdaTotal;$authorID;$guildID;$get[pda]]
 $sendMessage[$getGuildVar[batePapo];
 $addSection[
 $addTextDisplay[### ⬆️ <@$authorID> votou!
--# **$getMemberVar[votesMonth;$authorID;$guildID;0] votos neste mês!**]
+-# **$getMemberVar[votesMonth;$authorID;$guildID;0] votos neste mês! | ✨ +$get[pda]**]
 $addButton[https://discords.com/servers/$guildID/upvote;Vote na patinhas! (discords.com);Link;⬆️;false]
 ]
 $addSeparator[Large;true]
