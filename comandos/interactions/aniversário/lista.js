@@ -1,11 +1,26 @@
 module.exports = {
   code: `
 $let[month;$default[$option[mes];$month[TwoDigit]]]
+
+$let[monthName;$ifx[
+$if[$get[month]==01;JANEIRO]
+$elseIf[$get[month]==02;FEVEREIRO]
+$elseIf[$get[month]==03;MARÇO]
+$elseIf[$get[month]==04;ABRIL]
+$elseIf[$get[month]==05;MAIO]
+$elseIf[$get[month]==06;JUNHO]
+$elseIf[$get[month]==07;JULHO]
+$elseIf[$get[month]==08;AGOSTO]
+$elseIf[$get[month]==09;SETEMBRO]
+$elseIf[$get[month]==10;OUTUBRO]
+$elseIf[$get[month]==11;NOVEMBRO]
+$elseIf[$get[month]==12;DEZEMBRO]]]
+
 $jsonLoad[birthdayDB;$searchDB[birthday;;member;;$guildID]]
 $disableAllMentions
 $addContainer[
 $addSection[
-$addTextDisplay[## ANIVERSÁRIANTES DO MÊS!]
+$addTextDisplay[## ANIVERSÁRIANTES DE $get[monthName]!]
 $addThumbnail[$guildIcon]
 ]
 $addSeparator[Large]
