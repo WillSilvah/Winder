@@ -2,19 +2,21 @@ module.exports = {
   type: 'clientReady',
   code: `
     $jsonLoad[timeouts;$getGlobalVar[timeouts;{}]]
+    $log[$env[timeouts]]
     $jsonLoad[keys;$jsonKeys[timeouts]]
-    $arrayForEach[keys;key;
-      $let[code;$env[timeouts;$env[key];code]]
-      $let[endTime;$env[timeouts;$env[key];endTime]]
+    $loop[$arrayLength[keys];
+      $let[id;$arrayAt[keys;$math[$env[i] - 1]]]
+      $let[endTime;$env[timeouts;$get[id];endTime]]
+      $let[code;$env[timeouts;$get[id];code]]
 
       $setTimeout[
         $jsonLoad[timeouts;$getGlobalVar[timeouts;{}]]
-        $if[$env[timeouts;$env[key]]!=;
-          $!jsonDelete[timeouts;$env[key]]
+        $if[$env[timeouts;$get[id]]!=;
+          $!jsonDelete[timeouts;$get[id]]
           $setGlobalVar[timeouts;$env[timeouts]]
         ]
-        $eval[$replace[$get[code];{N};\n;-1];false]
-      ;$max[500;$math[$get[endTime] - $getTimestamp]];$env[key]]
-    ]
+        $try[$eval[$get[code];false]]
+      ;$max[500;$math[$get[endTime] - $getTimestamp]];$get[id]]
+    ;i;true]
   `
 }

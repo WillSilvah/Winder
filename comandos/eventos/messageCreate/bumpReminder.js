@@ -19,7 +19,7 @@ $advancedTimeout[$esc[
     $description[{2}]
     $color[Green]
   ]
-];1m;BumpReminder_TEST;$channelID;<@&1462953076091785370>;$get[text]]
+];2h;BumpReminder;$channelID;<@&1462953076091785370>;$get[text]]
 
 `
 }
