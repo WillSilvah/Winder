@@ -1,8 +1,8 @@
 module.exports = [{
     type: 'clientReady',
     code: `
-$let[guildID;1462224054676099094]
 $setInterval[
+$let[guildID;1462224054676099094]
 $log[Tentativa de executar um minigame
 -----------------------------------
 MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
