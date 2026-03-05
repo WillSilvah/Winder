@@ -11,14 +11,15 @@ $onlyIf[$checkContains[$env[data;embeds;0;description];Bump done!]]
 
 $sendMessage[1462796515578876079;<@$env[data;interaction;user]> Obrigado por ajudar!]
 
-$advancedTimeout[$esc[
-$sendMessage[1462796515578876079;<@&1462953076091785370>
-$title[🎉 Hora de dar /bump!]
-$description[Hey! Tá na hora de dar boost na Disboard!
+$let[text;Hey! Tá na hora de dar boost na Disboard!
 Usa o comando </bump:947088344167366698>]
-$color[Green]
-]
-];2h;BumpReminder]
+$advancedTimeout[$esc[
+  $sendMessage[{0};{1}
+  $title[🎉 Hora de dar /bump!]
+  $description[{2}]
+  $color[Green]
+  ]
+];2h;BumpReminder;$channelID;<@&1462953076091785370>;$get[text]]
 
 `
 }
