@@ -32,7 +32,7 @@ $sendMessage[1467318550925410485;
 $title[O membro @$userTag é um membro ativo!]
 $description[
 Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
-Cálculo atual: **$media[messageMonth;11]**
+Cálculo atual: **$media[messageMonth;$guildMemberCount[1462224054676099094;;false]]**
 
 Mensagens enviadas neste mês: **$getMemberVar[messageMonth]**
 Mensagens enviadas nesta semana: **$getMemberVar[messageWeekly]**
