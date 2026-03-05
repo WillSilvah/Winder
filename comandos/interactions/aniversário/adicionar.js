@@ -1,9 +1,12 @@
 module.exports = {
   code: `
-$setMemberVar[birthday;$option[dia]/$option[mes]]
-$setMemberVar[birthdayYear;$option[ano]]
+  $let[dia;$if[$charCount[$option[dia]]==1;0$option[dia];$option[dia]]]
+  $let[mes;$option[mes]]
+  $let[ano;$option[ano]]
+$setMemberVar[birthday;$get[dia]/$get[mes]]
+$setMemberVar[birthdayYear;$get[ano]]
 
-$interactionReply[<@$authorID> Pronto!Lembrarei o seu aniversário para todos no dia **$option[dia]/$option[mes]**! 🎂]
+$interactionReply[<@$authorID> Pronto! Lembrarei o seu aniversário para todos no dia **$get[dia]/$get[mes]**! 🎂]
   `,
 data: {
   "type": 1,
