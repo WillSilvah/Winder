@@ -37,18 +37,17 @@ module.exports = {
       $logger[Error;Failed to set timeout with ID '$env[id]'. Reason: invalid time '$env[time]' received]
       $return
     ]
-    $let[endTime;$math[$getTimestamp + $get[time]]]
 
-    $c[Removing empty lines and extra spaces at the beginning and end of each line of code]
-    $arrayLoad[block;\n;$trimLines[$env[code]]]
-    $arrayMap[block;elem;$return[$trim[$env[elem]]];block]
-    $let[code;$arrayJoin[block; ]]
+
+    $let[endTime;$math[$getTimestamp + $get[time]]]
+    $let[code;$advancedReplace[$env[code];\n;{N};-1]]
 
 
     $c[Replacing {placeholders} with included data in desc order]
     $loop[$arrayLength[data];
       $let[i;$math[$env[i] - 1]]
-      $let[code;$replace[$get[code];{$get[i]};$arrayAt[data;$get[i]];-1]]
+      $let[replacement;$replace[$arrayAt[data;$get[i]];\n;{N};-1]]
+      $let[code;$replace[$get[code];{$get[i]};$get[replacement];-1]]
     ;i;true]
 
 
@@ -73,7 +72,7 @@ module.exports = {
         $!jsonDelete[timeouts;$env[id]]
         $setGlobalVar[timeouts;$env[timeouts]]
       ]
-      $try[$eval[$get[code];false]]
+      $eval[$replace[$get[code];{N};\n;-1];false]
     ;$env[time];$env[id]]
   `
 }
