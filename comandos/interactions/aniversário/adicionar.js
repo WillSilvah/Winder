@@ -1,7 +1,7 @@
 module.exports = {
   code: `
   $let[dia;$if[$charCount[$option[dia]]==1;0$option[dia];$option[dia]]]
-  $let[mes;$option[mes]]
+  $let[mes;$if[$charCount[$option[mes]]==1;0$option[mes];$option[mes]]]
   $let[ano;$option[ano]]
 $setMemberVar[birthday;$get[dia]/$get[mes]]
 $setMemberVar[birthdayYear;$get[ano]]
