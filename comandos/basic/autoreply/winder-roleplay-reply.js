@@ -3,8 +3,6 @@ module.exports = {
     code: `
 $onlyIf[$mentioned[0]==$clientID;]
 
-$cooldown[$authorID;1m]
-
 $ifx[
 $if[$checkContains[*$toLowerCase[$message]*;abraço;abraça;hug]==true;
 

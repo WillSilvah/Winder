@@ -2,7 +2,6 @@ module.exports = {
     type: "messageCreate",
     code: `
 $onlyIf[$mentioned[0]==$authorID;]
-$cooldown[$guildID;1m]
 
 $reply[$channelID;$messageID]
 
