@@ -10,10 +10,10 @@ $setGlobalVar[ship_$get[user1]_$get[user2];$get[shipCalc]]]
 
 $interactionReply[$addContainer[
 $addSection[
-$addTextDisplay[### A ATRAÇÃO DE @$userTag[$get[user1]]]...]
+$addTextDisplay[### A ATRAÇÃO DE @$userTag[$get[user1]]...]
 $addThumbnail[$userAvatar[$get[user1]]]
 $addSection[
-$addTextDisplay[### A ATRAÇÃO DE @$userTag[$get[user2]]]...]
+$addTextDisplay[### A ATRAÇÃO DE @$userTag[$get[user2]]...]
 $addThumbnail[$userAvatar[$get[user2]]]
 $addTextDisplay[## = ❤️ $get[shipCalc]%]
 ;Red]]
