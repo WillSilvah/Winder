@@ -21,7 +21,7 @@ $addTextDisplay[
 💌 Veio pelo: **$if[$inviterID[$guildID;$get[userID]]!=;@$username[$inviterID[$guildID;$get[userID]]];@Fulano]**
 👀 Visto $discordTimestamp[$getMemberVar[lastMessageTimestamp;$get[userID]];RelativeTime]
 ];
-$if[$getMemberVar[memberJoinedHere?;$get[userID]]==true;😄 **$userTag[$get[userID]] esteve aqui!;🧐 Não, **$userTag[$get[userID]] não esteve aqui.]
+$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]==true;😄 **$userTag[$get[userID]] esteve aqui!;🧐 Não, **$userTag[$get[userID]] não esteve aqui.]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
 $addSeparator[Large;true]
