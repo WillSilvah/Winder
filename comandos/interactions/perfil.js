@@ -8,7 +8,8 @@ $let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] ;]
 
 $addContainer[
 $addSection[
-$addTextDisplay[### @$userTag[$get[userID]]
+$addTextDisplay[### $userDisplayName[$get[userID]]
+-# **$userTag[$get[userID]]
 $get[badges]
 **$if[$getMemberVar[birthday;$get[userID]]!=;🎂 $getMemberVar[birthday;$get[userID]] ($math[$year-$getMemberVar[birthdayYear;$get[userID]]] anos);Use "/aniversário adicionar" para seu aniversário aparecer aqui!]**
 ]
@@ -18,6 +19,7 @@ $if[$memberExists[$guildID;$get[userID]]==true;$addSeparator[Large;true]
 $addTextDisplay[
 👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
 💌 Veio pelo: **$if[$inviterID[$guildID;$get[userID]]!=;@$username[$inviterID[$guildID;$get[userID]]];@Fulano]**
+👀 Visto $discordTimestamp[$getMemberVar[lastMessageTimestamp;$get[userID]];RelativeTime]
 ]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
