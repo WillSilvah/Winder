@@ -16,16 +16,7 @@ $addTextDisplay[### @$userDisplayName[$get[user1]] É $getGlobalVar[ship_$get[us
 $addMediaGallery[
 $addMediaItem[$userAvatar[$get[user1]]]
 $addMediaItem[$userAvatar[$get[user2]]]
-]
-
-
-$addTextDisplay[## ]
-$addSection[
-$addTextDisplay[### PELO ]
-$addThumbnail[$userAvatar[$get[user2]]]
-]
-
-;Red]]
+];Red]]
 
 $let[varShip;ship_$get[user1]_$get[user2]]
 $let[varShip2;ship_$get[user2]_$get[user1]]
