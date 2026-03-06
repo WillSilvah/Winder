@@ -8,7 +8,6 @@ $let[love1;$randomNumber[1;50]]
 $let[love2;$randomNumber[1;50]]
 $let[shipCalc;$math[$get[love1]+$get[love2]]]
 $setGlobalVar[ship_$get[user1]_$get[user2];$get[shipCalc]]
-$setGlobalVar[ship_$get[user2]_$get[user1];$get[shipCalc]]
 ]
 
 $interactionReply[$addContainer[
@@ -19,12 +18,9 @@ $addMediaItem[$userAvatar[$get[user2]]]
 ];Red]]
 
 $let[varShip;ship_$get[user1]_$get[user2]]
-$let[varShip2;ship_$get[user2]_$get[user1]]
 
 
-$advancedTimeout[$deleteRecords[{0}];24h;DELETE-ship_$get[user1]_$get[user2];$get[varShip]
-$deleteRecords[{0}];24h;DELETE-ship_$get[user2]_$get[user3];$get[varShip2]]
-  `,
+$advancedTimeout[$deleteRecords[{0}];24h;DELETE-ship_$get[user1]_$get[user2];$get[varShip]`,
 data: {
   "type": 1,
   "name": "ship",
