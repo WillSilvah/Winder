@@ -31,6 +31,6 @@ $deleteRecords[votesMonth;$authorID]
 $deleteRecords[votesTotal;$authorID]
 $deleteRecords[invitesMonth;$authorID]
 $deleteRecords[invitesTotal;$authorID]
-
+$deleteRecords[lastMessageTime;$authorID]
 `
 }
