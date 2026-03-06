@@ -19,6 +19,10 @@ $addThumbnail[$userAvatar[$get[user2]]]
 ]
 $addTextDisplay[## = ❤️ $get[shipCalc]%]
 ;Red]]
+
+$let[varShip;ship_$get[user1]_$get[user2]]
+
+$advancedTimeout[$deleteRecords[{0}];24h;DELETE-ship_$get[user1]_$get[user2];$get[varShip]]
   `,
 data: {
   "type": 1,
