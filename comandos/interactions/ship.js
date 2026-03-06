@@ -1,13 +1,15 @@
 module.exports = {
   code: `
+  $let[user1;$option[user1]]
+$let[user2;$findUser[$option[user2];true]]
+
+$if[$getGlobalVar[ship_$get[user1]_$get[user2]]==;
 $let[love1;$randomNumber[1;50]]
 $let[love2;$randomNumber[1;50]]
 $let[shipCalc;$math[$get[love1]+$get[love2]]]
-$let[user1;$option[user1]]
-$let[user2;$findUser[$option[user2];true]]
-
 $setGlobalVar[ship_$get[user1]_$get[user2];$get[shipCalc]]
 $setGlobalVar[ship_$get[user2]_$get[user1];$get[shipCalc]]
+]
 
 $interactionReply[$addContainer[
 $addSection[
