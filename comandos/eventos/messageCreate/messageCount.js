@@ -13,6 +13,7 @@ $setGuildVar[guildTodayMessages;$sum[$getGuildVar[guildTodayMessages;$guildID;0]
 $setGuildVar[lastUserSendMessage;$authorID]
 $setMemberVar[lastMessage;$message;$authorID]
 $setMemberVar[lastMessageTime;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit]]
+$setMemberVar[lastMessageTimestamp;$hour[TwoDigit]:$getTimestamp]
 $setMemberVar[lastMessageChannel;$channelID]
 
 $setMemberVar[messageMonth;$sum[$getMemberVar[messageMonth;$authorID;$guildID;0];1]]
