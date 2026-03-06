@@ -5,17 +5,22 @@ module.exports = [{
       name: 'tipo',
       description: "Tipo do minigame a ser executado",
       required: true
+    },
+    {
+      name: 'guildID',
+      description: "ID do servidor",
+      required: true
     }
     ],
     code: `
-$setGuildVar[minigameXPmin;5;$guildID]
-$setGuildVar[minigameXPmax;15;$guildID]
+$setGuildVar[minigameXPmin;5;$env[guildID]]
+$setGuildVar[minigameXPmax;15;$env[guildID]]
 $if[$env[tipo]==fraseRepeat;
 $let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]
 
 $jsonLoad[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
 
-$setGuildVar[minigameWord;$env[frase;texto];$guildID]
+$setGuildVar[minigameWord;$env[frase;texto];$env[guildID]]
 
 $author[QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
 $description[
@@ -25,8 +30,8 @@ $description[
 $footer[$env[frase;autor]]
 $color[Green]
 
-$setGuildVar[minigameType;$env[tipo];$guildID]
-$setGuildVar[minigameStatus;true;$guildID]
+$setGuildVar[minigameType;$env[tipo];$env[guildID]]
+$setGuildVar[minigameStatus;true;$env[guildID]]
 
 ]
 
@@ -52,10 +57,10 @@ $footer[Responda apenas com a letra da resposta! | ID: $get[id]]
 $image[$if[$env[ask;image]==;https://cdn.discordapp.com/attachments/785632865709981756/1465469785813942272/IMG_20260126_191316.png?ex=69793898&is=6977e718&hm=559e450ba67a6a132a64f475bb1781cce2aa4ebe4f046a39c5fc3dd303382591&;$env[ask;image]]]
 $color[Green]
 
-$setGuildVar[minigameWord;$env[ask;correct];$guildID]
+$setGuildVar[minigameWord;$env[ask;correct];$env[guildID]]
 
-$setGuildVar[minigameType;$env[tipo];$guildID]
-$setGuildVar[minigameStatus;true;$guildID]
+$setGuildVar[minigameType;$env[tipo];$env[guildID]]
+$setGuildVar[minigameStatus;true;$env[guildID]]
 ]
 
 `}]
