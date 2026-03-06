@@ -14,7 +14,7 @@ $addTextDisplay[### A ATRAÇÃO DE @$userTag[$get[user1]]...]
 $addThumbnail[$userAvatar[$get[user1]]]
 ]
 $addSection[
-$addTextDisplay[### ...E ATRAÇÃO DE @$userTag[$get[user2]]...]
+$addTextDisplay[### ...E A DE @$userTag[$get[user2]]...]
 $addThumbnail[$userAvatar[$get[user2]]]
 ]
 $addTextDisplay[## = ❤️ $get[shipCalc]%]
