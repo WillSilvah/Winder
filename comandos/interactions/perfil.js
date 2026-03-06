@@ -9,7 +9,7 @@ $let[badges;$if[$userGuildTag[$get[userID]]==PATS;$emoji[$emojiID[pats_logo]] ;]
 $addContainer[
 $addSection[
 $addTextDisplay[### $userDisplayName[$get[userID]]
--# **$userTag[$get[userID]]
+-# **@$userTag[$get[userID]]**
 $get[badges]
 **$if[$getMemberVar[birthday;$get[userID]]!=;🎂 $getMemberVar[birthday;$get[userID]] ($math[$year-$getMemberVar[birthdayYear;$get[userID]]] anos);Use "/aniversário adicionar" para seu aniversário aparecer aqui!]**
 ]
