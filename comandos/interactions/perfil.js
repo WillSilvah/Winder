@@ -18,7 +18,7 @@ $if[$memberExists[$guildID;$get[userID]]==true;$addSeparator[Large;true]
 $addTextDisplay[
 👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
 💌 Veio pelo: **$if[$inviterID[$guildID;$get[userID]]!=;@$username[$inviterID[$guildID;$get[userID]]];@Fulano]**
-👀 Visto $discordTimestamp[$getMemberVar[lastTimeUpdate;$get[userID]];RelativeTime]
+👀 Visto $discordTimestamp[$getMemberVar[lastMessageTimestamp;$get[userID]];RelativeTime]
 ]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]

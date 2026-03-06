@@ -1,7 +1,6 @@
 module.exports = [{
     type: "guildMemberUpdate",
     code: `
-    $setMemberVar[lastTimeUpdate;$getTimestamp]
 $onlyIf[$getMemberVar[memberIsolated;$authorID;$guildID;false]==false;]
 $sendMessage[$getGlobalVar[consoleChat];
 $if[$hasRoles[$guildID;$authorID;$getGuildVar[allStaffRole]]==true;
