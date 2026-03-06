@@ -13,7 +13,7 @@ module.exports = {
           $!jsonDelete[timeouts;$env[key]]
           $setGlobalVar[timeouts;$env[timeouts]]
         ]
-        $eval[$replace[$get[code];{N};\n;-1];false]
+        $try[$eval[$replace[$get[code];{N};\n;-1];false]]
       ;$max[500;$math[$get[endTime] - $getTimestamp]];$env[key]]
     ]
   `
