@@ -6,7 +6,7 @@ $let[shipCalc;$math[$get[love1]+$get[love2]]]
 $let[user1;$option[user1]]
 $let[user2;$findUser[$option[user2];true]
 
-$setGlobalVar[ship_$get[user1]_$get[user2];$get[shipCalc]]]
+$setGlobalVar[ship_$get[user1]_$get[user2];$get[shipCalc]]
 
 $interactionReply[$addContainer[
 $addSection[
@@ -14,7 +14,7 @@ $addTextDisplay[### A ATRAÇÃO DE @$userTag[$get[user1]]...]
 $addThumbnail[$userAvatar[$get[user1]]]
 ]
 $addSection[
-$addTextDisplay[### A ATRAÇÃO DE @$userTag[$get[user2]]...]
+$addTextDisplay[### ...E ATRAÇÃO DE @$userTag[$get[user2]]...]
 $addThumbnail[$userAvatar[$get[user2]]]
 ]
 $addTextDisplay[## = ❤️ $get[shipCalc]%]
