@@ -13,12 +13,17 @@ $setGlobalVar[ship_$get[user2]_$get[user1];$get[shipCalc]]
 
 $interactionReply[$addContainer[
 $addSection[
-$addTextDisplay[### @$userDisplayName[$get[user1]] É]
-$addThumbnail[$userAvatar[$get[user1]]]
+$addTextDisplay[### @$userDisplayName[$get[user1]] É $getGlobalVar[ship_$get[user1]_$get[user2]]% PELO @$userDisplayName[$get[user2]]]
+$addMediaGallery[
+$addMediaItem[$userAvatar[$get[user1]]]
+$addMediaItem[$userAvatar[$get[user2]]]
 ]
-$addTextDisplay[## $getGlobalVar[ship_$get[user1]_$get[user2]]%]
+]
+
+
+$addTextDisplay[## ]
 $addSection[
-$addTextDisplay[### PELO @$userDisplayName[$get[user2]]]
+$addTextDisplay[### PELO ]
 $addThumbnail[$userAvatar[$get[user2]]]
 ]
 
