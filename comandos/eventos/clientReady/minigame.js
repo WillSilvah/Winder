@@ -8,9 +8,9 @@ $log[Tentativa de executar um minigame
 MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
 
 ]
-$onlyIf[$getGuildVar[msgPerMinute;$get[guildID];0]>=1;]
+$onlyIf[$getGuildVar[msgPerMinute;$get[guildID];0]>0;]
 
-$minigame[fraseRepeat]
+$sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat]]
 
 $wait[1m]
 $onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
