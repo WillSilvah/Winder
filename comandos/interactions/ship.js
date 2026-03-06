@@ -11,7 +11,7 @@ $setGlobalVar[ship_$get[user1]_$get[user2];$get[shipCalc]]
 ]
 
 $interactionReply[$addContainer[
-$addTextDisplay[### $userDisplayName[$get[user1]] é $getGlobalVar[ship_$get[user1]_$get[user2]]% atraído pelo $userDisplayName[$get[user2]]]
+$addTextDisplay[### ❤️ $userDisplayName[$get[user1]] é $getGlobalVar[ship_$get[user1]_$get[user2]]% atraído pelo $userDisplayName[$get[user2]] ❤️]
 $addMediaGallery[
 $addMediaItem[$userAvatar[$get[user1]]]
 $addMediaItem[$userAvatar[$get[user2]]]
