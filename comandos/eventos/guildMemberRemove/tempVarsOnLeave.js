@@ -24,6 +24,8 @@ $setMemberVar[tempInvitesTotal;$getMemberVar[invitesTotal;$authorID;$guildID;0];
 $deleteRecords[messageMonth;$authorID]
 $deleteRecords[messageTotal;$authorID]
 $deleteRecords[messageWeekly;$authorID]
+
+
 $deleteRecords[messageToday;$authorID]
 $deleteRecords[pdaMonth;$authorID]
 $deleteRecords[pdaTotal;$authorID]
@@ -31,5 +33,7 @@ $deleteRecords[votesMonth;$authorID]
 $deleteRecords[votesTotal;$authorID]
 $deleteRecords[invitesMonth;$authorID]
 $deleteRecords[invitesTotal;$authorID]
+$deleteRecords[lastMessageTime;$authorID]
+
 `
 }
