@@ -20,7 +20,7 @@ $if[$getGuildVar[guildMonthMessages;$guildID]==$getGuildVar[guildMonthMessagesMe
 $setGuildVar[guildMonthMessagesMeta;$math[$getGuildVar[guildMonthMessagesMeta;$guildID]+10000];$guildID]
 ]
 
-$if[$getUserVar[messageTotal;$authorID]==6;
+$if[$getMemberVar[messageTotal;$authorID]==6;
 $reply[$channelID;$messageID]
 $startTyping[$channelID]
 $wait[2s]
