@@ -41,8 +41,9 @@ $addTextDisplay[### ANTERIORMENTE
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
 ];
 $addTextDisplay[
-## $toUpperCase[$userDisplayName[$get[userID]]] ESTÁ BANIDO!]
+## $toUpperCase[$userDisplayName[$get[userID]]] ESTÁ BANIDO!
 **$guildBanReason[$guildID;$get[userID]]**
+]
 ]
 ;$if[$memberExists[$guildID;$get[userID]]==true;$memberDisplayColor[$guildID;$get[userID]];Red]]
 
