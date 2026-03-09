@@ -1,43 +1,10 @@
 const { ForgeClient } = require("@tryforge/forgescript");
 const { ForgeDB } = require("@tryforge/forge.db");
 const { ForgeCron } = require("forgecron");
-const { YoutubeiExtractor } = require("discord-player-youtubei");
-const { DefaultExtractors, ForgeMusic } = require("@tryforge/forge.music");
 
 require('dotenv').config();
 
 const TOKEN = process.env.TOKEN;
-
-const music = new ForgeMusic({
-    events: [
-            "audioFiltersUpdate",
-            "audioTrackAdd",
-            "audioTrackRemove",
-            "audioTracksAdd",
-            "biquadFiltersUpdate",
-            "channelPopulate",
-            "connection",
-            "connectionDestroyed",
-            "debug",
-            "disconnect",
-            "dspUpdate",
-            "emptyChannel",
-            "emptyQueue",
-            "equalizerUpdate",
-            "error",
-            "playerError",
-            "playerFinish",
-            "playerPause",
-            "playerResume",
-            "playerSkip",
-            "playerStart",
-            "playerTrigger",
-            "queueCreate",
-            "queueDelete",
-            "volumeChange"
-        ],
-      includeExtractors: DefaultExtractors
-});
 
 const client = new ForgeClient({
     intents: [
@@ -60,8 +27,7 @@ const client = new ForgeClient({
         new ForgeDB({
             type: "sqlite" 
 	 }),
-		new ForgeCron(),
-        music
+		new ForgeCron()
 	],
     events: [
         "autoModerationActionExecution",
@@ -153,12 +119,9 @@ const client = new ForgeClient({
     }
 });
 
-music.player.extractors.register(YoutubeiExtractor, {});
-
 client.functions.load('./comandos/custom/');
 client.commands.load("./comandos/basic/");
 client.commands.load("./comandos/eventos/");
-music.commands.load("./comandos/music");
 client.applicationCommands.load("./comandos/interactions/");
 
 client.login(process.env.TOKEN)
