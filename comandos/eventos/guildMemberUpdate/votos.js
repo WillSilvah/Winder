@@ -33,20 +33,18 @@ $color[Red]
 ]
 ]
 
-$if[$oldMember[removedRoles]==$getGuildVar[memberVotedRole;$guildID];
-$if[$getMemberVar[reminderStatus;$authorID;$guildID;true]==true;
-$sendDM[$authorID;
+$advancedTimeout[$esc[
+$sendDM[{0};
 $title[Ei! Tá na hora de votar! $emoji[$emojiID[pats_vicksyWave]]]
 $description[
 A patinhas precisa crescer e ser cada vez mais conhecida no mundo, vamos ajudar neste objetivo?
 
-https://discords.com/servers/$guildID/upvote
+https://discords.com/servers/{1}/upvote
 ]
-$thumbnail[$guildIcon[$guildID]]
+$thumbnail[$guildIcon[{1}]]
 $color[Red]
 ]
-]
-]
+];30s;VotesReminder-$authorID;$authorID;$guildID]
 
 $if[$getMemberVar[votesTotal;$authorID;$guildID;0]==60;
 $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberSupporterRole;$guildID]]
