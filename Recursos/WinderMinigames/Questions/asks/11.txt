@@ -1,0 +1,13 @@
+{
+"pergunta": "Qual fenômeno físico explica por que um canudo parece 'quebrado' quando submerso em um copo com água?",
+"correct": "b",
+"difficulty": "Médio",
+"image": "",
+"alts": {
+         "a": "Reflexão",
+         "b": "Refração",
+         "c": "Difração",
+         "d": "Polarização",
+         "e": "Dispersão"
+        }
+}

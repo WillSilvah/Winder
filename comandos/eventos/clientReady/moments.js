@@ -1,0 +1,42 @@
+module.exports = {
+    type: 'clientReady',
+    code: `
+$let[guildID;1462224054676099094]
+$cron[
+
+$setGuildVar[guildActivityMedia;$media[messageMonth;$guildMemberCount[1462224054676099094;;false]];$get[guildID]]
+
+$wait[5s]
+
+$deleteRecords[metaXP]
+$deleteRecords[messageMonth]
+$deleteRecords[votesMonth]
+$deleteRecords[pdaMonth]
+$deleteRecords[invitesMonth]
+
+$deleteRecords[membersJoinedMonth]
+$deleteRecords[guildMonthMessages]
+
+$deleteRecords[tempMessageMonth]
+$deleteRecords[tempMessageWeekly]
+$deleteRecords[tempMessageToday]
+$deleteRecords[tempPdaMonth]
+$deleteRecords[tempVotesMonth]
+$deleteRecords[tempInvitesMonth]
+
+;0 0 1 * *;America/Recife]
+
+$cron[
+$deleteRecords[guildWeeklyMessage]
+$deleteRecords[messageWeekly]
+$deleteRecords[tempMessageWeekly]
+;0 0 * * 0;America/Recife]
+
+$cron[
+$deleteRecords[guildTodayMessage]
+$deleteRecords[messageToday]
+$deleteRecords[tempMessageToday]
+;0 0 * * *;America/Recife]
+ 
+ `
+}

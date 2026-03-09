@@ -1,0 +1,13 @@
+{
+"pergunta": "Qual é o planeta mais próximo do Sol no nosso sistema solar?",
+"correct": "b",
+"difficulty": "Fácil",
+"image": "",
+"alts": {
+         "a": "Vênus",
+         "b": "Mercúrio",
+         "c": "Marte",
+         "d": "Júpiter",
+         "e": "Terra"
+        }
+}
