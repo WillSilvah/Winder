@@ -1,0 +1,4 @@
+{
+	"texto": "I want your ugly, I want your disease, I want your everything as long as it's free, I want your love, love, love, love, I want your love.",
+	"autor": "Bad Romance - Lady Gaga"
+}

@@ -1,0 +1,4 @@
+{
+	"texto": "Se o mundo escolher se tornar meu inimigo, eu lutarei como sempre fiz.",
+	"autor": "Shadow - Sonic the Hedgehog"
+}

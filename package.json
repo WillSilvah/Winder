@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@tryforge/forge.db": "^2.1.1",
+    "@tryforge/forgescript": "github:tryforge/ForgeScript",
+    "forgecron": "github:Tape490/ForgeCron",
+    "discord.js": "^14.25.1",
+    "dotenv": "17.2.3",
+    "pm2": "^6.0.14",
+    "sqlite3": "^5.1.7"
+  },
+  "name": "winder-bot",
+  "version": "1.0.0",
+  "description": "Winder Canary",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js --name winder-bot",
+    "stop": "pm2 stop winder-bot",
+    "logs": "pm2 logs winder-bot",
+    "restart": "pm2 restart winder-bot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillSilvah/Winder.git"
+  },
+  "author": "willsilvah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillSilvah/Winder/issues"
+  },
+  "homepage": "https://github.com/WillSilvah/Winder#readme"
+}

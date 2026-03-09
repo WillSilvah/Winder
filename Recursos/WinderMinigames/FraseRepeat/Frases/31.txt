@@ -1,0 +1,4 @@
+{
+	"texto": "O tempo não cura nada, ele apenas nos ensina a conviver com a ausência.",
+	"autor": "Adastra"
+}
