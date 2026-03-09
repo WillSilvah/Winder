@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "aoi.js": "github:aoijs/aoi.js#v6",
+    "dotenv": "17.2.3",
+    "pm2": "^6.0.14",
+    "discord.js": "^14.25.1"
+  },
+  "name": "winder-controller",
+  "version": "1.0.0",
+  "description": "Winder Controller",
+  "main": "index.js",
+  "scripts": {
+  "start": "pm2 start index.js --name winder-controller",
+  "stop": "pm2 stop winder-controller",
+  "logs": "pm2 logs winder-controller",
+  "restart": "pm2 restart winder-controller"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillSilvah/Winder.git"
+  },
+  "author": "willsilvah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillSilvah/Winder/issues"
+  },
+  "homepage": "https://github.com/WillSilvah/Winder#readme"
+}
