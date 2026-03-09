@@ -24,6 +24,7 @@ $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
 $addSeparator[Large;true]
+$if[$isBanned[$guildID;$get[userID]]==false;
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
@@ -38,6 +39,11 @@ $addTextDisplay[### ANTERIORMENTE
 ✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
+];
+$addTextDisplay[
+## $toUpperCase[$userDisplayName[$get[userID]]] ESTÁ BANIDO!
+**$guildBanReason[$guildID;$get[userID]]**
+]
 ]
 ;$if[$memberExists[$guildID;$get[userID]]==true;$memberDisplayColor[$guildID;$get[userID]];Red]]
 
