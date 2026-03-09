@@ -44,7 +44,7 @@ https://discords.com/servers/{1}/upvote
 $thumbnail[$guildIcon[{1}]]
 $color[Red]
 ]
-];30s;VotesReminder-$authorID;$authorID;$guildID]
+];6h;VotesReminder-$authorID;$authorID;$guildID]
 
 $if[$getMemberVar[votesTotal;$authorID;$guildID;0]==60;
 $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberSupporterRole;$guildID]]
