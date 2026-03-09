@@ -23,7 +23,7 @@ $onlyIf[$get[userID]!=$authorID;<@$authorID> Você está se automencionando ou e
 $if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-$!timeout[$guildID;$get[userID];$get[time];$get[reason]]
+$!timeout[$guildID;$get[userID];$get[time];$get[type] por: $userTag[$get[staffID]] - $get[reason]]
 
 $sendMessage[$channelID;<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
 > $bold[$get[reason]]]
