@@ -9,7 +9,7 @@ $addSection[
 $addTextDisplay[### $userDisplayName[$get[userID]]
 -# **@$userTag[$get[userID]]**
 $badges[$get[userID]]
-**$if[$getMemberVar[birthday;$get[userID]]!=;🎂 $getMemberVar[birthday;$get[userID]] ($math[$year-$getMemberVar[birthdayYear;$get[userID]]] anos);Use "/aniversário adicionar" para seu aniversário aparecer aqui!]**
+$if[$isBanned[$guildID;$get[userID]]==false;**$if[$getMemberVar[birthday;$get[userID]]!=;🎂 $getMemberVar[birthday;$get[userID]] ($math[$year-$getMemberVar[birthdayYear;$get[userID]]] anos);Use "/aniversário adicionar" para seu aniversário aparecer aqui!]**]
 ]
 $addThumbnail[$userAvatar[$get[userID]]]
 ]
@@ -20,7 +20,9 @@ $addTextDisplay[
 👀 Visto $discordTimestamp[$getMemberVar[lastMessageTimestamp;$get[userID]];RelativeTime]
 ]
 ;
+$if[$isBanned[$guildID;$get[userID]]==false;
 $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]==true;😄 **$userTag[$get[userID]]** esteve aqui!;🧐 Não, **$userTag[$get[userID]]** não esteve aqui.]]
+]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
 $addSeparator[Large;true]
