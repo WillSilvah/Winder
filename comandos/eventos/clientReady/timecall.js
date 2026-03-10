@@ -15,14 +15,14 @@ $setMemberVar[timecallMonth;$math[$getMemberVar[timecallMonth;$get[id];$get[guil
 
 $setMemberVar[timecallTotal;$math[$getMemberVar[timecallTotal;$get[id];$get[guildId];0]+$get[time]];$get[id];$get[guildId]]
 
-$log[$username[$get[id]]: $get[time]  minuto no $channelName[$voiceID[$get[guildId];$get[id]]]]
+$log[$username[$get[id]]: $getMemberVar[timecallMonth] milisegundos no $channelName[$voiceID[$get[guildId];$get[id]]]]
 
 ;i;true]
 
 ;voiceId]
 
-$setInterval[$callFn[monitor;1462603953077358791];1m]
-$setInterval[$callFn[monitor;1462615093153108001];1m]
-$setInterval[$callFn[monitor;1462224055884189785];1m]
+$setInterval[$callFn[monitor;1462603953077358791];1]
+$setInterval[$callFn[monitor;1462615093153108001];1]
+$setInterval[$callFn[monitor;1462224055884189785];1]
 `
 }
