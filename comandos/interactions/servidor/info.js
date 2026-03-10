@@ -3,12 +3,11 @@ module.exports = {
 $addContainer[
 $addSection[
 $addTextDisplay[## $toUpperCase[$guildName]
--# **🐾 $separateNumber[$guildMemberCount[1462224054676099094;;false];.] | 🟢 $separateNumber[$guildMemberCount[1462224054676099094;online;false];.] | 🚀 $guildBoostCount[$guildID]**
+**🐾 $separateNumber[$guildMemberCount[1462224054676099094;;false];.] | 🟢 $separateNumber[$guildMemberCount[1462224054676099094;online;false];.] | 🚀 $guildBoostCount[$guildID]**
 ]
-$addSeparator[Large;true]
-
 $addThumbnail[$guildIcon]
 ]
+$addSeparator[Large;true]
 ;$getGuildVar[color;$guildID;Red]]
 
   `,
