@@ -19,7 +19,7 @@ $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;ð
 },{
     type: "interactionCreate",
     name: "colors",
-    code: `
+    code: `$ephemeral
 $jsonLoad[cores;{
   "rosa": "1462932846795690138",
   "verde": "1462931874656682206",
