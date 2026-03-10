@@ -1,6 +1,7 @@
 module.exports = [{
     type: 'clientReady',
     code: `
+$setGuildVar[minigameNextTime;$getTimestamp;$get[guildID]]
 $setInterval[
 $let[guildID;1462224054676099094]
 $sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
@@ -8,7 +9,7 @@ $sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
 MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
 ]
 
-$setGuildVar[minigame ]
+$setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
 $onlyIf[$getGuildVar[msgPerMinute;$get[guildID];0]>5;]
 
 $sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat];$get[guildID]]
