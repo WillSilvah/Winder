@@ -1,6 +1,7 @@
 module.exports = [{
     type: 'clientReady',
     code: `$let[guildID;1462224054676099094]
+    $onlyIf[7262==252;]
     
 $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
 $setInterval[
@@ -10,7 +11,10 @@ MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
 ]
 
 $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
+
 $onlyIf[$getGuildVar[msgPerMinute;$get[guildID];0]>5;]
+
+$setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
 
 $sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat];$get[guildID]]
 
@@ -50,6 +54,8 @@ $setMemberVar[minigameTotalWins;$sum[$getMemberVar[minigameTotalWins;$authorID;$
 $sendMessage[$channelID;<@$authorID> | Parabéns, você ganhou ✨**+$get[xpDrop] Pontos de atividade!**!
 > **Ganhou 🏆$getMemberVar[minigameMonthWins;$authorID] vezes neste mês!**
 ]
+
+$setGuildVar[minigameGuildWins;$math[$getGuildVar[minigameGuildWins;$guildID;0]+1];$guildID]
 
 $!memberRemoveRoles[$guildID;$getGuildVar[minigameLastUser;$guildID];$getGuildVar[lastWinMemberRole]]
 $wait[1s]
