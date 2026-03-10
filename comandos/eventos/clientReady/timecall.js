@@ -1,6 +1,6 @@
 module.exports = {
 type: "clientReady",
-code: `
+code: `$stop
 $let[guildId;1462224054676099094]
 $fn[monitor;
 $arrayLoad[members;,;$channelVoiceMemberIDs[$env[voiceId];,]]
