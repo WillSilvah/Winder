@@ -32,7 +32,7 @@ $jsonLoad[cores;{
 }
 ]
 
-$env[cores;]
+$env[cores;$selectMenuValues[0]]
     
 `
 }]
