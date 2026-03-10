@@ -49,7 +49,7 @@ $setGuildVar[guildColor;Red;1462224054676099094]
 $cron[
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 $!setGuildIcon[1462224054676099094;https://i.ibb.co/N6q4DP0P/pats-sleep-logo.png;Hora de dormir]
-$setGuildVar[guildColor;Black;1462224054676099094]
+$setGuildVar[guildColor;White;1462224054676099094]
 ;0 22 * * *;America/Recife]
 `
 }]
