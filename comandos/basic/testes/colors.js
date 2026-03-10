@@ -20,7 +20,19 @@ $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;ð
     type: "interactionCreate",
     name: "colors",
     code: `
+$jsonLoad[cores;{
+  "Rosa": "1462932846795690138",
+  "Verde": "1462931874656682206",
+  "Ciano": "1463183062828454001",
+  "Vermelho": "1462931775641878578",
+  "Amarelo": "1462931954771955742",
+  "Roxo": "1463277399436296348",
+  "Laranja": "1462932934485868726",
+  "Azul": "1462932753388408904"
+}
+]
 
+$env[cores;]
     
 `
 }]
