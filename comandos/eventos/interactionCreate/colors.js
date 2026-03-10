@@ -1,7 +1,7 @@
 module.exports = [{
     type: "interactionCreate",
     code: `
-$sendMessage[;
+$sendMessage[781665851040333844;
 $commandName
 
 $message
