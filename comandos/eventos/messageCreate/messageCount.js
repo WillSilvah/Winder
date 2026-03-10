@@ -5,8 +5,7 @@ $onlyIf[$isBot==false;]
 
 $setMemberVar[messages;$getMemberVar[messages]
 
-$message
-]
+$message]
 
 $onlyIf[$includes[$channelID;1478505120525324541]==false;]
 
