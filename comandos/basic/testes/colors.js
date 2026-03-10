@@ -16,4 +16,15 @@ $addOption[Simplesmente verde;A cor da esperança;verde;🟢;false]
 $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;🟣;false]
     
 `
+},{
+    type: "interactionCreate",
+    name: "colors",
+    code: `
+$sendMessage[781665851040333844;
+$commandName
+
+$message
+]
+    
+`
 }]
