@@ -6,8 +6,9 @@ $let[guildID;1462224054676099094]
 $sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
 -----------------------------------
 MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
-
 ]
+
+$setGuildVar[minigameProx]
 $onlyIf[$getGuildVar[msgPerMinute;$get[guildID];0]>5;]
 
 $sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat];$get[guildID]]
