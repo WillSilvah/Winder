@@ -19,7 +19,7 @@ $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;�
 },{
     type: "interactionCreate",
     name: "colors",
-    code: `$ephemeral
+    code: `$ephemeral $disableAllMentions
 $jsonLoad[cores;{
   "rosa": "1462932846795690138",
   "verde": "1462931874656682206",
@@ -32,9 +32,11 @@ $jsonLoad[cores;{
 }
 ]
 
-$env[cores;$selectMenuValues]
+$!memberRemoveRoles[$guildID;$authorID;$jsonValues[cores;,]]
 
-$jsonValues[cores;,]
+$!memberAddRoles[$guildID;$authorID;$env[cores;$selectMenuValues]]
+
+$interactionReply[Pronto! Você está usando a cor <@&$env[cores;$selectMenuValues]>!]
     
 `
 }]
