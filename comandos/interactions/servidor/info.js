@@ -1,10 +1,11 @@
 module.exports = {
   code: `
 $addContainer[
+$addSection[
+$addTextDisplay[## $guildName]
 
-
-
-
+$addThumbnail[$guildIcon]
+]
 ;$getGuildVar[color;$guildID;Red]]
 
   `,
