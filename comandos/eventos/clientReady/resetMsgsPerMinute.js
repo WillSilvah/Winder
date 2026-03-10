@@ -1,7 +1,9 @@
 module.exports = {
  type: 'clientReady',
  code: `
-$setInterval[$deleteRecords[msgPerMinute;;guild];1m;resetMsgsPerMinute]
+$setInterval[
+$wait[5s]
+$deleteRecords[msgPerMinute;;guild];1m;resetMsgsPerMinute]
 
 `
 }
