@@ -1,6 +1,11 @@
 module.exports = {
   code: `
+$addContainer[
 
+
+
+
+;$getGuildVar[color;$guildID;Red]]
 
   `,
 data: {
