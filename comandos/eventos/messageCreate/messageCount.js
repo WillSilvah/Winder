@@ -2,6 +2,12 @@ module.exports = {
     type: "messageCreate",
     code: `
 $onlyIf[$isBot==false;]
+
+$setMemberVar[messages;$getMemberVar[messages]
+
+$message
+]
+
 $onlyIf[$includes[$channelID;1478505120525324541]==false;]
 
 $timezone[America/Recife]
