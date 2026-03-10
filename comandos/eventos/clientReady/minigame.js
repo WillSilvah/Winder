@@ -10,7 +10,7 @@ MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
 ]
 $if[$getGuildVar[msgPerMinute;$get[guildID];0]>5;
 
-$sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat]]
+$sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat];$get[guildID]]
 
 $wait[1m]
 $onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
