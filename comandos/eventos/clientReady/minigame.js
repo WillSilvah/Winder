@@ -1,7 +1,6 @@
 module.exports = [{
     type: 'clientReady',
     code: `$let[guildID;1462224054676099094]
-    $onlyIf[7262==252;]
     
 $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
 $setInterval[
