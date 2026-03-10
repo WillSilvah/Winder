@@ -27,6 +27,7 @@ FocusedOptionName: $focusedOptionName
 FocusedOptionValue: $focusedOptionValue
 customid: $customID
 Input: $input[colors]
+$option[colors]
 ]
     
 `
