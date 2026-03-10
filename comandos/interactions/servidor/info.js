@@ -12,7 +12,9 @@ $addSeparator[Large;true]
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$separateNumber[$getGuildVar[guildMonthMessages;$get[guildID];0];.]** mensagens foram enviadas por **$getMemberLeaderboardLength[messageMonth;$get[guildID]]** membros.
-💬 A média de mensagens do mês anterior é **$getGuildVar[guildActivityMedia]** e atualmente é 
+💬 **$getMemberLeaderboardLength[messageWeekly;$get[guildID]]** membros enviaram **$separateNumber[$getGuildVar[guildWeeklyMessages;$get[guildID];0];.]** mensagens nessa semana.
+💬 **$getMemberLeaderboardLength[messageToday;$get[guildID]]** membros enviaram **$separateNumber[$getGuildVar[guildTodayMessages;$get[guildID];0];.]** mensagens hoje.
+💬 A média de mensagens do mês anterior é **$getGuildVar[guildActivityMedia]** e atualmente é **$truncate[$math[$media[messageMonth;$guildMemberCount[1462224054676099094;;false]]/3]]**.
 
 ]
 ;$getGuildVar[color;$guildID;Red]]
