@@ -9,7 +9,7 @@ $sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
 MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
 
 ]
-$if[$getGuildVar[msgPerMinute;$get[guildID];0]>5;
+$onlyIf[$getGuildVar[msgPerMinute;$get[guildID];0]>5;]
 
 $sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat];$get[guildID]]
 
@@ -23,7 +23,7 @@ $setGuildVar[minigameXPmin;0;$get[guildID]]
 $setGuildVar[minigameXPmax;0;$get[guildID]]
 $setChannelSlowmode[$getGuildVar[batePapo;$get[guildID]];0]
 $sendMessage[$getGuildVar[batePapo;$get[guildID]];### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
-]
+
 ;15m;WinderMinigame]
 `
 },{
