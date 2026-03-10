@@ -1,7 +1,6 @@
 module.exports = {
     type: "messageCreate",
     code: `
-$wait[2s]
 $jsonLoad[rawData;$messageRawData[$channelID;$messageID]]
 
 $onlyIf[$env[rawData;embeds;0;url]!=;]
