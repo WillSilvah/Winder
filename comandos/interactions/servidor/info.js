@@ -19,7 +19,7 @@ $addTextDisplay[
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
-🎮 ]
+🎮 $discordTimestamp[$getGuildVar[minigameNextTime];RelativeTime]]
 ;$getGuildVar[color;$guildID;Red]]
 
   `,
