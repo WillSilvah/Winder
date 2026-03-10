@@ -19,7 +19,7 @@ $sendMessage[$getGlobalVar[consoleChat];## VARIAVEIS TODAY RESETADA]
 
 
 $cron[
-$setGuildVar[guildActivityMedia;$truncate[$math[$media[messageMonth;$guildMemberCount[1462224054676099094;;false]]/3]];$get[guildID]]
+$setGuildVar[guildActivityMedia;$truncate[$math[$media[messageMonth;$guildMemberCount[$get[guildID];;false]]]];$get[guildID]]
 
 $jsonLoad[sessionold;$readFile[Recursos/session.json]]
 
