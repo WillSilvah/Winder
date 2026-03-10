@@ -33,7 +33,7 @@ $jsonLoad[cores;{
 }
 ]
 
-$arrayForEach
+$arrayForEach[cores]
 
 $!memberAddRoles[$guildID;$authorID;$env[cores;$selectMenuValues]]
 
