@@ -5,7 +5,7 @@ $addContainer[
 $addSection[
 $addTextDisplay[## $toUpperCase[$guildName]
 **👤 $separateNumber[$guildMemberCount[1462224054676099094;;false];.] | 🟢 $separateNumber[$guildMemberCount[1462224054676099094;online;false];.] | 🚀 $guildBoostCount[$guildID]**
-⭐️ $discordTimestamp[]
+⭐️ $discordTimestamp[$guildCreatedAt[$guildID];RelativeTime]
 ]
 $addThumbnail[$guildIcon]
 ]
