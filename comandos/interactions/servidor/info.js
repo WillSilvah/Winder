@@ -12,7 +12,7 @@ $addThumbnail[$guildIcon]
 $addSeparator[Large;true]
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
-💬 **$getMemberLeaderboardLength[messageMonth;$get[guildID]]** membros enviaram **$separateNumber[$getGuildVar[guildMonthMessages;$get[guildID];0];.]** mensagens neste mês.
+💬 **$getMemberLeaderboardLength[messageMonth;$guildID]** membros enviaram **$separateNumber[$getGuildVar[guildMonthMessages;$guildID;0];.]** mensagens neste mês.
 💬 **$getMemberLeaderboardLength[messageWeekly;$guildID]** membros enviaram **$separateNumber[$getGuildVar[guildWeeklyMessages;$guildID;0];.]** mensagens nessa semana.
 💬 **$getMemberLeaderboardLength[messageToday;$guildID]** membros enviaram **$separateNumber[$getGuildVar[guildTodayMessages;$guildID;0];.]** mensagens hoje.
 💬 A média de mensagens do mês anterior é **$getGuildVar[guildActivityMedia;$guildID;0]** e atualmente é **$truncate[$math[$media[messageMonth;$guildMemberCount[1462224054676099094;;false]]/3]]**.
