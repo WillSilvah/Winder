@@ -24,7 +24,7 @@ $setGuildVar[guildMonthMessagesMeta;$math[$getGuildVar[guildMonthMessagesMeta;$g
 ]
 
 $if[$getGlobalVar[guildID]==$guildID;
-$if[$getMemberVar[messageTotal;$authorID]==6;
+$if[$getMemberVar[messageTotal;$authorID;$guildID;0]==6;
 $reply[$channelID;$messageID]
 $startTyping[$channelID]
 $wait[2s]
