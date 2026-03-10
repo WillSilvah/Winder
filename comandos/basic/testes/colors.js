@@ -20,16 +20,7 @@ $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;ð
     type: "interactionCreate",
     name: "colors",
     code: `
-$sendMessage[781665851040333844;
-Command name: $commandName
-Message: $message
-FocusedOptionName: $focusedOptionName
-FocusedOptionValue: $focusedOptionValue
-customid: $customID
-Input: $input[colors]
-$option[colors]
-selectMenu: $selectMenuValues
-]
+
     
 `
 }]
