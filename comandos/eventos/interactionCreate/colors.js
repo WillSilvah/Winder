@@ -1,7 +1,7 @@
 module.exports = [{
     type: "interactionCreate",
     code: `
-$sendMessage[$channelID;
+$sendMessage[;
 $commandName
 
 $message
