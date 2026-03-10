@@ -18,8 +18,8 @@ $setMemberVar[timecallTotal;$math[$getMemberVar[timecallTotal;$get[id];$get[guil
 
 ;voiceId]
 
-$setInterval[$callFn[monitor;1462603953077358791];1]
-$setInterval[$callFn[monitor;1462615093153108001];1]
-$setInterval[$callFn[monitor;1462224055884189785];1]
+$setInterval[$callFn[monitor;1462603953077358791];0]
+$setInterval[$callFn[monitor;1462615093153108001];0]
+$setInterval[$callFn[monitor;1462224055884189785];0]
 `
 }
