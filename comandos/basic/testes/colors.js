@@ -35,7 +35,9 @@ $jsonLoad[cores;{
 
 $arrayLoad[coresID;,;$jsonValues[cores;,]]
 
-$arrayForEach[coresID;id]
+$arrayForEach[coresID;id;
+$!memberRemoveRoles[$guildID;$authorID;$env[id]]
+]
 
 $!memberAddRoles[$guildID;$authorID;$env[cores;$selectMenuValues]]
 
