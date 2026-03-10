@@ -26,6 +26,7 @@ $deleteRecords[messageTotal;$authorID]
 $deleteRecords[messageWeekly;$authorID]
 
 $advancedTimeout[$esc[
+$if[$memberExists
 $deleteRecords[messageToday;$authorID]
 $deleteRecords[pdaMonth;$authorID]
 $deleteRecords[pdaTotal;$authorID]
@@ -34,6 +35,7 @@ $deleteRecords[votesTotal;$authorID]
 $deleteRecords[invitesMonth;$authorID]
 $deleteRecords[invitesTotal;$authorID]
 $deleteRecords[lastMessageTime;$authorID]
+]
 ];
 
 `
