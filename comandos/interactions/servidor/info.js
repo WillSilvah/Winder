@@ -3,7 +3,7 @@ module.exports = {
 $addContainer[
 $addSection[
 $addTextDisplay[## $toUpperCase[$guildName]
--# **🐾 $separateNumber[$guildMemberCount[1462224054676099094;;false];.] | 🚀 $guildBoostCount[$guildID] | **
+-# **🐾 $separateNumber[$guildMemberCount[1462224054676099094;;false];.] | 🚀 $guildBoostCount[$guildID] | 
 
 ]
 
