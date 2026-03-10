@@ -18,6 +18,8 @@ $addTextDisplay[
 💬 A média de mensagens do mês anterior é **$getGuildVar[guildActivityMedia;$guildID;0]** e atualmente é **$truncate[$math[$media[messageMonth;$guildMemberCount[1462224054676099094;;false]]/3]]**.
 ]
 $addSeparator[Large;true]
+$addTextDisplay[
+🎮 ]
 ;$getGuildVar[color;$guildID;Red]]
 
   `,
