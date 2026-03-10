@@ -1,17 +1,17 @@
 module.exports = [{
     type: 'clientReady',
     code: `
-$onlyIf[2==7;]
-$let[guildID;1462224054676099094]
+    $onlyIf[34==26;]
 $setInterval[
-$log[Tentativa de executar um minigame
+$let[guildID;1462224054676099094]
+$sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
 -----------------------------------
 MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
 
 ]
-$onlyIf[$getGuildVar[msgPerMinute;$get[guildID]]>=6;]
+$if[$getGuildVar[msgPerMinute;$get[guildID];0]>5;
 
-$minigame[fraseRepeat]
+$sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat];$get[guildID]]
 
 $wait[1m]
 $onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
@@ -23,7 +23,7 @@ $setGuildVar[minigameXPmin;0;$get[guildID]]
 $setGuildVar[minigameXPmax;0;$get[guildID]]
 $setChannelSlowmode[$getGuildVar[batePapo;$get[guildID]];0]
 $sendMessage[$getGuildVar[batePapo;$get[guildID]];### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
-
+]
 ;15m;WinderMinigame]
 `
 },{
