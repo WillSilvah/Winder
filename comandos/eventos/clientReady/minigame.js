@@ -2,7 +2,7 @@ module.exports = [{
     type: 'clientReady',
     code: `$let[guildID;1462224054676099094]
     
-$setGuildVar[minigameNextTime;$getTimestamp;$get[guildID]]
+$setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
 $setInterval[
 $sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
 -----------------------------------
