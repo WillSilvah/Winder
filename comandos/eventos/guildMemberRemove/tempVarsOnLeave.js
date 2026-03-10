@@ -26,17 +26,17 @@ $deleteRecords[messageTotal;$authorID]
 $deleteRecords[messageWeekly;$authorID]
 
 $advancedTimeout[$esc[
-$if[$memberExists
-$deleteRecords[messageToday;$authorID]
-$deleteRecords[pdaMonth;$authorID]
-$deleteRecords[pdaTotal;$authorID]
-$deleteRecords[votesMonth;$authorID]
-$deleteRecords[votesTotal;$authorID]
-$deleteRecords[invitesMonth;$authorID]
-$deleteRecords[invitesTotal;$authorID]
-$deleteRecords[lastMessageTime;$authorID]
+$if[$memberExists[$memberExists[$guildID;{0}]==false;
+$deleteRecords[messageToday;{0}]
+$deleteRecords[pdaMonth;{0}]
+$deleteRecords[pdaTotal;{0}]
+$deleteRecords[votesMonth;{0}]
+$deleteRecords[votesTotal;{0}]
+$deleteRecords[invitesMonth;{0}]
+$deleteRecords[invitesTotal;{0}]
+$deleteRecords[lastMessageTime;{0}]
 ]
-];
+];30d;backupVars_$authorID_$guildID;$authorID]
 
 `
 }
