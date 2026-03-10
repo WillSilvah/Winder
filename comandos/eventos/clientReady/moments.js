@@ -4,14 +4,14 @@ module.exports = [{
 $let[guildID;1462224054676099094]
 
 $cron[
-$deleteRecords[guildWeeklyMessage]
+$deleteRecords[guildWeeklyMessages]
 $deleteRecords[messageWeekly]
 $deleteRecords[tempMessageWeekly]
 $sendMessage[$getGlobalVar[consoleChat];## VARIAVEIS WEEKLY RESETADA]
 ;0 0 * * 0;America/Recife;ResetWeekly]
 
 $cron[
-$deleteRecords[guildTodayMessage]
+$deleteRecords[guildTodayMessages]
 $deleteRecords[messageToday]
 $deleteRecords[tempMessageToday]
 $sendMessage[$getGlobalVar[consoleChat];## VARIAVEIS TODAY RESETADA]
