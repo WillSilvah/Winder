@@ -1,6 +1,6 @@
 module.exports = [{
     type: "interactionCreate",
-    name: "$customID",
+    name: "colors",
     code: `
 $sendMessage[781665851040333844;
 $commandName
