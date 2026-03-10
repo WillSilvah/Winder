@@ -26,6 +26,7 @@ Message: $message
 FocusedOptionName: $focusedOptionName
 FocusedOptionValue: $focusedOptionValue
 customid: $customID
+Input: $input[colors]
 ]
     
 `
