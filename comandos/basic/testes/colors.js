@@ -32,6 +32,7 @@ $jsonLoad[cores;{
   "azul": "1462932753388408904"
 }
 ]
+$if[$selectMenuValues!=remove;
 
 $arrayLoad[coresID;,;$jsonValues[cores;,]]
 
@@ -41,7 +42,15 @@ $!memberRemoveRoles[$guildID;$authorID;$env[id]]
 
 $!memberAddRoles[$guildID;$authorID;$env[cores;$selectMenuValues]]
 
-$interactionReply[Pronto! Você está usando a cor <@&$env[cores;$selectMenuValues]>!]
+$interactionReply[Pronto! Você está usando a cor <@&$env[cores;$selectMenuValues]>!];
+$arrayLoad[coresID;,;$jsonValues[cores;,]]
+
+$arrayForEach[coresID;id;
+$!memberRemoveRoles[$guildID;$authorID;$env[id]]
+]
+
+$interactionReply[Todas as cores foram removidas!]
+]
     
 `
 }]
