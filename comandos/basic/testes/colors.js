@@ -21,9 +21,11 @@ $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;ð
     name: "colors",
     code: `
 $sendMessage[781665851040333844;
-$commandName
-
-$message
+Command name: $commandName
+Message: $message
+FocusedOptionName: $focusedOptionName
+FocusedOptionValue: $focusedOptionValue
+customid: $customID
 ]
     
 `
