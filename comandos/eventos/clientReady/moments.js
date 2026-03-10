@@ -1,5 +1,5 @@
 module.exports = [{
-    type: 'clientReady',
+    type: "clientReady",
     code: `
 $let[guildID;1462224054676099094]
 
@@ -8,14 +8,14 @@ $deleteRecords[guildWeeklyMessage]
 $deleteRecords[messageWeekly]
 $deleteRecords[tempMessageWeekly]
 $sendMessage[$getGlobalVar[consoleChat];## VARIAVEIS WEEKLY RESETADA]
-;0 0 * * 0;America/Recife]
+;0 0 * * 0;America/Recife;ResetWeekly]
 
 $cron[
 $deleteRecords[guildTodayMessage]
 $deleteRecords[messageToday]
 $deleteRecords[tempMessageToday]
 $sendMessage[$getGlobalVar[consoleChat];## VARIAVEIS TODAY RESETADA]
-;0 0 * * *;America/Recife]
+;0 0 * * *;America/Recife;ResetToday]
 
 
 $cron[
@@ -82,7 +82,7 @@ $deleteRecords[tempPdaMonth]
 $deleteRecords[tempVotesMonth]
 $deleteRecords[tempInvitesMonth]
 
-;0 0 1 * *;America/Recife]
+;0 0 1 * *;America/Recife;ResetMonth]
 `
 },{
     type: 'clientReady',
@@ -131,5 +131,4 @@ $!editRole[$getGlobalVar[guildID];1463139649806663782;;;;;true;]
 ;0 6 * * *;America/Recife]   
     
 `
-}
-]
+}]
