@@ -20,6 +20,7 @@ $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;ð
     code: `
 $commandName
 
+$message
     
 `
 }]
