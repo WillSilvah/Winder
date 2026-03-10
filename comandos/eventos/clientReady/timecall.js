@@ -15,7 +15,7 @@ $setMemberVar[timecallMonth;$math[$getMemberVar[timecallMonth;$get[id];$get[guil
 
 $setMemberVar[timecallTotal;$math[$getMemberVar[timecallTotal;$get[id];$get[guildId];0]+$get[time]];$get[id];$get[guildId]]
 
-$log[$username[$get[id]]: $getMemberVar[timecallMonth;$get[id]] milisegundos no $channelName[$voiceID[$get[guildId];$get[id]]]]
+$log[$username[$get[id]]: $getMemberVar[timecallMonth;$get[id];$get[guildId]] milisegundos no $channelName[$voiceID[$get[guildId];$get[id]]]]
 
 ;i;true]
 
