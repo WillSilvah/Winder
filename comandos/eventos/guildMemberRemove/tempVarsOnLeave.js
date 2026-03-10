@@ -21,20 +21,24 @@ $setMemberVar[tempInvitesMonth;$getMemberVar[invitesMonth;$authorID;$guildID;0];
 
 $setMemberVar[tempInvitesTotal;$getMemberVar[invitesTotal;$authorID;$guildID;0];$authorID;$guildID]
 
-
-$setMemberVar[tempBadge_diadasmulheres;$getMemberVar[badge_diadasmulheres]]
-
-$deleteRecords[badge_diadasmulheres;$authorID]
 $deleteRecords[messageMonth;$authorID]
 $deleteRecords[messageTotal;$authorID]
 $deleteRecords[messageWeekly;$authorID]
-$deleteRecords[messageToday;$authorID]
-$deleteRecords[pdaMonth;$authorID]
-$deleteRecords[pdaTotal;$authorID]
-$deleteRecords[votesMonth;$authorID]
-$deleteRecords[votesTotal;$authorID]
-$deleteRecords[invitesMonth;$authorID]
-$deleteRecords[invitesTotal;$authorID]
-$deleteRecords[lastMessageTime;$authorID]
+
+$advancedTimeout[$esc[
+$if[$memberExists[$guildID;{0}]==false;
+$deleteRecords[messageToday;{0}]
+$deleteRecords[pdaMonth;{0}]
+$deleteRecords[pdaTotal;{0}]
+$deleteRecords[votesMonth;{0}]
+$deleteRecords[votesTotal;{0}]
+$deleteRecords[invitesMonth;{0}]
+$deleteRecords[invitesTotal;{0}]
+$deleteRecords[lastMessageTime;{0}]
+$deleteRecords[lastMessageTimestamp;{0}]
+$setMemberVar[memberJoinedHere?;true;{0};{1}]
+]
+];30d;backupVars_$authorID_$guildID;$authorID;$guildID]
+
 `
 }

@@ -75,13 +75,6 @@ $addThumbnail[$guildIcon]
 $addSeparator[Large;true]
 ]
 
-$deleteRecords[tempMessageMonth]
-$deleteRecords[tempMessageWeekly]
-$deleteRecords[tempMessageToday]
-$deleteRecords[tempPdaMonth]
-$deleteRecords[tempVotesMonth]
-$deleteRecords[tempInvitesMonth]
-
 ;0 0 1 * *;America/Recife;ResetMonth]
 `
 },{
@@ -91,6 +84,7 @@ $deleteRecords[tempInvitesMonth]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🌞 BOM DIA PELUDOS!
 **Vamos levantar e tomar uma xícara de café?**
+$setGlobalVar[sleepMode;true]
 ];34 6 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🍱 JÁ PODE ALMOÇAR!
@@ -107,6 +101,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 😴 VAMOS DORMIR?
 **Vamos tirar um cochilo?**
+$setGlobalVar[sleepMode;true]
 ];0 22 * * *;America/Recife]
 `
 },{
