@@ -36,8 +36,9 @@ $deleteRecords[invitesMonth;{0}]
 $deleteRecords[invitesTotal;{0}]
 $deleteRecords[lastMessageTime;{0}]
 $deleteRecords[lastMessageTimestamp;{0}]
+$setMemberVar[memberJoinedHere?;true;{0};{1}]
 ]
-];30d;backupVars_$authorID_$guildID;$authorID]
+];30d;backupVars_$authorID_$guildID;$authorID;$guildID]
 
 `
 }
