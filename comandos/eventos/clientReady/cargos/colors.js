@@ -1,7 +1,7 @@
 module.exports = [{
     name: "colors",
     type: "clientReady",
-    code: `$sendMessage[
+    code: `$sendMessage[1470875996356874292;
 $addTextDisplay[## SIMPLESMENTE CORES!
 Escolha uma cor que mais combina com você!]
 $addActionRow
