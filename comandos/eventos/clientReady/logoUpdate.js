@@ -29,26 +29,27 @@ $setGuildVar[guildColor;Red;1462224054676099094]
 $cron[
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 $!setGuildIcon[1462224054676099094;https://i.ibb.co/Jj1VwWsF/pats-pink-light.png;Às quartas feiras nós usamos rosa]
-$setGuildVar[guildColor;;1462224054676099094]
+$setGuildVar[guildColor;#e7ade7;1462224054676099094]
 ;0 6 * * 3;America/Recife]
 $cron[
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 $!setGuildIcon[1462224054676099094;https://i.ibb.co/cK7H7ry2/pats-pink-dark.png;As quartas feiras nós usamos rosa]
-
+$setGuildVar[guildColor;#e7ade7;1462224054676099094]
 ;0 18 * * 3;America/Recife]
 $cron[
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 $!setGuildIcon[1462224054676099094;https://i.ibb.co/RpnZ5xH0/pats-red-light.png;Dia normal de manhã]
 ;0 6 * * 4-6;America/Recife]
-
+$setGuildVar[guildColor;Red;1462224054676099094]
 $cron[
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 $!setGuildIcon[1462224054676099094;https://i.ibb.co/Pzm985S9/pats-red-dark.png;Dia normal a noite]
 ;0 18 * * 4-6;America/Recife]
-
+$setGuildVar[guildColor;Red;1462224054676099094]
 $cron[
 $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
 $!setGuildIcon[1462224054676099094;https://i.ibb.co/N6q4DP0P/pats-sleep-logo.png;Hora de dormir]
+$setGuildVar[guildColor;Black;1462224054676099094]
 ;0 22 * * *;America/Recife]
 `
 }]
