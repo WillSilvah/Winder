@@ -1,7 +1,7 @@
 module.exports = [{
     name: "cargos",
     type: "clientReady",
-    code: `$deleteMessage[1470875996356874292;$getGlobalVar[cargos_messageID]]
+    code: `$deleteMessage[1470875996356874292;$getGlobalVar[notificar_messageID]]
 $let[msgID;$sendMessage[1470875996356874292;$disableAllMentions
 $addTextDisplay[## 🔔 NOTIFICAÇÕES!
 ⭐ 🎉 🎮 🔕
@@ -19,7 +19,7 @@ $addOption[Não quero receber notificações;Remove todos os cargos de notifica�
 
 ;true]]
 
-$setGlobalVar[cargos_messageID;$get[msgID]]
+$setGlobalVar[notificar_messageID;$get[msgID]]
 `
 },{
     type: "interactionCreate",
@@ -31,11 +31,10 @@ $jsonLoad[notificar;{
   "minigame": "1463139788650582180",
   "lives": "1464053142286106684"
 }
-
+$arrayLoad[notificarID;,;$jsonValues[notificar;,]]
 ]
 $ifx[
 $if[$selectMenuValues==remove;
-$arrayLoad[notificarID;,;$jsonValues[notificar;,]]
 
 $arrayForEach[notificarID;id;
 $!memberRemoveRoles[$guildID;$authorID;$env[id]]
@@ -44,7 +43,6 @@ $!memberRemoveRoles[$guildID;$authorID;$env[id]]
 $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não receberá notificações especificas da patinhas 😪, mas não vai deixar de receber menções de @everyone, que são guardadas para avisos e alertas importantes. Podendo claro, silenciar nas configurações do seu Discord.]
 ]
 $elseIf[$selectMenuValues==all;
-$arrayLoad[notificarID;,;$jsonValues[notificar;,]]
 
 $arrayForEach[notificarID;id;
 $!memberAddRoles[$guildID;$authorID;$env[id]]

@@ -1,5 +1,5 @@
 module.exports = [{
-    name: "cargos",
+    name: "cores",
     type: "clientReady",
     code: `$deleteMessage[1470875996356874292;$getGlobalVar[cores_messageID]]
 $let[msgID;$sendMessage[1470875996356874292;
@@ -7,7 +7,7 @@ $addTextDisplay[## 🎨 SIMPLESMENTE CORES!
 🔵 🩷 🔴 🟠 🟡 🟢 🟣
 Escolha uma cor que mais combina com você!]
 $addActionRow
-$addStringSelectMenu[colors;Escolha uma cor;false;1;1]
+$addStringSelectMenu[colores;Escolha uma cor;false;1;1]
 $addOption[Simplesmente nada;Remove todas as cores e usa a de outro cargo mais alto.;remove;❌;false]
 $addOption[Simplesmente azul;Azul geralmente remete a tristeza, mas o Winder discorda.;azul;🔵;false]
 $addOption[Simplesmente rosa;As quartas feiras nós utilizamos rosa, mas você pode usar hoje se quiser.;rosa;🩷;false]
@@ -22,7 +22,7 @@ $setGlobalVar[cores_messageID;$get[msgID]]
 `
 },{
     type: "interactionCreate",
-    name: "colors",
+    name: "colores",
     code: `$ephemeral $disableAllMentions
 $jsonLoad[cores;{
   "rosa": "1462932846795690138",
@@ -34,9 +34,10 @@ $jsonLoad[cores;{
   "azul": "1462932753388408904"
 }
 ]
-$if[$selectMenuValues!=remove;
 
 $arrayLoad[coresID;,;$jsonValues[cores;,]]
+
+$if[$selectMenuValues!=remove;
 
 $arrayForEach[coresID;id;
 $!memberRemoveRoles[$guildID;$authorID;$env[id]]
