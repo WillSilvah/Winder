@@ -3,7 +3,6 @@ module.exports = [{
     type: "clientReady",
     code: `$deleteMessage[1470875996356874292;$getGlobalVar[cores_messageID]]
 $let[msgID;$sendMessage[1470875996356874292;
-$addSection[
 $addTextDisplay[## 🎨 SIMPLESMENTE CORES!
 🔵 🩷 🔴 🟠 🟡 🟢 🟣
 Escolha uma cor que mais combina com você!]
@@ -17,7 +16,6 @@ $addOption[Simplesmente vermelho;Tu viu aquela menina de vermelho?;vermelho;🔴
 $addOption[Simplesmente laranja;Citrico;laranja;🟠;false]
 $addOption[Simplesmente verde;A cor da esperança;verde;🟢;false]
 $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;🟣;false]
-]
 ;true]]
 
 $setGlobalVar[cores_messageID;$get[msgID]]
