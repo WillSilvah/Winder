@@ -56,9 +56,9 @@ module.exports = [{
         $loop[$get[rows];
           $let[i;$math[$env[i] - 1]]
     
-          $addTextDisplay[## ID: \`$env[listPage;$get[i];0]\`]
-          $addTextDisplay[## Time: \`$parseMS[$env[listPage;$get[i];1;time];;, ;false]\`]
-          $addTextDisplay[## Ends in: $discordTimestamp[$env[listPage;$get[i];1;endTime];RelativeTime]]
+          $addTextDisplay[ID: \`$env[listPage;$get[i];0]\`]
+          $addTextDisplay[Time: \`$parseMS[$env[listPage;$get[i];1;time];;, ;false]\`]
+          $addTextDisplay[Ends in: $discordTimestamp[$env[listPage;$get[i];1;endTime];RelativeTime]]
 
           $if[$or[$sum[1;$env[i]]>$arrayLength[listPage];$env[i]==$get[rows]];
             $break
