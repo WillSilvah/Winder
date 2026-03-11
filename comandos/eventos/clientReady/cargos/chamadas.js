@@ -11,7 +11,8 @@ $let[msgID;$sendMessage[1470875996356874292;$disableAllMentions
     $addContainer[
     $addSection[
     $addTextDisplay[## CHAMADAS!
-💬 🔉
+**💬! 🔉!**
+
 Sabia que você pode ser mencionado no bate papo para conversar sobre um assunto?
 - Os cargos de chamadas podem ser mencionados por **qualquer pessoa** durante **06:00** até **22:00** no horário de Pernambuco.
 
@@ -40,9 +41,8 @@ Sabia que você pode ser mencionado no bate papo para conversar sobre um assunto
     $jsonLoad[chamadas;{
   "conversar": "1463138976494915646",
   "call": "1463139649806663782"
-}
-$arrayLoad[chamadasID;,;$jsonValues[chamadas;,]]
-]
+}]
+    $arrayLoad[chamadasID;,;$jsonValues[chamadas;,]]
 
     $ifx[
     $if[$selectMenuValues==remove;

@@ -4,12 +4,12 @@ module.exports = [{
     code: `
     $deleteMessage[1470875996356874292;$getGlobalVar[cores_messageID]]
     
-    $wait[2s]
+    $wait[3s]
 
     $let[msgID;$sendMessage[1470875996356874292;
     $addContainer[
     $addSection[
-    $addTextDisplay[## 🎨 SIMPLESMENTE CORES!
+    $addTextDisplay[## SIMPLESMENTE CORES!
 🔵 🩷 🔴 🟠 🟡 🟢 🟣
 Escolha uma cor que mais combina com você!]
     $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f3a8.png]
@@ -49,8 +49,7 @@ $setGlobalVar[cores_messageID;$get[msgID]]
   "roxo": "1463277399436296348",
   "laranja": "1462932934485868726",
   "azul": "1462932753388408904"
-}
-]
+}]
 
     $arrayLoad[coresID;,;$jsonValues[cores;,]]
 

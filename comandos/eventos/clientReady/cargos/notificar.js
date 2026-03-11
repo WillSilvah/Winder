@@ -11,6 +11,7 @@ module.exports = [{
     $addSection[
     $addTextDisplay[## NOTIFICAÇÕES!
 ⭐ 🎉 🎮 🔕
+
 O que você quer receber na Patinhas?
 ]
     $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f514.png]
@@ -46,9 +47,9 @@ O que você quer receber na Patinhas?
   "minigame": "1463139788650582180",
   "lives": "1464053142286106684"
 }
+]
 
     $arrayLoad[notificarID;,;$jsonValues[notificar;,]]
-]
 
     $ifx[
 
