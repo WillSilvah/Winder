@@ -7,6 +7,7 @@ $addSection[
 $addTextDisplay[## 🎨 SIMPLESMENTE CORES!
 🔵 🩷 🔴 🟠 🟡 🟢 🟣
 Escolha uma cor que mais combina com você!]
+$addActionRow
 $addStringSelectMenu[colors;Escolha uma cor;false;1;1]
 $addOption[Simplesmente nada;Remove todas as cores e usa a de outro cargo mais alto.;remove;❌;false]
 $addOption[Simplesmente azul;Azul geralmente remete a tristeza, mas o Winder discorda.;azul;🔵;false]
