@@ -15,7 +15,7 @@ Escolha uma cor que mais combina com você!]
     $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f3a8.png]
     ]
     
-;Red]
+;White]
     $addActionRow
     $addStringSelectMenu[colores;Escolha uma cor;false;1;1]
     

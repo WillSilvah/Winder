@@ -17,7 +17,7 @@ Qual clube você se identifica ou quer participar?
 ]
     $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f465.png]
 ]
-;Yellow]
+;Green]
 
     $addActionRow
     $addStringSelectMenu[clubes;Escolha um clube;false;1;1]
