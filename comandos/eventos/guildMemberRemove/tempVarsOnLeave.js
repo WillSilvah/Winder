@@ -1,6 +1,6 @@
 module.exports = {
     type: "guildMemberRemove",
-    code: `$stoo
+    code: `$stop
 $setMemberVar[tempMessageMonth;$getMemberVar[messageMonth;$authorID;$guildID;0];$authorID;$guildID]
 
 $setMemberVar[tempMessageTotal;$getMemberVar[messageTotal;$authorID;$guildID;0];$authorID;$guildID]
