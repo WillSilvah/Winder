@@ -24,21 +24,23 @@ $setMemberVar[tempInvitesTotal;$getMemberVar[invitesTotal;$authorID;$guildID;0];
 $deleteRecords[messageMonth;$authorID]
 $deleteRecords[messageTotal;$authorID]
 $deleteRecords[messageWeekly;$authorID]
+$deleteRecords[pdaTotal;$authorID]
+$deleteRecords[pdaMonth;$authorID]
 
 $advancedTimeout[$esc[
 $if[$memberExists[$guildID;{0}]==false;
-$deleteRecords[messageToday;{0}]
-$deleteRecords[pdaMonth;{0}]
-$deleteRecords[pdaTotal;{0}]
-$deleteRecords[votesMonth;{0}]
-$deleteRecords[votesTotal;{0}]
-$deleteRecords[invitesMonth;{0}]
-$deleteRecords[invitesTotal;{0}]
-$deleteRecords[lastMessageTime;{0}]
-$deleteRecords[lastMessageTimestamp;{0}]
-$setMemberVar[memberJoinedHere?;true;{0};{1}]
+$sendMessage[{2};
+### RESTAURAÇÃO DO WINDER
+Dados salvos de **$userTag[{0}]** ({0}) antes da exclusão automática de 30 dias.
+$attachment[$searchDB[;{1};;;];WinderDB_{0}_data.json;true]
+
 ]
-];30d;backupVars_$authorID_$guildID;$authorID;$guildID]
+
+$deleteRecords[$deleteRecords[;{0};;;]]
+$setMemberVar[memberJoinedHere?;true;{0};{1}]
+
+]
+];30d;backupVars_$authorID_$guildID;$authorID;$guildID;$getGlobalVar[databaseLog]]
 
 `
 }
