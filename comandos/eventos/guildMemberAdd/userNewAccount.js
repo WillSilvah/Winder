@@ -8,7 +8,7 @@ $addSection[
 $addTextDisplay[### @$userTag: conta criada $discordTimestamp[$userCreatedAt[$authorID];RelativeTime]!
 ID do usuário: $authorID
 Veio pelo $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano]
-<@$getGuildVar[allStaffRole]>
+<@&$getGuildVar[allStaffRole]>
 ]
 $addThumbnail[$userAvatar]
 ]
