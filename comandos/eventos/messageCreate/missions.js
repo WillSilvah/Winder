@@ -1,28 +1,6 @@
 module.exports = [{
     type: "messageCreate",
     code: `
-
-$if[$getGuildVar[allMemberRole]!=;
-$if[$getMemberVar[messageTotal;$authorID]>=6;
-$!memberAddRoles[$guildID;$authorID;$getGuildVar[allMemberRole];1481259180877811930;1481256988921954418;1481256655986360361;1481256478563237888;1481261082977763338]
-]
-]
-
-$if[$getGuildVar[memberVerifiedRole]!=;
-$if[$getMemberVar[messageTotal;$authorID]>=200;
-$onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]==false;]
-$sendMessage[$channelID;<@$authorID> | Você agora é um **Peludo Verificado**! $emoji[$emojiID[pats_foxClapping]] Você está gostando da Patinhas? 👀;false]
-$!memberAddRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]
-]
-]
-
-
-
-$if[$getGuildVar[guildMonthMessages;$guildID]==$getGuildVar[guildMonthMessagesMeta;$guildID];
-
-$setGuildVar[guildMonthMessagesMeta;$math[$getGuildVar[guildMonthMessagesMeta;$guildID]+10000];$guildID]
-]
-
 $if[$getMemberVar[messageTotal;$authorID;$guildID;0]==6;
 $reply[$channelID;$messageID]
 $startTyping[$channelID]
@@ -41,6 +19,28 @@ $startTyping[$channelID]
 $wait[2s]
 $sendMessage[$channelID;😘]
 ]
+
+$if[$getGuildVar[allMemberRole]!=;
+$if[$getMemberVar[messageTotal;$authorID]>=6;
+$!memberAddRoles[$guildID;$authorID;$getGuildVar[allMemberRole];1481259180877811930;1481256988921954418;1481256655986360361;1481256478563237888;1481261082977763338]
+]
+]
+
+$if[$getGuildVar[memberVerifiedRole]!=;
+$if[$getMemberVar[messageTotal;$authorID]>=200;
+$onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]==false;]
+$sendMessage[$channelID;<@$authorID> | Você agora é um **Peludo Verificado**! $emoji[$emojiID[pats_foxClapping]] Você está gostando da Patinhas? 👀;false]
+$!memberAddRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]
+]
+]
+
+
+
+$if[$getGuildVar[guildMonthMessages;$guildID;0]==$getGuildVar[guildMonthMessagesMeta;$guildID];
+
+$setGuildVar[guildMonthMessagesMeta;$math[$getGuildVar[guildMonthMessagesMeta;$guildID]+10000];$guildID]
+]
+
 
 
 `
