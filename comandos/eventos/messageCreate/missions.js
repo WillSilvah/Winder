@@ -3,8 +3,8 @@ module.exports = [{
     code: `
 
 $if[$getGuildVar[allMemberRole]!=;
-$if[$getMemberVar[messageTotal;$authorID]==6;
-$!memberAddRoles[$guildID;$authorID;$getGuildVar[allMemberRole]]
+$if[$getMemberVar[messageTotal;$authorID]>=6;
+$!memberAddRoles[$guildID;$authorID;$getGuildVar[allMemberRole];1481259180877811930;1481256988921954418;1481256655986360361;1481256478563237888]
 ]
 ]
 
