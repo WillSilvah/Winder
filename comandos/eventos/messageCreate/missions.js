@@ -23,7 +23,6 @@ $if[$getGuildVar[guildMonthMessages;$guildID]==$getGuildVar[guildMonthMessagesMe
 $setGuildVar[guildMonthMessagesMeta;$math[$getGuildVar[guildMonthMessagesMeta;$guildID]+10000];$guildID]
 ]
 
-$if[$getGlobalVar[guildID]==$guildID;
 $if[$getMemberVar[messageTotal;$authorID;$guildID;0]==6;
 $reply[$channelID;$messageID]
 $startTyping[$channelID]
@@ -41,7 +40,6 @@ $sendMessage[$channelID;Dúvidas? Qualquer coisa o canal <#1463277652562411787> 
 $startTyping[$channelID]
 $wait[2s]
 $sendMessage[$channelID;😘]
-]
 ]
 
 
