@@ -3,11 +3,15 @@ module.exports = [{
     type: "clientReady",
     code: `$deleteMessage[1470875996356874292;$getGlobalVar[notificar_messageID]]
 $let[msgID;$sendMessage[1470875996356874292;$disableAllMentions
+$addContainer[
+$addSection[
 $addTextDisplay[## 🔔 NOTIFICAÇÕES!
 ⭐ 🎉 🎮 🔕
 O que você quer receber na Patinhas?
-
 ]
+$addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f514.png]
+]
+;Red]
 $addActionRow
 $addStringSelectMenu[notificar;Escolha uma notificação para receber;false;1;1]
 $addOption[Receber tudo da Patinhas;Você será notificado de tudo que e possível;all;🔔;false]
