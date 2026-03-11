@@ -75,6 +75,13 @@ $addThumbnail[$guildIcon]
 $addSeparator[Large;true]
 ]
 
+$deleteRecords[tempMessageMonth]
+$deleteRecords[tempMessageWeekly]
+$deleteRecords[tempMessageToday]
+$deleteRecords[tempPdaMonth]
+$deleteRecords[tempVotesMonth]
+$deleteRecords[tempInvitesMonth]
+
 ;0 0 1 * *;America/Recife;ResetMonth]
 `
 },{

@@ -1,6 +1,6 @@
 module.exports = {
     type: "guildMemberRemove",
-    code: `$stop
+    code: `
 $setMemberVar[tempMessageMonth;$getMemberVar[messageMonth;$authorID;$guildID;0];$authorID;$guildID]
 
 $setMemberVar[tempMessageTotal;$getMemberVar[messageTotal;$authorID;$guildID;0];$authorID;$guildID]
@@ -27,21 +27,21 @@ $deleteRecords[messageWeekly;$authorID]
 $deleteRecords[pdaTotal;$authorID]
 $deleteRecords[pdaMonth;$authorID]
 
-$advancedTimeout[$esc[
-$if[$memberExists[$guildID;{0}]==false;
-$sendMessage[{2};
-### RESTAURAÇÃO DO WINDER
-Dados salvos de **$userTag[{0}]** ({0}) antes da exclusão automática de 30 dias.
-$attachment[$searchDB[;{1};;;];WinderDB_{0}_data.json;true]
-]
 
-$wait[10s]
+$setMemberVar[tempBadge_diadasmulheres;$getMemberVar[badge_diadasmulheres]]
 
-$deleteRecords[$deleteRecords[;{0};;;]]
-$setMemberVar[memberJoinedHere?;true;{0};{1}]
-
-]
-];30d;backupVars_$authorID_$guildID;$authorID;$guildID;$getGlobalVar[databaseLog]]
+$deleteRecords[badge_diadasmulheres;$authorID]
+$deleteRecords[messageMonth;$authorID]
+$deleteRecords[messageTotal;$authorID]
+$deleteRecords[messageWeekly;$authorID]
+$deleteRecords[messageToday;$authorID]
+$deleteRecords[pdaMonth;$authorID]
+$deleteRecords[pdaTotal;$authorID]
+$deleteRecords[votesMonth;$authorID]
+$deleteRecords[votesTotal;$authorID]
+$deleteRecords[invitesMonth;$authorID]
+$deleteRecords[invitesTotal;$authorID]
+$deleteRecords[lastMessageTime;$authorID]
 
 `
 }
