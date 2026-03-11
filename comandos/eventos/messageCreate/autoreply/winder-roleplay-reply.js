@@ -4,6 +4,14 @@ module.exports = {
 $onlyIf[$mentioned[0]==$clientID;]
 $onlyIf[$endsWith[$message;*]==true;]
 
+$if[$getGlobalVar[sleepMode]==true;
+$reply
+$sendMessage[$channelID;**$userTag[$mentioned[0]]** está afk!
+$author[Dormindo]
+$color[Red]
+]
+
+$stop]
 $ifx[
 $if[$checkContains[*$toLowerCase[$message]*;abraço;abraça;hug]==true;
 

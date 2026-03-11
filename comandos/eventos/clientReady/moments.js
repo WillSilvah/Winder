@@ -92,7 +92,9 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🌞 BOM DIA PELUDOS!
 **Vamos levantar e tomar uma xícara de café?**
 $setGlobalVar[sleepMode;true]
-];34 6 * * *;America/Recife]
+]
+$!memberSetNickname[$get[$guildID];$clientID;Winder]
+;34 6 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🍱 JÁ PODE ALMOÇAR!
 **Liberei o almoço, vão almoçar enquanto dá tempo!**
@@ -109,7 +111,9 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 😴 VAMOS DORMIR?
 **Vamos tirar um cochilo?**
 $setGlobalVar[sleepMode;true]
-];0 22 * * *;America/Recife]
+]
+$!memberSetNickname[$get[$guildID];$clientID;(AFK) Winder]
+;0 22 * * *;America/Recife]
 `
 },{
     type: "clientReady",
