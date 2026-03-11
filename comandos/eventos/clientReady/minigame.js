@@ -4,7 +4,7 @@ module.exports = [{
     
 $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
 $setInterval[
-$onlyIf[$getGlobalVar[sleepMode]==true;]
+$onlyIf[$getGlobalVar[sleepMode]==false;]
 $sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
 -----------------------------------
 MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
