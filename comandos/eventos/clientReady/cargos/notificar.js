@@ -41,7 +41,7 @@ $arrayForEach[notificarID;id;
 $!memberRemoveRoles[$guildID;$authorID;$env[id]]
 ]
 
-$interactionReply[Pronto! Você não receberá notificações especificas da patinhas 😪, mas não vai deixar de receber menções de @everyone, que são guardadas para avisos e alertas importantes. Podendo claro, silenciar nas configurações do seu Discord.]
+$interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não receberá notificações especificas da patinhas 😪, mas não vai deixar de receber menções de @everyone, que são guardadas para avisos e alertas importantes. Podendo claro, silenciar nas configurações do seu Discord.]
 ]
 $elseIf[$selectMenuValues==all;
 $arrayLoad[notificarID;,;$jsonValues[notificar;,]]
@@ -50,12 +50,12 @@ $arrayForEach[notificarID;id;
 $!memberAddRoles[$guildID;$authorID;$env[id]]
 ]
 
-$interactionReply[Pronto! Você preferiu receber todas as notificações importantes da Patinhas, fique antenado!]
+$interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você preferiu receber todas as notificações importantes da Patinhas, fique antenado!]
 ]
 $else[
 $!memberAddRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
 
-$interactionReply[Pronto! Você está recebendo notificações referente ao cargo <@&$env[notificar;$selectMenuValues]>!
+$interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está recebendo notificações referente ao cargo <@&$env[notificar;$selectMenuValues]>!
 ]
 ]
 ]
