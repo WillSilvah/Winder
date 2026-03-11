@@ -91,7 +91,7 @@ $deleteRecords[tempInvitesMonth]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🌞 BOM DIA PELUDOS!
 **Vamos levantar e tomar uma xícara de café?**
-$setGlobalVar[sleepMode;true]
+$setGlobalVar[sleepMode;false]
 ]
 $!memberSetNickname[$get[guildID];$clientID;Winder]
 ;34 6 * * *;America/Recife]
@@ -110,7 +110,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 😴 VAMOS DORMIR?
 **Vamos tirar um cochilo?**
-$setGlobalVar[sleepMode;false]
+$setGlobalVar[sleepMode;true]
 ]
 $!memberSetNickname[$get[guildID];$clientID;(AFK) Winder]
 ;0 22 * * *;America/Recife]
