@@ -20,7 +20,7 @@ $addMediaItem[$userAvatar[$get[user2]]]
 $let[varShip;ship_$get[user1]_$get[user2]]
 
 
-$advancedTimeout[$deleteRecords[{0}];24h;DELETE-ship_$get[user1]_$get[user2];$get[varShip]]`,
+$advancedTimeout[$deleteRecords[{0}];24h;delete-ship_$get[user1]_$get[user2];$get[varShip]]`,
 data: {
   "type": 1,
   "name": "ship",
