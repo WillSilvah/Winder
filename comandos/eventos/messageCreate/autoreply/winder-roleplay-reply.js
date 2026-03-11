@@ -9,7 +9,7 @@ $reply
 $sendMessage[$channelID;**$userTag[$mentioned[0]]** está afk!
 $author[Purrrrrrrr.... Estou dormindo no momento, até breve!]
 $color[Red]
-];]
+]]
 
 $ifx[
 $if[$checkContains[*$toLowerCase[$message]*;abraço;abraça;hug]==true;
