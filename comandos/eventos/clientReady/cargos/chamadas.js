@@ -58,7 +58,7 @@ $!memberRemoveRoles[$guildID;$authorID;$env[id]]
     
     $!memberAddRoles[$guildID;$authorID;$env[chamadas;$selectMenuValues]]
 
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Te dei o cargo <@&$env[notificar;$selectMenuValues]>!
+    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Te dei o cargo <@&$env[chamadas;$selectMenuValues]>!
 ]
 ]
 ]

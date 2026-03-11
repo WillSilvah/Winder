@@ -59,7 +59,7 @@ $!memberRemoveRoles[$guildID;$authorID;$env[id]]
     
     $!memberAddRoles[$guildID;$authorID;$env[clubes;$selectMenuValues]]
 
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está participando do clube: <@&$env[notificar;$selectMenuValues]>!
+    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está participando do clube: <@&$env[clubes;$selectMenuValues]>!
 ]
 ]
 ]
