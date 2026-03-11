@@ -50,7 +50,7 @@ $arrayForEach[notificarID;id;
 $!memberAddRoles[$guildID;$authorID;$env[id]]
 ]
 
-$interactionReply[Pronto! Você preferiu receber todas as notificações importantes da Patinhas, fique atenado!]
+$interactionReply[Pronto! Você preferiu receber todas as notificações importantes da Patinhas, fique antenado!]
 ]
 $else[
 $!memberAddRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
