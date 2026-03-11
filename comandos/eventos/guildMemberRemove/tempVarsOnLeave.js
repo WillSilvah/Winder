@@ -33,8 +33,9 @@ $sendMessage[{2};
 ### RESTAURAÇÃO DO WINDER
 Dados salvos de **$userTag[{0}]** ({0}) antes da exclusão automática de 30 dias.
 $attachment[$searchDB[;{1};;;];WinderDB_{0}_data.json;true]
-
 ]
+
+$wait[10s]
 
 $deleteRecords[$deleteRecords[;{0};;;]]
 $setMemberVar[memberJoinedHere?;true;{0};{1}]
