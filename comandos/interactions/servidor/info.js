@@ -24,7 +24,7 @@ $addTextDisplay[
 🎮 **$getGuildVar[minigameGuildWins;$guildID;0]** minigames ganhos.
 ]
 
-;$getGuildVar[guildColor;$guildID;Red]]
+;$getGuildVar[guildColor;$guildID]]
 
   `,
 data: {

@@ -5,6 +5,15 @@ $onlyIf[$mentioned[0]==$authorID;]
 
 $reply[$channelID;$messageID]
 
+$if[$getGlobalVar[sleepMode]==true;
+$reply
+$sendMessage[$channelID;**$userTag[$mentioned[0]]** está afk!
+$author[Purrrrrrrr.... Estou dormindo no momento, até breve!]
+$color[Red]
+]
+$stop;
+]
+
 $ifx[
 $if[$checkContains[$toLowerCase[$message];bom dia;dia;bd;good morning;dia bom;bueno dias;buenos dia;buenos dias;gm]==true;
 $startTyping[$channelID]
