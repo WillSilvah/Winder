@@ -7,7 +7,7 @@ $onlyIf[$endsWith[$message;*]==true;]
 $if[$getGlobalVar[sleepMode]==true;
 $reply
 $sendMessage[$channelID;**$userTag[$mentioned[0]]** está afk!
-$author[Purrrrrrrr.... Estou dormindo no momento, ate breve!]
+$author[Purrrrrrrr.... Estou dormindo no momento, até breve!]
 $color[Red]
 ]
 

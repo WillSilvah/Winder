@@ -110,7 +110,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 😴 VAMOS DORMIR?
 **Vamos tirar um cochilo?**
-$setGlobalVar[sleepMode;true]
+$setGlobalVar[sleepMode;false]
 ]
 $!memberSetNickname[$get[guildID];$clientID;(AFK) Winder]
 ;0 22 * * *;America/Recife]
