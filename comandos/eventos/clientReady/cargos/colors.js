@@ -4,7 +4,7 @@ module.exports = [{
     code: `$deleteMessage[1470875996356874292;$getGlobalVar[cores_messageID]]
 $let[msgID;$sendMessage[1470875996356874292;
 $addTextDisplay[## 🎨 SIMPLESMENTE CORES!
-🔵🔴🟠🟡🟢🟣
+🔵 🔴 🟠 🟡 🟢 🟣
 Escolha uma cor que mais combina com você!]
 $addActionRow
 $addStringSelectMenu[colors;Escolha uma cor;false;1;1]
