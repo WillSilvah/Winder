@@ -50,7 +50,7 @@ O que você quer receber na Patinhas?
 
 $interactionReply[
 
-$if[$includes[$selectMenuValues;novidades] $env[notificar;novidades]] $if[$includes[$selectMenuValues;eventos] $env[notificar;eventos]] $if[$includes[$selectMenuValues;minigames];$env[notificar;minigames]] $if[$includes[$selectMenuValues;lives];$env[notificar;lives]]
+$if[$includes[$selectMenuValues;novidades]==true;$env[notificar;novidades]] $if[$includes[$selectMenuValues;eventos]==true;$env[notificar;eventos]] $if[$includes[$selectMenuValues;minigames]==true;$env[notificar;minigames]] $if[$includes[$selectMenuValues;lives]==true;$env[notificar;lives]]
 
 ]
 `
