@@ -22,7 +22,7 @@ data: {
       "required": true
     },
     {
-      "type": 4,
+      "type": 3,
       "description": "Mês do seu aniversário",
       "name": "mes",
       "required": true,

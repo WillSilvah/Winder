@@ -1,6 +1,6 @@
 module.exports = {
   code: `
-$let[month;$if[$option[mes]==;$month[TwoDigit];$option[mes]]]
+$let[month;$default[$option[mes];$month[TwoDigit]]]
 
 $let[monthName;$ifx[
 $if[$get[month]==01;JANEIRO]
@@ -20,7 +20,7 @@ $jsonLoad[birthdayDB;$searchDB[birthday;;member;;$guildID]]
 $disableAllMentions
 $addContainer[
 $addSection[
-$addTextDisplay[## $option[mes] ANIVERSÁRIANTES DE $get[monthName]!]
+$addTextDisplay[## ANIVERSÁRIANTES DE $get[monthName]!]
 $addThumbnail[$guildIcon]
 ]
 $addSeparator[Large]
@@ -37,7 +37,7 @@ data: {
   "description": "Lista de aniversariantes do mês!",
   "options": [
     {
-      "type": 4,
+      "type": 3,
       "description": "Mês",
       "name": "mes",
       "choices": [
