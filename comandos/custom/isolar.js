@@ -14,7 +14,9 @@ module.exports = [{
      
      $arrayLoad[channels;,;$guildChannelIDs[$guildID;,]]
       $arrayForEach[channels;id;
-        $log[$env[id]]
+        $onlyIf[$channelType[$env[id]]==GuildText;
+         $log[Não foi possível modificar o canal $env[id] pois ele não é um canal de texto]
+        ]
        $if[$env[id]!=$getGuildVar[isolatedChannel];
        $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel]
       ]]
