@@ -7,8 +7,8 @@ module.exports = [{
       required: false
     },
     code: `
-$if[$getChannelVar[isTicketChannel;$channelID]==true;
-$deleteChannels[$channelID];
-$return[$env[error]]]
+    $if[$getChannelVar[isTicketChannel;$channelID]==true;
+    $deleteChannels[$channelID];
+    $return[$env[error]]]
 `
 }]
