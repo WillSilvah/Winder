@@ -28,6 +28,7 @@ $!memberAddRoles[$guildID;$authorID;$getGuildVar[allMemberRole];1481259180877811
 
 $if[$getGuildVar[memberVerifiedRole]!=;
 $if[$getMemberVar[messageTotal;$authorID]>=200;
+$onlyIf[$getGlobalVar[sleepMode]==false;]
 $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]==false;]
 $sendMessage[$channelID;<@$authorID> | Você agora é um **Peludo Verificado**! $emoji[$emojiID[pats_foxClapping]] Você está gostando da Patinhas? 👀;false]
 $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]
