@@ -1,5 +1,5 @@
 module.exports = {
-  code: `
+  code: `$option[mes]
 $let[month;$if[$option[mes]==;$month[TwoDigit];$option[mes]]]
 
 $let[monthName;$ifx[
@@ -20,7 +20,7 @@ $jsonLoad[birthdayDB;$searchDB[birthday;;member;;$guildID]]
 $disableAllMentions
 $addContainer[
 $addSection[
-$addTextDisplay[## $get[month] ANIVERSÁRIANTES DE $get[monthName]!]
+$addTextDisplay[## ANIVERSÁRIANTES DE $get[monthName]!]
 $addThumbnail[$guildIcon]
 ]
 $addSeparator[Large]
