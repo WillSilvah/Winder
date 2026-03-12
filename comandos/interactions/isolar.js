@@ -1,0 +1,35 @@
+module.exports = {
+  code: `
+    $let[userID;$findUser[$option[user]]]
+    $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
+    $let[staffID;$authorID]
+    $let[type;isolado]
+
+     $if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
+     $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
+
+    $isolar[$get[userID]]
+
+    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+> $bold[$get[reason]]]
+  `,
+data: {
+  "type": 1,
+  "name": "isolar",
+  "description": "Isole um membro de acessar os canais e funções da Comunidade",
+  "options": [
+    {
+      "type": 6,
+      "description": "Usuário a ser punido",
+      "name": "user",
+      "required": true
+    },
+    {
+      "type": 3,
+      "description": "Motivo da punição",
+      "name": "motivo"
+    }
+  ],
+  "default_member_permissions": "2"
+},
+}
