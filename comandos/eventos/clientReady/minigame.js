@@ -12,7 +12,7 @@ MSGS/Minuto: $getGuildVar[oldMsgPerMinute;$get[guildID];0]
 
 $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
 
-$onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>5;]
+$onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>1;]
 
 $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
 
