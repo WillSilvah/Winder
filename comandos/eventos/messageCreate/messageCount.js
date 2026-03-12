@@ -2,14 +2,14 @@ module.exports = {
     type: "messageCreate",
     code: `
 $onlyIf[$isBot==false;]
+$timezone[America/Recife]
 
 $setMemberVar[messages;$getMemberVar[messages]
 
-$message]
+$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit] | $message]
 
 $onlyIf[$includes[$channelID;1478505120525324541]==false;]
 
-$timezone[America/Recife]
 $setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages;$guildID;0];1]]
 $setGuildVar[guildTotalMessages;$sum[$getGuildVar[guildTotalMessages;$guildID;0];1]]
 $setGuildVar[guildWeeklyMessages;$sum[$getGuildVar[guildWeeklyMessages;$guildID;0];1]]
