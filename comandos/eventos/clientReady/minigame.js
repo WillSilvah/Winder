@@ -7,10 +7,12 @@ $setInterval[
 $onlyIf[$getGlobalVar[sleepMode]==false;]
 $sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
 -----------------------------------
-MSGS/Minuto: $getGuildVar[msgPerMinute;$get[guildID];0]
+MSGS/Minuto: $getGuildVar[oldMsgPerMinute;$get[guildID];0]
 ]
 
 $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
+
+$onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>1;]
 
 $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
 
