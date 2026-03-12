@@ -24,7 +24,7 @@ $setStatus[Online;Playing;$username[$clientID] está ligado! >w<]
 
 $setInterval[
 $if[$getGlobalVar[sleepMode]==false;
-$setStatus[Online;Playing;$parseInt[$ram] MB | $truncate[$math[($cpu/1000)*100]]% | $parseDigital[$uptime] | $pingms | $getGlobalVar[version]];
+$setStatus[Idle;Playing;$parseInt[$ram] MB | $truncate[$math[($cpu/1000)*100]]% | $pingms | $getGlobalVar[version] | $parseDigital[$uptime]];
 $setStatus[Dnd;Playing;😪 Dormindo...]
 ]
 ;12s;ClientStatus]

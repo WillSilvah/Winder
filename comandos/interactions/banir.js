@@ -1,16 +1,16 @@
 module.exports = {
   code: `
-$let[userID;$findUser[$option[user]]]
-$let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
-$let[staffID;$authorID]
-$let[type;banido]
+    $let[userID;$findUser[$option[user]]]
+    $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
+    $let[staffID;$authorID]
+    $let[type;banido]
 
-$if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
-$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
+    $if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
+    $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-$!ban[$guildID;$get[userID];$get[type] por: $userTag[$get[staffID]] - $get[reason];0]
+    $!ban[$guildID;$get[userID];$get[type] por: $userTag[$get[staffID]] - $get[reason];0]
 
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
 > $bold[$get[reason]]]
 
   `,
