@@ -24,27 +24,27 @@ module.exports = [{
      $setMemberVar[memberIsolated;true;$env[userID];$guildID]
      
     $log[
-    $if[$getMemberVar[memberIsVerified;$env[userID]]==true;
+    $if[$getMemberVar[memberIsVerified;$env[userID];$guildID]==true;
      $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
     ]
 
-    $if[$getMemberVar[memberIsStaff;$env[userID]]==true;
+    $if[$getMemberVar[memberIsStaff;$env[userID];$guildID]==true;
      $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[allStaffRole]]
     ]
 
-    $if[$getMemberVar[memberIsArtist;$env[userID]]==true;
+    $if[$getMemberVar[memberIsArtist;$env[userID];$guildID]==true;
      $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberArtistRole]]
     ]
 
-    $if[$getMemberVar[memberIsOfficialArtist;$env[userID]]==true;
+    $if[$getMemberVar[memberIsOfficialArtist;$env[userID];$guildID]==true;
      $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberOfficialArtistRole]]
     ]
 
-    $if[$getMemberVar[memberIsSupporter;$env[userID]]==true;
+    $if[$getMemberVar[memberIsSupporter;$env[userID];$guildID]==true;
      $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberSupporterRole]]
     ]
 
-    $if[$getMemberVar[memberIsActive;$env[userID]]==true;
+    $if[$getMemberVar[memberIsActive;$env[userID];$guildID]==true;
      $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberActiveRole]]
     ]
     ]
