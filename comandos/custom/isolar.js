@@ -23,7 +23,7 @@ module.exports = [{
      
      $setMemberVar[memberIsolated;true;$env[userID];$guildID]
      
-    $return[
+    $log[
     $if[$getMemberVar[memberIsVerified;$env[userID]]==true;
      $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
     ]
