@@ -11,10 +11,10 @@ module.exports = {
      $if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
      $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-    $isolar[$get[userID]]
-
     $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
 > $bold[$get[reason]]]
+
+    $isolar[$get[userID]]
   `,
 data: {
   "type": 1,
