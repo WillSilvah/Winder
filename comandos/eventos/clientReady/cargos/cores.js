@@ -8,9 +8,11 @@ module.exports = [{
     $let[msgID;$sendMessage[1470875996356874292;
      $addContainer[
       $addSection[
-      $addTextDisplay[## SIMPLESMENTE CORES!
-     🔵 🩷 🔴 🟠 🟡 🟢 🟣
-     Escolha uma cor que mais combina com você!]
+$addTextDisplay[
+## SIMPLESMENTE CORES!
+🔵 🩷 🔴 🟠 🟡 🟢 🟣
+Escolha uma cor que mais combina com você!
+]
      $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f3a8.png]
       ]
      ;White]
