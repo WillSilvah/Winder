@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = [{
   name: 'displayTimeoutsListContainer',
   code: `
     $c[Getting data on the 'page']
@@ -12,9 +12,14 @@ module.exports = {
         $loop[$get[rows];
           $let[i;$math[$env[i] - 1]]
     
-          $addTextDisplay[## ID: \`$env[listPage;$get[i];0]\`]
-          $addTextDisplay[## Time: \`$parseMS[$env[listPage;$get[i];1;time];;, ;false]\`]
-          $addTextDisplay[## Ends in: $discordTimestamp[$env[listPage;$get[i];1;endTime];RelativeTime]]
+          $addSection[
+            $addTextDisplay[
+              ## ID: \`$env[listPage;$get[i];0]\`
+              ## Time: \`$parseDigital[$env[listPage;$get[i];1;time]]\`
+              ## Ends in: $discordTimestamp[$env[listPage;$get[i];1;endTime];RelativeTime]
+            ]
+            $addButton[$get[page]!!!$get[rows]!!!$env[listPage;$get[i];0]!!!stopTimeoutManually!!!$authorID;Stop;Success]
+          ]
 
           $if[$or[$sum[1;$env[i]]>$arrayLength[listPage];$env[i]==$get[rows]];
             $break
@@ -36,4 +41,32 @@ module.exports = {
       ]
     ]
   `
-}
+},{
+  name: 'generateTimeoutListPages',
+  params: [
+    {
+      name: 'rows',
+      description: 'Rows per page',
+      type: 'Number',
+      required: true,
+    }
+  ],
+  code: `
+    $jsonLoad[t;$getGlobalVar[timeouts;{}]]
+    $jsonLoad[te;$jsonEntries[t]]
+
+    $if[$arrayLength[te]==0;
+      $return[[\\]]
+    ]
+
+    $arrayCreate[__listPages]
+
+    $loop[$arrayLength[te];
+      $if[$math[($env[i] - 1) % $env[rows]]==0;
+        $arrayPushJSON[__listPages;$arraySplice[te;0;$env[rows]]]
+      ]
+    ;i;true]
+
+    $return[$env[__listPages]]
+  `
+}]

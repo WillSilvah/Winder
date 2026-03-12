@@ -5,22 +5,13 @@ module.exports = [{
   code: `
     $reply
 
-    $jsonLoad[timeouts;$getGlobalVar[timeouts;{}]]
-    $jsonLoad[timeoutEntries;$jsonEntries[timeouts]]
-
-    $onlyIf[$arrayLength[timeoutEntries]>0;
-      $addTextDisplay[# The list is empty.]
-    ]
-
-    $c[Maximal displayable rows in one message]
+    $c[Maximal displayable rows in one message. Must be a number. More than 5 is not recommended.]
     $let[maxRows;5]
 
     $let[pageArg;$message[0]] $c['page' argument written by a user (optional)]
     $let[rowsArg;$message[1]] $c['rows' argument written by a user (optional)]
 
     $c[=====CREATING TIMEOUTS LIST=====]
-
-    $arrayCreate[listPages]
 
     $c[Processing the 'rows' argument for errors. If an error occurs, the value of the 'maxRows' variable is returned]
     $let[rows;$function[
@@ -30,12 +21,7 @@ module.exports = [{
       $return[$get[maxRows]]
     ]]
 
-    $c[JSON pages system]
-    $loop[$arrayLength[timeoutEntries];
-      $if[$math[($env[i] - 1) % $get[rows]]==0;
-        $arrayPushJSON[listPages;$arraySplice[timeoutEntries;0;$get[rows]]]
-      ]
-    ;i;true]
+    $jsonLoad[listPages;$generateTimeoutListPages[$get[rows]]]
 
     $let[maxPages;$arrayLength[listPages]]
 
@@ -48,12 +34,6 @@ module.exports = [{
     ]]
 
     $displayTimeoutsListContainer
-    $let[mid;$sendMessage[$channelID;;true]]
-
-    $c[Caches the list in the message variable. Required for the correct functioning of pages.]
-    $if[$get[maxPages]>1;
-      $setMessageVar[timeoutListPages;$env[listPages];$get[mid]]
-    ]
   `
 },{
   type: 'interactionCreate',
@@ -67,12 +47,9 @@ module.exports = [{
 
     $let[page;$env[IID;0]]
     $let[rows;$env[IID;1]]
-    $let[mid;$messageID]
 
-    $jsonLoad[listPages;$getMessageVar[timeoutListPages;$get[mid];[\\]]]
+    $jsonLoad[listPages;$generateTimeoutListPages[$get[rows]]]
     $let[maxPages;$arrayLength[listPages]]
-
-    $onlyIf[$get[maxPages]>0]
 
     $switch[$env[IID;2];
       $case[timeoutsListButtonPrev;
@@ -94,12 +71,60 @@ module.exports = [{
     $interactionUpdate
   `
 },{
-  type: 'clientReady',
-  description: "Starts an infinite loop that deletes 'timeoutListPages' message variable every 30 minutes",
+  type: 'interactionCreate',
+  allowedInteractionTypes: ['button'],
   code: `
-    $loop[-1;
-      $deleteRecords[timeoutListPages;;message]
-      $wait[30m]
+    $arrayLoad[IID;!!!;$customID]
+    $arrayLoad[allowedIds; ;stopTimeoutManually]
+
+    $onlyIf[$arraySome[allowedIds;id;$arrayIncludes[IID;$env[id]]]]
+    $onlyIf[$arrayIncludes[IID;$authorID]]
+
+    $let[page;$env[IID;0]]
+    $let[rows;$env[IID;1]]
+    $let[timeoutId;$env[IID;2]]
+    $let[executionResult;$stopAdvancedTimeout[$get[timeoutId]]]
+
+    $jsonLoad[listPages;$generateTimeoutListPages[$get[rows]]]
+    $let[maxPages;$arrayLength[listPages]]
+
+    $if[$get[page]>$get[maxPages];
+      $let[page;$get[maxPages]]
     ]
+
+    $interactionUpdate[
+      $displayTimeoutsListContainer
+    ]
+
+    $interactionFollowUp[
+      $ephemeral
+      
+      $if[$get[executionResult];
+        $addTextDisplay[## Successfully stopped timeout \`$get[timeoutId]\`]
+      ;
+        $addTextDisplay[## Failed to stop timeout \`$get[timeoutId]\`]
+      ]
+    ]
+  `
+},{
+  name: 'stopalltimeouts',
+  aliases: ['sat'],
+  type: 'messageCreate',
+  code: `
+    $reply
+
+    $jsonLoad[t;$getGlobalVar[timeouts;{}]]
+    $jsonLoad[te;$jsonEntries[t]]
+
+    $onlyIf[$arrayLength[te]>0;
+      $addTextDisplay[## There are no active timeouts!]
+    ]
+
+    $loop[$arrayLength[te];
+      $let[tid;$env[te;$math[$env[i] - 1];0]]
+      $!stopAdvancedTimeout[$get[tid]]
+    ;i;true]
+
+    $addTextDisplay[## Stopped all timeouts!]
   `
 }]
