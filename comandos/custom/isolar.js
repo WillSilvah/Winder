@@ -11,15 +11,6 @@ module.exports = [{
     $onlyIf[$getGuildVar[memberIsolatedRole]!=;]
     $if[$hasRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]==false;
      $!memberAddRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
-     
-     $arrayLoad[channels;,;$guildChannelIDs[$guildID;,]]
-      $arrayForEach[channels;id;
-        $onlyIf[$channelType[$env[id]]==GuildText;
-         $log[Não foi possível modificar o canal $env[id] pois ele não é um canal de texto]
-        ]
-       $if[$env[id]!=$getGuildVar[isolatedChannel];
-       $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel]
-      ]]
       
       $log[Env: $env[userID]]
      
@@ -50,6 +41,16 @@ module.exports = [{
      $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberActiveRole]]
     ]
     ]
+    
+    $arrayLoad[channels;,;$guildChannelIDs[$guildID;,]]
+      $arrayForEach[channels;id;
+        $onlyIf[$channelType[$env[id]]==GuildText;
+         $log[Não foi possível modificar o canal $env[id] pois ele não é um canal de texto]
+        ]
+       $if[$env[id]!=$getGuildVar[isolatedChannel];
+       $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel]
+      ]]
+      
       ;
      $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
      
