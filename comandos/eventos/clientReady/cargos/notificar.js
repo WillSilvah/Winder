@@ -74,9 +74,14 @@ $!memberAddRoles[$guildID;$authorID;$env[id]]
 
     $else[
 
+    $if[$hasRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]==false;
     $!memberAddRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
-
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está recebendo notificações referente ao cargo <@&$env[notificar;$selectMenuValues]>!
+    
+    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está recebendo notificações referente ao cargo <@&$env[notificar;$selectMenuValues]>!]
+    ;
+    $!memberRemoveRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
+    
+    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não tem mais o cargo <@&$env[notificar;$selectMenuValues]>!]
 ]
 ]
 ]
