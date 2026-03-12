@@ -14,6 +14,7 @@ module.exports = [{
      
      $arrayLoad[channels;,;$guildChannelIDs[$guildID;,]]
       $arrayForEach[channels;id;
+        $log[$env[id]]
        $if[$env[id]!=$getGuildVar[isolatedChannel];
        $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel]
       ]]
