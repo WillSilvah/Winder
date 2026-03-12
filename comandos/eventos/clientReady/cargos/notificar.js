@@ -19,8 +19,7 @@ O que você quer receber na Patinhas?
 ;Red]
 
     $addActionRow
-    $addStringSelectMenu[notificar;Escolha uma notificação para receber;false;1;1]
-    $addOption[Receber tudo da Patinhas;Você será notificado de tudo que e possível;all;🔔;false]
+    $addStringSelectMenu[notificar;Escolha uma notificação para receber;false;1;3]
     $addOption[Receber notificação de coisas novas para a comunidade;Seja notificado quando acontecer algo novo na comunidade e ficar ligado em tudo.;novidades;⭐;false]
     
     $addOption[Participar de sorteios e de eventos;Seja notificado quando acontecer um sorteio ou um evento!;eventos;🎉;false]
@@ -28,8 +27,6 @@ O que você quer receber na Patinhas?
     $addOption[Receber avisos sobre os minigames;Seja notificado sobre alterações no Winder Minigames;minigame;🎮;false]
     
     $if[1==2;$addOption[Lives de streamers parceiros;Receba uma notificação de quando um parceiro fazer uma live! #VimDaPatinhas!;lives;🔴;false]]
-    
-    $addOption[Não quero receber notificações;Remove todos os cargos de notificação escolhidas.;remove;🔕;false]
 
 ;true]]
 
@@ -51,40 +48,11 @@ O que você quer receber na Patinhas?
 
     $arrayLoad[notificarID;,;$jsonValues[notificar;,]]
 
-    $ifx[
 
-    $if[$selectMenuValues==remove;
+$interactionReply[
 
+$if[$includes[$selectMenuValues;novidades];$env[notificar;novidades]];$if[$includes[$selectMenuValues;eventos];$env[notificar;eventos]];$if[$includes[$selectMenuValues;minigames];$env[notificar;minigames]];$if[$includes[$selectMenuValues;lives];$env[notificar;lives]]
 
-    $arrayForEach[notificarID;id;
-$!memberRemoveRoles[$guildID;$authorID;$env[id]]
 ]
-
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não receberá notificações especificas da patinhas 😪, mas não vai deixar de receber menções de @everyone, que são guardadas para avisos e alertas importantes. Podendo claro, silenciar nas configurações do seu Discord.]
-]
-
-    $elseIf[$selectMenuValues==all;
-
-    $arrayForEach[notificarID;id;
-$!memberAddRoles[$guildID;$authorID;$env[id]]
-]
-
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você preferiu receber todas as notificações importantes da Patinhas, fique antenado!]
-]
-
-    $else[
-
-    $if[$hasRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]==false;
-    $!memberAddRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
-    
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está recebendo notificações referente ao cargo <@&$env[notificar;$selectMenuValues]>!]
-    ;
-    $!memberRemoveRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
-    
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não tem mais o cargo <@&$env[notificar;$selectMenuValues]>!]
-]
-]
-]
-    
 `
 }]
