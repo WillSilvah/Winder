@@ -48,10 +48,9 @@ O que você quer receber na Patinhas?
 
     $arrayLoad[notificarID;,;$jsonValues[notificar;,]]
 
-
 $interactionReply[
 
-$if[$includes[$selectMenuValues;novidades];$env[notificar;novidades]];$if[$includes[$selectMenuValues;eventos];$env[notificar;eventos]];$if[$includes[$selectMenuValues;minigames];$env[notificar;minigames]];$if[$includes[$selectMenuValues;lives];$env[notificar;lives]]
+$if[$includes[$selectMenuValues;novidades] $env[notificar;novidades]] $if[$includes[$selectMenuValues;eventos] $env[notificar;eventos]] $if[$includes[$selectMenuValues;minigames];$env[notificar;minigames]] $if[$includes[$selectMenuValues;lives];$env[notificar;lives]]
 
 ]
 `
