@@ -25,7 +25,7 @@ module.exports = [{
      
     $return[
     $if[$getMemberVar[memberIsVerified;$env[userID]]==true;
-     $return$memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
+     $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
     ]
 
     $if[$getMemberVar[memberIsStaff;$env[userID]]==true;
