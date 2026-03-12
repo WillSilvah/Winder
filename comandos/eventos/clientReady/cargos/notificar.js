@@ -47,11 +47,9 @@ O que você quer receber na Patinhas?
 ]
 
     $arrayLoad[notificarID;,;$jsonValues[notificar;,]]
+    
+    $!memberAddRoles[$guildID;$authorID;$if[$includes[$selectMenuValues;novidades]==true;$env[notificar;novidades]];$if[$includes[$selectMenuValues;eventos]==true;$env[notificar;eventos]];$if[$includes[$selectMenuValues;minigame]==true;$env[notificar;minigame]];$if[$includes[$selectMenuValues;lives]==true;$env[notificar;lives]]]
 
-$interactionReply[
-
-$if[$includes[$selectMenuValues;novidades]==true;$env[notificar;novidades]] $if[$includes[$selectMenuValues;eventos]==true;$env[notificar;eventos]] $if[$includes[$selectMenuValues;minigames]==true;$env[notificar;minigames]] $if[$includes[$selectMenuValues;lives]==true;$env[notificar;lives]]
-
-]
+$interactionReply[Pronto! $customEmoji[pats_foxThumbsUp]]
 `
 }]
