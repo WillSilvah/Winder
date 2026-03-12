@@ -3,7 +3,7 @@ module.exports = {
     $let[userID;$findUser[$option[user]]]
     $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
     $let[staffID;$authorID]
-     $if[$hasRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]==false;
+     $if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberIsolatedRole]]==false;
       $let[type;adicionado ao isolamento];
       $let[type;retirado do isolamento]
      ]
