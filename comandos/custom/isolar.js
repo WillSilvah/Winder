@@ -11,8 +11,6 @@ module.exports = [{
     $onlyIf[$getGuildVar[memberIsolatedRole]!=;]
     $if[$hasRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]==false;
      $!memberAddRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
-      
-      $log[Env: $env[userID]]
      
      $setMemberVar[memberIsolated;true;$env[userID];$guildID]
      
@@ -44,11 +42,11 @@ module.exports = [{
        $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel]
       ]]
       
+      $return[]
       ;
      $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
      
      $advancedTimeout[$esc[
-     
      
       $setMemberVar[memberIsolated;false;{0};{1}]
      
