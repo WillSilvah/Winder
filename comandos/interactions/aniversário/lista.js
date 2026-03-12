@@ -1,6 +1,6 @@
 module.exports = {
   code: `
-$let[month;$default[$option[mes];$month[TwoDigit]]]
+$let[month;$if[$option[mes]==;$month[TwoDigit];$option[mes]]]
 
 $let[monthName;$ifx[
 $if[$get[month]==01;JANEIRO]
