@@ -21,9 +21,7 @@ $setMemberVar[messageWeekly;$sum[$getMemberVar[messageWeekly;$authorID;$guildID;
 $setMemberVar[messageToday;$sum[$getMemberVar[messageToday;$authorID;$guildID;0];1]]
 $setMemberVar[messageTotal;$sum[$getMemberVar[messageTotal;$authorID;$guildID;0];1]]
 
-$if[$channelID==1462224055884189781;
 $setGuildVar[msgPerMinute;$sum[$getGuildVar[msgPerMinute;$guildID;0];1]]
-]
 
 `
 }
