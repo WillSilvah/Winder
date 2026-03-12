@@ -23,25 +23,30 @@ module.exports = [{
      
      $setMemberVar[memberIsolated;true;$env[userID];$guildID]
      
-     $if[$getMemberVar[memberIsVerified;$env[userID]]==true;
-      $log[$getMemberVar[memberIsVerified;$env[userID]] = $getGuildVar[memberVerifiedRole]]
-      $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
-     ]
-      $if[$getMemberVar[memberIsStaff;$env[userID]]==true;
-       $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[allStaffRole]]
-      ]
-       $if[$getMemberVar[memberIsArtist;$env[userID]]==true;
-        $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberArtistRole]]
-       ]
-        $if[$getMemberVar[memberIsOfficialArtist;$env[userID]]==true;
-         $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberOfficialArtistRole]]
-        ]
-         $if[$getMemberVar[memberIsSupporter;$env[userID]]==true;
-          $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberSupporterRole]]
-         ]
-          $if[$getMemberVar[memberIsActive;$env[userID]]==true;
-           $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberActiveRole]]
-          ]
+    $if[$getMemberVar[memberIsVerified;$env[userID]]==true;
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
+    ]
+
+    $if[$getMemberVar[memberIsStaff;$env[userID]]==true;
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[allStaffRole]]
+    ]
+
+    $if[$getMemberVar[memberIsArtist;$env[userID]]==true;
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberArtistRole]]
+    ]
+
+    $if[$getMemberVar[memberIsOfficialArtist;$env[userID]]==true;
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberOfficialArtistRole]]
+    ]
+
+    $if[$getMemberVar[memberIsSupporter;$env[userID]]==true;
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberSupporterRole]]
+    ]
+
+    $if[$getMemberVar[memberIsActive;$env[userID]]==true;
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberActiveRole]]
+    ]
+
      
       
       ;
