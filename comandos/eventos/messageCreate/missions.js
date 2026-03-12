@@ -51,7 +51,7 @@ module.exports = [{
      $sendMessage[1467318550925410485;
      $title[O membro @$userTag é um membro ativo!]
      $description[Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
-Cálculo atual: **$truncate[$math[$media[messageMonth;$guildMemberCount[1462224054676099094;;false]]/3]]**
+Cálculo atual: **$truncate[$math[$media[messageMonth;$guildMemberCount[1462224054676099094;;false]]]]**
 
 Mensagens enviadas neste mês: **$getMemberVar[messageMonth]**
 Mensagens enviadas nesta semana: **$getMemberVar[messageWeekly]**
