@@ -25,7 +25,7 @@ $username[$clientID] está ligado! >w<
 $setStatus[Online;Playing;$username[$clientID] está ligado! >w<]
 
 $setInterval[
-$setStatus[Idle;Playing;$parseInt[$ram] MB | $truncate[$math[($cpu/1000)*100]]% | $parseDigital[$uptime] | $pingms | $getGlobalVar[version]]
+$setStatus[Idle;Playing;$parseInt[$ram] MB | $truncate[$math[($cpu/1000)*100]]% | $pingms | $getGlobalVar[version] | $parseDigital[$uptime]]
 
 ;12s;ClientStatus]
 `
