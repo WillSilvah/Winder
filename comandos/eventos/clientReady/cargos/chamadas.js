@@ -14,7 +14,7 @@ $let[msgID;$sendMessage[1470875996356874292;$disableAllMentions
 **💬! 🔉!**
 
 Sabia que você pode ser mencionado no bate papo para conversar sobre um assunto?
-- Os cargos de chamadas podem ser mencionados por **qualquer pessoa** durante **06:00** até **22:00** no horário de Pernambuco.
+-# - Os cargos de chamadas podem ser mencionados por **qualquer pessoa** durante **06:00** até **22:00** no horário de Pernambuco.
 
 > **⚠️ Lembre-se, pode acontecer de receber várias menções**
 ]
