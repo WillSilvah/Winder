@@ -20,7 +20,7 @@ $jsonLoad[birthdayDB;$searchDB[birthday;;member;;$guildID]]
 $disableAllMentions
 $addContainer[
 $addSection[
-$addTextDisplay[## ANIVERSÁRIANTES DE $get[monthName]!]
+$addTextDisplay[## $get[month] ANIVERSÁRIANTES DE $get[monthName]!]
 $addThumbnail[$guildIcon]
 ]
 $addSeparator[Large]
