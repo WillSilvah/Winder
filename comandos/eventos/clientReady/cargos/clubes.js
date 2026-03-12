@@ -44,19 +44,16 @@ Qual clube você se identifica ou quer participar?
 
     $ifx[
     $if[$selectMenuValues==remove;
-
+     $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você saiu de todos os clubes.]
+    
     $arrayForEach[clubesID;id;
 $!memberRemoveRoles[$guildID;$authorID;$env[id]]
 ]
-
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você saiu de todos os clubes.]
 ]
 
     $else[
-    
-    $!memberAddRoles[$guildID;$authorID;$env[clubes;$selectMenuValues]]
-
     $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está participando do clube: <@&$env[clubes;$selectMenuValues]>!
+    $!memberAddRoles[$guildID;$authorID;$env[clubes;$selectMenuValues]]
 ]
 ]
 ]

@@ -52,39 +52,28 @@ O que você quer receber na Patinhas?
     $arrayLoad[notificarID;,;$jsonValues[notificar;,]]
 
     $ifx[
-
-    $if[$selectMenuValues==remove;
-
-
-    $arrayForEach[notificarID;id;
-$!memberRemoveRoles[$guildID;$authorID;$env[id]]
-]
-
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não receberá notificações especificas da patinhas 😪, mas não vai deixar de receber menções de @everyone, que são guardadas para avisos e alertas importantes. Podendo claro, silenciar nas configurações do seu Discord.]
-]
-
-    $elseIf[$selectMenuValues==all;
-
-    $arrayForEach[notificarID;id;
-$!memberAddRoles[$guildID;$authorID;$env[id]]
-]
-
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você preferiu receber todas as notificações importantes da Patinhas, fique antenado!]
-]
-
-    $else[
-
-    $if[$hasRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]==false;
-    $!memberAddRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
-    
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está recebendo notificações referente ao cargo <@&$env[notificar;$selectMenuValues]>!]
+     $if[$selectMenuValues==remove;
+     $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não receberá notificações especificas da patinhas 😪, mas não vai deixar de receber menções de @everyone, que são guardadas para avisos e alertas importantes. Podendo claro, silenciar nas configurações do seu Discord.]
+      $arrayForEach[notificarID;id;
+      $!memberRemoveRoles[$guildID;$authorID;$env[id]]
+      ]
+     ]
+     $elseIf[$selectMenuValues==all;
+      $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você preferiu receber todas as notificações importantes da Patinhas, fique antenado!]
+      $arrayForEach[notificarID;id;
+      $!memberAddRoles[$guildID;$authorID;$env[id]]
+      ]
+     ]
+     $else[
+      $if[$hasRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]==false;
+       $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você está recebendo notificações referente ao cargo <@&$env[notificar;$selectMenuValues]>!]
+      $!memberAddRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
     ;
-    $!memberRemoveRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
-    
     $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não tem mais o cargo <@&$env[notificar;$selectMenuValues]>!]
-]
-]
-]
+    $!memberRemoveRoles[$guildID;$authorID;$env[notificar;$selectMenuValues]]
+     ]
+    ]
+    ]
     
 `
 }]

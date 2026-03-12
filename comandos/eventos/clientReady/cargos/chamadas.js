@@ -24,13 +24,11 @@ Sabia que você pode ser mencionado no bate papo para conversar sobre um assunto
 
     $addActionRow
     $addStringSelectMenu[chamadas;Escolha uma notificação para receber;false;1;1]
-    $addOption[Chamar para conversar;Seja chamado para conversar sobre algum assunto junto com a gente;conversar;💬;false]
+     $addOption[Chamar para conversar;Seja chamado para conversar sobre algum assunto junto com a gente;conversar;💬;false]
+     $addOption[Chamar para calls;Gosta de participar de Calls? Seja chamado quando quiserem fazer uma!;call;🔉;false]
+     $addOption[Não quero receber chamadas;É incômodo? Pode remover todas as chamadas se quiser.;remove;❌;false]
     
-    $addOption[Chamar para calls;Gosta de participar de Calls? Seja chamado quando quiserem fazer uma!;call;🔉;false]
-    
-    $addOption[Não quero receber chamadas;É incômodo? Pode remover todas as chamadas se quiser.;remove;❌;false]
-    
-;true]]
+    ;true]]
 
     $setGlobalVar[chamadas_messageID;$get[msgID]]
 `
@@ -45,23 +43,20 @@ Sabia que você pode ser mencionado no bate papo para conversar sobre um assunto
     $arrayLoad[chamadasID;,;$jsonValues[chamadas;,]]
 
     $ifx[
-    $if[$selectMenuValues==remove;
-
-    $arrayForEach[chamadasID;id;
-$!memberRemoveRoles[$guildID;$authorID;$env[id]]
-]
-
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não será mais chamado pelos membros.]
-]
+     $if[$selectMenuValues==remove;
+     $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não será mais chamado pelos membros.]
+    
+     $arrayForEach[chamadasID;id;
+     $!memberRemoveRoles[$guildID;$authorID;$env[id]]
+     ]
+     ]
 
     $else[
-    
-    $!memberAddRoles[$guildID;$authorID;$env[chamadas;$selectMenuValues]]
-
-    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Te dei o cargo <@&$env[chamadas;$selectMenuValues]>!
-]
-]
-]
+     $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Te dei o cargo <@&$env[chamadas;$selectMenuValues]>!
+     $!memberAddRoles[$guildID;$authorID;$env[chamadas;$selectMenuValues]]
+     ]
+    ]
+   ]
 
     
 `

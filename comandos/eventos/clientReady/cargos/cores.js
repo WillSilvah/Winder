@@ -51,10 +51,8 @@ Escolha uma cor que mais combina com você!
     $if[$selectMenuValues!=remove;
      $arrayForEach[coresID;id;
      $!memberRemoveRoles[$guildID;$authorID;$env[id]]]
-
-     $!memberAddRoles[$guildID;$authorID;$env[cores;$selectMenuValues]]
-
      $interactionReply[Pronto! Você está usando a cor <@&$env[cores;$selectMenuValues]>!]
+     $!memberAddRoles[$guildID;$authorID;$env[cores;$selectMenuValues]]
      ;
      $arrayLoad[coresID;,;$jsonValues[cores;,]]
      $arrayForEach[coresID;id;
