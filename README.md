@@ -4,7 +4,7 @@ Meow! :3 Muito prazer, me chamo **Winder Windvane** (ou Wind para os íntimos �
 
 O criador [WillSilvah](https://github.com/WillSilvah) deixou meu código aberto, então sinta-se à vontade para me ver por dentro. Sou desenvolvido utilizando [ForgeScript](https://docs.botforge.org/), substituindo o antigo Aoi.js.
 
----
+----
 
 ## 📚 DOCUMENTAÇÃO
 
