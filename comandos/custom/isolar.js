@@ -10,7 +10,7 @@ module.exports = [{
     code: `
     $onlyIf[$getGuildVar[memberIsolatedRole]!=;]
     $if[$hasRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]==false;
-     $memberAddRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
+     $!memberAddRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
      
      $arrayLoad[channels;,;$guildChannelIDs[$guildID;,]]
       $arrayForEach[channels;id;
@@ -20,36 +20,38 @@ module.exports = [{
        $if[$env[id]!=$getGuildVar[isolatedChannel];
        $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel]
       ]]
+      
+      $log[Env: $env[userID]]
      
      $setMemberVar[memberIsolated;true;$env[userID];$guildID]
      
-    $log[
+         $log[
     $if[$getMemberVar[memberIsVerified;$env[userID];$guildID]==true;
-     $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
     ]
 
     $if[$getMemberVar[memberIsStaff;$env[userID];$guildID]==true;
-     $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[allStaffRole]]
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[allStaffRole]]
     ]
 
     $if[$getMemberVar[memberIsArtist;$env[userID];$guildID]==true;
-     $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberArtistRole]]
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberArtistRole]]
     ]
 
     $if[$getMemberVar[memberIsOfficialArtist;$env[userID];$guildID]==true;
-     $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberOfficialArtistRole]]
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberOfficialArtistRole]]
     ]
 
     $if[$getMemberVar[memberIsSupporter;$env[userID];$guildID]==true;
-     $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberSupporterRole]]
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberSupporterRole]]
     ]
 
     $if[$getMemberVar[memberIsActive;$env[userID];$guildID]==true;
-     $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberActiveRole]]
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberActiveRole]]
     ]
     ]
       ;
-     $memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
+     $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
      
      $advancedTimeout[$esc[
       $setMemberVar[memberIsolated;false;{0};{1}]
