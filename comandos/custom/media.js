@@ -13,9 +13,9 @@ module.exports = [{
     }
    ],
    code: `
-$let[soma;$math[$memberLeaderboard[$env[variable];$guildID;desc;$env[quantity];1;+;data;pos;$return[$env[data;value]]
+    $let[soma;$math[$memberLeaderboard[$env[variable];$guildID;desc;$env[quantity];1;+;data;pos;$return[$env[data;value]]
 ]]]
 
-$return[$truncate[$math[$get[soma]/$env[quantity]]]]
+    $return[$truncate[$math[$get[soma]/$env[quantity]]]]
 `
 }]
