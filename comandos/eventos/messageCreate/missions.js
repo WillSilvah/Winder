@@ -33,8 +33,6 @@ module.exports = [{
      ]
     ]
 
-
-
     $if[$getGuildVar[guildMonthMessages;$guildID;0]==$getGuildVar[guildMonthMessagesMeta;$guildID];
      $setGuildVar[guildMonthMessagesMeta;$math[$getGuildVar[guildMonthMessagesMeta;$guildID]+10000];$guildID]
     ]

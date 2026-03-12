@@ -3,6 +3,8 @@ module.exports = [{
   aliases: ['activetimeoutslist', 'activetimeouts', 'tlist'],
   type: 'messageCreate',
   code: `
+    $reply
+
     $jsonLoad[timeouts;$getGlobalVar[timeouts;{}]]
     $jsonLoad[timeoutEntries;$jsonEntries[timeouts]]
 
@@ -10,17 +12,17 @@ module.exports = [{
       $addTextDisplay[# The list is empty.]
     ]
 
-    $let[maxRows;5] $c[Maximal displayable rows in one message]
-    $let[varDeletionTime;5m] $c[The time after which the message variable 'varDeletionTime' will be deleted to avoid cluttering the database (only if there is more than one page)]
+    $c[Maximal displayable rows in one message]
+    $let[maxRows;5]
 
-    $let[pageArg;$message[0]]
-    $let[rowsArg;$message[1]]
-
+    $let[pageArg;$message[0]] $c['page' argument written by a user (optional)]
+    $let[rowsArg;$message[1]] $c['rows' argument written by a user (optional)]
 
     $c[=====CREATING TIMEOUTS LIST=====]
 
     $arrayCreate[listPages]
 
+    $c[Processing the 'rows' argument for errors. If an error occurs, the value of the 'maxRows' variable is returned]
     $let[rows;$function[
       $if[$and[$get[rowsArg]!=;$isNumber[$get[rowsArg]];$get[rowsArg]<=$get[maxRows];$get[rowsArg]>=1];
         $return[$get[rowsArg]]
@@ -28,6 +30,7 @@ module.exports = [{
       $return[$get[maxRows]]
     ]]
 
+    $c[JSON pages system]
     $loop[$arrayLength[timeoutEntries];
       $if[$math[($env[i] - 1) % $get[rows]]==0;
         $arrayPushJSON[listPages;$arraySplice[timeoutEntries;0;$get[rows]]]
@@ -36,6 +39,7 @@ module.exports = [{
 
     $let[maxPages;$arrayLength[listPages]]
 
+    $c[Processing the 'page' argument for errors. If an error occurs, '1' is returned]
     $let[page;$function[
       $if[$and[$get[pageArg]!=;$isNumber[$get[pageArg]];$get[pageArg]<=$get[maxPages];$get[pageArg]>=1];
         $return[$get[pageArg]]
@@ -43,50 +47,12 @@ module.exports = [{
       $return[1]
     ]]
 
-    $jsonLoad[listPage;$arrayAt[listPages;$math[$get[page]-1]]]
-
-
-    $c[=====SENDING CONTAINER MESSAGE=====]
-
-    $addContainer[
-      $addTextDisplay[# Active Timeouts]
-      $addSeparator[Large]
-
-      $if[$arrayLength[listPage]>0;
-        $loop[$get[rows];
-          $let[i;$math[$env[i] - 1]]
-    
-          $addTextDisplay[ID: \`$env[listPage;$get[i];0]\`]
-          $addTextDisplay[Time: \`$parseMS[$env[listPage;$get[i];1;time];;, ;false]\`]
-          $addTextDisplay[Ends in: $discordTimestamp[$env[listPage;$get[i];1;endTime];RelativeTime]]
-
-          $if[$or[$sum[1;$env[i]]>$arrayLength[listPage];$env[i]==$get[rows]];
-            $break
-          ]
-
-          $addSeparator[Large;false]
-        ;i;true]
-      ;
-        $addTextDisplay[## The list is empty.]
-      ]
-
-      $addSeparator[Large]
-      $addTextDisplay[### Page $get[page]/$get[maxPages]]
-
-      $if[$get[maxPages]>1;
-        $addActionRow
-        $addButton[$get[page]-$get[rows]-timeoutsListButtonPrev-$authorID;;Primary;◀️]
-        $addButton[$get[page]-$get[rows]-timeoutsListButtonNext-$authorID;;Primary;▶️]
-      ]
-    ]
+    $displayTimeoutsListContainer
     $let[mid;$sendMessage[$channelID;;true]]
 
-    $c[Saves the list to the message variable. Will be deleted after the time specified in the 'varDeletionTime' variable]
+    $c[Caches the list in the message variable. Required for the correct functioning of pages.]
     $if[$get[maxPages]>1;
       $setMessageVar[timeoutListPages;$env[listPages];$get[mid]]
-      $!advancedTimeout[$esc[
-        $deleteMessageVar[timeoutListPages;{1}]
-      ];$get[varDeletionTime];timeoutListPages-$authorID-$get[mid];$channelID;$get[mid]]
     ]
   `
 },{
@@ -103,11 +69,10 @@ module.exports = [{
     $let[rows;$env[IID;1]]
     $let[mid;$messageID]
 
-    $jsonLoad[listPages;$getMessageVar[timeoutListPages;$get[mid]]]
-
-    $onlyIf[$env[listPages]!=]
-
+    $jsonLoad[listPages;$getMessageVar[timeoutListPages;$get[mid];[\\]]]
     $let[maxPages;$arrayLength[listPages]]
+
+    $onlyIf[$get[maxPages]>0]
 
     $switch[$env[IID;2];
       $case[timeoutsListButtonPrev;
@@ -125,41 +90,16 @@ module.exports = [{
       ]
     ]
 
-    $jsonLoad[listPage;$arrayAt[listPages;$math[$get[page]-1]]]
-
-    $c[=====SENDING CONTAINER MESSAGE=====]
-
-    $addContainer[
-      $addTextDisplay[# Active Timeouts]
-      $addSeparator[Large]
-
-      $if[$arrayLength[listPage]>0;
-        $loop[$get[rows];
-          $let[i;$math[$env[i] - 1]]
-    
-          $addTextDisplay[ID: \`$env[listPage;$get[i];0]\`]
-          $addTextDisplay[Time: \`$parseMS[$env[listPage;$get[i];1;time];;, ;false]\`]
-          $addTextDisplay[Ends in: $discordTimestamp[$env[listPage;$get[i];1;endTime];RelativeTime]]
-
-          $if[$or[$sum[1;$env[i]]>$arrayLength[listPage];$env[i]==$get[rows]];
-            $break
-          ]
-
-          $addSeparator[Large;false]
-        ;i;true]
-      ;
-        $addTextDisplay[## The list is empty.]
-      ]
-
-      $addSeparator[Large]
-      $addTextDisplay[### Page $get[page]/$get[maxPages]]
-
-      $if[$get[maxPages]>0;
-        $addActionRow
-        $addButton[$get[page]-$get[rows]-timeoutsListButtonPrev-$authorID;;Primary;◀️]
-        $addButton[$get[page]-$get[rows]-timeoutsListButtonNext-$authorID;;Primary;▶️]
-      ]
-    ]
+    $displayTimeoutsListContainer
     $interactionUpdate
+  `
+},{
+  type: 'clientReady',
+  description: "Starts an infinite loop that deletes 'timeoutListPages' message variable every 30 minutes",
+  code: `
+    $loop[-1;
+      $deleteRecords[timeoutListPages;;message]
+      $wait[30m]
+    ]
   `
 }]
