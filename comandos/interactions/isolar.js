@@ -3,7 +3,10 @@ module.exports = {
     $let[userID;$findUser[$option[user]]]
     $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
     $let[staffID;$authorID]
-    $let[type;isolado]
+     $if[$hasRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]==false;
+      $let[type;adicionado ao isolamento];
+      $let[type;retirado do isolamento]
+     ]
 
      $if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
      $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
