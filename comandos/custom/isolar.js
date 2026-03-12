@@ -49,7 +49,7 @@ module.exports = [{
      $advancedTimeout[$esc[
       $setMemberVar[memberIsolated;false;{0};{1}]
      
-     ];24h;IsolatedStatus_$get[userID];$get[userID];$guildID]
+     ];24h;IsolatedStatus_$env[userID];$env[userID];$guildID]
     ]
 
 `

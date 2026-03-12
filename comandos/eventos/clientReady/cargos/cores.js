@@ -9,8 +9,8 @@ module.exports = [{
      $addContainer[
       $addSection[
       $addTextDisplay[## SIMPLESMENTE CORES!
-      🔵 🩷 🔴 🟠 🟡 🟢 🟣
-      Escolha uma cor que mais combina com você!]
+     🔵 🩷 🔴 🟠 🟡 🟢 🟣
+     Escolha uma cor que mais combina com você!]
      $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f3a8.png]
       ]
      ;White]
