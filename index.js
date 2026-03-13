@@ -110,7 +110,7 @@ const client = new ForgeClient({
         "webhooksUpdate"
     ],
     prefixes: [
-        "w+", "w/"
+        "w+", "w/", "<@$clientID> "
     ],
     prefixCaseInsensitive: true,
     trackers: {
