@@ -3,7 +3,7 @@ module.exports = [{
      code: `
      $timezone[America/Recife]
      $onlyIf[$weekDay[Long]-$day==Friday-13;]
-     $onlyIf[$randomNumber[1;100]<=5;]
+     $onlyIf[$randomNumber[1;100]<=1;]
      $onlyIf[$hasRoles[$guildID;$authorID;1481960745582202991]==false;]
 
     $!addMessageReactions[$channelID;$messageID;💀]
@@ -14,4 +14,22 @@ $sendMessage[$channelID;### O <@$authorID> TEVE AZAR.
 $!memberAddRoles[$guildID;$authorID;1481960745582202991]
 
 `
-}]
+},{
+    type: "clientReady",
+    code: `$cron[
+    $arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;1480183732932444192;,]]
+    $arrayMap[roleMembers;id;
+    $return[<@$env[id]>]
+    ;roleUsernames]
+
+$sendMessage[$channelID;
+$addSection[
+$addTextDisplay[### E esses foram os membros que enviaram mensagem hoje e ganharam a badge especial de Dia das mulheres! ❤️
+
+$arrayJoin[roleUsernames;
+]
+]
+$addThumbnail[https://i.ibb.co/MxMZdXRr/pats-diadamulher2026.png]
+]
+]
+`}]
