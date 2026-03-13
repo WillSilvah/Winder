@@ -23,11 +23,11 @@ module.exports = [{
         $addTextDisplay[Está fazendo $math[$year-$getMemberVar[birthdayYear;$env[id];$get[guildID]]] anos.]
 ]
     $addThumbnail[$userAvatar[$env[id]]]
-]
+
     $addSeparator[Large;true]
     
     $addTextDisplay[-# **Adicione o seu aniversário com /aniversário adicionar**]
-;true]
+    ;true]]
 
     $publishMessage[$getGuildVar[birthdayChannel;$get[guildID]];$get[msgid]]
 
