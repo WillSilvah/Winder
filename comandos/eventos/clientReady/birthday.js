@@ -18,17 +18,14 @@ module.exports = [{
 
     $let[msgid;$sendMessage[$getGuildVar[birthdayChannel;$get[guildID]];
     $addSection[
-        $addTextDisplay[## 🎂 HOJE É ANIVERSÁRIO DO @$userTag[$env[id]]!]
-        $addTextDisplay[Está fazendo $math[$year-$getMemberVar[birthdayYear;$env[id];$get[guildID]]] anos.]
-]
-    $addThumbnail[$userAvatar[$env[id]]]
-
+     $addTextDisplay[## 🎂 HOJE É ANIVERSÁRIO DO @$userTag[$env[id]]!]
+     $addTextDisplay[Está fazendo $math[$year-$getMemberVar[birthdayYear;$env[id];$get[guildID]]] anos.]
+     $addThumbnail[$userAvatar[$env[id]]]
+    ]
     $addSeparator[Large;true]
-    
     $addTextDisplay[-# **Adicione o seu aniversário com /aniversário adicionar**]
-    ;true]]
     $addTextDisplay[<@&1463138741441790014>]
-
+    ;true]]
     $publishMessage[$getGuildVar[birthdayChannel;$get[guildID]];$get[msgid]]
 
 ]
