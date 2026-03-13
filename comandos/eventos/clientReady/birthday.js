@@ -14,7 +14,6 @@ module.exports = [{
       $addThumbnail[$userAvatar[$env[id]]]
      ]
       $addSeparator[Large;true]
-      $addTextDisplay[<@&1463138741441790014>]
      ]
 
     $let[msgid;$sendMessage[$getGuildVar[birthdayChannel;$get[guildID]];
@@ -28,6 +27,7 @@ module.exports = [{
     
     $addTextDisplay[-# **Adicione o seu aniversário com /aniversário adicionar**]
     ;true]]
+    $addTextDisplay[<@&1463138741441790014>]
 
     $publishMessage[$getGuildVar[birthdayChannel;$get[guildID]];$get[msgid]]
 
