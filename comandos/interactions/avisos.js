@@ -1,7 +1,7 @@
 module.exports = {
     code: `
     $let[userID;$option[user]]
-    $interactionReply[**BETA** <@$authorID> Aqui está as advertências de **@$get[userID]**!
+    $interactionReply[**BETA** <@$authorID> Aqui está as advertências de **@$userTag[$get[userID]]**!
     $attachment[$getMemberVar[warnList;$get[userID]];WinderDB_WarnList_$userTag[$get[userID]];true]
     ]
   `,
