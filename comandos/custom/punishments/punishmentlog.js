@@ -22,7 +22,7 @@ module.exports = [{
         required: false
     }
     ],
-    code: `
+    code: `$stop
     $sendMessage[$getGuildVar[punishmentLog];
         
         $author[Equipe Patinhas: Nossa toca, tem regras.;https://cdn.discordapp.com/emojis/1466597066892640456.png?size=2048]

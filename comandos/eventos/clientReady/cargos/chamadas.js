@@ -23,6 +23,7 @@ Sabia que você pode ser mencionado no bate papo para conversar sobre um assunto
 ;Yellow]
 
     $addActionRow
+    
     $addStringSelectMenu[chamadas;Escolha uma notificação para receber;false;1;1]
      $addOption[Chamar para conversar;Seja chamado para conversar sobre algum assunto junto com a gente;conversar;💬;false]
      $addOption[Chamar para calls;Gosta de participar de Calls? Seja chamado quando quiserem fazer uma!;call;🔉;false]

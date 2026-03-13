@@ -1,23 +1,20 @@
 module.exports = {
   code: `
-$let[userID;$findUser[$option[user]]]
-$let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
-$let[staffID;$authorID]
-$let[type;advertido]
+    $let[userID;$findUser[$option[user]]]
+    $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
+    $let[staffID;$authorID]
+    $let[type;advertido]
 
-$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
-$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
+    $sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
+    $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-$setMemberVar[lastWarn;{"staffID": "$findUser[$get[staffID]]","reason": "$get[reason]"};$findUser[$get[userID]]]
-$setMemberVar[warnsTotal;$sum[$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0];1];$findUser[$get[userID]]]
+    $jsonLoad[avisos;$getMemberVar[warnList;$get[userID];$guildID;{}]]
+     $!jsonSet[avisos;$getMemberVar[warns;$get[userID];$guildID;0];{"staffID":"$get[staffID]","reason": "$get[reason]"}]
+      $setMemberVar[warnList;$env[avisos];$get[userID];$guildID]
+      
 
-$writeFile[Recursos/avisos/$guildID/$findUser[$get[userID]]/aviso_$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0].txt;{
-"staffID": "$get[staffID]", 
-"motivo": "$get[reason]"
-};utf8]
-
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
-> $bold[$get[reason]]]
+    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
+    > $bold[$get[reason]]]
 
   `,
 data: {
