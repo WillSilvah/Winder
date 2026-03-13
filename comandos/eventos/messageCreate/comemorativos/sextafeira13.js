@@ -1,11 +1,11 @@
 module.exports = [{
      type: "messageCreate",
      code: `
-     $cooldown[$authorID;5m;]
-    $timezone[America/Recife]
-    $onlyIf[$weekDay[Long]-$day==Friday-13;]
-    $onlyIf[$randomNumber[1;100]<=5;]
-    $onlyIf[$hasRoles[$guildID;$authorID;1481960745582202991]==false;]
+    $cooldown[$authorID;30s;]
+     $timezone[America/Recife]
+     $onlyIf[$weekDay[Long]-$day==Friday-13;]
+     $onlyIf[$randomNumber[1;100]<=5;]
+     $onlyIf[$hasRoles[$guildID;$authorID;1481960745582202991]==false;]
 
     $!addMessageReactions[$channelID;$messageID;💀]
 $sendMessage[$channelID;### O <@$authorID> TEVE AZAR.
