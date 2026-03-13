@@ -10,25 +10,32 @@ module.exports = [{
 $sendMessage[$channelID;### O <@$authorID> TEVE AZAR.
 -# $randomText[Atropelado por uma bicleta;Simplesmente faleceu;Morreu de uma batata quente;Caiu em um buraco;Foi atropelado por um unicórnio;Tomou um golpe de faca;Foi engulido por um buraco negro;Morreu de tédio;Foi picado por uma abelha assassina;Caiu de uma escada;Morreu de risada;Foi vítima de um ataque de gatinhos;Tomou um tiro de Nerf;Foi esmagado por um piano;Morreu de sono;Foi devorado por um dragão;Caiu em um poço de lava;Morreu de fome em uma ilha deserta;Foi atingido por um raio;Morreu de vergonha;Foi vítima de um ataque de memes;Caiu de um prédio;Morreu de overdose de açúcar]
 ]
+
+
+$getGuildVar[evento_sextafeira13;$math[$day+1];$guildID]
     
 $!memberAddRoles[$guildID;$authorID;1481960745582202991]
 
 `
 },{
     type: "clientReady",
-    code: `$cron[
-    $arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;1480183732932444192;,]]
+    code: `
+    $cron[
+    $onlyIf[$day==$getGuildVar[evento_sextafeira13;1462224054676099094];]
+    $arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;1481960745582202991;,]]
     $arrayMap[roleMembers;id;
     $return[<@$env[id]>]
     ;roleUsernames]
 
-    $sendMessage[$channelID;
-     $addSection[
-      $addTextDisplay[### E esses foram os membros que enviaram mensagem hoje e ganharam a badge especial de Dia das mulheres! ❤️]
-      $addTextDisplay[$arrayJoin[roleUsernames;
-      ]]
-      $addThumbnail[https://i.ibb.co/MxMZdXRr/pats-diadamulher2026.png]
-     ]
+    $sendMessage[$getGuildVar[anunciosChat;1462224054676099094];
+     $addContainer[
+      $addSection[
+       $addTextDisplay[### E ESSES FORAM OS AZARADOS 💀]
+       $addTextDisplay[$arrayJoin[roleUsernames;\n]]
+       $addTextDisplay[\n Próximo evento: 13/11/2026]
+       $addThumbnail[https://i.ibb.co/MxMZdXRr/pats-diadamulher2026.png]
+      ]
+     ;White]
     ]
-    ;0 0 * 14 *]
+    ;0 0 * * *;America/Recife;SextaFeira13]
 `}]
