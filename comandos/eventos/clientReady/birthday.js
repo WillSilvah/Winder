@@ -7,7 +7,12 @@ module.exports = [{
     $arrayLoad[birthday;, ;$guildMemberIDs[$get[guildID]]]
      $arrayForEach[birthday;id;
      $if[$getMemberVar[birthday;$env[id];$get[guildID]]==$day[TwoDigit]/$month[TwoDigit];
-
+     
+     $!memberAddRoles[$guildID;$env[id];$getGuildVar[birthdayRole]]
+     $advancedTimeout[$esc[
+     $!memberAddRoles[{1};{0};$getGuildVar[birthdayRole]]
+     ];17h;BirthayRole_$env[id];$env[id];$guildID]
+     
      $sendMessage[$getGuildVar[batePapo;$get[guildID]];
      $addSection[
       $addTextDisplay[## 🎂<@$env[id]> ESTÁ FAZENDO $math[$year-$getMemberVar[birthdayYear;$env[id];$get[guildID]]] ANOS HOJE!]
