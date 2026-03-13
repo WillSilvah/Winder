@@ -1,7 +1,7 @@
 module.exports = [{
      type: "messageCreate",
      code: `
-    $timezone[America/Recife
+    $timezone[America/Recife]
     $onlyIf[$weekDay[Long]-$day==Friday-13;]
     $onlyIf[$randomNumber[1;100]<==10;]
     $onlyIf[$hasRoles[$guildID;$authorID;1481960745582202991]==false;]
