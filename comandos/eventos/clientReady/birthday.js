@@ -27,7 +27,7 @@ module.exports = [{
     $addSeparator[Large;true]
     
     $addTextDisplay[-# **Adicione o seu aniversário com /aniversário adicionar**]
-;true]]
+;true]
 
     $publishMessage[$getGuildVar[birthdayChannel;$get[guildID]];$get[msgid]]
 
