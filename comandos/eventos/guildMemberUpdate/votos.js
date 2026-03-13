@@ -31,7 +31,7 @@ $footer[Quer ser lembrado de votar? use /lembrete voto]
 $color[Red]
 ]
 ]
-]
+
 
 $advancedTimeout[$esc[
 $sendDM[{0};
@@ -55,7 +55,7 @@ $sendMessage[$getGuildVar[batePapo];
 
 ]
 
-
+]
 `
 }
 
