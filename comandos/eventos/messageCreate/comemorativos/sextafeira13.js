@@ -3,7 +3,7 @@ module.exports = [{
      code: `
      $timezone[America/Recife]
      $onlyIf[$weekDay[Long]-$day==Friday-13;]
-     $onlyIf[$randomNumber[1;100]<=1;]
+     $onlyIf[$randomNumber[1;100]<=5;]
      $onlyIf[$hasRoles[$guildID;$authorID;1481960745582202991]==false;]
 
     $!addMessageReactions[$channelID;$messageID;💀]
