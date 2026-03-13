@@ -11,6 +11,7 @@ module.exports = [{
     $!addMessageReactions[$channelID;$messageID;💧;💦]
 
     $!memberAddRoles[$guildID;$authorID;$get[roleID]]
+    $setMemberVar[badge_diaDaAgua;true]
 `
 },{
     type: "clientReady",

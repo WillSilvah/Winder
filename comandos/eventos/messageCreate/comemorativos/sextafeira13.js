@@ -4,7 +4,7 @@ module.exports = [{
      $timezone[America/Recife]
      $onlyIf[$weekDay[Long]-$day==Friday-13;]
       $setGuildVar[evento_sextaFeira13;$math[$day[TwoDigit]+1];$guildID]
-     $onlyIf[$randomNumber[1;100]<=5;]
+     $onlyIf[$randomNumber[1;100]<=10;]
      $onlyIf[$hasRoles[$guildID;$authorID;1481960745582202991]==false;]
 
     $!addMessageReactions[$channelID;$messageID;💀]
@@ -12,8 +12,8 @@ $sendMessage[$channelID;## O <@$authorID> TEVE AZAR.
 -# ### $toUpperCase[$randomText[Atropelado por uma bicleta;Simplesmente faleceu;Morreu de uma batata quente;Caiu em um buraco;Foi atropelado por um unicórnio;Tomou um golpe de faca;Foi engulido por um buraco negro;Morreu de tédio;Foi picado por uma abelha assassina;Caiu de uma escada;Morreu de risada;Foi vítima de um ataque de gatinhos;Tomou um tiro de Nerf;Foi esmagado por um piano;Morreu de sono;Foi devorado por um dragão;Caiu em um poço de lava;Morreu de fome em uma ilha deserta;Foi atingido por um raio;Morreu de vergonha;Foi vítima de um ataque de memes;Caiu de um prédio;Morreu de overdose de açúcar]]
 ]
     
-$!memberAddRoles[$guildID;$authorID;1481960745582202991]
-
+    $!memberAddRoles[$guildID;$authorID;1481960745582202991]
+    $setMemberVar[badge_sextaFeira13;true]
 `
 },{
     type: "clientReady",
@@ -34,6 +34,11 @@ $!memberAddRoles[$guildID;$authorID;1481960745582202991]
        $addThumbnail[https://i.ibb.co/0p2SNrhc/Logo-Sexta-feira-13-de-mar-o.jpg]
       ]
      ;White]
+     $!setGuildIcon[1462224054676099094;https://i.ibb.co/N6q4DP0P/pats-sleep-logo.png;Hora de dormir]
+    
+        $setGuildVar[guildColor;#ddf3fe;1462224054676099094]
+     
+     $setGuildVar[guildIconDefault;true;1462224054676099094]
     ]
     ;0 0 * * *;America/Recife;SextaFeira13]
 `}]
