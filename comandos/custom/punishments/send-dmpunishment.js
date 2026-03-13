@@ -22,7 +22,7 @@ module.exports = [{
         required: false
     }
     ],
-    code: `$stop
+    code: `
     $onlyIf[$memberExists[$guildID;$env[userID]]==true;]
     
     $if[$isUserDMEnabled[$env[userID]]==true;

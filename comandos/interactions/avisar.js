@@ -11,12 +11,12 @@ module.exports = {
     ]
     
     $jsonLoad[avisos;$getMemberVar[warnList;$get[userID];$guildID;{}]]
-     $!jsonSet[avisos;$getMemberVar[warns;$get[userID];$guildID;0];{"staffID":"$get[staffID]","reason": "$get[reason]"}]
+     $!jsonSet[avisos;$getMemberVar[warns;$get[userID];$guildID;1];{"staffID":"$get[staffID]","reason": "$get[reason]"}]
       $setMemberVar[warnList;$env[avisos];$get[userID];$guildID]
       
+    $setMemberVar[warns;$math[$getMemberVar[warns;$get[userID];$guildID;0]+1];$get[userID];$guildID]
 
-    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
-    > $bold[$get[reason]]]
+    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
 
   `,
 data: {
