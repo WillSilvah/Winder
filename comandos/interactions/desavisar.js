@@ -1,21 +1,23 @@
 module.exports = {
   code: `
-$let[userID;$findUser[$option[user]]]
-$let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
-$let[staffID;$authorID]
-$let[type;desavisado]
+    $let[userID;$findUser[$option[user]]]
+    $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
+    $let[staffID;$authorID]
+    $let[type;desavisado]
+    
+    $onlyIf[$getMemberVar[warns;$get[userID]]!=;<@$authorID> O **@$userTag** não tem nenhum aviso.]
 
-$onlyIf[$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0]>0;<@$authorID> O usuário não tem nenhuma advertência.]
+    $let[memberWarns;$getMemberVar[warns;$get[userID];$get[guild];1]]
+    
+    $jsonLoad[avisos;$getMemberVar[warnList;$get[userID];$get[guild];{}]]
 
-$deleteFile[Recursos/avisos/$guildID/$findUser[$get[userID]]/aviso_$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0].txt]
+    $!jsonDelete[avisos;$get[memberWarns]]
+    $setMemberVar[warnList;$env[avisos];$get[userID];$get[guild]]
+      
+    $letSub[memberWarns;1]
+    $setMemberVar[warns;$get[memberWarns];$get[userID];$get[guild]]
 
-$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
-$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
-
-$setMemberVar[warnsTotal;$sub[$getMemberVar[warnsTotal;$findUser[$get[userID]];$guildID;0];1];$findUser[$get[userID]];$guildID]
-
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
-> $bold[$get[reason]]]
+    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
 
   `,
 data: {
