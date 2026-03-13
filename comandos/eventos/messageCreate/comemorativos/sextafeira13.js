@@ -3,7 +3,7 @@ module.exports = [{
      code: `
      $timezone[America/Recife]
      $onlyIf[$weekDay[Long]-$day==Friday-13;]
-      $setGuildVar[evento_sextafeira13;$math[$day[TwoDigit]+1];$guildID]
+      $setGuildVar[evento_sextaFeira13;$math[$day[TwoDigit]+1];$guildID]
      $onlyIf[$randomNumber[1;100]<=5;]
      $onlyIf[$hasRoles[$guildID;$authorID;1481960745582202991]==false;]
 
@@ -19,7 +19,7 @@ $!memberAddRoles[$guildID;$authorID;1481960745582202991]
     type: "clientReady",
     code: `
     $cron[
-    $onlyIf[$day==$getGuildVar[evento_sextafeira13;1462224054676099094];]
+    $onlyIf[$day==$getGuildVar[evento_sextaFeira13;1462224054676099094];]
     $arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;1481960745582202991;,]]
     $arrayMap[roleMembers;id;
     $return[<@$env[id]>]
@@ -31,7 +31,7 @@ $!memberAddRoles[$guildID;$authorID;1481960745582202991]
        $addTextDisplay[### E ESSES FORAM OS AZARADOS 💀]
        $addTextDisplay[$arrayJoin[roleUsernames;\n]]
        $addTextDisplay[\n Próximo evento: 13/11/2026]
-       $addThumbnail[https://i.ibb.co/MxMZdXRr/pats-diadamulher2026.png]
+       $addThumbnail[https://i.ibb.co/0p2SNrhc/Logo-Sexta-feira-13-de-mar-o.jpg]
       ]
      ;White]
     ]
