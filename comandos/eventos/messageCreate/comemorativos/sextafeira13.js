@@ -12,7 +12,7 @@ $sendMessage[$channelID;### O <@$authorID> TEVE AZAR.
 ]
 
 
-$getGuildVar[evento_sextafeira13;$math[$day+1];$guildID]
+$getGuildVar[evento_sextafeira13;$math[$day[TwoDigit]+1];$guildID]
     
 $!memberAddRoles[$guildID;$authorID;1481960745582202991]
 
