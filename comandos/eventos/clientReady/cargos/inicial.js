@@ -14,7 +14,7 @@ module.exports = [{
     $addTextDisplay[O que você quer receber na Patinhas?]
     $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f514.png]
     ]
-    ;Red]
+    ;Red]]]
 
 
     $setGlobalVar[inicial_messageID;$get[msgID]]
