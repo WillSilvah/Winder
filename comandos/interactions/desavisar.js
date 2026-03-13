@@ -5,7 +5,7 @@ module.exports = {
     $let[staffID;$authorID]
     $let[type;desavisado]
     
-    $onlyIf[$getMemberVar[warns;$get[userID]]!=;<@$authorID> O **@$userTag** não tem nenhum aviso.]
+    $onlyIf[$getMemberVar[warnList;$get[userID]]=={};<@$authorID> O **@$userTag** não tem nenhum aviso.]
 
     $let[memberWarns;$getMemberVar[warns;$get[userID];$get[guild];1]]
     

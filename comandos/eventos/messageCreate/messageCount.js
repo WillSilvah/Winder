@@ -4,7 +4,7 @@ module.exports = {
 $onlyIf[$isBot==false;]
 $timezone[America/Recife]
 
-$setMemberVar[messages;$getMemberVar[messages]
+$setMemberVar[messages;$getMemberVar[messages]]
 
 $hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit] | $message]
 
