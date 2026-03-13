@@ -26,7 +26,7 @@ $deleteRecords[messageTotal;$authorID]
 $deleteRecords[messageWeekly;$authorID]
 $deleteRecords[pdaTotal;$authorID]
 $deleteRecords[pdaMonth;$authorID]
-
+$deleteRecords[inviter;$authorID]
 
 $setMemberVar[tempBadge_diadasmulheres;$getMemberVar[badge_diadasmulheres]]
 
