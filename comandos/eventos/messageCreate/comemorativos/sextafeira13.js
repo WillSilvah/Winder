@@ -22,14 +22,13 @@ $!memberAddRoles[$guildID;$authorID;1481960745582202991]
     $return[<@$env[id]>]
     ;roleUsernames]
 
-$sendMessage[$channelID;
-$addSection[
-$addTextDisplay[### E esses foram os membros que enviaram mensagem hoje e ganharam a badge especial de Dia das mulheres! ❤️
-
-$arrayJoin[roleUsernames;
-]
-]
-$addThumbnail[https://i.ibb.co/MxMZdXRr/pats-diadamulher2026.png]
-]
-]
+    $sendMessage[$channelID;
+     $addSection[
+      $addTextDisplay[### E esses foram os membros que enviaram mensagem hoje e ganharam a badge especial de Dia das mulheres! ❤️]
+      $addTextDisplay[$arrayJoin[roleUsernames;
+      ]]
+      $addThumbnail[https://i.ibb.co/MxMZdXRr/pats-diadamulher2026.png]
+     ]
+    ]
+    ;0 0 * 14 *]
 `}]
