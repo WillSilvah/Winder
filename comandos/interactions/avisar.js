@@ -5,9 +5,11 @@ module.exports = {
     $let[staffID;$authorID]
     $let[type;advertido]
 
+    $if[11==222;
     $sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
     $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
-
+    ]
+    
     $jsonLoad[avisos;$getMemberVar[warnList;$get[userID];$guildID;{}]]
      $!jsonSet[avisos;$getMemberVar[warns;$get[userID];$guildID;0];{"staffID":"$get[staffID]","reason": "$get[reason]"}]
       $setMemberVar[warnList;$env[avisos];$get[userID];$guildID]
