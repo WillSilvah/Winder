@@ -2,24 +2,24 @@ module.exports = [{
     type: 'clientReady',
     code: `
     $let[guildID;1462224054676099094]
-    $advancedInterval[$esc[
+    $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
+    $setInterval[
      $onlyIf[$getGlobalVar[sleepMode]==false;]
-      $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];{0}]
+      $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
 
-     $onlyIf[$getGuildVar[oldMsgPerMinute;{0};0]>5;]
-      $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
-     $sendMessage[$getGuildVar[batePapo;{0}];$minigame[fraseRepeat;{0}]]
+     $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>5;]
+     $sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat;$get[guildID]]]
      $wait[1m]
-      $onlyIf[$getGuildVar[minigameStatus;{0}]==true;]
-      $setGuildVar[minigameStatus;false;{0}]
-      $setGuildVar[minigameWord;;{0}]
+      $onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
+      $setGuildVar[minigameStatus;false;$get[guildID]]
+      $setGuildVar[minigameWord;;$get[guildID]]
 
-     $setGuildVar[minigameXPmin;0;{0}]
-     $setGuildVar[minigameXPmax;0;{0}]
-     $setChannelSlowmode[$getGuildVar[batePapo;{0}];0]
-     $sendMessage[$getGuildVar[batePapo;{0}];### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
+     $setGuildVar[minigameXPmin;0;$get[guildID]]
+     $setGuildVar[minigameXPmax;0;$get[guildID]]
+     $setChannelSlowmode[$getGuildVar[batePapo;$get[guildID]];0]
+     $sendMessage[$getGuildVar[batePapo;$get[guildID]];### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
 
-    ];15m;WinderMinigame;$get[guildID]]    
+    ;15m;WinderMinigame]    
 `
 },{
     type: 'messageCreate',
