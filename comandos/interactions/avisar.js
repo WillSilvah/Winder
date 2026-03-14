@@ -6,10 +6,9 @@ module.exports = {
     $let[guild;$guildID]
     $let[type;advertido]
 
-    $if[11==222;
       $sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
       $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
-    ]
+    
 
     $let[memberWarns;$getMemberVar[warns;$get[userID];$get[guild];1]]
     
