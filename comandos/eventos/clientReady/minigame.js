@@ -2,7 +2,6 @@ module.exports = [{
     type: 'clientReady',
     code: `
     $let[guildID;1462224054676099094]
-    $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
     $setInterval[
      $onlyIf[$getGlobalVar[sleepMode]==false;]
       $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
@@ -11,6 +10,7 @@ module.exports = [{
      $sendMessage[$getGuildVar[batePapo;$get[guildID]];
       $minigame[fraseRepeat;$get[guildID]]
      ]
+     $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
      $wait[1m]
       $onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
       $setGuildVar[minigameStatus;false;$get[guildID]]
