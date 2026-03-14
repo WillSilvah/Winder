@@ -2,7 +2,6 @@ module.exports = [{
     type: 'clientReady',
     code: `
     $let[guildID;1462224054676099094]
-    $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];{0}]
     $advancedInterval[$esc[
      $onlyIf[$getGlobalVar[sleepMode]==false;]
       $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];{0}]
