@@ -2,14 +2,17 @@ module.exports = [{
   name: 'timeoutslist',
   aliases: ['activetimeoutslist', 'activetimeouts', 'tlist'],
   type: 'messageCreate',
-  code: `$stop
+  code: `
+    $onlyForUsers[;$botOwnerID]
+
     $reply
+    $defer
 
     $c[Maximal displayable rows in one message. Must be a number. More than 5 is not recommended.]
     $let[maxRows;5]
 
-    $let[pageArg;$message[0]] $c['page' argument written by a user (optional)]
-    $let[rowsArg;$message[1]] $c['rows' argument written by a user (optional)]
+    $let[pageArg;$default[$option[page];$message[0]]] $c['page' argument written by a user (optional)]
+    $let[rowsArg;$default[$option[rows];$message[1]]] $c['rows' argument written by a user (optional)]
 
     $c[=====CREATING TIMEOUTS LIST=====]
 
@@ -88,9 +91,8 @@ module.exports = [{
     $jsonLoad[listPages;$generateTimeoutListPages[$get[rows]]]
     $let[maxPages;$arrayLength[listPages]]
 
-    $if[$get[page]>$get[maxPages];
-      $let[page;$get[maxPages]]
-    ]
+    $let[page;$min[$get[page];$get[maxPages]]]
+    
 
     $interactionUpdate[
       $displayTimeoutsListContainer
@@ -107,10 +109,52 @@ module.exports = [{
     ]
   `
 },{
+  type: 'interactionCreate',
+  allowedInteractionTypes: ['button'],
+  code: `
+    $arrayLoad[IID;!!!;$customID]
+    $arrayLoad[allowedIds; ;executeTimeoutManually]
+
+    $onlyIf[$arraySome[allowedIds;id;$arrayIncludes[IID;$env[id]]]]
+    $onlyIf[$arrayIncludes[IID;$authorID]]
+
+    $let[page;$env[IID;0]]
+    $let[rows;$env[IID;1]]
+    $let[timeoutId;$env[IID;2]]
+
+    $jsonLoad[timeouts;$getGlobalVar[timeouts;{}]]
+    $if[$env[timeouts;$get[timeoutId]]!=;
+      $let[code;$env[timeouts;$get[timeoutId];code]]
+      $try[$eval[$replace[$get[code];{N};\n;-1];false]]
+    ]
+    $let[success;$stopAdvancedTimeout[$get[timeoutId]]]
+
+    $jsonLoad[listPages;$generateTimeoutListPages[$get[rows]]]
+    $let[maxPages;$arrayLength[listPages]]
+
+    $let[page;$min[$get[page];$get[maxPages]]]
+
+    $interactionUpdate[
+      $displayTimeoutsListContainer
+    ]
+
+    $interactionFollowUp[
+      $ephemeral
+
+      $if[$get[success];
+        $addTextDisplay[## Successfully executed timeout \`$get[timeoutId]\`]
+      ;
+        $addTextDisplay[## Failed to execute timeout \`$get[timeoutId]\`]
+      ]
+    ]
+  `
+},{
   name: 'stopalltimeouts',
   aliases: ['sat'],
   type: 'messageCreate',
   code: `
+    $onlyForUsers[;$botOwnerID]
+
     $reply
 
     $jsonLoad[t;$getGlobalVar[timeouts;{}]]
@@ -126,5 +170,30 @@ module.exports = [{
     ;i;true]
 
     $addTextDisplay[## Stopped all timeouts!]
+  `
+},{
+  name: 'executealltimeouts',
+  aliases: ['eat'],
+  type: 'messageCreate',
+  code: `
+    $onlyForUsers[;$botOwnerID]
+
+    $reply
+
+    $jsonLoad[t;$getGlobalVar[timeouts;{}]]
+    $jsonLoad[tk;$jsonKeys[t]]
+
+    $onlyIf[$arrayLength[tk]>0;
+      $addTextDisplay[## There are no active timeouts!]
+    ]
+
+    $loop[$arrayLength[tk];
+      $let[id;$arrayAt[tk;$math[$env[i] - 1]]]
+      $let[code;$env[t;$get[id];code]]
+      $try[$eval[$replace[$get[code];{N};\n;-1];false]]
+      $!stopAdvancedTimeout[$get[id]]
+    ;i;true]
+
+    $addTextDisplay[## Executed all timeouts!]
   `
 }]

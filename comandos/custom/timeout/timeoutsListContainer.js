@@ -5,33 +5,34 @@ module.exports = [{
     $jsonLoad[listPage;$arrayAt[listPages;$math[$get[page]-1]]]
 
     $addContainer[
-      $addTextDisplay[# Active Timeouts]
+      $addTextDisplay[## Active Timeouts]
       $addSeparator[Large]
 
       $if[$arrayLength[listPage]>0;
         $loop[$get[rows];
           $let[i;$math[$env[i] - 1]]
-    
-          $addSection[
-            $addTextDisplay[
-              ## ID: \`$env[listPage;$get[i];0]\`
-              ## Time: \`$parseDigital[$env[listPage;$get[i];1;time]]\`
-              ## Ends in: $discordTimestamp[$env[listPage;$get[i];1;endTime];RelativeTime]
-            ]
-            $addButton[$get[page]!!!$get[rows]!!!$env[listPage;$get[i];0]!!!stopTimeoutManually!!!$authorID;Stop;Success]
-          ]
 
+          $let[tid;$env[listPage;$get[i];0]]
+    
+          $addTextDisplay[
+            ### ID: \`$get[tid]\`
+            ### Time: \`$parseDigital[$env[listPage;$get[i];1;time]]\`
+            ### Ends in: $discordTimestamp[$env[listPage;$get[i];1;endTime];RelativeTime]
+          ]
+          $addActionRow
+          $addButton[$get[page]!!!$get[rows]!!!$get[tid]!!!stopTimeoutManually!!!$authorID;Stop;Danger]
+          $addButton[$get[page]!!!$get[rows]!!!$get[tid]!!!executeTimeoutManually!!!$authorID;Execute;Primary]
+
+          $addSeparator
           $if[$or[$sum[1;$env[i]]>$arrayLength[listPage];$env[i]==$get[rows]];
             $break
           ]
-
-          $addSeparator[Large;false]
         ;i;true]
       ;
         $addTextDisplay[## The list is empty.]
+        $addSeparator
       ]
 
-      $addSeparator[Large]
       $addTextDisplay[### Page $get[page]/$get[maxPages]]
 
       $if[$get[maxPages]>1;

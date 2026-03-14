@@ -45,13 +45,9 @@ module.exports = [{
       $return[]
       ;
      $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberIsolatedRole]]
+     $setMemberVar[memberIsolated;false;$env[userID]]
      
-     $advancedTimeout[$esc[
-     
-      $setMemberVar[memberIsolated;false;{0};{1}]
-     
-     ];24h;IsolatedStatus_$env[userID];$env[userID];$guildID]
-    ]
+     ]
 
 `
 }]
