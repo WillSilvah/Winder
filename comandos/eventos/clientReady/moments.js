@@ -106,7 +106,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🌃 BOA NOITE
 **Bora finalizar o dia com muitos cafunés e conversa boa! Quem vem? ✨**
-];46 18 * * *;America/Recife]
+];10 19 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 😴 VAMOS DORMIR?
 **Vamos tirar um cochilo?**
