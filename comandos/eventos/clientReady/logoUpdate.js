@@ -5,7 +5,7 @@ module.exports = [{
      $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
       $!setGuildIcon[1462224054676099094;https://i.ibb.co/F47676pR/pats-orange-light.png;Domingo de manhã]
        $setGuildVar[guildColor;#e6d3ad;1462224054676099094]
-    ;0 6 * * 0;America/Recife]
+    ;0 5 * * 0;America/Recife]
 
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
@@ -18,7 +18,7 @@ module.exports = [{
       $!setGuildIcon[1462224054676099094;https://i.ibb.co/RpnZ5xH0/pats-red-light.png;Dia normal de manhã]
        $setGuildVar[guildColor;#e6adad;1462224054676099094]
     
-    ;0 6 * * 1-2;America/Recife]
+    ;0 5 * * 1-2;America/Recife]
 
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
@@ -30,7 +30,7 @@ module.exports = [{
      $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
       $!setGuildIcon[1462224054676099094;https://i.ibb.co/Jj1VwWsF/pats-pink-light.png;Às quartas feiras nós usamos rosa]
        $setGuildVar[guildColor;#e7ade7;1462224054676099094]
-    ;0 6 * * 3;America/Recife]
+    ;0 5 * * 3;America/Recife]
 
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
@@ -42,7 +42,7 @@ module.exports = [{
      $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
       $!setGuildIcon[1462224054676099094;https://i.ibb.co/RpnZ5xH0/pats-red-light.png;Dia normal de manhã]
        $setGuildVar[guildColor;#e6adad;1462224054676099094]
-    ;0 6 * * 4-6;America/Recife]
+    ;0 5 * * 4-6;America/Recife]
 
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;1462224054676099094]==true;]
