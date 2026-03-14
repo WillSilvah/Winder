@@ -2,6 +2,7 @@ module.exports = [{
     name: "bnotificar",
     type: "interactionCreate",
     code: `
+    $ephemeral
     $interactionReply[
      $disableAllMentions
      $addContainer[

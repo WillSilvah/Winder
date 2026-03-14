@@ -1,7 +1,8 @@
 module.exports = [{
     name: "bcores",
     type: "interactionCreate",
-    code: `$ephemeral
+    code: `
+    $ephemeral
     $interactionReply[
     $addContainer[
       $addSection[
