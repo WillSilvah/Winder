@@ -1,5 +1,5 @@
 module.exports = [{
-    name: "notificar",
+    name: "bnotificar",
     type: "interactionCreate",
     code: `
     $interactionReply[

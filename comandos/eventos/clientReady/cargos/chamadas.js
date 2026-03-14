@@ -1,5 +1,5 @@
 module.exports = [{
-    name: "chamadas",
+    name: "bchamadas",
     type: "interactionReply",
     code: `
     $ephemeral

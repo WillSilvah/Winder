@@ -1,5 +1,5 @@
 module.exports = [{
-    name: "cores",
+    name: "bcores",
     type: "interactionCreate",
     code: `$ephemeral
     $interactionReply[
