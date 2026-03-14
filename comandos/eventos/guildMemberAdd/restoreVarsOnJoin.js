@@ -13,7 +13,9 @@ $setMemberVar[votesTotal;$getMemberVar[tempVotesTotal];$authorID;$guildID]
 $setMemberVar[invitesMonth;$getMemberVar[tempInvitesMonth];$authorID;$guildID]
 $setMemberVar[invitesTotal;$getMemberVar[tempInvitesTotal];$authorID;$guildID]
 
+$if[$getMemberVar[tempBadge_diaDasMulheres]!=;
 $setMemberVar[badge_diadasmulheres;$getMemberVar[tempBadge_diadasmulheres]]
+]
 
 $deleteRecords[tempBadge_diadasmulheres;$authorID]
 $deleteRecords[tempMessageMonth;$authorID]
