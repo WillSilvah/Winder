@@ -15,7 +15,7 @@ module.exports = [{
      ;Green]
     $addActionRow
     $addStringSelectMenu[clubes;Escolha um clube;false;1;1]
-     $addOption[Patinhas Beta;;winder;👀;false]
+     $addOption[Patinhas Beta;;beta;👀;false]
      $addOption[Clube do Winder;;winder;🐱;false]
      $addOption[BoyKisser;;boykisser;😘;false]
      $addOption[Fofoqueiras;;fofoqueiras;🤫;false]
