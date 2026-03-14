@@ -1,4 +1,5 @@
-    name: "update-regras",
+module.exports = [{
+    name: "update-isolado",
     type: 'messageCreate',
     code: `
     $onlyIf[$hasPerms[$guildID;$authorID;ManageGuild]==true;]
