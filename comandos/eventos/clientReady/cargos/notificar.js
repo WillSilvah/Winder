@@ -1,39 +1,26 @@
 module.exports = [{
-    name: "cargos",
-    type: "clientReady",
-    code: `$stop
-    $deleteMessage[1470875996356874292;$getGlobalVar[notificar_messageID]]
-    
-    $let[msgID;$sendMessage[1470875996356874292;
-    $disableAllMentions
-    
-    $addContainer[
-    $addSection[
-    $addTextDisplay[## NOTIFICAÇÕES!
-⭐ 🎉 🎮 🔕
-
-O que você quer receber na Patinhas?
-]
-    $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f514.png]
-]
-;Red]
-
+    name: "notificar",
+    type: "interactionCreate",
+    code: `
+    $interactionReply[
+     $disableAllMentions
+     $addContainer[
+      $addSection[
+       $addTextDisplay[## NOTIFICAÇÕES!]
+       $addTextDisplay[⭐ 🎉 🎮 🔕]
+       $addTextDisplay[O que você quer receber na Patinhas?]
+      $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f514.png]
+      ]
+      ;Red]
     $addActionRow
-    $addStringSelectMenu[notificar;Escolha uma notificação para receber;false;1;1]
-    $addOption[Receber tudo da Patinhas;Você será notificado de tudo que e possível;all;🔔;false]
-    $addOption[Receber notificação de coisas novas para a comunidade;Seja notificado quando acontecer algo novo na comunidade e ficar ligado em tudo.;novidades;⭐;false]
-    
-    $addOption[Participar de sorteios e de eventos;Seja notificado quando acontecer um sorteio ou um evento!;eventos;🎉;false]
-    
-    $addOption[Receber avisos sobre os minigames;Seja notificado sobre alterações no Winder Minigames;minigame;🎮;false]
-    
-    $if[1==2;$addOption[Lives de streamers parceiros;Receba uma notificação de quando um parceiro fazer uma live! #VimDaPatinhas!;lives;🔴;false]]
-    
-    $addOption[Não quero receber notificações;Remove todos os cargos de notificação escolhidas.;remove;🔕;false]
-
-;true]]
-
-    $setGlobalVar[notificar_messageID;$get[msgID]]
+     $addStringSelectMenu[notificar;Escolha uma notificação para receber;false;1;1]
+      $addOption[Receber tudo da Patinhas;Você será notificado de tudo que e possível;all;🔔;false]
+      $addOption[Receber notificação de coisas novas para a comunidade;Seja notificado quando acontecer algo novo na comunidade e ficar ligado em tudo.;novidades;⭐;false]
+      $addOption[Participar de sorteios e de eventos;Seja notificado quando acontecer um sorteio ou um evento!;eventos;🎉;false]
+      $addOption[Receber avisos sobre os minigames;Seja notificado sobre alterações no Winder Minigames;minigame;🎮;false]
+      $if[1==2;$addOption[Lives de streamers parceiros;Receba uma notificação de quando um parceiro fazer uma live! #VimDaPatinhas!;lives;🔴;false]]
+      $addOption[Não quero receber notificações;Remove todos os cargos de notificação escolhidas.;remove;🔕;false]
+    ]
 `
 },{
     type: "interactionCreate",
