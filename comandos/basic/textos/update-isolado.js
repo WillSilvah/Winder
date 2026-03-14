@@ -12,7 +12,7 @@ module.exports = [{
        $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f6ab.png]
       ]
      $addSeparator[Large;true]
-     $addTextDisplay[Não se desespere, você pode estar aqui por diversos motivos como:
+     $addTextDisplay[Não se desespere, você pode estar aqui por diversos motivos como:]
      $addTextDisplay[- Quebrou alguma diretriz do servidor\n- Comportamento suspeito.\n- Pela sua própria segurança.]
      $addTextDisplay[## "E Agora? como saio?]
      $addTextDisplay[Você pode sair a qualquer momento, no momento a Equipe Patinhas está analisando a sua situação para resolver o problema.]
