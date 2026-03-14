@@ -16,7 +16,7 @@ module.exports = [{
     $setGuildVar[minigameXPmin;5;$env[guildID]]
     $setGuildVar[minigameXPmax;15;$env[guildID]]
 
-    $if[$env[tipo]==fraseRepeat;
+    $if[$env[tipo]==1;
      $let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]
      $jsonLoad[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
      $setGuildVar[minigameWord;$env[frase;texto];$env[guildID]]
@@ -30,7 +30,7 @@ module.exports = [{
      $setGuildVar[minigameStatus;true;$env[guildID]]
     ]
 
-    $if[$env[tipo]==questions;
+    $if[$env[tipo]==2;
      $let[id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/Questions/asks/ | wc -l]]]
      $jsonLoad[ask;$readFile[Recursos/WinderMinigames/Questions/asks/$get[id].txt]]
       $jsonLoad[alt;$env[ask;alts]]

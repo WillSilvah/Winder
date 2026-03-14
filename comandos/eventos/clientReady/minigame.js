@@ -8,7 +8,7 @@ module.exports = [{
 
      $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>5;]
      $sendMessage[$getGuildVar[batePapo;$get[guildID]];
-      $minigame[fraseRepeat;$get[guildID]]
+      $minigame[$randomNumber[1;2];$get[guildID]]
      ]
      $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
      $wait[1m]
