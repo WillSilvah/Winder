@@ -25,7 +25,7 @@ $setStatus[Online;Playing;$username[$clientID] está ligado! >w<]
 $setInterval[
 $if[$getGlobalVar[sleepMode]==false;
 $setStatus[Online;Playing;$getGlobalVar[version] | $parseInt[$ram] MB | $truncate[$math[($cpu/1000)*100]]% | $pingms | $parseDigital[$uptime]];
-$setStatus[Offline;Playing;😪 Dormindo...]
+$setStatus[invisible;Playing;😪 Dormindo...]
 ]
 ;12s;ClientStatus]
 `,
