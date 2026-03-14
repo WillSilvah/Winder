@@ -2,7 +2,7 @@ module.exports = [{
   name: 'timeoutslist',
   aliases: ['activetimeoutslist', 'activetimeouts', 'tlist'],
   type: 'messageCreate',
-  code: `
+  code: `$stop
     $reply
 
     $c[Maximal displayable rows in one message. Must be a number. More than 5 is not recommended.]
