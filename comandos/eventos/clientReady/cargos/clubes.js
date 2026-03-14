@@ -15,6 +15,7 @@ module.exports = [{
      ;Green]
     $addActionRow
     $addStringSelectMenu[clubes;Escolha um clube;false;1;1]
+     $addOption[Patinhas Beta;;winder;👀;false]
      $addOption[Clube do Winder;;winder;🐱;false]
      $addOption[BoyKisser;;boykisser;😘;false]
      $addOption[Fofoqueiras;;fofoqueiras;🤫;false]
@@ -28,10 +29,11 @@ module.exports = [{
     name: "clubes",
     code: `$ephemeral $disableAllMentions
     $jsonLoad[clubes;{
-  "boykisser": "1465012850740302027",
-  "fofoqueiras": "1481404732928168077",
-  "valeanimado": "1463156445276143707",
-  "winder": "1481748351857725521"
+    "boykisser": "1465012850740302027",
+    "fofoqueiras": "1481404732928168077",
+    "valeanimado": "1463156445276143707",
+    "winder": "1481748351857725521",
+    "beta": "1481788050957926450"
 }
 ]
     $arrayLoad[clubesID;,;$jsonValues[clubes;,]]
