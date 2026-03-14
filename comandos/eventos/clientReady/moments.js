@@ -30,6 +30,16 @@ $deleteRecords[guildTodayMessage]
 $deleteRecords[messageToday]
 $deleteRecords[tempMessageToday]
 ;0 0 * * *;America/Recife]
+
+    $cron[
+    $setGlobalVar[sleepMode;false]
+    $!memberSetNickname[$get[guildID];$clientID;Winder]
+    ;34 6 * * *;America/Recife]
+    
+    $cron[
+    $setGlobalVar[sleepMode;true]
+    $!memberSetNickname[$get[guildID];$clientID;(AFK) Winder]
+    ;0 22 * * *;America/Recife]
  
  `
 }

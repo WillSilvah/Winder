@@ -1,18 +1,12 @@
 module.exports = [{
     name: "cores",
-    type: "clientReady",
-    code: `
-    $deleteMessage[1470875996356874292;$getGlobalVar[cores_messageID]]
-     $wait[3s]
-
-    $let[msgID;$sendMessage[1470875996356874292;
-     $addContainer[
+    type: "interactionCreate",
+    code: `$ephemeral
+    $addContainer[
       $addSection[
-$addTextDisplay[
-## SIMPLESMENTE CORES!
-🔵 🩷 🔴 🟠 🟡 🟢 🟣
-Escolha uma cor que mais combina com você!
-]
+       $addTextDisplay[## SIMPLESMENTE CORES!]
+       $addTextDisplay[🔵 🩷 🔴 🟠 🟡 🟢 🟣]
+       $addTextDisplay[Escolha uma cor que mais combina com você!]
      $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f3a8.png]
       ]
      ;White]
@@ -26,9 +20,7 @@ Escolha uma cor que mais combina com você!
      $addOption[Simplesmente laranja;Citrico;laranja;🟠;false]
      $addOption[Simplesmente verde;A cor da esperança;verde;🟢;false]
      $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;🟣;false]
-    ;true]]
-
-    $setGlobalVar[cores_messageID;$get[msgID]]
+    
 `
     },{
         type: "interactionCreate",
