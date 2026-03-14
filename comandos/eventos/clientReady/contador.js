@@ -12,11 +12,11 @@ module.exports = {
 
 ;10m;Voice_Statdocks]
 
-    $advancedInterval[
+    $advancedInterval[$esc[
 
     $!setChannelTopic[$getGuildVar[batePapo;1462224054676099094];(👤💬 $getMemberLeaderboardLength[messageToday;1462224054676099094]) Onde a fauna se encontra.
 Leia as #👋│diretrizes para ficar de acordo com a ordem! :dizzy:]
 
-;10m;BatePapo_Stats]
+];10m;BatePapo_Stats]
 `
 }
