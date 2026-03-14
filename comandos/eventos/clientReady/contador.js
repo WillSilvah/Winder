@@ -1,5 +1,5 @@
 module.exports = {
- type: '"clientReady",
+ type: 'clientReady',
  code: `
  
     $advancedInterval[$esc[
