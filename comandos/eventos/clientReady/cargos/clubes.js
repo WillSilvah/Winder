@@ -7,7 +7,7 @@ module.exports = [{
      $addContainer[
       $addSection[
        $addTextDisplay[## CLUBES!]
-       $addTextDisplay[**🐱 😘! 🤫! 🏳️‍🌈**]
+       $addTextDisplay[**$customEmoji[pats_logo]** 🐱 😘! 🤫! 🏳️‍🌈**]
        $addTextDisplay[Qual clube você se identifica ou quer participar?]
 
        $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f465.png]
@@ -15,7 +15,7 @@ module.exports = [{
      ;Green]
     $addActionRow
     $addStringSelectMenu[clubes;Escolha um clube;false;1;1]
-     $addOption[Patinhas Beta;;beta;👀;false]
+     $addOption[Patinhas Beta;;beta;$customEmoji[pats_logo];false]
      $addOption[Clube do Winder;;winder;🐱;false]
      $addOption[BoyKisser;;boykisser;😘;false]
      $addOption[Fofoqueiras;;fofoqueiras;🤫;false]
