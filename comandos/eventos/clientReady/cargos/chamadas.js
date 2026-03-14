@@ -1,6 +1,6 @@
 module.exports = [{
     name: "bchamadas",
-    type: "interactionReply",
+    type: "interactionCreate",
     code: `
     $ephemeral
     $interactionReply[
