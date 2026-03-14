@@ -2,6 +2,7 @@ module.exports = [{
     name: "cores",
     type: "interactionCreate",
     code: `$ephemeral
+    $interactionReply[
     $addContainer[
       $addSection[
        $addTextDisplay[## SIMPLESMENTE CORES!]
@@ -20,7 +21,7 @@ module.exports = [{
      $addOption[Simplesmente laranja;Citrico;laranja;🟠;false]
      $addOption[Simplesmente verde;A cor da esperança;verde;🟢;false]
      $addOption[Simplesmente roxo;A cor roxa significa amor em alguns lugares.;roxo;🟣;false]
-    
+    ]
 `
     },{
         type: "interactionCreate",
