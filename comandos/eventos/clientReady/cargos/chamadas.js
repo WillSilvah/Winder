@@ -7,7 +7,7 @@ module.exports = [{
      $addContainer[
       $addSection[
        $addTextDisplay[## CHAMADAS!]
-       $addTextDisplay**💬! 🔉!**
+       $addTextDisplay[**💬! 🔉!**]
        $addTextDisplay[Sabia que você pode ser mencionado no bate papo para conversar sobre um assunto?]
        $addTextDisplay[-# - Os cargos de chamadas podem ser mencionados por **qualquer pessoa** durante **06:00** até **22:00** no horário de Pernambuco.]
        $addTextDisplay[> **⚠️ Lembre-se, pode acontecer de receber várias menções**]
