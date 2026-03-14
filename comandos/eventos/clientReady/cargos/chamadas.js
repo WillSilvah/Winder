@@ -1,7 +1,7 @@
 module.exports = [{
     name: "chamadas",
     type: "clientReady",
-    code: `
+    code: `$stop
     $deleteMessage[1470875996356874292;$getGlobalVar[chamadas_messageID]]
     
     $wait[1s]

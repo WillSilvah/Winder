@@ -16,7 +16,8 @@ module.exports = [{
     $addSeparator[Large;true]
     $addActionRow
      $addButton[cores;Cores;Success;🎨;false]
-    ;Red]]]
+    ;Red]
+    ;true]]
     
     
 

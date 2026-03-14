@@ -1,7 +1,7 @@
 module.exports = [{
     name: "clubes",
     type: "clientReady",
-    code: `
+    code: `$stop
     $deleteMessage[1470875996356874292;$getGlobalVar[clubes_messageID]]
     $wait[2s]
     $let[msgID;$sendMessage[1470875996356874292;$disableAllMentions

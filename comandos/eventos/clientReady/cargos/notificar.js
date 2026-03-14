@@ -1,7 +1,7 @@
 module.exports = [{
     name: "cargos",
     type: "clientReady",
-    code: `
+    code: `$stop
     $deleteMessage[1470875996356874292;$getGlobalVar[notificar_messageID]]
     
     $let[msgID;$sendMessage[1470875996356874292;
