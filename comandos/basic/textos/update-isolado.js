@@ -18,7 +18,7 @@ module.exports = [{
      $addTextDisplay[Você pode sair a qualquer momento, no momento a Equipe Patinhas está analisando a sua situação para resolver o problema.]
      $addTextDisplay[# NÃO SAIA DO SERVIDOR!]
      $addTextDisplay[Durante o isolamento, este modo é ativado em casos URGENTES o que significa que se você pode ter aprontado e está em risco.]
-     $addTextDisplay[> **⚠️ Você pode ser banido ao sair automáticamente**
+     $addTextDisplay[> **⚠️ Você pode ser banido ao sair automáticamente**]
      $addTextDisplay[E sair enquanto estava isolado significa que você estava devendo algo e a Equipe Patinhas declara que você estava errado.]
      $addSeparator[Large;true]
      ;Orange]
