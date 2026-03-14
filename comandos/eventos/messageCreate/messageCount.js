@@ -4,10 +4,6 @@ module.exports = {
 $onlyIf[$isBot==false;]
 $timezone[America/Recife]
 
-$setMemberVar[messages;$getMemberVar[messages]
-
-$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit] | $message]
-
 $onlyIf[$includes[$channelID;1478505120525324541]==false;]
 
 $setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages;$guildID;0];1]]
