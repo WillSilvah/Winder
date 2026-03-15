@@ -8,7 +8,7 @@ module.exports = {
      $!setChannelName[1465534760620392722;🔥 | 💬 $separateNumber[$getGuildVar[guildMonthMessages;1462224054676099094];.] 👤$getMemberLeaderboardLength[messageMonth;1462224054676099094]]
     ;10m;Voice_Statdocks]
 
-    $advancedInterval[
+    $setInterval[
      $!setChannelTopic[$getGuildVar[batePapo;1462224054676099094];(👤💬 $getMemberLeaderboardLength[messageToday;1462224054676099094]) Onde a fauna se encontra.
 Leia as #👋│diretrizes para ficar de acordo com a ordem! :dizzy:]
     ;10m;BatePapo_Stats]
