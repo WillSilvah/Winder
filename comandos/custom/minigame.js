@@ -13,43 +13,49 @@ module.exports = [{
     }
     ],
     code: `
+    
     $setGuildVar[minigameXPmin;5;$env[guildID]]
     $setGuildVar[minigameXPmax;15;$env[guildID]]
 
-    $if[$env[tipo]==1;
-     $let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]
-     $jsonLoad[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
-     $setGuildVar[minigameWord;$env[frase;texto];$env[guildID]]
-
-     $author[QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
-     $description[### $replaceText[$env[frase;texto]; ; ]]
-     $footer[$env[frase;autor]]
-     $color[Green]
-
-     $setGuildVar[minigameType;$env[tipo];$env[guildID]]
-     $setGuildVar[minigameStatus;true;$env[guildID]]
-    ]
-
-    $if[$env[tipo]==2;
-     $let[id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/Questions/asks/ | wc -l]]]
-     $jsonLoad[ask;$readFile[Recursos/WinderMinigames/Questions/asks/$get[id].txt]]
-      $jsonLoad[alt;$env[ask;alts]]
-
-     $author[Evento de chat: Perguntas;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
-      $description[### $toUpperCase[$env[ask;pergunta] ($env[ask;difficulty])]
+     $sendMessage[$getGuildVar[batePapo;$env[guildID]];
+      $if[$env[tipo]==fraseRepeat;
+       $let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]
+       $jsonLoad[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
+       $setGuildVar[minigameWord;$env[frase;texto];$env[guildID]]
+       $author[QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
+       $description[### $replaceText[$env[frase;texto]; ; ]]
+       $footer[$env[frase;autor]]
+       $color[Green]
+       $setGuildVar[minigameType;$env[tipo];$env[guildID]]
+       $setGuildVar[minigameStatus;true;$env[guildID]]
+      ]
+      $if[$env[tipo]==questions;
+       $let[id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/Questions/asks/ | wc -l]]]
+       $jsonLoad[ask;$readFile[Recursos/WinderMinigames/Questions/asks/$get[id].txt]]
+       $jsonLoad[alt;$env[ask;alts]]
+       $author[Evento de chat: Perguntas;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
+       $description[### $toUpperCase[$env[ask;pergunta] ($env[ask;difficulty])]
         $if[$env[alt;a]!=undefined;A: $env[alt;a]]
         $if[$env[alt;b]!=undefined;B: $env[alt;b]]
         $if[$env[alt;c]!=undefined;C: $env[alt;c]]
         $if[$env[alt;d]!=undefined;D: $env[alt;d]]
-        $if[$env[alt;e]!=undefined;E: $env[alt;e]]
-    ]
-     $footer[Responda apenas com a letra da resposta! | ID: $get[id]]
-     $image[$if[$env[ask;image]==;https://cdn.discordapp.com/attachments/785632865709981756/1465469785813942272/IMG_20260126_191316.png?ex=69793898&is=6977e718&hm=559e450ba67a6a132a64f475bb1781cce2aa4ebe4f046a39c5fc3dd303382591&;$env[ask;image]]]
-     $color[Green]
-
-     $setGuildVar[minigameWord;$env[ask;correct];$env[guildID]]
-     $setGuildVar[minigameType;$env[tipo];$env[guildID]]
-     $setGuildVar[minigameStatus;true;$env[guildID]]
-]
+        $if[$env[alt;e]!=undefined;E: $env[alt;e]]]
+       $footer[Responda apenas com a letra da resposta! | ID: $get[id]]
+       $image[$if[$env[ask;image]==;https://cdn.discordapp.com/attachments/785632865709981756/1465469785813942272/IMG_20260126_191316.png?ex=69793898&is=6977e718&hm=559e450ba67a6a132a64f475bb1781cce2aa4ebe4f046a39c5fc3dd303382591&;$env[ask;image]]]
+       $color[Green]
+      $setGuildVar[minigameWord;$env[ask;correct];$env[guildID]]
+      $setGuildVar[minigameType;$env[tipo];$env[guildID]]
+      $setGuildVar[minigameStatus;true;$env[guildID]]
+      ]
+     ]
+    $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$env[guildID];0]+1];$env[guildID]]
+     $wait[1m]
+      $onlyIf[$getGuildVar[minigameStatus;$env[guildID]]==true;]
+      $setGuildVar[minigameStatus;false;$env[guildID]]
+      $setGuildVar[minigameWord;;$env[guildID]]
+      $setGuildVar[minigameXPmin;0;$env[guildID]]
+      $setGuildVar[minigameXPmax;0;$env[guildID]]
+      $setChannelSlowmode[$getGuildVar[batePapo;$env[guildID]];0]
+      $sendMessage[$getGuildVar[batePapo;$env[guildID]];### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
 
 `}]
