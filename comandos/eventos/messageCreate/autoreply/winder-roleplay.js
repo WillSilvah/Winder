@@ -1,6 +1,7 @@
 module.exports = {
     type: "messageCreate",
-    code: `$if[$getGlobalVar[sleepMode]==true;$stop]
+    code: `$stop
+    $if[$getGlobalVar[sleepMode]==true;$stop]
 $cooldown[$guildID;10m]
 $onlyIf[$randomNumber[1;15]==5;]
 $reply

@@ -1,6 +1,7 @@
 module.exports = {
     type: "messageCreate",
     code: `$reply
+    $stop
     $onlyIf[$mentioned[0]==$clientID;]
 
     $onlyIf[$getGlobalVar[sleepMode]==false;
