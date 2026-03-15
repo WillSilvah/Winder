@@ -28,7 +28,7 @@ module.exports = {
      $addContainer[
       $addSection[
        $addTextDisplay[## 🔔 LEMBRETE!]
-       $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{0}];ShortDateMediumTime]]
+       $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{0};{1}];ShortDateMediumTime]]
        $addButton[https://discords.com/servers/$guildID/upvote;Votar;Link;⬆️;false]
       ]
     ;Blue]
