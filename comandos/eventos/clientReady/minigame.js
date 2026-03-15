@@ -1,39 +1,19 @@
 module.exports = [{
     type: 'clientReady',
-    code: `$let[guildID;1462224054676099094]
-$setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
-$onlyIf[34==26;]
-$setInterval[
-$sendMessage[$getGlobalVar[consoleChat];Tentativa de executar um minigame
------------------------------------
-MSGS/Minuto: $getGuildVar[oldMsgPerMinute;$get[guildID];0]
-
-]
-$setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
-$onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>5;]
-
-$setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$guildID;0]+1];$guildID]
-
-$sendMessage[$getGuildVar[batePapo;$get[guildID]];$minigame[fraseRepeat];$get[guildID]]
-
-$wait[1m]
-$onlyIf[$getGuildVar[minigameStatus;$get[guildID]]==true;]
-
-$setGuildVar[minigameStatus;false;$get[guildID]]
-$setGuildVar[minigameWord;;$get[guildID]]
-
-$setGuildVar[minigameXPmin;0;$get[guildID]]
-$setGuildVar[minigameXPmax;0;$get[guildID]]
-$setChannelSlowmode[$getGuildVar[batePapo;$get[guildID]];0]
-$sendMessage[$getGuildVar[batePapo;$get[guildID]];### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
-
-;15m;WinderMinigame]
+    code: `$stop
+    $let[guildID;1462224054676099094]
+    $setInterval[
+     $onlyIf[$getGlobalVar[sleepMode]==false;]
+      $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
+     $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>5;]
+      $minigame[$randomText[questions;fraseRepeat];$get[guildID]]
+    ;15m;WinderMinigame]    
 `
-},{
+    },{
     type: 'messageCreate',
     code: `
 $onlyIf[$channelID==$getGuildVar[batePapo];]
-$onlyIf[$getGuildVar[minigameStatus;$guildID]==true;]
+$onlyIf[$getGuildVar[minigameStatus;$guildID;false]==true;]
 $onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$getGuildVar[minigameWord;$guildID];$toLowerCase[$getGuildVar[minigameWord;$guildID]]];]
 $startTyping[$channelID]
 $setGuildVar[minigameStatus;false;$guildID]
