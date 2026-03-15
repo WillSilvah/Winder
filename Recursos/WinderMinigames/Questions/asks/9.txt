@@ -1,5 +1,5 @@
 {
-"pergunta": "Quem e o Winder?",
+"pergunta": "Quem é o Winder?",
 "correct": "d",
 "difficulty": "Fácil",
 "image": "",

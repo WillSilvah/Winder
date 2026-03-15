@@ -88,6 +88,11 @@ $deleteRecords[tempInvitesMonth]
     type: 'clientReady',
     code: `
     $let[guildID;1462224054676099094]
+    $cron[
+    $setGlobalVar[sleepMode;false]
+    $!memberSetNickname[$get[guildID];$clientID;$username[$clientID]]
+    ;0 6 * * *;America/Recife]
+
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🌞 BOM DIA PELUDOS!
 **Vamos levantar e tomar uma xícara de café?**
@@ -119,21 +124,21 @@ $!memberSetNickname[$get[guildID];$clientID;(AFK) $username[$clientID]]
     type: "clientReady",
     code: `
 $cron[
-$sendMessage[$getGuildVar[staffChat;$getGlobalVar[guildID]];
+$sendMessage[$getGuildVar[staffChat;1462224054676099094];
 ### 🚫 MENÇÕES A CARGOS DE PING DESATIVADAS!
 ]
 
-$!editRole[$getGlobalVar[guildID];1463138976494915646;;;;;false;]
-$!editRole[$getGlobalVar[guildID];1463139649806663782;;;;;false;]
+$!editRole[1462224054676099094;1463138976494915646;;;;;false;]
+$!editRole[1462224054676099094;1463139649806663782;;;;;false;]
 ;0 22 * * *;America/Recife]
 
 $cron[
-$sendMessage[$getGuildVar[staffChat;$getGlobalVar[guildID]];
+$sendMessage[$getGuildVar[staffChat;1462224054676099094];
 ### ✅ MENÇÕES A CARGOS DE PING ATIVADAS!
 ]
 
-$!editRole[$getGlobalVar[guildID];1463138976494915646;;;;;true;]
-$!editRole[$getGlobalVar[guildID];1463139649806663782;;;;;true;]
+$!editRole[1462224054676099094;1463138976494915646;;;;;true;]
+$!editRole[1462224054676099094;1463139649806663782;;;;;true;]
 ;0 6 * * *;America/Recife]   
     
 `
