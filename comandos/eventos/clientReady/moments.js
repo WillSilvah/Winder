@@ -121,7 +121,7 @@ $setGlobalVar[sleepMode;true]
 `
 },{
     type: "clientReady",
-    code: `
+    code: `$stop
 $cron[
 $sendMessage[$getGuildVar[staffChat;1462224054676099094];
 ### 🚫 MENÇÕES A CARGOS DE PING DESATIVADAS!
