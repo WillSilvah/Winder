@@ -14,7 +14,6 @@ module.exports = {
       $addButton[https://discords.com/servers/$guildID/upvote;Vote na patinhas! (discords.com);Link;⬆️;false]
      ]
      $addSeparator[Large;true]
-     $deleteIn[5m]
     ]
 
     $if[$isUserDMEnabled==true;
@@ -29,7 +28,7 @@ module.exports = {
       $addSection[
        $addTextDisplay[## 🔔 LEMBRETE!]
        $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{0};{1}];ShortDateMediumTime]]
-       $addButton[https://discords.com/servers/$guildID/upvote;Votar;Link;⬆️;false]
+       $addButton[https://discords.com/servers/{1}/upvote;Votar;Link;⬆️;false]
       ]
     ;Blue]
     ]
