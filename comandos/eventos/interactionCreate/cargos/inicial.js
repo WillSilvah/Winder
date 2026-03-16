@@ -15,7 +15,7 @@ module.exports = [{
     $addActionRow
      $addButton[bnotificar;Receber notificações;Success;🔔;false]
      $addButton[bclubes;Participar de um clube;Primary;👥;false]
-     $addButton[bgameClubes;Participar de um clube de jogos;Danger;👋;true]
+     $addButton[bclubgaming;Participar de um clube de jogos;Danger;👋;false]
      $addButton[bchamadas;Receber chamadas;Primary;👋;false]
      $addButton[bcores;Trocar a do meu nome;Primary;🎨;false]
     ;Red]
