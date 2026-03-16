@@ -33,12 +33,10 @@ $deleteRecords[tempMessageToday]
 
     $cron[
     $setGlobalVar[sleepMode;false]
-    $!memberSetNickname[$get[guildID];$clientID;$username[$clientID]]
     ;34 6 * * *;America/Recife]
     
     $cron[
     $setGlobalVar[sleepMode;true]
-    $!memberSetNickname[$get[guildID];$clientID;(AFK) $username[$clientID]]
     ;0 22 * * *;America/Recife]
  
  `
