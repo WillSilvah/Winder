@@ -98,7 +98,6 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 **Vamos levantar e tomar uma xícara de café?**
 ]
 $setGlobalVar[sleepMode;false]
-$!memberSetNickname[$get[guildID];$clientID;$username[$clientID]]
 ;34 6 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🍱 JÁ PODE ALMOÇAR!
@@ -117,7 +116,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 **Vamos tirar um cochilo?**
 ]
 $setGlobalVar[sleepMode;true]
-$!memberSetNickname[$get[guildID];$clientID;(AFK) $username[$clientID]]
+
 ;0 22 * * *;America/Recife]
 `
 },{
