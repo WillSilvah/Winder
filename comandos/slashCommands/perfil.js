@@ -21,7 +21,7 @@ $addTextDisplay[
 ]
 ;
 $if[$isBanned[$guildID;$get[userID]]==false;
-$addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]==true;😄 **$userTag[$get[userID]]** esteve aqui!;🧐 Não, **$userTag[$get[userID]]** não esteve aqui.]]
+$addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]==true;😄 **$userTag[$get[userID]]** já esteve aqui em $discordTimestamp[$getMemberVar[memberJoinedFirstTime;$get[userID]];ShortDateMediumTime];🧐 Não, **$userTag[$get[userID]]** não esteve aqui.]]
 ]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
