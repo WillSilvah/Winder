@@ -19,4 +19,11 @@ module.exports = [{
      $setMemberVar[memberJoinedFirstTime;$memberJoinedAt[$guildID;$authorID];$authorID;$guildID]
     ]
 `
+},{
+    type: "messageCreate",
+    code: `
+    $if[$getMemberVar[memberJoinedFirstTime;$authorID]!=;
+     $setMemberVar[memberJoinedFirstTime;$memberJoinedAt[$guildID;$authorID];$authorID;$guildID]
+    ]
+`
 }]
