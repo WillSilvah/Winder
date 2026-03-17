@@ -18,6 +18,7 @@ module.exports = [{
       $addOption[Receber tudo da Patinhas;Você será notificado de tudo que e possível;all;🔔;false]
       $addOption[Receber notificação de coisas novas para a comunidade;Seja notificado quando acontecer algo novo na comunidade e ficar ligado em tudo.;novidades;⭐;false]
       $addOption[Participar de sorteios e de eventos;Seja notificado quando acontecer um sorteio ou um evento!;eventos;🎉;false]
+      $addOption[Receber notícias do Jornal da Patinhas;O que tá acontecendo por aí?;jornal;📰;false]
       $addOption[Receber avisos sobre os minigames;Seja notificado sobre alterações no Winder Minigames;minigame;🎮;false]
       $if[1==2;$addOption[Lives de streamers parceiros;Receba uma notificação de quando um parceiro fazer uma live! #VimDaPatinhas!;lives;🔴;false]]
       $addOption[Não quero receber notificações;Remove todos os cargos de notificação escolhidas.;remove;🔕;false]
@@ -29,13 +30,14 @@ module.exports = [{
     code: `
     $ephemeral $disableAllMentions
 
-    $jsonLoad[notificar;{
-  "novidades": "1463138741441790014",
-  "eventos": "1463139182313738412",
-  "minigame": "1463139788650582180",
-  "lives": "1464053142286106684"
-}
-]
+   $jsonLoad[notificar;{
+    "novidades": "1463138741441790014",
+    "eventos": "1463139182313738412",
+    "minigame": "1463139788650582180",
+    "lives": "1464053142286106684",
+    "jornal": "1471966477069455410"
+    }
+   ]
 
     $arrayLoad[notificarID;,;$jsonValues[notificar;,]]
 
