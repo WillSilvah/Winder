@@ -18,7 +18,7 @@ module.exports = [{
      $addStringSelectMenu[chamadas;Escolha uma notificação para receber;false;1;1]
        $addOption[Chamar para conversar;Seja chamado para conversar sobre algum assunto.;conversar;💬;false]
        $addOption[Chamar para calls;Gosta de participar de Calls?;call;🔉;false]
-       $addOption[Não quero receber chamadas;É incômodo?;remove;❌;false]
+       $addOption[Não quero receber chamadas;É incômodo?;cremove;❌;false]
     ]
 `
 },{
@@ -32,7 +32,7 @@ module.exports = [{
     $arrayLoad[chamadasID;,;$jsonValues[chamadas;,]]
 
     $ifx[
-     $if[$selectMenuValues==remove;
+     $if[$selectMenuValues==cremove;
      $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não será mais chamado pelos membros.]
     
      $arrayForEach[chamadasID;id;
