@@ -6,9 +6,8 @@ module.exports = [{
     $let[msgID;$sendMessage[1470875996356874292;
     $disableAllMentions
     $addContainer[
-      $addTextDisplay[### PERSONALIZAR PERFIL E GERENCIAR CARGOS]
+      $addTextDisplay[### GERENCIAR CARGOS]
       $addTextDisplay[Tem muitos cargos interessantes na Patinhas para poder pegar!]
-    $addSeparator[Large;true]
     $addActionRow
      $addButton[bnotificar;Receber notificações;Success;🔔;false]
      $addButton[bclubes;Participar de um clube;Primary;👥;false]
@@ -16,6 +15,7 @@ module.exports = [{
      $addButton[bchamadas;Receber chamadas;Primary;👋;false]
      $addButton[bcores;Trocar a do meu nome;Primary;🎨;false]
     ;Red]
+    $addSeparator[Large;true]
     ;true]]
     $setGlobalVar[inicial_messageID;$get[msgID]]
 `
