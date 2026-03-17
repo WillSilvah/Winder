@@ -17,7 +17,7 @@ module.exports = {
     ]
 
     $if[$isUserDMEnabled==true;
-     $sendDM[$authorID;Obrigado por ter votado! Lembrarei você de votar às $discordTimestamp[$getMemberVar[nextVoteRemindTime;{0}];ShortDateMediumTime]. Use o comando /lembrete voto para desativar ou ativar os lembretes na DM!]
+     $sendDM[$authorID;Obrigado por ter votado! Lembrarei você de votar às $discordTimestamp[$getMemberVar[nextVoteRemindTime;$authorID];ShortDateMediumTime]. Use o comando /lembrete voto para desativar ou ativar os lembretes na DM!]
     ]
 
     $setMemberVar[nextVoteRemindTime;$math[$getTimestamp+$parseString[6h]]]
