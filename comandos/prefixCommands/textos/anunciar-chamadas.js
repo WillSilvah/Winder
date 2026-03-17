@@ -3,7 +3,7 @@ module.exports = [{
     type: 'messageCreate',
     code: `
 $onlyIf[$hasPerms[$guildID;$authorID;ManageGuild]==true;]
-$arrayLoad[roleMembers;, ;$guildMemberIDs[$guildID;, ]]
+$arrayLoad[roleMembers;,;$guildMemberIDs[$guildID;,]]
 $arrayForEach[roleMembers;id;
 $onlyIf[$hasRoles[1462224054676099094;$env[id];1463138976494915646]==true;$log[$userTag[$env[id]] não tem chamar para conversar]]
 $log[Mensagem enviada para: $userTag[$env[id]]]
