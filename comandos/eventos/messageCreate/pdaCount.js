@@ -15,7 +15,7 @@ $onlyIf[$includes[$channelID;1478505120525324541]==false;]
 
 $let[textDivisorPDA;$truncate[$math[$charCount[$message]/4]]]
 
-$let[basicPDA;$if[$get[textDivisorPDA]>=15;15;$get[textDivisorPDA]]]
+$let[basicPDA;$if[$get[textDivisorPDA]>=10;10;$get[textDivisorPDA]]]
 
 $let[bonusVotePDA;$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVotedRole]]==true;5;0]]
 
