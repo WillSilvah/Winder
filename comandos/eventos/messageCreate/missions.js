@@ -1,20 +1,12 @@
 module.exports = [{
     type: "messageCreate",
     code: `
-    $if[$getMemberVar[messageTotal;$authorID;$guildID;0]==6;
+    $if[$getMemberVar[messageTotal;$authorID;$guildID;0]==1;
      $reply[$channelID;$messageID]
      $startTyping[$channelID]
      $wait[2s]
-     $sendMessage[$channelID;Olá, seja bem vindo(a) a patinhas! 👋 Vim te contar que para ter acesso a enviar mídia nos canais de texto você precisa enviar **200 mensagens**, é bem rápido. Veja suas informações em **/perfil**👀]
-     $startTyping[$channelID]
-     $wait[7s]
-     $sendMessage[$channelID;Não é necessário usar o **/perfil** toda hora, irei te avisar no momento em que conseguir, relaxe! 😊]
-     $startTyping[$channelID]
-     $wait[4s]
-     $sendMessage[$channelID;Dúvidas? Qualquer coisa o canal <#1463277652562411787> está disponível. Se divirta na patinhas! ]
-     $startTyping[$channelID]
-     $wait[2s]
-     $sendMessage[$channelID;😘]
+      $sendMessage[$channelID;Olá, seja bem vindo(a) a patinhas! 👋 Para enviar mídia (imagens, vídeos...), envie *200 mensagens* (veja em /perfil 👀). Irei te avisar quando conseguir 😊. Dúvidas? <#1463277652562411787> 😘
+     ]
     ]
 
     $if[$getGuildVar[allMemberRole]!=;
