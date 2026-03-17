@@ -2,7 +2,7 @@ module.exports = [{
     name: "update-inicial",
     type: "messageCreate",
     code: `
-    $deleteMessage[1470875996356874292;$getGlobalVar[inicial_messageID]]
+    $!deleteMessage[1470875996356874292;$getGlobalVar[inicial_messageID]]
     $let[msgID;$sendMessage[1470875996356874292;
     $disableAllMentions
     $addContainer[

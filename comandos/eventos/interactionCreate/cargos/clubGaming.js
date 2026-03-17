@@ -8,8 +8,9 @@ module.exports = [{
       $addSection[
        $addTextDisplay[## CLUBES DE JOGOS!]
        $addTextDisplay[Quais jogos você joga?]
+       $addTextDisplay[Se estiver faltado algum jogo que você jogue, faça uma sugestão!]
 
-       $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f465.png]
+       $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f3ae.png]
       ]
      ;Green]
     $addActionRow
