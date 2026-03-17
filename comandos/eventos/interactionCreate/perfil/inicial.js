@@ -6,7 +6,7 @@ module.exports = [{
     $let[msgID;$sendMessage[1470875996356874292;
     $disableAllMentions
     $addContainer[
-      $addTextDisplay[## GERENCIAR CARGOS!]
+      $addTextDisplay[### PERSONALIZAR PERFIL E GERENCIAR CARGOS]
       $addTextDisplay[Tem muitos cargos interessantes na Patinhas para poder pegar!]
     $addSeparator[Large;true]
     $addActionRow
