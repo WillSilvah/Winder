@@ -8,7 +8,7 @@ module.exports = [{
       $addSection[
        $addTextDisplay[## CLUBES DE JOGOS!]
        $addTextDisplay[Quais jogos você joga?]
-       $addTextDisplay[Se estiver faltado algum jogo que você jogue, faça uma sugestão!]
+       $addTextDisplay[Se estiver faltando algum jogo que você jogue, faça uma sugestão!]
 
        $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f3ae.png]
       ]
@@ -20,7 +20,7 @@ module.exports = [{
      $addOption[Brawl Stars;;brawlstars;✨;false]
      $addOption[Free Fire;;freefire;🔫;false]
      $addOption[Fortnite;;fortnite;⛏️;false]
-     $addOption[Call Of Duty;;calofduty;🔫;false]
+     $addOption[Call Of Duty;;callofduty;🔫;false]
      $addOption[League Of Legends;;leagueoflegends;✨;false]
      $addOption[Just Dance;;justdance;🕺;false]
      $addOption[Marvel Rivals;;marvelrivals;⚔️;false]
