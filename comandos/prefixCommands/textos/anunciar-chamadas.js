@@ -3,8 +3,11 @@ module.exports = [{
     type: 'messageCreate',
     code: `
 $onlyIf[$hasPerms[$guildID;$authorID;ManageGuild]==true;]
-$arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;1463138976494915646;,]]
+$arrayLoad[roleMembers;, ;$guildMemberIDs[$guildID;, ]]
 $arrayForEach[roleMembers;id;
+$onlyIf[$hasRoles[$guildID;$env[id];1463138976494915646]==true;]
+$log[Mensagem enviada para: $userTag[$env[id]]]
+
 $sendDM[$env[id];
 $addContainer[
 $addSection[
