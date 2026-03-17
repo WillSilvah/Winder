@@ -5,9 +5,8 @@ module.exports = [{
 $onlyIf[$hasPerms[$guildID;$authorID;ManageGuild]==true;]
 $arrayLoad[roleMembers;,;$guildMemberIDs[$guildID;,]]
 $arrayForEach[roleMembers;id;
-$onlyIf[$hasRoles[1462224054676099094;$env[id];1463138976494915646]==true;$log[$userTag[$env[id]] não tem chamar para conversar]]
+$if[$hasRoles[1462224054676099094;$env[id];1463138976494915646]==true;
 $log[Mensagem enviada para: $userTag[$env[id]]]
-
 $sendDM[$env[id];
 $addContainer[
 $addSection[
@@ -31,6 +30,8 @@ $addActionRow
 $addButton[https://discord.com/channels/1462224054676099094/1470875996356874292;Gerenciar cargos;Link;⚙;false]
 $addButton[https://discord.com/channels/1462224054676099094/1462224055884189778;Ler as diretrizes;Link;📕;false]
 $addButton[https://discord.com/channels/1462224054676099094/1462224055884189781;Ir ao Bate Papo;Link;💬;false]
+];
+$log[$userTag[$env[id]] não recebeu a mensagem]
 ]
 ]
 
