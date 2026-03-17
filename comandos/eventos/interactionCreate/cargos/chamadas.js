@@ -15,7 +15,7 @@ module.exports = [{
        ]
       ;Yellow]
      $addActionRow
-      $addStringSelectMenu[chamadas;Escolha uma notificação para receber;false;1;1]
+     $addStringSelectMenu[chamadas;Escolha uma notificação para receber;false;1;1]
        $addOption[Chamar para conversar;Seja chamado para conversar sobre algum assunto.;conversar;💬;false]
        $addOption[Chamar para calls;Gosta de participar de Calls?;call;🔉;false]
        $addOption[Não quero receber chamadas;É incômodo?;remove;❌;false]
