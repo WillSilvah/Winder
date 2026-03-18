@@ -14,6 +14,7 @@ module.exports = [{
    $!addMessageReactions[$channelID;$messageID;👋]
   ]
   $if[$includes[$toLowerCase[$message];olá;oi;hello;hi;howdy]==true;
+   $onlyIf[$argsCount[$message]<3;]
    $cooldown[$guildID;10s]
    $!addMessageReactions[$channelID;$messageID;👋]
   ]
