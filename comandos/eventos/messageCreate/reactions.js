@@ -9,6 +9,10 @@ module.exports = [{
    $cooldown[$guildID;10s]
    $!addMessageReactions[$channelID;$messageID;💀]
   ]
+  $if[$includes[$toLowerCase[$message];bom;boa]-$includes[$toLowerCase[$message];dia;tarde;noite]==true-true;
+   $cooldown[$guildID;10s]
+   $!addMessageReactions[$channelID;$messageID;👋]
+  ]
   
 `
 }]
