@@ -5,6 +5,10 @@ module.exports = [{
    $cooldown[$guildID;10s]
    $!addMessageReactions[$channelID;$messageID;$randomText[😂;🤣]]
   ]
+  $if[$includes[$toLowerCase[$message];morte;caveira;morri;morre;💀;☠]==true;
+   $cooldown[$guildID;10s]
+   $!addMessageReactions[$channelID;$messageID;💀]
+  ]
   
 `
 }]
