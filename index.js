@@ -113,7 +113,6 @@ const client = new ForgeClient({
         "w+", "w/", "<@$clientID> "
     ],
     prefixCaseInsensitive: true,
-	logLevel: High,
     trackers: {
         invites: true,
         voice: true
