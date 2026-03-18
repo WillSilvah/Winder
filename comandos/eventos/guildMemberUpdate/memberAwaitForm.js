@@ -1,27 +1,14 @@
 module.exports = {
  type: 'guildMemberUpdate',
- code: `
-$onlyIf[$checkContains[$oldMember[addedRoles];$getGuildVar[allStaffRole;$guildID]]==true;]
+ code: `$stop
+ $onlyIf[$checkContains[$oldMember[addedRoles];1467496885664092201]==true;]
 
-$sendMessage[$getGuildVar[staffChat];
-$addSection[
-$addTextDisplay[
-### DIGAM BOAS VINDAS AO <@$authorID> NA EQUIPE PATINHAS!
-$bold[Mais um membro na Equipe!]
-$addThumbnail[$userAvatar[$authorID]]
+ $if[$isUserDMEnabled[$authorID]==true;
+  $sendDM[$authorID;
+   $addContainer[
+   $addTextDisplay[### RECEBEMOS SEU FORMULÁRIO!]
 ]
 ]
-$addSeparator[Large;true]
-$addTextDisplay[<@&$getGuildVar[allStaffRole]>]
-]
-
-$sendMessage[$getGuildVar[batePapo];
-$addSection[
-$addTextDisplay[### O @$username entrou na Equipe Patinhas! 👏
-]
-$addThumbnail[$userAvatar[$authorID]]
-]
-$addSeparator[Large;true]
 ]
 
 `
