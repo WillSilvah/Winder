@@ -25,6 +25,7 @@ $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]
 ]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
+$if[$getMemberVar[warns;$get[userID]]>0;$addTextDisplay[⚠ Tem **$getMemberVar[warns;$get[userID]]** advertências!]]
 $addSeparator[Large;true]
 $if[$isBanned[$guildID;$get[userID]]==false;
 $addTextDisplay[
