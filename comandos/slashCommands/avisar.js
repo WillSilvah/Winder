@@ -10,7 +10,7 @@ module.exports = {
       $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
     
 
-    $let[memberWarns;$getMemberVar[warns;$get[userID];$get[guild];1]]
+    $let[memberWarns;$getMemberVar[warns;$get[userID];$get[guild];0]]
     
     $jsonLoad[avisos;$getMemberVar[warnList;$get[userID];$get[guild];{}]]
     $jsonLoad[warn;{
