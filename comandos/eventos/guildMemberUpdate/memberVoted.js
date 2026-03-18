@@ -20,7 +20,7 @@ module.exports = {
     $setMemberVar[nextVoteRemindTime;$math[$getTimestamp+$parseString[6h]]]
 
     $if[$isUserDMEnabled==true;
-     $sendDM[$authorID;Obrigado por ter votado! Lembrarei você de votar às $discordTimestamp[$getMemberVar[nextVoteRemindTime;$authorID];ShortDateMediumTime]. Use o comando /lembrete voto para desativar ou ativar os lembretes na DM!]
+     $sendDM[$authorID;Obrigado por ter votado! Lembrarei você de votar às $discordTimestamp[$getMemberVar[nextVoteRemindTime;$authorID];ShortDateShortTime]. Use o comando /lembrete voto para desativar ou ativar os lembretes na DM!]
     ]
 
     $advancedTimeout[$esc[
@@ -28,7 +28,7 @@ module.exports = {
      $addContainer[
       $addSection[
        $addTextDisplay[## 🔔 LEMBRETE!]
-       $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{0};{1}];ShortDateMediumTime]]
+       $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{0};{1}];ShortDateShortTime]]
        $addButton[https://discords.com/servers/{1}/upvote;Votar;Link;⬆️;false]
       ]
     ;Blue]
