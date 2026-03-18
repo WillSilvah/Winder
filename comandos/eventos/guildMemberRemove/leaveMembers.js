@@ -9,6 +9,7 @@ module.exports = [{
      
      $addThumbnail[$userAvatar]
      ]
+     ;Red]
     
     ]
 
