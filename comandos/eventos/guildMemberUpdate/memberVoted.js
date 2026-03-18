@@ -14,6 +14,7 @@ module.exports = {
       $addButton[https://discords.com/servers/$guildID/upvote;Vote na patinhas! (discords.com);Link;⬆️;false]
      ]
      $addSeparator[Large;true]
+     $deleteIn[10m]
     ]
     
     $setMemberVar[nextVoteRemindTime;$math[$getTimestamp+$parseString[6h]]]

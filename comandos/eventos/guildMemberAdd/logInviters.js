@@ -13,8 +13,9 @@ $setMemberVar[invitesTotal;$math[$getMemberVar[invitesTotal;$get[inviterID];$gui
 $sendMessage[$getGuildVar[invitesLogChannel];
 $addContainer[
 $addSection[
-$addTextDisplay[### $userTag ($authorID)
+$addTextDisplay[### @$userTag ($authorID)
 **Convidado por: $userTag[$get[inviterID]] ($get[inviterID])**
+
 $addThumbnail[$userAvatar]
 ]
 ]
