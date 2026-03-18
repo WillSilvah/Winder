@@ -1,6 +1,7 @@
 module.exports = [{
   type: "messageCreate",
   code: `
+  $onlyIf[$mentioned[0]==$authorID;]
   $if[$includes[$toLowerCase[$message];kkkk]==true;
    $cooldown[$guildID;10s]
    $!addMessageReactions[$channelID;$messageID;$randomText[😂;🤣]]
