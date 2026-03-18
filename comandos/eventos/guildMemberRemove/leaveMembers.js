@@ -5,12 +5,10 @@ module.exports = [{
     $addContainer[
      $addSection[
      $addTextDisplay[### @$userTag saiu]
-     $addTextDisplay[Convidado por: $getMemberVar[inviter]
-     
+     $addTextDisplay[Convidado por: $getMemberVar[inviter]]
      $addThumbnail[$userAvatar]
      ]
      ;Red]
-    
     ]
 
 `
