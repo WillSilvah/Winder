@@ -4,7 +4,7 @@ module.exports = {
  $onlyIf[$checkContains[$oldMember[addedRoles];1467496885664092201]==true;]
 
  $if[$isUserDMEnabled[$authorID]==true;
-  $sendDM[$authorID;
+  $!sendDM[$authorID;
    $addContainer[
     $addSection[
     $addTextDisplay[## RECEBEMOS O SEU FORMULÁRIO!]
@@ -15,7 +15,7 @@ module.exports = {
   ]
  ]
  
- $memberRemoveRoles[$guildID;$authorID;1467496885664092201]
+ $!memberRemoveRoles[$guildID;$authorID;1467496885664092201]
 
 `
 }
