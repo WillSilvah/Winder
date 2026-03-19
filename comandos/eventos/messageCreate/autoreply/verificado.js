@@ -2,7 +2,7 @@ module.exports = [{
     type: "messageCreate",
     code: `
     $reply $disableRoleMentions
-    $if[$includes[$toLowercase[$message];como;enviar;mandar;envio]|$includes[$toLowercase[$message];image;mídia;arte;anexo;vídeo]==true|true;
+    $if[$includes[$toLowercase[$message];como;enviar;mandar;envio]|$includes[$toLowercase[$message];image;mídia;arte;foto;photo;anexo;vídeo]==true|true;
     $startTyping[$channelID]
     $wait[2s]
     $if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;
