@@ -25,11 +25,10 @@ module.exports = [{
        $addContainer[
         $addTextDisplay[Quem escrever primeiro ganha]
         $addTextDisplay[### $replaceText[$env[frase;texto]; ; ]\n-# $env[frase;autor] | ID: $get[frase_id]]
-       
+       ;Green]
        $setGuildVar[minigameWord;$env[frase;texto];$env[guildID]]
        $setGuildVar[minigameType;$env[tipo];$env[guildID]]
        $setGuildVar[minigameStatus;true;$env[guildID]]
-      ]
       $if[$env[tipo]==questions;
        $let[id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/Questions/asks/ | wc -l]]]
        $jsonLoad[ask;$readFile[Recursos/WinderMinigames/Questions/asks/$get[id].txt]]
@@ -55,7 +54,7 @@ module.exports = [{
       $setGuildVar[minigameWord;;$env[guildID]]
       $setGuildVar[minigameXPmin;0;$env[guildID]]
       $setGuildVar[minigameXPmax;0;$env[guildID]]
-      $setChannelSlowmode[$getGuildVar[batePapo;$env[guildID]];0]
+      $!setChannelSlowmode[$getGuildVar[batePapo;$env[guildID]];0]
       $sendMessage[$getGuildVar[batePapo;$env[guildID]];### ⛔️ EVENTO DE CHAT FOI CANCELADO!]
 
 `}]

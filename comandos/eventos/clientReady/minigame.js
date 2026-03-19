@@ -25,7 +25,6 @@ module.exports = [{
     $!addMessageReactions[$channelID;$messageID;🏆]
     $setMemberVar[minigameMonthWins;$sum[$getMemberVar[minigameMonthWins;$authorID;$guildID;0];1];$authorID]
     $setMemberVar[minigameTotalWins;$sum[$getMemberVar[minigameTotalWins;$authorID;$guildID;0];1];$authorID]
-    $let[time;$getTimestamp]
     
     $sendMessage[$channelID;
      $addSection[
