@@ -16,6 +16,7 @@ module.exports = [{
     $addActionRow
     $addStringSelectMenu[clubgaming;Escolha um clube;false;1;1]
      $addOption[Minecraft;;minecraft;⛏️;false]
+     $addOption[Roblox;;roblox;⬜️;false]
      $addOption[Terraria;;terraria;🌍;false]
      $addOption[Brawl Stars;;brawlstars;✨;false]
      $addOption[Free Fire;;freefire;🔫;false]

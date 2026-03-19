@@ -5,7 +5,7 @@ module.exports = [{
      $reply[$channelID;$messageID]
      $startTyping[$channelID]
      $wait[2s]
-      $sendMessage[$channelID;Olá, seja bem vindo(a) a patinhas! 👋 Para enviar mídia (imagens, vídeos...), envie *200 mensagens* (veja em /perfil 👀). Irei te avisar quando conseguir 😊. Dúvidas? <#1463277652562411787> 😘
+      $sendMessage[$channelID;Olá, seja bem vindo(a) a patinhas! 👋 Não se esqueça de passar no <#1470875996356874292> para personalizar seu perfil e pegar cargos.Dúvidas? <#1463277652562411787> 😘
      ]
     ]
 
