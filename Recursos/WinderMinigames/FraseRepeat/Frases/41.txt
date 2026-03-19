@@ -1,0 +1,4 @@
+{
+"texto": "Não quero faca, nem queijo, eu quero é a fome, eu quero a vida que o sangue consome.",
+"autor": "Sangue Latino - Ney Matogrosso"
+}

@@ -1,0 +1,4 @@
+{
+"texto": "Não se pode ensinar nada a um homem; pode-se apenas ajudá-lo a encontrar a resposta dentro de si mesmo.",
+"autor": "Galileu Galilei"
+}

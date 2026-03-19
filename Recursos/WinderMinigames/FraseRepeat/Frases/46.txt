@@ -1,0 +1,4 @@
+{
+"texto": "Toma, toma, toma, só vapo, vapo, a base tá pesada e o grave tá no talo.",
+"autor": "MC Niack"
+}

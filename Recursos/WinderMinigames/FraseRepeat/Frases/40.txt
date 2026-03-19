@@ -1,0 +1,4 @@
+{
+"texto": "Para quem tem medo, tudo são ruídos.",
+"autor": "Sophocles"
+}

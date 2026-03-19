@@ -1,0 +1,4 @@
+{
+"texto": "Um passo à frente e você já não está mais no mesmo lugar.",
+"autor": "Chico Science"
+}

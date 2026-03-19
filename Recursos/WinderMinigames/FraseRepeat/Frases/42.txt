@@ -1,0 +1,4 @@
+{
+"texto": "Eu não sou daqui, eu não tenho história, eu não tenho vida, eu não tenho memória.",
+"autor": "Homem com H - Ney Matogrosso"
+}

@@ -1,0 +1,4 @@
+{
+"texto": "I'm a survivor, I'm not gon' give up, I'm not gon' stop, I'm gon' work harder.",
+"autor": "Destiny's Child"
+}

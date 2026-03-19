@@ -21,11 +21,12 @@ module.exports = [{
       $if[$env[tipo]==fraseRepeat;
        $let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]
        $jsonLoad[frase;$readFile[Recursos/WinderMinigames/FraseRepeat/Frases/$get[frase_id].txt]]
+       
+       $addContainer[
+        $addTextDisplay[Quem escrever primeiro ganha]
+        $addTextDisplay[### $replaceText[$env[frase;texto]; ; ]\n-# $env[frase;autor] | ID: $get[frase_id]]
+       
        $setGuildVar[minigameWord;$env[frase;texto];$env[guildID]]
-       $author[QUEM ESCREVER PRIMEIRO GANHA!;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
-       $description[### $replaceText[$env[frase;texto]; ; ]]
-       $footer[$env[frase;autor]]
-       $color[Green]
        $setGuildVar[minigameType;$env[tipo];$env[guildID]]
        $setGuildVar[minigameStatus;true;$env[guildID]]
       ]
@@ -33,16 +34,13 @@ module.exports = [{
        $let[id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/Questions/asks/ | wc -l]]]
        $jsonLoad[ask;$readFile[Recursos/WinderMinigames/Questions/asks/$get[id].txt]]
        $jsonLoad[alt;$env[ask;alts]]
-       $author[Evento de chat: Perguntas;https://abs.twimg.com/emoji/v2/72x72/1f389.png]
-       $description[### $toUpperCase[$env[ask;pergunta] ($env[ask;difficulty])]
-        $if[$env[alt;a]!=undefined;A: $env[alt;a]]
-        $if[$env[alt;b]!=undefined;B: $env[alt;b]]
-        $if[$env[alt;c]!=undefined;C: $env[alt;c]]
-        $if[$env[alt;d]!=undefined;D: $env[alt;d]]
-        $if[$env[alt;e]!=undefined;E: $env[alt;e]]]
-       $footer[Responda apenas com a letra da resposta! | ID: $get[id]]
-       $image[$if[$env[ask;image]==;https://cdn.discordapp.com/attachments/785632865709981756/1465469785813942272/IMG_20260126_191316.png?ex=69793898&is=6977e718&hm=559e450ba67a6a132a64f475bb1781cce2aa4ebe4f046a39c5fc3dd303382591&;$env[ask;image]]]
-       $color[Green]
+       
+       $addContainer[
+        $addTextDisplay[### $toUpperCase[$env[ask;pergunta] ($env[ask;difficulty])]]
+        $addTextDisplay[$if[$env[alt;a]!=undefined;A: $env[alt;a]]\n$if[$env[alt;b]!=undefined;B: $env[alt;b]]\n$if[$env[alt;c]!=undefined;C: $env[alt;c]]\n$if[$env[alt;d]!=undefined;D: $env[alt;d]]\n$if[$env[alt;e]!=undefined;E: $env[alt;e]]]   
+       $addTextDisplay[-# Responda apenas com a letra da alternativa | ID: $get[id]]   
+       ;Green]
+       
       $setGuildVar[minigameWord;$env[ask;correct];$env[guildID]]
       $setGuildVar[minigameType;$env[tipo];$env[guildID]]
       $setGuildVar[minigameStatus;true;$env[guildID]]

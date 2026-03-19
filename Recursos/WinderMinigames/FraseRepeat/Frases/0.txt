@@ -1,4 +1,0 @@
-{
-	"texto": "Frase",
-	"autor": "autor"
-}
