@@ -3,7 +3,7 @@ module.exports = {
     code: `
     $setMemberVar[memberJoinedFirstTime;$memberJoinedAt[$guildID;$authorID];$authorID;$guildID]
     $setGuildVar[membersJoinedMonth;$sum[$getGuildVar[membersJoinedMonth;$guildID;0];1]]
-    $setMemberVar[inviter;$if[$inviterID[$guildID;$authorID]!=;$inviterID[$guildID;$authorID];$clientID];$authorID;$guildID]
+    $setMemberVar[inviter;$inviterID[$guildID;$authorID];$authorID;$guildID]
 
 $sendMessage[$getGuildVar[batePapo];
 $if[$isBot[$authorID]==false;
