@@ -1,10 +1,16 @@
 module.exports = {
   code: `
-$username[$clientID] Ping: **$pingms**
+  $interactionReply[
+   
+  
+  
+  
+  ]
+    
   `,
 data: {
   "type": 1,
-  "name": "ping",
-  "description": "Quanto tempo o Winder responde?"
+  "name": "info",
+  "description": "informações avançadas do Winder"
 },
 };
