@@ -5,7 +5,7 @@ module.exports = [{
     $addContainer[
      $addSection[
      $addTextDisplay[### @$userTag saiu]
-     $addTextDisplay[Convidado por: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano]]
+     $addTextDisplay[Convidado por: $userTag[$getMemberVar[inviter]]]
      $addThumbnail[$userAvatar]
      ]
      ;Red]
