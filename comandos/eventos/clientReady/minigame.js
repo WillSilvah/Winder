@@ -5,7 +5,7 @@ module.exports = [{
     $setInterval[
      $onlyIf[$getGlobalVar[sleepMode]==false;]
       $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
-     $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>5;]
+     $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>6;]
       $minigame[fraseRepeat;$get[guildID]]
     ;15m;WinderMinigame]    
 `
@@ -40,7 +40,8 @@ module.exports = [{
     $!memberAddRoles[$guildID;$authorID;$getGuildVar[lastWinMemberRole]]
     $setGuildVar[minigameLastUser;$authorID;$guildID]
     $setGuildVar[minigameEmit;false;$guildID]
-    
+    $wait[60s]
+    $startTyping
     $sendMessage[$channelID;
      $addTextDisplay[### <@$authorID> ganhou 🏆 **$getMemberVar[minigameMonthWins;$authorID;$guildID;0]** vezes neste mês e está em **$getMemberLeaderboardValue[minigameMonthWins;desc;$authorID;$guildID]°** lugar]
     ]
