@@ -15,10 +15,8 @@ const db = new ForgeDB({
     "variableUpdate"
   ]
 });
-...
 extensions: [
   db,
-  ...
 ]
 
 const client = new ForgeClient({
