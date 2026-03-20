@@ -16,7 +16,7 @@ $addThumbnail[$userAvatar[$get[userID]]]
 $if[$memberExists[$guildID;$get[userID]]==true;$addSeparator[Large;true]
 $addTextDisplay[
 👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
-💌 Veio pelo: **$if[$getMemberVar[inviter[$get[userID]]!=;$userTag[$getMemberVar[inviter;$get[userID]]];@Fulano]]**
+💌 Veio pelo: **$if[$getMemberVar[inviter[$get[userID]]]!=;$userTag[$getMemberVar[inviter;$get[userID]]];@Fulano]**
 💬 Enviou mensagem $discordTimestamp[$getMemberVar[lastMessageTimestamp;$get[userID]];RelativeTime]
 ]
 ;
@@ -72,6 +72,3 @@ data: {
       },
       "required": false
     }
-  ]
-},
-};
