@@ -132,5 +132,6 @@ client.functions.load('./comandos/custom/');
 client.commands.load("./comandos/prefixCommands/");
 client.commands.load("./comandos/eventos/");
 client.applicationCommands.load("./comandos/slashCommands/");
+db.commands.load("./comandos/database/")
 
 client.login(process.env.TOKEN)
