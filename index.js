@@ -6,6 +6,15 @@ require('dotenv').config();
 
 const TOKEN = process.env.TOKEN;
 
+const db = new ForgeDB({
+    events: [
+            "connect",
+            "variableCreate",
+            "variableDelete",
+            "variableUpdate"
+        ]
+});
+
 const client = new ForgeClient({
     intents: [
         "Guilds",
