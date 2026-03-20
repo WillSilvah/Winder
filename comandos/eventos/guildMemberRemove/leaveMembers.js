@@ -10,6 +10,7 @@ module.exports = [{
      ]
      ;Red]
     ]
-
+$wait[2s]
+$deleteRecords[inviter;$authorID]
 `
 }]    
