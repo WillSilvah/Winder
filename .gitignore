@@ -1,14 +1,12 @@
 
 .env
 *.env
-
 node_modules/
 logs/
 *.log
-
 Recursos/sabart.json
 npm-debug.log*
 .DS_Store
 dist/
 build/
-database/
+database/forge.db
