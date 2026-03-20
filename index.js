@@ -7,13 +7,19 @@ require('dotenv').config();
 const TOKEN = process.env.TOKEN;
 
 const db = new ForgeDB({
-    events: [
-            "connect",
-            "variableCreate",
-            "variableDelete",
-            "variableUpdate"
-        ]
+  type: "sqlite",
+  events: [
+    "connect",
+    "variableCreate",
+    "variableDelete",
+    "variableUpdate"
+  ]
 });
+...
+extensions: [
+  db,
+  ...
+]
 
 const client = new ForgeClient({
     intents: [
@@ -33,9 +39,6 @@ const client = new ForgeClient({
         "AutoModerationExecution"
     ],
     extensions: [
-        new ForgeDB({
-            type: "sqlite" 
-	 }),
 		new ForgeCron()
 	],
     events: [
