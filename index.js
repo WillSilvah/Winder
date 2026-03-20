@@ -7,17 +7,13 @@ require('dotenv').config();
 const TOKEN = process.env.TOKEN;
 
 const db = new ForgeDB({
-  type: "sqlite",
-  events: [
-    "connect",
-    "variableCreate",
-    "variableDelete",
-    "variableUpdate"
-  ]
+    events: [
+            "connect",
+            "variableCreate",
+            "variableDelete",
+            "variableUpdate"
+        ]
 });
-extensions: [
-  db,
-]
 
 const client = new ForgeClient({
     intents: [
@@ -37,6 +33,9 @@ const client = new ForgeClient({
         "AutoModerationExecution"
     ],
     extensions: [
+        new ForgeDB({
+            type: "sqlite" 
+	 }),
 		new ForgeCron()
 	],
     events: [
@@ -120,7 +119,7 @@ const client = new ForgeClient({
         "webhooksUpdate"
     ],
     prefixes: [
-        "w+", "w/", "<@$clientID> "
+        "w+", "w/", "<@$clientID>"
     ],
     prefixCaseInsensitive: true,
     trackers: {
@@ -133,6 +132,5 @@ client.functions.load('./comandos/custom/');
 client.commands.load("./comandos/prefixCommands/");
 client.commands.load("./comandos/eventos/");
 client.applicationCommands.load("./comandos/slashCommands/");
-db.commands.load("./comandos/database/")
 
 client.login(process.env.TOKEN)
