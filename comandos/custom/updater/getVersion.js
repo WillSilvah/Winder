@@ -1,6 +1,6 @@
 module.exports = [{
     name: "getVersion",
    code: `
-$getGlobalVar[version]
+$return[$getGlobalVar[version]]
 `
 }]

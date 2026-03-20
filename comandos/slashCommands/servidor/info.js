@@ -19,7 +19,7 @@ $addTextDisplay[
 ]
 $addSeparator[Large;true]
 $addTextDisplay[
-🎮 $discordTimestamp[$getGuildVar[minigameNextTime];RelativeTime] pode acontecer um minigame. (**$getGuildVar[oldMsgPerMinute] mensagens por minuto**)
+🎮 $discordTimestamp[$getGuildVar[minigameNextTime];RelativeTime] pode acontecer um minigame. (**$getGuildVar[oldMsgPerMinute;$guildID;0] mensagens por minuto**)
 🎮 **$getGuildVar[minigameExecuteCount;$guildID;0]** minigames executados.
 🎮 **$getGuildVar[minigameGuildWins;$guildID;0]** minigames ganhos.
 ]
