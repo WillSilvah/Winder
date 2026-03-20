@@ -1,9 +1,8 @@
 module.exports = {
     type: "messageCreate",
     code: `
-$onlyIf[$mentioned[0]==$authorID;]
+$onlyIf[$mentioned[0]==$clientID;]
 
-$reply[$channelID;$messageID]
 
 $onlyIf[$getGlobalVar[sleepMode]==false;
 $reply
