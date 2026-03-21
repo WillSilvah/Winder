@@ -9,9 +9,6 @@ module.exports = [{
      $if[$getMemberVar[birthday;$env[id];$get[guildID]]==$day[TwoDigit]/$month[TwoDigit];
      
      $!memberAddRoles[$guildID;$env[id];$getGuildVar[birthdayRole]]
-     $advancedTimeout[$esc[
-     $!memberAddRoles[{1};{0};$getGuildVar[birthdayRole]]
-     ];17h;BirthayRole_$env[id];$env[id];$guildID]
      
      $sendMessage[$getGuildVar[batePapo;$get[guildID]];
      $addSection[
@@ -29,10 +26,12 @@ module.exports = [{
     ]
     $addSeparator[Large;true]
     $addTextDisplay[-# **Adicione o seu aniversário com /aniversário adicionar**]
-    $addTextDisplay[<@&1463138741441790014>]
     ;true]]
     $publishMessage[$getGuildVar[birthdayChannel;$get[guildID]];$get[msgid]]
 
+    $advancedTimeout[$esc[
+     $!memberRemoveRoles[{1};{0};$getGuildVar[birthdayRole;{1}]]
+     ];17h;BirthayRole_$env[id];$env[id];$guildID]
 ]
 ]
 
