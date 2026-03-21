@@ -2,7 +2,7 @@ module.exports = {
   code: `
   $defer
 $jsonLoad[local;{
-  "America/Recife": "<:pats_flagPE:1484985033306411192> Pernambuco: Recife",
+  "America/Recife": "<:pats_flagPE:1484985033306411192>Pernambuco: Recife",
   "America/Sao_Paulo": "🇧🇷Brasil: Sul/Sudeste/Nordeste",
   "America/Manaus": "🇧🇷Brasil: Norte",
   "America/Cuiaba": "🇧🇷Brasil: Mato Grosso",
@@ -53,7 +53,7 @@ data: {
       "choices": [
         {
           "value": "America/Recife",
-          "name": "<:pats_flagPE:1484985033306411192> Pernambuco: Recife"
+          "name": "🟦Pernambuco: Recife"
         },
         {
           "name": "🇧🇷Brasil: Sul/Sudeste/Nordeste",
