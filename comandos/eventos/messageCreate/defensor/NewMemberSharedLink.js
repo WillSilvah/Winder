@@ -20,10 +20,13 @@ $sendMessage[$channelID;w!ban <@$authorID> $get[reason]]
 $if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
 $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-$!ban[$guildID;$get[userID];$get[reason];7]
+$!ban[$guildID;$get[userID];$get[reason];0]
+
+$deleteCommand
 
 $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!
 > $bold[$get[reason]]]
+
 
 `
 }
