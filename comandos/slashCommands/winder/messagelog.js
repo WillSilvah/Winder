@@ -1,6 +1,6 @@
 module.exports = {
   code: `
-  $if[$channelHasPerms[$channelID;$guildID;ViewChannel]==false;
+  $if[$channelHasPerms[$channelID;$guildID;ViewChannel]==true;
    $ephemeral
   ]
   
