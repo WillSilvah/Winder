@@ -7,9 +7,9 @@ module.exports = {
   $let[userID;$option[user]]
   
   $interactionReply[
-   $attachment[$getMemberVar[messageLogToday;$get[userID];WinderDB_messageLogToday_$userTag[$get[userID]].txt;true]
-   $attachment[$getMemberVar[messageLogWeekly;$get[userID];WinderDB_messageLogWeekly_$userTag[$get[userID]].txt;true]
-   $attachment[$getMemberVar[messageLogMonth;$get[userID];WinderDB_messageLogMonth_$userTag[$get[userID]].txt;true]
+   $attachment[$getMemberVar[messageLogToday;$get[userID]];WinderDB_messageLogToday_$userTag[$get[userID]].txt;true]
+   $attachment[$getMemberVar[messageLogWeekly;$get[userID]];WinderDB_messageLogWeekly_$userTag[$get[userID]].txt;true]
+   $attachment[$getMemberVar[messageLogMonth;$get[userID]];WinderDB_messageLogMonth_$userTag[$get[userID]].txt;true]
   
   ]
  
