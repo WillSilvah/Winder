@@ -5,6 +5,7 @@ module.exports = [{
     $addContainer[
      $addSection[
      $addTextDisplay[### @$userTag saiu]
+     $addTextDisplay[ID do usuário: $authorID]
      $addThumbnail[$userAvatar]
      ]
      ;Red]
