@@ -1,11 +1,10 @@
 module.exports = [{
     type: "guildMemberRemove",
     code: `
-    $sendMessage[$getGuildVar[leaveAndJoinChannel];
+    $sendMessage[$getGuildVar[leaveAndJoinChannel;$guildID];
     $addContainer[
      $addSection[
      $addTextDisplay[### @$userTag saiu]
-     $addTextDisplay[Convidado por: $userTag[$getMemberVar[inviter]]]
      $addThumbnail[$userAvatar]
      ]
      ;Red]

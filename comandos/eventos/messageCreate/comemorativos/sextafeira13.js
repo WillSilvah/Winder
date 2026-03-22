@@ -1,6 +1,7 @@
 module.exports = [{
      type: "messageCreate",
      code: `
+     $onlyIf[$getGlobalVar[sleepMode]==false;]
      $timezone[America/Recife]
      $onlyIf[$weekDay[Long]-$day==Friday-13;]
       $setGuildVar[evento_sextaFeira13;$math[$day[TwoDigit]+1];$guildID]

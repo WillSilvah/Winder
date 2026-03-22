@@ -1,10 +1,11 @@
 module.exports = [{
     type: "messageCreate",
     code: `
+    $onlyIf[$getGlobalVar[sleepMode]==false;]
+    $onlyIf[$getGuildVar[evento_diaDaAguaStatus;$guildID;true]==true;]
     $let[roleID;1481733329899491431]
     $timezone[America/Recife]
     $onlyIf[$day/$month[TwoDigit]==22/03;]
-     $setGuildVar[evento_diaDaAgua;$math[$day[TwoDigit]+1];$guildID]
     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false;]
 
@@ -18,7 +19,8 @@ module.exports = [{
     code: `
     $let[roleID;1481733329899491431]
     $cron[
-    $onlyIf[$day==$getGuildVar[evento_sextafeira13;1462224054676099094];]
+    $onlyIf[$day[TwoDigit]/$month[TwoDigit]==22/03;]
+    $setGuildVar[evento_diaDaAguaStatus;false;1462224054676099094]
     $arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;$get[roleID];,]]
     $arrayMap[roleMembers;id;
     $return[<@$env[id]>]
@@ -34,5 +36,5 @@ module.exports = [{
       ]
      ;White]
     ]
-    ;0 0 * * *;America/Recife;SextaFeira13]
+    ;0 22 22 3 *;America/Recife;diaDaAgua]
 `}]

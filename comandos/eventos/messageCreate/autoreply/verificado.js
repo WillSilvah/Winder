@@ -1,6 +1,7 @@
 module.exports = [{
     type: "messageCreate",
     code: `
+    $onlyIf[$argsCount<7;]
     $reply $disableRoleMentions
     $if[$includes[$toLowercase[$message];como;enviar;mandar;envio]|$includes[$toLowercase[$message];image;mídia;midia;arte;foto;photo;anexo;vídeo]==true|true;
     $startTyping[$channelID]
