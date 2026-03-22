@@ -2,12 +2,13 @@ module.exports = [{
     type: "messageCreate",
     code: `
     $onlyIf[$getGlobalVar[sleepMode]==false;]
-    $onlyIf[$getGuildVar[evento_diaDaAguaStatus;$guildID;true]==true;]
+    $onlyIf[$getGuildVar[evento_diaDaAguaStatus;$guildID;false]==true;]
     $let[roleID;1481733329899491431]
     $timezone[America/Recife]
     $onlyIf[$day/$month[TwoDigit]==22/03;]
     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false;]
+    $onlyIf[$randomNumber[1;100]<=3;]
 
     $!addMessageReactions[$channelID;$messageID;💧;💦]
 
