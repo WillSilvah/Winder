@@ -3,6 +3,7 @@ module.exports = {
     code: `
 $onlyIf[$isBot==false;]
 $onlyIf[$includes[$channelID;1478505120525324541]==false;]
+$onlyIf[$getGuildVar[isolatedChat]!=$channelID;]
 
 $timezone[America/Recife]
 $setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages;$guildID;0];1]]
