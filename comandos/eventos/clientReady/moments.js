@@ -125,14 +125,14 @@ $setGlobalVar[sleepMode;true]
 `
 },{
     type: "clientReady",
-    code: `$stop
+    code: `
 $cron[
 $sendMessage[$getGuildVar[staffChat;1462224054676099094];
 ### 🚫 MENÇÕES A CARGOS DE PING DESATIVADAS!
 ]
 
-$!editRole[1462224054676099094;1463138976494915646;;;;;false;]
-$!editRole[1462224054676099094;1463139649806663782;;;;;false;]
+$!editRole[1462224054676099094;$getGuildVar[guildCallVoiceRole];;;;;false;]
+$!editRole[1462224054676099094;$getGuildVar[guildCallTalkRole];;;;;false;]
 ;0 22 * * *;America/Recife]
 
 $cron[
@@ -140,8 +140,8 @@ $sendMessage[$getGuildVar[staffChat;1462224054676099094];
 ### ✅ MENÇÕES A CARGOS DE PING ATIVADAS!
 ]
 
-$!editRole[1462224054676099094;1463138976494915646;;;;;true;]
-$!editRole[1462224054676099094;1463139649806663782;;;;;true;]
+$!editRole[1462224054676099094;$getGuildVar[guildCallVoiceRole];;;;;true;]
+$!editRole[1462224054676099094;$getGuildVar[guildCallTalkRole];;;;;true;]
 ;0 6 * * *;America/Recife]   
     
 `
