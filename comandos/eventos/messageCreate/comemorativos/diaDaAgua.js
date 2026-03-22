@@ -13,7 +13,6 @@ module.exports = [{
     $!addMessageReactions[$channelID;$messageID;💧;💦]
 
     $!memberAddRoles[$guildID;$authorID;$get[roleID]]
-    $setMemberVar[badge_diaDaAgua;true]
 `
 },{
     type: "clientReady",
@@ -38,4 +37,23 @@ module.exports = [{
      ;White]
     ]
     ;0 22 22 3 *;America/Recife;diaDaAgua]
+    
+    $cron[
+     $sendMessage[$getGuildVar[anunciosChat;1462224054676099094];
+     $addContainer[
+      $addSection[
+      $addTextDisplay[## FELIZ DIA DA ÁGUA]
+      $addTextDisplay[Hoje é dia de hidratar de comemorar que a água existe para nós poder viver! 💧]
+      $addThumbnail[https://i.ibb.co/JFGYZR8S/Water-Days2025.jpg]
+      ]
+      $addTextDisplay[### GANHE UMA BADGE ESPECIAL SÓ HOJE!]
+      $addTextDisplay[Converse no chat e tenha a chance de ganhar uma água o cargo <@&1462224054676099094> pra você!]
+      $addTextDisplay[Tem minigame especial rolando, você pode ganhar todos?]
+      $addTextDisplay[@everyone <@&1463139182313738412> <@&1463138741441790014>]
+     ;Blue]
+     
+     $!setGuildIcon[1462224054676099094;https://i.ibb.co/JFGYZR8S/Water-Days2025.jpg;Dia da água]
+     $setGuildVar[guildIconDefault;false;1462224054676099094]
+    ]
+    ;0 7 * 22 3;America/Recife]
 `}]

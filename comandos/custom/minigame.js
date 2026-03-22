@@ -29,6 +29,7 @@ module.exports = [{
        $setGuildVar[minigameWord;$env[frase;texto];$env[guildID]]
        $setGuildVar[minigameType;$env[tipo];$env[guildID]]
        $setGuildVar[minigameStatus;true;$env[guildID]]
+      ]
       $if[$env[tipo]==questions;
        $let[id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/Questions/asks/ | wc -l]]]
        $jsonLoad[ask;$readFile[Recursos/WinderMinigames/Questions/asks/$get[id].txt]]
@@ -43,8 +44,20 @@ module.exports = [{
       $setGuildVar[minigameWord;$env[ask;correct];$env[guildID]]
       $setGuildVar[minigameType;$env[tipo];$env[guildID]]
       $setGuildVar[minigameStatus;true;$env[guildID]]
-      ]
      ]
+     $if[$env[tipo]==emojiRepeat;
+       $let[emoji;$randomText[💧;🥤;💦]]
+       $let[emojiAmount;$randomNumber[1;10]]
+       $let[emojiWord;$repeat[$get[emoji] ;$get[emojiAmount]]]
+       
+       $addContainer[
+        $addTextDisplay[Quem repetir $get[emoji] **$get[emojiAmount]** vezes ganha!]
+        $addTextDisplay[### $replaceText[$get[emojiWord]; ; ]\nEspecial dia da água | ID: 22/03]
+       ;Green]
+       $setGuildVar[minigameWord;$get[emojiWord];$env[guildID]]
+       $setGuildVar[minigameType;$env[tipo];$env[guildID]]
+       $setGuildVar[minigameStatus;true;$env[guildID]]
+      ]
     ] 
     $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$env[guildID];0]+1];$env[guildID]]
     $setGuildVar[minigameTimestamp;$getTimestamp;$env[guildID]]
