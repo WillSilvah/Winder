@@ -56,5 +56,5 @@ module.exports = [{
      $setGuildVar[guildIconDefault;false;1462224054676099094]
      $setGuildVar[guildColor;#005DBA;1462224054676099094]
     ]
-    ;0 7 22 3 *;America/Recife]
+    ;3 7 22 3 *;America/Recife]
 `}]
