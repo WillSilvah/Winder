@@ -1,5 +1,5 @@
 module.exports = [{
-    name: "cmdinfo",
+    name: "teste",
    code: `
    $return[$get[a]]
 `
