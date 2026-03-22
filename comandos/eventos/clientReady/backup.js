@@ -1,13 +1,18 @@
 module.exports = [{
     type: "clientReady",
     code: `
+    $timezone[America/Recife]
+$sendMessage[788131713418002463;
+WinderDB_$day[TwoDigit]-$month[TwoDigit]_$hour[TwoDigit]$minute[TwoDigit]
+$attachment[database/forge.db;forge.db]
+]
 $setInterval[
 $timezone[America/Recife]
 $sendMessage[788131713418002463;
 WinderDB_$day[TwoDigit]-$month[TwoDigit]_$hour[TwoDigit]$minute[TwoDigit]
 $attachment[database/forge.db;forge.db]
 ]
-;3h;backupDatabase]  
+;3h;backupDatabase]
     
     
 `}]
