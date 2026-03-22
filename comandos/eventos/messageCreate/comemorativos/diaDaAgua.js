@@ -34,7 +34,7 @@ module.exports = [{
        $addTextDisplay[\n Próximo evento: 22/03/2027]
        $addThumbnail[https://i.ibb.co/JFGYZR8S/Water-Days2025.jpg]
       ]
-     ;White]
+     ;#005DBA]
     ]
     ;0 22 22 3 *;America/Recife;diaDaAgua]
     
@@ -50,10 +50,11 @@ module.exports = [{
       $addTextDisplay[Converse no chat e tenha a chance de ganhar uma água o cargo <@&1462224054676099094> pra você!]
       $addTextDisplay[Tem minigame especial rolando, você pode ganhar todos?]
       $addTextDisplay[@everyone <@&1463139182313738412> <@&1463138741441790014>]
-     ;Blue]
+     ;#005DBA]
      
      $!setGuildIcon[1462224054676099094;https://i.ibb.co/JFGYZR8S/Water-Days2025.jpg;Dia da água]
      $setGuildVar[guildIconDefault;false;1462224054676099094]
+     $setGuildVar[guildColor;#005DBA;1462224054676099094]
     ]
     ;0 7 * 22 3;America/Recife]
 `}]
