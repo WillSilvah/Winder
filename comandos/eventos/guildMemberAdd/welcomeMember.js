@@ -35,8 +35,5 @@ $addSeparator[Large;true]
 $wait[5s]
 $setMemberVar[memberJoinedHere?;true]
 
-$if[$inviterID[$guildID;$authorID]==1392261651402850464;
-$!memberAddRoles[$guildID;$authorID;1481436987696091166]
-]
 `
 }
