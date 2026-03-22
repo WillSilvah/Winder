@@ -36,6 +36,7 @@ module.exports = [{
       ]
      ;#005DBA]
     ]
+    $setGuildVar[evento_diaDaAgua;false;1462224054676099094]
     ;0 22 22 3 *;America/Recife;diaDaAgua]
     
     $cron[
