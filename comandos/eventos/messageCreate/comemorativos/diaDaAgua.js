@@ -8,7 +8,7 @@ module.exports = [{
     $onlyIf[$day/$month[TwoDigit]==22/03;]
     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false;]
-    $onlyIf[$randomNumber[1;100]<=10;]
+    $onlyIf[$randomNumber[1;100]<=20;]
 
     $!addMessageReactions[$channelID;$messageID;$randomText[💧;💦]]
 
