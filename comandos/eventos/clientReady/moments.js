@@ -17,8 +17,6 @@ $deleteRecords[invitesMonth]
 $deleteRecords[membersJoinedMonth]
 $deleteRecords[guildMonthMessages]
 
-$deleteRecords[messageLogToday]
-$deleteRecords[messageLogWeekly]
 $deleteRecords[messageLogMonth]
 
 ;0 0 1 * *;America/Recife]
@@ -27,12 +25,14 @@ $cron[
 $deleteRecords[guildWeeklyMessage]
 $deleteRecords[messageWeekly]
 $deleteRecords[tempMessageWeekly]
+$deleteRecords[messageLogWeekly]
 ;0 0 * * 0;America/Recife]
 
 $cron[
 $deleteRecords[guildTodayMessage]
 $deleteRecords[messageToday]
 $deleteRecords[tempMessageToday]
+$deleteRecords[messageLogToday]
 ;0 0 * * *;America/Recife]
 
     $cron[
