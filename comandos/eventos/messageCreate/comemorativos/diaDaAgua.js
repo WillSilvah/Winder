@@ -6,7 +6,7 @@ module.exports = [{
     $let[roleID;1481733329899491431]
     $timezone[America/Recife]
     $onlyIf[$day/$month[TwoDigit]==22/03;]
-    $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;]
+    $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true;]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false;]
     $onlyIf[$randomNumber[1;100]<=3;]
 
