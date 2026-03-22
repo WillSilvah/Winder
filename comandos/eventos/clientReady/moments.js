@@ -7,6 +7,7 @@ $cron[
 $deleteRecords[guildWeeklyMessages]
 $deleteRecords[messageWeekly]
 $deleteRecords[tempMessageWeekly]
+$deleteRecords[messageLogWeekly]
 $sendMessage[$getGlobalVar[consoleChat];## VARIAVEIS WEEKLY RESETADA]
 ;0 0 * * 0;America/Recife;ResetWeekly]
 
@@ -14,6 +15,7 @@ $cron[
 $deleteRecords[guildTodayMessages]
 $deleteRecords[messageToday]
 $deleteRecords[tempMessageToday]
+$deleteRecords[messageLogToday]
 $sendMessage[$getGlobalVar[consoleChat];## VARIAVEIS TODAY RESETADA]
 ;0 0 * * *;America/Recife;ResetToday]
 
@@ -82,8 +84,6 @@ $deleteRecords[tempPdaMonth]
 $deleteRecords[tempVotesMonth]
 $deleteRecords[tempInvitesMonth]
 
-$deleteRecords[messageLogToday]
-$deleteRecords[messageLogWeekly]
 $deleteRecords[messageLogMonth]
 
 ;0 0 1 * *;America/Recife;ResetMonth]
