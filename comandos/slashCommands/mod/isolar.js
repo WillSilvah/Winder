@@ -7,8 +7,6 @@ module.exports = {
       $let[type;adicionado ao isolamento];
       $let[type;retirado do isolamento]
      ]
-
-     $if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
      $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
     $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
