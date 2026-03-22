@@ -38,6 +38,8 @@ module.exports = [{
      ;#005DBA]
     ]
     $setGuildVar[evento_diaDaAgua;false;1462224054676099094]
+    $!setGuildIcon[1462224054676099094;$getGuildVar[logo_sleep;1462224054676099094];Hora de dormir]
+$setGuildVar[guildColor;#ddf3fe;1462224054676099094]
     ;0 22 22 3 *;America/Recife;diaDaAgua]
     
     $cron[
