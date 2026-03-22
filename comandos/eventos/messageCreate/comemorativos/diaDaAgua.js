@@ -55,6 +55,7 @@ module.exports = [{
      $!setGuildIcon[1462224054676099094;https://i.ibb.co/JFGYZR8S/Water-Days2025.jpg;Dia da água]
      $setGuildVar[guildIconDefault;false;1462224054676099094]
      $setGuildVar[guildColor;#005DBA;1462224054676099094]
+     $setGuildVar[evento_diaDaAguaStatus;true;1462224054676099094]
     ]
     ;3 7 22 3 *;America/Recife]
 `}]
