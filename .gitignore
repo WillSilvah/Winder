@@ -10,5 +10,3 @@ npm-debug.log*
 dist/
 build/
 database/forge.db
-
-/comandos/prefixCommands/textos/update-regras.js
