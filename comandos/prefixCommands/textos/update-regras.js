@@ -65,9 +65,9 @@ $addButton[ticket;Criar um ticket;Success;📩;false]
 ;$getGuildVar[guildColor]]
 
 $addContainer[
-$addTextDisplay[### PUNIÇÕES
--# **Essa são as regras básicas para punições, mas a Equipe Patinhas tem total independência para decidir não seguir e banir, silenciar, expulsar ou isolar sem precisar de advertências dependendo da gravidade.**
-As punições são gerenciadas exclusivamente pelo <@$clientID>.
+$addTextDisplay[# PUNIÇÕES
+-# **As punições são gerenciadas exclusivamente pelo <@$clientID>.**
+Essa são as regras básicas para punições, mas a Equipe Patinhas tem total independência para decidir não seguir e banir, silenciar, expulsar ou isolar sem precisar de advertências dependendo da gravidade.
 
 - A primeira advertência leva um silenciamento de **2 (duas) horas**.
 - A segunda advertência o membro leva um silenciamento de **12 (doze) horas**.
