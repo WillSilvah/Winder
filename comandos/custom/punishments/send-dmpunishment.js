@@ -35,8 +35,10 @@ $thumbnail[$userAvatar[$env[staffID]]]
 $color[Orange]
 $footer[Equipe Patinhas: Nossa toca, tem regras.]
 
+$if[$env[type]==banido;
 $addActionRow
 $addButton[https://dyno.gg/form/8e826f68;Apelo de desbanimento;Link;<:pats_foxBan:1466597066892640456>;false]
+]
 ]
 ]
 `

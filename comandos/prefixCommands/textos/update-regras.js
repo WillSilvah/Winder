@@ -53,14 +53,30 @@ Sua segurança e a dos outros é prioridade.
 ]
 $addTextDisplay[### 🚫 CONDUTA COM A EQUIPE E OS MEMBROS
 
-· Não importune, ameace ou cause desconforto a qualquer membro do servidor.
-· Não mendigue cargos, especialmente cargos de staff.
-· Respeite as decisões da equipe de moderação. Caso discorde, abra um ticket para conversarmos.
+- Não importune, ameace ou cause desconforto a qualquer membro do servidor.
+- Não mendigue cargos, especialmente cargos de staff.
+- Respeite as decisões da equipe de moderação. Caso discorde, abra um ticket para conversarmos.
 ]
 $addActionRow
 $addButton[ticket;Criar um ticket;Success;📩;false]
 
 ;$getGuildVar[guildColor]]
+
+$addContainer[
+$addTextDisplay[### PUNIÇÕES
+-# **Essa são as regras básicas para punições, mas a Equipe Patinhas tem total independência para decidir não seguir e banir, silenciar, expulsar ou isolar sem precisar de advertências dependendo da gravidade.**
+As punições são gerenciadas exclusivamente pelo <@$clientID>.
+
+- A primeira advertência leva um silenciamento de **2 (duas) horas**.
+- A segunda advertência o membro leva um silenciamento de **12 (doze) horas**.
+- A terceira advertência o membro leva um silenciamento de **24 (vinte e quatro) horas**.
+- A quarta advertência o membro é **expulso** com a adição de silenciamento de **72 (setenta e duas) horas**.
+-# Antes de ser expulso, o membro é silenciado para que quando volte, ele ainda fique silenciado.
+- A quinta e última advertência o membro é **banido**.
+
+Existe uma segunda e última chance, o membro banido pode apelar seu banimento se achar injusto
+]
+;#e6d3ad]
 ]
 
 `
