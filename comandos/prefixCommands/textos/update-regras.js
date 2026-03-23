@@ -57,6 +57,9 @@ $addTextDisplay[### 🚫 CONDUTA COM A EQUIPE E OS MEMBROS
 · Não mendigue cargos, especialmente cargos de staff.
 · Respeite as decisões da equipe de moderação. Caso discorde, abra um ticket para conversarmos.
 ]
+$addActionRow
+$addButton[ticket;Criar um ticket;Success;📩;false]
+
 ;$getGuildVar[guildColor]]
 ]
 
