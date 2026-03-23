@@ -30,8 +30,8 @@ module.exports = [{
     $publishMessage[$getGuildVar[birthdayChannel;$get[guildID]];$get[msgid]]
 
     $advancedTimeout[$esc[
-     $!memberRemoveRoles[{1};{0};$getGuildVar[birthdayRole;{1}]]
-     ];17h;BirthayRole_$env[id];$env[id];$guildID]
+     $!memberRemoveRoles[{guildID};{userID};$getGuildVar[birthdayRole;{guildID}]]
+     ];17h;BirthayRole_$env[id];{"userID": "$env[id]", "guildID": $guildID"}]
 ]
 ]
 
