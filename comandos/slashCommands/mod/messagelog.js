@@ -3,13 +3,14 @@ module.exports = {
   $if[$channelHasPerms[$channelID;$guildID;ViewChannel]==true;
    $ephemeral
   ]
+  $timezone[America/Recife]
   
   $let[userID;$option[user]]
   
-  $interactionReply[Histórico de mensagens de **@$userTag[$get[userID]]**
-   $attachment[$getMemberVar[messageLogToday;$get[userID]];WinderDB_messageLogToday_$userTag[$get[userID]].txt;true]
-   $attachment[$getMemberVar[messageLogWeekly;$get[userID]];WinderDB_messageLogWeekly_$userTag[$get[userID]].txt;true]
-   $attachment[$getMemberVar[messageLogMonth;$get[userID]];WinderDB_messageLogMonth_$userTag[$get[userID]].txt;true]
+ $interactionReply[Histórico de mensagens de **@$userTag[$get[userID]]**
+   $attachment[Histórico de mensagens enviadas hoje ($day) por $userTag[$get[userID]]\nC: ID do canal | M: ID da mensagem\n\n$getMemberVar[messageLogToday;$get[userID]];WinderDB_messageLogToday_$userTag[$get[userID]].txt;true]
+   $attachment[Histórico de mensagens enviadas esta semana por $userTag[$get[userID]]\nC: ID do canal | M: ID da mensagem\n\n$getMemberVar[messageLogWeekly;$get[userID]];WinderDB_messageLogWeekly_$userTag[$get[userID]].txt;true]
+   $attachment[Histórico de mensagens enviadas este mês ($month) por $userTag[$get[userID]]\nC: ID do canal | M: ID da mensagem\n\n$getMemberVar[messageLogMonth;$get[userID]];WinderDB_messageLogMonth_$userTag[$get[userID]].txt;true]
   
   ]
  
