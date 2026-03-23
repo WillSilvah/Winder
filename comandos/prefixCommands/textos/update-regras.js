@@ -8,7 +8,7 @@ $sendMessage[$channelID;
 $addContainer[
 $addSection[
 $addTextDisplay[### DIRETRIZES DA COMUNIDADE PATINHAS
--# **Válidas desde $discordTimestamp[$getTimestamp;FullDateShortTime]**
+-# **$inlineCode[Válidas desde $discordTimestamp[$getTimestamp;FullDateShortTime]]**
 
 Acima de tudo, respeitamos os Termos de Serviço e as Diretrizes da Comunidade do Discord. Você pode consultá‑los nos links abaixo:
 ]
