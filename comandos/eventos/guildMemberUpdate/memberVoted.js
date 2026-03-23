@@ -24,16 +24,16 @@ module.exports = {
     ]
 
     $advancedTimeout[$esc[
-     $sendDM[{0};
+     $sendDM[{authorID};
      $addContainer[
       $addSection[
        $addTextDisplay[## 🔔 LEMBRETE!]
-       $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{0};{1}];ShortDateShortTime]]
-       $addButton[https://discords.com/servers/{1}/upvote;Votar;Link;⬆️;false]
+       $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{authorID};{guildID}];ShortDateShortTime]]
+       $addButton[https://discords.com/servers/{guildID}/upvote;Votar;Link;⬆️;false]
       ]
     ;Blue]
     ]
-    ];6h;VotesReminder-$authorID;$authorID;$guildID]
+    ];6h;VotesReminder-$authorID;{"authorID": "$authorID", "guildID": "$guildID"}]
 
     $if[$getMemberVar[votesTotal;$authorID;$guildID;0]==60;
      $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberSupporterRole;$guildID]]
