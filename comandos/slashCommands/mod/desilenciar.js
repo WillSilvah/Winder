@@ -1,17 +1,11 @@
 module.exports = {
   code: `
-$let[userID;$findUser[$option[user]]]
-$let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
-$let[staffID;$authorID]
-$let[type;desilenciado]
-
-$if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
-$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
-
-$!timeout[$guildID;$get[userID];0;$get[reason]]
-
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
-> $bold[$get[reason]]]
+    $let[userID;$findUser[$option[user]]]
+    $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
+    $let[staffID;$authorID]
+    $let[type;desilenciado]
+    $winderUnmute
+    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
   `,
 data: {
   "type": 1,

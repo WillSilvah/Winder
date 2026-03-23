@@ -1,16 +1,11 @@
 module.exports = {
   code: `
-$let[userID;$findUser[$option[user]]]
-$let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
-$let[staffID;$authorID]
-$let[type;desbanido]
-
-$punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
-
-$!unban[$guildID;$get[userID];$get[reason]]
-
-$interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
-> $bold[$get[reason]]]
+    $let[userID;$findUser[$option[user]]]
+    $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
+    $let[staffID;$authorID]
+    $let[type;desbanido]
+    $winderUnban
+    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
 
   `,
 data: {

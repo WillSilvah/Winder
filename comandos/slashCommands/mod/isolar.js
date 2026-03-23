@@ -9,8 +9,7 @@ module.exports = {
      ]
      $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
 
-    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!
-> $bold[$get[reason]]]
+    $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
 
     $isolar[$get[userID]]
   `,
