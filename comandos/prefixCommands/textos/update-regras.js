@@ -75,9 +75,9 @@ As punições são gerenciadas exclusivamente pelo <@$clientID>.
 - A quinta e última advertência o membro é **banido**.
 
 Existe uma segunda e última chance, o membro banido pode apelar seu banimento se achar injusto ou querer voltar depois de um tempo  fica a questão da Equipe Patinhas em desbanir ou não.
+]
 $addActionRow
 $addButton[$getGuildVar[unbanForm];Apelo de desbanimento;Link;<:pats_foxBan:1466597066892640456>;false]
-]
 ;#e6d3ad]
 ]
 
