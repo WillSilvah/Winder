@@ -23,7 +23,7 @@ module.exports = {
      $sendDM[$authorID;Obrigado por ter votado! Lembrarei você de votar às $discordTimestamp[$getMemberVar[nextVoteRemindTime;$authorID];ShortDateShortTime]. Use o comando /lembrete voto para desativar ou ativar os lembretes na DM!]
     ]
 
-    $advancedTimeout[$esc[
+    $!advancedTimeout[$esc[
      $sendDM[{authorID};
      $addContainer[
       $addSection[
