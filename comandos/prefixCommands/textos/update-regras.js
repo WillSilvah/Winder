@@ -26,9 +26,9 @@ Mantenha um ambiente saudável para todos.
 - Seja educado(a) e respeitoso(a) com os demais membros e com a equipe.
 - Não seja agressivo(a), inconveniente ou desrespeitoso(a).
 - Não pratique ou incentive:
-- Preconceito, discriminação, intolerância, xenofobia ou racismo
-- Extremismo político, religioso ou ideológico
-- Assédio, perseguição ou qualquer forma de violência verbal
+Preconceito, discriminação, intolerância, xenofobia ou racismo
+Extremismo político, religioso ou ideológico
+Assédio, perseguição ou qualquer forma de violência verbal
 ]
 $addTextDisplay[### 🧹 AMBIENTE ORGANIZADO
 Para manter os canais limpos e organizados:
