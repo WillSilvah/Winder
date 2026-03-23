@@ -27,21 +27,6 @@ $deleteRecords[messageWeekly;$authorID]
 $deleteRecords[pdaTotal;$authorID]
 $deleteRecords[pdaMonth;$authorID]
 
-$advancedTimeout[$esc[
-$if[$memberExists[$guildID;{0}]==false;
-$sendMessage[{2};
-### RESTAURAÇÃO DO WINDER
-Dados salvos de **$userTag[{0}]** ({0}) antes da exclusão automática de 30 dias.
-$attachment[$searchDB[;{0};;;];WinderDB_{0}_data.json;true]
-]
-
-$wait[10s]
-
-$deleteRecords[;{0}]
-$setMemberVar[memberJoinedHere?;true;{0};{1}]
-
-]
-];30d;backupVars_$authorID_$guildID;$authorID;$guildID;$getGlobalVar[databaseLog]]
 
 `
 }
