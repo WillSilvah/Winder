@@ -20,7 +20,9 @@ module.exports = [{
     code: `
     $let[roleID;1481733329899491431]
     $cron[
+    $timezone[America/Recife]
     $let[roleID;1481733329899491431]
+    $onlyIf[$day[TwoDigit]/$month[TwoDigit]==22/03;]
     $setGuildVar[evento_diaDaAguaStatus;false;1462224054676099094]
     $arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;$get[roleID];,]]
     $arrayMap[roleMembers;id;
@@ -40,10 +42,11 @@ module.exports = [{
     $setGuildVar[evento_diaDaAgua;false;1462224054676099094]
     $!setGuildIcon[1462224054676099094;$getGuildVar[logo_sleep;1462224054676099094];Hora de dormir]
 $setGuildVar[guildColor;#ddf3fe;1462224054676099094]
-    ;11 22 22 3 *;America/Recife;diaDaAgua]
+    ;7 22 22 3 *;America/Recife;diaDaAgua]
     
     $cron[
-     $sendMessage[$getGuildVar[anunciosChat;1462224054676099094];
+    $timezone[America/Recife]
+    $sendMessage[$getGuildVar[anunciosChat;1462224054676099094];
      $addContainer[
       $addSection[
       $addTextDisplay[## FELIZ DIA DA ÁGUA]
