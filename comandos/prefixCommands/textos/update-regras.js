@@ -10,13 +10,15 @@ $addSection[
 $addTextDisplay[### DIRETRIZES DA COMUNIDADE PATINHAS
 -# **$inlineCode[Válidas desde $discordTimestamp[$getTimestamp;FullDateShortTime]]**
 
-Acima de tudo, respeitamos os Termos de Serviço e as Diretrizes da Comunidade do Discord. Você pode consultá‑los nos links abaixo:
+Acima de tudo, respeitamos os Termos de Serviço e as Diretrizes da Comunidade do Discord, e claro as Leis Pernambucanas e as Brasileiras. Você pode consultá‑los nos links abaixo:
 ]
 $addThumbnail[$guildIcon]
 ]
 $addActionRow
 $addButton[https://discord.com/terms;Termos de Serviço do Discord;Link;📃;false]
 $addButton[https://discord.com/guidelines;Diretrizes da Comunidade do Discord;Link;📃;false]
+$addButton[https://www.planalto.gov.br/ccivil_03/Constituicao/Constituicao.htm;Constituição da República do Brasil;Link;🇧🇷;false]
+$addButton[https://legis.alepe.pe.gov.br/;ALEPE: Legislação de Pernambuco;Link;<:pats_flagPE:1484985033306411192>;false]
 $addSeparator[Large;true]
 $addTextDisplay[### 💬 RESPEITO E BEM ESTAR
 Mantenha um ambiente saudável para todos.
