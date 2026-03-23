@@ -8,16 +8,16 @@ module.exports = [{
      $!editRole[$guildID;$get[talkRole];;;;;false]
      $!memberAddRoles[$guildID;$authorID;$get[talkRole]]
      $advancedTimeout[$esc[
-      $!editRole[{1};{0};$roleName[{1};{0}];$roleColor[{1};{0}];$roleIcon[{1};{0}];$roleHoisted[{1};{0}];true]
-     ];30m;talkRole_Cooldown;$get[talkRole];$guildID]
+      $!editRole[{guildID};{roleID};$roleName[{guildID};{roleID}];$roleColor[{guildID};{roleID}];$roleIcon[{guildID};{roleID}];$roleHoisted[{guildID};{roleID}];true]
+     ];30m;talkRole_Cooldown;{"guildID": "$guildID", "roleID": "$get[talkRole]"}]
     ]
 
     $if[$isRoleMentioned[$channelID;$messageID;$get[voiceRole]]==true;
      $!editRole[$guildID;$get[voiceRole];;;;;false]
      $!memberAddRoles[$guildID;$authorID;$get[voiceRole]]
      $advancedTimeout[$esc[
-      $!editRole[{1};{0};$roleName[{1};{0}];$roleColor[{1};{0}];$roleIcon[{1};{0}];$roleHoisted[{1};{0}];true]
-     ];30m;voiceRole_Cooldown;$get[voiceRole];$guildID]
+      $!editRole[{guildID};{roleID};$roleName[{guildID};{roleID}];$roleColor[{guildID};{roleID}];$roleIcon[{guildID};{roleID}];$roleHoisted[{guildID};{roleID}];true]
+     ];30m;voiceRole_Cooldown;{"guildID": "$guildID", "roleID": "$get[voiceRole]"}]
     ]
 `
 }]    
