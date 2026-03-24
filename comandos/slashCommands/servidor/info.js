@@ -13,7 +13,7 @@ $addSeparator[Large;true]
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$getMemberLeaderboardLength[messageMonth;$guildID]** **($truncate[$math[$getMemberLeaderboardLength[messageMonth;$guildID]/$guildMemberCount[1462224054676099094;;false]*100]]%)** membros enviaram **$separateNumber[$getGuildVar[guildMonthMessages;$guildID;0];.]** mensagens neste mês.
-💬 **$getMemberLeaderboardLength[messageWeekly;$guildID]** **($truncate[$math[$getMemberLeaderboardLength[messageWeekly;$guildID]/$getMemberLeaderboardLength[messageMonth;$guildID]*100]]%)**membros enviaram **$separateNumber[$getGuildVar[guildWeeklyMessages;$guildID;0];.]** mensagens nessa semana.
+💬 **$getMemberLeaderboardLength[messageWeekly;$guildID]** **($truncate[$math[$getMemberLeaderboardLength[messageWeekly;$guildID]/$getMemberLeaderboardLength[messageMonth;$guildID]*100]]%)** membros enviaram **$separateNumber[$getGuildVar[guildWeeklyMessages;$guildID;0];.]** mensagens nessa semana.
 💬 **$getMemberLeaderboardLength[messageToday;$guildID]** **($truncate[$math[$getMemberLeaderboardLength[messageToday;$guildID]/$getMemberLeaderboardLength[messageMonth;$guildID]*100]]%)** membros enviaram **$separateNumber[$getGuildVar[guildTodayMessages;$guildID;0];.]** mensagens hoje.
 💬 A média de mensagens do mês anterior é **$getGuildVar[guildActivityMedia;$guildID;0]** e atualmente é **$truncate[$math[$media[messageMonth;$getMemberLeaderboardLength[messageMonth;$guildID]]]]**.
 ]
