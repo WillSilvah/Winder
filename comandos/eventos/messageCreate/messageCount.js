@@ -2,9 +2,9 @@ module.exports = {
     type: "messageCreate",
     code: `
     $timezone[America/Recife] $c[Fuso horário de Pernambuco, padrão em todo o sistema]
-    $onlyIf[$isBot==false;] $c[Se for bot não conta]
+    $onlyIf[$isBot==false] $c[Se for bot não conta]
     $onlyIf[$includes[$channelID;1478505120525324541]==false;] $c[Não lembro mas deve ser útil]
-    $onlyIf[$getGuildVar[isolatedChat]!=$channelID;] $c[Ignora o canal de isolados do servidor]
+    $onlyIf[$getGuildVar[isolatedChat]!=$channelID] $c[Ignora o canal de isolados do servidor]
     
     $c[Contabiliza a quantidade de mensagens que o servidor inteiro enviou no dia, semana e mês]
     $setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages;$guildID;0];1]]
