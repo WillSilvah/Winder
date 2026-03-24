@@ -1,15 +1,8 @@
 module.exports = {
     type: "messageCreate",
     code: `
+    $if[$getGlobalVar[sleepMode]==true;$stop]
 $onlyIf[$mentioned[0]==$clientID;]
-
-
-$onlyIf[$getGlobalVar[sleepMode]==false;
-$reply
-$sendMessage[$channelID;**$userTag[$mentioned[0]]** está afk!
-$author[Purrrrrrrr.... Estou dormindo no momento, até breve!]
-$color[Red]
-]]
 
 $ifx[
 $if[$checkContains[$toLowerCase[$message];bom dia;dia;bd;good morning;dia bom;bueno dias;buenos dia;buenos dias;gm]==true;
