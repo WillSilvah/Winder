@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = [{
 type: "messageCreate",
 allowBots: true,
 code: `
@@ -18,8 +18,23 @@ $!advancedTimeout[$esc[
     $title[🎉 Hora de dar /bump!]
     $description[Hey! Tá na hora de dar boost na Disboard!\nUsa o comando </bump:947088344167366698>]
     $color[Green]
+    $addActionRow
+    $addButton[bumpReminderRole;Receber notificações de bump;Success;🔔;false]
   ]
 ];2h;BumpReminder;{"channelID": "$channelID"}]
 
 `
-}
+},{
+    name: "bumpReminderRole",
+    type: "interactionCreate",
+    code: `$ephemeral $disableAllMentions
+    $let[roleID;1462953076091785370]
+    $if[$hasRoles[$guildID;$authorID;$get[roleID]]==false;
+     $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você vai receber lembretes de bump a cada duas horas!]
+     $!memberAddRoles[$guildID;$authorID;$get[roleID]]
+    ;
+    $interactionReply[Pronto! $customEmoji[pats_foxThumbsUp] Você não vai mais receber lembretes de bump.]
+     $!memberRemoveRoles[$guildID;$authorID;$get[roleID]]
+    ]
+`
+}]
