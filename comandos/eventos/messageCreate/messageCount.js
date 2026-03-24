@@ -26,10 +26,6 @@ module.exports = {
     $setMemberVar[messageToday;$sum[$getMemberVar[messageToday;$authorID;$guildID;0];1]]
     $setMemberVar[messageTotal;$sum[$getMemberVar[messageTotal;$authorID;$guildID;0];1]]
 
-    $c[Contabiliza as mensagens por minuto no canal de bate papo do servidor]
-    $if[$channelID==$getGuildVar[batePapo];
-     $setGuildVar[msgPerMinute;$sum[$getGuildVar[msgPerMinute;$guildID;0];1]]
-    ]
 
 `
 }
