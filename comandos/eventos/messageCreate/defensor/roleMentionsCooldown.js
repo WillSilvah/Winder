@@ -8,6 +8,7 @@ module.exports = [{
      $!editRole[$guildID;$get[talkRole];;;;;false]
      $!memberAddRoles[$guildID;$authorID;$get[talkRole]]
      $!advancedTimeout[$esc[
+     $onlyIf[$getGlobalVar[sleepMode]==false;]
       $!editRole[{guildID};{roleID};$roleName[{guildID};{roleID}];$roleColor[{guildID};{roleID}];$roleIcon[{guildID};{roleID}];$roleHoisted[{guildID};{roleID}];true]
      ];30m;talkRole_Cooldown;{"guildID": "$guildID", "roleID": "$get[talkRole]"}]
     ]
@@ -16,6 +17,7 @@ module.exports = [{
      $!editRole[$guildID;$get[voiceRole];;;;;false]
      $!memberAddRoles[$guildID;$authorID;$get[voiceRole]]
      $!advancedTimeout[$esc[
+     $onlyIf[$getGlobalVar[sleepMode]==false;]
       $!editRole[{guildID};{roleID};$roleName[{guildID};{roleID}];$roleColor[{guildID};{roleID}];$roleIcon[{guildID};{roleID}];$roleHoisted[{guildID};{roleID}];true]
      ];30m;voiceRole_Cooldown;{"guildID": "$guildID", "roleID": "$get[voiceRole]"}]
     ]
