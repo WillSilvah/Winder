@@ -26,11 +26,8 @@ module.exports = {
     $!advancedTimeout[$esc[
      $sendDM[{authorID};
      $addContainer[
-      $addSection[
        $addTextDisplay[## 🔔 LEMBRETE!]
-       $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{authorID};{guildID}];ShortDateShortTime]]
-       $addButton[https://discords.com/servers/{guildID}/upvote;Votar;Link;⬆️;false]
-      ]
+       $addTextDisplay[Votar na Patinhas ás $discordTimestamp[$getMemberVar[nextVoteRemindTime;{authorID};{guildID}];ShortDateShortTime]\nhttps://discords.com/servers/{guildID}/upvote]
     ;Blue]
     ]
     ];6h;VotesReminder-$authorID;{"authorID": "$authorID", "guildID": "$guildID"}]
