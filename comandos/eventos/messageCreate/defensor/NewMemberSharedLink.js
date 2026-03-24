@@ -1,6 +1,7 @@
 module.exports = {
     type: "messageCreate",
     code: `
+    $wait[5s]
 $jsonLoad[rawData;$messageRawData[$channelID;$messageID]]
 
 $let[rd;$env[rawData;embeds;0;url]]
