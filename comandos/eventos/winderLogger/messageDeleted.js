@@ -1,5 +1,5 @@
 module.exports = [{
-    type: "messageDelete" 
+    type: "messageDelete",
     code: `
     $sendMessage[$getGuildVar[eventLogChannel];
      $author[$userDisplayName (@$userTag): Mensagem deletada;$userAvatar]
