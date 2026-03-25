@@ -18,9 +18,7 @@ $addThumbnail[$userAvatar]
 $addSeparator[Large;true]
 
 ;Red]
-
-$addActionRow
-$addButton[https://discord.com/channels/1462224054676099094/1462590504188383304;Conheça a Patinhas!;Link;👋;false];
+;
 $addContainer[
 $addSection[
 $addTextDisplay[### 🤖 <@$authorID> ADICIONADO!
