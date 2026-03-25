@@ -6,7 +6,7 @@ $jsonLoad[session;$readFile[Recursos/session.json]]
 
 $addContainer[
 $addSection[
-$addTextDisplay[## $default[;$userGuildTag[$get[userID]]] $userDisplayName[$get[userID]]
+$addTextDisplay[## $default[;$userGuildTag[$get[userID]]:] $userDisplayName[$get[userID]]
 -# **@$userTag[$get[userID]]**
 $badges[$get[userID]]
 $if[$isBanned[$guildID;$get[userID]]==false;**$if[$getMemberVar[birthday;$get[userID]]!=;🎂 $getMemberVar[birthday;$get[userID]] ($math[$year-$getMemberVar[birthdayYear;$get[userID]]] anos);🎂 /aniversário adicionar]**]
