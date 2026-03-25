@@ -5,12 +5,12 @@ module.exports = [{
      $reply[$channelID;$messageID]
      $startTyping[$channelID]
      $wait[2s]
-      $sendMessage[$channelID;Olá, seja bem vindo(a) a patinhas! 👋 Não se esqueça de passar no <#1470875996356874292> para personalizar seu perfil e pegar cargos.Dúvidas? <#1463277652562411787> 😘
+      $sendMessage[$channelID;Olá, seja bem vindo(a) a patinhas! 👋 Não se esqueça de passar no <#1470875996356874292> para personalizar seu perfil e pegar cargos. Dúvidas? <#1463277652562411787> 😘
      ]
     ]
 
     $if[$getGuildVar[allMemberRole]!=;
-     $if[$getMemberVar[messageTotal;$authorID]>=6;
+     $if[$getMemberVar[messageTotal;$authorID]>=2;
       $!memberAddRoles[$guildID;$authorID;$getGuildVar[allMemberRole];1481259180877811930;1481256988921954418;1481256655986360361;1481256478563237888;1481261082977763338;1483166757890818192]
      ]
     ]
