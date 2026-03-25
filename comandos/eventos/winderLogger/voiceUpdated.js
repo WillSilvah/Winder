@@ -1,6 +1,7 @@
 module.exports = [{
     type: "voiceStateUpdate",
     code: `
+    $onlyIf[$isBot=false]
     $if[$newState[channelID]!=;
      $webhookSend[$getGuildVar[webhookEventLogger];
       $author[$userDisplayName (@$userTag);$userAvatar]
