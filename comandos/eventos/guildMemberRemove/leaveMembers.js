@@ -4,7 +4,7 @@ module.exports = [{
     $sendMessage[$getGuildVar[leaveAndJoinChannel;$guildID];
     $addContainer[
      $addSection[
-     $addTextDisplay[### @$userTag saiu]
+     $addTextDisplay[### $userDisplayName saiu\n-# **@$userTag**]
      $addTextDisplay[ID do usuário: $authorID]
      $addThumbnail[$userAvatar]
      ]
