@@ -9,11 +9,6 @@ module.exports = [{
    ],
    code: `
    $jsonLoad[cor;{
-  "colorScheme": ["dark", "light"],
-  "defaultColor": "cyan",
-  "wednesdayColors": "pink",
-  "sundayColors": "orange",
-  "colorType": "Dynamic",
   "blue": {
 	"opacity": "100",
     "dark": "#111127",
