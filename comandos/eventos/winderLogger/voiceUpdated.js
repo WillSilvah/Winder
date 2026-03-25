@@ -4,9 +4,9 @@ module.exports = [{
     $webhookSend[$getGuildVar[webhookEventLogger];
      $author[$userDisplayName (@$userTag);$userAvatar]
      $description[
-     NewState: $newState[channelID]
-     OldState: $oldState[channelID]
+     $if[$newState[channelID]!=;Entrou no canal <#$newState[$channelID]>;Saiu do canal <#$oldState[channelID]>]
      ]
+     $color[Orange]
      ;false;$username[$clientID];$userAvatar[$clientID]]
 `
 }]    
