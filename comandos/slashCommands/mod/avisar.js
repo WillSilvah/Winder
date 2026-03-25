@@ -5,8 +5,6 @@ module.exports = {
     $let[staffID;$authorID]
     $let[guild;$guildID]
     $let[type;advertido]
-    $sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]
-    $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
     $winderWarn
     $autopunish
     $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]

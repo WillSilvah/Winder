@@ -5,33 +5,23 @@ module.exports = {
     $setGuildVar[membersJoinedMonth;$sum[$getGuildVar[membersJoinedMonth;$guildID;0];1]]
     $setMemberVar[inviter;$inviterID[$guildID;$authorID];$authorID;$guildID]
 
-$sendMessage[$getGuildVar[batePapo];
-$if[$isBot[$authorID]==false;
-$addContainer[
-$addSection[
-$addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$authorID;$guildID;false]==false;### 👋 <@$authorID> BEM VINDO!;### 🎉 <@$authorID> BEM VINDO DE VOLTA!]
-**Sinta-se em casa, aproveite bem a nossa comunidade!**
-]
-$addTextDisplay[-# Veio pelo: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano] | ID: $authorID]
-$addThumbnail[$userAvatar]
-]
-$addSeparator[Large;true]
-
-;Red]
-;
-$addContainer[
-$addSection[
-$addTextDisplay[### 🤖 <@$authorID> ADICIONADO!
-**Que isso? Um novo bot? 🤨**
-]
-$addThumbnail[$userAvatar]
-]
-$addSeparator[Large;true]
-;Orange]
-]
-]
-$wait[5s]
-$setMemberVar[memberJoinedHere?;true]
-
+    $sendMessage[$getGuildVar[batePapo];
+     $if[$isBot[$authorID]==false;
+       $addSection[
+        $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$authorID;$guildID;false]==false;### 👋 <@$authorID> BEM VINDO!;### 🎉 <@$authorID> BEM VINDO DE VOLTA!]\n**Sinta-se em casa, aproveite bem a nossa comunidade!**]
+        $addTextDisplay[-# Veio pelo: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano] | ID: $authorID]
+        $addThumbnail[$userAvatar]
+        ]
+       $addSeparator[Large;true]
+      ;
+       $addSection[
+        $addTextDisplay[### 🤖 <@$authorID> ADICIONADO!\n**Que isso? Um novo bot? 🤨**]
+        $addThumbnail[$userAvatar]
+        ]
+       $addSeparator[Large;true]
+      ]
+    ]
+    $wait[5s]
+    $setMemberVar[memberJoinedHere?;true]
 `
 }
