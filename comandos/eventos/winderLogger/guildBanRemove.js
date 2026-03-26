@@ -1,7 +1,7 @@
 module.exports = [{
     type: "guildBanRemove",
     code: `
-    $onlyIf[$isBot==false]
+    $onlyIf[$authorID!=]
     $webhookSend[$getGuildVar[webhookEventLogger];
      $author[$userDisplayName (@$userTag): Desbanido;$userAvatar]
      $color[Orange]

@@ -1,7 +1,7 @@
 module.exports = [{
     type: "guildBanAdd",
     code: `
-    $onlyIf[$isBot==false]
+    $onlyIf[$authorID!=]
     $webhookSend[$getGuildVar[webhookEventLogger];
      $author[$userDisplayName (@$userTag): Banido;$userAvatar]
      $description[$guildBanReason[$guildID;$authorID]]

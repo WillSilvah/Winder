@@ -1,7 +1,7 @@
 module.exports = [{
     type: "messageDelete",
     code: `
-    $onlyIf[$isBot==false]
+    $onlyIf[$authorID!=]
     $webhookSend[$getGuildVar[webhookEventLogger];
      $author[$userDisplayName (@$userTag): Mensagem deletada;$userAvatar]
      $description[$codeBlock[$message]\nCanal: <#$channelID>]
