@@ -3,7 +3,7 @@ module.exports = [{
     code: `
     $onlyIf[$isBot==false]
     $webhookSend[$getGuildVar[webhookEventLogger];
-     $author[$userDisplayName (@$userTag): desbanido;$userAvatar]
+     $author[$userDisplayName (@$userTag): Desbanido;$userAvatar]
      $color[Orange]
      ;false;$username[$clientID];$userAvatar[$clientID]]
 `
