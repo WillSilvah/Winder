@@ -3,7 +3,7 @@ module.exports = [{
     code: `
     $webhookSend[$getGuildVar[webhookEventLogger];
      $author[$userDisplayName (@$userTag): Convite criado;$userAvatar]
-     $description[$newInvite[url] -> <#$newInvite[channelID]>\n$discordTimestamp[$newInvite[timestamp]]]
+     $description[$newInvite[url] -> <#$newInvite[channelID]>\n$discordTimestamp[$newInvite[timestamp];FullDateShortTime]]
      $color[Orange]
      ;false;$username[$clientID];$userAvatar[$clientID]]
 `
