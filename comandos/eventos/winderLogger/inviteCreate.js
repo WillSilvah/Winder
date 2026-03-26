@@ -1,7 +1,6 @@
 module.exports = [{
     type: "inviteCreate",
     code: `
-    $onlyIf[$authorID!=]
     $webhookSend[$getGuildVar[webhookEventLogger];
      $author[$userDisplayName (@$userTag): Convite criado;$userAvatar]
      $description[$newInvite[url] -> <#$newInvite[channelID]>\n$discordTimestamp[$newInvite[timestamp]]]
