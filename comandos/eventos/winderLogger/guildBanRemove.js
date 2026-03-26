@@ -7,5 +7,4 @@ module.exports = [{
      $color[Orange]
      ;false;$username[$clientID];$userAvatar[$clientID]]
 `
-`
 }]
