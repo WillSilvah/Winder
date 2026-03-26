@@ -17,9 +17,9 @@ module.exports = [{
 
     $if[$getGuildVar[memberVerifiedRole]!=;
      $if[$getMemberVar[messageTotal;$authorID]>=200;
-      $onlyIf[$getGlobalVar[sleepMode]==false;]
-      $onlyIf[$getMemberVar[memberIsolated;$authorID;$guildID;false]==false;]
-      $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]==false;]
+      $onlyIf[$getGlobalVar[sleepMode]==false]
+      $onlyIf[$getMemberVar[memberIsolated;$authorID;$guildID;false]==false]
+      $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]==false]
       $reply
       $sendMessage[$channelID;Você agora é um **Peludo Verificado**! $emoji[$emojiID[pats_foxClapping]] Você está gostando da Patinhas? 👀;false]
       $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]

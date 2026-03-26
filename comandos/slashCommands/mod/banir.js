@@ -4,8 +4,6 @@ module.exports = {
     $let[reason;$if[$option[motivo]==;Sei lá qual foi o motivo, só sei que recebeu!;$option[motivo]]]
     $let[staffID;$authorID]
     $let[type;banido]
-    $if[$memberExists[$guildID;$env[userID]]==true;$sendDMPunishment[$get[userID];$get[staffID];$get[reason];$get[type];]]
-    $punishmentlog[$get[userID];$get[staffID];$get[reason];$get[type];]
     $winderBan
     $interactionReply[<@$authorID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
 
