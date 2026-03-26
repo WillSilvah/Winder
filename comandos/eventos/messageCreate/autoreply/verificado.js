@@ -3,7 +3,7 @@ module.exports = [{
     code: `
     $onlyIf[$argsCount<7;]
     $reply $disableRoleMentions
-    $if[$includes[$toLowercase[$message];como;enviar;mandar;envio]|$includes[$toLowercase[$message];image;mídia;midia;arte;foto;photo;anexo;vídeo]==true|true;
+    $if[$includes[$toLowercase[$message];compartilhar;como;enviar;mandar;envio]|$includes[$toLowercase[$message];image;mídia;midia;arte;foto;photo;anexo;vídeo]==true|true;
     $startTyping[$channelID]
     $wait[1s]
     $if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;
