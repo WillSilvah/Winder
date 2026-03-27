@@ -36,7 +36,8 @@ module.exports = [{
     code: `
     $onlyIf[$guildID==1462224054676099094;]
     
-    $if[$getMemberVar[messageMonth;$authorID]==$getGuildVar[guildActivityMedia];
+    $cooldown[$authorID;10s]
+    $if[$getMemberVar[messageMonth;$authorID]>=$getGuildVar[guildActivityMedia];
      $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==false;]
      $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
      $sendMessage[1467318550925410485;
@@ -58,7 +59,7 @@ Mensagens enviadas antes: **$getMemberVar[messageTotal]**
      $sendMessage[1467318550925410485;
      $title[O membro @$userTag não é um membro ativo.]
      $description[Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
-Cálculo atual: **$media[messageMonth;]**
+Cálculo atual: **$media[messageMonth;$getMemberLeaderboardLength[messageMonth;$guildID]]**
 
 Mensagens enviadas neste mês: **$getMemberVar[messageMonth]**
 Mensagens enviadas $usertag nesta semana: **$getMemberVar[messageWeekly]**
