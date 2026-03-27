@@ -38,7 +38,7 @@ module.exports = [{
     
     $cooldown[$authorID;10s]
     $if[$getMemberVar[messageMonth;$authorID]>=$getGuildVar[guildActivityMedia];
-     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==false;]
+     $if[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==false;
      $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
      $sendMessage[1467318550925410485;
      $title[O membro @$userTag é um membro ativo!]
@@ -53,8 +53,8 @@ Mensagens enviadas antes: **$getMemberVar[messageTotal]**
      $thumbnail[$userAvatar]
      $footer[$authorID]
      $color[Green]]
-    ;
-     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==true;]
+    ];
+     $if[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==true;
      $!memberRemoveRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
      $sendMessage[1467318550925410485;
      $title[O membro @$userTag não é um membro ativo.]
@@ -68,6 +68,6 @@ Mensagens enviadas $usertag antes: **$getMemberVar[messageTotal]**]
      $thumbnail[$userAvatar]
      $footer[$authorID]
      $color[Red]]
-    ]
+    ]]
 `
 }]
