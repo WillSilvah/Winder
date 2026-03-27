@@ -12,6 +12,7 @@ module.exports = {
      $if[$isBanned[$guildID;$get[userID]]==false;$addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]==true;😄 **$userTag[$get[userID]]** já esteve aqui em $discordTimestamp[$getMemberVar[memberJoinedFirstTime;$get[userID]];ShortDateMediumTime];🧐 Não, **$userTag[$get[userID]]** não esteve aqui.]]]
       ]
      $addThumbnail[$userAvatar[$get[userID]]]
+     ]
     ;$guildColor[orange]]
  
   `,
