@@ -36,7 +36,7 @@ module.exports = [{
     code: `
     $onlyIf[$guildID==1462224054676099094;]
     
-    $if[$getMemberVar[messageMonth;$authorID]>=$getGuildVar[guildActivityMedia];
+    $if[$getMemberVar[messageMonth;$authorID]==$getGuildVar[guildActivityMedia];
      $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==false;]
      $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
      $sendMessage[1467318550925410485;
