@@ -40,7 +40,7 @@ data: {
     {
       "type": 3,
       "description": "nome do canal",
-      "required": false,
+      "required": true,
       "name": "nome"
     },
     {
