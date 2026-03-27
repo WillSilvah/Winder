@@ -1,10 +1,11 @@
 module.exports = {
     type: "guildMemberAdd",
     code: `
+    $if[$isBot[$authorID]==false;
     $setMemberVar[memberJoinedFirstTime;$memberJoinedAt[$guildID;$authorID];$authorID;$guildID]
     $setGuildVar[membersJoinedMonth;$sum[$getGuildVar[membersJoinedMonth;$guildID;0];1]]
     $setMemberVar[inviter;$inviterID[$guildID;$authorID];$authorID;$guildID]
-
+]
     $sendMessage[$getGuildVar[batePapo];
      $if[$isBot[$authorID]==false;
        $addSection[
