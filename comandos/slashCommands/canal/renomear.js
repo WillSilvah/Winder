@@ -1,11 +1,9 @@
 module.exports = {
   code: `
-$let[channelID;$option[canal]]
-$let[name;$option[nome]]
-  
-$!setChannelName[$get[channelID];$replaceText[$get[name];|;│]]
-
-$interactionReply[<@$authorID> | Canal renomeado!]
+    $let[channelID;$option[canal]]
+    $let[name;$option[nome]]
+    $!setChannelName[$get[channelID];$replaceText[$get[name];|;│]]
+    $interactionReply[<@$authorID> | Canal renomeado!]
   `,
 data: {
   "type": 1,
