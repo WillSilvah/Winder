@@ -46,7 +46,8 @@ data: {
     {
       "type": 3,
       "name": "categoria-id",
-      "required": true
+      "required": true,
+      "description": "ID da categoria"
     }
   ],
   "default_member_permissions": "16"
