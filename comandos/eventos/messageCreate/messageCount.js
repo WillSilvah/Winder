@@ -11,7 +11,8 @@ module.exports = {
     $setGuildVar[guildTotalMessages;$sum[$getGuildVar[guildTotalMessages;$guildID;0];1]]
     $setGuildVar[guildWeeklyMessages;$sum[$getGuildVar[guildWeeklyMessages;$guildID;0];1]]
     $setGuildVar[guildTodayMessages;$sum[$getGuildVar[guildTodayMessages;$guildID;0];1]]
-
+    
+    $setUserVar[lastOnTimestamp;$getTimestamp] $c[Registra o último update que o usuário fez no Discord, mas nesse caso, perfoma junto com mensagens]
     $setGuildVar[lastUserSendMessage;$authorID $c[Registra o último usuário a enviar mensagem no servidor]
     $setMemberVar[lastMessage;$message;$authorID] $c[Registra a última mensagem que o membro enviou no servidor]
 
@@ -25,5 +26,7 @@ module.exports = {
     $setMemberVar[messageWeekly;$sum[$getMemberVar[messageWeekly;$authorID;$guildID;0];1]]
     $setMemberVar[messageToday;$sum[$getMemberVar[messageToday;$authorID;$guildID;0];1]]
     $setMemberVar[messageTotal;$sum[$getMemberVar[messageTotal;$authorID;$guildID;0];1]]
+
+
 `
 }
