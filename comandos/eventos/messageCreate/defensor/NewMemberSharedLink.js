@@ -1,8 +1,8 @@
 module.exports = {
     type: "messageCreate",
     code: `
-    $wait[5s]
-    $jsonLoad[rawData;$messageRawData[$channelID;$messageID]]
+    $wait[3s]
+    $jsonLoad[rawData;$#messageRawData[$channelID;$messageID]]
     $let[rd;$env[rawData;embeds;0;url]]
     $onlyIf[$includes[$get[rd] / $message;http://;https://]==true;]
     $onlyIf[$getMemberVar[messageTotal;$authorID;$guildID;0]<=6]
