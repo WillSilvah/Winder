@@ -126,22 +126,23 @@ $setGlobalVar[sleepMode;true]
 },{
     type: "clientReady",
     code: `
+    $let[guildID;1462224054676099094]
 $cron[
-$sendMessage[$getGuildVar[staffChat;1462224054676099094];
+$sendMessage[$getGuildVar[staffChat;$get[guildID]];
 ### 🚫 MENÇÕES A CARGOS DE PING DESATIVADAS!
 ]
 
-$!editRole[1462224054676099094;$getGuildVar[guildCallVoiceRole];;;;;false]
-$!editRole[1462224054676099094;$getGuildVar[guildCallTalkRole];;;;;false]
+$!editRole[$get[guildID];$getGuildVar[guildCallVoiceRole;$get[guildID]];;;;;false;]
+$!editRole[$get[guildID];$getGuildVar[guildCallTalkRole;$get[guildID]];;;;;false;]
 ;0 22 * * *;America/Recife]
 
 $cron[
-$sendMessage[$getGuildVar[staffChat;1462224054676099094];
+$sendMessage[$getGuildVar[staffChat;$get[guildID]];
 ### ✅ MENÇÕES A CARGOS DE PING ATIVADAS!
 ]
 
-$!editRole[1462224054676099094;$getGuildVar[guildCallVoiceRole];;;;;true]
-$!editRole[1462224054676099094;$getGuildVar[guildCallTalkRole];;;;;true]
+$!editRole[$get[guildID];$getGuildVar[guildCallVoiceRole;$get[guildID]];;;;;true;]
+$!editRole[$get[guildID];$getGuildVar[guildCallTalkRole;$get[guildID]];;;;;true;]
 ;0 6 * * *;America/Recife]   
     
 `
