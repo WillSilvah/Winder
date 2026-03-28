@@ -16,5 +16,6 @@ $deleteRecords[lastMessage;$authorID]
 $deleteRecords[lastMessageChannel;$authorID]
 $deleteRecords[lastMessageTime;$authorID]
 $deleteRecords[lastMessageTimestamp;$authorID]
+$deleteRecords[lastOnTimestamp;$authorID]
 `
 }]    
