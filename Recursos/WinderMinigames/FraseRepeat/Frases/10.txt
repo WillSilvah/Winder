@@ -1,4 +1,0 @@
-{
-	"texto": "Nesse mundo, ou você é o predador, ou você é a presa.",
-	"autor": "Louis - Beastars"
-}

@@ -1,4 +1,0 @@
-{
-	"texto": "Não importa o quanto você seja talentoso, você sozinho não pode mudar o mundo.",
-	"autor": "L - Death Note"
-}

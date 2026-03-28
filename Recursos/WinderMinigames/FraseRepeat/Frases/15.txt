@@ -1,4 +1,0 @@
-{
-	"texto": "A liberdade começa quando paramos de pedir desculpas pelo que sentimos.",
-	"autor": "Weekend"
-}

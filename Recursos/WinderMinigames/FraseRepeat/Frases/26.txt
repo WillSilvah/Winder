@@ -1,4 +1,0 @@
-{
-	"texto": "Eu não sou uma pessoa, eu sou uma abstração de desespero em um corpo de bobo da corte.",
-	"autor": "Pomni - O Incrível Circo Digital"
-}

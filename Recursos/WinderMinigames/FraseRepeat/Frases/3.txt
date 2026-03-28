@@ -1,4 +1,0 @@
-{
-	"texto": "Não se pode escolher se você vai se ferir neste mundo.",
-	"autor": "John Green"
-}
