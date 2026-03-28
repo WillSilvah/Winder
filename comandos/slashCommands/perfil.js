@@ -33,13 +33,13 @@ $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
-💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
+💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas em **🔥 $getMemberVar[activityMonth;$get[userID];$guildID;0]** dias.
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
 $addSeparator[Large;true]
 $addTextDisplay[### ANTERIORMENTE
-💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas
+💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas em **🔥 $getMemberVar[activityTotal;$get[userID];$guildID;0]** dias
 ✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
