@@ -5,7 +5,7 @@ module.exports = {
     $interactionReply[
      $addContainer[
       $addSection[
-      $addTextDisplay[### Primeiro aviso: $discordTimestamp[$env[warns;1;timestamp];FullDateShortTime]]
+      $addTextDisplay[**Primeiro aviso: **$discordTimestamp[$env[warns;1;timestamp];FullDateShortTime]]
       $addTextDisplay[Motivo: $codeBlock[$env[warns;1;reason]]]
       $addThumbnail[$userAvatar[$get[userID]]]
       ]
