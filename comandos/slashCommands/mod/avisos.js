@@ -2,6 +2,7 @@ module.exports = {
     code: `
     $let[userID;$option[user]]
     $jsonLoad[warns;$getMemberVar[warnList;$get[userID];$guildID;{}]]
+    $onlyIf[$getMemberVar[warnList;$get[userID]]!={};<@$authorID> O **@$userTag[$get[userID]]** não tem nenhum aviso.]
     $interactionReply[
      $addContainer[
       $addSection[
