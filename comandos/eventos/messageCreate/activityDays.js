@@ -3,6 +3,7 @@ module.exports = [{
     code: `$timezone[America/Recife] $c[Fuso horário de Pernambuco, padrão em todo o sistema] 
     $onlyIf[$getMemberVar[activityLastDay;$authorID;$guildID;00]!=$day[TwoDigit]/$month[TwoDigit]]
     
+    $setMemberVar[activityLastDay;$day[TwoDigit]/$month[TwoDigit]]
     $let[activityMonth;$getMemberVar[activityMonth;$authorID;$guildID;0]]
     $letSum[activityMonth;1]
     
