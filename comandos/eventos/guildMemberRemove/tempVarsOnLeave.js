@@ -26,6 +26,7 @@ $deleteRecords[messageTotal;$authorID]
 $deleteRecords[messageWeekly;$authorID]
 $deleteRecords[pdaTotal;$authorID]
 $deleteRecords[pdaMonth;$authorID]
+$deleteRecords[lastOnTimestamp;$authorID]
 
 
 `
