@@ -5,11 +5,16 @@ module.exports = {
     $interactionReply[
      $addContainer[
       $addSection[
-      $addTextDisplay[**Primeiro aviso: **$discordTimestamp[$env[warns;1;timestamp];FullDateShortTime]]
-      $addTextDisplay[Motivo: $codeBlock[$env[warns;1;reason]]]
-      $addThumbnail[$userAvatar[$get[userID]]]
+       $addTextDisplay[### ADVERTÊNCIAS DE $userDisplayName[$get[userID]]]
+       $addTextDisplay[**Primeiro aviso: **$discordTimestamp[$env[warns;1;timestamp];FullDateShortTime]]
+       $addTextDisplay[Motivo: $codeBlock[$env[warns;1;reason]]]
+       $addThumbnail[$userAvatar[$get[userID]]]
       ]
       $addSeparator[Large;true]
+      $if[$env[warns;2]!=;
+      $addTextDisplay[**Segundo aviso: **$discordTimestamp[$env[warns;2;timestamp];FullDateShortTime]]
+       $addTextDisplay[Motivo: $codeBlock[$env[warns;2;reason]]]
+      ]
      ;$guildColor[orange]]
      ]
   `,
