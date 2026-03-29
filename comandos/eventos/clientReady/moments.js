@@ -55,7 +55,7 @@ $deleteRecords[messageMonth]
 $deleteRecords[votesMonth]
 $deleteRecords[pdaMonth]
 $deleteRecords[invitesMonth]
-$deleteRecords[activityMonth]
+$deleteRecords[talkingMonth]
 
 $deleteRecords[membersJoinedMonth]
 $deleteRecords[guildMonthMessages]

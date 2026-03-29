@@ -33,7 +33,7 @@ $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
-💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas em **🔥 $getMemberVar[activityMonth;$get[userID];$guildID;0]** dias.
+💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas em **🔥 $getMemberVar[talkingMonth;$get[userID];$guildID;0]** dias.
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
