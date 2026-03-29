@@ -32,8 +32,8 @@ module.exports = [{
     $!advancedTimeout[$esc[
      $!memberRemoveRoles[{guildID};{userID};$getGuildVar[birthdayRole;{guildID}]]
      ];17h;BirthayRole_$env[id];{"userID": "$env[id]", "guildID": $guildID"}]
-]
-]
+     ]
+    ]
 
 ;0 7 * * *;America/Recife]
     
