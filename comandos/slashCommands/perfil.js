@@ -39,7 +39,7 @@ $addTextDisplay[
 🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
 $addSeparator[Large;true]
 $addTextDisplay[### ANTERIORMENTE
-💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas em **🔥 $getMemberVar[activityTotal;$get[userID];$guildID;0]** dias
+💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas
 ✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
