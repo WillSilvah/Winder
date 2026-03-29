@@ -6,7 +6,7 @@ $jsonLoad[session;$readFile[Recursos/session.json]]
 
 $addContainer[
 $addSection[
-$addTextDisplay[### $userDisplayName[$get[userID]]
+$addTextDisplay[## $default[;$userGuildTag[$get[userID]]:] $userDisplayName[$get[userID]]
 -# **@$userTag[$get[userID]]**
 $badges[$get[userID]]
 $if[$isBanned[$guildID;$get[userID]]==false;**$if[$getMemberVar[birthday;$get[userID]]!=;🎂 $getMemberVar[birthday;$get[userID]] ($math[$year-$getMemberVar[birthdayYear;$get[userID]]] anos);🎂 /aniversário adicionar]**]
@@ -33,7 +33,7 @@ $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
-💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
+💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas em **🔥 $getMemberVar[activityMonth;$get[userID];$guildID;0]** dias.
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]

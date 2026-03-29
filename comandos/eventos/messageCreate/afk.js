@@ -5,8 +5,11 @@ $onlyIf[$mentioned[0]!=$authorID;]
 $onlyIf[$getUserVar[afkStatus;$mentioned[0];false]==true;]
 
 $sendMessage[$channelID;<@$authorID> **$userTag[$mentioned[0]]** está afk!
+$if[$getUserVar[afkReason]!=;
 $author[$getUserVar[afkReason;$mentioned[0]]]
 $color[Red]
+]
+$deleteIn[15s]
 ]
 
 $if[$getUserVar[afkNotify;$mentioned[0];false]==true;

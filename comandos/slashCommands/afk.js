@@ -1,6 +1,6 @@
 module.exports = {
   code: `
-$setUserVar[afkReason;$if[$option[motivo]==;Eu não sei o motivo, mas ele não está disponível;$option[motivo]]]
+$setUserVar[afkReason;$option[motivo]]
 $setUserVar[afkStatus;true]
 $setUserVar[afkNotify;$if[$option[notificardm]==;false;$option[notificardm]]]
 
