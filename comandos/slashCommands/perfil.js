@@ -13,7 +13,7 @@ $if[$isBanned[$guildID;$get[userID]]==false;**$if[$getMemberVar[birthday;$get[us
 ]
 $addThumbnail[$userAvatar[$get[userID]]]
 ]
-$if[$memberExists[$guildID;$get[userID]]==true;$addSeparator[Large;true]
+$if[$memberExists[$guildID;$get[userID]]==true;$addSeparator[Small;true]
 $addTextDisplay[
 👋 Entrou na patinhas $discordTimestamp[$memberJoinedAt[$guildID;$get[userID]];RelativeTime] em $memberJoinPosition[$guildID;$get[userID]]° lugar
 💌 Veio pelo: **$if[$getMemberVar[inviter;$get[userID]]!=;$userTag[$getMemberVar[inviter;$get[userID]]];@Fulano]**
@@ -27,7 +27,7 @@ $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
 $if[$getMemberVar[warnsTotal;$get[userID]]>0;$addTextDisplay[⚠ Tem **$getMemberVar[warnsTotal;$get[userID]]** advertências!]]
 $if[$isTimedOut[$guildID;$get[userID]]==true;$addTextDisplay[🤫 Silenciado até $discordTimestamp[$memberTimeoutDuration[$guildID;$get[userID]];FullDateShortTime]]]
-$addSeparator[Large;true]
+$addSeparator[Small;true]
 $if[$isBanned[$guildID;$get[userID]]==false;
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
@@ -37,7 +37,12 @@ $addTextDisplay[
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
-$addSeparator[Large;true]
+$addSeparator[Small;true]
+$addTextDisplay[
+### MISSÕES
+$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;❌ falta **$math[$getMemberVar[messageTotal;$get[userID]]-200] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%) mensagens para ganhar verificado.;✅️ É um peludo verificado]
+]
+$addSeparator[Small;true]
 $addTextDisplay[### ANTERIORMENTE
 💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas
 ✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
