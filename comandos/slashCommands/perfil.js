@@ -40,9 +40,7 @@ $addTextDisplay[
 $addSeparator[Large;true]
 $addTextDisplay[
 ### MISSÕES
-$if[
 $if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;❌ falta **$math[$getMemberVar[messageTotal;$get[userID]]-200] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%) mensagens para ganhar verificado.;✅️ É um peludo verificado]
-
 ]
 $addSeparator
 $addTextDisplay[### ANTERIORMENTE
