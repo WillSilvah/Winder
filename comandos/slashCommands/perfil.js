@@ -40,7 +40,7 @@ $addTextDisplay[
 $addSeparator[Small;true]
 $addTextDisplay[
 ### MISSÕES
-$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;❌ falta **$math[$getMemberVar[messageTotal;$get[userID]]-200] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%) mensagens para ganhar verificado.;✅️ É um peludo verificado]
+$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==false;❌ falta **$math[$getMemberVar[messageTotal;$get[userID]]-200] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%) mensagens para ganhar verificado.;✅️ É um peludo verificado]
 ]
 $addSeparator[Small;true]
 $addTextDisplay[### ANTERIORMENTE
