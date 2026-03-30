@@ -38,6 +38,13 @@ $addTextDisplay[
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
 $addSeparator[Large;true]
+$addTextDisplay[
+### MISSÕES
+$if[
+$if[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==false;❌ falta **$math[$getMemberVar[messageTotal;$get[userID]]-200] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%) mensagens para ganhar verificado.;✅️ É um peludo verificado]
+
+]
+$addSeparator
 $addTextDisplay[### ANTERIORMENTE
 💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas
 ✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
