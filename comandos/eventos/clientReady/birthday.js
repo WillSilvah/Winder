@@ -16,6 +16,7 @@ module.exports = [{
       $addThumbnail[$userAvatar[$env[id]]]
      ]
       $addSeparator[Large;true]
+      $addTextDisplay[<@&1463138976494915646>]
      ]
 
     $let[msgid;$sendMessage[$getGuildVar[birthdayChannel;$get[guildID]];
@@ -31,7 +32,7 @@ module.exports = [{
 
     $!advancedTimeout[$esc[
      $!memberRemoveRoles[{guildID};{userID};$getGuildVar[birthdayRole;{guildID}]]
-     ];17h;BirthayRole_$env[id];{"userID": "$env[id]", "guildID": $guildID"}]
+     ];17h;BirthayRole_$env[id];{"userID": "$env[id]", "guildID": "$guildID"}]
      ]
     ]
 
