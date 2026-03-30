@@ -40,7 +40,8 @@ $addTextDisplay[
 $addSeparator[Small;true]
 $addTextDisplay[
 ### MISSÕES
-$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==false;❌ falta **$math[200-$getMemberVar[messageTotal;$get[userID]]] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%)** mensagens para ganhar verificado.;✅️ É um peludo verificado]
+$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==false;❌️ falta **$math[200-$getMemberVar[messageTotal;$get[userID]]] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%)** mensagens para ganhar verificado.;✅️ É um peludo verificado]
+$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==true;❌️ Não é um assombrado\n-# Consiga essa proeza conversando em certos horários na comunidade.;👻 É um peludo assombrado]
 ]
 $addSeparator[Small;true]
 $addTextDisplay[### ANTERIORMENTE
