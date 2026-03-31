@@ -8,7 +8,7 @@ module.exports = [{
     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false]
     $let[chance;$randomNumber[1;100]]
-    $onlyIf[$get[chance]<=1]
+    $onlyIf[$get[chance]<=5]
 
     $!addMessageReactions[$channelID;$messageID;👻]
 

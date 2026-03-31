@@ -8,7 +8,7 @@ module.exports = [{
       $addSection[
        $addTextDisplay[## CLUBES!]
        $addTextDisplay[**$customEmoji[pats_logo] 🐱 😘! 🤫! 🏳️‍🌈**]
-       $addTextDisplay[Qual clube você se identifica ou quer participar?]
+       $addTextDisplay[Qual clube você se identifica ou quer participar?\nEles não dão acesso a canal especial, apenas quando tiver demanda para isso.]
 
        $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f465.png]
       ]
