@@ -9,7 +9,7 @@ module.exports = {
     $letSum[money;$get[daily]]
     $setMemberVar[money;$get[money]]
     
-    $interactionReply[Parabéns, vocêganhou **$get[daily]** furrásticos!]
+    $interactionReply[Parabéns, você ganhou **$get[daily]** furrásticos!]
 `,
   data: {
   "type": 1,
