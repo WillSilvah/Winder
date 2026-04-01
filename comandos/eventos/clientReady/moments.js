@@ -22,7 +22,7 @@ $sendMessage[$getGlobalVar[consoleChat];## VARIAVEIS TODAY RESETADA]
 
 $cron[
 $let[guildID;1462224054676099094]
-$setGuildVar[guildActivityMedia;$media[messageMonth;$getMemberLeaderboardLength[messageMonth;$get[guildID]];$get[guildID]]]
+$setGuildVar[guildActivityMedia;$media[messageMonth;$getMemberLeaderboardLength[messageMonth;$get[guildID]]];$get[guildID]]
 
 $jsonLoad[sessionold;$readFile[Recursos/session.json]]
 
@@ -88,7 +88,7 @@ $deleteRecords[tempInvitesMonth]
 
 $deleteRecords[messageLogMonth]
 
-;1 3 1 * *;America/Recife;ResetMonth]
+;3 3 1 * *;America/Recife;ResetMonth]
 `
 },{
     type: 'clientReady',
