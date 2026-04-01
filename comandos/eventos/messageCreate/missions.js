@@ -37,37 +37,13 @@ module.exports = [{
     $onlyIf[$guildID==1462224054676099094;]
     
     $cooldown[$authorID;10s]
-    $if[$getMemberVar[messageMonth;$authorID]>=$getGuildVar[guildActivityMedia];
+    $if[$getMemberVar[messageMonth;$authorID;$guildID;0]>=$getGuildVar[guildActivityMedia;$guildID;0];
      $if[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==false;
      $!memberAddRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
-     $sendMessage[1467318550925410485;
-     $title[O membro @$userTag é um membro ativo!]
-     $description[Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
-Cálculo atual: **$media[messageMonth;$getMemberLeaderboardLength[messageMonth;$guildID]]**
-
-Mensagens enviadas neste mês: **$getMemberVar[messageMonth]**
-Mensagens enviadas nesta semana: **$getMemberVar[messageWeekly]**
-Mensagens enviadas hoje: **$getMemberVar[messageToday]**
-Mensagens enviadas antes: **$getMemberVar[messageTotal]**
-]
-     $thumbnail[$userAvatar]
-     $footer[$authorID]
-     $color[Green]]
-    ];
+     ;
      $if[$hasRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]==true;
      $!memberRemoveRoles[$guildID;$authorID;$getGuildVar[memberActiveRole;$guildID]]
-     $sendMessage[1467318550925410485;
-     $title[O membro @$userTag não é um membro ativo.]
-     $description[Média de atividade do servidor atual: **$getGuildVar[guildActivityMedia]**
-Cálculo atual: **$media[messageMonth;$getMemberLeaderboardLength[messageMonth;$guildID]]**
-
-Mensagens enviadas neste mês: **$getMemberVar[messageMonth]**
-Mensagens enviadas $usertag nesta semana: **$getMemberVar[messageWeekly]**
-Mensagens enviadas $usertag hoje: **$getMemberVar[messageToday]**
-Mensagens enviadas $usertag antes: **$getMemberVar[messageTotal]**]
-     $thumbnail[$userAvatar]
-     $footer[$authorID]
-     $color[Red]]
     ]]
+    ]
 `
 }]
