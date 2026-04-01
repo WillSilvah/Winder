@@ -33,7 +33,7 @@ $addTextDisplay[# $toUpperCase[Temporada $env[sessionold;number]: $env[sessionol
 - **💬 $getGuildVar[guildMonthMessages;$get[guildID]] mensagens enviadas**
 - **👋 $getGuildVar[membersJoinedMonth;$get[guildID]] membros conhecidos**
 ]
-$addThumbnail[$guildIcon]
+$addThumbnail[$guildIcon[$get[guildID]]]
 ]
 $addSeparator[Large;true]
 ]
@@ -74,7 +74,7 @@ $addSection[
 $addTextDisplay[
 AGORA COMEÇA...
 # $toUpperCase[Temporada $env[session;number]: $env[session;name]]]
-$addThumbnail[$guildIcon]
+$addThumbnail[$guildIcon[$get[guildID]]]
 ]
 $addSeparator[Large;true]
 ]
@@ -88,7 +88,7 @@ $deleteRecords[tempInvitesMonth]
 
 $deleteRecords[messageLogMonth]
 
-;3 3 1 * *;America/Recife;ResetMonth]
+;6 3 1 * *;America/Recife;ResetMonth]
 `
 },{
     type: 'clientReady',
