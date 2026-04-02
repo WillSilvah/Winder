@@ -26,8 +26,7 @@ $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
 $if[$getMemberVar[warnsTotal;$get[userID]]>0;$addTextDisplay[⚠ Tem **$getMemberVar[warnsTotal;$get[userID]]** advertências!]]
-$if[$isTimedOut[$guildID;$get[userID]]==true;$addTextDisplay[🤫 Silenciado até $discordTimestamp[$memberTimeoutDuration[$guildID;$get[userID]];FullDateShortTime]]]
-$addSeparator[Small;true]
+$if[$memberExists[$guildID;$get[userID]]==true;$if[$isTimedOut[$guildID;$get[userID]]==true;$addTextDisplay[🤫 Silenciado até $discordTimestamp[$memberTimeoutDuration[$guildID;$get[userID]];FullDateShortTime]]]]$addSeparator[Small;true]
 $if[$isBanned[$guildID;$get[userID]]==false;
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
