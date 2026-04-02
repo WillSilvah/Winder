@@ -1,56 +1,39 @@
 module.exports = {
-    code: `
+  code: `
     $let[userID;$option[user]]
-    $jsonLoad[warns;$getMemberVar[warnList;$get[userID];$guildID;{}]]
     $onlyIf[$getMemberVar[warnList;$get[userID]]!={};<@$authorID> O **@$userTag[$get[userID]]** não tem nenhum aviso.]
-    $interactionReply[
-     $addContainer[
+    $jsonLoad[warns;$getMemberVar[warnList;$get[userID]]]
+    $jsonLoad[warnKeys;$jsonKeys[warns]]
+
+    $addContainer[
       $addSection[
-       $addTextDisplay[### $userTag[$get[userID]]\n**Primeiro aviso: **$discordTimestamp[$env[warns;1;timestamp];FullDateShortTime]]
-       $addTextDisplay[Aplicador: **@$userTag[$env[warns;1;staffID]]**]
-       $addTextDisplay[Motivo: $codeBlock[$env[warns;1;reason]]]
+       $addTextDisplay[### Advertências de $userTag[$get[userID]]]
        $addThumbnail[$userAvatar[$get[userID]]]
       ]
-      $addSeparator[Large;true]
-      $if[$env[warns;2]!=;
-      $addTextDisplay[**Segundo aviso: **$discordTimestamp[$env[warns;2;timestamp];FullDateShortTime]]
-      $addTextDisplay[Aplicador: **@$userTag[$env[warns;2;staffID]]**]
-      $addTextDisplay[Motivo: $codeBlock[$env[warns;2;reason]]]
-      $addSeparator[Large;true]
+      
+      $arrayForEach[warnKeys;warn;
+        $addSeparator[Large]
+
+        $addTextDisplay[
+          **Aviso $inlineCode[#$env[warn]]: **$discordTimestamp[$env[warn;timestamp];FullDateShortTime]
+          Aplicador: **@$userTag[$env[warn;staffID]]**
+          Motivo: $codeBlock[$env[warn;reason]]
+        ]
       ]
-      $if[$env[warns;3]!=;
-      $addTextDisplay[**Terceiro aviso: **$discordTimestamp[$env[warns;3;timestamp];FullDateShortTime]]
-      $addTextDisplay[Aplicador: **@$userTag[$env[warns;3;staffID]]**]
-      $addTextDisplay[Motivo: $codeBlock[$env[warns;3;reason]]]
-      $addSeparator[Large;true]
-      ]
-      $if[$env[warns;4]!=;
-      $addTextDisplay[**Quarto aviso: **$discordTimestamp[$env[warns;4;timestamp];FullDateShortTime]]
-      $addTextDisplay[Aplicador: **@$userTag[$env[warns;4;staffID]]**]
-      $addTextDisplay[Motivo: $codeBlock[$env[warns;4;reason]]]
-      $addSeparator[Large;true]
-      ]
-      $if[$env[warns;5]!=;
-      $addTextDisplay[**Quinto aviso: **$discordTimestamp[$env[warns;5;timestamp];FullDateShortTime]]
-      $addTextDisplay[Aplicador: **@$userTag[$env[warns;5;staffID]]**]
-      $addTextDisplay[Motivo: $codeBlock[$env[warns;5;reason]]]
-      $addSeparator[Large;true]
-      ]
-     ;$guildColor[orange]]
-     ]
+    ;$guildColor[orange]]
   `,
-    data: {
-  "type": 1,
-  "name": "avisos",
-  "description": "Veja quantas advertências um membro teve.",
-  "options": [
-    {
-      "type": 6,
-      "description": "Usuário",
-      "required": true,
-      "name": "user"
-    }
-  ],
-  "default_member_permissions": "2"
-},
+  data: {
+    "type": 1,
+    "name": "avisos",
+    "description": "Veja quantas advertências um membro teve.",
+    "options": [
+      {
+        "type": 6,
+        "description": "Usuário",
+        "required": true,
+        "name": "user"
+      }
+    ],
+    "default_member_permissions": "2"
+  },
 }
