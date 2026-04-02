@@ -15,9 +15,9 @@ module.exports = {
         $addSeparator[Large]
 
         $addTextDisplay[
-          **Aviso $inlineCode[#$env[warn]]: **$discordTimestamp[$env[warn;timestamp];FullDateShortTime]
-          Aplicador: **@$userTag[$env[warn;staffID]]**
-          Motivo: $codeBlock[$env[warn;reason]]
+          **Aviso $inlineCode[#$env[warn]]: **$discordTimestamp[$env[warns;$env[warn];timestamp];FullDateShortTime]
+          Aplicador: **@$userTag[$env[warns;$env[warn];staffID]]**
+          Motivo: $codeBlock[$env[warns;$env[warn];reason]]
         ]
       ]
     ;$guildColor[orange]]
