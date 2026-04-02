@@ -8,16 +8,15 @@ module.exports = {
     $addContainer[
       $addSection[
        $addTextDisplay[### Advertências de $userTag[$get[userID]]]
-       $addThumbnail[$userAvatar[$get[userID]]]
-      ]
-      
-      $arrayForEach[warnKeys;warn;
+       $arrayForEach[warnKeys;warn;
         $addSeparator[Small]
-        $addTextDisplay[$trim[
+        $trim[
           **Aviso $inlineCode[#$env[warn]]: **$discordTimestamp[$env[warns;$env[warn];timestamp];FullDateShortTime]
           Aplicador: **@$userTag[$env[warns;$env[warn];staffID]]**
           Motivo: $codeBlock[$env[warns;$env[warn];reason]]
-        ]]
+        ]
+      ]
+       $addThumbnail[$userAvatar[$get[userID]]]
       ]
     ;$guildColor[orange]]
   `,
