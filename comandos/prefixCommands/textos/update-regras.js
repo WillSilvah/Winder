@@ -5,7 +5,9 @@ module.exports = [{
 $onlyIf[$hasPerms[$guildID;$authorID;ManageGuild]==true;]
 $deleteCommand
 
-$sendMessage[$channelID;
+$!deleteMessage[1462224055884189778;$getGlobalVar[regras_messageID]]
+
+$let[msgID;$sendMessage[1462224055884189778;
 $addContainer[
 $addSection[
 $addTextDisplay[### DIRETRIZES DA COMUNIDADE PATINHAS
@@ -76,7 +78,9 @@ Existe uma segunda e última chance, o membro banido pode apelar seu banimento s
 $addActionRow
 $addButton[$getGuildVar[unbanForm];Apelo de desbanimento;Link;<:pats_foxBan:1466597066892640456>;false]
 ;#e6d3ad]
-]
+;true]]
+
+$setGlobalVar[regras_messageID;$get[msgID]]
 
 `
 }]
