@@ -9,7 +9,6 @@ module.exports = {
       $addSection[
        $addTextDisplay[### $userTag[$get[userID]]'s warns]
        $addTextDisplay[$arrayForEach[warnKeys;warn;
-        $addSeparator[Large]
         $trim[
           **Aviso $inlineCode[#$env[warn]]: **$discordTimestamp[$env[warns;$env[warn];timestamp];FullDateShortTime]
           Aplicador: **@$userTag[$env[warns;$env[warn];staffID]]**
