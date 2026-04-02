@@ -33,7 +33,7 @@ module.exports = [{
 `
 },{
     type: "messageCreate",
-    code: `
+    code: `$stop
     $onlyIf[$guildID==1462224054676099094;]
     
     $cooldown[$authorID;10s]
