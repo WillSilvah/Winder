@@ -26,8 +26,7 @@ $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
 $if[$getMemberVar[warnsTotal;$get[userID]]>0;$addTextDisplay[⚠ Tem **$getMemberVar[warnsTotal;$get[userID]]** advertências!]]
-$if[$isTimedOut[$guildID;$get[userID]]==true;$addTextDisplay[🤫 Silenciado até $discordTimestamp[$memberTimeoutDuration[$guildID;$get[userID]];FullDateShortTime]]]
-$addSeparator[Small;true]
+$if[$memberExists[$guildID;$get[userID]]==true;$if[$isTimedOut[$guildID;$get[userID]]==true;$addTextDisplay[🤫 Silenciado até $discordTimestamp[$memberTimeoutDuration[$guildID;$get[userID]];FullDateShortTime]]]]$addSeparator[Small;true]
 $if[$isBanned[$guildID;$get[userID]]==false;
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
@@ -40,7 +39,10 @@ $addTextDisplay[
 $addSeparator[Small;true]
 $addTextDisplay[
 ### MISSÕES
-$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==false;❌ falta **$math[200-$getMemberVar[messageTotal;$get[userID]]] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%)** mensagens para ganhar verificado.;✅️ É um peludo verificado]
+$if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==false;❌️ falta **$math[200-$getMemberVar[messageTotal;$get[userID]]] ($truncate[$math[$getMemberVar[messageTotal;$get[userID]]/200*100]]%)** mensagens para ganhar verificado.;✅️ É um peludo verificado]
+$if[$hasRoles[$guildID;$get[userID];1481734062270844968]==false;❌️ Não é um assombrado\n-# Consiga essa proeza conversando em certos horários na comunidade.;👻 É um peludo assombrado]
+$if[$getMemberVar[talkingMonth;$get[userID]]>=7;🗣 Conversou por mais de sete dias na comunidade neste mês!;❌️ Não conversou por sete dias na comunidade neste mês.]
+$if[$getMemberVar[talkingTotal;$get[userID]]>=30;🗣 É um fofoqueiro!\nConversou por mais de 30 dias sem parar!]
 ]
 $addSeparator[Small;true]
 $addTextDisplay[### ANTERIORMENTE
