@@ -58,6 +58,7 @@ $deleteRecords[pdaMonth]
 $deleteRecords[invitesMonth]
 
 $deleteRecords[membersJoinedMonth]
+$deleteRecords[membersLeftMonth]
 $deleteRecords[guildMonthMessages]
 
 $writeFile[Recursos/session.json;{

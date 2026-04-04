@@ -10,6 +10,8 @@ module.exports = [{
      ]
      ;Red]
     ]
+    $setGuildVar[membersLeftMonth;$sum[$getGuildVar[membersLeftMonth;$guildID;0];1]]
+    
 $wait[2s]
 $deleteRecords[inviter;$authorID]
 $deleteRecords[lastMessage;$authorID]
