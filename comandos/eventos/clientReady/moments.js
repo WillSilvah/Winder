@@ -56,7 +56,6 @@ $deleteRecords[messageMonth]
 $deleteRecords[votesMonth]
 $deleteRecords[pdaMonth]
 $deleteRecords[invitesMonth]
-$deleteRecords[talkingMonth]
 
 $deleteRecords[membersJoinedMonth]
 $deleteRecords[guildMonthMessages]
@@ -88,7 +87,7 @@ $deleteRecords[tempInvitesMonth]
 
 $deleteRecords[messageLogMonth]
 
-;6 3 1 * *;America/Recife;ResetMonth]
+;0 0 1 * *;America/Recife;ResetMonth]
 `
 },{
     type: 'clientReady',
