@@ -95,7 +95,6 @@ $deleteRecords[messageLogMonth]
     $let[guildID;1462224054676099094]
     $cron[
     $setGlobalVar[sleepMode;false]
-    $!memberSetNickname[$get[guildID];$clientID;$username[$clientID]]
     ;0 6 * * *;America/Recife]
 
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
