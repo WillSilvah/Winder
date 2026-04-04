@@ -9,6 +9,7 @@ module.exports = {
     $c[Contabiliza a quantidade de mensagens que o servidor inteiro enviou no dia, semana e mês]
     $setGuildVar[guildMonthMessages;$sum[$getGuildVar[guildMonthMessages;$guildID;0];1]]
     $setGuildVar[guildTotalMessages;$sum[$getGuildVar[guildTotalMessages;$guildID;0];1]]
+    $setGuildVar[msgPerMinute;$sum[$getGuildVar[msgPerMinute;$guildID;0];1]]
     $setGuildVar[guildWeeklyMessages;$sum[$getGuildVar[guildWeeklyMessages;$guildID;0];1]]
     $setGuildVar[guildTodayMessages;$sum[$getGuildVar[guildTodayMessages;$guildID;0];1]]
     
