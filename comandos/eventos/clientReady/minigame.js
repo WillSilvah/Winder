@@ -7,7 +7,7 @@ module.exports = [{
       $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
      $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>6;]
       $minigame[$randomText[fraseRepeat;questions];$get[guildID]]
-    ;5m;WinderMinigame]    
+    ;10m;WinderMinigame]    
 `
     },{
     type: 'messageCreate',
