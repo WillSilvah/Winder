@@ -16,7 +16,7 @@ module.exports = [{
     ]
 
     $if[$getGuildVar[memberVerifiedRole]!=;
-     $if[$getMemberVar[messageTotal;$authorID]>=150;
+     $if[$getMemberVar[messageTotal;$authorID]>=$getGuildVar[memberVerifiedQuantity];
       $onlyIf[$getGlobalVar[sleepMode]==false]
       $onlyIf[$getMemberVar[memberIsolated;$authorID;$guildID;false]==false]
       $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole;$guildID]]==false]
