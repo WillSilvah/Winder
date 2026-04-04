@@ -15,9 +15,17 @@ module.exports = {
 
     $setMemberVar[tempInvitesMonth;$getMemberVar[invitesMonth;$authorID;$guildID;0];$authorID;$guildID]
      $setMemberVar[tempInvitesTotal;$getMemberVar[invitesTotal;$authorID;$guildID;0];$authorID;$guildID]
+     
+     $setMemberVar[tempMinigameTotalWins;$getMemberVar[minigameTotalWins;$authorID;$guildID;0];$authorID;$guildID]
+     
+     $setMemberVar[tempMinigameMonthWins;$getMemberVar[minigameMonthWins;$authorID;$guildID;0];$authorID;$guildID]
+     
+     $setMemberVar[tempPdaTotal;$getMemberVar[pdaTotal;$authorID;$guildID;0];$authorID;$guildID]
 
     $deleteRecords[messageMonth;$authorID]
      $deleteRecords[messageTotal;$authorID]
+     $deleteRecords[minigameMonthWins;$authorID]
+     $deleteRecords[messageTotalWins;$authorID]
       $deleteRecords[messageWeekly;$authorID]
        $deleteRecords[pdaTotal;$authorID]
         $deleteRecords[pdaMonth;$authorID]
