@@ -5,7 +5,7 @@ module.exports = [{
     $onlyIf[$getGuildVar[evento_pascoaStatus;$guildID;false]==true]
     $let[roleID;1490333236637864196]
     $timezone[America/Recife]
-    $onlyIf[$day/$month[TwoDigit]==05/04]
+    $onlyIf[$day/$month[TwoDigit]==5/04]
     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false]
     $let[chance;$randomNumber[1;100]]
