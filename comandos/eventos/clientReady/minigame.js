@@ -1,13 +1,14 @@
 module.exports = [{
     type: 'clientReady',
     code: `
+    $let[time;10m]
     $let[guildID;1462224054676099094]
     $setInterval[
      $onlyIf[$getGlobalVar[sleepMode]==false;]
-      $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[15m]];$get[guildID]]
+      $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[$get[time]]];$get[guildID]]
      $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>6;]
       $minigame[$randomText[fraseRepeat;questions];$get[guildID]]
-    ;10m;WinderMinigame]    
+    ;$get[time];WinderMinigame]    
 `
     },{
     type: 'messageCreate',
