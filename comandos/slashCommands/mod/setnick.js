@@ -4,7 +4,7 @@ module.exports = {
   $let[userID;$option[membro]]
   $let[nick;$option[novo-apelido]]
   $!memberSetNickname[$guildID;$get[userID];$get[nick]]
-  $interactionReply[Nome de **@$userTag[$get[nick]]** foi alterado com sucesso!]
+  $interactionReply[Nome de **@$userTag[$get[userID]]** foi alterado com sucesso!]
   `,
 data: {
   "type": 1,
