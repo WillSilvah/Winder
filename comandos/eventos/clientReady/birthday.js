@@ -37,7 +37,7 @@ module.exports = [{
      ]
     ]
 
-;13 12 * * *;America/Recife]
+;0 7 * * *;America/Recife]
     
     
 `
