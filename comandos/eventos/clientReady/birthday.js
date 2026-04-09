@@ -8,7 +8,7 @@ module.exports = [{
      $arrayForEach[birthday;id;
      $if[$getMemberVar[birthday;$env[id];$get[guildID]]==$day[TwoDigit]/$month[TwoDigit];
      
-     $!memberAddRoles[$guildID;$env[id];$getGuildVar[birthdayRole;$get[guildID]]]
+     $!memberAddRoles[$get[guildID];$env[id];$getGuildVar[birthdayRole;$get[guildID]]]
      
      $sendMessage[$getGuildVar[batePapo;$get[guildID]];
      $addSection[
@@ -36,7 +36,7 @@ module.exports = [{
      ]
     ]
 
-;54 11 * * *;America/Recife]
+;56 12 * * *;America/Recife]
     
     
 `
