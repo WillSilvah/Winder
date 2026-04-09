@@ -13,6 +13,4 @@ WinderDB_$day[TwoDigit]-$month[TwoDigit]_$hour[TwoDigit]$minute[TwoDigit]
 $attachment[database/forge.db;forge.db]
 ]
 ;1h;backupDatabase]
-    
-    
 `}]
