@@ -3,7 +3,8 @@ module.exports = [{
     code: `
     $cron[
     $let[guildID;1462224054676099094]
-
+    $timezone[America/Recife]
+    
     $arrayLoad[birthday;, ;$guildMemberIDs[$get[guildID]]]
      $arrayForEach[birthday;id;
      $if[$getMemberVar[birthday;$env[id];$get[guildID]]==$day[TwoDigit]/$month[TwoDigit];
@@ -36,7 +37,7 @@ module.exports = [{
      ]
     ]
 
-;56 12 * * *;America/Recife]
+;13 12 * * *;America/Recife]
     
     
 `
