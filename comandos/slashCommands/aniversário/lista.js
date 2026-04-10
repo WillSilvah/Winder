@@ -21,14 +21,15 @@ $disableAllMentions
 $addContainer[
 $addSection[
 $addTextDisplay[## ANIVERSÁRIANTES DE $get[monthName]!]
-$addThumbnail[$guildIcon]
-]
-$addSeparator[Large]
+$addTextDisplay[
 $arrayForEach[birthdayDB;data;
 $arrayLoad[birthdayInfo;/;$env[data;value]]
 $if[$get[month]==$arrayAt[birthdayInfo;1];
-$addTextDisplay[<@$env[data;id]> - 🗓 $env[data;value] ($math[$year-$getMemberVar[birthdayYear;$env[data;id]]] anos)]
+<@$env[data;id]> - 🗓 $env[data;value] ($math[$year-$getMemberVar[birthdayYear;$env[data;id]]] anos)
 ]
+]
+]
+$addThumbnail[$guildIcon]
 ]
 ;Green]
   `,
