@@ -12,7 +12,7 @@ module.exports = [{
        $!memberAddRoles[$get[guildID];$env[id];$getGuildVar[memberActiveRole;$get[guildID]]]
        ]
      ]
-     $if[$getMemberVar[oldTalkingMonth;$env[id];$get[guildID];0]<7;
+     $if[$getMemberVar[talkingMonth;$env[id];$get[guildID];0]<7;
       $!memberRemoveRoles[$get[guildID];$env[id];$getGuildVar[memberActiveRole;$get[guildID]]]
      ]
     ]
