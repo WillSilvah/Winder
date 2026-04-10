@@ -18,17 +18,17 @@ $elseIf[$get[month]==12;DEZEMBRO]]]
 
 $jsonLoad[birthdayDB;$searchDB[birthday;;member;;$guildID]]
 $disableAllMentions
-$title[ANIVERSÁRIANTES DE $get[monthName]!]
+$addContainer[
+$addSection[
+$addTextDisplay[## ANIVERSÁRIANTES DE $get[monthName]!]
+]
 $arrayForEach[birthdayDB;data;
-$description[
 $arrayLoad[birthdayInfo;/;$env[data;value]]
 $if[$get[month]==$arrayAt[birthdayInfo;1];
-Isso: <@$env[data;id]> - 🗓 $env[data;value] ($math[$year-$getMemberVar[birthdayYear;$env[data;id]]] anos)
+$addTextDisplay[<@$env[data;id]> - 🗓 $env[data;value] ($math[$year-$getMemberVar[birthdayYear;$env[data;id]]] anos)]
 ]
 ]
-]
-$thumbnail[$guildIcon]
-$color[Green]
+;Green]
   `,
 data: {
   "name": "lista",
