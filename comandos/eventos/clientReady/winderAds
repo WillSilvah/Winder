@@ -1,0 +1,14 @@
+modules.export = [{
+  type: "clientReady",
+  code: `
+  $c[$let[guildID;1462224054676099094]
+  $setInterval[
+   $if[$getGlobalVar[sleepMode]==false;
+    $let[ad;$randomNumber[1;10]]
+    $sendMessage[$getGuildVar[batePapo;$get[guildID]];
+    ]
+   ]
+  ;1h1m;WinderADS]
+]
+`
+}]
