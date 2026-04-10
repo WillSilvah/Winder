@@ -31,7 +31,7 @@ module.exports = [{
        $setGuildVar[minigameStatus;true;$env[guildID]]
       ]
       $if[$env[tipo]==questions;
-      $setChannelSlowmode[$getGuildVar[batePapo;$env[guildID]];5]
+      $!setChannelSlowmode[$getGuildVar[batePapo;$env[guildID]];5]
        $let[id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/Questions/asks/ | wc -l]]]
        $jsonLoad[ask;$readFile[Recursos/WinderMinigames/Questions/asks/$get[id].txt]]
        $jsonLoad[alt;$env[ask;alts]]
