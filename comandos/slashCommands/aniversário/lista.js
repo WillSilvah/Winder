@@ -26,6 +26,7 @@ $if[$get[month]==$arrayAt[birthdayInfo;1];
 $addTextDisplay[<@$env[data;id]> - 🗓 $env[data;value] ($math[$year-$getMemberVar[birthdayYear;$env[data;id]]] anos)]
 ]
 ]
+$addTextDisplay[-# Utilize o comando /aniversário adicionar para registrar o seu aniversário!]
 ;Green]
   `,
 data: {
