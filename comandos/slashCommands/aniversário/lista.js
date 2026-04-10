@@ -19,9 +19,7 @@ $elseIf[$get[month]==12;DEZEMBRO]]]
 $jsonLoad[birthdayDB;$searchDB[birthday;;member;;$guildID]]
 $disableAllMentions
 $addContainer[
-$addSection[
 $addTextDisplay[## ANIVERSÁRIANTES DE $get[monthName]!]
-]
 $arrayForEach[birthdayDB;data;
 $arrayLoad[birthdayInfo;/;$env[data;value]]
 $if[$get[month]==$arrayAt[birthdayInfo;1];
