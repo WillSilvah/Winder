@@ -19,8 +19,8 @@ $elseIf[$get[month]==12;DEZEMBRO]]]
 $jsonLoad[birthdayDB;$searchDB[birthday;;member;;$guildID]]
 $disableAllMentions
 $title[ANIVERSÁRIANTES DE $get[monthName]!]
-$description[
 $arrayForEach[birthdayDB;data;
+$description[
 $arrayLoad[birthdayInfo;/;$env[data;value]]
 $if[$get[month]==$arrayAt[birthdayInfo;1];
 Isso: <@$env[data;id]> - 🗓 $env[data;value] ($math[$year-$getMemberVar[birthdayYear;$env[data;id]]] anos)
