@@ -17,6 +17,7 @@ module.exports = [{
     $onlyIf[$channelID==$getGuildVar[batePapo];]
     $onlyIf[$getGuildVar[minigameStatus;$guildID;false]==true;]
     $onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$getGuildVar[minigameWord;$guildID];$toLowerCase[$getGuildVar[minigameWord;$guildID]]];]
+    $if[$getGuildVar[minigameType]==questions;$cooldown[$authorID;60s]]
 
     $startTyping[$channelID]
     $setGuildVar[minigameStatus;false;$guildID]
@@ -35,12 +36,13 @@ module.exports = [{
        $addThumbnail[$userAvatar]
      ]
     ]
-    
-    $sendMessage[$channelID;
-     $addSection[
-       $addTextDisplay[## <@$authorID> MISSÃO CONCLUÍDA!]
-       $addTextDisplay[**🏆 Ganhar 5 (cinco) minigames na temporada $env[session;number]: $env[session;name]!**] 
-       $addThumbnail[$userAvatar]
+    $if[$getMemberVar[minigameMonthWins;$authorID;$guildID;0]==5;
+     $sendMessage[$channelID;
+      $addSection[
+        $addTextDisplay[## <@$authorID> MISSÃO CONCLUÍDA!]
+        $addTextDisplay[**🏆 Ganhar 5 (cinco) minigames na temporada $env[session;number]: $env[session;name]!**] 
+        $addThumbnail[$userAvatar]
+      ]
      ]
     ]
 
