@@ -13,6 +13,7 @@ module.exports = [{
     },{
     type: 'messageCreate',
     code: `
+    $jsonLoad[session;$readFile[Recursos/session.json]]
     $onlyIf[$channelID==$getGuildVar[batePapo];]
     $onlyIf[$getGuildVar[minigameStatus;$guildID;false]==true;]
     $onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$getGuildVar[minigameWord;$guildID];$toLowerCase[$getGuildVar[minigameWord;$guildID]]];]
@@ -34,7 +35,15 @@ module.exports = [{
        $addThumbnail[$userAvatar]
      ]
     ]
-    $startTyping[$channelID]
+    
+    $sendMessage[$channelID;
+     $addSection[
+       $addTextDisplay[## <@$authorID> MISSÃO CONCLUÍDA!]
+       $addTextDisplay[**🏆 Ganhar 5 (cinco) minigames na temporada $env[session;number]: $env[session;name]!**] 
+       $addThumbnail[$userAvatar]
+     ]
+    ]
+
     $setGuildVar[minigameGuildWins;$math[$getGuildVar[minigameGuildWins;$guildID;0]+1];$guildID]
     $!memberRemoveRoles[$guildID;$getGuildVar[minigameLastUser;$guildID];$getGuildVar[lastWinMemberRole]]
     $wait[1s]
