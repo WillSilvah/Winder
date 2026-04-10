@@ -17,7 +17,7 @@ module.exports = [{
     $onlyIf[$channelID==$getGuildVar[batePapo];]
     $onlyIf[$getGuildVar[minigameStatus;$guildID;false]==true;]
     $onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$getGuildVar[minigameWord;$guildID];$toLowerCase[$getGuildVar[minigameWord;$guildID]]];]
-    $if[$getGuildVar[minigameType]==questions;$cooldown[$authorID;60s]]
+    $if[$getGuildVar[minigameType]==questions;$cooldown[$authorID;30s]]
 
     $startTyping[$channelID]
     $setGuildVar[minigameStatus;false;$guildID]
