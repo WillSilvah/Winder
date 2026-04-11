@@ -123,7 +123,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 ]
 $setGlobalVar[sleepMode;true]
 
-;0 22 * * *;America/Recife]
+;0 23 * * *;America/Recife]
 `
 },{
     type: "clientReady",
