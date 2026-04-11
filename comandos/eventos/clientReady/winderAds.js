@@ -7,7 +7,7 @@ module.exports = [{
     $let[ad;$randomNumber[1;10]]
     $sendMessage[$getGuildVar[batePapo;$get[guildID]];
      $if[$get[ad]==1;
-     
+     ]
      ]
    ]
   ;1h1m;WinderADS]
