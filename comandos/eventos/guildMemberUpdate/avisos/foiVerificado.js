@@ -1,4 +1,4 @@
-module.export = [{
+module.exports = [{
     type: "guildMemberUpdate",
     code: `
     $if[$oldMember[addedRoles]==$getGuildVar[memberVerifiedRole;$guildID];
