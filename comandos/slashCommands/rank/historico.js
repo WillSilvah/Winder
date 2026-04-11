@@ -36,11 +36,11 @@ data: {
     }
   ],
   "name_localizations": {
-    "en-GB": "previous talkers",
-    "en-US": "previous talkers",
-    "es-ES": "conversadores anteriores",
-    "es-419": "conversadores anteriores",
-    "pt-BR": "conversadores anteriores"
+    "en-GB": "previous-talkers",
+    "en-US": "previous-talkers",
+    "es-ES": "conversadores-anteriores",
+    "es-419": "conversadores-anteriores",
+    "pt-BR": "conversadores-anteriores"
   },
   "name": "conversadores-anteriores",
   "description_localizations": {

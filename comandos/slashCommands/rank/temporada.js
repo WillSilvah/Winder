@@ -36,11 +36,11 @@ data: {
     }
   ],
   "name_localizations": {
-    "en-GB": "current talkers",
-    "en-US": "current talkers",
-    "es-ES": "conversadores actuales",
-    "es-419": "conversadores actuales",
-    "pt-BR": "conversadores atuais"
+    "en-GB": "current-talkers",
+    "en-US": "current-talkers",
+    "es-ES": "conversadores-actuales",
+    "es-419": "conversadores-actuales",
+    "pt-BR": "conversadores-atuais"
   },
   "name": "conversadores-atuais",
   "description_localizations": {
