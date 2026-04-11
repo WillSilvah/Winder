@@ -5,6 +5,7 @@ module.exports = {
     $setMemberVar[memberJoinedFirstTime;$memberJoinedAt[$guildID;$authorID];$authorID;$guildID]
     $setGuildVar[membersJoinedMonth;$sum[$getGuildVar[membersJoinedMonth;$guildID;0];1]]
     $setMemberVar[inviter;$inviterID[$guildID;$authorID];$authorID;$guildID]
+    $setMemberVar[memberJoinedHere?;true]
 ]
     $sendMessage[$getGuildVar[batePapo];
      $if[$isBot[$authorID]==false;
@@ -13,7 +14,6 @@ module.exports = {
         $addTextDisplay[-# Veio pelo: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano] | ID: $authorID | @$userTag]
         $addThumbnail[$userAvatar]
         ]
-       $addSeparator[Large;true]
       ;
        $addSection[
         $addTextDisplay[### 🤖 <@$authorID> ADICIONADO!\n**Que isso? Um novo bot? 🤨**]
@@ -23,6 +23,5 @@ module.exports = {
       ]
     ]
     $wait[5s]
-    $setMemberVar[memberJoinedHere?;true]
 `
 }
