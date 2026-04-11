@@ -7,6 +7,9 @@ module.exports = [{
      $onlyIf[$getGlobalVar[sleepMode]==false;]
       $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[$get[time]]];$get[guildID]]
      $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>6;]
+      $sendMessage[$getGuildVar[batePapo;$get[guildID]];### UM MINIGAME VAI SER EXECUTADO EM UM MINUTO... $deleteIn[60s]]
+      $wait[60s]
+      $startTyping[$getGuildVar[batePapo;$get[guildID]]]
       $minigame[fraseRepeat;$get[guildID]]
     ;$get[time];WinderMinigame]    
 `
@@ -16,7 +19,7 @@ module.exports = [{
     $jsonLoad[session;$readFile[Recursos/session.json]]
     $onlyIf[$channelID==$getGuildVar[batePapo];]
     $onlyIf[$getGuildVar[minigameStatus;$guildID;false]==true;]
-    $onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$getGuildVar[minigameWord;$guildID];$toLowerCase[$getGuildVar[minigameWord;$guildID]]];]
+    $onlyIf[$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$message;$toLowerCase[$message]]==$if[$includes[$getGuildVar[minigameType];fraseRepeat]==true;$getGuildVar[minigameWord;$guildID];$toLowerCase[$getGuildVar[minigameWord;$guildID]]];$!addMessageReactions[$channelID;$messageID;❌️]]
     $!setChannelSlowmode[$channelID;0]
     $startTyping[$channelID]
     $setGuildVar[minigameStatus;false;$guildID]

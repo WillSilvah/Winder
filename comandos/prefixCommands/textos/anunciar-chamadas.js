@@ -17,6 +17,7 @@ Olá <@$env[id]> tudo bem? Sabemos que no Discord menções desnecessárias pode
 Temos mais de 80 membros que pegaram o cargo que você tem e apenas poucos deles aparecem ao ser mencionado o que podemos suspeitar que tem acumulo de menções já que muitos membros pegaram o cargo logo no começo ao entrar no servidor sem ter uma noção da atividade.
 ## NOVAS REGRAS AOS CARGOS DE CHAMADAS
 - Os cargos são públicos, isso significa que qualquer membro pode marcar eles para fazer alguma coisa e claro, tem regra de anti spam.
+- Após serem mencionados, o cargo fica inativo por trinta minutos para evitar spam de menções.
 - Os cargos de chamadas só podem ser mencionados durante o horário comercial da Patinhas, das 06:30 até 22:00.
 - Os cargos de chamadas não podem ser usados para divulgação.
 - O membro leva advertência ao mencionar excessivamente o cargo.
