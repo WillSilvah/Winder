@@ -36,13 +36,13 @@ data: {
     }
   ],
   "name_localizations": {
-    "en-GB": "current-talkers",
-    "en-US": "current-talkers",
-    "es-ES": "conversadores-actuales",
-    "es-419": "conversadores-actuales",
-    "pt-BR": "conversadores-atuais"
+    "en-GB": "current",
+    "en-US": "current",
+    "es-ES": "actuales",
+    "es-419": "actuales",
+    "pt-BR": "atuais"
   },
-  "name": "conversadores-atuais",
+  "name": "atuais",
   "description_localizations": {
     "en-GB": "See the ranking of current conversationalists!",
     "en-US": "See the ranking of current conversationalists!",

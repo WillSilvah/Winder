@@ -36,13 +36,13 @@ data: {
     }
   ],
   "name_localizations": {
-    "en-GB": "previous-talkers",
-    "en-US": "previous-talkers",
-    "es-ES": "conversadores-anteriores",
-    "es-419": "conversadores-anteriores",
-    "pt-BR": "conversadores-anteriores"
+    "en-GB": "previous",
+    "en-US": "previous",
+    "es-ES": "anteriores",
+    "es-419": "anteriores",
+    "pt-BR": "anteriores"
   },
-  "name": "conversadores-anteriores",
+  "name": "anteriores",
   "description_localizations": {
     "es-ES": "Ver el ranking de conversadores históricos",
     "es-419": "Ver el ranking de conversadores históricos"
