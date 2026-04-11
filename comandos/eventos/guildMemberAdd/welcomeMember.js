@@ -5,7 +5,6 @@ module.exports = {
     $setMemberVar[memberJoinedFirstTime;$memberJoinedAt[$guildID;$authorID];$authorID;$guildID]
     $setGuildVar[membersJoinedMonth;$sum[$getGuildVar[membersJoinedMonth;$guildID;0];1]]
     $setMemberVar[inviter;$inviterID[$guildID;$authorID];$authorID;$guildID]
-    $setMemberVar[memberJoinedHere?;true]
 ]
     $sendMessage[$getGuildVar[batePapo];
      $if[$isBot[$authorID]==false;
@@ -23,5 +22,6 @@ module.exports = {
       ]
     ]
     $wait[5s]
+    $setMemberVar[memberJoinedHere?;true]
 `
 }
