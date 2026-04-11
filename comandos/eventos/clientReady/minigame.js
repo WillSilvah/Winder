@@ -7,7 +7,7 @@ module.exports = [{
      $onlyIf[$getGlobalVar[sleepMode]==false;]
       $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[$get[time]]];$get[guildID]]
      $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>6;]
-      $minigame[$randomText[fraseRepeat;questions];$get[guildID]]
+      $minigame[fraseRepeat;$get[guildID]]
     ;$get[time];WinderMinigame]    
 `
     },{

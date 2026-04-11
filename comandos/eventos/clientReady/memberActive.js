@@ -3,13 +3,14 @@ module.exports = [{
     code: `
     $timezone[America/Recife]
     $cron[
-    $if[$day>=7;
+    $if[$day==7;
     $let[guildID;1462224054676099094]
     $arrayLoad[members;, ;$guildMemberIDs[$get[guildID];, ]]
     $arrayForEach[members;id;
      $if[$getMemberVar[talkingMonth;$env[id];$get[guildID];0]>=7;
       $if[$hasRoles[$get[guildID];$env[id];$getGuildVar[memberActiveRole;$get[guildID]]]==false;
        $!memberAddRoles[$get[guildID];$env[id];$getGuildVar[memberActiveRole;$get[guildID]]]
+       
        ]
      ]
      $if[$getMemberVar[talkingMonth;$env[id];$get[guildID];0]<7;
