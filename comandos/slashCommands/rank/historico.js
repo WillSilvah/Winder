@@ -33,12 +33,7 @@ data: {
       }
     }
   ],
-  "name": "historico",
-  "name_localizations": {
-    "en-GB": "historical",
-    "en-US": "historical",
-    "pt-BR": "historico"
-  },
+  "name": "conversadores anteriores",
   "description_localizations": {
     "en-GB": "See the ranking of members in a category",
     "en-US": "See the ranking of members in a category",

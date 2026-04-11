@@ -1,6 +1,7 @@
 module.exports = {
     code: `
-    $onlyIf[$getMemberVar[jobStatus;$authorID;$guildID;false]==true;Você não tem um emprego, use o comando /empregos para ter um emprego]
+    $onlyIf[$getMemberVar[jobStatus;$authorID;$guildID;false]==true;Você não tem um emprego, use o comando /furrasticos empregos para ter um emprego]
+    
   `,
 data: {
   "type": 1,

@@ -33,12 +33,7 @@ data: {
       }
     }
   ],
-  "name": "temporada",
-  "name_localizations": {
-    "en-GB": "season",
-    "en-US": "season",
-    "pt-BR": "temporada"
-  },
+  "name": "conversadores",
   "description_localizations": {
     "en-GB": "See the ranking of members in a category",
     "en-US": "See the ranking of members in a category",

@@ -14,6 +14,7 @@ $deleteRecords[votesMonth]
 $deleteRecords[pdaMonth]
 $deleteRecords[invitesMonth]
 $deleteRecords[talkingMonth]
+$deleteRecords[minigameMonthWins]
 
 $deleteRecords[membersJoinedMonth]
 $deleteRecords[guildMonthMessages]
