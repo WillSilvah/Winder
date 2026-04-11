@@ -14,7 +14,7 @@ $color[Green]
   `,
 data: {
   "type": 1,
-  "description": "Veja o ranking de membros em uma categoria",
+  "description": "Veja o ranking de conversadores históricos",
   "options": [
     {
       "type": 4,
@@ -29,15 +29,23 @@ data: {
       "name_localizations": {
         "en-GB": "page",
         "en-US": "page",
+        "es-ES": "página",
+        "es-419": "página",
         "pt-BR": "pagina"
       }
     }
   ],
-  "name": "conversadores anteriores",
+  "name_localizations": {
+    "en-GB": "previous talkers",
+    "en-US": "previous talkers",
+    "es-ES": "conversadores anteriores",
+    "es-419": "conversadores anteriores",
+    "pt-BR": "conversadores anteriores"
+  },
+  "name": "conversadores-anteriores",
   "description_localizations": {
-    "en-GB": "See the ranking of members in a category",
-    "en-US": "See the ranking of members in a category",
-    "pt-BR": "Veja o ranking de membros em uma categoria"
+    "es-ES": "Ver el ranking de conversadores históricos",
+    "es-419": "Ver el ranking de conversadores históricos"
   }
 },
 };

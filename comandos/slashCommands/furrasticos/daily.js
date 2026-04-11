@@ -14,6 +14,19 @@ module.exports = {
   data: {
   "type": 1,
   "description": "Ganhe um bônus!",
-  "name": "diario"
+  "name": "diario",
+  "name_localizations": {
+    "en-GB": "diary",
+    "en-US": "diary",
+    "es-ES": "diario",
+    "es-419": "diario",
+    "pt-BR": "diário"
+  },
+  "description_localizations": {
+    "en-GB": "Get a bonus!",
+    "en-US": "Get a bonus!",
+    "es-419": "¡Obtén un bono!",
+    "pt-BR": "Ganhe um bônus!"
+  }
 },
 }

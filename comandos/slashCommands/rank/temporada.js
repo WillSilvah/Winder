@@ -14,7 +14,7 @@ $color[Green]
   `,
 data: {
   "type": 1,
-  "description": "Veja o ranking de membros em uma categoria",
+  "description": "Veja o ranking dos conversadores atuais!",
   "options": [
     {
       "type": 4,
@@ -29,15 +29,26 @@ data: {
       "name_localizations": {
         "en-GB": "page",
         "en-US": "page",
+        "es-ES": "página",
+        "es-419": "página",
         "pt-BR": "pagina"
       }
     }
   ],
-  "name": "conversadores",
+  "name_localizations": {
+    "en-GB": "current talkers",
+    "en-US": "current talkers",
+    "es-ES": "conversadores actuales",
+    "es-419": "conversadores actuales",
+    "pt-BR": "conversadores atuais"
+  },
+  "name": "conversadores-atuais",
   "description_localizations": {
-    "en-GB": "See the ranking of members in a category",
-    "en-US": "See the ranking of members in a category",
-    "pt-BR": "Veja o ranking de membros em uma categoria"
+    "en-GB": "See the ranking of current conversationalists!",
+    "en-US": "See the ranking of current conversationalists!",
+    "es-ES": "¡Vea el ranking de conversadores actuales!",
+    "es-419": "¡Vea el ranking de conversadores actuales!",
+    "pt-BR": "Veja o ranking dos conversadores atuais!"
   }
 },
 };
