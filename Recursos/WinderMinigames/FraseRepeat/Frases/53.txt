@@ -1,0 +1,4 @@
+{
+"texto": "La libertad no é hija de la caridad, es un derecho que se conquista con el coraje de ser uno mismo.",
+"autor": "Ernesto Che Guevara"
+}

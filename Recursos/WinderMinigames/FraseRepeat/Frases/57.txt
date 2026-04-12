@@ -1,0 +1,4 @@
+{
+"texto": "Ser livre é poder correr atrás dos sonhos com a mesma determinação de um gato caçando um ponto de luz.",
+"autor": "Winder Windvane"
+}

@@ -1,0 +1,4 @@
+{
+"texto": "A agilidade de um felino não está apenas nas patas, mas na rapidez com que o coração se conecta ao teclado.",
+"autor": "Winder Windvane"
+}

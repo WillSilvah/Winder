@@ -1,0 +1,4 @@
+{
+"texto": "Ando com umas vontades de ser feliz, umas esperanças de que as coisas deem certo, mas entendo que a felicidade não é um ponto de chegada, e sim a própria maneira como decidimos caminhar por essa estrada cheia de incertezas.",
+"autor": "Caio Fernando Abreu"
+}

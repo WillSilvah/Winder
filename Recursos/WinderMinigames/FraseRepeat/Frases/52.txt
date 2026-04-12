@@ -1,0 +1,4 @@
+{
+"texto": "O homem nasce livre, e por toda parte encontra-se acorrentado por convenções que ele mesmo criou.",
+"autor": "Jean-Jacques Rousseau"
+}

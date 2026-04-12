@@ -1,0 +1,4 @@
+{
+"texto": "Ser amado por quem você é, e não pelo que o mundo espera que você seja, é a verdadeira liberdade.",
+"autor": "Casey McQuiston (Vermelho, Branco e Sangue Azul)"
+}

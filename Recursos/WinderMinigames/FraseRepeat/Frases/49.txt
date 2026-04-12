@@ -1,0 +1,4 @@
+{
+"texto": "O otimista é um tolo e o pessimista é um chato; o que eu sou mesmo é um realista esperançoso, pois acredito que o mundo pode ser melhor, mas sei que isso depende do esforço árduo de cada um de nós.",
+"autor": "Ariano Suassuna"
+}

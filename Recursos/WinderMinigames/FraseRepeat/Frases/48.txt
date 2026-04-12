@@ -1,0 +1,4 @@
+{
+"texto": "Considero que a maior recompensa pelo nosso trabalho não é o que nos pagam por ele, mas sim aquilo em que nos transformamos ao realizá-lo com dedicação e propósito inabaláveis ao longo dos anos.",
+"autor": "John Ruskin"
+}

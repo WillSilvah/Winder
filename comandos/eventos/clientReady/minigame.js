@@ -7,7 +7,7 @@ module.exports = [{
      $onlyIf[$getGlobalVar[sleepMode]==false;]
       $setGuildVar[minigameNextTime;$math[$getTimestamp+$parseString[$get[time]]];$get[guildID]]
      $onlyIf[$getGuildVar[oldMsgPerMinute;$get[guildID];0]>6;]
-      $sendMessage[$getGuildVar[batePapo;$get[guildID]];### UM MINIGAME VAI SER EXECUTADO EM UM MINUTO... $deleteIn[60s]]
+      $sendMessage[$getGuildVar[batePapo;$get[guildID]];### UM MINIGAME VAI SER EXECUTADO EM UM MINUTO...]
       $wait[60s]
       $startTyping[$getGuildVar[batePapo;$get[guildID]]]
       $minigame[fraseRepeat;$get[guildID]]
@@ -38,6 +38,7 @@ module.exports = [{
        $addThumbnail[$userAvatar]
      ]
     ]
+
     $if[$getMemberVar[minigameMonthWins;$authorID;$guildID;0]==5;
      $sendMessage[$channelID;
       $addSection[
@@ -59,6 +60,5 @@ module.exports = [{
     $sendMessage[$channelID;
      $addTextDisplay[### <@$authorID> ganhou 🏆 **$getMemberVar[minigameMonthWins;$authorID;$guildID;0]** vezes neste mês e está em **$getMemberLeaderboardValue[minigameMonthWins;desc;$authorID;$guildID]°** lugar]
     ]
-    
 `
 }]

@@ -1,0 +1,4 @@
+{
+"texto": "A vida não é medida pelo número de vezes que respiramos, mas pelos momentos que nos tiram o fôlego.",
+"autor": "Maya Angelou"
+}

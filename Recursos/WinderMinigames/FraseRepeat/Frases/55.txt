@@ -1,0 +1,4 @@
+{
+"texto": "A coragem não reside em nunca cair, mas em saber transformar cada tropeço em um passo de dança rumo ao horizonte desconhecido.",
+"autor": "Winder Windvane"
+}

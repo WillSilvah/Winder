@@ -1,0 +1,4 @@
+{
+"texto": "Ohana quer dizer família. Família quer dizer nunca abandonar ou esquecer.",
+"autor": "Stitch - Lilo & Stitch"
+}
