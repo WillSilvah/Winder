@@ -43,7 +43,7 @@ module.exports = [{
     
     $if[$env[t;status]==true;
      $sendMessage[$channelID;
-     $addTextDisplay[### <@$authorID> começou a digitar de $parseDigital[$env[t;timestamp]]]
+     $addTextDisplay[### <@$authorID> começou a digitar de $discordTimestamp[$env[t;timestamp];MediumTime]]
     ]
     ]
     
