@@ -61,4 +61,11 @@ module.exports = [{
      $addTextDisplay[### <@$authorID> ganhou 🏆 **$getMemberVar[minigameMonthWins;$authorID;$guildID;0]** vezes neste mês e está em **$getMemberLeaderboardValue[minigameMonthWins;desc;$authorID;$guildID]°** lugar]
     ]
 `
+},{
+    type: "typingStart",
+    code: `
+    $if[$channelID==$getGuildVar[batePapo];
+     $sendMessage[1472742861526142996;$userTag começou a digitar]
+    ]
+`
 }]
