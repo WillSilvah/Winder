@@ -38,7 +38,15 @@ module.exports = [{
        $addThumbnail[$userAvatar]
      ]
     ]
-
+    
+    $jsonLoad[t;$getMemberVar[minigameTyping]]
+    
+    $if[$env[t;status]==true;
+     $sendMessage[$channelID;
+     $addTextDisplay[### <@$authorID> começou a digitar de $parseDigital[$env[t;timestamp]]]
+    ]
+    ]
+    
     $if[$getMemberVar[minigameMonthWins;$authorID;$guildID;0]==5;
      $sendMessage[$channelID;
       $addSection[
@@ -55,6 +63,7 @@ module.exports = [{
     $!memberAddRoles[$guildID;$authorID;$getGuildVar[lastWinMemberRole]]
     $setGuildVar[minigameLastUser;$authorID;$guildID]
     $setGuildVar[minigameEmit;false;$guildID]
+    $deleteRecords[minigameTyping]
     $wait[60s]
     $startTyping
     $sendMessage[$channelID;
@@ -64,8 +73,11 @@ module.exports = [{
 },{
     type: "typingStart",
     code: `
-     $sendMessage[1472742861526142996;$userTag começou a digitar
-     Channel: $channelID
-     Guild: $guildID]
+    $if[$getGuildVar[minigameStatus;$guildID;false]==true;
+    $setMemberVar[minigameTyping;{
+    "timestamp": "$getTimestamp",
+    "status": "true"
+    }]
+    ]
 `
 }]
