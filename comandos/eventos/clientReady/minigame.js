@@ -64,6 +64,8 @@ module.exports = [{
 },{
     type: "typingStart",
     code: `
-     $sendMessage[1472742861526142996;$userTag começou a digitar]
+     $sendMessage[1472742861526142996;$userTag começou a digitar
+     Channel: $channelID
+     Guild: $guildID]
 `
 }]
