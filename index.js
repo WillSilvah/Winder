@@ -49,6 +49,7 @@ const client = new ForgeClient({
         "channelUpdate",
         "clientReady",
         "debug",
+        "DirectMessageTyping",
         "emojiCreate",
         "emojiDelete",
         "emojiUpdate",
