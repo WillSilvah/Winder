@@ -63,6 +63,7 @@ module.exports = [{
     $!memberAddRoles[$guildID;$authorID;$getGuildVar[lastWinMemberRole]]
     $setGuildVar[minigameLastUser;$authorID;$guildID]
     $setGuildVar[minigameEmit;false;$guildID]
+    $!memberAddRoles[$guildID;$authorID;1463139788650582180]
     $deleteRecords[minigameTyping]
     $wait[60s]
     $startTyping
