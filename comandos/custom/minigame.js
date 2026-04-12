@@ -24,7 +24,7 @@ module.exports = [{
        
        $addContainer[
         $addTextDisplay[Quem escrever primeiro ganha]
-        $addTextDisplay[### $replaceText[$env[frase;texto]; ; ]\n-# $env[frase;autor] | ID: $get[frase_id]]
+        $addTextDisplay[### $replaceText[$env[frase;texto]; ; ]\n-# $env[frase;autor] | ID: $get[frase_id] | $discordTimestamp[$getTimestamp;MediumTime]]
        ;Green]
        $setGuildVar[minigameWord;$env[frase;texto];$env[guildID]]
        $setGuildVar[minigameType;$env[tipo];$env[guildID]]
