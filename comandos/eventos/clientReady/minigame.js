@@ -64,8 +64,6 @@ module.exports = [{
 },{
     type: "typingStart",
     code: `
-    $if[$channelID==$getGuildVar[batePapo];
      $sendMessage[1472742861526142996;$userTag começou a digitar]
-    ]
 `
 }]
