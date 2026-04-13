@@ -43,6 +43,6 @@ $cron[
 $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
 $!setGuildIcon[$get[id];$getGuildVar[logo_sleep;$get[id]];Hora de dormir]
 $setGuildVar[guildColor;#ddf3fe;$get[id]]
-;0 23 * * *;America/Recife]
+;0 22 * * *;America/Recife]
 `
 }]
