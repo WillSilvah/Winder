@@ -16,7 +16,8 @@ module.exports = [{
     
     $setGuildVar[minigameXPmin;5;$env[guildID]]
     $setGuildVar[minigameXPmax;15;$env[guildID]]
-
+    $setGuildVar[minigameTimestamp;$getTimestamp;$env[guildID]]
+    
      $sendMessage[$getGuildVar[batePapo;$env[guildID]];
       $if[$env[tipo]==fraseRepeat;
        $let[frase_id;$randomNumber[1;$exec[ls -1 Recursos/WinderMinigames/FraseRepeat/Frases/ | wc -l]]]

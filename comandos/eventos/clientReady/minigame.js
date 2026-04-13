@@ -39,6 +39,8 @@ module.exports = [{
      ]
     ]
     
+    $sendMessage[$channelID;### <@$authorID> demorou $round[$math[$math[$getTimestamp-$getGuildVar[minigameTimestamp]]/1000]] segundos para ganhar $if[$getMemberVar[minigameTyping]==true;e foi visto digitando.]]
+    
     $if[$getMemberVar[minigameMonthWins;$authorID;$guildID;0]==5;
      $sendMessage[$channelID;
       $addSection[
@@ -67,10 +69,7 @@ module.exports = [{
     type: "typingStart",
     code: `
     $if[$getGuildVar[minigameStatus;$guildID;false]==true;
-    $setMemberVar[minigameTyping;{
-    "timestamp": "$getTimestamp",
-    "status": "true"
-    }]
+    $setMemberVar[minigameTyping;true]
     ]
 `
 }]
