@@ -10,7 +10,7 @@ module.exports = [{
      $!advancedTimeout[$esc[
      $onlyIf[$getGlobalVar[sleepMode]==false;]
       $!editRole[{guildID};{roleID};$roleName[{guildID};{roleID}];$roleColor[{guildID};{roleID}];$roleIcon[{guildID};{roleID}];$roleHoisted[{guildID};{roleID}];true]
-     ];30m;talkRole_Cooldown;{"guildID": "$guildID", "roleID": "$get[talkRole]"}]
+     ];60m;talkRole_Cooldown;{"guildID": "$guildID", "roleID": "$get[talkRole]"}]
     ]
 
     $if[$isRoleMentioned[$channelID;$messageID;$get[voiceRole]]==true;
@@ -19,7 +19,7 @@ module.exports = [{
      $!advancedTimeout[$esc[
      $onlyIf[$getGlobalVar[sleepMode]==false;]
       $!editRole[{guildID};{roleID};$roleName[{guildID};{roleID}];$roleColor[{guildID};{roleID}];$roleIcon[{guildID};{roleID}];$roleHoisted[{guildID};{roleID}];true]
-     ];30m;voiceRole_Cooldown;{"guildID": "$guildID", "roleID": "$get[voiceRole]"}]
+     ];60m;voiceRole_Cooldown;{"guildID": "$guildID", "roleID": "$get[voiceRole]"}]
     ]
 `
 }]    

@@ -39,14 +39,6 @@ module.exports = [{
      ]
     ]
     
-    $jsonLoad[t;$getMemberVar[minigameTyping]]
-    
-    $if[$env[t;status]==true;
-     $sendMessage[$channelID;
-     $addTextDisplay[### <@$authorID> começou a digitar de $discordTimestamp[$env[t;timestamp];MediumTime]]
-    ]
-    ]
-    
     $if[$getMemberVar[minigameMonthWins;$authorID;$guildID;0]==5;
      $sendMessage[$channelID;
       $addSection[
