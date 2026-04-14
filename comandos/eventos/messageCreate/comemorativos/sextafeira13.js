@@ -19,7 +19,7 @@ $sendMessage[$channelID;## O <@$authorID> TEVE AZAR.
 },{
     type: "clientReady",
     code: `
-    $cron[
+    $cron[$stop
     $onlyIf[$day==$getGuildVar[evento_sextaFeira13;1462224054676099094];]
     $arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;1481960745582202991;,]]
     $arrayMap[roleMembers;id;
