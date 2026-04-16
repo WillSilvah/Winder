@@ -22,7 +22,7 @@ module.exports = {
     $setMemberVar[lastMessageTimestamp;$getTimestamp]
     $setMemberVar[lastMessageChannel;$channelID]
 
-    $if[$charCount[$message]>3;
+    $if[$charCount[$message]>1;
     $c[Contabiliza a quantidade de mensagens que o membro enviou no dia, semana e mês]
     $setMemberVar[messageMonth;$sum[$getMemberVar[messageMonth;$authorID;$guildID;0];1]]
     $setMemberVar[messageWeekly;$sum[$getMemberVar[messageWeekly;$authorID;$guildID;0];1]]
