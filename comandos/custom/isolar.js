@@ -38,7 +38,7 @@ module.exports = [{
         $onlyIf[$channelType[$env[id]]==GuildText;
          $log[Não foi possível modificar o canal $env[id] pois ele não é um canal de texto]
         ]
-       $if[$env[id]!=$getGuildVar[isolatedChannel];
+       $if[$includes[$env[id];$getGuildVar[isolatedChannel];1463277652562411787]==false;
        $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel;-CreateInstantInvite]
       ]]
       
