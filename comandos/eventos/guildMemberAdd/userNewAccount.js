@@ -6,8 +6,7 @@ module.exports = [{
       $addContainer[
        $addSection[
         $addTextDisplay[### @$userTag: conta criada $discordTimestamp[$userCreatedAt[$authorID];RelativeTime]!]
-        $addTextDisplay[ID do usuário: $authorID]
-        $addTextDisplay[Veio pelo $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano]]
+        $addTextDisplay[ID do usuário: $authorID\nVeio pelo $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano]]
         $addTextDisplay[<@&$getGuildVar[allStaffRole]>]
        $addThumbnail[$userAvatar]
        ]
