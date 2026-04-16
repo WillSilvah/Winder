@@ -7,7 +7,7 @@ module.exports = [{
      $addContainer[
       $addSection[
        $addTextDisplay[## CLUBES!]
-       $addTextDisplay[**$customEmoji[pats_logo] 🐱 😘! 🤫! 🏳️‍🌈**]
+       $addTextDisplay[**$customEmoji[pats_logo] 🐱 😘 🤫 👋 🏳️‍🌈**]
        $addTextDisplay[Qual clube você se identifica ou quer participar?\nEles não dão acesso a canal especial, apenas quando tiver demanda para isso.]
 
        $addThumbnail[https://abs.twimg.com/emoji/v2/72x72/1f465.png]
@@ -17,6 +17,7 @@ module.exports = [{
     $addStringSelectMenu[clubes;Escolha um clube;false;1;0]
      $addOption[Patinhas Beta;;beta;$customEmoji[pats_logo];false]
      $addOption[Clube do Winder;;winder;🐱;false]
+     $addOption[Recepcionistas;;recep;👋;false]
      $addOption[BoyKisser;;boykisser;😘;false]
      $addOption[Fofoqueiras;;fofoqueiras;🤫;false]
      $addOption[Vale Animado;;valeanimado;🏳️‍🌈;false]
@@ -33,7 +34,8 @@ module.exports = [{
     "fofoqueiras": "1481404732928168077",
     "valeanimado": "1463156445276143707",
     "winder": "1481748351857725521",
-    "beta": "1481788050957926450"
+    "beta": "1481788050957926450",
+    "recep": "1494127628297437244"
 }
 ]
     $arrayLoad[clubesID;,;$jsonValues[clubes;,]]
