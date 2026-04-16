@@ -10,7 +10,7 @@ module.exports = {
      $if[$isBot[$authorID]==false;
        $addSection[
         $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$authorID;$guildID;false]==false;### 👋 <@$authorID> BEM VINDO!;### 🎉 <@$authorID> BEM VINDO DE VOLTA!]\n**Sinta-se em casa, aproveite bem a nossa comunidade!**]
-        $addTextDisplay[-# Veio pelo: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano] | ID: $authorID | @$userTag]
+        $addTextDisplay[-# Veio pelo: $if[$inviterID[$guildID;$authorID]!=;@$username[$inviterID[$guildID;$authorID]];@Fulano] | ID: $authorID | @$userTag | <@&1494127628297437244>]
         $addThumbnail[$userAvatar]
         ]
       ;
