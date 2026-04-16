@@ -103,6 +103,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 # 🌞 BOM DIA PELUDOS!
 **Vamos levantar e tomar uma xícara de café?**
 ]
+$!setChannelSlowmode[$getGuildVar[batePapo;$get[guildID]];0]
 $setGlobalVar[sleepMode;false]
 ;34 6 * * *;America/Recife]
 $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
@@ -122,6 +123,7 @@ $cron[$sendMessage[$getGuildVar[batePapo;$get[guildID]];
 **Vamos tirar um cochilo?**
 ]
 $setGlobalVar[sleepMode;true]
+$!setChannelSlowmode[$getGuildVar[batePapo;$get[guildID]];2]
 
 ;0 22 * * *;America/Recife]
 `
