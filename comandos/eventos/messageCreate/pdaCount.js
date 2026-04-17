@@ -1,6 +1,7 @@
 module.exports = {
     type: "messageCreate",
     code: `
+        $onlyIf[$isTicket==;false]
 $onlyIf[$getGuildVar[memberVerifiedRole]!=;$log[PDA's no servidor "$guildName" não pode ser contabilizado pôs: "memberVerifiedRole" não foi configurado.]]
 $onlyIf[$getGuildVar[memberVotedRole]!=;$log[PDA's no servidor "$guildName" não pode ser contabilizado pôs: "memberVotedRole" não foi configurado.]]
 $onlyIf[$getGuildVar[memberBoosterRole]!=;$log[PDA's no servidor "$guildName" não pode ser contabilizado pôs: "memberBoosterRole" não foi configurado.]]

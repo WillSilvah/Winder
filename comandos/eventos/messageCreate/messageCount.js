@@ -1,6 +1,7 @@
 module.exports = {
     type: "messageCreate",
     code: `
+    $onlyIf[$isTicket==;false]
     $timezone[America/Recife] $c[Fuso horário de Pernambuco, padrão em todo o sistema]
     $onlyIf[$isBot==false] $c[Se for bot não conta]
     $onlyIf[$includes[$channelID;1478505120525324541]==false;] $c[Não lembro mas deve ser útil]
