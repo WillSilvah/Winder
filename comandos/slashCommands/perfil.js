@@ -40,7 +40,6 @@ $addTextDisplay[
 $addSeparator[Small;true]
 $if[$memberExists[$guildID;$get[userID]]==true;
 $addTextDisplay[### MISSÕES]
-$addTextDisplay[
 $if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==false;$addTextDisplay[❌️ falta **$math[$getGuildVar[memberVerifiedQuantity]-$getMemberVar[messageTotal;$get[userID];$guildID;0]] ($truncate[$math[$getMemberVar[messageTotal;$get[userID];$guildID;0]/$getGuildVar[memberVerifiedQuantity]*100]]%)** mensagens para ganhar verificado.];$addTextDisplay[✅️ É um peludo verificado]]
 $if[$hasRoles[$guildID;$get[userID];1481734062270844968]==true;$addTextDisplay[👻 É um peludo assombrado]]
 $if[$getMemberVar[talkingMonth;$get[userID];$guildID;0]>=7;$addTextDisplay[🗣 Conversou por mais de sete dias na comunidade neste mês!]]
