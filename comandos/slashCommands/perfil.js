@@ -2,7 +2,7 @@ module.exports = {
   code: `
   $defer
   $let[userID;$findUser[$option[membro];true]]
-$jsonLoad[session;$readFile[Recursos/session.json]]
+    $jsonLoad[session;$readFile[Recursos/session.json]]
 
 $addContainer[
 $addSection[
@@ -32,7 +32,7 @@ $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
-💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]**
+💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
 🔥 **$getMemberVar[talkingMonth;$get[userID];$guildID;0]** dias conversados
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
