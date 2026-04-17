@@ -32,14 +32,15 @@ $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
-💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas em **🔥 $getMemberVar[talkingMonth;$get[userID];$guildID;0]** dias.
+💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]**
+🔥 **$getMemberVar[talkingMonth;$get[userID];$guildID;0]** dias conversados
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]** minigames ganhos]
 $addSeparator[Small;true]
 $if[$memberExists[$guildID;$get[userID]]==true;
 $addTextDisplay[
-### MISSÕES
+$addTextDisplay[### MISSÕES]
 $if[$hasRoles[$guildID;$get[userID];$getGuildVar[memberVerifiedRole]]==false;$addTextDisplay[❌️ falta **$math[$getGuildVar[memberVerifiedQuantity]-$getMemberVar[messageTotal;$get[userID];$guildID;0]] ($truncate[$math[$getMemberVar[messageTotal;$get[userID];$guildID;0]/$getGuildVar[memberVerifiedQuantity]*100]]%)** mensagens para ganhar verificado.];$addTextDisplay[✅️ É um peludo verificado]]
 $if[$hasRoles[$guildID;$get[userID];1481734062270844968]==true;$addTextDisplay[👻 É um peludo assombrado]]
 $if[$getMemberVar[talkingMonth;$get[userID];$guildID;0]>=7;$addTextDisplay[🗣 Conversou por mais de sete dias na comunidade neste mês!]]
