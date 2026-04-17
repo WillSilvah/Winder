@@ -63,7 +63,7 @@ module.exports = [{
     ] 
     $setGuildVar[minigameExecuteCount;$math[$getGuildVar[minigameExecuteCount;$env[guildID];0]+1];$env[guildID]]
     $setGuildVar[minigameTimestamp;$getTimestamp;$env[guildID]]
-     $wait[35s]
+     $wait[60s]
       $onlyIf[$getGuildVar[minigameStatus;$env[guildID]]==true;]
       $setGuildVar[minigameStatus;false;$env[guildID]]
       $setGuildVar[minigameWord;;$env[guildID]]
