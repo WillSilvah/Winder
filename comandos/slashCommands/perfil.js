@@ -1,8 +1,8 @@
 module.exports = {
   code: `
+  $defer
   $let[userID;$findUser[$option[membro];true]]
-  
-$jsonLoad[session;$readFile[Recursos/session.json]]
+    $jsonLoad[session;$readFile[Recursos/session.json]]
 
 $addContainer[
 $addSection[
