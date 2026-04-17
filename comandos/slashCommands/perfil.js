@@ -45,7 +45,6 @@ $if[$hasRoles[$guildID;$get[userID];1481734062270844968]==true;$addTextDisplay[�
 $if[$getMemberVar[talkingMonth;$get[userID];$guildID;0]>=7;$addTextDisplay[🗣 Conversou por mais de sete dias na comunidade neste mês!]]
 $if[$getMemberVar[minigameMonthWins;$get[userID];$guildID;0]>=5;$addTextDisplay[🎮 Ganhou mais de cinco minigames este mês!]]
 $if[$getMemberVar[talkingTotal;$get[userID]]>=30;$addTextDisplay[🗣 É um fofoqueiro!\nConversou por mais de 30 dias sem parar!]]
-]
 $addSeparator[Small;true]
 ]
 $addTextDisplay[### ANTERIORMENTE
