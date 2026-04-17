@@ -13,8 +13,8 @@ $addSection[
 $addTextDisplay[### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]]
 $addThumbnail[$guildIcon[$get[guildID]]]
 $addTextDisplay[
-$memberLeaderboard[messageMonth;$get[guildID];desc;50;1;\n;data;pos;$return[$env[pos]° **@$username[$env[data;id]]** 🔥$getMemberVar[talkingMonth;$env[data;id];$get[guildID];0]
-> 💬 $separateNumber[$env[data;value];.] ✨️ $separateNumber[$getMemberVar[pdaMonth;$env[data;id];$get[guildID];0];.] ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID];0]]]
+$memberLeaderboard[messageMonth;$get[guildID];desc;50;1;\n;data;pos;$return[$env[pos]° **@$username[$env[data;id]]**
+> 💬 $separateNumber[$env[data;value];.] ✨️ $separateNumber[$getMemberVar[pdaMonth;$env[data;id];$get[guildID];0];.] ⬆️ $getMemberVar[votesMonth;$env[data;id];$get[guildID];0] 🔥$getMemberVar[talkingMonth;$env[data;id];$get[guildID];0]]]
 ]
 ]
 $addSeparator[Large;true]
