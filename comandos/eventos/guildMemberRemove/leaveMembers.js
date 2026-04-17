@@ -14,6 +14,7 @@ module.exports = [{
     
 $wait[2s]
 $deleteRecords[inviter;$authorID]
+$deleteRecords[birthday;$authorID]
 $deleteRecords[lastMessage;$authorID]
 $deleteRecords[lastMessageChannel;$authorID]
 $deleteRecords[lastMessageTime;$authorID]
