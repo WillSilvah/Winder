@@ -21,6 +21,8 @@ module.exports = [{
      $addTextDisplay[> **⚠️ Você pode ser banido ao sair automáticamente**]
      $addTextDisplay[E sair enquanto estava isolado significa que você estava devendo algo e a Equipe Patinhas declara que você estava errado.]
      $addSeparator[Large;true]
+     $addActionRow
+     $addButton[ticket;Criar um ticket;Primary;📩;false]
      ;Orange]
     ]
 
