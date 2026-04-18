@@ -4,6 +4,7 @@ module.exports = {
     $if[$getGlobalVar[sleepMode]==true;$stop]
 $onlyIf[$mentioned[0]==$clientID;]
 
+$reply
 $ifx[
 $if[$checkContains[$toLowerCase[$message];bom dia;dia;bd;good morning;dia bom;bueno dias;buenos dia;buenos dias;gm]==true;
 $startTyping[$channelID]
