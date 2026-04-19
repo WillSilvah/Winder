@@ -11,7 +11,7 @@ module.exports = [{
     
     $setChannelVar[messageLogToday;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] -> $userTag ($authorID): $message$message$if[$messageAttachments[$channelID;$messageID]!=;\n$messageAttachments[$channelID;$messageID;\n];]\n$getChannelVar[messageLogToday]]
     
-    $setChannelVar[messageLogWeekly;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] -> $userTag ($authorID): $message$message$if[$messageAttachments[$channelID;$messageID]!=;\n$messageAttachments[$channelID;$messageID;\n];]\n$getChannelVar[messageLogWeekly]]
+    $setChannelVar[messageLogWeekly;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] ($messageID) -> $userTag ($authorID): $message$message$if[$messageAttachments[$channelID;$messageID]!=;\n$messageAttachments[$channelID;$messageID;\n];]\n$getChannelVar[messageLogWeekly]]
     
     $setChannelVar[messageLogMonth;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] -> $userTag ($authorID): $message$message$if[$messageAttachments[$channelID;$messageID]!=;\n$messageAttachments[$channelID;$messageID;\n];]\n$getChannelVar[messageLogMonth]]
 `
