@@ -68,6 +68,7 @@ module.exports = [{
 },{
     type: "typingStart",
     code: `
+    $setGuildVar[memberTypingLogToday;$userTag começou a digitar de $hour[TwoDigit]:$minute[TwoDigit]:$seconds[TwoDigit]\n$getGuildVar[memberTypingLogToday]]
     $if[$getGuildVar[minigameStatus;$guildID;false]==true;
     $setMemberVar[minigameTyping;true]
     ]
