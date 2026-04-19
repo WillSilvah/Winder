@@ -7,10 +7,10 @@ module.exports = {
   
   $let[channelID;$option[canal]]
   
- $interactionReply[Histórico de mensagens de **@$userTag[$get[channelID]]**
-   $attachment[Histórico de mensagens enviadas hoje ($day) em $channelName[$get[channelID]]\n\n$getChannelVar[messageLogToday;$get[channelID]];WinderDB_messageLogToday_$userTag[$get[channelID]].txt;true]
-   $attachment[Histórico de mensagens enviadas esta semana em $channelName[$get[channelID]]\n\n$getChannelVar[messageLogWeekly;$get[channelID]];WinderDB_messageLogWeekly_$userTag[$get[channelID]].txt;true]
-   $attachment[Histórico de mensagens enviadas este mês ($month) em $channelName[$get[channelID]]\n\n$getChannelVar[messageLogMonth;$get[channelID]];WinderDB_messageLogMonth_$userTag[$get[channelID]].txt;true]
+ $interactionReply[Histórico de mensagens de **@$channelName[$get[channelID]]**
+   $attachment[Histórico de mensagens enviadas hoje ($day) em $channelName[$get[channelID]]\n\n$getChannelVar[messageLogToday;$get[channelID]];WinderDB_messageLogToday_$channelName[$get[channelID]].txt;true]
+   $attachment[Histórico de mensagens enviadas esta semana em $channelName[$get[channelID]]\n\n$getChannelVar[messageLogWeekly;$get[channelID]];WinderDB_messageLogWeekly_$channelName[$get[channelID]].txt;true]
+   $attachment[Histórico de mensagens enviadas este mês ($month) em $channelName[$get[channelID]]\n\n$getChannelVar[messageLogMonth;$get[channelID]];WinderDB_messageLogMonth_$channelName[$get[channelID]].txt;true]
   
   ]
  
