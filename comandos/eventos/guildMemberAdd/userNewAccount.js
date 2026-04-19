@@ -15,7 +15,6 @@ module.exports = [{
      $if[$userCreatedAt[$authorID]>$math[$getTimestamp-$parseString[7h]];
       $sendMessage[$getGuildVar[batePapo];🚫 <@$authorID> foi isolado por segurança de todos nós.]
        $isolar[$authorID]
-        $sendDMPunishment[$authorID;$clientID;Conta com comportamento robótico ou suspeito.;isolado;]
         $punishmentlog[$authorID;$clientID;Conta com comportamento robótico ou suspeito.;isolado;]
      ] 
       
