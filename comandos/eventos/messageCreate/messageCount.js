@@ -15,7 +15,7 @@ module.exports = {
     $setGuildVar[guildTodayMessages;$sum[$getGuildVar[guildTodayMessages;$guildID;0];1]]
     
     $setUserVar[lastOnTimestamp;$getTimestamp] $c[Registra o último update que o usuário fez no Discord, mas nesse caso, perfoma junto com mensagens]
-    $setGuildVar[lastUserSendMessage;$authorID $c[Registra o último usuário a enviar mensagem no servidor]
+    $setGuildVar[lastUserSendMessage;$authorID] $c[Registra o último usuário a enviar mensagem no servidor]
     $setMemberVar[lastMessage;$message;$authorID] $c[Registra a última mensagem que o membro enviou no servidor]
 
     $c[Registra o canal, a data e o timestamp do último momento que o membro enviou mensagem no servidor, utilizado para automoderação e decoração no /perfil]]
