@@ -18,7 +18,7 @@ module.exports = {
     $setGuildVar[lastUserSendMessage;$authorID] $c[Registra o último usuário a enviar mensagem no servidor]
     $setMemberVar[lastMessage;$message;$authorID] $c[Registra a última mensagem que o membro enviou no servidor]
 
-    $c[Registra o canal, a data e o timestamp do último momento que o membro enviou mensagem no servidor, utilizado para automoderação e decoração no /perfil]]
+    $c[Registra o canal, a data e o timestamp do último momento que o membro enviou mensagem no servidor, utilizado para automoderação e decoração no /perfil]
     $setMemberVar[lastMessageTime;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit]]
     $setMemberVar[lastMessageTimestamp;$getTimestamp]
     $setMemberVar[lastMessageChannel;$channelID]
