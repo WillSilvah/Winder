@@ -1,7 +1,7 @@
 module.exports = [{
   type: "clientReady",
   code: `
-  $c[$let[guildID;1462224054676099094]
+  $let[guildID;1462224054676099094]
   $setInterval[
    $if[$getGlobalVar[sleepMode]==false;
     $let[ad;$randomNumber[1;10]]
