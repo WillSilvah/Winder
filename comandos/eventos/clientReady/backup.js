@@ -1,6 +1,7 @@
 module.exports = [{
     type: "clientReady",
     code: `
+    $stop
     $timezone[America/Recife]
 $sendMessage[788131713418002463;
 WinderDB_$day[TwoDigit]-$month[TwoDigit]_$hour[TwoDigit]$minute[TwoDigit]
