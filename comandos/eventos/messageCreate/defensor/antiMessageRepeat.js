@@ -10,7 +10,9 @@ module.exports = [{
      
      $setMemberVar[defensorLastMessage;$message;$authorID]
      $if[$getMemberVar[defensorInfractions;$authorID;$guildID;0]>3;
+     
       $if[$userJoinedAt[$guildID;$authorID]>$math[$getTimestamp-$parseString[1h]];
+       $if[$getMemberVar[messageTotal;$authorID;$guildID;0]<=$getGuildVar[memberVerifiedQuantity];
        $let[userID;$authorID]
        $let[reason;Spam/Flood automatizado]
        $let[staffID;$authorID]
@@ -18,6 +20,7 @@ module.exports = [{
        $winderBan
        $sendMessage[$channelID;w!ban <@$authorID> $get[reason]]
        $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
+       ]
       ]
       
       $if[$getMemberVar[messageTotal;$authorID;$guildID;0]>=$getGuildVar[memberVerifiedQuantity];
