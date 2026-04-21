@@ -19,8 +19,6 @@ module.exports = [{
        $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
       ]
       
-      $onlyIf[$isBanned[$guildID;$authorID]==false]
-      
       $if[$getMemberVar[messageTotal;$authorID;$guildID;0]>=$getGuildVar[memberVerifiedQuantity];
        $onlyIf[$userJoinedAt[$guildID;$authorID]>$math[$getTimestamp-$parseString[7d]]]
        $let[userID;$authorID]
