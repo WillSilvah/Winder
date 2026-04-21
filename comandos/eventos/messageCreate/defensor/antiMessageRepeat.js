@@ -9,14 +9,35 @@ module.exports = [{
      $setMemberVar[defensorInfractions;$get[v];$authorID]
      
      $if[$getMemberVar[defensorInfractions;$authorID;$guildID;0]>3;
-      $let[userID;$authorID]
-      $let[reason;Spam/Flood]
-      $let[staffID;$authorID]
-      $let[type;silenciado]
-      $let[time;30m]
-      $winderMute
-      $sendMessage[$channelID;w!silenciar <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
-      $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
+      $if[$getMemberVar[messageTotal;$authorID;$guildID;0]>=$getGuildVar[memberVerifiedQuantity];
+       $if[$userJoinedAt[$guildID;$authorID]>$math[$getTimestamp-$parseString[15d]];
+       $let[userID;$authorID]
+       $let[reason;Spam/Flood]
+       $let[staffID;$authorID]
+       $let[type;silenciado]
+       $let[time;30m]
+       $winderMute
+       $sendMessage[$channelID;w!silenciar <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
+       $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
+       ;
+       $let[userID;$authorID]
+       $let[reason;Spam/Flood]
+       $let[staffID;$authorID]
+       $let[type;advertido]
+       $winderWarn
+       $autopunish
+       $sendMessage[$channelID;w!advertir <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
+       $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
+       ]
+      ;
+       $let[userID;$authorID]
+       $let[reason;Spam/Flood automatizado]
+       $let[staffID;$authorID]
+       $let[type;banido]
+       $sendMessage[$channelID;w!ban <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
+       $winderBan
+       $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
+       ]
      ]
     ]
     $setMemberVar[defensorLastMessage;$message;$authorID]
