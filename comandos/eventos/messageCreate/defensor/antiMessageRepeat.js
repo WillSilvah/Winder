@@ -9,7 +9,7 @@ module.exports = [{
      $setMemberVar[defensorInfractions;$get[v];$authorID]
      
      $if[$getMemberVar[defensorInfractions;$authorID;$guildID;0]>3;
-      $if[$getGuildVar[messageTotal;$authorID;$guildID;0]>=$getGuildVar[memberVerifiedQuantity;$guildID;0];
+      $if[$getMemberVar[messageTotal;$authorID;$guildID;0]>=$getGuildVar[memberVerifiedQuantity;$guildID;0];
        $if[$userJoinedAt[$guildID;$authorID]>$math[$getTimestamp-$parseString[15d]];
        $let[userID;$authorID]
        $let[reason;Spam/Flood]
