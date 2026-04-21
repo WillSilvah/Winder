@@ -1,5 +1,5 @@
 module.exports = [{
-    type: "messageCreate,
+    type: "messageCreate",
     code: `
     $if[$toLowercase[$message]==$toLowercase[$getMemberVar[defensorLastMessage;$authorID;$guildID;vazio]];
      $deleteCommand
