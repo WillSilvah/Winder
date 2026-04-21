@@ -8,6 +8,7 @@ module.exports = [{
      $letSum[v;1]
      $setMemberVar[defensorInfractions;$get[v];$authorID]
      
+     $setMemberVar[defensorLastMessage;$message;$authorID]
      $if[$getMemberVar[defensorInfractions;$authorID;$guildID;0]>3;
       $if[$userJoinedAt[$guildID;$authorID]>$math[$getTimestamp-$parseString[1h]];
        $let[userID;$authorID]
@@ -43,9 +44,7 @@ module.exports = [{
       ]
       
      ]
-     
-    $setMemberVar[defensorLastMessage;$message;$authorID]
-
+    
 `
 },{
     type: "clientReady",
