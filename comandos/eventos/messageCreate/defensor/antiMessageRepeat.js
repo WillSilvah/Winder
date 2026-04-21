@@ -1,6 +1,7 @@
 module.exports = [{
     type: "messageCreate",
     code: `
+    $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[allStaffRole;$guildID]]==false]
     $if[$toLowercase[$message]==$toLowercase[$getMemberVar[defensorLastMessage;$authorID;$guildID;vazio]];
      $deleteCommand
      $let[v;$getMemberVar[defensorInfractions;$authorID;$guildID;0]]
@@ -14,7 +15,7 @@ module.exports = [{
       $let[type;silenciado]
       $let[time;30m]
       $winderMute
-      $sendMessage[$channelID;w!ban <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
+      $sendMessage[$channelID;w!silenciar <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
       $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
      ]
     ]
