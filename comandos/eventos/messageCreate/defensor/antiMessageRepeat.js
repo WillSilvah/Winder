@@ -17,9 +17,8 @@ module.exports = [{
        $let[type;silenciado]
        $let[time;30m]
        $winderMute
-       $sendMessage[$channelID;w!silenciar <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
-       $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
-       ;
+       $sendMessage[$channelID;w!silenciar <@$authorID> $get[reason]]
+       $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]];
        $let[userID;$authorID]
        $let[reason;Spam/Flood]
        $let[staffID;$authorID]
@@ -28,8 +27,7 @@ module.exports = [{
        $autopunish
        $sendMessage[$channelID;w!advertir <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
        $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
-       ]
-      ;
+       ];
        $let[userID;$authorID]
        $let[reason;Spam/Flood automatizado]
        $let[staffID;$authorID]
