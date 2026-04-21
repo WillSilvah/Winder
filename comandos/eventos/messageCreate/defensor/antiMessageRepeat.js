@@ -39,7 +39,6 @@ module.exports = [{
        $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
        ]
      ]
-    ]
     $setMemberVar[defensorLastMessage;$message;$authorID]
 
 `
