@@ -18,6 +18,14 @@ module.exports = [{
        $let[time;30m]
        $winderMute
        $sendMessage[$channelID;w!silenciar <@$authorID> $get[reason]]
+       $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]];
+       $let[userID;$authorID]
+       $let[reason;Spam/Flood]
+       $let[staffID;$authorID]
+       $let[type;advertido]
+       $winderWarn
+       $autopunish
+       $sendMessage[$channelID;w!advertir <@$authorID> $get[reason]]
        $sendMessage[$channelID;<@$clientID> **$username[$get[userID]]** foi **$get[type]**!\n> $bold[$get[reason]]]
       ]
      ]
