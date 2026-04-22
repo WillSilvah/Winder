@@ -18,6 +18,7 @@ module.exports = [{
      $addOption[Patinhas Beta;;beta;$customEmoji[pats_logo];false]
      $addOption[Clube do Winder;;winder;🐱;false]
      $addOption[Recepcionistas;;recep;👋;false]
+     $addOption[Leitores;;leitores;📕;false]
      $addOption[BoyKisser;;boykisser;😘;false]
      $addOption[Fofoqueiras;;fofoqueiras;🤫;false]
      $addOption[Vale Animado;;valeanimado;🏳️‍🌈;false]
@@ -35,7 +36,8 @@ module.exports = [{
     "valeanimado": "1463156445276143707",
     "winder": "1481748351857725521",
     "beta": "1481788050957926450",
-    "recep": "1494127628297437244"
+    "recep": "1494127628297437244",
+    "leitores": "1496551809693515926"
 }
 ]
     $arrayLoad[clubesID;,;$jsonValues[clubes;,]]
