@@ -5,6 +5,7 @@ module.exports = [{
     $if[$toLowercase[$message]==$toLowercase[$getMemberVar[defensorLastMessage;$authorID;$guildID;vazio]];
      $deleteCommand
      ]
+     ]
     $setMemberVar[defensorLastMessage;$message;$authorID]
 `
 },{
