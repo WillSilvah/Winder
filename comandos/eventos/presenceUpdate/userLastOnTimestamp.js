@@ -3,4 +3,9 @@ module.exports = [{
     code: `
     $setUserVar[lastOnTimestamp;$getTimestamp]
 `
+},{
+    type: "typingStart",
+    code: `
+    $setUserVar[lastOnTimestamp;$getTimestamp]
+`
 }]
