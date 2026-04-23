@@ -19,12 +19,11 @@ module.exports = [{
        $elseIf[$get[ad]==5;$addTextDisplay[### FALTA $sub[$getGuildVar[membersMeta;$get[guildID]];$guildMemberCount[$get[guildID];;false] PELUDOS PARA $getGuildVar[membersMeta;$get[guildID]]]]]
        $elseIf[$get[ad]==6;$addTextDisplay[Já votou na Patinhas hoje? Não? Tá esperando o quê? Vamos votar! **/votar**]]
        $elseIf[$get[ad]==7;$addTextDisplay[Seu aniversário está próximo? Não deixe a gente esquecer, use o comamdo /aniversário adicionar para comemorar juntos!]]
-       
       ]
       -# WinderADS.
      ]
     ]
    ]
-  ;1h1m;WinderADS]
+  ;31m;WinderADS]
 `
 }]
