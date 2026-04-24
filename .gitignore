@@ -10,3 +10,4 @@ npm-debug.log*
 dist/
 build/
 database/forge.db
+/comandos/eventos/messageCreate/defensor/antiMessageRepeat.js

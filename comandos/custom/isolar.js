@@ -14,6 +14,15 @@ module.exports = [{
      
      $setMemberVar[memberIsolated;true;$env[userID];$guildID]
      
+     $arrayLoad[channels;,;$guildChannelIDs[$guildID;,]]
+      $arrayForEach[channels;id;
+        $onlyIf[$channelType[$env[id]]==GuildText;
+         $log[Não foi possível modificar o canal $env[id] pois ele não é um canal de texto]
+        ]
+       $if[$includes[$env[id];$getGuildVar[isolatedChannel];1463277652562411787]==false;
+       $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel;-CreateInstantInvite]
+      ]]
+     
     $if[$getMemberVar[memberIsVerified;$env[userID];$guildID]==true;
      $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberVerifiedRole]]
     ]
@@ -32,15 +41,6 @@ module.exports = [{
     $if[$getMemberVar[memberIsActive;$env[userID];$guildID]==true;
      $!memberRemoveRoles[$guildID;$env[userID];$getGuildVar[memberActiveRole]]
     ]
-    
-    $arrayLoad[channels;,;$guildChannelIDs[$guildID;,]]
-      $arrayForEach[channels;id;
-        $onlyIf[$channelType[$env[id]]==GuildText;
-         $log[Não foi possível modificar o canal $env[id] pois ele não é um canal de texto]
-        ]
-       $if[$includes[$env[id];$getGuildVar[isolatedChannel];1463277652562411787]==false;
-       $modifyChannelPerms[$env[id];$getGuildVar[memberIsolatedRole];-ViewChannel;-CreateInstantInvite]
-      ]]
       
       $return[]
       ;
