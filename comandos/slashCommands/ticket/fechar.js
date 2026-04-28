@@ -7,7 +7,7 @@ $interactionReply[Ticket fechado!]
 
 $!modifyChannelPerms[$channelID;$guildID;-SendMessages]
 
-$setChannelVar[messageLogToday;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] ($messageID) -> $userTag[$clientID] ($clientID): $userTag ($authorID) fechou o ticket!\n$getChannelVar[messageLogToday]]
+$setChannelVar[messageLogToday;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] -> $userTag[$clientID] ($clientID): $userTag ($authorID) fechou o ticket!\n$getChannelVar[messageLogToday]]
 
 $sendMessage[$getGuildVar[ticketLogs];
 $attachment[$getChannelVar[messageLogToday];$channelName[$channelID].txt;true]
