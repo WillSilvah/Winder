@@ -4,7 +4,7 @@ module.exports = [{
   $setInterval[
   $let[guildID;1462224054676099094]
   $let[userID;$getGuildVar[lastUserSendMessage;$get[guildID]]]
-   $if[$getGuildVar[oldMsgPerMinute;$get[guildID]]>=2;
+   $if[$getGuildVar[oldMsgPerMinute;$get[guildID]]>=1;
     $if[$getGlobalVar[sleepMode]==false;
      $let[ad;$randomNumber[1;7]]
      $sendMessage[$getGuildVar[batePapo;$get[guildID]];

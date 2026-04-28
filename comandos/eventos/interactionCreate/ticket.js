@@ -29,27 +29,6 @@ $ephemeral
 $interactionReply[## TICKET CRIADO!
 <#$get[id]>]
 
-$mkdir[Recursos/ticket-logs]
-$mkdir[Recursos/ticket-logs/$guildID/]
-$writeFile[Recursos/ticket-logs/$guildID/ticket-$userTag.txt;$hour:$minute:$second $userTag[$clientID]: $userTag[$authorID] criou um ticket!
-ID do canal: $get[id]
-Data: $hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit];utf8]
-    
+$setChannelVar[messageLogToday;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] ($messageID) -> $userTag[$clientID] ($clientID): $userTag ($authorID) criou um ticket!]
 `
-},{
-    type: "messageCreate",
-    code: `
-$onlyIf[$isTicket==true;]
-$timezone[America/Recife]
-
-$appendFile[Recursos/ticket-logs/$guildID/$channelName[$channelID].txt;
-$hour:$minute:$second $userTag ($authorID): $message
-
-Attachments: $messageAttachments[$channelID;$messageID;
-]
-MSGID: $messageID
-;utf8]
-
-
-   
-`}]
+}]

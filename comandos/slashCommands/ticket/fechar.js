@@ -7,16 +7,15 @@ $interactionReply[Ticket fechado!]
 
 $!modifyChannelPerms[$channelID;$guildID;-SendMessages]
 
-$appendFile[Recursos/ticket-logs/$guildID/$channelName[$channelID].txt;
-$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] $userTag ($authorID) fechou o ticket.]
+$setChannelVar[messageLogToday;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] ($messageID) -> $userTag[$clientID] ($clientID): $userTag ($authorID) fechou o ticket!\n$getChannelVar[messageLogToday]]
 
 $sendMessage[$getGuildVar[ticketLogs];
-$attachment[Recursos/ticket-logs/$guildID/$channelName[$channelID].txt;/$channelName[$channelID].txt;false;utf8;]
+$attachment[$getChannelVar[messageLogToday];e$channelName[$channelID];true]
 $author[$channelName[$channelID].txt]
 $color[Orange]
 ]
 
-$deleteFile[Recursos/ticket-logs/$guildID/$channelName[$channelID].txt]
+$#deleteFile[Recursos/ticket-logs/$guildID/$channelName[$channelID].txt]
 $wait[2s]
 $deleteChannels[$channelID]
 
