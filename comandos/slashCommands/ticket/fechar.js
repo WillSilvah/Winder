@@ -10,7 +10,7 @@ $!modifyChannelPerms[$channelID;$guildID;-SendMessages]
 $setChannelVar[messageLogToday;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] -> $userTag[$clientID] ($clientID): $userTag ($authorID) fechou o ticket!\n$getChannelVar[messageLogToday]]
 
 $sendMessage[$getGuildVar[ticketLogs];
-$attachment[$getChannelVar[messageLogToday];$channelName[$channelID].txt;true]
+$attachment[$getChannelVar[messageLogTicket];$channelName[$channelID].txt;true]
 $author[$channelName[$channelID].txt]
 $color[Orange]
 ]

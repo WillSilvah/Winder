@@ -7,7 +7,7 @@ $let[userID;$option[user]]
 
 $!modifyChannelPerms[$channelID;$get[userID];-ViewChannel;-SendMessages]
 
-$setChannelVar[messageLogToday;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] -> $userTag[$clientID] ($clientID): $userTag ($authorID) removeu $userTag[$get[userID]] ($get[userID]) do ticket!\n$getChannelVar[messageLogToday]]
+$setChannelVar[messageLogTicket;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] -> $userTag[$clientID] ($clientID): $userTag ($authorID) removeu $userTag[$get[userID]] ($get[userID]) do ticket!\n$getChannelVar[messageLogToday]]
 
 $interactionReply[<@$authorID> | **$username[$get[userID]]** removido!]
   `,

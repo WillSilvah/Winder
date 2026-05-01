@@ -12,6 +12,10 @@ module.exports = [{
     $setChannelVar[messageLogToday;$messageID - $hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit] -> $userTag ($authorID): $message$if[$messageAttachments[$channelID;$messageID]!=;\n$messageAttachments[$channelID;$messageID;\n];]\n$getChannelVar[messageLogToday]]
     $setChannelVar[messageLogWeekly;$messageID - $hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] ($messageID) -> $userTag ($authorID): $message$if[$messageAttachments[$channelID;$messageID]!=;\n$messageAttachments[$channelID;$messageID;\n];]\n$getChannelVar[messageLogWeekly]]
     $setChannelVar[messageLogMonth;$messageID - $hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit] -> $userTag ($authorID): $message$if[$messageAttachments[$channelID;$messageID]!=;\n$messageAttachments[$channelID;$messageID;\n];]\n$getChannelVar[messageLogMonth]]
+    
+    $if[$isTicket==true;
+     $setChannelVar[messageLogTicket;$messageID - $hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit] -> $userTag ($authorID): $message$if[$messageAttachments[$channelID;$messageID]!=;\n$messageAttachments[$channelID;$messageID;\n];]\n$getChannelVar[messageLogTicket]]
+    ]
 `
 }]
 
