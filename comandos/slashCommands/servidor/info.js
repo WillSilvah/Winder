@@ -4,7 +4,7 @@ $jsonLoad[session;$readFile[Recursos/session.json]]
 $addContainer[
 $addSection[
 $addTextDisplay[## $toUpperCase[$guildName]
-**👤$separateNumber[$guildMemberCount[1462224054676099094;;false];.] | 🟢$separateNumber[$math[$guildMemberCount[$guildID;online;false]+$guildMemberCount[$guildID;dnd;false]+$guildMemberCount[$guildID;idle;false]];.] | ⭐️$getGuildVar[membersJoinedMonth;$guildID;0] | 🏃‍♂️$getGuildVar[membersLeftMonth;$guildID;0] | 🚀$guildBoostCount[$guildID]**
+**👤$separateNumber[$guildMemberCount[1462224054676099094;;false];.] | 🟢$separateNumber[$math[$guildMemberCount[$guildID;online;false]+$guildMemberCount[$guildID;dnd;false]+$guildMemberCount[$guildID;idle;false]];.] | 🚀$guildBoostCount[$guildID]**
 ⭐️ $discordTimestamp[$guildCreatedAt[$guildID];RelativeTime]
 ]
 $addThumbnail[$guildIcon]
@@ -12,6 +12,7 @@ $addThumbnail[$guildIcon]
 $addSeparator[Small;true]
 $addTextDisplay[
 ### $toUpperCase[TEMPORADA $env[session;number]: $env[session;name]]
+⭐️ **$getGuildVar[membersJoinedMonth;$guildID;0]** novos membros e saíram **$getGuildVar[membersLeftMonth;$guildID;0]**
 💬 **$getMemberLeaderboardLength[messageMonth;$guildID]** **($truncate[$math[$getMemberLeaderboardLength[messageMonth;$guildID]/$guildMemberCount[1462224054676099094;;false]*100]]%)** membros enviaram **$separateNumber[$getGuildVar[guildMonthMessages;$guildID;0];.]** mensagens neste mês.
 💬 **$getMemberLeaderboardLength[messageWeekly;$guildID]** **($truncate[$math[$getMemberLeaderboardLength[messageWeekly;$guildID]/$getMemberLeaderboardLength[messageMonth;$guildID]*100]]%)** membros enviaram **$separateNumber[$getGuildVar[guildWeeklyMessages;$guildID;0];.]** mensagens nessa semana.
 💬 **$getMemberLeaderboardLength[messageToday;$guildID]** **($truncate[$math[$getMemberLeaderboardLength[messageToday;$guildID]/$getMemberLeaderboardLength[messageMonth;$guildID]*100]]%)** membros enviaram **$separateNumber[$getGuildVar[guildTodayMessages;$guildID;0];.]** mensagens hoje.
