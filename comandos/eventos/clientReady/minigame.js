@@ -1,7 +1,7 @@
 module.exports = [{
     type: 'clientReady',
     code: `
-    $let[time;15m]
+    $let[time;30m]
     $let[guildID;1462224054676099094]
     $setInterval[
      $onlyIf[$getGlobalVar[sleepMode]==false;]
