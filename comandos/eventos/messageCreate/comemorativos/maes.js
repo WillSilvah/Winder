@@ -8,8 +8,7 @@ module.exports = [{
     $onlyIf[$day/$month[TwoDigit]==10/05]
     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false]
-    $let[chance;$randomNumber[1;100]]
-    $onlyIf[$includes[$toLowercase[$message];feliz]|$includes[$toLowercase[$message];dia]|$includes[$toLowercase[$message];das]|$includes[$toLowercase[$message];mães;mãe;mae;mainha]==true|true|true|true]
+    $onlyIf[$includes[$toLowercase[$message];feliz;felizes]|$includes[$toLowercase[$message];dia;dias]|$includes[$toLowercase[$message];das;da]|$includes[$toLowercase[$message];mães;mãe;mae;mainha]==true|true|true|true]
 
     $!addMessageReactions[$channelID;$messageID;❤️]
 
@@ -38,7 +37,7 @@ module.exports = [{
       ]
      ;#005DBA]
     ]
-    $setGuildVar[evento_diaDasMaes;false;1462224054676099094]
+    $setGuildVar[evento_diaDasMaesStatus;false;1462224054676099094]
     $!setGuildIcon[1462224054676099094;$getGuildVar[logo_sleep;1462224054676099094];Hora de dormir]
     $setGuildVar[guildColor;#ddf3fe;1462224054676099094]
     $setGuildVar[guildIconDefault;true;1462224054676099094]
