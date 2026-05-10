@@ -33,6 +33,7 @@ $addTextDisplay[
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
 💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
+💌 **$getMemberVar[invitesMouth;$get[userID];$guildID;0]** amigos convidados
 🔥 **$getMemberVar[talkingMonth;$get[userID];$guildID;0]** dias conversados
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
@@ -50,6 +51,7 @@ $addSeparator[Small;true]
 $addTextDisplay[### ANTERIORMENTE
 💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas
 ✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
+💌 **$getMemberVar[invitesTotal;$get[userID];$guildID;0]** amigos convidados
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
 ];
