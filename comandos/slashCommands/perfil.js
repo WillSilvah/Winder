@@ -25,7 +25,7 @@ $addTextDisplay[$if[$getMemberVar[memberJoinedHere?;$get[userID];$guildID;false]
 ]
 ]
 $addTextDisplay[👤 Criou conta $discordTimestamp[$userCreatedAt[$get[userID]];RelativeTime]]
-$if[$getMemberVar[warnsTotal;$get[userID]]>0;$addTextDisplay[⚠️ Tem **$getMemberVar[warnsTotal;$get[userID]]** advertências!]]
+$if[$getMemberVar[warnsTotal;$get[userID]]>0;$addTextDisplay[⚠ Tem **$getMemberVar[warnsTotal;$get[userID]]** advertências!]]
 $if[$memberExists[$guildID;$get[userID]]==true;$if[$isTimedOut[$guildID;$get[userID]]==true;$addTextDisplay[🤫 Silenciado até $discordTimestamp[$memberTimeoutDuration[$guildID;$get[userID]];FullDateShortTime]]]]$addSeparator[Small;true]
 $if[$isBanned[$guildID;$get[userID]]==false;
 $addTextDisplay[
@@ -33,6 +33,7 @@ $addTextDisplay[
 💬 **$getMemberVar[messageToday;$get[userID];$guildID;0]** mensagens enviadas hoje
 💬 **$getMemberVar[messageWeekly;$get[userID];$guildID;0]** mensagens enviadas nessa semana
 💬 **$getMemberVar[messageMonth;$get[userID];$guildID;0]** mensagens enviadas neste mês
+💌 **$getMemberVar[invitesMouth;$get[userID];$guildID;0]** amigos convidados
 🔥 **$getMemberVar[talkingMonth;$get[userID];$guildID;0]** dias conversados
 ✨ **$getMemberVar[pdaMonth;$get[userID];$guildID;0]** pontos de atividade adquiridos
 ⬆️ Votou **$getMemberVar[votesMonth;$get[userID];$guildID;0]** vezes
@@ -50,6 +51,7 @@ $addSeparator[Small;true]
 $addTextDisplay[### ANTERIORMENTE
 💬 **$getMemberVar[messageTotal;$get[userID];$guildID;0]** mensagens enviadas
 ✨ **$getMemberVar[pdaTotal;$get[userID];$guildID;0]** pontos de atividade adquiridos
+💌 **$getMemberVar[invitesTotal;$get[userID];$guildID;0]** amigos convidados
 ⬆️ Votou **$getMemberVar[votesTotal;$get[userID];$guildID;0]** vezes
 🎮 **$getMemberVar[minigameTotalWins;$get[userID];$guildID;0]** minigames ganhos
 ];
