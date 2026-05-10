@@ -6,7 +6,6 @@ module.exports = [{
     $let[roleID;1503017802351513771]
     $timezone[America/Recife]
     $onlyIf[$day/$month[TwoDigit]==10/05]
-    $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false]
     $onlyIf[$includes[$toLowercase[$message];feliz;felizes]|$includes[$toLowercase[$message];dia;dias]|$includes[$toLowercase[$message];das;da]|$includes[$toLowercase[$message];mães;mãe;mae;mainha]==true|true|true|true]
 
