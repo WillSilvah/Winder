@@ -1,6 +1,6 @@
 module.exports = [{
     type: "interactionCreate",
     code: `$ephemeral
-    aff kkkkkkkk bagulho mano! $commandName
+    $interactionReply[aff kkkkkkkk bagulho mano! $commandName / $customID]
 `
 }]
