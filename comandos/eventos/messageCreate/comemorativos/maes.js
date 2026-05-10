@@ -10,7 +10,7 @@ module.exports = [{
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false]
     $onlyIf[$includes[$toLowercase[$message];feliz;felizes]|$includes[$toLowercase[$message];dia;dias]|$includes[$toLowercase[$message];das;da]|$includes[$toLowercase[$message];mães;mãe;mae;mainha]==true|true|true|true]
 
-    $!addMessageReactions[$channelID;$messageID;❤️]
+    $!addMessageReactions[$channelID;$messageID;🩷]
 
     $!memberAddRoles[$guildID;$authorID;$get[roleID]]
 `
@@ -31,7 +31,7 @@ module.exports = [{
     $sendMessage[$getGuildVar[anunciosChat;1462224054676099094];
      $addContainer[
       $addSection[
-       $addTextDisplay[### ❤️ FELIZ DIA DAS MÃES\nTodos os membros que deram feliz dia das mães hoje:]
+       $addTextDisplay[### 🩷 FELIZ DIA DAS MÃES\nTodos os membros que deram feliz dia das mães hoje:]
        $addTextDisplay[$arrayJoin[roleUsernames;\n]]
        $addTextDisplay[\n Próximo evento: Domingo de maio de 2027]
       ]
