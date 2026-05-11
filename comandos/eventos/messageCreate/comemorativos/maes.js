@@ -40,5 +40,5 @@ module.exports = [{
     $!setGuildIcon[1462224054676099094;$getGuildVar[logo_sleep;1462224054676099094];Hora de dormir]
     $setGuildVar[guildColor;#ddf3fe;1462224054676099094]
     $setGuildVar[guildIconDefault;true;1462224054676099094]
-    ;7 22 22 3 *;America/Recife;diaDasMaes]
+    ;40 8 11 5 *;America/Recife;diaDasMaes]
 `}]
