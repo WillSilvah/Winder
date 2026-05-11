@@ -20,7 +20,6 @@ module.exports = [{
     $cron[
     $timezone[America/Recife]
     $let[roleID;1503017802351513771]
-    $onlyIf[$day[TwoDigit]/$month[TwoDigit]==11/05;]
     $setGuildVar[evento_diaDasMaesStatus;false;1462224054676099094]
     $arrayLoad[roleMembers;,;$roleMembers[1462224054676099094;$get[roleID];,]]
     $arrayMap[roleMembers;id;
@@ -37,8 +36,5 @@ module.exports = [{
      ;#005DBA]
     ]
     $setGuildVar[evento_diaDasMaesStatus;false;1462224054676099094]
-    $!setGuildIcon[1462224054676099094;$getGuildVar[logo_sleep;1462224054676099094];Hora de dormir]
-    $setGuildVar[guildColor;#ddf3fe;1462224054676099094]
-    $setGuildVar[guildIconDefault;true;1462224054676099094]
-    ;13 9 11 5 *;America/Recife;diaDasMaes]
+    ;35 9 * * *;America/Recife;diaDasMaes]
 `}]
