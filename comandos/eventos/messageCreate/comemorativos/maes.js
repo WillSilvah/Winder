@@ -15,7 +15,7 @@ module.exports = [{
 `
 },{
     type: "clientReady",
-    code: `
+    code: `$stop
     $let[roleID;1503017802351513771]
     $cron[
     $timezone[America/Recife]
