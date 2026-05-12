@@ -57,6 +57,7 @@ $deleteRecords[votesMonth]
 $deleteRecords[pdaMonth]
 $deleteRecords[invitesMonth]
 $deleteRecords[minigameMonthWins]
+$deleteRecords[msgPerMinuteMonth]
 
 $deleteRecords[membersJoinedMonth]
 $deleteRecords[membersLeftMonth]
