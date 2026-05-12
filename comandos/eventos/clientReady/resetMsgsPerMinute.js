@@ -15,7 +15,7 @@ module.exports = {
 
     $cron[
      $deleteRecords[memberIsTalking?]
-    * */1 * * *]
+    ;0 * * * *]
 
 `
 }
