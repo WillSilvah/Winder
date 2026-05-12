@@ -6,7 +6,7 @@ module.exports = {
     $setInterval[
      $setGuildVar[oldMsgPerMinute;$default[$getGuildVar[msgPerMinute;$get[guildID]];0];$get[guildID]]
      
-     $setGuildVar[msgPerMinuteMonth;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit]: $default[$getGuildVar[msgPerMinute;$get[guildID]];0] mensagens por minuto\n$getGuildVar[msgPerMinuteMonth]]
+     $setGuildVar[msgPerMinuteMonth;$hour[TwoDigit]:$minute[TwoDigit]:$second[TwoDigit] - $day[TwoDigit]/$month[TwoDigit]/$year[TwoDigit]: $default[$getGuildVar[msgPerMinute;$get[guildID]];0] mensagens por minuto\n$getGuildVar[msgPerMinuteMonth;$get[guildID]];$get[guildID]]
      
     $wait[5s]
     $deleteRecords[msgPerMinute]
