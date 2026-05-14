@@ -20,6 +20,7 @@ module.exports = [{
        $elseIf[$get[ad]==6;$addTextDisplay[Já votou na Patinhas hoje? Não? Tá esperando o quê? Vamos votar! **/votar**]]
        $elseIf[$get[ad]==7;$addTextDisplay[Seu aniversário está próximo? Não deixe a gente esquecer, use o comamdo /aniversário adicionar para comemorar juntos!]]
       ]
+      $addTextDisplay[-# Anúncio do Winder]
      ]
     ]
    ]
