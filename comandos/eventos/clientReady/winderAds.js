@@ -24,6 +24,6 @@ module.exports = [{
      ]
     ]
    ]
-  ;15m;WinderADS]
+  ;45m;WinderADS]
 `
 }]
