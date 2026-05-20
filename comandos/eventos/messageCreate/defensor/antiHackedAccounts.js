@@ -4,6 +4,7 @@ module.exports = [{
     $if[$channelID==1506688312490852352;
      $let[userID;$authorID]
      $let[staffID;$clientID]
+     $let[type;banido]
      $let[reason;Conta hackeada.]
      $deleteCommand
      $sendMessage[$getGuildVar[batePapo];w!ban <@$authorID> $get[reason]]
