@@ -1,6 +1,6 @@
 module.exports = [{
   type: "messageCreate",
-  code: `
+  code: `$stop
     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[allStaffRole;$guildID]]==false]
     $if[$toLowercase[$message]==$toLowercase[$getMemberVar[defensorLastMessage;$authorID;$guildID;vazio]];
       $deleteCommand
