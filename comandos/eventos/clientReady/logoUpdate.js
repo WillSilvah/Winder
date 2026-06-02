@@ -1,7 +1,7 @@
 module.exports = [{
-type: 'clientReady',
-code: `
-$let[id;1462224054676099094]
+    type: 'clientReady',
+    code: `
+    $let[id;1462224054676099094]
 
 $cron[
 $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
@@ -45,4 +45,38 @@ $!setGuildIcon[$get[id];$getGuildVar[logo_sleep;$get[id]];Hora de dormir]
 $setGuildVar[guildColor;#ddf3fe;$get[id]]
 ;0 22 * * *;America/Recife]
 `
-}]
+},{
+    type: 'clientReady',
+    code: `
+    $cron[
+     $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
+     $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
+     $setGuildVar[guildColor;#039c3d;$get[id]]
+    ;0 6 6 6 *;America/Recife]
+    
+    $cron[
+     $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
+     $!setGuildIcon[$get[id];$getGuildVar[logo_namorados;$get[id]];Dia dos namorados!]
+     $setGuildVar[guildColor;#be1931;$get[id]]
+    ;0 6 13 6 *;America/Recife]
+    
+    $cron[
+     $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
+     $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
+     $setGuildVar[guildColor;#039c3d;$get[id]]
+    ;0 6 13 6 *;America/Recife]
+    
+    $cron[
+     $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
+     $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
+     $setGuildVar[guildColor;#039c3d;$get[id]]
+    ;0 6 19 6 *;America/Recife]
+    
+    $cron[
+     $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
+     $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
+     $setGuildVar[guildColor;#039c3d;$get[id]]
+    ;0 6 24 6 *;America/Recife]
+    
+    `
+  }]
