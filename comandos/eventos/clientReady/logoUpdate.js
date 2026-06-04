@@ -52,31 +52,31 @@ $setGuildVar[guildColor;#ddf3fe;$get[id]]
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
      $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
      $setGuildVar[guildColor;#039c3d;$get[id]]
-    ;0 6 6 6 *;America/Recife]
+    ;* * 6 6 *;America/Recife]
     
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
      $!setGuildIcon[$get[id];$getGuildVar[logo_namorados;$get[id]];Dia dos namorados!]
      $setGuildVar[guildColor;#be1931;$get[id]]
-    ;0 6 13 6 *;America/Recife]
+    ;* * 13 6 *;America/Recife]
     
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
      $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
      $setGuildVar[guildColor;#039c3d;$get[id]]
-    ;0 6 13 6 *;America/Recife]
+    ;* * 13 6 *;America/Recife]
     
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
      $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
      $setGuildVar[guildColor;#039c3d;$get[id]]
-    ;0 6 19 6 *;America/Recife]
+    ;* * 19 6 *;America/Recife]
     
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
      $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
      $setGuildVar[guildColor;#039c3d;$get[id]]
-    ;0 6 24 6 *;America/Recife]
+    ;* * 24 6 *;America/Recife]
     
     `
   }]
