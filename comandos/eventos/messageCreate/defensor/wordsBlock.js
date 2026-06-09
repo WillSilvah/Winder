@@ -12,5 +12,17 @@ module.exports = [{
      $winderBan
      ]
     ]
+    
+    $if[$getMemberVar[messageTotal;$authorID;$guildID;0]<5;
+     $if[$includes[$toLowercase[$message];nazismo;nazista;nazi;hitler]==true;
+      $let[userID;$authorID]
+     $let[reason;Comportamento indevido e ofensivo.]
+     $let[staffID;$clientID]
+     $let[type;banido]
+    
+     $sendMessage[$getGuildVar[batePapo];w!ban <@$authorID> $get[reason]] $c[Enfeite, para dizer que foi o próprio bot que executou a função]
+     $winderBan
+     ]
+    ]
 `
 }]
