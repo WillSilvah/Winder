@@ -58,7 +58,7 @@ $setGuildVar[guildColor;#ddf3fe;$get[id]]
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
      $!setGuildIcon[$get[id];https://public-blob.squarecloud.dev/494795833351602176/pats_diadosnamorados.png;Dia dos namorados!]
      $setGuildVar[guildColor;#be1931;$get[id]]
-    ;* * 13 6 *;America/Recife]
+    ;* * 12 6 *;America/Recife]
     
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
