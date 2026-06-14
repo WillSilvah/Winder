@@ -1,7 +1,7 @@
 module.exports = [{
     type: "messageCreate",
     code: `
-    $onlyIf[$getGlobalVar[sleepMode]==false;]
+    $onlyIf[$getGlobalVar[sleepMode]==true;]
     $let[roleID;1515463857768890518]
     $timezone[America/Recife]
     $onlyIf[$day/$month[TwoDigit]==13/06]
