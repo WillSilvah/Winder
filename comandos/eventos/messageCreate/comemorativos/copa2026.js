@@ -9,8 +9,6 @@ module.exports = [{
     $onlyIf[$hasRoles[$guildID;$authorID;$getGuildVar[memberVerifiedRole]]==true]
     $onlyIf[$hasRoles[$guildID;$authorID;$get[roleID]]==false]
 
-    $!addMessageReactions[$channelID;$messageID;⚽️]
-
     $!memberAddRoles[$guildID;$authorID;$get[roleID]]
 `
 }]
