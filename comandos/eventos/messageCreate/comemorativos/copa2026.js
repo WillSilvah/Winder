@@ -1,6 +1,6 @@
 module.exports = [{
     type: "messageCreate",
-    code: `
+    code: `$stop
     $onlyIf[$getGlobalVar[sleepMode]==false;]
     $let[roleID;1515463857768890518]
     $timezone[America/Recife]
