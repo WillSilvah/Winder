@@ -52,7 +52,7 @@ $setGuildVar[guildColor;#ddf3fe;$get[id]]
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
      $!setGuildIcon[$get[id];$getGuildVar[logo_copabr;$get[id]];Dia da copa!]
      $setGuildVar[guildColor;#039c3d;$get[id]]
-    ;* * 6 6 *;America/Recife]
+    ;* * 5 7 *;America/Recife]
     
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
