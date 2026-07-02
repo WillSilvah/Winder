@@ -82,7 +82,7 @@ $setGuildVar[guildColor;#ddf3fe;$get[id]]
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
      $!setGuildIcon[$get[id];$getGuildVar[logo_bahia;$get[id]];Independência da Bahia!]
      $setGuildVar[guildColor;#039c3d;$get[id]]
-    ;5 5 2 7 *;America/Recife]
+    ;* 6 2 7 *;America/Recife]
     
     $cron[
      $onlyIf[$getGuildVar[guildIconDefault;$get[id]]==true;]
